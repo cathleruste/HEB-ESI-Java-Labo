@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.elml.ch" xsi:schemaLocation="http://www.elml.ch ../../core/structure/config.xsd">
+  <!--These parameters are used in all version (online and print) -->
+  <general>
+    <!--Enter the contact Email that students will use to contact the tutor -->
+    <contact>mcodutti@heb.be</contact>
+    <!--Enter the URL to your servers home page -->
+    <server>http://www.heb.be/esi</server>
+    <!--Would like to make a transformation for role 'tutor' or 'student'? -->
+    <role>student</role>
+    <!--On which level would like have the page break? To generate just one output use "oneoutput", else "lesson", "unit" or "lo" -->
+    <pagebreak_level>lo</pagebreak_level>
+    <!--If you would like to have chapter titles with numeration, set this to "yes" else to "no" -->
+    <chapter_numeration>no</chapter_numeration>
+    <!-- Which type of imsmanifest.xml will be produced: IMS CP or SCORM compatible (accepted values are: 'ims' or 'scorm' or 'both') -->
+    <manifest_type>scorm</manifest_type>
+    <!--Define units that should be marked/highlighted as  for the student. Enter unit-labels separated by a comma or leave empty. -->
+    <optional_units>
+      <labelname>none</labelname>
+    </optional_units>
+  </general>
+  <!--These parameters are only used for the online version -->
+  <online>
+    <!--Enter an URL to your bugtracker form here (or leave empty if you dont have one) -->
+    <bugtracker></bugtracker>
+    <!--Would you like to use a navigation in your online version? "yes" or "no" -->
+    <use_navigation>no</use_navigation>
+  </online>
+  <!--These parameters are only used for the print version -->
+  <print>
+    <!--Links are also clickable in the PDF version. Should additionally the link URI be written in brackets after the link text? Choose "yes" or "no" -->
+    <display_links>no</display_links>
+    <!--If you use the latest FOP version enter the value "0.9", otherwise use "0.2" -->
+    <fop_version>0.2</fop_version>
+    <!--The height of your page (Eg. "29.7cm" for A4) -->
+    <pageheight>29.7cm</pageheight>
+    <!--The width of your page (Eg. "21cm" for A4) -->
+    <pagewidth>21cm</pagewidth>
+    <!--Your default font size (Eg. "11pt") -->
+    <fontsize>11pt</fontsize>
+    <!--Your default line height  (Eg. "15pt") -->
+    <lineheight>15pt</lineheight>
+    <!--Your default font weight for titles  (Eg. "bold") -->
+    <fontweighttitle>bold</fontweighttitle>
+    <!--The conversion factor from pixel to mm (do NOT change, should be "0.2646") -->
+    <converter_pixel_mm>0.2646</converter_pixel_mm>
+  </print>
+  <!-- You can replace term keys by your own terms. Use the @name attribute as key and the @lang attribute to define the language concerned. Here is an example: -->
+  <latex>
+    <documentclass>article</documentclass>
+  </latex>
+  <terms>
+    <msg name="name_furtherReading" lang="de">Publikationen</msg>
+    <msg name="name_furtherReading" lang="en">Publications</msg>
+    <msg name="name_furtherReading" lang="fr">Publications</msg>
+    <msg name="name_furtherReading" lang="it">Publicazione</msg>
+  </terms>
+</config>

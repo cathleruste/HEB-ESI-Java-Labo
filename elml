@@ -1,0 +1,51 @@
+#!/bin/bash
+
+STYLE=java
+#EXE2ELML=~/Developpement/eXe2eLML/eXe2eLML.xsl
+LABOJAVA=.
+#LABOEXE=$LABOJAVA/../TD-eXe
+
+function usage() {
+	echo "usage:"
+	echo "    elml import leçon - pour convertir de eXe (fichier leçon-exe.html)"
+#	echo "    elml valider leçon - pour vérifier la syntaxe du fichier de la leçon"
+	echo "    elml pdf leçon - pour le PDF de la leçon"
+	echo "    elml scorm leçon - pour le scorm de la leçon"
+}
+
+#function import() {
+#	mkdir -p $LABOJAVA/$LESSON/fr/text/
+#	xsltproc --html $EXE2ELML $LABOEXE/${LESSON}PageUnique/index.html >$LABOJAVA/$LESSON/fr/text/$LESSON.xml
+#}
+
+function valider() {
+	xmllint --noout --schema $LABOJAVA/_config/validate.xsd $LABOJAVA/$LESSON/fr/text/$LESSON.xml
+}
+
+function pdf() {
+	java -cp /usr/local/saxon/saxon9he.jar net.sf.saxon.Transform -t -s:$LABOJAVA/$LESSON/fr/text/$LESSON.xml -xsl:$LABOJAVA/_templates/$STYLE/latex.xsl
+	OLD=`pwd`
+	cd $LABOJAVA/$LESSON/fr/latex
+	pdflatex $LESSON.tex
+	mv $LESSON.pdf ../text
+	cd $OLD
+}
+
+
+function scorm() {
+	java -cp /usr/local/saxon/saxon9he.jar net.sf.saxon.Transform -t -s:$LABOJAVA/$LESSON/fr/text/$LESSON.xml -xsl:$LABOJAVA/_templates/$STYLE/online.xsl
+	#zip -r ../$LESSON.zip *
+}
+
+if [[ $#<2 ]]; then usage; exit 1; fi
+LESSON=$2
+
+case $1 in
+#    import ) import ;;
+    valider ) valider ;;
+    pdf ) pdf ;;
+    scorm ) scorm ;;
+    * ) usage ;;
+esac
+
+
