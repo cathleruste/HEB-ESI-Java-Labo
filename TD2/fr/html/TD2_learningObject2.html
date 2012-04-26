@@ -8,9 +8,10 @@
       <meta name="description"
             content="TD2 - Les bases de Linux: La ligne de commande. Expérience. FAQ. " />
       <meta name="copyright" content="" />
-      <meta name="author" content="" />
+      <meta name="author"
+            content="ARO () , BEJ () , CLR () , DNA () , HAL () , MBA () , MCD () , NPX () , PBT () " />
       <meta name="keywords" content="TD2 - Les bases de Linux, eLML" />
-      <title>1.1.2. La ligne de commande</title>
+      <title>1.2.2. La ligne de commande</title>
       <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css"
             media="screen" />
       <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css"
@@ -28,22 +29,23 @@
                  border="0" /></a></div>
       <ul class="navigation" id="nav_lesson">
          <li class="navigationLink"><a href="index.html">1. TD2 - Les bases de Linux</a><ul class="navigation nav_unit">
-               <li class="navigationLink"><a href="unit_TD2.html">1.1. TD2</a><ul class="navigation nav_lo">
-                     <li class="navigationLink"><a href="TD2_learningObject1.html">1.1.1. Se connecter à linux1</a></li>
-                     <li class="navigationActual"><strong>1.1.2. La ligne de commande</strong></li>
-                     <li class="navigationLink"><a href="TD2_learningObject3.html">1.1.3. Recherche d'informations</a></li>
-                     <li class="navigationLink"><a href="TD2_learningObject4.html">1.1.4. Système de fichiers, chemin absolu et relatif</a></li>
-                     <li class="navigationLink"><a href="TD2_learningObject5.html">1.1.5. Propriétaire et groupes</a></li>
-                     <li class="navigationLink"><a href="TD2_learningObject6.html">1.1.6. Les permissions</a></li>
-                     <li class="navigationLink"><a href="TD2_learningObject7.html">1.1.7. Conclusion</a></li>
+               <li class="navigationLink"><a href="TD2_metadata.html">1.1. Méta-données</a></li>
+               <li class="navigationLink"><a href="unit_TD2.html">1.2. TD2</a><ul class="navigation nav_lo">
+                     <li class="navigationLink"><a href="TD2_learningObject1.html">1.2.1. Se connecter à linux1</a></li>
+                     <li class="navigationActual"><strong>1.2.2. La ligne de commande</strong></li>
+                     <li class="navigationLink"><a href="TD2_learningObject3.html">1.2.3. Recherche d'informations</a></li>
+                     <li class="navigationLink"><a href="TD2_learningObject4.html">1.2.4. Système de fichiers, chemin absolu et relatif</a></li>
+                     <li class="navigationLink"><a href="TD2_learningObject5.html">1.2.5. Propriétaire et groupes</a></li>
+                     <li class="navigationLink"><a href="TD2_learningObject6.html">1.2.6. Les permissions</a></li>
+                     <li class="navigationLink"><a href="TD2_learningObject7.html">1.2.7. Conclusion</a></li>
                   </ul>
                </li>
             </ul>
          </li>
-      </ul><a name="top"></a><h1 id="TD2_learningObject2.html">1.1.2. La ligne de commande</h1>  
+      </ul><a name="top"></a><h1 id="TD2_learningObject2.html">1.2.2. La ligne de commande</h1>  
       Nous avons déjà parlé de la ligne de commande mais il reste un élément dont nous n'avons pas parlé, les <b>options</b> :  
       
-      <ul class="list" id="d8e190">
+      <ul class="list" id="d8e209">
          <li class="itemAlt">Une option modifie le sens d'une commande </li>
          <li class="item">Elle commence par le signe "-" suivi d'une seule lettre</li>
          <li class="itemAlt">Ou encore par le double tiret "--" suivi d'un nom d'option</li>
@@ -51,13 +53,13 @@
       Les options sont placées n'importe où après le nom de la commande.   
       
       
-      <div id="d8e198.html" class="clarify">
+      <div id="d8e217.html" class="clarify">
          <h4>Expérience<img src="../../../_templates/java/icons/icon_experiment.gif"
                  title="icon_experiment"
                  alt="icon_experiment"
                  class="icon" /></h4>
-         <p class="paragraph" title="Expérience" id="d8e199"></p>
-         <ul class="list" id="d8e200">
+         <p class="paragraph" title="Expérience" id="d8e218"></p>
+         <ul class="list" id="d8e219">
             <li class="itemAlt">Tapez la commande <span class="input">ls -l</span>. Vous constatez que le résultat obtenu est beaucoup plus verbeux que celui obtenu sans l'option.
             </li>
             <li class="item">Tapez la commande <span class="input">cat -n td1/test</span>. L'option demande de numéroter les lignes. (note: on suppose que vous avez bien créé ce fichier lors du td précédent) 
@@ -65,14 +67,14 @@
             <li class="itemAlt">Essayez <span class="input">cat --number td1/test</span>. C'est la version <i>longue</i> tout-à-fait équivalente à la précédente.
             </li>
          </ul><br clear="all" /></div>
-      <div id="d8e220.html" class="clarify">
+      <div id="d8e239.html" class="clarify">
          <h4>FAQ<img src="../../../_templates/java/icons/icon_faq.gif" title="icon_faq"
                  alt="icon_faq"
                  class="icon" /></h4>
-         <p class="paragraph" title="FAQ" id="d8e221"></p><b>Comment je fais pour connaitre les options disponibles pour une commande ?</b><br clear="all" /><br clear="all" />  
+         <p class="paragraph" title="FAQ" id="d8e240"></p><b>Comment je fais pour connaitre les options disponibles pour une commande ?</b><br clear="all" /><br clear="all" />  
          Il existe plusieurs possibilités. Nous en parlons dans le point suivant qui concerne la recherche d'information.   
          <br clear="all" /><br clear="all" /><br clear="all" /></div>
       <hr />
-      <p class="footer"> Update: 23.4.2012 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TD2.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 26.4.2012 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TD2.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

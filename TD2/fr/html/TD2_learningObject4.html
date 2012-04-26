@@ -8,9 +8,10 @@
       <meta name="description"
             content="TD2 - Les bases de Linux: Système de fichiers, chemin absolu et relatif. Petit exercice. Cliquez pour voir l'image. Exercice VRAI ou FAUX. Chemins absolus et relatifs. Chemins absolus et relatifs. Chemins absolus et relatifs. Chemins absolus et relatifs. Chemins absolus et relatifs. Exercices. Exercices. Exercices. " />
       <meta name="copyright" content="" />
-      <meta name="author" content="" />
+      <meta name="author"
+            content="ARO () , BEJ () , CLR () , DNA () , HAL () , MBA () , MCD () , NPX () , PBT () " />
       <meta name="keywords" content="TD2 - Les bases de Linux, eLML" />
-      <title>1.1.4. Système de fichiers, chemin absolu et relatif</title>
+      <title>1.2.4. Système de fichiers, chemin absolu et relatif</title>
       		
       <link href="selfCheck.css" type="text/css" rel="stylesheet" media="screen" />
       		<script src="selfCheck.js" type="text/javascript">
@@ -31,19 +32,20 @@
                  border="0" /></a></div>
       <ul class="navigation" id="nav_lesson">
          <li class="navigationLink"><a href="index.html">1. TD2 - Les bases de Linux</a><ul class="navigation nav_unit">
-               <li class="navigationLink"><a href="unit_TD2.html">1.1. TD2</a><ul class="navigation nav_lo">
-                     <li class="navigationLink"><a href="TD2_learningObject1.html">1.1.1. Se connecter à linux1</a></li>
-                     <li class="navigationLink"><a href="TD2_learningObject2.html">1.1.2. La ligne de commande</a></li>
-                     <li class="navigationLink"><a href="TD2_learningObject3.html">1.1.3. Recherche d'informations</a></li>
-                     <li class="navigationActual"><strong>1.1.4. Système de fichiers, chemin absolu et relatif</strong></li>
-                     <li class="navigationLink"><a href="TD2_learningObject5.html">1.1.5. Propriétaire et groupes</a></li>
-                     <li class="navigationLink"><a href="TD2_learningObject6.html">1.1.6. Les permissions</a></li>
-                     <li class="navigationLink"><a href="TD2_learningObject7.html">1.1.7. Conclusion</a></li>
+               <li class="navigationLink"><a href="TD2_metadata.html">1.1. Méta-données</a></li>
+               <li class="navigationLink"><a href="unit_TD2.html">1.2. TD2</a><ul class="navigation nav_lo">
+                     <li class="navigationLink"><a href="TD2_learningObject1.html">1.2.1. Se connecter à linux1</a></li>
+                     <li class="navigationLink"><a href="TD2_learningObject2.html">1.2.2. La ligne de commande</a></li>
+                     <li class="navigationLink"><a href="TD2_learningObject3.html">1.2.3. Recherche d'informations</a></li>
+                     <li class="navigationActual"><strong>1.2.4. Système de fichiers, chemin absolu et relatif</strong></li>
+                     <li class="navigationLink"><a href="TD2_learningObject5.html">1.2.5. Propriétaire et groupes</a></li>
+                     <li class="navigationLink"><a href="TD2_learningObject6.html">1.2.6. Les permissions</a></li>
+                     <li class="navigationLink"><a href="TD2_learningObject7.html">1.2.7. Conclusion</a></li>
                   </ul>
                </li>
             </ul>
          </li>
-      </ul><a name="top"></a><h1 id="TD2_learningObject4.html">1.1.4. Système de fichiers, chemin absolu et relatif</h1> 
+      </ul><a name="top"></a><h1 id="TD2_learningObject4.html">1.2.4. Système de fichiers, chemin absolu et relatif</h1> 
       «<i> Tout est relatif, et cela seul est absolu </i>». Auguste Comte.  
       
         
@@ -51,22 +53,22 @@
       dossier ne suffit pas.<br clear="all" />  
       Un petit tour vers les points 10 à 14 du guide visuel sera peut-être nécessaire...  
       
-      <div id="d8e335.html" class="act">
+      <div id="d8e354.html" class="act">
          <h4>Petit exercice<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
-         <p class="paragraph" title="Petit exercice" id="d8e336"></p>
-         <ol class="list" id="d8e337">
-            <li class="itemAlt">Pouvez-vous retrouver votre dossier personnel dans le système de fichiers ?</li><br clear="all" /><br clear="all" /><p id="d8e342" class="popupTitle" style="cursor: pointer;"
-               onclick="onBlock('solutiond8e342')">Cliquez pour voir l'image</p>
-            <div id="solutiond8e342text" style="display: none; cursor: pointer;" class="popup"
+         <p class="paragraph" title="Petit exercice" id="d8e355"></p>
+         <ol class="list" id="d8e356">
+            <li class="itemAlt">Pouvez-vous retrouver votre dossier personnel dans le système de fichiers ?</li><br clear="all" /><br clear="all" /><p id="d8e361" class="popupTitle" style="cursor: pointer;"
+               onclick="onBlock('solutiond8e361')">Cliquez pour voir l'image</p>
+            <div id="solutiond8e361text" style="display: none; cursor: pointer;" class="popup"
                  title="Cliquez pour voir l'image"
-                 onclick="off('solutiond8e342')"><span class="multimedia_inline"><img class="multimedia" id="d8e343" src="../image/fs.jpeg" alt="" /></span></div><br clear="all" /><br clear="all" /><li class="itemAlt">Entrez la commande <span class="input">pwd</span> (que fait-elle encore ?). Comprenez-vous la notation qu'elle utilise pour la réponse ?
+                 onclick="off('solutiond8e361')"><span class="multimedia_inline"><img class="multimedia" id="d8e362" src="../image/fs.jpeg" alt="" /></span></div><br clear="all" /><br clear="all" /><li class="itemAlt">Entrez la commande <span class="input">pwd</span> (que fait-elle encore ?). Comprenez-vous la notation qu'elle utilise pour la réponse ?
             </li>
          </ol><br clear="all" /></div>
-      <div id="d8e352.html" class="clarify">
+      <div id="d8e371.html" class="clarify">
          <h4>Exercice VRAI ou FAUX<img src="../../../_templates/java/icons/icon_question.gif" title="icon_question"
                  alt="icon_question"
                  class="icon" /></h4>
-         <p class="paragraph" title="Exercice VRAI ou FAUX" id="d8e353"></p>
+         <p class="paragraph" title="Exercice VRAI ou FAUX" id="d8e372"></p>
          <h4>Chemins absolus et relatifs</h4>
          <div id="selfCheck2.html" class="singleChoice">
             <div class="itemQuestion">
@@ -74,7 +76,7 @@
                							
             </div>
             <div class="itemAnswer"><input type="radio" name="selfCheck2.html" value="0" class="itemRadio"
-                      id="selfCheck2.html_d8e359" /><div class="itemLabel"><label for="selfCheck2.html_d8e359">
+                      id="selfCheck2.html_d8e378" /><div class="itemLabel"><label for="selfCheck2.html_d8e378">
                      							Vrai
                      						 <span class="itemFeedback">
                         <!----></span></label></div>
@@ -82,7 +84,7 @@
                     onmouseout="UnTip()">?</div>
             </div>
             <div class="itemAnswer"><input type="radio" name="selfCheck2.html" value="1" class="itemRadio"
-                      id="selfCheck2.html_d8e361" /><div class="itemLabel"><label for="selfCheck2.html_d8e361">
+                      id="selfCheck2.html_d8e380" /><div class="itemLabel"><label for="selfCheck2.html_d8e380">
                      							Faux
                      						 <span class="itemFeedback">
                         <!----></span></label></div>
@@ -106,7 +108,7 @@
                							
             </div>
             <div class="itemAnswer"><input type="radio" name="selfCheck3.html" value="0" class="itemRadio"
-                      id="selfCheck3.html_d8e368" /><div class="itemLabel"><label for="selfCheck3.html_d8e368">
+                      id="selfCheck3.html_d8e387" /><div class="itemLabel"><label for="selfCheck3.html_d8e387">
                      							Vrai
                      						 <span class="itemFeedback">
                         <!----></span></label></div>
@@ -114,7 +116,7 @@
                     onmouseout="UnTip()">?</div>
             </div>
             <div class="itemAnswer"><input type="radio" name="selfCheck3.html" value="1" class="itemRadio"
-                      id="selfCheck3.html_d8e370" /><div class="itemLabel"><label for="selfCheck3.html_d8e370">
+                      id="selfCheck3.html_d8e389" /><div class="itemLabel"><label for="selfCheck3.html_d8e389">
                      							Faux
                      						 <span class="itemFeedback">
                         <!----></span></label></div>
@@ -138,7 +140,7 @@
                							
             </div>
             <div class="itemAnswer"><input type="radio" name="selfCheck4.html" value="1" class="itemRadio"
-                      id="selfCheck4.html_d8e377" /><div class="itemLabel"><label for="selfCheck4.html_d8e377">
+                      id="selfCheck4.html_d8e396" /><div class="itemLabel"><label for="selfCheck4.html_d8e396">
                      							Vrai
                      						 <span class="itemFeedback">
                         <!----></span></label></div>
@@ -146,7 +148,7 @@
                     onmouseout="UnTip()">?</div>
             </div>
             <div class="itemAnswer"><input type="radio" name="selfCheck4.html" value="0" class="itemRadio"
-                      id="selfCheck4.html_d8e379" /><div class="itemLabel"><label for="selfCheck4.html_d8e379">
+                      id="selfCheck4.html_d8e398" /><div class="itemLabel"><label for="selfCheck4.html_d8e398">
                      							Faux
                      						 <span class="itemFeedback">
                         <!----></span></label></div>
@@ -168,7 +170,7 @@
                							
             </div>
             <div class="itemAnswer"><input type="radio" name="selfCheck5.html" value="1" class="itemRadio"
-                      id="selfCheck5.html_d8e386" /><div class="itemLabel"><label for="selfCheck5.html_d8e386">
+                      id="selfCheck5.html_d8e405" /><div class="itemLabel"><label for="selfCheck5.html_d8e405">
                      							Vrai
                      						 <span class="itemFeedback">
                         <!----></span></label></div>
@@ -176,7 +178,7 @@
                     onmouseout="UnTip()">?</div>
             </div>
             <div class="itemAnswer"><input type="radio" name="selfCheck5.html" value="0" class="itemRadio"
-                      id="selfCheck5.html_d8e388" /><div class="itemLabel"><label for="selfCheck5.html_d8e388">
+                      id="selfCheck5.html_d8e407" /><div class="itemLabel"><label for="selfCheck5.html_d8e407">
                      							Faux
                      						 <span class="itemFeedback">
                         <!----></span></label></div>
@@ -198,7 +200,7 @@
                							
             </div>
             <div class="itemAnswer"><input type="radio" name="selfCheck6.html" value="1" class="itemRadio"
-                      id="selfCheck6.html_d8e395" /><div class="itemLabel"><label for="selfCheck6.html_d8e395">
+                      id="selfCheck6.html_d8e414" /><div class="itemLabel"><label for="selfCheck6.html_d8e414">
                      							Vrai
                      						 <span class="itemFeedback">
                         <!----></span></label></div>
@@ -206,7 +208,7 @@
                     onmouseout="UnTip()">?</div>
             </div>
             <div class="itemAnswer"><input type="radio" name="selfCheck6.html" value="0" class="itemRadio"
-                      id="selfCheck6.html_d8e397" /><div class="itemLabel"><label for="selfCheck6.html_d8e397">
+                      id="selfCheck6.html_d8e416" /><div class="itemLabel"><label for="selfCheck6.html_d8e416">
                      							Faux
                      						 <span class="itemFeedback">
                         <!----></span></label></div>
@@ -224,22 +226,22 @@
                        disabled="disabled">Solution</button></div>
          </div><script src="wz_tooltip.js" type="text/javascript">
             <!----></script></div>
-      <div id="d8e399.html" class="act">
+      <div id="d8e418.html" class="act">
          <h4>Exercices<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
-         <p class="paragraph" title="Exercices" id="d8e400"></p>
-         <ol class="list" id="d8e401">
+         <p class="paragraph" title="Exercices" id="d8e419"></p>
+         <ol class="list" id="d8e420">
             <li class="itemAlt">Écrivez le chemin absolu d'un des fichiers que vous avez déjà créé pour ce TD.  </li>
             <li class="item">Visualisez le contenu de ce fichier en donnant un chemin absolu.</li>
             <li class="itemAlt">Faites de même avec un fichier de votre voisin. </li>
          </ol><br clear="all" /></div>
-      <div id="d8e409.html" class="act">
+      <div id="d8e428.html" class="act">
          <h4>Exercices<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
-         <p class="paragraph" title="Exercices" id="d8e410"></p> 
+         <p class="paragraph" title="Exercices" id="d8e429"></p> 
          Refaites les exercices précédents en utilisant les raccourcis <span class="input">~</span> et <span class="input">~g12345</span>.<br clear="all" /><br clear="all" /></div>
-      <div id="d8e420.html" class="act">
+      <div id="d8e439.html" class="act">
          <h4>Exercices<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
-         <p class="paragraph" title="Exercices" id="d8e421"></p>
-         <ol class="list" id="d8e422">
+         <p class="paragraph" title="Exercices" id="d8e440"></p>
+         <ol class="list" id="d8e441">
             <li class="itemAlt">Visualisez le contenu d'un des fichiers que vous avez déjà créé pour ce TD en utilisant un chemin relatif.</li>
             <li class="item">Faites de même avec un fichier du TD 1. </li>
             <li class="itemAlt">Faites de même avec un fichier de votre voisin. </li>
@@ -247,6 +249,6 @@
             </li>
          </ol><br clear="all" /></div>
       <hr />
-      <p class="footer"> Update: 23.4.2012 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TD2.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 26.4.2012 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TD2.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>
