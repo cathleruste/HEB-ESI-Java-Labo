@@ -1,0 +1,1749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:elml="http://www.elml.ch"
+         xmlns:fo="http://www.w3.org/1999/XSL/Format"
+         xmlns:fn="http://www.w3.org/2004/07/xpath-functions"
+         xmlns:xdt="http://www.w3.org/2004/07/xpath-datatypes"
+         xmlns:fox="http://xml.apache.org/fop/extensions"
+         font-family="Times">
+   <fo:layout-master-set>
+      <fo:simple-page-master master-name="title-page" page-height="29.7cm" page-width="21cm"
+                             margin-top="15mm"
+                             margin-bottom="15mm"
+                             margin-left="20mm"
+                             margin-right="20mm">
+         <fo:region-body margin-top="5mm" margin-bottom="5mm"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master master-name="default-page" page-height="29.7cm" page-width="21cm"
+                             margin-top="15mm"
+                             margin-bottom="15mm"
+                             margin-left="20mm"
+                             margin-right="20mm">
+         <fo:region-body margin-top="12mm" margin-bottom="15mm"/>
+         <fo:region-before extent="10mm"/>
+         <fo:region-after extent="10mm"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master master-name="twocolumn" page-height="29.7cm" page-width="21cm"
+                             margin-top="15mm"
+                             margin-bottom="15mm"
+                             margin-left="20mm"
+                             margin-right="20mm">
+         <fo:region-body margin-top="12mm" margin-bottom="15mm" column-count="2" column-gap="13pt"/>
+         <fo:region-before extent="10mm"/>
+         <fo:region-after extent="10mm"/>
+      </fo:simple-page-master>
+   </fo:layout-master-set>
+   <fo:page-sequence master-reference="title-page">
+      <fo:flow flow-name="xsl-region-body">
+         <fo:table id="coverpage" table-layout="fixed" text-align="center" width="100%">
+            <fo:table-column column-width="proportional-column-width(1)"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell border-style="solid" border-width="1pt" border-color="white" height="50pt"
+                                 text-align="center"
+                                 padding="3pt"
+                                 display-align="center">
+                     <fo:block>
+                        <fo:block>
+                           <fo:leader leader-pattern="space"/>
+                        </fo:block>
+                     </fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+               <fo:table-row>
+                  <fo:table-cell border-style="solid" border-width="1pt" border-color="white" padding="3pt"
+                                 display-align="center">
+                     <fo:block>
+                        <fo:block border-style="solid" border-width="1pt" border-color="#808080" padding="3pt">
+                           <fo:block>
+                              <fo:block text-align="center">
+                                 <fo:block>
+                                    <fo:block font-size="11pt*2.5" font-weight="bold" line-height="15pt*3">
+                                       <fo:block>
+                                          <fo:block>
+                                             <fo:leader leader-pattern="space"/>
+                                          </fo:block>TD1 - Prise en main de l’environnement<fo:block>
+                                             <fo:leader leader-pattern="space"/>
+                                          </fo:block>
+                                          <fo:block>
+</fo:block>
+                                       </fo:block>
+                                    </fo:block>
+                                 </fo:block>
+                              </fo:block>
+                           </fo:block>
+                        </fo:block>
+                     </fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:flow>
+   </fo:page-sequence>
+   <fo:page-sequence master-reference="default-page" initial-page-number="1" format="1">
+      <fox:outline internal-destination="content">
+         <fox:label>Table des matières</fox:label>
+      </fox:outline>
+      <fox:outline internal-destination="TD1_unit_TD1.html">
+         <fox:label>1.1. TD1</fox:label>
+         <fox:outline internal-destination="TD1_TD1_learningObject1.html">
+            <fox:label>1.1.1. TD1 - Prise en main de l’environnement</fox:label>
+         </fox:outline>
+      </fox:outline>
+      <fox:outline internal-destination="TD1_unit_Windows.html">
+         <fox:label>1.2. Windows</fox:label>
+         <fox:outline internal-destination="TD1_Windows_learningObject1.html">
+            <fox:label>1.2.1. Windows - Changer le mot de passe</fox:label>
+         </fox:outline>
+      </fox:outline>
+      <fox:outline internal-destination="TD1_unit_Linux.html">
+         <fox:label>1.3. Linux</fox:label>
+         <fox:outline internal-destination="TD1_Linux_learningObject1.html">
+            <fox:label>1.3.1. Linux</fox:label>
+         </fox:outline>
+         <fox:outline internal-destination="TD1_Linux_learningObject2.html">
+            <fox:label>1.3.2. Se connecter</fox:label>
+         </fox:outline>
+         <fox:outline internal-destination="TD1_Linux_learningObject3.html">
+            <fox:label>1.3.3. Le mode console</fox:label>
+         </fox:outline>
+         <fox:outline internal-destination="TD1_Linux_learningObject4.html">
+            <fox:label>1.3.4. Changer le mot de passe</fox:label>
+         </fox:outline>
+         <fox:outline internal-destination="TD1_Linux_learningObject5.html">
+            <fox:label>1.3.5. Le dossier personnel et le dossier courant</fox:label>
+         </fox:outline>
+         <fox:outline internal-destination="TD1_Linux_learningObject6.html">
+            <fox:label>1.3.6. L'éditeur</fox:label>
+         </fox:outline>
+         <fox:outline internal-destination="TD1_Linux_learningObject7.html">
+            <fox:label>1.3.7. Quelques commandes courantes</fox:label>
+         </fox:outline>
+         <fox:outline internal-destination="TD1_Linux_learningObject8.html">
+            <fox:label>1.3.8. L'éditeur (le retour)</fox:label>
+         </fox:outline>
+         <fox:outline internal-destination="TD1_Linux_learningObject9.html">
+            <fox:label>1.3.9. Conclusion</fox:label>
+         </fox:outline>
+      </fox:outline>
+      <fo:static-content flow-name="xsl-region-before">
+         <fo:block font-weight="bold" color="black" border-after-style="solid">TD1 - Prise en main de l’environnement</fo:block>
+      </fo:static-content>
+      <fo:static-content flow-name="xsl-region-after" display-align="after">
+         <fo:block font-weight="bold" color="black" border-before-style="solid"
+                   text-align-last="justify">http://www.heb.be/esi - Version: 22.4.2012<fo:leader leader-pattern="space"/>
+            <fo:page-number/>
+         </fo:block>
+      </fo:static-content>
+      <fo:static-content flow-name="xsl-footnote-separator">
+         <fo:block>
+            <fo:leader leader-pattern="rule" leader-length="30%" rule-thickness="0.5pt"
+                       rule-style="solid"
+                       color="black"
+                       display-align="before"/>
+         </fo:block>
+      </fo:static-content>
+      <fo:flow flow-name="xsl-region-body" text-align="justify" font-size="11pt"
+               line-height="15pt"
+               orphans="3"
+               widows="3">
+         <fo:block id="content" font-size="11pt*2.0" font-weight="bold" break-before="page"
+                   keep-with-next.within-page="always"
+                   space-after="15pt*1.5">Table des matières</fo:block>
+         <fo:block text-align-last="justify" margin-left="1em">
+            <fo:basic-link color="black" internal-destination="TD1_index.html">1. TD1 - Prise en main de l’environnement</fo:basic-link>
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="TD1_index.html"/>
+         </fo:block>
+         <fo:block text-align-last="justify" margin-left="2em">
+            <fo:basic-link color="black" internal-destination="TD1_unit_TD1.html">1.1. TD1</fo:basic-link>
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="TD1_unit_TD1.html"/>
+         </fo:block>
+         <fo:block text-align-last="justify" margin-left="3em">
+            <fo:basic-link color="black" internal-destination="TD1_TD1_learningObject1.html">1.1.1. TD1 - Prise en main de l’environnement</fo:basic-link>
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="TD1_TD1_learningObject1.html"/>
+         </fo:block>
+         <fo:block text-align-last="justify" margin-left="2em">
+            <fo:basic-link color="black" internal-destination="TD1_unit_Windows.html">1.2. Windows</fo:basic-link>
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="TD1_unit_Windows.html"/>
+         </fo:block>
+         <fo:block text-align-last="justify" margin-left="3em">
+            <fo:basic-link color="black" internal-destination="TD1_Windows_learningObject1.html">1.2.1. Windows - Changer le mot de passe</fo:basic-link>
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="TD1_Windows_learningObject1.html"/>
+         </fo:block>
+         <fo:block text-align-last="justify" margin-left="2em">
+            <fo:basic-link color="black" internal-destination="TD1_unit_Linux.html">1.3. Linux</fo:basic-link>
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="TD1_unit_Linux.html"/>
+         </fo:block>
+         <fo:block text-align-last="justify" margin-left="3em">
+            <fo:basic-link color="black" internal-destination="TD1_Linux_learningObject1.html">1.3.1. Linux</fo:basic-link>
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="TD1_Linux_learningObject1.html"/>
+         </fo:block>
+         <fo:block text-align-last="justify" margin-left="3em">
+            <fo:basic-link color="black" internal-destination="TD1_Linux_learningObject2.html">1.3.2. Se connecter</fo:basic-link>
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="TD1_Linux_learningObject2.html"/>
+         </fo:block>
+         <fo:block text-align-last="justify" margin-left="3em">
+            <fo:basic-link color="black" internal-destination="TD1_Linux_learningObject3.html">1.3.3. Le mode console</fo:basic-link>
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="TD1_Linux_learningObject3.html"/>
+         </fo:block>
+         <fo:block text-align-last="justify" margin-left="3em">
+            <fo:basic-link color="black" internal-destination="TD1_Linux_learningObject4.html">1.3.4. Changer le mot de passe</fo:basic-link>
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="TD1_Linux_learningObject4.html"/>
+         </fo:block>
+         <fo:block text-align-last="justify" margin-left="3em">
+            <fo:basic-link color="black" internal-destination="TD1_Linux_learningObject5.html">1.3.5. Le dossier personnel et le dossier courant</fo:basic-link>
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="TD1_Linux_learningObject5.html"/>
+         </fo:block>
+         <fo:block text-align-last="justify" margin-left="3em">
+            <fo:basic-link color="black" internal-destination="TD1_Linux_learningObject6.html">1.3.6. L'éditeur</fo:basic-link>
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="TD1_Linux_learningObject6.html"/>
+         </fo:block>
+         <fo:block text-align-last="justify" margin-left="3em">
+            <fo:basic-link color="black" internal-destination="TD1_Linux_learningObject7.html">1.3.7. Quelques commandes courantes</fo:basic-link>
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="TD1_Linux_learningObject7.html"/>
+         </fo:block>
+         <fo:block text-align-last="justify" margin-left="3em">
+            <fo:basic-link color="black" internal-destination="TD1_Linux_learningObject8.html">1.3.8. L'éditeur (le retour)</fo:basic-link>
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="TD1_Linux_learningObject8.html"/>
+         </fo:block>
+         <fo:block text-align-last="justify" margin-left="3em">
+            <fo:basic-link color="black" internal-destination="TD1_Linux_learningObject9.html">1.3.9. Conclusion</fo:basic-link>
+            <fo:leader leader-pattern="dots"/>
+            <fo:page-number-citation ref-id="TD1_Linux_learningObject9.html"/>
+         </fo:block>
+         <fo:block line-height="11pt*2.0*1.3" font-size="11pt*2.0" font-weight="bold"
+                   keep-with-next.within-page="always"
+                   text-align="left"
+                   span="all"
+                   space-after="15pt*0.4"
+                   break-before="page"
+                   id="TD1_index.html">1. TD1 - Prise en main de l’environnement</fo:block>
+         <fo:block>
+            <fo:block line-height="11pt*1.6*1.3" font-size="11pt*1.6" font-weight="bold"
+                      keep-with-next.within-page="always"
+                      text-align="left"
+                      span="all"
+                      space-after="15pt*0.4"
+                      break-before="page"
+                      id="TD1_unit_TD1.html">1.1. TD1</fo:block>
+            <fo:block line-height="11pt*1.3*1.3" font-size="11pt*1.3" font-weight="bold"
+                      keep-with-next.within-page="always"
+                      text-align="left"
+                      span="all"
+                      space-after="15pt*0.4"
+                      break-before="page"
+                      id="TD1_TD1_learningObject1.html">1.1.1. TD1 - Prise en main de l’environnement</fo:block>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Bravo !</fo:block>
+            <fo:block/>
+					Si vous lisez cette page c'est que vous avez pu vous connecter sur  le PC.<fo:block/>
+					Vous allez à présent voir comment l'utiliser correctement  pour les laboratoires Java.
+				<fo:block/>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Consignes</fo:block>
+            <fo:block/>
+					Ces pages vont vous guider dans votre apprentissage de Java et Linux.
+				<fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Faites bien tous les exercices proposés;</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>N'hésitez pas à <fo:inline font-weight="bold">montrer votre travail</fo:inline> à votre professeur;</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>N'hésitez pas à <fo:inline font-weight="bold">poser des questions</fo:inline> si vous n'avez pas bien compris ce qu'on vous demande;</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>
+                        <fo:inline font-weight="bold">Prenez des notes</fo:inline>! Ce que vous allez apprendre aujourd'hui vous servira les semaines prochaines mais vous en aurez oublié une grande partie si vous ne notez rien. Le plus pratique est probablement d'annoter la version <fo:inline font-weight="bold">papier</fo:inline>.</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Ayez toujours avec vous le <fo:inline font-weight="bold">guide visuel </fo:inline>et l'<fo:inline font-weight="bold">aide-mémoire</fo:inline>. Ils vous seront utiles tout au long des tds.</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+            <fo:block/>
+            <fo:block line-height="11pt*1.6*1.3" font-size="11pt*1.6" font-weight="bold"
+                      keep-with-next.within-page="always"
+                      text-align="left"
+                      span="all"
+                      space-after="15pt*0.4"
+                      break-before="page"
+                      id="TD1_unit_Windows.html">1.2. Windows</fo:block>
+            <fo:block line-height="11pt*1.3*1.3" font-size="11pt*1.3" font-weight="bold"
+                      keep-with-next.within-page="always"
+                      text-align="left"
+                      span="all"
+                      space-after="15pt*0.4"
+                      break-before="page"
+                      id="TD1_Windows_learningObject1.html">1.2.1. Windows - Changer le mot de passe</fo:block>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Objectif</fo:block>
+            <fo:block/>
+					Vous allez apprendre à modifier votre mot de passe.
+				<fo:block/>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Réflexion</fo:block>
+            <fo:block/>
+					À votre avis, pourquoi vous demande-t-on de modifier votre mot de passe ?
+				<fo:block border-style="solid" border-width="1pt" border-color="black" padding="3pt"
+                      start-indent="15pt"
+                      end-indent="15pt"
+                      space-after="15pt"
+                      background-color="lightgrey"
+                      margin="5pt"
+                      space-before="15pt">Le mot de passe initial peut être <fo:inline font-style="italic">trouvé </fo:inline>par un autre étudiant.<fo:block/>
+               <fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                              provisional-distance-between-starts="8mm"
+                              provisional-label-separation="2mm"
+                              space-before="4pt"
+                              space-after="4pt"
+                              display-align="before">
+                  <fo:list-item>
+                     <fo:list-item-label end-indent="label-end()">
+                        <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                     </fo:list-item-label>
+                     <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Celui qu'on vous a donné n'est pas secret puisqu'il est noté dans un fichier informatique.</fo:block>
+                     </fo:list-item-body>
+                  </fo:list-item>
+                  <fo:list-item>
+                     <fo:list-item-label end-indent="label-end()">
+                        <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                     </fo:list-item-label>
+                     <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Il est tellement difficile à retenir que vous allez être tenté de le noter quelque part.</fo:block>
+                     </fo:list-item-body>
+                  </fo:list-item>
+               </fo:list-block>
+						Si un autre étudiant le connait, il peut se faire passer pour vous.
+					<fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                              provisional-distance-between-starts="8mm"
+                              provisional-label-separation="2mm"
+                              space-before="4pt"
+                              space-after="4pt"
+                              display-align="before">
+                  <fo:list-item>
+                     <fo:list-item-label end-indent="label-end()">
+                        <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                     </fo:list-item-label>
+                     <fo:list-item-body start-indent="body-start()">
+                        <fo:block>Les impressions qu'il fera vous seront facturées.</fo:block>
+                     </fo:list-item-body>
+                  </fo:list-item>
+                  <fo:list-item>
+                     <fo:list-item-label end-indent="label-end()">
+                        <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                     </fo:list-item-label>
+                     <fo:list-item-body start-indent="body-start()">
+                        <fo:block>S'il commet un acte informatique illégal, c'est vous qu'on soupçonnera<fo:inline font-style="italic"/> en premier. </fo:block>
+                     </fo:list-item-body>
+                  </fo:list-item>
+               </fo:list-block>
+            </fo:block>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Exemples de mots de passe</fo:block>
+            <fo:table table-layout="fixed" width="100%" space-after="1em">
+               <fo:table-column column-width="proportional-column-width(1)"/>
+               <fo:table-column column-width="proportional-column-width(20)"/>
+               <fo:table-body>
+                  <fo:table-row keep-together.within-column="always">
+                     <fo:table-cell number-columns-spanned="2">
+                        <fo:block font-weight="bold" font-style="italic">
+								Quelles sont les propositions qui vous paraissent correctes comme mot de passe ? <fo:block/>(plusieurs réponses possibles)
+							</fo:block>
+                     </fo:table-cell>
+                  </fo:table-row>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block>
+                           <fo:character character="❍" font-family="ZapfDingbats"/>
+                        </fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block>
+							nadia
+						</fo:block>
+                     </fo:table-cell>
+                  </fo:table-row>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block>
+                           <fo:character character="❍" font-family="ZapfDingbats"/>
+                        </fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block>
+							m@C0p1ne
+						</fo:block>
+                     </fo:table-cell>
+                  </fo:table-row>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block>
+                           <fo:character character="❍" font-family="ZapfDingbats"/>
+                        </fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block>
+							GH5).jg
+						</fo:block>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Changer le mot de passe</fo:block>
+            <fo:block/>
+					Il est  temps de <fo:inline font-weight="bold">changer votre mot de passe</fo:inline>. Les étapes sont expliquées ici.<fo:block/>
+            <fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block>1.</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Appuyez sur ALT-CTRL-DEL et choisissez Change password.... <fo:block/>
+                        <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                                  keep-with-next.within-page="always">Cliquez pour voir l'image</fo:block>
+                        <fo:block border-style="solid" border-width="1pt" border-color="black" padding="3pt"
+                                  start-indent="15pt"
+                                  end-indent="15pt"
+                                  space-after="15pt"
+                                  background-color="lightgrey"
+                                  margin="5pt"
+                                  space-before="15pt">
+                           <fo:inline>
+                              <fo:external-graphic scaling="uniform" id="TD1_d5e108.html"
+                                                   src="file:/C:/Users/Cath/Documents/Cours/Java/Tds20122013/eLML_v8-00/MyProject/TD1/fr/image/change_password_1.jpg"/>
+                           </fo:inline>
+                        </fo:block>
+                     </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block>2.</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Dans la fenêtre qui apparait, tapez<fo:block/>
+                        <fo:inline font-weight="bold">Note</fo:inline> : utilisez la souris ou la touche TAB pour passer d'un champ à l'autre mais surtout pas la touche ENTER.
+          </fo:block>
+                     <fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                                    provisional-distance-between-starts="8mm"
+                                    provisional-label-separation="2mm"
+                                    space-before="4pt"
+                                    space-after="4pt"
+                                    display-align="before">
+                        <fo:list-item>
+                           <fo:list-item-label end-indent="label-end()">
+                              <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                           </fo:list-item-label>
+                           <fo:list-item-body start-indent="body-start()">
+                              <fo:block>votre mot de passe initial,</fo:block>
+                           </fo:list-item-body>
+                        </fo:list-item>
+                        <fo:list-item>
+                           <fo:list-item-label end-indent="label-end()">
+                              <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                           </fo:list-item-label>
+                           <fo:list-item-body start-indent="body-start()">
+                              <fo:block>le nouveau mot de passe,</fo:block>
+                           </fo:list-item-body>
+                        </fo:list-item>
+                        <fo:list-item>
+                           <fo:list-item-label end-indent="label-end()">
+                              <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                           </fo:list-item-label>
+                           <fo:list-item-body start-indent="body-start()">
+                              <fo:block>une deuxième fois ce nouveau mot de passe.</fo:block>
+                           </fo:list-item-body>
+                        </fo:list-item>
+                     </fo:list-block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block>3.</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Un message vous indique que tout s'est bien passé (normalement).<fo:block/>
+                        <fo:inline font-weight="bold">Note</fo:inline> : Prenez d'autant plus le temps si vous éprouvez des difficultés avec l'anglais; les messages d'erreurs seront généralement en anglais. <fo:inline font-weight="bold">Il faut absolument vous entrainer à lire des messages simples.</fo:inline>
+                     </fo:block>
+                     <fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                                    provisional-distance-between-starts="8mm"
+                                    provisional-label-separation="2mm"
+                                    space-before="4pt"
+                                    space-after="4pt"
+                                    display-align="before">
+                        <fo:list-item>
+                           <fo:list-item-label end-indent="label-end()">
+                              <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                           </fo:list-item-label>
+                           <fo:list-item-body start-indent="body-start()">
+                              <fo:block>Prenez le temps de le lire : c'est peut-être un message d'erreur.</fo:block>
+                           </fo:list-item-body>
+                        </fo:list-item>
+                     </fo:list-block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block>4.</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Afin de vérifier que le mot de passe est bien changé, déconnectez-vous et reconnectez-vous.<fo:block/>
+						(et revenez sur cette page bien sûr pour pouvoir continuer les exercices ;)) 
+          </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+            <fo:block/>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">FAQ</fo:block>
+            <fo:block/>
+            <fo:inline font-weight="bold">Je ne suis pas content du mot de passe que j'ai choisi. Est-ce que je peux le changer ?</fo:inline>
+            <fo:block/>
+            <fo:block/>
+					Oui mais pas tout de suite. L'administrateur des machines Windows de l'école impose un temps minimum (1 jour) entre 2 modifications de mot de passe.
+					<fo:block/>
+            <fo:block/>
+            <fo:inline font-weight="bold">Est-ce que je vais pouvoir garder ce mot de passe toute l'année ?</fo:inline>
+            <fo:block/>
+            <fo:block/>
+					Non. Pour des raisons de sécurité, Windows va vous demander de changer le mot de passe d'ici quelques mois.
+					<fo:block/>
+            <fo:block/>
+            <fo:inline font-weight="bold">J'ai oublié mon mot de passe. Qu'est-ce que je peux faire ?</fo:inline>
+            <fo:block/>
+            <fo:block/>
+					Les professeurs ne peuvent ni retrouver votre nouveau mot de passe, ni
+					remettre le mot de passe de départ.<fo:block/>
+          Par contre le technicien (F.
+					Marchal qui a son bureau au 5ème) peut remettre le mot de passe de
+					départ. Allez le trouver (et prenez garde à ce que ça n'arrive plus !)
+					<fo:block/>
+            <fo:block/>
+            <fo:block/>
+            <fo:block line-height="11pt*1.6*1.3" font-size="11pt*1.6" font-weight="bold"
+                      keep-with-next.within-page="always"
+                      text-align="left"
+                      span="all"
+                      space-after="15pt*0.4"
+                      break-before="page"
+                      id="TD1_unit_Linux.html">1.3. Linux</fo:block>
+            <fo:block line-height="11pt*1.3*1.3" font-size="11pt*1.3" font-weight="bold"
+                      keep-with-next.within-page="always"
+                      text-align="left"
+                      span="all"
+                      space-after="15pt*0.4"
+                      break-before="page"
+                      id="TD1_Linux_learningObject1.html">1.3.1. Linux</fo:block>
+			« <fo:inline font-style="italic">Linux ? Il y a moins bien mais c'est plus cher</fo:inline> ». auteur inconnu 
+			
+			<fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Présentation</fo:block>
+            <fo:block/>
+					Vous ne travaillerez pas directement sur votre PC durant les laboratoires Java.<fo:block/>
+					Celui-ci vous servira pour vous connecter au serveur Linux (son nom est <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">linux1</fo:inline>)
+					<fo:block/>
+            <fo:block/>
+            <fo:inline font-weight="bold">Tiens, c'est quoi Linux et pourquoi l'utiliser ? C'est quoi une machine partagée?</fo:inline>
+            <fo:block/>
+				Si vous vous posez encore ces questions, je vous invite vivement à relire le point 1 du guide visuel.<fo:block/>
+            <fo:block/>
+            <fo:block line-height="11pt*1.3*1.3" font-size="11pt*1.3" font-weight="bold"
+                      keep-with-next.within-page="always"
+                      text-align="left"
+                      span="all"
+                      space-after="15pt*0.4"
+                      break-before="page"
+                      id="TD1_Linux_learningObject2.html">1.3.2. Se connecter</fo:block>
+			Lorsque vous allez vous connecter, <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">linux1</fo:inline> va vous demander de vous identifier.
+			<fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Votre <fo:inline font-weight="bold">
+                           <fo:inline font-style="italic">username</fo:inline>
+                        </fo:inline> est le même que sous Windows (avec un <fo:inline font-weight="bold">'g' minuscule</fo:inline> obligatoirement). <fo:block/>
+			    Ex: <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">g32010</fo:inline>
+                        <fo:block/>
+                        <fo:inline font-weight="bold">Note</fo:inline> : pour Linux, les minuscules et les majuscules sont toujours des caractères différents.
+			    </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Votre <fo:inline font-style="italic">
+                           <fo:inline font-weight="bold">mot de passe</fo:inline>
+                        </fo:inline> est le même que votre <fo:inline font-weight="bold">mot de passe initial sous Windows</fo:inline>.
+			    </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+        
+			Le mot de passe sous Windows et sous Linux sont 2 mots de passe différents (initialisés à la même valeur).<fo:block/>
+			Vous avez modifié votre mot de passe sous Windows mais pas encore sous Linux (vous le ferez plus tard...)
+			
+			<fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Connectez-vous à linux1</fo:block>
+            <fo:block/>
+					Il y a 3 étapes:
+				<fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block>1.</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Lancez l'application <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">putty</fo:inline> (vous la trouverez dans le menu ou comme raccourci sur le bureau).</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block>2.</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Indiquez à putty le nom de la machine (<fo:inline font-style="italic">Host Name</fo:inline>) à laquelle vous voulez vous connecter (ici <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">linux1</fo:inline>). <fo:block/>
+                        <fo:block/>
+                        <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                                  keep-with-next.within-page="always">Cliquez pour voir l'image</fo:block>
+                        <fo:block border-style="solid" border-width="1pt" border-color="black" padding="3pt"
+                                  start-indent="15pt"
+                                  end-indent="15pt"
+                                  space-after="15pt"
+                                  background-color="lightgrey"
+                                  margin="5pt"
+                                  space-before="15pt">
+                           <fo:inline>
+                              <fo:external-graphic scaling="uniform" id="TD1_d5e250.html"
+                                                   src="file:/C:/Users/Cath/Documents/Cours/Java/Tds20122013/eLML_v8-00/MyProject/TD1/fr/image/putty-login.jpg"/>
+                           </fo:inline>
+                        </fo:block>
+                     </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:block/>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block>3.</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Cliquez sur "<fo:inline font-weight="bold">Open</fo:inline>"; la connexion se fait ! S'il vous présente une boite de message avec un "<fo:inline font-weight="bold">Security Alert</fo:inline>", cliquez sur "<fo:inline font-weight="bold">Yes</fo:inline>" en toute confiance.
+          </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block>4.</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Identifiez-vous !<fo:block/>
+                     </fo:block>
+                     <fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                                    provisional-distance-between-starts="8mm"
+                                    provisional-label-separation="2mm"
+                                    space-before="4pt"
+                                    space-after="4pt"
+                                    display-align="before">
+                        <fo:list-item>
+                           <fo:list-item-label end-indent="label-end()">
+                              <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                           </fo:list-item-label>
+                           <fo:list-item-body start-indent="body-start()">
+                              <fo:block>Tapez votre nom d'utilisateur (gxxxxx) puis sur la touche ENTREE.<fo:block/>
+                                 <fo:inline font-weight="bold">Note </fo:inline>: Le clavier numérique ne fonctionne pas encore; nous verrons comment le configurer.
+            </fo:block>
+                           </fo:list-item-body>
+                        </fo:list-item>
+                     </fo:list-block>
+                     <fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                                    provisional-distance-between-starts="8mm"
+                                    provisional-label-separation="2mm"
+                                    space-before="4pt"
+                                    space-after="4pt"
+                                    display-align="before">
+                        <fo:list-item>
+                           <fo:list-item-label end-indent="label-end()">
+                              <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                           </fo:list-item-label>
+                           <fo:list-item-body start-indent="body-start()">
+                              <fo:block>Tapez votre mot de passe puis sur la touche ENTREE. <fo:block/>
+                                 <fo:inline font-weight="bold">Note </fo:inline>: Rien ne s'affiche quand vous tapez votre mot de passe; c'est normal. </fo:block>
+                           </fo:list-item-body>
+                        </fo:list-item>
+                     </fo:list-block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+            <fo:block/>
+            <fo:block line-height="11pt*1.3*1.3" font-size="11pt*1.3" font-weight="bold"
+                      keep-with-next.within-page="always"
+                      text-align="left"
+                      span="all"
+                      space-after="15pt*0.4"
+                      break-before="page"
+                      id="TD1_Linux_learningObject3.html">1.3.3. Le mode console</fo:block>
+			Si vous ne savez plus ce qu'est le mode console ou comment entrer une commande, retournez d'abord faire un petit tour aux points 2 et 3 du guide visuel.
+			
+			<fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Ma première commande</fo:block>
+            <fo:block/>
+					Entrez la commande ls (n'oubliez pas la touche ENTREE).
+					<fo:block/>
+            <fo:block/>
+					Vous constatez que le bash a affiché quelque chose (d'incompréhensible
+					pour le moment; ne vous inquiétez pas nous y reviendrons) et qu'il vous propose à nouveau l'invite de commande. 
+				<fo:block/>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Il faut être précis !</fo:block>
+            <fo:block/>
+					Entrez à présent  la commande LS.
+					<fo:block/>
+            <fo:block/>
+					Vous voyez que le résultat est différent : il ne comprend pas ce que vous lui voulez. <fo:block/>
+					En Linux, <fo:inline font-weight="bold">les majuscules et les minuscules n'ont pas le même sens, vous devez respecter la casse.</fo:inline>
+            <fo:block/>
+            <fo:block/>
+					Faites une autre expérience. Tapez les 3 commandes suivantes qui ne se différencient que par la présence ou non d'espaces. 
+				<fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>ls /home</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>ls/home</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>ls / home</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+				À nouveau le résultat est différent dans les 3 cas. <fo:block/>
+            <fo:inline font-weight="bold">Les espaces ont de l'importance</fo:inline>.
+				<fo:block/>
+            <fo:block line-height="11pt*1.3*1.3" font-size="11pt*1.3" font-weight="bold"
+                      keep-with-next.within-page="always"
+                      text-align="left"
+                      span="all"
+                      space-after="15pt*0.4"
+                      break-before="page"
+                      id="TD1_Linux_learningObject4.html">1.3.4. Changer le mot de passe</fo:block>
+				La commande pour changer le mot de passe est passwd.
+			<fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Les règles à respecter sont quasiment les mêmes que sur Windows. Attention toutefois à ne pas choisir un mot du dictionnaire.</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Vous pouvez d'ailleurs reprendre le même mot de passe que celui que vous avez choisi pour Windows. </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">À vous !</fo:block>
+            <fo:block/>
+					Tapez la commande adéquate pour changer votre mot de passe.
+				<fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Le système vous demande de taper le mot de passe actuel (vous ne le voyez pas quand vous le tapez, c'est normal !)</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Ensuite, vous entrez le nouveau mot de passe que vous venez de choisir.</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Vous retapez une deuxième fois ce mot de passe pour le confirmer.</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+            <fo:inline font-weight="bold">Si ça va mal...</fo:inline>
+            <fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>
+                        <fo:inline font-style="italic">Quand je tape la commande rien ne se passe !</fo:inline>
+                     </fo:block>
+                     <fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                                    provisional-distance-between-starts="8mm"
+                                    provisional-label-separation="2mm"
+                                    space-before="4pt"
+                                    space-after="4pt"
+                                    display-align="before">
+                        <fo:list-item>
+                           <fo:list-item-label end-indent="label-end()">
+                              <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                           </fo:list-item-label>
+                           <fo:list-item-body start-indent="body-start()">
+                              <fo:block>Avez-vous bien appuyé sur la touche ENTREE ?</fo:block>
+                           </fo:list-item-body>
+                        </fo:list-item>
+                        <fo:list-item>
+                           <fo:list-item-label end-indent="label-end()">
+                              <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                           </fo:list-item-label>
+                           <fo:list-item-body start-indent="body-start()">
+                              <fo:block>Une seule personne à la fois peut changer son mot de passe. Soyez patient.</fo:block>
+                           </fo:list-item-body>
+                        </fo:list-item>
+                     </fo:list-block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>
+                        <fo:inline font-style="italic">Après avoir tout entré, il me met un message d'erreur !</fo:inline>
+                     </fo:block>
+                     <fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                                    provisional-distance-between-starts="8mm"
+                                    provisional-label-separation="2mm"
+                                    space-before="4pt"
+                                    space-after="4pt"
+                                    display-align="before">
+                        <fo:list-item>
+                           <fo:list-item-label end-indent="label-end()">
+                              <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                           </fo:list-item-label>
+                           <fo:list-item-body start-indent="body-start()">
+                              <fo:block>
+                                 <fo:inline font-weight="bold">Lisez le message</fo:inline> ! Il est en général assez explicite.</fo:block>
+                           </fo:list-item-body>
+                        </fo:list-item>
+                        <fo:list-item>
+                           <fo:list-item-label end-indent="label-end()">
+                              <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                           </fo:list-item-label>
+                           <fo:list-item-body start-indent="body-start()">
+                              <fo:block>Peut-être que le mot de passe est trop simple.</fo:block>
+                           </fo:list-item-body>
+                        </fo:list-item>
+                        <fo:list-item>
+                           <fo:list-item-label end-indent="label-end()">
+                              <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                           </fo:list-item-label>
+                           <fo:list-item-body start-indent="body-start()">
+                              <fo:block>Peut-être n'avez-vous pas respecté les minuscules/majuscules.</fo:block>
+                           </fo:list-item-body>
+                        </fo:list-item>
+                     </fo:list-block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+            <fo:block/>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Vérification</fo:block>
+            <fo:block/>
+					Pour vérifier que tout s'est bien passé, vous pouvez vous déconnecter et vous reconnecter.<fo:block/>
+					Pour quitter proprement <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">linux1</fo:inline>, la commande est exit.
+				<fo:block/>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">FAQ</fo:block>
+            <fo:block/>
+            <fo:inline font-weight="bold">Vous me dites que la commande pour changer le mot de passe est passwd et que celle pour quitter est exit. Je vais devoir retenir tout ça ?</fo:inline>
+            <fo:block/>
+            <fo:block/>
+					Oui ! En tout cas pour les plus fréquentes mais l'apprentissage se fera naturellement à force de les utiliser.
+					<fo:block/>
+            <fo:block/>
+            <fo:inline font-weight="bold">Et si j'ai oublié le nom d'une commande ?</fo:inline>
+            <fo:block/>
+            <fo:block/>
+					Vous verrez la semaine prochaine les moyens à votre disposition pour retrouver le nom d'une commande ou comment l'utiliser correctement. 
+				<fo:block/>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">FAQ</fo:block>
+            <fo:block/>
+            <fo:inline font-weight="bold">J'ai quitté en fermant la fenêtre, c'est pas plus simple ?</fo:inline>
+            <fo:block/>
+            <fo:block/>
+					Oui ! Mais c'est impoli de quitter quelqu'un sans lui dire au revoir ! ;) <fo:block/>
+					Plus sérieusement, vous coupez brutalement la conversation avec <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">linux1</fo:inline> ce qui peut laisser trainer des programmes actifs et vous empêcher de vous connecter la prochaine fois.
+					<fo:block/>
+            <fo:block/>
+            <fo:inline font-weight="bold">J'ai oublié mon mot de passe. Je dois aussi aller voir F. Marchal ?</fo:inline>
+            <fo:block/>
+            <fo:block/>
+					Non ! Votre professeur de Java peut réinitialiser le mot de passe Linux à sa valeur initiale.
+				<fo:block/>
+            <fo:block line-height="11pt*1.3*1.3" font-size="11pt*1.3" font-weight="bold"
+                      keep-with-next.within-page="always"
+                      text-align="left"
+                      span="all"
+                      space-after="15pt*0.4"
+                      break-before="page"
+                      id="TD1_Linux_learningObject5.html">1.3.5. Le dossier personnel et le dossier courant</fo:block>
+				Un petit tour préalable aux points 4 à 7 du guide visuel est vivement conseillé.
+			<fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Examiner son dossier</fo:block>
+            <fo:block/>
+					Comment voir le contenu de votre dossier ? Simplement avec la commande ls que vous avez déjà rencontrée.
+				<fo:block/>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Expérimentation</fo:block>
+            <fo:block/>
+					Tapez la commande ls<fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Il vous montre le contenu de votre dossier.</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Vous constatez qu'il contient déjà des éléments.</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>La couleur permet de distinguer un dossier (en bleu) d'un fichier (en blanc).</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Comme sur Windows, la notion de dossier est hiérarchique : un dossier peut contenir des fichiers mais aussi d'autres dossiers qui à leur tour...</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+					Tapez la commande ls bin.
+				<fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Cette fois, il vous montre le contenu du dossier <fo:inline font-style="italic">bin</fo:inline> (ne vous inquiétez pas, la commande n'affiche rien parce que le dossier est vide).</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+					À présent, tapez la commande cd bin.
+				<fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Cette commande demande de se <fo:inline font-style="italic">
+                           <fo:inline font-weight="bold">déplacer</fo:inline>
+                        </fo:inline> dans le dossier <fo:inline font-style="italic">bin</fo:inline>.</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+					Retapez la commande ls du début.
+				<fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Le résultat est différent. Est-ce que vous comprenez pourquoi ?</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+            <fo:block/>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Le dossier courant</fo:block>
+            <fo:block/>
+					À tout moment, vous êtes <fo:inline font-style="italic">dans</fo:inline> un dossier, appelé le <fo:inline font-weight="bold">dossier courant</fo:inline> (<fo:inline font-style="italic">working directory</fo:inline> en anglais).
+				<fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>La commande cd (<fo:inline font-style="italic">change directory</fo:inline>) permet de changer de dossier courant.</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>La commande pwd (<fo:inline font-style="italic">print working directory)</fo:inline> permet d'afficher le chemin du dossier courant (où vous êtes pour le moment).</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+            <fo:inline font-weight="bold">C'est quoi le chemin ?</fo:inline>
+            <fo:block/>
+					C'est la suite des dossiers qu'il faut traverser. Nous verrons ça plus en détail dans le prochain TD. 
+				<fo:block/>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Expérimentation</fo:block>
+            <fo:block/>
+            <fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>En préambule, tapez la commande cd pour revenir dans votre <fo:inline font-style="italic">home</fo:inline> (dossier personnel).</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Tapez à présent la commande ls bin.</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Comparez le résultat avec celui produit par les 2 commandes suivantes : cd bin et ls</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+            <fo:block/>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Question</fo:block>
+            <fo:block/>
+					Est-ce qu'on peut dire que
+					<fo:block/>
+            <fo:block/>
+            <fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>ls bin<fo:block/>
+                        <fo:block/>
+                     </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+            <fo:block/>
+					est strictement équivalent à
+					<fo:block/>
+            <fo:block/>
+            <fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>cd bin<fo:block/>
+                        <fo:block/>
+                     </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>ls<fo:block/>
+                        <fo:block/>
+                     </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+            <fo:block/>
+					?
+					<fo:block/>
+            <fo:block/>
+            <fo:block border-style="solid" border-width="1pt" border-color="black" padding="3pt"
+                      start-indent="15pt"
+                      end-indent="15pt"
+                      space-after="15pt"
+                      background-color="lightgrey"
+                      margin="5pt"
+                      space-before="15pt">
+						Non ! 
+					</fo:block>
+					Comment le mettre en évidence ?
+				<fo:block/>
+            <fo:block border-style="solid" border-width="1pt" border-color="black" padding="3pt"
+                      start-indent="15pt"
+                      end-indent="15pt"
+                      space-after="15pt"
+                      background-color="lightgrey"
+                      margin="5pt"
+                      space-before="15pt">
+						Dans le 1er cas, on ne modifie pas le dossier courant. Dans le 2ème cas oui. <fo:block/>
+               <fo:block/>
+						On peut le mettre en évidence en tapant la commande pwd après chaque cas.
+					</fo:block>
+            <fo:block/>
+            <fo:block line-height="11pt*1.3*1.3" font-size="11pt*1.3" font-weight="bold"
+                      keep-with-next.within-page="always"
+                      text-align="left"
+                      span="all"
+                      space-after="15pt*0.4"
+                      break-before="page"
+                      id="TD1_Linux_learningObject6.html">1.3.6. L'éditeur</fo:block>
+			Un petit tour préalable au point 8 du guide visuel est vivement conseillé.
+			
+			<fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Expérimentation</fo:block>
+            <fo:block/>
+            <fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>En préambule, tapez la commande cd pour revenir dans votre <fo:inline font-style="italic">home</fo:inline> (dossier personnel).</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Tapez vi test pour commencer à éditer le fichier <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">test</fo:inline> (comme il n'existe pas encore, il est créé).</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Pour le moment, vous êtes en mode <fo:inline font-style="italic">commande</fo:inline>. Tapez i pour entrer en mode <fo:inline font-style="italic">insertion</fo:inline> (constatez le changement en bas de la fenêtre). </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Entrez quelques mots puis appuyez sur la touche ESC pour revenir au mode <fo:inline font-style="italic">commande</fo:inline>.</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Tapez : pour entrer en mode <fo:inline font-style="italic">exécution</fo:inline> et entrez x suivi de enter (votre travail est sauvé et vous sortez de l'éditeur). </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Tapez à présent la commande ls. Vous pouvez constater que le fichier <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">test</fo:inline> est apparu dans la liste ;)</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+            <fo:inline font-weight="bold">Note</fo:inline> : si vous êtes en mode <fo:inline font-style="italic">commande</fo:inline> et que vous voulez effacer un caractère, essayez x.
+					<fo:block/>
+            <fo:block/>
+					Il existe bien sûr encore beaucoup de choses à apprendre sur cet éditeur mais c'est déjà bien pour un début; nous y reviendrons un peu plus tard.<fo:block/>
+            <fo:block/>
+            <fo:block line-height="11pt*1.3*1.3" font-size="11pt*1.3" font-weight="bold"
+                      keep-with-next.within-page="always"
+                      text-align="left"
+                      span="all"
+                      space-after="15pt*0.4"
+                      break-before="page"
+                      id="TD1_Linux_learningObject7.html">1.3.7. Quelques commandes courantes</fo:block>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Faisons le point</fo:block>
+            <fo:table table-layout="fixed" width="100%" space-after="1em">
+               <fo:table-column column-width="proportional-column-width(1)"/>
+               <fo:table-column column-width="proportional-column-width(20)"/>
+               <fo:table-body>
+                  <fo:table-row keep-together.within-column="always">
+                     <fo:table-cell number-columns-spanned="2">
+                        <fo:block font-weight="bold" font-style="italic">
+								Vous avez déjà eu l'occasion d'utiliser 6 commandes : passwd, ls, cd, pwd, exit et vi. 
+								<fo:block/>
+								Voyons voir si vous avez retenu leur signification.
+							</fo:block>
+                     </fo:table-cell>
+                  </fo:table-row>
+                  <fo:table-row>
+                     <fo:table-cell number-columns-spanned="2">
+                        <fo:block>
+                           <fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                                          provisional-distance-between-starts="8mm"
+                                          provisional-label-separation="2mm"
+                                          space-before="4pt"
+                                          space-after="4pt"
+                                          display-align="before">
+                              <fo:list-item>
+                                 <fo:list-item-label end-indent="label-end()">
+                                    <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                                 </fo:list-item-label>
+                                 <fo:list-item-body start-indent="body-start()">
+                                    <fo:block>La commande pour voir le contenu d'un dossier (la liste de ce qu'il contient) est    
+									 ___________ </fo:block>
+                                 </fo:list-item-body>
+                              </fo:list-item>
+                              <fo:list-item>
+                                 <fo:list-item-label end-indent="label-end()">
+                                    <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                                 </fo:list-item-label>
+                                 <fo:list-item-body start-indent="body-start()">
+                                    <fo:block>La commande pour éditer le contenu d'un fichier est    
+									 ___________ </fo:block>
+                                 </fo:list-item-body>
+                              </fo:list-item>
+                              <fo:list-item>
+                                 <fo:list-item-label end-indent="label-end()">
+                                    <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                                 </fo:list-item-label>
+                                 <fo:list-item-body start-indent="body-start()">
+                                    <fo:block>La commande pour changer son mot de passe est   
+									 ___________ </fo:block>
+                                 </fo:list-item-body>
+                              </fo:list-item>
+                              <fo:list-item>
+                                 <fo:list-item-label end-indent="label-end()">
+                                    <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                                 </fo:list-item-label>
+                                 <fo:list-item-body start-indent="body-start()">
+                                    <fo:block>La commande pour se déconnecter de linux1 est   
+									 ___________ </fo:block>
+                                 </fo:list-item-body>
+                              </fo:list-item>
+                              <fo:list-item>
+                                 <fo:list-item-label end-indent="label-end()">
+                                    <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                                 </fo:list-item-label>
+                                 <fo:list-item-body start-indent="body-start()">
+                                    <fo:block>La commande pour changer de dossier courant est         
+									 ___________ </fo:block>
+                                 </fo:list-item-body>
+                              </fo:list-item>
+                              <fo:list-item>
+                                 <fo:list-item-label end-indent="label-end()">
+                                    <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                                 </fo:list-item-label>
+                                 <fo:list-item-body start-indent="body-start()">
+                                    <fo:block>La commande pour voir le chemin du dossier courant est    
+									 ___________ </fo:block>
+                                 </fo:list-item-body>
+                              </fo:list-item>
+                           </fo:list-block>
+                        </fo:block>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Quelques commandes en plus...</fo:block>
+            <fo:block/>
+					Il est temps de voir quelques commandes supplémentaires.
+				<fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>cat nomDuFichier affiche à l'écran le contenu du fichier dont le nom est donné (ce n'est pas un éditeur, on voit le contenu et c'est tout);</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>mkdir nomDuDossier crée un dossier (vide);</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>mv nomDuFichier nouveauNomDeFichier renomme le fichier donné sous le nom "nouveauNomDeFichier";</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>mv nomDuFichier nomDuDossier déplace le fichier donné dans le dossier indiqué; </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>cp nomDuFichier nouveauNomDeFichier crée une copie du fichier sous le nom "nouveauNomDeFichier";</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>mv nomDuFichier nomDuDossier copie le fichier donné dans le dossier indiqué;</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>rm fichier détruit le fichier dont on donne le nom; </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>rmdir dossier détruit le dossier dont on donne le nom (Attention, le dossier doit être vide !). </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+            <fo:block/>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Exercice 1</fo:block>
+            <fo:block/>
+					Créez un dossier <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">td1</fo:inline> et déplacez-y le fichier de test que vous avez déjà créé.
+					<fo:block/>
+            <fo:block/>
+            <fo:inline font-weight="bold">Rappel</fo:inline> : Notez bien votre réponse. Il est difficile de tout retenir la première fois; vous serez bien content la semaine prochaine de pouvoir retrouver comment vous avez fait !
+				<fo:block/>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Exercice 2</fo:block>
+            <fo:block/>
+            <fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block>1.</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Prenez une copie de votre fichier de test (appelez-la <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">test2</fo:inline>). </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block>2.</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Éditez ce fichier et ajoutez-y quelques mots. </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block>3.</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Affichez le contenu des 2 fichiers pour vérifier qu'ils sont bien différents.</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+            <fo:block/>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Exercice 3</fo:block>
+            <fo:block/>
+            <fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block>1.</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Créez, dans votre dossier <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">td1</fo:inline>, un dossier <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">monDossier</fo:inline>. </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block>2.</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Déplacez-y votre fichier <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">test2</fo:inline>.</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+            <fo:block/>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Exercice 4</fo:block>
+            <fo:block/>
+				Détruisez le dossier <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">monDossier</fo:inline> (ainsi que son contenu).<fo:block/>
+            <fo:block line-height="11pt*1.3*1.3" font-size="11pt*1.3" font-weight="bold"
+                      keep-with-next.within-page="always"
+                      text-align="left"
+                      span="all"
+                      space-after="15pt*0.4"
+                      break-before="page"
+                      id="TD1_Linux_learningObject8.html">1.3.8. L'éditeur (le retour)</fo:block>
+				Revenons sur l'éditeur et apprenons quelques commandes supplémentaires
+			<fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>:w permet de <fo:inline font-style="italic">sauver sans quitter</fo:inline> l'éditeur; </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>:w nomDuFichier permet de <fo:inline font-style="italic">sauver sous le nom donné (ici : nomDuFichier</fo:inline>;</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>:q! permet de <fo:inline font-style="italic">quitter</fo:inline> l'éditeur <fo:inline font-style="italic">sans sauver</fo:inline>;</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>x<fo:inline font-style="italic">efface un caractère</fo:inline>;</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>dd<fo:inline font-style="italic">coupe</fo:inline> la ligne sous le curseur;</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>yy<fo:inline font-style="italic">copie</fo:inline> la ligne sous le curseur;</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>p<fo:inline font-style="italic">colle</fo:inline> la ligne précédemment copiée ou coupée.</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Exercice</fo:block>
+            <fo:block/>
+					Mettons tout ça en pratique au travers d'un petit exercice. <fo:block/>
+					Nous avons créé sur <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">linux1</fo:inline> un petit fichier (son nom est <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">/eCours/java/td/td1/notes</fo:inline>). <fo:block/>
+					Votre objectif est de le copier chez vous (dans votre dossier <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">td1</fo:inline>) et d'y apporter quelques modifications. 
+				<fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Réorganisez les lignes pour qu'elles soient dans l'ordre.</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Remplacez l'acronyme <fo:inline font-style="italic">mcd</fo:inline>  par votre login (<fo:inline font-style="italic">gxxxxx</fo:inline> ) et la date par la date du jour.</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+            <fo:block/>
+            <fo:block line-height="11pt*1.3*1.3" font-size="11pt*1.3" font-weight="bold"
+                      keep-with-next.within-page="always"
+                      text-align="left"
+                      span="all"
+                      space-after="15pt*0.4"
+                      break-before="page"
+                      id="TD1_Linux_learningObject9.html">1.3.9. Conclusion</fo:block>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Bravo</fo:block>
+            <fo:block/>
+					Vous êtes arrivés au bout de ce premier TD. <fo:block/>Avant de quitter le laboratoire, n'oubliez pas de :
+				<fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>quitter proprement la connexion avec <fo:inline font-family="Courier, monospace" white-space="pre" font-size="110%">linux1</fo:inline> (exit).</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>éteindre l'ordinateur.</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+					Attention, afin d'arriver au laboratoire dans les meilleures conditions, il est 
+					bien de revoir la matière qui sera mise en pratique. <fo:block/>
+					C'est pourquoi nous vous fournissons quelques exercices préparatoires à faire à la maison 
+					pour vous permettre d'évaluer si vous êtes prêt. <fo:block/>
+					Afin de vérifier que vous préparez bien ces exercices, une <fo:inline font-weight="bold">interrogation</fo:inline> sera faite avant de démarrer chaque labo.
+					<fo:block/>
+            <fo:block/>
+					À la semaine prochaine et soyez à l'heure !
+				<fo:block/>
+            <fo:block font-size="11pt" line-height="15pt" font-weight="bold" space-before="15pt"
+                      keep-with-next.within-page="always">Ressources</fo:block>
+            <fo:block/>
+					Vous voulez en savoir plus sur ce que vous avez fait aujourd'hui ?
+					<fo:block/>
+            <fo:block/>
+					Nous avons rassemblé sur le site (<fo:inline font-weight="bold">suivez le lien "Aide"</fo:inline>), une série de documents qui peuvent être utiles. Voyez notamment :  
+				<fo:list-block start-indent="inherited-property-value('start-indent') + 2mm"
+                           provisional-distance-between-starts="8mm"
+                           provisional-label-separation="2mm"
+                           space-before="4pt"
+                           space-after="4pt"
+                           display-align="before">
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Un <fo:inline font-weight="bold">guide visuel Linux</fo:inline>que vous avez déjà utilisé;</fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Un <fo:inline font-weight="bold">aide-mémoire</fo:inline> écrit par nos soins sur l'utilisation de Windows et Linux; </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Un <fo:inline font-weight="bold">quick reference</fo:inline> sur l'utilisation de <fo:inline font-weight="bold">vi</fo:inline>; </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+               <fo:list-item>
+                  <fo:list-item-label end-indent="label-end()">
+                     <fo:block font-family="Courier" font-size="11pt" line-height="15pt" padding-before="2pt">•</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="body-start()">
+                     <fo:block>Un <fo:inline font-weight="bold">quick reference</fo:inline> sur les commandes <fo:inline font-weight="bold">linux</fo:inline>. </fo:block>
+                  </fo:list-item-body>
+               </fo:list-item>
+            </fo:list-block>
+            <fo:block/>
+         </fo:block>
+      </fo:flow>
+   </fo:page-sequence>
+</fo:root>

@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" label="TD2Prepa" title="TD2 - Exercices préparatoires">
+	<parapraph>  
+		Afin d'arriver au laboratoire dans les meilleures conditions, il est bien de revoir la matière qui sera mise en pratique. C'est pourquoi nous vous fournissons quelques exercices préparatoires à faire à la maison pour vous permettre d'évaluer si vous êtes prêts.  
+		<newLine space="long"/>
+	</parapraph>
+	
+	<unit label="TD2" title="TD2 Exercices préparatoires">
+		<!--learningObject title="TD2 - Exercices préparatoires"-->
+		<clarify><paragraph title="Objectifs" icon="objective"/> 
+			<parapraph>  
+				Voyons ce que vous avez retenu du TD1.<newLine/><newLine/>
+			</parapraph>  <newLine/>
+		</clarify>
+
+		<act>
+			<selfCheck title="La connexion" shuffle="no">
+				<fillInBlanks>
+					<question>Remplissez les blancs.  
+					</question>
+					<gapText> 
+						<parapraph>  
+							Nous allons faire les laboratoires sur une machine qui se nomme        
+							<gap answers="x">linux1</gap> 
+							et qui tourne le système d'exploitation        
+							<gap answers="x">Linux</gap> 
+							Pour s'y connecter, nous utilisons le programme Windows        
+							<gap answers="x">putty</gap> 
+							Nous communiquerons avec la machine en mode  
+							<gap answers="x">console</gap> 
+							grâce à un        
+							<gap answers="x">shell</gap> 
+							qui se nomme        
+							<gap answers="x">bash</gap> 
+						</parapraph>
+					</gapText>
+					<solution></solution>
+				</fillInBlanks>
+			</selfCheck>
+
+			<selfCheck title="Les commandes de base" shuffle="yes">
+				<fillInBlanks>
+					<question>La semaine passée, vous avez vu quelques commandes de base. Vous en rappelez-vous ?  
+					</question>
+					<gapText> 
+						<parapraph>  
+							<list listStyle="unordered">
+								<item>La commande pour voir le contenu d'un dossier (la liste de ce qu'il contient) est        
+									<gap answers="x">ls</gap> 
+								</item>  
+								<item>La commande pour éditer le contenu d'un fichier est        
+									<gap answers="x">vi</gap> 
+								</item>  
+								<item>La commande pour changer son mot de passe est       
+									<gap answers="x">passwd</gap> 
+								</item>  
+								<item>La commande pour se déconnecter de linux1 est       
+									<gap answers="x">exit</gap> 
+								</item>  
+								<item>La commande pour copier un fichier est      
+									<gap answers="x">cp</gap> 
+								</item>  
+								<item>La commande pour renommer un fichier est      
+									<gap answers="x">mv</gap> 
+								</item>  
+								<item>La commande pour déplacer un fichier est      
+									<gap answers="x">mv</gap> 
+								</item>  
+								<item>La commande pour changer de dossier courant est             
+									<gap answers="x">cd</gap> 
+								</item>  
+								<item>La commande pour créer un répertoire est      
+									<gap answers="x">mkdir</gap> 
+								</item>  
+								<item>La commande pour visualiser le contenu d'un fichier sans l'éditer est      
+									<gap answers="x">cat</gap> 
+								</item>  
+								<item>La commande pour voir quel est le dossier courant est        
+									<gap answers="x">pwd</gap> 
+								</item>  
+								<item>La commande pour détruire un fichier est  
+									<gap answers="x">rm</gap> 
+								</item>  
+								<item>La commande pour détruire un dossier vide est  
+									<gap answers="x">rmdir</gap> 
+								</item>  
+							</list>  <parapraph/> 
+						</parapraph>  
+					</gapText>
+					<solution></solution>
+				</fillInBlanks>
+			</selfCheck>
+			
+			<selfCheck title="La ligne de commande" shuffle="no">
+				<fillInBlanks>
+					<question>
+					</question>
+					<gapText> 
+						<parapraph> 
+							<list listStyle="unordered">
+								<item>Qu'est-ce qui permet de distinguer / séparer les différentes parties d'une commande ? 
+									<gap answers="x">l'espace</gap> 
+								</item>  
+								<item>Dans la commande <formatted style="input">vitest</formatted>, combien y a-t-il de parties ?  
+									<gap answers="x">1</gap> 
+								</item>  
+							</list>
+						</parapraph>  
+					</gapText>
+					<solution></solution>
+				</fillInBlanks>
+			</selfCheck>
+
+			<selfCheck title="Les commandes vi" shuffle="yes">
+				<fillInBlanks>
+					<question>Quelle commande vi permet faire l'action suivante ?  
+					</question>
+					<gapText> 
+						<list listStyle="unordered">
+							<item>de passer du mode commande au mode insertion                  
+								<gap answers="x">i</gap> 
+							</item>  
+							<item>de passer du mode commande au mode exécution                  
+								<gap answers="x">:</gap> 
+							</item>  
+							<item>de revenir au mode commande                  
+								<gap answers="x">esc</gap> 
+							</item>  
+						</list>  
+						En mode commande :  
+						<list listStyle="unordered">
+							<item>d'effacer un caractère                  
+								<gap answers="x">x</gap> 
+							</item>  
+							<item>de couper la ligne sous le curseur                  
+								<gap answers="x">dd</gap> 
+							</item>  
+							<item>de copier la ligne sous le curseur                  
+								<gap answers="x">yy</gap> 
+							</item>  
+							<item>de coller la ligne précédemment copiée ou collée                  
+								<gap answers="x">p</gap> 
+							</item>  
+						</list>  
+						En mode exécution (n'oubliez pas de commencer par la commande qui permet de passer au mode exécution) :  
+						<list listStyle="unordered">
+							<item>de sauver sans quitter l'éditeur                  
+								<gap answers="x">:</gap> 
+								<gap answers="x">w</gap> 
+							</item>  
+							<item>de sauver le fichier sous le nom "exercice"                 
+								<gap answers="x">:</gap> 
+								<gap answers="x">w</gap> 
+								<gap answers="x">exercice</gap> 
+							</item>  
+							<item>de quitter sans sauver                 
+								<gap answers="x">:</gap> 
+								<gap answers="x">q!</gap> 
+							</item>  
+							<item>de quitter en sauvant                  
+								<gap answers="x">:</gap> 
+								<gap answers="x">x</gap> 
+							</item>  
+						</list>  <parapraph/> 
+					</gapText>
+					<solution></solution>
+				</fillInBlanks>
+			</selfCheck>
+		</act>
+
+		<clarify><paragraph title="L'éditeur" icon="icon_question"/> 
+			Donnez les commandes nécessaires pour :<newLine/>
+			<list listStyle="unordered">
+				<item>mettre le mot 'Bonjour' dans un fichier texte appelé <formatted style="bold">MonPremierTD</formatted>;</item>  
+				<item>copier cette première ligne et la coller 3 fois en dessous; </item>  
+				<item>sauver et fermer le fichier.</item>  
+			</list><newLine/>
+		</clarify>
+
+		<clarify><paragraph title="Théorie" icon="icon_reading"/> 
+			Avant de venir au prochain labo, lisez attentivement les points 10 à 19 du guide visuel. L'interro du début de laboratoire portera aussi sur cette matière.<newLine/><newLine/>
+		</clarify>
+	</unit>
+	<!--/learningObject-->
+	
+	<unit label="MIL" title="Exemple de MIL">
+		<!--learningObject title="Exemple de MIL"--> 
+		Afin de vous préparer au mieux à la Mini Interro Linux (MIL) qui vous attend en début de prochain labo, voici un exemple de ce que vous auriez pu avoir comme questions.  
+		<parapraph>  
+			1. (3 points)   
+		</parapraph>  
+
+		<list listStyle="unordered">
+			<item>Vrai ou faux : Avec Linux, tous les systèmes de fichiers sont assemblés en un seul système de fichiers dont le dossier principal est désigné par C:</item>  
+			<item>Vrai ou faux : /home/g12345/tds est un chemin relatif.</item>  
+			<item>Choisissez la réponse correcte : La commande qui affiche tous les groupes de l'utilisateur est : users - groups - chgrp - chmod</item>  
+		</list>
+		
+		<parapraph>  
+			2. (1 point) Dans l'éditeur vi que fait la commande suivante:  
+		</parapraph>  
+
+		<list listStyle="unordered">
+			<item>yy</item>  
+		</list>
+		
+		<parapraph><newLine/>  
+			3. (1 point) Expliquez ce qu'est le 'mode console' utilisé sur linux1.  
+			<newLine space="long"/>
+		</parapraph>  
+		
+		<parapraph><newLine/><newLine/>  
+			4. (2 points) Donnez les commandes linux pour :  
+		</parapraph>  
+		<list listStyle="unordered">
+			<item>afficher le contenu du dossier courant</item>  
+			<item>supprimer un fichier Hello.java qui se trouve dans le dossier courant</item>  
+		</list>
+		
+		<parapraph>  <newLine/>  
+			5. (3 points) Dans les commandes linux suivantes, lesquelles sont correctes?  
+		</parapraph>  
+
+		<list listStyle="unordered">
+			<item>cp monFichier nouveauFichier </item>  
+			<item>Rm monFichier </item>  
+			<item>:x </item>  
+		</list> 
+		<!--/learningObject-->
+	</unit>
+</lesson>

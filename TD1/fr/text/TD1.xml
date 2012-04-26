@@ -1,0 +1,613 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" label="TD1" title="TD1 - Prise en main de l’environnement">
+
+<metadata>
+    <organisation level="1ère année" module="Laboratoires Java">
+      <creationPosition><posNumber>1</posNumber></creationPosition>
+    </organisation>
+    <lessonInfo>
+      <lifecycle>
+        <version>2012 - 2013</version>
+        <contribute>
+          <person name="ARO"/>
+          <person name="BEJ"/>
+          <person name="CLR"/>
+          <person name="HAL"/>
+          <person name="MBA"/>
+          <person name="MCD"/>
+          <person name="NPX"/>
+          <person name="PBT"/>
+        </contribute>
+      </lifecycle>
+    </lessonInfo>
+</metadata>
+
+	<clarify><paragraph title="Bravo !" icon="icon_bravo"/>
+		<parapraph>
+			Si vous lisez cette page c'est que vous avez pu vous connecter sur  le PC.<newLine/>
+			Vous allez à présent voir comment l'utiliser correctement  pour les laboratoires Java.
+		</parapraph>
+		<newLine/>
+	</clarify>
+	
+	<clarify><paragraph title="Consignes" icon="icon_key_points"/>
+		<parapraph>
+			Ces pages vont vous guider dans votre apprentissage de Java et Linux.
+		</parapraph>
+		<list listStyle="unordered">
+			<item>Faites bien tous les exercices proposés;</item>
+			<item>N'hésitez pas à <formatted style="bold">montrer votre travail</formatted> à votre professeur;</item>
+			<item>N'hésitez pas à <formatted style="bold">poser des questions</formatted> si vous n'avez pas bien compris ce qu'on vous demande;</item>
+			<item><formatted style="bold">Prenez des notes</formatted>! Ce que vous allez apprendre aujourd'hui vous servira les semaines prochaines mais vous en aurez oublié une grande partie si vous ne notez rien. Le plus pratique est probablement d'annoter la version <formatted style="bold">papier</formatted>.</item>
+			<item>Ayez toujours avec vous le <formatted style="bold">guide visuel </formatted>et l'<formatted style="bold">aide-mémoire</formatted>. Ils vous seront utiles tout au long des tds.</item>
+		</list><newLine/>
+	</clarify>
+	
+	<unit label="Windows" title="Windows">
+		<learningObject title="Windows - Changer le mot de passe">
+			<clarify><paragraph title="Objectif" icon="objective"/>
+				<parapraph>
+					Vous allez apprendre à modifier votre mot de passe.
+				</parapraph>
+				<newLine/>
+			</clarify>
+			<act><paragraph title="Réflexion" icon="question"/>
+				<parapraph>
+					À votre avis, pourquoi vous demande-t-on de modifier votre mot de passe ?
+				</parapraph>
+				<popup>Le mot de passe initial peut être <formatted style="italic">trouvé </formatted>par un autre étudiant.<newLine/>
+					<list listStyle="unordered">
+						<item>Celui qu'on vous a donné n'est pas secret puisqu'il est noté dans un fichier informatique.</item>
+						<item>Il est tellement difficile à retenir que vous allez être tenté de le noter quelque part.</item>
+					</list>
+					<parapraph>
+						Si un autre étudiant le connait, il peut se faire passer pour vous.
+					</parapraph>
+					<list listStyle="unordered">
+						<item>Les impressions qu'il fera vous seront facturées.</item>
+						<item>S'il commet un acte informatique illégal, c'est vous qu'on soupçonnera<formatted style="italic"> </formatted> en premier. </item>
+					</list>
+				</popup>
+			</act>
+			
+			<act>
+				<selfCheck title="Exemples de mots de passe" shuffle="yes">
+					<multipleChoice>
+						<question>
+							<parapraph>
+								Quelles sont les propositions qui vous paraissent correctes comme mot de passe ? <newLine/>(plusieurs réponses possibles)
+							</parapraph>
+						</question>
+						<answer feedback="&#10;1 - Trop simple (pour autant que votre copine s'appelle Nadia)&#10;" correct="no">
+							nadia
+						</answer>
+						<answer feedback="&#10;2 - OK (mais choisissez en un autre, maintenant, tout le monde le connait)&#10;" correct="yes">
+							M0nAm1eN@di@
+						</answer>
+						<answer feedback="&#10;3 - OK (mais choisissez en un autre, maintenant, tout le monde le connait)&#10;" correct="yes">
+							m@C0p1ne
+						</answer>
+						<answer feedback="&#10;4 - Accepté par Windows mais probablement trop difficile à retenir (à moins que ce soit issu des initiales d'une phrase qui m'échappe...)&#10;" correct="no">
+							GH5).jg
+						</answer>
+					</multipleChoice>
+				</selfCheck>
+			</act>
+			
+			<act><paragraph title="Changer le mot de passe" icon="act"/>
+				<parapraph>
+					Il est  temps de <formatted style="bold">changer votre mot de passe</formatted>. Les étapes sont expliquées ici.<newLine/>
+        </parapraph>
+				<list listStyle="ordered">
+				  <item>Appuyez sur <formatted style="input">ALT-CTRL-DEL</formatted> et choisissez <formatted style="input">Change password...</formatted>. <newLine/>
+				    <popup title="Cliquez pour voir l'image"><multimedia src="../image/change_password_1.jpg" type="jpeg"/></popup>
+          </item>
+          <item>Dans la fenêtre qui apparait, tapez<newLine/>
+            <list listStyle="unordered"><item>votre mot de passe initial,</item>
+              <item>le nouveau mot de passe,</item>
+              <item>une deuxième fois ce nouveau mot de passe.</item>
+            </list>
+            <formatted style="bold">Note</formatted> : utilisez la souris ou la touche <formatted style="input">TAB</formatted> pour passer d'un champ à l'autre mais surtout pas la touche <formatted style="input">ENTER</formatted>.
+          </item>
+          <item>Un message vous indique que tout s'est bien passé (normalement).<newLine/>
+						<list listStyle="unordered">
+						  <item>Prenez le temps de le lire : c'est peut-être un message d'erreur.</item>
+            </list>
+            <formatted style="bold">Note</formatted> : Prenez d'autant plus le temps si vous éprouvez des difficultés avec l'anglais; les messages d'erreurs seront généralement en anglais. <formatted style="bold">Il faut absolument vous entrainer à lire des messages simples.</formatted> 
+          </item>
+          <item>Afin de vérifier que le mot de passe est bien changé, déconnectez-vous et reconnectez-vous.<newLine/>
+						(et revenez sur cette page bien sûr pour pouvoir continuer les exercices ;)) 
+          </item>
+        </list>
+        <newLine/>
+      </act>
+      
+			<clarify><paragraph title="FAQ" icon="icon_faq"/>
+				<parapraph>
+					<formatted style="bold">Je ne suis pas content du mot de passe que j'ai choisi. Est-ce que je peux le changer ?</formatted>
+					<newLine space="long"/>
+        </parapraph>
+				<parapraph>
+					Oui mais pas tout de suite. L'administrateur des machines Windows de l'école impose un temps minimum (1 jour) entre 2 modifications de mot de passe.
+					<newLine space="long"/>
+        </parapraph>
+				<parapraph>
+					<formatted style="bold">Est-ce que je vais pouvoir garder ce mot de passe toute l'année ?</formatted>
+					<newLine space="long"/>
+        </parapraph>
+				<parapraph>
+					Non. Pour des raisons de sécurité, Windows va vous demander de changer le mot de passe d'ici quelques mois.
+					<newLine space="long"/>
+        </parapraph>
+				<parapraph>
+					<formatted style="bold">J'ai oublié mon mot de passe. Qu'est-ce que je peux faire ?</formatted>
+					<newLine space="long"/>
+        </parapraph>
+				<parapraph>
+					Les professeurs ne peuvent ni retrouver votre nouveau mot de passe, ni
+					remettre le mot de passe de départ.<newLine/>
+          Par contre le technicien (F.
+					Marchal qui a son bureau au 5ème) peut remettre le mot de passe de
+					départ. Allez le trouver (et prenez garde à ce que ça n'arrive plus !)
+					<newLine space="long"/>
+        </parapraph>
+				<newLine/>
+      </clarify>
+		</learningObject>
+	</unit>
+	
+	<unit label="Linux" title="Linux">
+		« <formatted style="italic">Linux ? Il y a moins bien mais c'est plus cher</formatted> ». auteur inconnu 
+    <learningObject title="Linux">
+			<clarify><paragraph title="Présentation" icon="icon_reading"/>
+				<parapraph>
+					Vous ne travaillerez pas directement sur votre PC durant les laboratoires Java.<newLine/>
+					Celui-ci vous servira pour vous connecter au serveur Linux (son nom est <formatted style="code">linux1</formatted>)
+					<newLine space="long"/></parapraph>
+				<parapraph>
+					<formatted style="bold">Tiens, c'est quoi Linux et pourquoi l'utiliser ? C'est quoi une machine partagée?</formatted>
+				</parapraph>
+				<newLine/>
+				Si vous vous posez encore ces questions, je vous invite vivement à relire le point 1 du guide visuel.<newLine/><newLine/>
+      </clarify>
+    </learningObject>
+    
+		<learningObject title="Se connecter">
+			Lorsque vous allez vous connecter, <formatted style="code">linux1</formatted> va vous demander de vous identifier.
+			<list listStyle="unordered">
+			  <item>Votre <formatted style="bold"><formatted style="italic">username</formatted></formatted> est le même que sous Windows (avec un <formatted style="bold">'g' minuscule</formatted> obligatoirement). <newLine/>
+			    Ex: <formatted style="code">g32010</formatted><newLine/>
+			    <formatted style="bold">Note</formatted> : pour Linux, les minuscules et les majuscules sont toujours des caractères différents.
+			    </item>
+			    <item>Votre <formatted style="italic"><formatted style="bold">mot de passe</formatted></formatted> est le même que votre <formatted style="bold">mot de passe initial sous Windows</formatted>.
+			    </item>
+        </list>
+        
+			Le mot de passe sous Windows et sous Linux sont 2 mots de passe différents (initialisés à la même valeur).<newLine/>
+			Vous avez modifié votre mot de passe sous Windows mais pas encore sous Linux (vous le ferez plus tard...)
+			
+			<act><paragraph title="Connectez-vous à linux1" icon="act"/>
+				<parapraph>
+					Il y a 3 étapes:
+				</parapraph>
+				<list listStyle="ordered">
+				  <item>Lancez l'application <formatted style="code">putty</formatted> (vous la trouverez dans le menu ou comme raccourci sur le bureau).</item>
+				  <item>Indiquez à putty le nom de la machine (<formatted style="italic">Host Name</formatted>) à laquelle vous voulez vous connecter (ici <formatted style="code">linux1</formatted>). <newLine/><newLine/>
+				    <popup title="Cliquez pour voir l'image"><multimedia src="../image/putty-login.jpg" type="jpeg"/></popup></item><newLine/>
+				    <item>Cliquez sur "<formatted style="bold">Open</formatted>"; la connexion se fait ! S'il vous présente une boite de message avec un "<formatted style="bold">Security Alert</formatted>", cliquez sur "<formatted style="bold">Yes</formatted>" en toute confiance.
+          </item>
+          <item>Identifiez-vous !<newLine/>
+            <list listStyle="unordered">
+              <item>Tapez votre nom d'utilisateur (<formatted style="input">gxxxxx</formatted>) puis sur la touche <formatted style="input">ENTREE</formatted>.<newLine/>
+						  <formatted style="bold">Note </formatted>: Le clavier numérique ne fonctionne pas encore; nous verrons comment le configurer.
+            </item>
+          </list>
+        <list listStyle="unordered">
+          <item>Tapez votre mot de passe puis sur la touche <formatted style="input">ENTREE</formatted>. <newLine/><formatted style="bold">Note </formatted>: Rien ne s'affiche quand vous tapez votre mot de passe; c'est normal. </item>
+        </list>
+        </item>
+        </list><newLine/>
+      </act>
+    </learningObject>
+    
+		<learningObject title="Le mode console">
+			Si vous ne savez plus ce qu'est le mode console ou comment entrer une commande, retournez d'abord faire un petit tour aux points 2 et 3 du guide visuel.
+			
+			<clarify><paragraph title="Ma première commande" icon="icon_experiment"/>
+				<parapraph>
+					Entrez la commande <formatted style="input">ls</formatted> (n'oubliez pas la touche <formatted style="input">ENTREE</formatted>).
+					<newLine space="long"/>
+        </parapraph>
+				<parapraph>
+					Vous constatez que le bash a affiché quelque chose (d'incompréhensible
+					pour le moment; ne vous inquiétez pas nous y reviendrons) et qu'il vous propose à nouveau l'invite de commande. 
+				</parapraph>
+				<newLine/>
+      </clarify>
+      
+      <clarify><paragraph title="Il faut être précis !" icon="icon_experiment"/>
+				<parapraph>
+					Entrez à présent  la commande <formatted style="input">LS</formatted>.
+					<newLine space="long"/>
+        </parapraph>
+				<parapraph>
+					Vous voyez que le résultat est différent : il ne comprend pas ce que vous lui voulez. <newLine/>
+					En Linux, <formatted style="bold">les majuscules et les minuscules n'ont pas le même sens, vous devez respecter la casse.</formatted>
+					<newLine space="long"/>
+        </parapraph>
+				<parapraph>
+					Faites une autre expérience. Tapez les 3 commandes suivantes qui ne se différencient que par la présence ou non d'espaces. 
+				</parapraph>
+				<list listStyle="unordered">
+				  <item><formatted style="input">ls /home</formatted></item>
+				  <item><formatted style="input">ls/home</formatted></item><item><formatted style="input">ls / home</formatted></item>
+        </list>
+				À nouveau le résultat est différent dans les 3 cas. <newLine/>
+				<formatted style="bold">Les espaces ont de l'importance</formatted>.
+				<newLine/>
+		  </clarify>
+		</learningObject>
+		
+		<learningObject title="Changer le mot de passe">
+			<parapraph>
+				La commande pour changer le mot de passe est <formatted style="input">passwd</formatted>.
+			</parapraph>
+			<list listStyle="unordered">
+			  <item>Les règles à respecter sont quasiment les mêmes que sur Windows. Attention toutefois à ne pas choisir un mot du dictionnaire.</item>
+			  <item>Vous pouvez d'ailleurs reprendre le même mot de passe que celui que vous avez choisi pour Windows. </item>
+      </list>
+      
+			<act><paragraph title="À vous !" icon="act"/>
+				<parapraph>
+					Tapez la commande adéquate pour changer votre mot de passe.
+				</parapraph>
+				<list listStyle="unordered">
+				  <item>Le système vous demande de taper le mot de passe actuel (vous ne le voyez pas quand vous le tapez, c'est normal !)</item>
+				  <item>Ensuite, vous entrez le nouveau mot de passe que vous venez de choisir.</item>
+				  <item>Vous retapez une deuxième fois ce mot de passe pour le confirmer.</item>
+        </list>
+        <parapraph>
+					<formatted style="bold">Si ça va mal...</formatted>
+				</parapraph>
+				<list listStyle="unordered">
+				  <item><formatted style="italic">Quand je tape la commande rien ne se passe !</formatted> 
+						<list listStyle="unordered">
+						  <item>Avez-vous bien appuyé sur la touche <formatted style="input">ENTREE</formatted> ?</item>
+						  <item>Une seule personne à la fois peut changer son mot de passe. Soyez patient.</item>
+            </list>
+          </item>
+          <item><formatted style="italic">Après avoir tout entré, il me met un message d'erreur !</formatted>
+						<list listStyle="unordered">
+						  <item><formatted style="bold">Lisez le message</formatted> ! Il est en général assez explicite.</item>
+						  <item>Peut-être que le mot de passe est trop simple.</item>
+						  <item>Peut-être n'avez-vous pas respecté les minuscules/majuscules.</item>
+            </list>
+          </item>
+        </list><newLine/>
+      </act>
+      
+      <act><paragraph title="Vérification" icon="act"/>
+				<parapraph>
+					Pour vérifier que tout s'est bien passé, vous pouvez vous déconnecter et vous reconnecter.<newLine/>
+					Pour quitter proprement <formatted style="code">linux1</formatted>, la commande est <formatted style="input">exit</formatted>.
+				</parapraph>
+				<newLine/>
+      </act>
+      
+      <clarify><paragraph title="FAQ" icon="icon_faq"/>
+				<parapraph>
+					<formatted style="bold">Vous me dites que la commande pour changer le mot de passe est <formatted style="input">passwd</formatted> et que celle pour quitter est <formatted style="input">exit</formatted>. Je vais devoir retenir tout ça ?</formatted>
+					<newLine space="long"/>
+        </parapraph>
+				<parapraph>
+					Oui ! En tout cas pour les plus fréquentes mais l'apprentissage se fera naturellement à force de les utiliser.
+					<newLine space="long"/>
+        </parapraph>
+				<parapraph>
+					<formatted style="bold">Et si j'ai oublié le nom d'une commande ?</formatted>
+					<newLine space="long"/>
+        </parapraph>
+				<parapraph>
+					Vous verrez la semaine prochaine les moyens à votre disposition pour retrouver le nom d'une commande ou comment l'utiliser correctement. 
+				</parapraph> <newLine/>
+      </clarify>
+      
+      <clarify><paragraph title="FAQ" icon="icon_faq"/>
+				<parapraph>
+					<formatted style="bold">J'ai quitté en fermant la fenêtre, c'est pas plus simple ?</formatted>
+					<newLine space="long"/>
+        </parapraph>
+				<parapraph>
+					Oui ! Mais c'est impoli de quitter quelqu'un sans lui dire au revoir ! ;) <newLine/>
+					Plus sérieusement, vous coupez brutalement la conversation avec <formatted style="code">linux1</formatted> ce qui peut laisser trainer des programmes actifs et vous empêcher de vous connecter la prochaine fois.
+					<newLine space="long"/>
+        </parapraph>
+				<parapraph>
+					<formatted style="bold">J'ai oublié mon mot de passe. Je dois aussi aller voir F. Marchal ?</formatted>
+					<newLine space="long"/>
+        </parapraph>
+				<parapraph>
+					Non ! Votre professeur de Java peut réinitialiser le mot de passe Linux à sa valeur initiale.
+				</parapraph>
+				<newLine/>
+      </clarify>
+    </learningObject>
+    
+		<learningObject title="Le dossier personnel et le dossier courant">
+			<parapraph>
+				Un petit tour préalable aux points 4 à 7 du guide visuel est vivement conseillé.
+			</parapraph>
+			
+			<clarify><paragraph title="Examiner son dossier" icon="icon_reading"/>
+				<parapraph>
+					Comment voir le contenu de votre dossier ? Simplement avec la commande <formatted style="input">ls</formatted> que vous avez déjà rencontrée.
+				</parapraph><newLine/>
+      </clarify>
+      
+      <clarify><paragraph title="Expérimentation" icon="icon_experiment"/>
+				<parapraph>
+					Tapez la commande <formatted style="input">ls</formatted>
+				</parapraph>
+				<list listStyle="unordered">
+				  <item>Il vous montre le contenu de votre dossier.</item>
+				  <item>Vous constatez qu'il contient déjà des éléments.</item><item>La couleur permet de distinguer un dossier (en bleu) d'un fichier (en blanc).</item>
+				  <item>Comme sur Windows, la notion de dossier est hiérarchique : un dossier peut contenir des fichiers mais aussi d'autres dossiers qui à leur tour...</item>
+        </list>
+        <parapraph>
+					Tapez la commande <formatted style="input">ls bin</formatted>.
+				</parapraph>
+				<list listStyle="unordered">
+				  <item>Cette fois, il vous montre le contenu du dossier <formatted style="italic">bin</formatted> (ne vous inquiétez pas, la commande n'affiche rien parce que le dossier est vide).</item>
+        </list>
+        <parapraph>
+					À présent, tapez la commande <formatted style="input">cd bin</formatted>.
+				</parapraph>
+				<list listStyle="unordered">
+				  <item>Cette commande demande de se <formatted style="italic"><formatted style="bold">déplacer</formatted></formatted> dans le dossier <formatted style="italic">bin</formatted>.</item>
+        </list>
+        <parapraph>
+					Retapez la commande <formatted style="input">ls</formatted> du début.
+				</parapraph>
+				<list listStyle="unordered">
+				  <item>Le résultat est différent. Est-ce que vous comprenez pourquoi ?</item>
+        </list><newLine/>
+      </clarify>
+      
+      <clarify><paragraph title="Le dossier courant" icon="icon_reading"/>
+				<parapraph>
+					À tout moment, vous êtes <formatted style="italic">dans</formatted> un dossier, appelé le <formatted style="bold">dossier courant</formatted> (<formatted style="italic">working directory</formatted> en anglais).
+				</parapraph>
+				<list listStyle="unordered">
+				  <item>La commande <formatted style="input">cd</formatted> (<formatted style="italic">change directory</formatted>) permet de changer de dossier courant.</item>
+				  <item>La commande <formatted style="input">pwd</formatted> (<formatted style="italic">print working directory)</formatted> permet d'afficher le chemin du dossier courant (où vous êtes pour le moment).</item>
+        </list>
+        <parapraph>
+					<formatted style="bold">C'est quoi le chemin ?</formatted> <newLine/>
+					C'est la suite des dossiers qu'il faut traverser. Nous verrons ça plus en détail dans le prochain TD. 
+				</parapraph>
+				<newLine/>
+      </clarify>
+      
+      <clarify><paragraph title="Expérimentation" icon="icon_experiment"/>
+				<list listStyle="unordered">
+				  <item>En préambule, tapez la commande <formatted style="input">cd</formatted> pour revenir dans votre <formatted style="italic">home</formatted> (dossier personnel).</item>
+				  <item>Tapez à présent la commande <formatted style="input">ls bin</formatted>.</item>
+				  <item>Comparez le résultat avec celui produit par les 2 commandes suivantes : <formatted style="input">cd bin</formatted> et <formatted style="input">ls</formatted></item>
+        </list><newLine/>
+      </clarify>
+      
+      <clarify><paragraph title="Question" icon="icon_question"/>
+				<parapraph>
+					Est-ce qu'on peut dire que
+					<newLine space="long"/>
+        </parapraph>
+        <list listStyle="unordered">
+				  <item><formatted style="input">ls bin</formatted> 
+					  <newLine space="long"/></item>
+        </list><newLine/>
+				<parapraph>
+					est strictement équivalent à
+					<newLine space="long"/>
+        </parapraph>
+        <list listStyle="unordered">
+				  <item><formatted style="input">cd bin</formatted> 
+					  <newLine space="long"/></item>
+          <item><formatted style="input">ls</formatted> 
+					  <newLine space="long"/></item>
+        </list><newLine/>
+				<parapraph>
+					?
+					<newLine space="long"/>
+        </parapraph>
+        <popup> 
+					<parapraph>
+						Non ! 
+					</parapraph>
+				</popup>
+				<parapraph>
+					Comment le mettre en évidence ?
+				</parapraph><newLine/>
+				<popup> 
+					<parapraph>
+						Dans le 1er cas, on ne modifie pas le dossier courant. Dans le 2ème cas oui. <newLine/><newLine/>
+						On peut le mettre en évidence en tapant la commande <formatted style="input">pwd</formatted> après chaque cas.
+					</parapraph>
+				</popup>
+				<newLine/>
+      </clarify>
+    </learningObject>
+    
+		<learningObject title="L'éditeur">
+			Un petit tour préalable au point 8 du guide visuel est vivement conseillé.
+			
+			<clarify><paragraph title="Expérimentation" icon="icon_experiment"/>
+				<list listStyle="unordered">
+				  <item>En préambule, tapez la commande <formatted style="input">cd</formatted> pour revenir dans votre <formatted style="italic">home</formatted> (dossier personnel).</item>
+					<item>Tapez <formatted style="input">vi test</formatted> pour commencer à éditer le fichier <formatted style="code">test</formatted> (comme il n'existe pas encore, il est créé).</item>
+					<item>Pour le moment, vous êtes en mode <formatted style="italic">commande</formatted>. Tapez <formatted style="input">i</formatted> pour entrer en mode <formatted style="italic">insertion</formatted> (constatez le changement en bas de la fenêtre). </item>
+					<item>Entrez quelques mots puis appuyez sur la touche <formatted style="input">ESC</formatted> pour revenir au mode <formatted style="italic">commande</formatted>.</item>
+					<item>Tapez <formatted style="input">:</formatted> pour entrer en mode <formatted style="italic">exécution</formatted> et entrez <formatted style="input">x</formatted> suivi de <formatted style="input">enter</formatted> (votre travail est sauvé et vous sortez de l'éditeur). </item>
+					<item>Tapez à présent la commande <formatted style="input">ls</formatted>. Vous pouvez constater que le fichier <formatted style="code">test</formatted> est apparu dans la liste ;)</item>
+        </list>
+        <parapraph>
+					<formatted style="bold">Note</formatted> : si vous êtes en mode <formatted style="italic">commande</formatted> et que vous voulez effacer un caractère, essayez <formatted style="input">x</formatted>.
+					<newLine space="long"/>
+        </parapraph>
+				<parapraph>
+					Il existe bien sûr encore beaucoup de choses à apprendre sur cet éditeur mais c'est déjà bien pour un début; nous y reviendrons un peu plus tard.<newLine/>
+        </parapraph><newLine/>
+      </clarify>
+    </learningObject>
+    
+		<learningObject title="Quelques commandes courantes">
+			<act>
+				<selfCheck title="Faisons le point" shuffle="yes">
+					<fillInBlanks>
+						<question>
+							<parapraph>
+								Vous avez déjà eu l'occasion d'utiliser 6 commandes : <formatted style="input">passwd</formatted>, <formatted style="input">ls</formatted>, <formatted style="input">cd</formatted>, <formatted style="input">pwd</formatted>, <formatted style="input">exit</formatted> et <formatted style="input">vi</formatted>. 
+								<newLine/>
+								Voyons voir si vous avez retenu leur signification.
+							</parapraph>
+						</question>
+						<gapText>
+							<list listStyle="unordered">
+							  <item>La commande pour voir le contenu d'un dossier (la liste de ce qu'il contient) est    
+									<gap answers="x">ls</gap>
+                </item>
+                <item>La commande pour éditer le contenu d'un fichier est    
+									<gap answers="x">vi</gap>
+                </item>
+                <item>La commande pour changer son mot de passe est   
+									<gap answers="x">passwd</gap>
+                </item>
+                <item>La commande pour se déconnecter de linux1 est   
+									<gap answers="x">exit</gap>
+                </item>
+                <item>La commande pour changer de dossier courant est         
+									<gap answers="x">cd</gap>
+                </item>
+                <item>La commande pour voir le chemin du dossier courant est    
+									<gap answers="x">pwd</gap>
+							  </item>
+              </list>
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+        </selfCheck>
+      </act>
+      
+			<clarify><paragraph title="Quelques commandes en plus..." icon="icon_reading"/>
+				<parapraph>
+					Il est temps de voir quelques commandes supplémentaires.
+				</parapraph>
+				<list listStyle="unordered">
+				  <item> <formatted style="input">cat nomDuFichier</formatted> affiche à l'écran le contenu du fichier dont le nom est donné (ce n'est pas un éditeur, on voit le contenu et c'est tout);</item>
+				  <item><formatted style="input">mkdir nomDuDossier</formatted> crée un dossier (vide);</item>
+				  <item><formatted style="input">mv nomDuFichier nouveauNomDeFichier</formatted> renomme le fichier donné sous le nom "nouveauNomDeFichier";</item>
+				  <item><formatted style="input">mv nomDuFichier nomDuDossier</formatted> déplace le fichier donné dans le dossier indiqué; </item>
+				  <item><formatted style="input">cp nomDuFichier nouveauNomDeFichier</formatted> crée une copie du fichier sous le nom "nouveauNomDeFichier";</item>
+				  <item><formatted style="input">mv nomDuFichier nomDuDossier</formatted> copie le fichier donné dans le dossier indiqué;</item>
+				  <item><formatted style="input">rm fichier</formatted> détruit le fichier dont on donne le nom; </item>
+				  <item><formatted style="input">rmdir dossier</formatted> détruit le dossier dont on donne le nom (Attention, le dossier doit être vide !). </item>
+        </list><newLine/>
+      </clarify>
+      
+			<act><paragraph title="Exercice 1" icon="act"/>
+				<parapraph>
+					Créez un dossier <formatted style="code">td1</formatted> et déplacez-y le fichier de test que vous avez déjà créé.
+					<newLine space="long"/>
+        </parapraph>
+				<parapraph>
+					<formatted style="bold">Rappel</formatted> : Notez bien votre réponse. Il est difficile de tout retenir la première fois; vous serez bien content la semaine prochaine de pouvoir retrouver comment vous avez fait !
+				</parapraph>
+				<newLine/>
+      </act>
+      
+			<act><paragraph title="Exercice 2" icon="act"/>
+				<list listStyle="ordered">
+				  <item>Prenez une copie de votre fichier de test (appelez-la <formatted style="code">test2</formatted>). </item>
+				  <item>Éditez ce fichier et ajoutez-y quelques mots. </item>
+				  <item>Affichez le contenu des 2 fichiers pour vérifier qu'ils sont bien différents.</item>
+        </list><newLine/>
+      </act>
+      
+			<act><paragraph title="Exercice 3" icon="act"/>
+				<list listStyle="ordered">
+          <item>Créez, dans votre dossier <formatted style="code">td1</formatted>, un dossier <formatted style="code">monDossier</formatted>. </item>
+          <item>Déplacez-y votre fichier <formatted style="code">test2</formatted>.</item>
+        </list><newLine/>
+      </act>
+      
+			<act><paragraph title="Exercice 4" icon="act"/>
+				Détruisez le dossier <formatted style="code">monDossier</formatted> (ainsi que son contenu).<newLine/>
+      </act>
+		</learningObject>
+		
+		<learningObject title="L'éditeur (le retour)">
+			<parapraph>
+				Revenons sur l'éditeur et apprenons quelques commandes supplémentaires
+			</parapraph>
+			<list listStyle="unordered">
+        <item><formatted style="input">:w</formatted> permet de <formatted style="italic">sauver sans quitter</formatted> l'éditeur; </item>
+        <item><formatted style="input">:w nomDuFichier</formatted> permet de <formatted style="italic">sauver sous le nom donné (ici : nomDuFichier</formatted>;</item>
+        <item><formatted style="input">:q!</formatted> permet de <formatted style="italic">quitter</formatted> l'éditeur <formatted style="italic">sans sauver</formatted>;</item>
+        <item><formatted style="input">x</formatted> <formatted style="italic">efface un caractère</formatted>;</item>
+        <item><formatted style="input">dd</formatted> <formatted style="italic">coupe</formatted> la ligne sous le curseur;</item>
+        <item><formatted style="input">yy</formatted> <formatted style="italic">copie</formatted> la ligne sous le curseur;</item>
+        <item><formatted style="input">p</formatted> <formatted style="italic">colle</formatted> la ligne précédemment copiée ou coupée.</item>
+      </list>
+      
+			<act><paragraph title="Exercice" icon="act"/>
+				<parapraph>
+					Mettons tout ça en pratique au travers d'un petit exercice. <newLine/>
+					Nous avons créé sur <formatted style="code">linux1</formatted> un petit fichier (son nom est <formatted style="code">/eCours/java/td/td1/notes</formatted>). <newLine/>
+					Votre objectif est de le copier chez vous (dans votre dossier <formatted style="code">td1</formatted>) et d'y apporter quelques modifications. 
+				</parapraph>
+				<list listStyle="unordered">
+				  <item>Réorganisez les lignes pour qu'elles soient dans l'ordre.</item>
+				  <item>Remplacez l'acronyme <formatted style="italic">mcd</formatted>  par votre login (<formatted style="italic">gxxxxx</formatted> ) et la date par la date du jour.</item>
+        </list><newLine/>
+      </act>
+    </learningObject>
+    
+		<learningObject title="Conclusion">
+			<clarify><paragraph title="Bravo" icon="icon_bravo"/>
+				<parapraph>
+					Vous êtes arrivés au bout de ce premier TD. <newLine/>Avant de quitter le laboratoire, n'oubliez pas de :
+				</parapraph>
+				<list listStyle="unordered">
+				  <item>quitter proprement la connexion avec <formatted style="code">linux1</formatted> (<formatted style="input">exit</formatted>).</item>
+				  <item>éteindre l'ordinateur.</item>
+        </list>
+        <parapraph>
+					Attention, afin d'arriver au laboratoire dans les meilleures conditions, il est 
+					bien de revoir la matière qui sera mise en pratique. <newLine/>
+					C'est pourquoi nous vous fournissons quelques exercices préparatoires à faire à la maison 
+					pour vous permettre d'évaluer si vous êtes prêt. <newLine/>
+					Afin de vérifier que vous préparez bien ces exercices, une <formatted style="bold">interrogation</formatted> sera faite avant de démarrer chaque labo.
+					<newLine space="long"/>
+        </parapraph>
+				<parapraph>
+					À la semaine prochaine et soyez à l'heure !
+				</parapraph><newLine/>
+      </clarify>
+      
+			<clarify><paragraph title="Ressources" icon="icon_web_resource"/>
+				<parapraph>
+					Vous voulez en savoir plus sur ce que vous avez fait aujourd'hui ?
+					<newLine space="long"/>
+        </parapraph>
+				<parapraph>
+					Nous avons rassemblé sur le site (<formatted style="bold">suivez le lien "Aide"</formatted>), une série de documents qui peuvent être utiles. Voyez notamment :  
+				</parapraph>
+				<list listStyle="unordered">
+				  <item>Un <formatted style="bold">guide visuel Linux</formatted>que vous avez déjà utilisé;</item>
+				  <item>Un <formatted style="bold">aide-mémoire</formatted> écrit par nos soins sur l'utilisation de Windows et Linux; </item>
+				  <item>Un <formatted style="bold">quick reference</formatted> sur l'utilisation de <formatted style="bold">vi</formatted>; </item>
+				  <item>Un <formatted style="bold">quick reference</formatted> sur les commandes <formatted style="bold">linux</formatted>. </item>
+        </list><newLine/>
+      </clarify>
+		</learningObject>
+	</unit>
+</lesson>

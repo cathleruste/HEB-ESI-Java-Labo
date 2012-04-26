@@ -1,0 +1,626 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" label="TD2" title="TD2 - Les bases de Linux">
+  
+  <metadata>
+    <organisation level="1ère année" module="Laboratoires Java">
+      <creationPosition><posNumber>2</posNumber></creationPosition>
+    </organisation>
+    <lessonInfo>
+      <lifecycle>
+        <version>2012 - 2013</version>
+        <contribute>
+          <person name="ARO"/>
+          <person name="BEJ"/>
+          <person name="CLR"/>
+          <person name="HAL"/>
+          <person name="MBA"/>
+          <person name="MCD"/>
+          <person name="NPX"/>
+          <person name="PBT"/>
+        </contribute>
+      </lifecycle>
+    </lessonInfo>
+</metadata>
+
+ <clarify><paragraph title="Objectifs" icon="objective"/>   
+    <parapraph>  
+      À l’issue de ce TD vous aurez acquis une connaissance basique de l’utilisation du système Linux et de son aide en ligne : le man.   
+      En particulier, les commandes <formatted style="bold">ls</formatted>, <formatted style="bold">cd</formatted>, <formatted style="bold">pwd</formatted>, <formatted style="bold">rm</formatted>, <formatted style="bold">rmdir</formatted>, <formatted style="bold">mkdir</formatted>, <formatted style="bold">chmod</formatted>, <formatted style="bold">mv</formatted> et <formatted style="bold">cat</formatted> devront vous être familières.  
+      <newLine space="long"/>
+    </parapraph>  
+    <parapraph>  
+      Vous serez aussi à l'aise avec le concept de <formatted style="bold">permissions</formatted> sur les fichiers et vous saurez vous repérer dans le <formatted style="bold">système de fichiers</formatted>.   
+      <newLine space="long"/>
+    </parapraph>  
+    <parapraph>  
+      <formatted style="bold">Rappels</formatted> :   
+    </parapraph>  
+    <list listStyle="unordered">
+      <item>Ce TD est accompagné d'exercices à faire <formatted style="bold">avant</formatted> de venir au laboratoire.</item>  
+	    <item>Prenez bien note des réponses aux exercices.  </item>  
+    </list><newLine/>
+  </clarify>
+
+<unit label="TD2" title="TD2">
+    <learningObject title="Se connecter à linux1"> 
+      <parapraph>  
+        <formatted style="bold">On a déjà vu comment se connecter à linux1 !</formatted>  
+        <newLine space="long"/>
+      </parapraph>  
+      
+      <parapraph>  
+        C'est vrai ! Mais, rappelez-vous ! Nous avions indiqué que le clavier numérique ne fonctionnait pas. <newLine/>  
+        Il y a aussi un problème d'accent que nous n'avions pas mentionné.<newLine/>  
+        Nous allons voir comment régler tout ça !  
+      </parapraph>  
+      
+      <act><paragraph title="Configurer putty" icon="act"/> 
+        <list listStyle="unordered">
+          <item>Lancez <formatted style="italic">putty</formatted> comme vous l'avez vu la semaine dernière et entrez "<formatted style="italic">linux1</formatted>" comme "<formatted style="italic">Host Name</formatted>".</item>  
+	        <item><formatted style="bold">Avant</formatted> d'appuyez sur le bouton de connexion, apportez les 2 modifications suivantes :  
+	          <list listStyle="unordered">
+	            <item>Pour pouvoir utiliser le clavier numérique il faut cocher la case "<formatted style="italic">Disable application keypad mode</formatted>"   
+		            dans l'onglet "<formatted style="italic">Terminal &gt; Features"</formatted>. <newLine/><newLine/><popup title="Cliquez pour voir l'image"><multimedia src="../image/putty-keypad.jpg" type="jpeg"/></popup>
+              </item> <newLine/>
+              <item>Pour pouvoir utiliser les accents, il faut indiquer à putty que nous nous connectons à une machine utilisant le codage <formatted style="italic">utf8</formatted> et pas le <formatted style="italic">latin1</formatted>.<newLine/>  
+		            Pour cela, choisissez "utf8" dans la liste "<formatted style="italic">Window &gt; Translation &gt; Received data</formatted>"
+              </item>  
+	          </list>
+          </item>  
+	        <item>C'est bon, vous pouvez vous connecter et vérifier que le clavier numérique fonctionne et que les accents apparaissent correctement. </item>  
+        </list><newLine/>
+      </act>
+      
+      <clarify><paragraph title="FAQ" icon="icon_faq"/> 
+        <parapraph>  
+          <formatted style="bold">C'est quoi un "codage", "utf8" et "latin1" ?</formatted>  
+          <newLine space="long"/>
+        </parapraph>  
+        
+        <parapraph>  
+          Comme l'ordinateur travaille en interne avec des nombres et pas des caractères, il faut utiliser un <formatted style="italic">codage</formatted>, qui associe un nombre à chaque caractère (lettres, chiffres, symboles).<newLine/>  
+          Plusieurs codages existent comme l'<formatted style="italic">UTF8, l'ASCII</formatted> ou le <formatted style="italic">latin1</formatted> (aussi appelé <formatted style="italic">ISO 8859-1</formatted>)   
+          <newLine space="long"/>
+        </parapraph>  
+        
+        <parapraph>  
+          Si vous voulez en savoir plus, vous pouvez lire ce petit article   
+          (http://fr.wikipedia.org/wiki/Encodage_de_caractères) sur wikipedia ou encore article de pbt (http://blog.namok.be?post/2009/11/30/Unicode%2C-UTF8%2C-UTF16%2C-UTF32%2C-...-et-tutti-quanti)  
+          <newLine space="long"/>
+        </parapraph>  
+        
+        <parapraph>  
+          <formatted style="bold">Et je vais devoir effectuer cette configuration à chaque fois ?</formatted>  
+          <newLine space="long"/>
+        </parapraph>  
+        
+        <parapraph>  
+          Nous avons une bonne et une mauvaise nouvelle pour vous. Commençons par la bonne : il est possible de sauver une configuration.<newLine/>  
+          Pour cela, configurez <formatted style="italic">putty</formatted> comme indiqué plus haut mais avant de vous connecter, faites ceci :  
+        </parapraph>  
+        
+        <list listStyle="unordered">
+          <item>Revenez à la fenêtre "<formatted style="italic">Session</formatted>".</item>  
+	        <item>Entrez un nom dans la champ de saisie "<formatted style="italic">Saved Sessions</formatted>" (par exemple : "<formatted style="italic">Linux1</formatted>")</item>  
+	        <item>Cliquez sur le bouton "<formatted style="italic">Save</formatted>".  </item>  
+        	<item>À présent, il suffira de double-cliquer sur la session "Linux1" pour ouvrir une connexion à linux1.</item>  
+        </list>
+        
+        <parapraph>  
+          <formatted style="bold">Vous n'avez pas parlé d'une mauvaise nouvelle également ?</formatted>  
+          <newLine space="long"/>
+        </parapraph>  
+        
+       <parapraph>  
+        C'est vrai !  La session que vous venez de créer est sauvée sur le poste de travail. Si lors du prochain TD, vous vous connectez sur une autre machine, elle ne sera pas connue. Vous devrez donc effectuer cette configuration une fois par machine utilisée. (En fait, il est possible d'écrire un petit fichier à stocker dans votre Z: avec la bonne configuration, l'aide de putty vous explique comment faire MAIS, svp, ne perdez pas de temps à le faire maintenant!)   
+        <newLine space="long"/>
+       </parapraph>          
+       
+      <newLine/>
+     </clarify>
+    </learningObject>
+    
+    <learningObject title="La ligne de commande"> 
+      <parapraph>  
+        Nous avons déjà parlé de la ligne de commande mais il reste un élément dont nous n'avons pas parlé, les <formatted style="bold">options</formatted> :  
+      </parapraph>  
+      
+      <list listStyle="unordered">
+        <item>Une option modifie le sens d'une commande </item>  
+        <item>Elle commence par le signe "-" suivi d'une seule lettre</item>  
+        <item>Ou encore par le double tiret "--" suivi d'un nom d'option</item>  
+      </list>  
+      Les options sont placées n'importe où après le nom de la commande.   
+      
+      <clarify><paragraph title="Expérience" icon="icon_experiment"/> 
+        <list listStyle="unordered">
+          <item>Tapez la commande <formatted style="input">ls -l</formatted>. Vous constatez que le résultat obtenu est beaucoup plus verbeux que celui obtenu sans l'option.</item>  
+          <item>Tapez la commande <formatted style="input">cat -n td1/test</formatted>. L'option demande de numéroter les lignes. (note: on suppose que vous avez bien créé ce fichier lors du td précédent) </item>  
+          <item>Essayez <formatted style="input">cat --number td1/test</formatted>. C'est la version <formatted style="italic">longue</formatted> tout-à-fait équivalente à la précédente.</item>  
+        </list><newLine/>
+      </clarify>
+    
+      <clarify><paragraph title="FAQ" icon="icon_faq"/> 
+        <parapraph>  
+          <formatted style="bold">Comment je fais pour connaitre les options disponibles pour une commande ?</formatted>  
+          <newLine space="long"/>
+        </parapraph>  
+        
+        <parapraph>  
+          Il existe plusieurs possibilités. Nous en parlons dans le point suivant qui concerne la recherche d'information.   
+          <newLine space="long"/>
+        </parapraph>  
+        <newLine/>
+      </clarify>
+    </learningObject>
+    
+    <learningObject title="Recherche d'informations"> 
+      <parapraph>  
+        Non seulement, il y a beaucoup de commandes à connaitre mais en plus, chacune dispose d'une multitude d'options. Impossible de tout retenir ! Comment faire pour retrouver l'information ?   
+        <newLine space="long"/>
+      </parapraph>  
+      
+      <parapraph>  
+        <formatted style="bold">Si vous connaissez le nom de la commande</formatted>  
+        <newLine space="long"/>
+      </parapraph>  
+      
+      <parapraph>  
+        Solution 1 : Vous pouvez entrer la commande avec l'option <formatted style="input">--help</formatted> qui affiche une aide succinte sur l'utilisation de la commande. La  
+        plupart des commandes comprennent cette option mais <formatted style="bold">pas toutes</formatted>.   
+        <newLine space="long"/>
+      </parapraph>  
+      
+      <parapraph>  
+        Exemple: <formatted style="input">ls --help</formatted>   
+        <newLine space="long"/>
+      </parapraph>  
+      
+      <parapraph>  
+        Solution 2 : Pour une information plus complète, il existe la commande <formatted style="input">man</formatted>.  
+        <newLine space="long"/>
+      </parapraph>  
+      
+      <parapraph>  
+        Exemple: <formatted style="input">man ls</formatted>  (<formatted style="italic">q</formatted> pour quitter le man)  
+        <newLine space="long"/>
+      </parapraph>  
+      
+      <parapraph>  
+        <formatted style="bold">Si vous ne connaissez pas le nom de la commande</formatted>  
+      </parapraph>  
+      
+      Vous pouvez essayer  la commande <formatted style="input">apropos</formatted> qui affiche la liste des commandes dont la description reprend le texte fourni.<newLine/>
+      <parapraph>  
+        Exemple: <formatted style="input">apropos editor</formatted>  
+        <newLine space="long"/>
+      </parapraph>  
+      
+      <parapraph>  
+        <formatted style="bold">Si vous n'avez toujours pas trouvé</formatted>  
+        <newLine space="long"/>
+      </parapraph>  
+      
+      <parapraph>  
+        Consultez les documents que l'on met à votre disposition (lien "<formatted style="italic">Aide</formatted>" sur le site). Notamment notre aide-mémoire qui reprend une liste des commandes les plus fréquentes ou encore le <formatted style="italic">quick reference</formatted> qui reprend la plupart des commandes linux sur une feuille recto-verso.  
+        <newLine space="long"/>
+      </parapraph>  
+      
+      <act><paragraph title="Exercice 1" icon="act"/> 
+        <parapraph>  
+         La commande <formatted style="input">ls -l</formatted> affiche le contenu du dossier en format <formatted style="italic">long</formatted>. Nous verrons plus tard comment comprendre toute cette information mais sachez déjà que la 4ème colonne donne la taille du fichier (en octets). Lorsque les nombres sont grands, ce n'est pas très lisible. Trouvez l'option qui permet d'afficher cette taille sous un format plus lisible.  
+          <newLine space="long"/>
+       </parapraph>  
+        
+        <parapraph>  
+        <formatted style="bold">Consigne</formatted> : de grâce, <formatted style="bold">cherchez</formatted> la réponse, ne la <formatted style="bold">demandez pas</formatted> à votre voisin. Le but de cet exercice n'est pas de connaitre l'option (elle n'est pas si utile que ça) mais d'apprendre à trouver soi-même l'information.  
+       </parapraph>  
+        <newLine/>
+      </act>
+      
+      <act><paragraph title="Exercice 2" icon="act"/> 
+        <parapraph>  
+         Quelle commande permet d'imprimer un fichier ?  
+         <newLine space="long"/>
+        </parapraph>  
+        <parapraph>  
+         <formatted style="bold">Note</formatted> : Ne cherchez pas à l'utiliser, aucune imprimante n'est installée sur linux1.  
+        </parapraph>  
+        <newLine/>
+      </act>
+    </learningObject>
+    
+    <learningObject title="Système de fichiers, chemin absolu et relatif"> 
+      «<formatted style="italic"> Tout est relatif, et cela seul est absolu </formatted>». Auguste Comte.  
+      
+      <parapraph>  
+        Régulièrement, il faut indiquer un endroit du système de fichiers (par exemple pour y aller). Désigner simplement le nom du dossier ne suffit pas.<newLine/>  
+       Un petit tour vers les points 10 à 14 du guide visuel sera peut-être nécessaire...  
+      </parapraph>  
+      
+      <act><paragraph title="Petit exercice" icon="act"/> 
+        <list listStyle="ordered">
+          <item>Pouvez-vous retrouver votre dossier personnel dans le système de fichiers ?</item>  
+          <newLine/><newLine/><popup title="Cliquez pour voir l'image"><multimedia src="../image/fs.jpeg" type="jpeg"/></popup><newLine/><newLine/>
+          <item>Entrez la commande <formatted style="input">pwd</formatted> (que fait-elle encore ?). Comprenez-vous la notation qu'elle utilise pour la réponse ?</item>  
+        </list><newLine/>
+      </act> 
+     
+      <clarify><paragraph title="Exercice VRAI ou FAUX" icon="icon_question"/>
+       <selfCheck title="Chemins absolus et relatifs" shuffle="no">
+			 		<multipleChoice>
+						<question>
+							<parapraph>
+								~/../g12345/td2 est un chemin relatif  
+							</parapraph>
+						</question>
+						<answer feedback="&#10;1 - Incorrect : c'est un chemin absolu&#10;" correct="no">
+							Vrai
+						</answer>
+						<answer feedback="&#10;2 - Exact: en effet, un chemin relatif ne commence pas par un ~ &#10;" correct="yes">
+							Faux
+						</answer>
+					</multipleChoice>
+        </selfCheck>
+        
+        <selfCheck title="Chemins absolus et relatifs" shuffle="no">
+					<multipleChoice>
+						<question>
+							<parapraph>
+								/home/g12345/../g54321/Hello.java est un chemin relatif  
+							</parapraph>
+						</question>
+						<answer feedback="&#10;1 - Incorrect : c'est un chemin absolu&#10;" correct="no">
+							Vrai
+						</answer>
+						<answer feedback="&#10;2 - Exact: en effet, un chemin relatif ne commence pas par un / &#10;" correct="yes">
+							Faux
+						</answer>
+					</multipleChoice>
+        </selfCheck>
+        
+        <selfCheck title="Chemins absolus et relatifs" shuffle="no">
+					<multipleChoice>
+						<question>
+							<parapraph>
+								./tds/td2 est un chemin relatif  
+							</parapraph>
+						</question>
+						<answer feedback="&#10;1 - Exact : c'est un chemin relatif&#10;" correct="yes">
+							Vrai
+						</answer>
+						<answer feedback="&#10;2 - Incorrect &#10;" correct="no">
+							Faux
+						</answer>
+					</multipleChoice>
+        </selfCheck>
+        
+        <selfCheck title="Chemins absolus et relatifs" shuffle="no">
+					<multipleChoice>
+						<question>
+							<parapraph>
+								tds/td2/Hello.java est un chemin relatif 
+							</parapraph>
+						</question>
+						<answer feedback="&#10;1 - Exact : c'est un chemin relatif&#10;" correct="yes">
+							Vrai
+						</answer>
+						<answer feedback="&#10;2 - Incorrect &#10;" correct="no">
+							Faux
+						</answer>
+					</multipleChoice>
+        </selfCheck>
+        
+        <selfCheck title="Chemins absolus et relatifs" shuffle="no">
+          <multipleChoice>
+						<question>
+							<parapraph>
+								~g12345/tds/td2 est un chemin absolu
+							</parapraph>
+						</question>
+						<answer feedback="&#10;1 - Incorrect : c'est un chemin absolu&#10;" correct="yes">
+							Vrai
+						</answer>
+						<answer feedback="&#10;2 - Incorrect: en effet, un chemin absolu peut commencer par un ~ &#10;" correct="no">
+							Faux
+						</answer>
+					</multipleChoice>
+				</selfCheck>
+     </clarify>
+     
+      <act><paragraph title="Exercices" icon="act"/> 
+        <list listStyle="ordered">
+         <item>Écrivez le chemin absolu d'un des fichiers que vous avez déjà créé pour ce TD.  </item>  
+         <item>Visualisez le contenu de ce fichier en donnant un chemin absolu.</item>  
+         <item>Faites de même avec un fichier de votre voisin. </item>  
+        </list><newLine/>
+      </act>
+      
+      <act><paragraph title="Exercices" icon="act"/> 
+       Refaites les exercices précédents en utilisant les raccourcis <formatted style="input">~</formatted> et <formatted style="input">~g12345</formatted>.<newLine/><newLine/></act><act><paragraph title="Exercices" icon="act"/> 
+       <list listStyle="ordered">
+         <item>Visualisez le contenu d'un des fichiers que vous avez déjà créé pour ce TD en utilisant un chemin relatif.</item>  
+         <item>Faites de même avec un fichier du TD 1. </item>  
+         <item>Faites de même avec un fichier de votre voisin. </item>  
+         <item>Quel est le dossier désigné par la notation suivante :  <formatted style="input">/usr/bin/../../eCours/asm/../java</formatted> ?</item>  
+       </list><newLine/>
+      </act>
+    </learningObject>
+    
+    <learningObject title="Propriétaire et groupes"> 
+     <parapraph>  
+       «<formatted style="italic"> La propriété est un piège: ce que nous croyons posséder nous possède </formatted>». Alphonse Karr.  
+        <newLine/>  
+        «<formatted style="italic"> La propriété c'est le vol </formatted>». Pierre Joseph Proudhon.  
+        <newLine space="long"/>
+      </parapraph>  
+      <parapraph>  
+       Comme Linux est un système partagé, il est important de parler de sécurité. Ici, on va se concentrer sur la sécurité au niveau des fichiers et répondre aux questions suivantes :  
+      </parapraph>  
+      <list listStyle="unordered">
+       <item>À qui <formatted style="bold">appartient</formatted> un fichier ?</item>  
+       <item><formatted style="bold">Qui peut faire</formatted> quoi avec un fichier ?</item>  
+      </list>
+      <parapraph>  
+       Mais pour commencer il faut d'abord comprendre la notion de <formatted style="italic">propriétaire</formatted> et celle de <formatted style="italic">groupe</formatted>. Un retour vers les points 15 et 16 du guide visuel sera peut-être nécessaire...  
+      </parapraph>  
+     
+      <act><paragraph title="Exercices" icon="act"/> 
+       <list listStyle="ordered">
+         <item>Visualisez le propriétaire des fichiers de votre dossier personnel.</item>  
+         <item>Visualisez le propriétaire des fichiers de votre dossier <formatted style="code">td1</formatted>.</item>  
+         <item>Comment visualiser en une fois tous les fichiers de votre dossier mais aussi les fichiers des dossiers qui s'y trouvent et ainsi de suite ? (<formatted style="bold">récursivement</formatted> en somme)<newLine/>Aide: examinez les options de la commande <formatted style="input">ls</formatted>  
+         </item>  
+        </list><newLine/>
+      </act>
+      
+      <act><paragraph title="Exercices" icon="act"/> 
+        <list listStyle="ordered">
+         <item>Visualiser les groupes auxquels vous appartenez.</item>  
+         <item>Quel est votre groupe principal ? </item>  
+         <item>Quels sont les groupes auxquels appartient votre professeur ?</item>  
+         <item>Avez-vous un groupe en commun avec lui ?</item>  
+         <item>Quel(s) groupe(s) avez-vous en commun avec les autres étudiants de votre groupe ?</item>  
+       </list><newLine/>
+      </act>
+      
+      <act><paragraph title="Exercices" icon="act"/> 
+       <list listStyle="ordered">
+         <item>Visualisez vos fichiers et déterminez à quel groupe ils appartiennent.</item>  
+         <item>Créez un fichier de test et modifiez le groupe auquel il appartient.</item>  
+       </list><newLine/>
+      </act>
+      
+      <clarify><paragraph title="FAQ" icon="icon_faq"/> 
+        <parapraph>  
+         <formatted style="bold">Les fichiers dans mon dossier personnel ne sont pas automatiquement à moi ?</formatted>  
+         <newLine space="long"/>
+        </parapraph>  
+       <parapraph>  
+         Non. En pratique c'est généralement le cas, mais on peut très bien trouver dans un dossier personnel un fichier qui appartient à quelqu'un d'autre.  
+         <newLine space="long"/>
+        </parapraph>  
+        <parapraph>  
+         <formatted style="bold">J'ai un Linux à la maison et les groupes ne sont pas les mêmes. C'est normal ?</formatted>  
+         <newLine space="long"/>
+        </parapraph>  
+        <parapraph>  
+         Oui. Les groupes dépendent à la fois du système particulier utilisé et de la façon dont l'administrateur (le root) l'a configuré.   
+        </parapraph>  
+        <newLine/>
+      </clarify>
+    </learningObject>
+    
+    <learningObject title="Les permissions"> 
+     <parapraph>  
+       À présent que vous savez qu'un fichier a un propriétaire et appartient à un groupe, on peut étudier la notion de permission.    
+       <newLine space="long"/>
+      </parapraph>  
+      <parapraph>  
+       <formatted style="bold">Restez concentré</formatted> ! Cette partie est plus longue et un peu plus  
+       difficile que ce que vous avez déjà appris mais c'est absolument  
+       nécessaire pour la suite.   
+       <newLine/>  
+        Un retour vers les points 17 à 19 du guide visuel sera peut-être encore nécessaire...  
+      </parapraph>  
+     
+      <act><selfCheck title="Déterminez les bonnes permissions" shuffle="yes">
+       <fillInBlanks>
+         <question>  
+           <parapraph>  
+             Remplissez les blancs avec la permission correcte (r, w, x ou -). Il s'agit de trouver la permission minimale à mettre pour répondre à la demande.   
+           </parapraph>  
+         </question>
+         <gapText> 
+           <list listStyle="unordered">
+             <item>Pour un fichier Java, la permission la plus adéquate est      <newLine/>
+                <gap answers="x">r</gap> 
+                <gap answers="x">w</gap> 
+                <gap answers="x">-</gap> 
+              </item>  
+              <item>Pour la version compilée (le bytecode), la permission la plus adéquate est      <newLine/>
+                <gap answers="x">r</gap> 
+                <gap answers="x">w</gap> 
+                <gap answers="x">-</gap> 
+              </item>  
+              <item>Le fichier qui contient (l'exécutable de) la machine virtuelle a probablement comme permisson    <newLine/>
+                <gap answers="x">-</gap> 
+                <gap answers="x">-</gap> 
+                <gap answers="x">x</gap> 
+              </item>  
+            </list> 
+         </gapText><solution></solution>
+        </fillInBlanks>
+      </selfCheck>
+    </act>
+    
+    <clarify><paragraph title="Exercice " icon="icon_question"/> 
+      <parapraph>  
+        Soit le fichier "Max.java" de la capture d'écran ci-dessous.  
+       <newLine space="long"/>
+      </parapraph>  
+      <parapraph>  
+        <popup title="Cliquez pour voir l'image"><multimedia src="../image/ls-l.jpg" type="jpeg"/></popup><newLine space="long"/>
+      </parapraph>  
+      <parapraph>  
+        Est-ce qu'un professeur peut l'éditer ?  
+      </parapraph>  
+      <newLine/> 
+      <popup> Non ! Le droit d'écriture n'est accordé qu'au propriétaire.  </popup> 
+      <newLine/>
+    </clarify>
+    
+    <!--act-->
+      <selfCheck title="Déterminez les bonnes permissions" shuffle="yes">
+        <fillInBlanks>
+          <question>Soit le fichier "Max.java" de la capture d'écran ci-dessus. <newLine/>  </question>
+          <gapText> 
+           <parapraph>  
+              
+              On voudrait que l'étudiant g32671 puisse travailler  
+              normalement, que les autres étudiants ne puissent pas tricher sur  
+              lui mais que les professeurs puissent lire son travail.   
+            </parapraph>  
+            <list listStyle="unordered">
+              <item>Quel groupe faut-il donner au fichier ?        
+               <gap answers="x">etudiants</gap> 
+              </item>  
+              <item>Quelles permissions donner au fichier ?                
+                <gap answers="x">r</gap> 
+                <gap answers="x">w</gap> 
+                <gap answers="x">-</gap> 
+                <gap answers="x">-</gap> 
+                <gap answers="x">-</gap> 
+                <gap answers="x">-</gap> 
+                <gap answers="x">r</gap> 
+                <gap answers="x">-</gap> 
+                <gap answers="x">-</gap> 
+              </item>  
+            </list>
+            </gapText><solution></solution>
+          </fillInBlanks>
+        </selfCheck>
+      <!--/act-->
+      
+      <act><paragraph title="Activité" icon="act"/> 
+        <parapraph>  
+         Reprenez les permissions affichées dans la capture d'écran ci-dessous et exprimez-les avec un nombre de 3 chiffres.  
+         <newLine space="long"/>
+        </parapraph>  
+        <parapraph>  
+          <popup title="Cliquez pour voir l'image"><multimedia src="../image/ls-l-permissions.jpg" type="jpeg"/></popup>
+        </parapraph>  
+        <newLine/>
+      </act>
+      
+      <clarify><paragraph title="Permissions par défaut" icon="icon_experiment"/> 
+        <list listStyle="ordered">
+          <item>Si ce n'est pas encore fait, créez un dossier "td2".</item>  
+          <item>Créez-y un fichier vide.</item>  
+          <item>Demandez les détails du fichier (propriétaire, groupe, permission)</item>  
+       </list>  
+        On constate qu'un nouveau fichier appartient à celui qui l'a créé (on s'en doute) et au groupe principal du créateur. Il y a aussi des permissions par défaut (plutôt permissives dans notre cas).  
+        <newLine/>
+      </clarify>
+      
+      <clarify><paragraph title="Modifier les permissions" icon="icon_reading"/> 
+        <parapraph>  
+          Vous savez que la commande qui permet de modifier les permissions d'un fichier est <formatted style="input">chmod</formatted>.  
+          <newLine space="long"/>
+        </parapraph>  
+        <parapraph>  
+          Prenez le temps de <formatted style="bold">lire</formatted> la page de <formatted style="bold">manuel</formatted> de cette commande.   
+          <newLine space="long"/>
+        </parapraph>
+        <newLine/>
+      </clarify>
+      
+      <act><paragraph title="Exercices" icon="act"/> 
+        <list listStyle="ordered">
+          <item>Créez un fichier "brol" dans le dossier "td2" avec quelques mots.</item>  
+          <item>Faites en sorte que personne d'autre ne puisse en voir le contenu.</item>  
+         <item>Faites en sorte que tout le monde puisse voir son contenu mais pas le modifier. </item>  
+         <item>Faites en sorte que les autres étudiants ne puissent pas voir son contenu mais les professeurs bien. </item>  
+       </list><newLine/>
+      </act>
+      
+      <act><paragraph title="Exercices" icon="act"/> 
+        <parapraph>  
+         Modifiez les droits de votre dossier "td2" et, si nécessaire, des fichiers qui s'y trouvent pour que tout le monde puisse  
+       </parapraph>  
+       <list listStyle="ordered">
+          <item>voir quels fichiers s'y trouvent mais sans pouvoir lire le contenu de ces fichiers.</item>  
+          <item>modifier le contenu d'un des fichiers mais pas supprimer ce fichier.</item>  
+          <item>supprimer un fichier mais pas modifier son contenu.</item>  
+        </list><newLine/>
+      </act>
+      
+      <clarify><paragraph title="FAQ" icon="icon_faq"/> 
+        <parapraph>  
+          <formatted style="bold">Pourquoi avoir choisi 4, 2 et 1 pour désigner les permissions ?</formatted>  
+          <newLine space="long"/>
+        </parapraph>  
+        <parapraph>  
+         C'est lié au code binaire. 'rwx' donne, pour 'r', la valeur '100' soit 4 en décimal.  
+         <newLine space="long"/>
+        </parapraph>  
+        <parapraph>  
+          <formatted style="bold">Vous dites que dans un affichage en format long, le premier caractère indique si c'est un fichier simple ('-') ou un dossier ('d'). Pourtant j'ai déjà vu d'autres symboles; c'était quoi ?</formatted>  
+          <newLine space="long"/>
+        </parapraph>  
+        <parapraph>  
+          Il existe d'autres types de fichiers que les deux que nous avons vus. Ils se rencontrent moins souvent et sont surtout utilisés par le système. Par exemple, certains définissent des <formatted style="italic">pilotes</formatted> vers le matériel. Si vous voulez en savoir plus, vous pouvez lire ceci  
+          (http://en.wikipedia.org/wiki/Unix_file_types).  
+          <newLine space="long"/>
+        </parapraph>  
+        <parapraph>  
+          <formatted style="bold">Vous avez mentionné les permissions 'r', 'w' et 'x'. Pourtant j'ai déjà vu d'autres lettres dans la zone réservée aux permissions. C'était quoi ?</formatted>  
+          <newLine space="long"/>
+        </parapraph>  
+        <parapraph>  
+          Il y a 3 permissions dont nous n'avons pas parlé parce qu'elles sont moins courantes : le <formatted style="italic">suid</formatted> (set user id), le <formatted style="italic">sgid</formatted> (set group id) et le <formatted style="italic">sticky</formatted>. Si vous voulez en savoir plus, vous pouvez lire ceci  
+          (http://en.wikipedia.org/wiki/Permissions_Unix).  
+          <newLine space="long"/>
+        </parapraph>  
+        <parapraph>  
+          <formatted style="bold">Vous n'avez pas expliqué le sens de la 2ème colonne fournie par la commande ls (juste avant le propriétaire) ?</formatted>  
+          <newLine space="long"/>
+        </parapraph>  
+        <parapraph>  
+          C'est vrai mais c'est moins utile et plus lié à la structure interne du système de fichier. Je veux bien vous dire qu'il s'agit du nombre de liens physiques sur le fichier mais je sens que vous commencez déjà à regretter d'avoir posé la question ;)  
+          <newLine space="long"/>
+        </parapraph>  
+        <parapraph>  
+          <formatted style="bold">On a vu qu'un fichier est créé avec des permissions par défaut. C'est configurable ?</formatted>  
+          <newLine space="long"/>
+        </parapraph>  
+        <parapraph>  
+          Oui. Voyez la commande <formatted style="input">umask</formatted>.  
+        </parapraph>  
+        <newLine/>
+      </clarify>
+    </learningObject>
+    
+    <learningObject title="Conclusion">
+      <clarify><paragraph title="FAQ" icon="icon_casestudy"/> 
+        <parapraph>  
+          <formatted style="bold">Euh ! Je n'ai pas fini. C'est normal ?</formatted>  
+          <newLine space="long"/>
+        </parapraph>  
+        <parapraph>  
+          Non, c'est que vous avez mal préparé votre td avant de venir au labo. Terminez-le en remédiation et/ou à la maison car la semaine prochaine, nous en attaquons un nouveau et, cette fois, essayez de mieux vous y préparer!  
+          <newLine space="long"/>
+        </parapraph>  
+        <parapraph>  
+          <formatted style="bold">Je n'ai pas Linux à la maison. Je peux quand même terminer mon TD ?</formatted>  
+          <newLine space="long"/>
+        </parapraph>  
+        <parapraph>  
+          Non. Vous devrez rapidement disposer d'un Linux fonctionnel à la maison. Regardez la page "installation d'un Linux" dans la formation "Langage Java 1ère année" mis à votre disposition sur le site d'Elearning. Vous trouverez quelques informations de départ pour vous orienter et des liens vers les sites d'informations les plus utiles.  
+         <newLine space="long"/>
+        </parapraph>
+        <newLine/>
+      </clarify>
+    </learningObject>
+  </unit>
+</lesson>
