@@ -1,7 +1,17 @@
 ========================================================================
     TD (Travaux Dirigés) des Laboratoires Java 1ère année à l'ESI 
-    (http://www.heb.be/esi - mcodutti@heb.be)
+    (http://www.heb.be/esi - mcodutti@heb.be ou cleruste@heb.be)
 ========================================================================
 
-- Le dossier doit être placé dans le même dossier que le dossier
-  'core' de eLML. 
+Les documents sont produits en utilisant eLML (eLesson Markup Language),
+un système de production de documents pédagogiques à partir d'un source
+au format XML (http://www.elml.org/)
+
+À partir du source XML, on peut produire des documents au formats divers.
+Dans notre cas :
+- Un document en ligne HTML/Scorm
+     (ce qui va permettre une bonne intégration à poÉSI)
+- Un document papier en LaTeX
+
+Voir le document MANUAL pour plus d'informations (comment générer les
+documents et comment contribuer) 

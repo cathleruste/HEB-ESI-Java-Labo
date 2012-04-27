@@ -1,0 +1,73 @@
+========================================================================
+    TD (Travaux Dirigés) des Laboratoires Java 1ère année à l'ESI 
+========================================================================
+
+		Manuel d'utilisation
+		--------------------
+		1 - Installation
+		2 - Génération des documents
+		3 - Contribuer en tant que relecteur
+		4 - Contribuer en tant qu'auteur
+
+[ 1 ] Installation
+------------------
+
+1) eLML doit être installé sur votre système
+2) Créer la structure de dossier suivante
+
+    + Java1-Labo              // Vous pouvez choisir un autre nom
+    |--- core                 // Le dossier 'core' de eLML
+    
+3) Aller dans Java1-Labo et télécharger les TDs
+
+    git clone git@github.com:cathleruste/HEB-ESI-Java-Labo.git
+    
+   Ca va créer le dossier HEB-ESI-Java-Labo qui contient
+   - TD*         (les Tds)
+   - _config     (config utilisée lors de la génération des documents)
+   - _templates/java (une modification du style de base pour gérer
+                      l'apparence des documents)
+                      
+
+[ 2 ] Génération des documents
+------------------------------
+
+Il n'y a pas de makefile pour l'instant.
+
+*** Windows : Le plus simple est d'utiliser l'outil easyELML
+    - Le style est Java
+    
+*** Linux : le script 'elml' simplifie la tâche
+
+[ 3 ] Contribuer en tant que relecteur
+--------------------------------------
+
+- Pour les professeurs de l'ESI, les documents à relire sont disponibles
+  sur poÉSI (<<dire exactement où>>
+  
+- Pour faire des remarques, créez une 'issue' sur GitHub
+
+[ 4 ] Contribuer en tant qu'auteur
+----------------------------------
+
+*** Pour des modifications dans un TD existant
+
+Modifiez le TD et répercutez les modifications sur GitHub
+  > commit -a -m "explication des modifs"
+  > git push
+
+*** Pour un nouveau TD
+
+On ne part pas de rien. Un script existe pour convertir les anciens Tds 
+au format eXeLearning en documents eLML. Cette conversion n'est tout de 
+fois pas parfaite et nécessite des ajustements.
+
+1) Créer un nouveau dossier TD*
+2) Y placer le document TD*.xml dans le sous-dossier fr/text
+3) Mettre les images dans le sous-dossier fr/image
+4) Ajuster le document
+5) commit et push
+
+*** Problèmes avec la syntaxe eLML ?
+
+Je propose d'en discuter sur le wiki GitHub
