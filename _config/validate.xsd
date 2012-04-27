@@ -33,9 +33,9 @@
 			</xs:annotation>
 			<xs:simpleType>
 				<xs:restriction base="xs:string">
-					<xs:enumeration value="Basic"/>
-					<xs:enumeration value="Intermediate"/>
-					<xs:enumeration value="Advanced"/>
+					<xs:enumeration value="1ère année"/>
+					<xs:enumeration value="2ème année"/>
+					<xs:enumeration value="3ème année"/>
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
@@ -45,7 +45,7 @@
 			</xs:annotation>
 			<xs:simpleType>
 				<xs:restriction base="xs:string">
-					<xs:enumeration value="yourtopic"/>
+					<xs:enumeration value="Laboratoires Java"/>
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>

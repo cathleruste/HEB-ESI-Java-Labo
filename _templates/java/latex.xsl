@@ -272,22 +272,6 @@
     </xsl:template>
 
     <!-- Pas de newLine dans une <question> -->    
-    <xsl:template match="elml:newLine">
-	<xsl:choose>
-	    <xsl:when test="ancestor::question'">
-                <xsl:text>
-	        </xsl:text>
-            </xsl:when>
-	    <xsl:when test="@space='long'">
-                <xsl:text>\par
-	        </xsl:text>
-            </xsl:when>
-            <xsl:otherwise>
-            <xsl:text>\par
-                </xsl:text>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-
+    <xsl:template match="//elml:question//elml:newLine"/>
 
 </xsl:stylesheet>

@@ -206,7 +206,10 @@
   </unit>
     
   <unit label="MIL" title="Exemple de MIL">
+    <parapraph>  
     Afin de vous préparer au mieux à la Mini Interro Linux (MIL) qui vous attend en début de prochain labo, voici un exemple de ce que vous auriez pu avoir comme questions.  
+    </parapraph>  
+    
     <parapraph>  
      1. (3 points)   
     </parapraph>  
