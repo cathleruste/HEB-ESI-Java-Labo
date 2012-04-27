@@ -76,19 +76,19 @@
 					<multipleChoice>
 						<question>
 							<parapraph>
-								Quelles sont les propositions qui vous paraissent correctes comme mot de passe ? <newLine/>(plusieurs réponses possibles)
+								Quelles sont les propositions qui vous paraissent correctes comme mot de passe ? <newLine/> (plusieurs réponses possibles)
 							</parapraph>
 						</question>
-						<answer feedback="&#10;1 - Trop simple (pour autant que votre copine s'appelle Nadia)&#10;" correct="no">
+						<answer feedback="Trop simple (pour autant que votre copine s'appelle Nadia)&#10;" correct="no">
 							nadia
 						</answer>
-						<answer feedback="&#10;2 - OK (mais choisissez en un autre, maintenant, tout le monde le connait)&#10;" correct="yes">
+						<answer feedback="OK (mais choisissez en un autre, maintenant, tout le monde le connait)&#10;" correct="yes">
 							M0nAm1eN@di@
 						</answer>
-						<answer feedback="&#10;3 - OK (mais choisissez en un autre, maintenant, tout le monde le connait)&#10;" correct="yes">
+						<answer feedback="OK (mais choisissez en un autre, maintenant, tout le monde le connait)&#10;" correct="yes">
 							m@C0p1ne
 						</answer>
-						<answer feedback="&#10;4 - Accepté par Windows mais probablement trop difficile à retenir (à moins que ce soit issu des initiales d'une phrase qui m'échappe...)&#10;" correct="no">
+						<answer feedback="Accepté par Windows mais probablement trop difficile à retenir (à moins que ce soit issu des initiales d'une phrase qui m'échappe...)&#10;" correct="no">
 							GH5).jg
 						</answer>
 					</multipleChoice>
