@@ -109,6 +109,12 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="none"/>
 			<xs:enumeration value="TD1"/>
+			<xs:enumeration value="TD2Prepa"/>
+			<xs:enumeration value="TD2"/>
+			<xs:enumeration value="TD3Prepa"/>
+			<xs:enumeration value="TD3"/>
+			<xs:enumeration value="TD3Prepa"/>
+			<xs:enumeration value="TD3"/>
 			<xs:enumeration value="website"/>
 		</xs:restriction>
 	</xs:simpleType>
