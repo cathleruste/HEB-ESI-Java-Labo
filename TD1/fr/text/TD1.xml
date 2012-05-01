@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" label="TD1" title="TD1 - Prise en main de l’environnement">
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="TD1" title="TD1 - Prise en main de l’environnement">
 	<entry>
 		<paragraph title="Bravo !" icon="icon_bravo">
 			Si vous lisez cette page c'est que vous avez pu vous connecter sur  le PC.<newLine />

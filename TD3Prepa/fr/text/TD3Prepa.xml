@@ -1,455 +1,416 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" label="TD3Prepa" title="TD3 - exercices préparatoires">
+<lesson xmlns="http://www.elml.ch" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="TD3Prepa" title="TD3 - exercices préparatoires">
 
-<metadata>
-    <organisation level="1ère année" module="Laboratoires Java">
-      <creationPosition><posNumber>3</posNumber></creationPosition>
-    </organisation>
-    <lessonInfo>
-      <lifecycle>
-        <version>2012 - 2013</version>
-        <contribute>
-          <person name="ARO"/>
-          <person name="BEJ"/>
-          <person name="CLR"/>
-          <person name="DNA"/>
-          <person name="HAL"/>
-          <person name="MBA"/>
-          <person name="MCD"/>
-          <person name="NPX"/>
-          <person name="PBT"/>
-        </contribute>
-      </lifecycle>
-    </lessonInfo>
-</metadata>
- 
- <clarify><paragraph title="Objectifs" icon="objective"/> 
-    Ces quelques questions ont pour but de vérifier que vous êtes prêts à  
-    venir faire le TD3 au laboratoire. Vous trouverez les réponses dans les premières leçons du cours et dans les 2 premiers tds.   
-    <newLine/>
-  </clarify>  
-  
-  <unit label="TD3Prepa" title="TD3 - exercices préparatoires">
-    <learningObject title="Rappel des tds précédents">
-      <act>
-        <selfCheck title="Les commandes linux" shuffle="yes">
-          <fillInBlanks>
-            <question>Quelle commande linux permet faire l'action suivante ?  </question>
-            <gapText> 
-            	<list listStyle="unordered">
-            	  <item>de se déconnecter          
-                  <gap answers="x">exit</gap> 
-                </item>  
-		            <item>de changer son mot de passe          
-                  <gap answers="x">passwd</gap> 
-                </item>  
-		            <item>de voir le contenu d'un dossier au format long          
-                  <gap answers="x">ls</gap> 
-                  <gap answers="x">-l</gap> 
-                </item>  
-		            <item>de créer un répertoire          
-                 <gap answers="x">mkdir</gap> 
-                </item>  
-		            <item>de déplacer un fichier          
-                 <gap answers="x">mv</gap> 
-                </item>  
-		            <item>de connaitre les groupes d'un utilisateur        
-                 <gap answers="x">groups</gap> 
-                </item>  
-		            <item>de modifier le groupe d'un fichier         
-                  <gap answers="x">chgrp</gap> 
-                </item>  
-	          	  <item>de modifier le propriétaire d'un fichier (par le super-utilisateur!)         
-                 <gap answers="x">chown</gap> 
-                </item>  
-		            <item>de retirer la permission de traverser le répertoire <formatted style="italic">tds</formatted> à tous       
-                 <gap answers="x">chmod</gap> 
-                 <gap answers="x">a-x</gap> 
-                 <gap answers="x">tds</gap> 
-                </item>  
-	           </list>
-            </gapText>
-            <solution></solution>
-          </fillInBlanks>
-        </selfCheck>
-        <newLine/>
-        
-        <selfCheck title="Les permissions" shuffle="yes">
-          <fillInBlanks>
-            <question>Remplissez les blancs avec la permission minimale correcte (r, w, x ou -),  </question>
-            <gapText> 
-              <list listStyle="ordered">
-                <item>pour que le répertoire <formatted style="italic">/home/gxxxxx/td3</formatted> permette à un autre étudiant d'y créer le fichier  
-	                <formatted style="italic">/home/gxxxxx/td3/fichier  
-                	</formatted><newLine/>
-                	<gap answers="x">-</gap> 
-                  <gap answers="x">-</gap> 
-                  <gap answers="x">-</gap> 
-                  <gap answers="x">-</gap> 
-                  <gap answers="x">w</gap> 
-                  <gap answers="x">-</gap> 
-                  <gap answers="x">-</gap> 
-                  <gap answers="x">-</gap> 
-                  <gap answers="x">-</gap> 
-                </item>  
-	              <item>pour que le répertoire <formatted style="italic">/home/gxxxxx/td3</formatted> permette à un autre étudiant d'accéder au fichier  
-	                <formatted style="italic">/home/gxxxxx/td3/fichier</formatted> dont il connait le chemin<newLine/>
-	                <gap answers="x">-</gap> 
-                  <gap answers="x">-</gap> 
-                  <gap answers="x">-</gap>  
-                  <gap answers="x">-</gap> 
-                  <gap answers="x">-</gap> 
-                  <gap answers="x">x</gap> 
-                  <gap answers="x">-</gap> 
-                  <gap answers="x">-</gap> 
-                  <gap answers="x">-</gap> 
-                </item>  
-              </list> 
-            </gapText>
-            <solution></solution>
-          </fillInBlanks>
-        </selfCheck>
-        <newLine/>
-        
-        <selfCheck title="Sélection multiple" shuffle="yes">
-          <multipleChoice>
-            <question>Parmi les propositions suivantes, lesquelles représentent des chemins absolus ?   </question>
-              <answer feedback="" correct="yes"> /usr/local/java/  </answer>
-              <answer feedback="" correct="yes"> /home/g31000/td3  </answer>
-              <answer feedback="" correct="no"> g31000/td3  </answer>
-              <answer feedback="" correct="yes"> ~/td3  </answer>
-            <answer feedback="" correct="no"> td3  </answer>
-            <answer feedback="" correct="yes"> ~g31000/td3  </answer>
-          </multipleChoice>
-        </selfCheck>
-      </act>
-    </learningObject>
+		<entry>
+			<paragraph/>
+		</entry>
+		
+		<unit label="TD3Ex" title="Exercices préparatoires">
+
+			<entry>
+				<paragraph>  
+					Afin d'arriver au laboratoire dans les meilleures conditions, 
+					il est bien de revoir la matière qui sera mise en pratique. 
+					C'est pourquoi nous vous fournissons quelques exercices préparatoires 
+					à faire à la maison pour vous permettre d'évaluer si vous êtes prêts.  
+				</paragraph>
+			</entry>
+
+			<learningObject title="Rappel des tds précédents">
+			<act>
+				<selfCheck title="Les commandes linux" shuffle="yes">
+					<fillInBlanks>
+						<question>Quelle commande linux permet faire l'action suivante ?</question>
+						<gapText> 
+							<list listStyle="unordered">
+								<item>de se déconnecter <gap answers="exit">exit</gap></item>  
+								<item>de changer son mot de passe <gap answers="passwd">passwd</gap></item>  
+								<item>de voir le contenu d'un dossier au format long
+									<gap answers="ls">ls</gap> <gap answers="-l">-l</gap> 
+								</item>  
+								<item>de créer un répertoire <gap answers="mkdir">mkdir</gap></item>  
+								<item>de déplacer un fichier <gap answers="mv">mv</gap></item>  
+								<item>de connaitre les groupes d'un utilisateur <gap answers="groups">groups</gap></item>  
+								<item>de modifier le groupe d'un fichier <gap answers="chgrp">chgrp</gap></item>  
+								<item>de modifier le propriétaire d'un fichier (par le super-utilisateur!)         
+									<gap answers="chown">chown</gap> 
+								</item>  
+								<item>de retirer la permission de traverser le répertoire 
+									<formatted style="italic">tds</formatted> à tous       
+									<gap answers="chmod">chmod</gap> 
+									<gap answers="a-x">a-x</gap> 
+									<gap answers="tds">tds</gap> 
+								</item>  
+							</list>
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
+
+				<selfCheck title="Les permissions" shuffle="yes">
+					<fillInBlanks>
+						<question>Remplissez les blancs avec la permission minimale correcte (r, w, x ou -),</question>
+						<gapText> 
+							<list listStyle="ordered">
+								<item>
+									pour que le répertoire <formatted style="italic">/home/gxxxxx/td3</formatted> 
+									permette à un autre étudiant d'y créer le fichier  
+									<formatted style="italic">/home/gxxxxx/td3/fichier</formatted>
+									<newLine/>
+									<gap answers="-">-</gap> 
+									<gap answers="-">-</gap> 
+									<gap answers="-">-</gap> 
+			                  <gap answers="-">-</gap> 
+			                  <gap answers="w">w</gap> 
+			                  <gap answers="-">-</gap> 
+			                  <gap answers="-">-</gap> 
+			                  <gap answers="-">-</gap> 
+			                  <gap answers="-">-</gap> 
+								</item>  
+								<item>
+									pour que le répertoire <formatted style="italic">/home/gxxxxx/td3</formatted> 
+									permette à un autre étudiant d'accéder au fichier  
+									<formatted style="italic">/home/gxxxxx/td3/fichier</formatted>
+									dont il connait le chemin
+									<newLine/>
+				               <gap answers="-">-</gap> 
+			                  <gap answers="-">-</gap> 
+			                  <gap answers="-">-</gap>  
+			                  <gap answers="-">-</gap> 
+			                  <gap answers="-">-</gap> 
+			                  <gap answers="x">x</gap> 
+			                  <gap answers="-">-</gap> 
+			                  <gap answers="-">-</gap> 
+			                  <gap answers="-">-</gap> 
+								</item>  
+							</list> 
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
+
+				<selfCheck title="Sélection multiple" shuffle="yes">
+					<multipleChoice>
+						<question>Parmi les propositions suivantes, lesquelles représentent des chemins absolus ?</question>
+						<answer feedback="" correct="yes"> /usr/local/java/  </answer>
+						<answer feedback="" correct="yes"> /home/g31000/td3  </answer>
+						<answer feedback="" correct="no"> g31000/td3  </answer>
+						<answer feedback="" correct="yes"> ~/td3  </answer>
+						<answer feedback="" correct="no"> td3  </answer>
+						<answer feedback="" correct="yes"> ~g31000/td3  </answer>
+					</multipleChoice>
+				</selfCheck>
+			</act>
+		</learningObject>
     
-    <learningObject title="Survol du langage">
-      <act>
-        <selfCheck title="Structure d'un programme" shuffle="yes">
-          <multipleChoice>
-            <question>Quelles structures générales d'un programme sont correctes (c-à-d qu'il doit compiler et respecter les conventions) parmi les suivantes ?  </question>
-              <answer feedback="  &#10;Java est sensible à la casse, il différencie donc majuscule et minuscule.  &#10;" correct="no">   
-               <paragraph>
-                  <formatted style='java'>
-                   public class exercice {<newLine/>
-                                    // Mettre ici les méthodes<newLine/>  
-                    }    
-                 </formatted>
-                </paragraph>
-              </answer>
-              <answer feedback="  &#10;les mots clé public et class doivent être en minuscule  &#10;" correct="no"> 
-                public CLASS Exercice {<newLine/>  
-                // Mettre ici les méthodes <newLine/>  
-                }    
-              </answer>
-              <answer feedback="  &#10;le nom de la classe commence par une majuscule   &#10;" correct="yes"> 
-                public class Exercice {<newLine/>  
-                // Mettre ici les méthodes <newLine/>  
-              }  
-            </answer>
-            <answer feedback="  &#10;le nom de la classe commence par une majuscule   &#10;" correct="yes"> 
-              public class MonExercice {<newLine/>  
-              // Mettre ici les méthodes <newLine/>  
-              }  
-            </answer>
-            <answer feedback="" correct="no"> 
-              PUBLIC CLASS EXERCICE {<newLine/>  
-              // Mettre ici les méthodes <newLine/>  
-              }  
-            </answer>
-          </multipleChoice>
-        </selfCheck>
-        <newLine/>
+		<learningObject title="Survol du langage">
+			<act>
+				<selfCheck title="Structure d'un programme" shuffle="no">
+					<multipleChoice>
+						<question>Quelles structures générales d'un programme sont correctes 
+							(c-à-d qu'il doit compiler et respecter les conventions) parmi les suivantes ?
+						</question>
+						<answer feedback="Java est sensible à la casse, il différencie donc majuscule et minuscule." correct="no">   
+	<formatted style='verbatim'>  public class exercice {
+        // Mettre ici les methodes  
+    }
+   </formatted>
+						</answer>
+						<answer feedback="les mots clé public et class doivent être en minuscule" correct="no"> 
+	<formatted style='verbatim'>  public CLASS Exercice {
+        // Mettre ici les methodes   
+    }</formatted>
+						</answer>
+						<answer feedback="le nom de la classe commence par une majuscule" correct="yes"> 
+	<formatted style='verbatim'>  public class Exercice {  
+        // Mettre ici les methodes  
+    } </formatted>
+						</answer>
+						<answer feedback="le nom de la classe commence par une majuscule" correct="yes"> 
+	<formatted style='verbatim'>  public class MonExercice {  
+        // Mettre ici les methodes  
+    }</formatted>
+						</answer>
+						<answer feedback="" correct="no"> 
+	<formatted style='verbatim'>  PUBLIC CLASS EXERCICE { 
+        // Mettre ici les methodes  
+    }</formatted>
+						</answer>
+					</multipleChoice>
+				</selfCheck>
         
-        <selfCheck title="Nom d'un programme" shuffle="yes">
-        <fillInBlanks>
-          <question>Quels sont les noms des fichiers dont la structure générale du programme est la suivante ?<newLine/></question>
-          <gapText> 
-            <parapraph>  
-              public class Exercice{  <newLine/>  
-              // Méthodes  <newLine/>  
-              }  
-            </parapraph>  
-            <parapraph>  
-              <gap answers="x">Exercice.java</gap> 
-              <newLine space="long"/>
-            </parapraph>  
-            <parapraph>  
-              public class SommeChiffres{  <newLine/>  
-              // Méthodes  <newLine/>  
-              }  
-            </parapraph>  
-            <parapraph>  
-              <gap answers="x">SommeChiffres.java</gap> 
-              <newLine space="long"/>
-            </parapraph>
-            <parapraph>  
-              public class sommechiffres{  <newLine/>  
-              // Méthodes  <newLine/>  
-              }  
-            </parapraph>  
-            <parapraph>   
-              <gap answers="x">sommechiffres.java</gap> 
-              <newLine space="long"/>
-            </parapraph>  
-          </gapText>
-          <solution>Le nom du fichier est le même nom que la classe avec l'extension ".java"
-            Attention, pour le dernier exemple, nous avons volontairement écrit le nom de la classe sans majuscule... par convention, ce n'est pas correct!!!
-          </solution>
-        </fillInBlanks>
-        </selfCheck>
-        <newLine/>
+				<selfCheck title="Nom d'un programme" shuffle="yes">
+					<fillInBlanks>
+						<question>Quels sont les noms des fichiers dont la structure générale du programme est la suivante ?</question>
+						<gapText> 
+							<formatted style='verbatim'>    public class Exercice {  
+        // Methodes    
+    }</formatted> 
+							<gap answers="Exercice.java">Exercice.java</gap> 
+							<formatted style='verbatim'>    public class SommeChiffres {
+        // Methodes   
+    }</formatted> 
+							<gap answers="SommeChiffres.java">SommeChiffres.java</gap> 
+							<formatted style='verbatim'>    public class sommechiffres {    
+        // Methodes   
+    }</formatted> 
+							<gap answers="sommechiffres.java">sommechiffres.java</gap> 
+						</gapText>
+						<solution>
+							Le nom du fichier est le même nom que la classe avec l'extension ".java"
+							Attention, pour le dernier exemple, nous avons volontairement écrit le nom de la classe sans majuscule... 
+							par convention, ce n'est pas correct!!!
+						</solution>
+					</fillInBlanks>
+				</selfCheck>
         
-        <selfCheck title="Compiler/exécuter" shuffle="yes">
-          <fillInBlanks>
-            <question>  </question>
-            <gapText> 
-              <parapraph>  
-                Quelle commande permet de compiler le fichier nommé SommeChiffres.java ?  
-                <newLine space="long"/>
-              </parapraph>  
-              <parapraph>  
-                <gap answers="x">javac</gap> 
-                <gap answers="x">SommeChiffre.java</gap> 
-                <newLine space="long"/>
-              </parapraph>  
-              <parapraph>  
-                Quelle commande permet d'exécuter ce programme ?  
-                <newLine space="long"/>
-              </parapraph>  
-              <parapraph>  
-                <gap answers="x">java</gap> 
-                <gap answers="x">SommeChiffre</gap> 
-              </parapraph>  
-            </gapText>
-            <solution></solution>
-          </fillInBlanks>
-        </selfCheck>
-        <newLine/>
+				<selfCheck title="Compiler/exécuter" shuffle="yes">
+					<fillInBlanks>
+						<question>  </question>
+						<gapText> 
+							Quelle commande permet de compiler le fichier nommé SommeChiffres.java ?  
+							<newLine/>
+							<gap answers="javac">javac</gap> 
+							<gap answers="SommeChiffre.java">SommeChiffre.java</gap> 
+							<newLine/>
+							Quelle commande permet d'exécuter ce programme ?  
+							<newLine/>
+							<gap answers="java">java</gap> 
+							<gap answers="SommeChiffre">SommeChiffre</gap> 
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
         
-        <selfCheck title="Méthode principale" shuffle="yes">
-          <fillInBlanks>
-           <question>Comment s'écrit l'entête de la méthode principale (1 mot par case) ?<newLine/></question>
-            <gapText> 
-             <gap answers="x">public</gap> 
-             <gap answers="x">static</gap> 
-              <gap answers="x">void</gap> 
-              <gap answers="x">main</gap> 
-             (            
-              <gap answers="x">String</gap> 
-              <gap answers="x">[ ]</gap> 
-              <gap answers="x">args</gap> 
-              )   
-            </gapText>
-            <solution></solution>
-         </fillInBlanks>
-       </selfCheck>
-       <newLine/>
+				<selfCheck title="Méthode principale" shuffle="yes">
+					<fillInBlanks>
+						<question>Comment s'écrit l'entête de la méthode principale (1 mot par case) ?<newLine/></question>
+						<gapText> 
+							<gap answers="public">public</gap> 
+							<gap answers="static">static</gap> 
+							<gap answers="void">void</gap> 
+							<gap answers="main">main</gap> 
+							(            
+							<gap answers="String">String</gap> 
+							<gap answers="[]">[]</gap> 
+							<gap answers="args">args</gap> 
+							)   
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
        
-       <selfCheck title="Types Java" shuffle="yes">
-          <fillInBlanks>
-            <question>Donnez l'équivalent java du type logique suivant  </question>
-            <gapText> 
-              entier    
-             <gap answers="x">int</gap> <newLine/>
-              réel    
-              <gap answers="x">double</gap> <newLine/>
-              chaine    
-              <gap answers="x">String</gap> <newLine/>
-              caractère    
-              <gap answers="x">char</gap> <newLine/>
-              booléen    
-              <gap answers="x">boolean</gap> <newLine/>
-            </gapText>
-            <solution></solution>
-          </fillInBlanks>
-        </selfCheck>
-        <newLine/>
+				<selfCheck title="Types Java" shuffle="yes">
+					<fillInBlanks>
+						<question>Donnez l'équivalent java du type logique suivant  </question>
+						<gapText> 
+							entier 		<gap answers="int">int</gap><newLine/>
+							réel   		<gap answers="double">double</gap> <newLine/>
+							chaine 		<gap answers="String">String</gap> <newLine/>
+							caractère	<gap answers="char">char</gap> <newLine/>
+							booléen     <gap answers="boolean">boolean</gap> <newLine/>
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
         
-        <selfCheck title="Opérateurs Java" shuffle="yes">
-          <fillInBlanks>
-            <question>Donnez l'équivalent Java de l'opérateur logique suivant  </question>
-            <gapText> 
-              *    
-             <gap answers="x">*</gap> <newLine/>
-              /     
-             <gap answers="x">/</gap> 
-             entre 2 réels      <newLine/>
-             DIV    
-             <gap answers="x">/</gap> 
-             entre 2 entiers       <newLine/>
-             MOD    
-             <gap answers="x">%</gap> <newLine/>
-            </gapText>
-           <solution></solution>
-         </fillInBlanks>
-        </selfCheck>
-        <newLine/>
+				<selfCheck title="Opérateurs Java" shuffle="yes">
+					<fillInBlanks>
+						<question>Donnez l'équivalent Java de l'opérateur logique suivant  </question>
+						<gapText> 
+							*  <gap answers="*">*</gap> <newLine/>
+							/  <gap answers="/">/</gap> entre 2 réels <newLine/>
+							DIV  <gap answers="/">/</gap> entre 2 entiers <newLine/>
+							MOD  <gap answers="%">%</gap> <newLine/>
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
         
-        <selfCheck title="Sélection multiple" shuffle="no">
-          <multipleChoice>
-            <question>Quels morceaux de code, parmi les suivants, NE sont PAS corrects ? Sur la version papier, expliquez pourquoi ils ne le sont pas.<newLine/></question>
-            <answer feedback="  &#10;On a besoin de la ligne d'import &#10;" correct="yes"> 
-              <parapraph>  
-                public class Exercice {  <newLine/>
-                  public static void main(String[] args){  <newLine/>
-                    Scanner clavier = new Scanner(System.in);  <newLine/>
-                    int nombre1;  <newLine/>
-                    nombre1 = clavier.nextInt ();  <newLine/>
-                  }  <newLine/>
-                }  
-              </parapraph>  
-            </answer>          
+				<selfCheck title="Sélection multiple" shuffle="no">
+					<multipleChoice>
+						<question>
+							Quels morceaux de code, parmi les suivants, NE sont PAS corrects ? 
+							Sur la version papier, expliquez pourquoi ils ne le sont pas
+						</question>
+						<answer feedback="On a besoin de la ligne d'import" correct="yes"> 
+							<formatted style='verbatim'>  public class Exercice { 
+        public static void main(String[] args) { 
+            Scanner clavier = new Scanner(System.in); 
+            int nombre1; 
+            nombre1 = clavier.nextInt ();
+        } 
+    }</formatted> 
+						</answer>          
             
-            <answer feedback="  &#10;-&gt;En effet, ce code est tout à fait correct &#10;" correct="no"> 
-              <parapraph>  
-                import java.util.Scanner;
-                <newLine/><newLine/>
-                public class Exercice{  <newLine/>
-                  public static void main(String[] args){<newLine/>
-                    Scanner clavier = new Scanner(System.in);  <newLine/>
-                    int nombre1;  <newLine/>
-                    nombre1 = clavier.nextInt ();  <newLine/>
-                  }  <newLine/>
-                }
-              </parapraph>  
-            </answer>
+						<answer feedback="En effet, ce code est tout à fait correct" correct="no"> 
+							<formatted style='verbatim'>  import java.util.Scanner;
+    public class Exercice{  
+        public static void main(String[] args) {
+            Scanner clavier = new Scanner(System.in);
+            int nombre1;
+            nombre1 = clavier.nextInt ();
+        }  
+    }</formatted>  
+						</answer>
             
-            <answer feedback="  &#10;En effet, ce code est tout à fait correct &#10;" correct="no"> 
-              <parapraph>  
-                import java.util.Scanner;
-                <newLine/><newLine/>
-                public class Exercice{  <newLine/>
-                  public static void main(String[] args){<newLine/>
-                    Scanner clavier = new Scanner(System.in);  <newLine/>
-                    double nombre1;  <newLine/>
-                    nombre1 = clavier.nextDouble ();  <newLine/>
-                  }  <newLine/>
-                }  
-              </parapraph>
-            </answer>
+						<answer feedback="En effet, ce code est tout à fait correct" correct="no"> 
+							<formatted style='verbatim'>  import java.util.Scanner;
+    public class Exercice {
+        public static void main(String[] args ) {
+            Scanner clavier = new Scanner(System.in); 
+            double nombre1;  
+            nombre1 = clavier.nextDouble ();  
+        }
+    }</formatted>  
+						</answer>
             
-            <answer feedback="  &#10;-&gt;On a besoin de la déclaration et de la création d'un objet Scanner   &#10;" correct="yes"> 
-              <parapraph>  
-              <formatted style="java">
-                import java.util.Scanner;
-                <newLine/><newLine/>
-                public class Exercice{  <newLine/>
-                  public static void main(String[] args){<newLine/>
-                    int nombre1;  <newLine/>
-                    nombre1 = clavier.nextInt ();  <newLine/>
-                  }  <newLine/>
-                }
-                </formatted>
-              </parapraph>  
-            </answer>
-          </multipleChoice>
-        </selfCheck>
-        <newLine/>
+						<answer feedback="On a besoin de la déclaration et de la création d'un objet Scanner" correct="yes"> 
+							<formatted style='verbatim'>  import java.util.Scanner;
+    public class Exercice { 
+        public static void main(String[] args) {
+            int nombre1;  
+            nombre1 = clavier.nextInt (); 
+        }
+    }</formatted>  
+						</answer>
+					</multipleChoice>
+				</selfCheck>
         
-        <selfCheck title="Méthodes de Scanner" shuffle="yes">
-          <fillInBlanks>
-            <question>Complétez les méthodes suivantes afin de permettre une lecture au clavier adéquate  </question>
-            <gapText> 
-              <parapraph>  
-                import java.util.Scanner;  <newLine space="long"/>
-                public class ExerciceLecture{  <newLine/>
-                  public static void main (String[] args){  <newLine/>
-                    Scanner clavier = new Scanner(System.in);  <newLine/>
-                    int nbEntier = clavier.<gap answers="x">nextInt()</gap>;<newLine/>
-                    double nbRéel = clavier. <gap answers="x">nextDouble()</gap>;<newLine/>
-                    boolean ok = clavier.<gap answers="x">nextBoolean()</gap>;<newLine/>
-                    String chaine = clavier.<gap answers="x">next()</gap>; // Si on lit un mot <newLine/>
-                    String chaine = clavier.<gap answers="x">nextLine()</gap>; // Si on lit une ligne contenant des espaces <newLine/>
-                    char caractère = clavier.<gap answers="x">next.charAt()</gap>;<newLine/>
-                  }  <newLine/>
-                }   
-              </parapraph>   
-            </gapText>
-            <solution></solution>
-          </fillInBlanks>
-        </selfCheck>
-        <newLine/>
+				<selfCheck title="Méthodes de Scanner" shuffle="yes">
+					<fillInBlanks>
+						<question>Complétez les méthodes suivantes afin de permettre une lecture au clavier adéquate</question>
+						<gapText>
+							<formatted style='verbatim'>    import java.util.Scanner;
+    public class ExerciceLecture {
+        public static void main (String[] args) {  
+            Scanner clavier = new Scanner(System.in);  
+            int nbEntier = clavier. (1) ;
+            double nbReel = clavier. (2) ;
+            boolean ok = clavier. (3) ;
+            String chaine = clavier. (4) ; // Si on lit un mot
+            String chaine = clavier. (5) ; // Si on lit une ligne contenant des espaces 
+            char caractere = clavier. (6) ;
+        }
+    }</formatted>
+    (1) <gap answers="">nextInt()</gap>     (2) <gap answers="">nextDouble()</gap> 
+    (3) <gap answers="">nextBoolean()</gap> (4) <gap answers="">next()</gap> 
+    (5) <gap answers="">nextLine()</gap>    (6) <gap answers="">next.charAt()</gap>
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
         
-        <selfCheck title="Conventions de nom" shuffle="yes">
-          <multipleChoice>
-            <question>Cochez les noms qui respectent les conventions (sachant qu'on travaille dans le cadre de la tva)<newLine/></question>
-            <answer feedback="  &#10;Pour une variable, le nom doit être tout en minuscules sauf les débuts de noms composés qui sont en majuscule.  &#10;" correct="no"> 
-              double Taxe;  
-            </answer>
-            <answer feedback="  &#10;Pour une constante, le nom doit être tout en majuscules et utiliser &quot;_&quot; pour séparer les mot.  &#10;" correct="yes"> 
-              final double TVA;
-            </answer>
-            <answer feedback="  &#10;Dans tous les cas : le nom doit être explicite (sauf abréviations courantes). Ici, taxeValeurAjoutée est accepté quoique un peu long et tva est tellement courant...   &#10;" correct="yes"> 
-              double taxeValeurAjoutée;  
-            </answer>
-            <answer feedback="Pour une constante, le nom doit être tout en majuscules et utiliser &quot;_&quot; pour séparer les mot." correct="no"> 
-              final double TAUXTVA;  
-            </answer>
-            <answer feedback="Pour une constante, le nom doit être tout en majuscules et utiliser &quot;_&quot; pour séparer les mot." correct="yes"> 
-              final double TAUX_TVA  
-            </answer>
-            <answer feedback="Dans tous les cas : le nom doit être explicite (sauf abréviations courantes)." correct="no"> 
-              double t;  
-            </answer>
-          </multipleChoice>
-        </selfCheck>
-        <newLine/>
+				<selfCheck title="Conventions de nom" shuffle="yes">
+					<multipleChoice>
+						<question>Cochez les noms qui respectent les conventions (sachant qu'on travaille dans le cadre de la tva)</question>
+						<answer feedback="Pour une variable, le nom doit être tout en minuscules sauf les débuts de noms composés qui sont en majuscule." correct="no"> 
+							<formatted style="code">double Taxe;</formatted>  
+						</answer>
+		            <answer feedback="Pour une constante, le nom doit être tout en majuscules et utiliser &quot;_&quot; pour séparer les mot." correct="yes"> 
+		               <formatted style="code">final double TVA;</formatted>
+		            </answer>
+		            <answer feedback="Dans tous les cas : le nom doit être explicite (sauf abréviations courantes). Ici, taxeValeurAjoutée est accepté quoique un peu long et tva est tellement courant..." correct="yes"> 
+		               <formatted style="code">double taxeValeurAjoutée;</formatted>  
+		            </answer>
+		            <answer feedback="Pour une constante, le nom doit être tout en majuscules et utiliser &quot;_&quot; pour séparer les mot." correct="no"> 
+		               <formatted style="code">final double TAUXTVA;</formatted> 
+		            </answer>
+		            <answer feedback="Pour une constante, le nom doit être tout en majuscules et utiliser &quot;_&quot; pour séparer les mot." correct="yes"> 
+		               <formatted style="code">final double TAUX_TVA</formatted> 
+		            </answer>
+		            <answer feedback="Dans tous les cas : le nom doit être explicite (sauf abréviations courantes)." correct="no"> 
+		               <formatted style="code">double t;</formatted>
+		            </answer>
+					</multipleChoice>
+				</selfCheck>
         
-       <selfCheck title="final" shuffle="yes" >
-          <!--popup title="Cliquez pour voir l'image"><multimedia src="../image/icon_question.gif" type="jpeg"/></popup>final<newLine/-->  
-          <multipleChoice>
-            <question>soit le code : <newLine/>  
-              <newLine/>  
-              public class Final {   <newLine/>  
-                public static void main (String[] args) {  <newLine/>  
-                  final double tva = 21.5;  <newLine/>  
-                  System.out.println ((1000/100)*tva);<newLine/>  
-                  tva = 19;<newLine/>  
-                }<newLine/>  
-              }<newLine/>  
-              
-              <parapraph>  
-              qui, à la compilation, génère le message d'erreur   <newLine/>  
-              </parapraph>  
-              Final.java:5::  <newLine/>  
-              cannot assign a value to final variable tva  <newLine/>
-              ce message veut dire que<newLine/>
-            </question>
-            <answer feedback="  &#10;Non, ce  n'est pas ça!  &#10;" correct="no"> 
-              le nom tva ne respecte pas la convention de nom  <newLine/>
-            </answer>
-            <answer feedback="  &#10;Non, ce  n'est pas ça!  &#10;" correct="no"> 
-              final n'est pas un mot reconnu  <newLine/>
-            </answer>
-            <answer feedback="  &#10;En effet, une variable déclarée final est constante et ne peut être affectée qu'une seule fois!  &#10;" correct="yes"> 
-              on ne peut assigner une deuxième fois une valeur à une variable final  
-            </answer>
-            <answer feedback="Non, ce  n'est pas ça!  " correct="no"> 
-              on ne peut assigner une valeur entière à tva  
-            </answer>
-          </multipleChoice>
-        </selfCheck>  
-      </act> 
-    </learningObject>
+				<paragraph title="final"/>
+				<paragraph>
+					Soit le code :  <formatted style="verbatim">    public class Final {  
+        public static void main (String[] args) {
+            final double tva = 21.5; 
+            System.out.println ((1000/100)*tva);  
+            tva = 19;
+        }  
+    }</formatted>
+					qui, à la compilation, génère le message d'erreur <formatted style="verbatim">    Final.java:5::  
+    cannot assign a value to final variable tva</formatted>
+				</paragraph>
+				<selfCheck title="" shuffle="yes" >
+					<multipleChoice>
+						<question>ce message veut dire que</question>
+						<answer feedback="Non, ce  n'est pas ça !" correct="no">le nom tva ne respecte pas la convention de nom</answer>
+						<answer feedback="Non, ce  n'est pas ça !" correct="no">final n'est pas un mot reconnu</answer>
+						<answer feedback="En effet, une variable déclarée final est constante et ne peut être affectée qu'une seule fois !" correct="yes">on ne peut assigner une deuxième fois une valeur à une variable final</answer>
+						<answer feedback="Non, ce  n'est pas ça !" correct="no">on ne peut assigner une valeur entière à tva </answer>
+					</multipleChoice>
+				</selfCheck>  
+			</act> 
+		</learningObject>
     
-    <learningObject title="À lire"> 
-      <parapraph>  
-        Assurez-vous de venir au laboratoire avec vos solutions des exercices 4, 8, 10, 11 et 12 du chapitre 3 "Algorithmes séquentiels" de votre cours de logique.  
-      </parapraph>   
-      <clarify><paragraph title="Théorie" icon="icon_reading"/> 
-        Avant de venir au prochain labo, lisez attentivement le point 20 du guide visuel.  
-        <newLine/>
-      </clarify>
-    </learningObject>
+		<learningObject title="À lire"> 
+			<clarify>
+				<paragraph>  
+					Assurez-vous de venir au laboratoire avec vos solutions des exercices 4, 8, 10, 11 et 12 
+					du chapitre 3 "Algorithmes séquentiels" de votre cours de logique.  
+				</paragraph>   
+				<paragraph title="Théorie" icon="icon_reading"> 
+					Avant de venir au prochain labo, lisez attentivement le point 20 du guide visuel.  
+				</paragraph>   
+			</clarify>
+		</learningObject>
     
-    <learningObject title="Bravo">
-      <clarify><paragraph title="Bravo" icon="icon_bravo"/> 
-        Si vous avez réussi à répondre correctement aux questions précédentes, c'est que vous êtes prêts à venir au laboratoire dans les meilleures conditions!  
-        <newLine/>
-      </clarify>
-    </learningObject>
-  </unit>
+		<learningObject title="Bravo">
+			<clarify>
+				<paragraph title="Bravo" icon="icon_bravo"> 
+					Si vous avez réussi à répondre correctement aux questions précédentes, 
+					c'est que vous êtes prêts à venir au laboratoire dans les meilleures conditions!  
+				</paragraph>   
+			</clarify>
+		</learningObject>
+	</unit>
+	
+   	<metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition>
+				<posNumber>3</posNumber>
+			</creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+      <technical>
+         <technicalRequirement>
+				<type>Browser</type>
+            <name>any</name>
+            <minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+      </technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2012 - 2013</version>
+				<contribute>
+					<person name="ARO" />
+					<person name="BEJ" />
+					<person name="CLR" />
+					<person name="DNA" />
+					<person name="HAL" />
+					<person name="MBA" />
+					<person name="MCD" />
+					<person name="NPX" />
+					<person name="PBT" />
+				</contribute>
+			</lifecycle>
+         <educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+      <rights>
+			<cost>no</cost>
+         <copyright>CC-BY</copyright>
+         <copyrightURL>http://creativecommons.org/licenses/by/3.0/</copyrightURL>
+      </rights>
+	</metadata>
 </lesson>

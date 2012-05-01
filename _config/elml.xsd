@@ -422,6 +422,7 @@ then uncomment and change accordingly the following XMLSchema code lines and ref
 					<xs:enumeration value="superscript"/>
 					<xs:enumeration value="code"/>
 					<xs:enumeration value="input"/>
+					<xs:enumeration value="verbatim"/>
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>

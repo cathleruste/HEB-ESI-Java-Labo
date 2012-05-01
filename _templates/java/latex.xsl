@@ -271,6 +271,16 @@
         <xsl:text>}</xsl:text>
     </xsl:template>
 
+    <xsl:template match="elml:formatted[@style='verbatim']">
+        <xsl:text> \begin{verbatim}</xsl:text>
+        <xsl:apply-templates/>
+        <xsl:text>\end{verbatim}</xsl:text>
+    </xsl:template>
+
+    <xsl:template match="elml:formatted[@style='verb']">
+        <xsl:text> \verb|</xsl:text><xsl:apply-templates/><xsl:text>|</xsl:text>
+    </xsl:template>
+
     <!-- Pas de newLine dans une <question> -->    
     <xsl:template match="//elml:question//elml:newLine"/>
 

@@ -215,11 +215,12 @@
               <xsl:apply-templates/>
             </span>
           </xsl:when>
-          <xsl:when test="@style='java'">
+          <xsl:when test="@style='verbatim'">
             <div class="input">
               <pre><xsl:apply-templates/></pre>
             </div>
           </xsl:when>
+          <xsl:when test="@style='verb'"><span><pre><xsl:apply-templates/></pre></span></xsl:when>
           <xsl:otherwise>
             <xsl:apply-templates/>
           </xsl:otherwise>
@@ -313,9 +314,7 @@
             </xsl:choose>
         </xsl:param>
         <input type="text" value="" class="itemText" id="{$selfCheckLabel}_{generate-id(.)}" size="{$gap_stringlength}"/>
-                <xsl:text>
-                </xsl:text>
-        <span class="gapText">
+                <xsl:text> </xsl:text><span class="gapText">
             <xsl:value-of select="."/>
             <xsl:if test="@answers!=''">
                 <xsl:text>,</xsl:text>

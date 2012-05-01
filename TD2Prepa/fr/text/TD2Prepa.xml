@@ -4,7 +4,9 @@
 				xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
 				label="TD2Prepa" title="TD2 - Exercices préparatoires">
 		
-		<entry/>
+		<entry>
+			<paragraph/>
+		</entry>
 		<unit label="TD2Ex" title="Exercices préparatoires">
 
 			<entry>
@@ -260,8 +262,8 @@
       <technical>
          <technicalRequirement>
 				<type>Browser</type>
-            <name>Firefox</name>
-            <minimumVersion>1.0</minimumVersion>
+            <name>any</name>
+            <minimumVersion>unknown</minimumVersion>
 			</technicalRequirement>
       </technical>
 		<lessonInfo>
@@ -284,8 +286,8 @@
 		</lessonInfo>
       <rights>
 			<cost>no</cost>
-         <copyright></copyright>
-         <copyrightURL></copyrightURL>
+         <copyright>CC-BY</copyright>
+         <copyrightURL>http://creativecommons.org/licenses/by/3.0/</copyrightURL>
       </rights>
 	</metadata>
 

@@ -29,7 +29,7 @@
   <!--These parameters are only used for the print version -->
   <print>
     <!--Links are also clickable in the PDF version. Should additionally the link URI be written in brackets after the link text? Choose "yes" or "no" -->
-    <display_links>no</display_links>
+    <display_links>yes</display_links>
     <!--If you use the latest FOP version enter the value "0.9", otherwise use "0.2" -->
     <fop_version>0.2</fop_version>
     <!--The height of your page (Eg. "29.7cm" for A4) -->

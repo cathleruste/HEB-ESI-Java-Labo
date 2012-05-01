@@ -72,6 +72,7 @@
 					<xs:enumeration value="icon_question"/>
 					<xs:enumeration value="icon_reading"/>
 					<xs:enumeration value="icon_web_resource"/>
+					<xs:enumeration value="icon_casestudy"/>				
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
@@ -130,7 +131,7 @@
 	<!-- Copyright Type -->
 	<xs:simpleType name="CopyrightType">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="eLML 2006"/>
+			<xs:enumeration value="CC-BY"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- ======================== Default types and attributes - do not change ======================== -->
