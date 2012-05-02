@@ -51,7 +51,9 @@ Il n'y a pas de makefile pour l'instant.
 
 *** Pour des modifications dans un TD existant
 
-Modifiez le TD et répercutez les modifications sur GitHub
+Prenez la dernière version, modifiez le TD et répercutez les modifications sur GitHub
+  > git pull  // Pour s'assurer d'avoir la dernière version
+  > vi ...
   > commit -a -m "explication des modifs"
   > git push
 
@@ -61,11 +63,12 @@ On ne part pas de rien. Un script existe pour convertir les anciens Tds
 au format eXeLearning en documents eLML. Cette conversion n'est tout de 
 fois pas parfaite et nécessite des ajustements.
 
-1) Créer un nouveau dossier TD*
-2) Y placer le document TD*.xml dans le sous-dossier fr/text
-3) Mettre les images dans le sous-dossier fr/image
-4) Ajuster le document
-5) commit et push
+- S'assurer d'avoir la dernière version
+- Créer un nouveau dossier TD*
+- Y placer le document TD*.xml dans le sous-dossier fr/text
+- Mettre les images dans le sous-dossier fr/image
+- Ajuster le document
+- commit et push
 
 *** Problèmes avec la syntaxe eLML ?
 
