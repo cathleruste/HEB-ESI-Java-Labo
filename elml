@@ -5,8 +5,9 @@ STYLE=java
 function usage() {
 	echo "usage:"
 	echo "    elml valider leçon - pour vérifier la syntaxe du fichier de la leçon"
-	echo "    elml pdf leçon - pour le PDF de la leçon"
-	echo "    elml scorm leçon - pour le scorm de la leçon"
+	echo "    elml pdf leçon     - pour le PDF de la leçon"
+	echo "    elml scorm leçon   - pour le scorm de la leçon"
+	echo "    elml all leçon     - pour le PDF + scorm de la leçon"
 }
 
 function valider() {
@@ -36,6 +37,7 @@ case $1 in
     valider ) valider ;;
     pdf ) pdf ;;
     scorm ) scorm ;;
+    all ) scorm; pdf ;;
     * ) usage ;;
 esac
 
