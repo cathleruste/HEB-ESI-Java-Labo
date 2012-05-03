@@ -47,6 +47,7 @@
 			La section suivante vous donne quelques conseils pour bien travailler.
 		</entry>
 		<learningObject title="Consignes">
+			<clarify>
 			<list listStyle="unordered">
 				<item>
 					Faites bien tous les exercices proposés; 
@@ -76,6 +77,7 @@
 					Ils vous seront utiles tout au long des tds.
 				</item>
 			</list>
+			</clarify>
 		</learningObject>
 	</unit>
 		
@@ -828,7 +830,7 @@
  	<metadata>
 		<organisation level="1ère année" module="Laboratoires Java">
 			<creationPosition>
-				<posNumber>2</posNumber>
+				<posNumber>1</posNumber>
 			</creationPosition>
 		</organisation>
 		<prerequisites><preReqItem label="none"/></prerequisites>
