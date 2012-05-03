@@ -9,10 +9,12 @@ code   /* Adjust the font size to your needs. */ { font-family: monospace;}
 tt { text-align: left }
 dt   /* Used for representing the glossary term (not the explanation!). */  { font-weight: bold; margin-top: 1em; clear: both }
 sub, sup   /* Used in the eLML element "formatted" */ { font-size: 0.6em }
+p.citation { margin-left:50%; text-align: right; font-style: italic;
+	background-color: #EEEEEE; border: 0.1em dotted gray; padding-right: 2em; }
 .background /* Define the background color of your layout  here. */  { background-color: #e5eff1 }
 .background_nav /* Define the background color of your navigation  here (if different from the main background color! Else just set this to the same value as .bacground). */  { background-color: #e8f6f8 ; text-align: left}
 .popupTitle   /* Defines the title of a eLML popup box. This is the part that you click on to open/close the box. */ { color: #efb77f; font-size: 1em; font-weight: bold; cursor: pointer; }
-.box, .popup     /* The eLML box or popup element. */ { background-color: #e0e0e0; margin: 1em 3em; padding: 0.5em 1em; border: solid 2px black  }
+.box, .popup  /* The eLML box or popup element. */ { background-color: #e0e0e0; margin: 1em 3em; padding: 0.5em 1em; border: solid 2px black  }
 .tutor      /* Paragraphs or parts only visible to tutors will be displayed like this. */ { color: red; font-weight: bold; background-color: yellow }
 .icon  /* The icon is used in paragraph types like table, list, box etc. where the remark attribute is set. */ { margin: 0em 0.5em 0.5em 0; float:left; padding-bottom: 0em; }
 .columnMiddle, .columnRight { padding-left: 1em; }

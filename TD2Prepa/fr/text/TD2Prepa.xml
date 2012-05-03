@@ -5,17 +5,25 @@
 				label="TD2Prepa" title="TD2 - Exercices préparatoires">
 		
 		<entry>
-			<paragraph/>
+			<paragraph>  
+				Afin d'arriver au laboratoire dans les meilleures conditions, 
+				il est bien de revoir la matière qui sera mise en pratique. 
+				C'est pourquoi nous vous fournissons quelques exercices préparatoires 
+				à faire à la maison pour vous permettre d'évaluer si vous êtes prêts.  
+			</paragraph>
 		</entry>
-		<unit label="TD2Ex" title="Exercices préparatoires">
+		
+		<unit label="TD2Ex" title="Exercices préparatoires au TD2">
 
 			<entry>
-				<paragraph>  
-					Afin d'arriver au laboratoire dans les meilleures conditions, 
-					il est bien de revoir la matière qui sera mise en pratique. 
-					C'est pourquoi nous vous fournissons quelques exercices préparatoires 
-					à faire à la maison pour vous permettre d'évaluer si vous êtes prêts.  
+				<paragraph>
+					Ces exercices préparatoires sont composés de 3 parties :
 				</paragraph>
+				<list listStyle="unordered">
+					<item>Quelques questions pour vérifier ce que vous avez retenu du TD1;</item>
+					<item>Les documents théoriques à lire avant d'aller au laboratoire;</item>
+					<item>Une simulation de la mini interrogation qui vous attend en début de laboratoire.</item>
+				</list>
 			</entry>
 
 			<learningObject title="Révision du TD1">
@@ -133,34 +141,34 @@
     
 					<selfCheck title="Les commandes vi" shuffle="yes">
 						<fillInBlanks>
-							<question>Quelle commande vi permet faire l'action suivante ?</question>
-							<gapText> 
+							<question></question>
+							<gapText>
+								<paragraph>Quelle commande vi permet faire l'action suivante ?</paragraph>
 								<list listStyle="unordered">
 									<item>de passer du mode commande au mode insertion <gap answers="i">i</gap></item>  
 									<item>de passer du mode commande au mode exécution <gap answers=":">:</gap></item>  
-									<item>de revenir au mode commande <gap answers="esc,ESC">esc</gap></item>  
-									<item>En mode commande :   
-										<list listStyle="unordered">
-											<item>d'effacer un caractère <gap answers="x">x</gap></item>  
-											<item>de couper la ligne sous le curseur <gap answers="dd">dd</gap></item>  
-											<item>de copier la ligne sous le curseur <gap answers="yy">yy</gap></item>  
-											<item>de coller la ligne précédemment copiée ou collée <gap answers="p">p</gap></item>  
-										</list>  
-									</item>
-									<item>
-										En mode exécution (n'oubliez pas de commencer par la commande 
-										qui permet de passer au mode exécution) :  
-										<list listStyle="unordered">
-											<item>de sauver sans quitter l'éditeur                  
-												<gap answers=":w">:w</gap> 
-											</item>  
-											<item>de sauver le fichier sous le nom "exercice"                 
-												<gap answers=":w exercice">:w exercice</gap> 
-											</item>  
-											<item>de quitter sans sauver <gap answers=":q!">:q!</gap></item>  
-											<item>de quitter en sauvant  <gap answers=":x">:x</gap></item>  
-										</list>
-									</item> 
+									<item>de revenir au mode commande <gap answers="esc,ESC">esc</gap></item>
+								</list>
+								<paragraph>En mode commande, comment :</paragraph>								  
+								<list listStyle="unordered">
+									<item>effacer un caractère <gap answers="x">x</gap></item>  
+									<item>couper la ligne sous le curseur <gap answers="dd">dd</gap></item>  
+									<item>copier la ligne sous le curseur <gap answers="yy">yy</gap></item>  
+									<item>coller la ligne précédemment copiée ou collée <gap answers="p">p</gap></item>  
+								</list>  
+								<paragraph>En mode exécution comment
+										(n'oubliez pas de commencer par la commande 
+										qui permet de passer au mode exécution) :
+								</paragraph>								  
+								<list listStyle="unordered">
+									<item>sauver sans quitter l'éditeur                  
+										<gap answers=":w">:w</gap> 
+									</item>  
+									<item>sauver le fichier sous le nom "exercice"                 
+										<gap answers=":w exercice">:w exercice</gap> 
+									</item>  
+									<item>quitter sans sauver <gap answers=":q!">:q!</gap></item>  
+									<item>quitter en sauvant  <gap answers=":x">:x</gap></item>  
 								</list>
 							</gapText>
 							<solution/>
@@ -193,7 +201,7 @@
 			<learningObject title="Exemple de MIL">
 				<clarify>
 					<paragraph>  
-						Afin de vous préparer au mieux à la Mini Interro Linux (MIL)
+						Afin de vous préparer au mieux à la Mini Interro de Laboratoire (MIL)
 						qui vous attend en début de prochain labo,
 						voici un exemple de ce que vous auriez pu avoir comme questions.  
 					</paragraph>  

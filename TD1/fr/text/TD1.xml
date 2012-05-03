@@ -2,45 +2,95 @@
 <lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
 	label="TD1" title="TD1 - Prise en main de l’environnement">
+	
 	<entry>
-		<paragraph title="Bravo !" icon="icon_bravo">
-			Si vous lisez cette page c'est que vous avez pu vous connecter sur  le PC.<newLine />
-			Vous allez à présent voir comment l'utiliser correctement  pour les laboratoires Java.
-		</paragraph>
-		<paragraph title="Consignes" icon="icon_key_points">
-			Ces pages vont vous guider dans votre apprentissage de Java et Linux.
-		</paragraph>
-		<list listStyle="unordered">
-			<item>
-				Faites bien tous les exercices proposés;
-			</item>
-			<item>
-				N'hésitez pas à <formatted style="bold">montrer votre travail</formatted> à votre professeur;
-			</item>
-			<item>
-				N'hésitez pas à <formatted style="bold">poser des questions</formatted>
-				si vous n'avez pas bien compris ce qu'on vous demande;
-			</item>
-			<item>
-				<formatted style="bold">Prenez des notes</formatted> !
-				Ce que vous allez apprendre aujourd'hui vous servira les semaines prochaines 
-				mais vous en aurez oublié une grande partie si vous ne notez rien. 
-				Le plus pratique est probablement d'annoter la version <formatted style="bold">papier</formatted>.
-			</item>
-			<item>
-				Ayez toujours avec vous le <formatted style="bold">guide visuel</formatted>
-				et l'<formatted style="bold">aide-mémoire</formatted>. 
-				Ils vous seront utiles tout au long des tds.
-			</item>
-		</list>
+		<box visible="online" title="Bravo !">
+			<paragraph>
+				Si vous lisez cette page c'est que vous avez pu vous connecter sur le PC
+				et trouver <formatted style="italic">poÉSI</formatted>.
+			</paragraph>				
+			<paragraph>
+				Vous pouvez continuer le laboratoire en suivant cette version en ligne
+				ou en retournant à la version papier.
+			</paragraph>
+		</box>		
+		<paragraph>
+		Ce premier TD (<formatted style="italic">Travail Dirigé</formatted>) 
+		a pour but de vous permettre de prendre en main les outils informatiques 
+		avec lesquels vous allez travailler aux laboratoires de Java : 
+		Où se trouvent les énoncés,
+		comment me connecter à <formatted style="italic">Windows</formatted> 
+		et les premiers pas sur <formatted style="italic">Linux</formatted>.
+		</paragraph>		
 	</entry>
+	
+	<unit label="Intro" title="Introduction">
+		<entry>
+			<paragraph>
+				Les TDs sont composés :
+			</paragraph>
+			<list listStyle="unordered">
+				<item>
+					De rappels de la <formatted style="bold">théorie</formatted>
+					vue ou cours ou d'éléments nouveaux
+					(surtout pour la partie <formatted style="code">Linux</formatted>) 
+				</item>
+				<item>
+					D'<formatted style="bold">exemples</formatted>
+					qui illustrent la théorie
+				</item>
+				<item>
+					D'<formatted style="bold">exercices</formatted>
+					pour mettre en pratique et assimiler la théorie
+				</item>
+			</list>
+			La section suivante vous donne quelques conseils pour bien travailler.
+		</entry>
+		<learningObject title="Consignes">
+			<list listStyle="unordered">
+				<item>
+					Faites bien tous les exercices proposés; 
+				</item>
+				<item>
+					Vous pouvez <formatted style="bold">coopérer</formatted> avec vos condisciples 
+					mais on vous demande de ne <formatted style="bold">pas copier</formatted> les réponses;
+					Si vous voulez progresser,
+					<formatted style="bold">chercher</formatted> la réponse est plus important que de la trouver; 
+				</item>
+				<item>
+					N'hésitez pas à <formatted style="bold">montrer votre travail</formatted> à votre professeur;
+				</item>
+				<item>
+					N'hésitez pas à <formatted style="bold">poser des questions</formatted>
+					si vous n'avez pas bien compris ce qu'on vous demande;
+				</item>
+				<item>
+					<formatted style="bold">Prenez des notes</formatted> !
+					Ce que vous allez apprendre aujourd'hui vous servira les semaines prochaines 
+					mais vous en aurez oublié une grande partie si vous ne notez rien. 
+					Le plus pratique est probablement d'annoter la version <formatted style="bold">papier</formatted>.
+				</item>
+				<item>
+					Ayez toujours avec vous le <formatted style="bold">guide visuel</formatted>
+					et l'<formatted style="bold">aide-mémoire</formatted>. 
+					Ils vous seront utiles tout au long des tds.
+				</item>
+			</list>
+		</learningObject>
+	</unit>
+		
 	<unit label="Windows" title="Windows">
-		<learningObject title="Windows - Changer le mot de passe">
-			<clarify>
-				<paragraph title="Objectif" icon="objective">
-					Vous allez apprendre à modifier votre mot de passe.
-				</paragraph>
-			</clarify>
+		
+		<entry>
+			<paragraph>
+				Le PC <formatted style="code">Windows</formatted>
+				va servir essentiellement à se connecter au serveur 
+				<formatted style="code">Linux</formatted>.
+				Voyons tout de même comment changer votre mot de passe.
+			</paragraph>
+		</entry>
+		
+		<learningObject title="Changer le mot de passe sous Windows">
 			<act>
 				<paragraph title="Réflexion" icon="question">
 					À votre avis, pourquoi vous demande-t-on de modifier votre mot de passe ?
@@ -66,9 +116,8 @@
 			<act>
 				<selfCheck title="Exemples de mots de passe" shuffle="yes">
 					<multipleChoice>
-						<question>
-							Quelles sont les propositions qui vous paraissent correctes comme mot de passe ? <newLine />
-							(plusieurs réponses possibles)
+						<question>Quelles sont les propositions qui vous paraissent correctes comme mot de passe ?<newLine />
+							(plusieurs réponses possibles)<newLine/>
 						</question>
 						<answer feedback="Trop simple (pour autant que votre copine s'appelle Nadia)" correct="no">nadia</answer>
 						<answer feedback="OK (mais choisissez en un autre, maintenant, tout le monde le connait)" correct="yes">M0nAm1eN@di@</answer>
@@ -153,14 +202,13 @@
 	</unit>
 	<unit label="Linux" title="Linux">
 		<entry>
-			<paragraph>
+			<paragraph cssClass="citation">
 				« <formatted style="italic">Linux ? Il y a moins bien mais c'est plus cher</formatted> ».
 				auteur inconnu
 			</paragraph>
 		</entry>
-		<learningObject title="Linux">
+		<learningObject title="Présentation">
 			<clarify>
-				<paragraph title="Présentation" icon="icon_reading" />
 				<paragraph>
 					Vous ne travaillerez pas directement sur votre PC durant les laboratoires Java.
 					Celui-ci vous servira pour vous connecter au serveur Linux
@@ -286,7 +334,7 @@
 				</paragraph>
 			</clarify>
 		</learningObject>
-		<learningObject title="Changer le mot de passe">
+		<learningObject title="Changer le mot de passe sous Linux">
 			<clarify>
 				<paragraph>
 					La commande pour changer le mot de passe est <formatted style="input">passwd</formatted>.

@@ -189,14 +189,17 @@
 				<xsl:text> (\today)}}
 				\pagestyle{plain}			
 				\begin{document}
-				\setcounter{section}{-1}
-				\addtocounter{section}{</xsl:text>
-	    <xsl:value-of select="/elml:lesson/elml:metadata/elml:organisation/elml:creationPosition/elml:posNumber"/>
-				<xsl:text>}
+				<!--\setcounter{section}{-1}-->
+				<!--\addtocounter{section}{</xsl:text>-->
+				<!--<xsl:value-of select="/elml:lesson/elml:metadata/elml:organisation/elml:creationPosition/elml:posNumber"/>-->
+				<!--<xsl:text>}-->
 				\maketitle
 				\thispagestyle{fancy}
-				\tableofcontents
+            </xsl:text>
+				<xsl:apply-templates select="./elml:lesson/elml:entry"/>
+				<xsl:text>\tableofcontents
 				\pagestyle{plain}
+            \clearpage
             </xsl:text>
             <xsl:choose>
                 <xsl:when test="$multiple='on'">
@@ -205,7 +208,7 @@
                     </xsl:for-each>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:apply-templates/>
+                    <xsl:apply-templates select=".//elml:unit"/>
                 </xsl:otherwise>
             </xsl:choose>
             <xsl:apply-templates select="/elml:lesson/elml:bibliography" mode="multiple"/>
@@ -265,10 +268,21 @@
 	    <xsl:text>\footnotesize\emph{ (plus d'information dans la version en ligne) }</xsl:text>
     </xsl:template>
 
+	 <!-- Suppression des espaces autour des textes formattés -->
+    <xsl:template match="elml:formatted[@style='bold']">
+        <xsl:text>\textbf{</xsl:text><xsl:apply-templates/><xsl:text>}</xsl:text>
+    </xsl:template>
+
+    <xsl:template match="elml:formatted[@style='italic']">
+        <xsl:text>\textit{</xsl:text><xsl:apply-templates/><xsl:text>}</xsl:text>
+    </xsl:template>
+
+    <xsl:template match="elml:formatted[@style='code']">
+        <xsl:text>\texttt{</xsl:text><xsl:apply-templates/><xsl:text>}</xsl:text>
+    </xsl:template>
+
     <xsl:template match="elml:formatted[@style='input']">
-        <xsl:text> \texttt{</xsl:text>
-        <xsl:apply-templates/>
-        <xsl:text>}</xsl:text>
+        <xsl:text>\texttt{</xsl:text><xsl:apply-templates/><xsl:text>}</xsl:text>
     </xsl:template>
 
     <xsl:template match="elml:formatted[@style='verbatim']">
@@ -284,4 +298,34 @@
     <!-- Pas de newLine dans une <question> -->    
     <xsl:template match="//elml:question//elml:newLine"/>
 
+    <!-- Test pour enlever le niveau d'indentation supérieure -->
+    <xsl:template match="elml:lesson">
+        <xsl:apply-templates/>
+    </xsl:template>
+
+    <xsl:template match="elml:unit">
+		<xsl:text>\section{</xsl:text><xsl:value-of select="@title"/><xsl:text>}</xsl:text> 
+		<xsl:apply-templates/>
+    </xsl:template>
+
+    <xsl:template match="elml:learningObject">
+		<xsl:text>\subsection{</xsl:text><xsl:value-of select="@title"/><xsl:text>}</xsl:text>
+		<xsl:apply-templates/>
+    </xsl:template>
+
+    <xsl:template match="elml:entry">
+		<xsl:if test="name(parent::*)='lesson'">
+			<xsl:text>\begin{abstract}</xsl:text>
+		</xsl:if>
+		<xsl:apply-templates/>
+		<xsl:if test="name(parent::*)='lesson'">
+			<xsl:text>\end{abstract}</xsl:text>
+		</xsl:if>
+    </xsl:template>
+
+	 <!-- Citation -->
+    <xsl:template match="elml:paragraph[@cssClass='citation']">
+        <xsl:text>\begin{quotation}</xsl:text><xsl:apply-templates/><xsl:text>\end{quotation}</xsl:text>
+    </xsl:template>
+	 
 </xsl:stylesheet>
