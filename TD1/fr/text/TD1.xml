@@ -15,12 +15,12 @@
 			</paragraph>
 		</box>		
 		<paragraph>
-		Ce premier TD (<formatted style="italic">Travail Dirigé</formatted>) 
-		a pour but de vous permettre de prendre en main les outils informatiques 
-		avec lesquels vous allez travailler aux laboratoires de Java : 
-		Où se trouvent les énoncés,
-		comment me connecter à <formatted style="italic">Windows</formatted> 
-		et les premiers pas sur <formatted style="italic">Linux</formatted>.
+			Ce premier TD (<formatted style="italic">Travail Dirigé</formatted>) 
+			a pour but de vous permettre de prendre en main les outils informatiques 
+			avec lesquels vous allez travailler aux laboratoires de Java : 
+			Où se trouvent les énoncés,
+			comment me connecter à <formatted style="italic">Windows</formatted> 
+			et les premiers pas sur <formatted style="italic">Linux</formatted>.
 		</paragraph>		
 	</entry>
 	
@@ -44,7 +44,9 @@
 					pour mettre en pratique et assimiler la théorie
 				</item>
 			</list>
-			La section suivante vous donne quelques conseils pour bien travailler.
+			<paragraph>
+				La section suivante vous donne quelques conseils pour bien travailler.
+			</paragraph>
 		</entry>
 		<learningObject title="Consignes">
 			<clarify>

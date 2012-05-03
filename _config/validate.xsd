@@ -20,7 +20,7 @@
 			</xs:annotation>
 			<xs:simpleType>
 				<xs:restriction base="xs:string">
-					<xs:enumeration value="exergue"/>
+					<xs:enumeration value="citation"/>
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
