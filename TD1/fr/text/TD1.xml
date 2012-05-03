@@ -824,13 +824,24 @@
 			</clarify>
 		</learningObject>
 	</unit>
-	<metadata>
+	
+ 	<metadata>
 		<organisation level="1ère année" module="Laboratoires Java">
 			<creationPosition>
-				<posNumber>1</posNumber>
+				<posNumber>2</posNumber>
 			</creationPosition>
 		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+      <technical>
+         <technicalRequirement>
+				<type>Browser</type>
+            <name>any</name>
+            <minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+      </technical>
 		<lessonInfo>
+			<language language="fr" derived="no"/>
 			<lifecycle>
 				<version>2012 - 2013</version>
 				<contribute>
@@ -845,6 +856,13 @@
 					<person name="PBT" />
 				</contribute>
 			</lifecycle>
+         <educational><typicalLearningTime><time/></typicalLearningTime></educational>
 		</lessonInfo>
+      <rights>
+			<cost>no</cost>
+         <copyright>CC-BY</copyright>
+         <copyrightURL>http://creativecommons.org/licenses/by/3.0/</copyrightURL>
+      </rights>
 	</metadata>
+
 </lesson>

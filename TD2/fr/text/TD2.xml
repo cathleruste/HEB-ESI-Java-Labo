@@ -5,7 +5,6 @@
 	label="TD2" title="TD2 - Les bases de Linux">
   
 	<entry>
-		<paragraph title="Objectifs" icon="objective"/>   
 		<paragraph>  
 			À l’issue de ce TD vous aurez acquis une connaissance basique de l’utilisation du système Linux 
 			et de son aide en ligne : le man.   
@@ -20,19 +19,22 @@
 			Vous serez aussi à l'aise avec le concept de <formatted style="bold">permissions</formatted> 
 			sur les fichiers et vous saurez vous repérer dans le <formatted style="bold">système de fichiers</formatted>.   
 		</paragraph>  
-		<paragraph>  
-			<formatted style="bold">Rappels</formatted> :   
-		</paragraph>  
-		<list listStyle="unordered">
-			<item>Ce TD est accompagné d'exercices à faire <formatted style="bold">avant</formatted> de venir au laboratoire.</item>  
-			<item>Prenez bien note des réponses aux exercices.</item>  
-		</list>
 	</entry>
 
-	<unit label="TD2" title="TD2">
+	<unit label="TD2" title="TD2 - Les bases de Linux">
+
+		<entry>
+			<paragraph>  
+				<formatted style="bold">Rappels</formatted> :   
+			</paragraph>  
+			<list listStyle="unordered">
+				<item>Ce TD est accompagné d'exercices à faire <formatted style="bold">avant</formatted> de venir au laboratoire.</item>  
+				<item>Prenez bien note des réponses aux exercices.</item>  
+			</list>
+		</entry>
 		
 		<learningObject title="Se connecter à linux1"> 
-		
+					
 			<clarify>
 				<paragraph>  
 					<formatted style="bold">On a déjà vu comment se connecter à linux1 !</formatted>  
@@ -270,13 +272,15 @@
     
 		<learningObject title="Système de fichiers, chemin absolu et relatif"> 
 			<clarify>
-				<paragraph>
+				<paragraph cssClass="citation">
 					«<formatted style="italic"> Tout est relatif, et cela seul est absolu </formatted>». Auguste Comte.
-				</paragraph>  
+				</paragraph>
+				  
 				<paragraph>  
 					Régulièrement, il faut indiquer un endroit du système de fichiers (par exemple pour y aller). 
 					Désigner simplement le nom du dossier ne suffit pas.  
 				</paragraph>  
+				
 				<paragraph>  
 					Un petit tour vers les points 10 à 14 du guide visuel sera peut-être nécessaire...  
 				</paragraph>  
@@ -284,10 +288,10 @@
       
 			<act>
 				<paragraph title="Petit exercice" icon="act"/> 
+				<multimedia src="../image/fs.jpeg" type="jpeg" legend="Une partie d'un système de fichiers"/>
 				<list listStyle="ordered">
 					<item>
 						Pouvez-vous retrouver votre dossier personnel dans le système de fichiers ?  
-						<popup title="Cliquez pour voir l'image"><multimedia src="../image/fs.jpeg" type="jpeg"/></popup>
 					</item>
 					<item>
 						Entrez la commande <formatted style="input">pwd</formatted> (que fait-elle encore ?). 
@@ -372,13 +376,14 @@
     
 		<learningObject title="Propriétaire et groupes"> 
 			<clarify>
-				<paragraph>  
+				<paragraph cssClass="citation">  
 					«<formatted style="italic"> La propriété est un piège: ce que nous croyons posséder nous possède </formatted>». 
 					Alphonse Karr.  
 				</paragraph>       
-				<paragraph>  
+				<paragraph cssClass="citation">  
 					«<formatted style="italic"> La propriété c'est le vol </formatted>». Pierre Joseph Proudhon.  
 				</paragraph>  
+				
 				<paragraph>  
 					Comme Linux est un système partagé, il est important de parler de sécurité. 
 					Ici, on va se concentrer sur la sécurité au niveau des fichiers et répondre aux questions suivantes :  
@@ -504,7 +509,7 @@
 				<paragraph>  
 					Soit le fichier "Max.java" de la capture d'écran ci-dessous.  
 				</paragraph>  
-				<popup title="Cliquez pour voir l'image"><multimedia src="../image/ls-l.jpg" type="jpeg"/></popup>
+				<multimedia src="../image/ls-l.jpg" type="jpeg" legend="Capture d'écran"/>
 				<paragraph>  
 					Est-ce qu'un professeur peut l'éditer ?  
 				</paragraph>  
@@ -548,7 +553,7 @@
 					Reprenez les permissions affichées dans la capture d'écran ci-dessous 
 					et exprimez-les avec un nombre de 3 chiffres.  
 				</paragraph>  
-				<popup title="Cliquez pour voir l'image"><multimedia src="../image/ls-l-permissions.jpg" type="jpeg"/></popup>
+				<multimedia src="../image/ls-l-permissions.jpg" type="jpeg" legend="Capture d'écran"/>
 
 				<paragraph title="Permissions par défaut" icon="icon_experiment"/> 
 				<list listStyle="ordered">
