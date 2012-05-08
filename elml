@@ -19,6 +19,7 @@ function pdf() {
 	OLD=`pwd`
 	cd $LESSON/fr/latex
 	pdflatex $LESSON.tex
+	cp $LESSON.pdf ../../../dist
 	mv $LESSON.pdf ../text
 	cd $OLD
 }
@@ -26,7 +27,7 @@ function pdf() {
 
 function scorm() {
 	java -cp /usr/local/saxon/saxon9he.jar net.sf.saxon.Transform -t -s:$LESSON/fr/text/$LESSON.xml -xsl:_templates/$STYLE/online.xsl
-	zip -qr scorm/$LESSON.zip imsmanifest.xml sitemap.xml $LESSON _templates/java
+	zip -qr dist/$LESSON.zip imsmanifest.xml sitemap.xml $LESSON _templates/java
 	rm imsmanifest.xml sitemap.xml
 }
 
