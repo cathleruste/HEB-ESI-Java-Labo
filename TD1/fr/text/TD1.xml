@@ -31,25 +31,25 @@
 			</paragraph>
 			<list listStyle="unordered">
 				<item>
-					De rappels de la <formatted style="bold">théorie</formatted>
-					vue ou cours ou d'éléments nouveaux
-					(surtout pour la partie <formatted style="code">Linux</formatted>) 
+					de rappels de la <formatted style="bold">théorie</formatted>
+					vue au cours ou d'éléments nouveaux
+					(surtout pour la partie <formatted style="code">Linux</formatted>); 
 				</item>
 				<item>
-					D'<formatted style="bold">exemples</formatted>
-					qui illustrent la théorie
+					d'<formatted style="bold">exemples</formatted>
+					qui illustrent la théorie;
 				</item>
 				<item>
-					D'<formatted style="bold">exercices</formatted>
-					pour mettre en pratique et assimiler la théorie
+					d'<formatted style="bold">exercices</formatted>
+					pour mettre en pratique et assimiler la théorie.
 				</item>
 			</list>
-			<paragraph>
-				La section suivante vous donne quelques conseils pour bien travailler.
-			</paragraph>
 		</entry>
 		<learningObject title="Consignes">
 			<clarify>
+			<paragraph>
+				Quelques conseils pour bien travailler et progresser.
+			</paragraph>
 			<list listStyle="unordered">
 				<item>
 					Faites bien tous les exercices proposés; 
@@ -165,10 +165,8 @@
 					<item>
 						<paragraph>
 							Un message vous indique que tout s'est bien passé (normalement).
+							Prenez le temps de le lire : c'est peut-être un message d'erreur.
 						</paragraph>
-						<list listStyle="unordered">
-							<item>Prenez le temps de le lire : c'est peut-être un message d'erreur.</item>
-						</list>
 						<paragraph>
 							<formatted style="bold">Note</formatted> :
 							Prenez d'autant plus le temps si vous éprouvez des difficultés avec l'anglais; 
@@ -236,8 +234,9 @@
 					<item>
 						Votre <formatted style="bold"><formatted style="italic">username</formatted></formatted>
 						est le même que sous Windows 
-						(avec un <formatted style="bold">'g' minuscule</formatted> obligatoirement).<newLine />
-						Ex:	<formatted style="code">g32010</formatted><newLine />
+						(avec un <formatted style="bold">'g' minuscule</formatted> obligatoirement; 
+						ex:	<formatted style="code">g32010</formatted>).
+						<newLine />
 						<formatted style="bold">Note</formatted> : pour Linux, 
 						les minuscules et les majuscules sont toujours des caractères différents.
 					</item>
@@ -532,9 +531,9 @@
 					<item><formatted style="input">ls</formatted></item>
 				</list>
 				<paragraph>?</paragraph>
-				<popup>Non !</popup>
+				<popup visible="online">Non !</popup>
 				<paragraph>Comment le mettre en évidence ?</paragraph>
-				<popup>
+				<popup visible="online">
 						Dans le 1 <formatted style="superscript">er</formatted> cas, 
 						on ne modifie pas le dossier courant. 
 						Dans le 2 <formatted style="superscript">ème</formatted> cas oui. <newLine />
@@ -746,19 +745,19 @@
 					</item>
 					<item>
 						<formatted style="input">x</formatted>
-						<formatted style="italic">efface un caractère</formatted>;
+						<formatted style="italic"> efface un caractère</formatted>;
 					</item>
 					<item>
 						<formatted style="input">dd</formatted>
-						<formatted style="italic">coupe</formatted> la ligne sous le curseur;
+						<formatted style="italic"> coupe</formatted> la ligne sous le curseur;
 					</item>
 					<item>
 						<formatted style="input">yy</formatted>
-						<formatted style="italic">copie</formatted>la ligne sous le curseur;
+						<formatted style="italic"> copie</formatted>la ligne sous le curseur;
 					</item>
 					<item>
 						<formatted style="input">p</formatted>
-						<formatted style="italic">colle</formatted>
+						<formatted style="italic"> colle</formatted>
 						la ligne précédemment copiée ou coupée.
 					</item>
 				</list>

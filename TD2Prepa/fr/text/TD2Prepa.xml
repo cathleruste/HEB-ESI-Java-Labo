@@ -36,18 +36,22 @@
 				<act>
 					<selfCheck title="La connexion" shuffle="no">
 						<fillInBlanks>
-							<question>Remplissez les blancs.</question>
+							<question>
+								Remplissez les blancs.
+							</question>
 							<gapText> 
-								Nous allons faire les laboratoires sur une machine
-								qui se nomme <gap answers="linux1">linux1</gap> 
-								et qui tourne le système d'exploitation        
-								<gap answers="Linux,linux">Linux</gap>. 
-								Pour s'y connecter, nous utilisons le programme Windows        
-								<gap answers="putty">putty</gap>. 
-								Nous communiquerons avec la machine en mode  
-								<gap answers="console">console</gap> 
-								grâce à un <gap answers="shell">shell</gap> 
-								qui se nomme <gap answers="bash">bash</gap>. 
+								<paragraph>
+									Nous allons faire les laboratoires sur une machine
+									qui se nomme <gap answers="linux1">linux1</gap> 
+									et qui tourne le système d'exploitation        
+									<gap answers="Linux,linux">Linux</gap>. 
+									Pour s'y connecter, nous utilisons le programme Windows        
+									<gap answers="putty">putty</gap>. 
+									Nous communiquerons avec la machine en mode  
+									<gap answers="console">console</gap> 
+									grâce à un <gap answers="shell">shell</gap> 
+									qui se nomme <gap answers="bash">bash</gap>. 
+								</paragraph>
 							</gapText>
 							<solution></solution>
 						</fillInBlanks>
@@ -211,28 +215,33 @@
 					<list listStyle="unordered">
 						<item>
 							Vrai ou faux : Avec Linux, tous les systèmes de fichiers sont assemblés
-							en un seul système de fichiers dont le dossier principal est désigné par C:
+							en un seul système de fichiers dont le dossier principal est désigné par
+							<formatted style="code">C:</formatted>
 						</item>  
 						<item>
 							Vrai ou faux : <formatted style="code">/home/g12345/tds</formatted> est un chemin relatif.
 						</item>  
 						<item>
-							Choisissez la réponse correcte : La commande qui affiche tous les groupes de l'utilisateur est 
-							: users - groups - chgrp - chmod
+							Choisissez la réponse correcte : La commande qui affiche tous les groupes de l'utilisateur est :
+							<formatted style="code">users</formatted> - 
+							<formatted style="code">groups</formatted> - 
+							<formatted style="code">chgrp</formatted> - 
+							<formatted style="code">chmod</formatted>
 						</item>  
 					</list>
     
 					<paragraph title="2. (1 point)"/>  
     
 					<paragraph>  
-						Dans l'éditeur vi que fait la commande suivante :  
+						Dans l'éditeur <formatted style="code">vi</formatted> que fait la commande suivante :  
 						<formatted style="code">yy</formatted>
 					</paragraph>  
     
 					<paragraph title="3. (1 point)"/>  
         
 					<paragraph>
-						Expliquez ce qu'est le 'mode console' utilisé sur linux1.  
+						Expliquez ce qu'est le <formatted style="italic">mode console</formatted> 
+						utilisé sur <formatted style="code">linux1</formatted>.  
 					</paragraph>  
     
 					<paragraph title="4. (2 points)"/>  
@@ -252,9 +261,9 @@
 					</paragraph>  
     
 					<list listStyle="unordered">
-						<item>cp monFichier nouveauFichier</item>  
-						<item>Rm monFichier</item>  
-						<item>:x</item>  
+						<item><formatted style="code">cp monFichier nouveauFichier</formatted></item>  
+						<item><formatted style="code">Rm monFichier</formatted></item>  
+						<item><formatted style="code">:x</formatted></item>  
 					</list>
 				</clarify>
 			</learningObject>

@@ -144,8 +144,8 @@
       
 				<list listStyle="unordered">
 					<item>Une option modifie le sens d'une commande </item>  
-					<item>Elle commence par le signe "-" suivi d'une seule lettre</item>  
-					<item>Ou encore par le double tiret "--" suivi d'un nom d'option</item>  
+					<item>Elle commence par le signe "<formatted style="code">-</formatted>" suivi d'une seule lettre</item>  
+					<item>Ou encore par le double tiret "<formatted style="code">--</formatted>" suivi d'un nom d'option</item>  
 				</list>  
 				
 				<paragraph>
@@ -299,50 +299,32 @@
 					</item>  
 				</list>
 			</act> 
-     
+
 			<act>
-				<paragraph title="Exercice VRAI ou FAUX" icon="icon_question"/>
-				<selfCheck title="Chemins absolus et relatifs" shuffle="no">
+				<selfCheck title="Chemins absolus et relatifs" shuffle="yes">
 			 		<multipleChoice>
-						<question>~/../g12345/td2 est un chemin relatif</question>
-						<answer feedback="Incorrect : c'est un chemin absolu" correct="no">Vrai</answer>
-						<answer feedback="Exact: en effet, un chemin relatif ne commence pas par un ~" correct="yes">Faux</answer>
+						<question>Parmi tous les chemins suivants, quels sont ceux qui sont 
+							<formatted style="bold">relatifs</formatted> ?
+						</question>
+						<answer feedback="Un chemin qui commence par ~ n'est pas relatif." correct="no">
+							<formatted style="code">~/../g12345/td2</formatted>
+						</answer>
+						<answer feedback="Un chemin qui commence par / n'est pas relatif." correct="no">
+							<formatted style="code">/home/g12345/../g54321/Hello.java</formatted>
+						</answer>
+						<answer feedback="Un chemin qui commence par . est relatif." correct="yes">
+							<formatted style="code">./tds/td2</formatted>
+						</answer>
+						<answer feedback="Un chemin qui commence par un nom de dossier est relatif." correct="yes">
+							<formatted style="code">tds/td2/Hello.java</formatted>
+						</answer>
+						<answer feedback="Un chemin qui commence par ~ n'est pas relatif." correct="no">
+							<formatted style="code">~g12345/tds/td2</formatted>
+						</answer>
 					</multipleChoice>
-				</selfCheck>
-        
-				<selfCheck title="Chemins absolus et relatifs" shuffle="no">
-					<multipleChoice>
-						<question>/home/g12345/../g54321/Hello.java est un chemin relatif</question>
-						<answer feedback="Incorrect : c'est un chemin absolu" correct="no">Vrai</answer>
-						<answer feedback="Exact: en effet, un chemin relatif ne commence pas par un /" correct="yes">Faux</answer>
-					</multipleChoice>
-				</selfCheck>
-        
-				<selfCheck title="Chemins absolus et relatifs" shuffle="no">
-					<multipleChoice>
-						<question>./tds/td2 est un chemin relatif</question>
-						<answer feedback="Exact : c'est un chemin relatif" correct="yes">Vrai</answer>
-						<answer feedback="Incorrect" correct="no">Faux</answer>
-					</multipleChoice>
-				</selfCheck>
-        
-				<selfCheck title="Chemins absolus et relatifs" shuffle="no">
-					<multipleChoice>
-						<question>tds/td2/Hello.java est un chemin relatif</question>
-						<answer feedback="Exact : c'est un chemin relatif" correct="yes">Vrai</answer>
-						<answer feedback="Incorrect" correct="no">Faux</answer>
-					</multipleChoice>
-				</selfCheck>
-        
-				<selfCheck title="Chemins absolus et relatifs" shuffle="no">
-					<multipleChoice>
-						<question>~g12345/tds/td2 est un chemin absolu</question>
-						<answer feedback="Incorrect : c'est un chemin absolu" correct="yes">Vrai</answer>
-						<answer feedback="Incorrect: en effet, un chemin absolu peut commencer par un ~" correct="no">Faux</answer>
-					</multipleChoice>
-				</selfCheck>
+				</selfCheck>   
 			</act>
-     
+          
 			<act>
 				<paragraph title="Exercices" icon="act"/> 
 				<list listStyle="ordered">
@@ -367,7 +349,7 @@
 					<item>Faites de même avec un fichier du TD 1. </item>  
 					<item>Faites de même avec un fichier de votre voisin. </item>  
 					<item>
-						Quel est le dossier désigné par la notation suivante :  
+						Quel est le dossier désigné par la notation suivante : <newLine/>
 						<formatted style="input">/usr/bin/../../eCours/asm/../java</formatted> ?
 					</item>  
 				</list>

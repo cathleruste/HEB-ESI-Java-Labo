@@ -64,6 +64,17 @@
 				\usepackage{array}
 				\usepackage{url}
 				\usepackage{ragged2e}
+				\usepackage{listings}
+\lstdefinestyle{lstverb}
+  {
+    basicstyle=\footnotesize,
+    frameround=tttt, frame=trbl, framerule=0pt, rulecolor=\color{gray},
+    lineskip=-1pt,   % pour rapprocher les lignes
+    flexiblecolumns,
+    tabsize=4, escapechar=\\,
+    extendedchars=true
+  }
+\lstnewenvironment{Java}[1][]{\lstset{style=lstverb,language=java,#1}}{}
 				\ifx\pdfoutput\undefined
 					\usepackage{graphicx}
 				\else
@@ -265,7 +276,12 @@
 
     <!-- Les popup ne seront pas repris dans la version LaTeX -->
     <xsl:template match="elml:popup">
-	    <xsl:text> {\footnotesize\emph{(plus d'information dans la version en ligne)}} </xsl:text>
+	    <xsl:param name="display">
+            <xsl:call-template name="elml:display"/>
+        </xsl:param>
+        <xsl:if test="$display='yes'">
+			<xsl:text> {\footnotesize\emph{(plus d'information dans la version en ligne)}} </xsl:text>
+	    </xsl:if>
     </xsl:template>
 
 	 <!-- Suppression des espaces autour des textes formattés -->
@@ -277,12 +293,24 @@
         <xsl:text>\textit{</xsl:text><xsl:apply-templates/><xsl:text>}</xsl:text>
     </xsl:template>
 
+    <xsl:template match="elml:formatted[@style='input']">
+        <xsl:text>\texttt{</xsl:text><xsl:apply-templates/><xsl:text>}</xsl:text>
+    </xsl:template>
+
     <xsl:template match="elml:formatted[@style='code']">
         <xsl:text>\texttt{</xsl:text><xsl:apply-templates/><xsl:text>}</xsl:text>
     </xsl:template>
 
-    <xsl:template match="elml:formatted[@style='input']">
-        <xsl:text>\texttt{</xsl:text><xsl:apply-templates/><xsl:text>}</xsl:text>
+    <xsl:template match="elml:formatted[@style='java']">
+        <xsl:text> \verb|</xsl:text><xsl:apply-templates/><xsl:text>|</xsl:text>
+    </xsl:template>
+
+    <xsl:template match="elml:paragraph[@cssClass='code']">
+        <xsl:text>\begin{verbatim}</xsl:text><xsl:apply-templates/><xsl:text>\end{verbatim}</xsl:text>
+    </xsl:template>
+
+    <xsl:template match="elml:paragraph[@cssClass='java']">
+        <xsl:text>\mbox{}\begin{Java}</xsl:text><xsl:apply-templates/><xsl:text>\end{Java}</xsl:text>
     </xsl:template>
 
     <xsl:template match="elml:formatted[@style='verbatim']">
@@ -290,7 +318,7 @@
         <xsl:apply-templates/>
         <xsl:text>\end{verbatim}</xsl:text>
     </xsl:template>
-
+	
     <xsl:template match="elml:formatted[@style='verb']">
         <xsl:text> \verb|</xsl:text><xsl:apply-templates/><xsl:text>|</xsl:text>
     </xsl:template>
@@ -344,6 +372,26 @@
 				 <xsl:when test="string-length(.)&lt;16"><xsl:text> \textcolor{gray}{\underline{\hspace*{8em}}} </xsl:text></xsl:when>
 				 <xsl:when test="string-length(.)&lt;32"><xsl:text> \textcolor{gray}{\underline{\hspace*{16em}}} </xsl:text></xsl:when>
 				 <xsl:otherwise><xsl:text> \textcolor{grey}{\underline{\hspace*{24em}}} </xsl:text></xsl:otherwise>
+			</xsl:choose>
+		</xsl:otherwise>
+	</xsl:choose>
+	</xsl:template>
+
+    <!-- Texte à trous avec taille fonction de la longueur de la bonne réponse -->
+	<xsl:template match="//elml:paragraph[@cssClass='java']//elml:gap">
+	<xsl:choose>
+		<xsl:when test="$role='tutor'">
+			 <xsl:text> \textit{</xsl:text>
+			 <xsl:apply-templates/>
+			 <xsl:text>}</xsl:text>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:choose>
+				 <xsl:when test="string-length(.)&lt;2"><xsl:text> \_\_ </xsl:text></xsl:when>
+				 <xsl:when test="string-length(.)&lt;4"><xsl:text> \_\_\_\_ </xsl:text></xsl:when>
+				 <xsl:when test="string-length(.)&lt;8"><xsl:text> \_\_\_\_\_\_\_\_ </xsl:text></xsl:when>
+				 <xsl:when test="string-length(.)&lt;16"><xsl:text> \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ </xsl:text></xsl:when>
+				 <xsl:otherwise><xsl:text> \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ </xsl:text></xsl:otherwise>
 			</xsl:choose>
 		</xsl:otherwise>
 	</xsl:choose>

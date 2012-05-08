@@ -102,6 +102,10 @@
 	<xsl:template match="elml:formatted[@style='input']">
 		<span class="input"><xsl:apply-templates/></span>
 	</xsl:template>
+
+	<xsl:template match="elml:formatted[@style='java']">
+		<span><pre><xsl:apply-templates/></pre></span>
+	</xsl:template>
   
 	<xsl:template match="elml:formatted[@style='verb']">
 		<span><pre><xsl:apply-templates/></pre></span>
@@ -112,6 +116,14 @@
 			<pre><xsl:apply-templates/></pre>
 		</div>
 	</xsl:template>
+
+    <xsl:template match="elml:paragraph[@cssClass='java']">
+			<pre><xsl:apply-templates/></pre>
+    </xsl:template>
+
+    <xsl:template match="elml:paragraph[@cssClass='code']">
+			<pre><xsl:apply-templates/></pre>
+    </xsl:template>
 
 	<!-- Si titre dans popup ne pas metre le texte par déaut en plus)-->
 	<xsl:template match="elml:popup">
@@ -187,19 +199,19 @@
 		</xsl:if>
 	</xsl:template>
 	
-	<!-- fillInBlanks ne fonctionnait pas bien? J'ai ajouté explicitement un rnewline entre input et span -->
 	<xsl:template match="elml:gap">
 		<xsl:param name="selfCheckLabel"/>
 		<xsl:param name="gap_stringlength">
 			<xsl:choose>
-				<xsl:when test="string-length(.)&lt;4">3</xsl:when>
-				<xsl:when test="string-length(.)&lt;8">7</xsl:when>
-				<xsl:when test="string-length(.)&lt;16">15</xsl:when>
-				<xsl:when test="string-length(.)&lt;32">31</xsl:when>
-				<xsl:otherwise>50</xsl:otherwise>
+				<xsl:when test="string-length(.)&lt;2">12</xsl:when>
+				<xsl:when test="string-length(.)&lt;4">25</xsl:when>
+				<xsl:when test="string-length(.)&lt;8">50</xsl:when>
+				<xsl:when test="string-length(.)&lt;16">100</xsl:when>
+				<xsl:when test="string-length(.)&lt;32">200</xsl:when>
+				<xsl:otherwise>400</xsl:otherwise>
 			</xsl:choose>
 		</xsl:param>
-		<input type="text" value="" class="itemText" id="{$selfCheckLabel}_{generate-id(.)}" size="{$gap_stringlength}"/>
+		<input type="text" value="" class="itemText" id="{$selfCheckLabel}_{generate-id(.)}" style="width:{$gap_stringlength}px"/>
 		<xsl:text> </xsl:text><span class="gapText">
 		<xsl:value-of select="."/>
 		<xsl:if test="@answers!=''">
