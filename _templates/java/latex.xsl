@@ -291,6 +291,10 @@
         <xsl:text>\textbf{</xsl:text><xsl:apply-templates/><xsl:text>}</xsl:text>
     </xsl:template>
 
+    <xsl:template match="elml:formatted[@style='superscript']">
+		<xsl:text>\textsuperscript{</xsl:text><xsl:value-of select="."/><xsl:text>}</xsl:text>
+    </xsl:template>
+
     <xsl:template match="elml:formatted[@style='italic']">
         <xsl:text>\textit{</xsl:text><xsl:apply-templates/><xsl:text>}</xsl:text>
     </xsl:template>
@@ -363,17 +367,17 @@
 		<xsl:otherwise>
 			<xsl:choose>
 				 <xsl:when test="string-length(.)&lt;2"><xsl:text> \textcolor{gray}{\underline{\hspace*{1em}}} </xsl:text></xsl:when>
-				 <xsl:when test="string-length(.)&lt;4"><xsl:text> \textcolor{gray}{\underline{\hspace*{2em}}} </xsl:text></xsl:when>
-				 <xsl:when test="string-length(.)&lt;8"><xsl:text> \textcolor{gray}{\underline{\hspace*{4em}}} </xsl:text></xsl:when>
-				 <xsl:when test="string-length(.)&lt;16"><xsl:text> \textcolor{gray}{\underline{\hspace*{8em}}} </xsl:text></xsl:when>
-				 <xsl:when test="string-length(.)&lt;32"><xsl:text> \textcolor{gray}{\underline{\hspace*{16em}}} </xsl:text></xsl:when>
-				 <xsl:otherwise><xsl:text> \textcolor{grey}{\underline{\hspace*{24em}}} </xsl:text></xsl:otherwise>
+				 <xsl:when test="string-length(.)&lt;4"><xsl:text> \textcolor{gray}{\underline{\hspace*{3em}}} </xsl:text></xsl:when>
+				 <xsl:when test="string-length(.)&lt;8"><xsl:text> \textcolor{gray}{\underline{\hspace*{6em}}} </xsl:text></xsl:when>
+				 <xsl:when test="string-length(.)&lt;16"><xsl:text> \textcolor{gray}{\underline{\hspace*{10em}}} </xsl:text></xsl:when>
+				 <xsl:when test="string-length(.)&lt;32"><xsl:text> \textcolor{gray}{\underline{\hspace*{20em}}} </xsl:text></xsl:when>
+				 <xsl:otherwise><xsl:text> \textcolor{grey}{\underline{\hspace*{25em}}} </xsl:text></xsl:otherwise>
 			</xsl:choose>
 		</xsl:otherwise>
 	</xsl:choose>
 	</xsl:template>
 
-    <!-- Texte à trous avec taille fonction de la longueur de la bonne réponse -->
+    <!-- Texte à trous avec taille fonction de la longueur de la bonne réponse. Dans Java -->
 	<xsl:template match="//elml:paragraph[@cssClass='java']//elml:gap">
 	<xsl:choose>
 		<xsl:when test="$role='tutor'">

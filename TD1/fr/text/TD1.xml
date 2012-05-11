@@ -18,7 +18,7 @@
 			Ce premier TD (<formatted style="italic">Travail Dirigé</formatted>) 
 			a pour but de vous permettre de prendre en main les outils informatiques 
 			avec lesquels vous allez travailler aux laboratoires de Java : 
-			Où se trouvent les énoncés,
+			où se trouvent les énoncés,
 			comment me connecter à <formatted style="italic">Windows</formatted> 
 			et les premiers pas sur <formatted style="italic">Linux</formatted>.
 		</paragraph>		
@@ -52,20 +52,20 @@
 			</paragraph>
 			<list listStyle="unordered">
 				<item>
-					Faites bien tous les exercices proposés; 
+					Faites bien tous les exercices proposés.
 				</item>
 				<item>
 					Vous pouvez <formatted style="bold">coopérer</formatted> avec vos condisciples 
-					mais on vous demande de ne <formatted style="bold">pas copier</formatted> les réponses;
+					mais on vous demande de ne <formatted style="bold">pas copier</formatted> les réponses.
 					Si vous voulez progresser,
-					<formatted style="bold">chercher</formatted> la réponse est plus important que de la trouver; 
+					<formatted style="bold">chercher</formatted> la réponse est plus important que de la trouver. 
 				</item>
 				<item>
-					N'hésitez pas à <formatted style="bold">montrer votre travail</formatted> à votre professeur;
+					N'hésitez pas à <formatted style="bold">montrer votre travail</formatted> à votre professeur.
 				</item>
 				<item>
 					N'hésitez pas à <formatted style="bold">poser des questions</formatted>
-					si vous n'avez pas bien compris ce qu'on vous demande;
+					si vous n'avez pas bien compris ce qu'on vous demande.
 				</item>
 				<item>
 					<formatted style="bold">Prenez des notes</formatted> !
@@ -176,7 +176,9 @@
 					</item>
 					<item>
 						Afin de vérifier que le mot de passe est bien changé, déconnectez-vous et reconnectez-vous.
-						(et revenez sur cette page bien sûr pour pouvoir continuer les exercices ;))
+						<paragraph visible="online">
+							(et revenez sur cette page bien sûr pour pouvoir continuer les exercices ;))
+						</paragraph>
 					</item>
 				</list>
 			</act>
@@ -196,7 +198,9 @@
 				<paragraph>
 					Les professeurs ne peuvent ni retrouver votre nouveau mot de passe, 
 					ni remettre le mot de passe de départ.
-					Par contre le technicien (F. Marchal qui a son bureau au 5ème) peut remettre le mot de passe de départ.
+					Par contre le technicien 
+					(F. Marchal qui a son bureau au 5<formatted style="superscript">ème</formatted>) 
+					peut remettre le mot de passe de départ.
 					Allez le trouver (et prenez garde à ce que ça n'arrive plus !)
 				</paragraph>
 			</clarify>
@@ -423,6 +427,7 @@
 				</paragraph>
 			</clarify>
 		</learningObject>
+		
 		<learningObject title="Le dossier personnel et le dossier courant">
 			<clarify>
 				<paragraph>
@@ -479,7 +484,7 @@
 				<paragraph>
 					À tout moment, vous êtes <formatted style="italic">dans</formatted> un dossier,
 					appelé le <formatted style="bold">dossier courant</formatted>
-					(<formatted style="italic">working directory</formatted>en anglais).
+					(<formatted style="italic">working directory</formatted> en anglais).
 				</paragraph>
 				<list listStyle="unordered">
 					<item>
@@ -542,6 +547,7 @@
 				</popup>
 			</clarify>
 		</learningObject>
+		
 		<learningObject title="L'éditeur">
 			<clarify>
 				<paragraph>
@@ -593,6 +599,7 @@
 				</paragraph>
 			</clarify>
 		</learningObject>
+		
 		<learningObject title="Quelques commandes courantes">
 			<act>
 				<selfCheck title="Faisons le point" shuffle="yes">
@@ -668,7 +675,7 @@
 						crée une copie du fichier sous le nom "nouveauNomDeFichier";
 					</item>
 					<item>
-						<formatted style="input">mv nomDuFichier nomDuDossier</formatted>
+						<formatted style="input">cp nomDuFichier nomDuDossier</formatted>
 						copie le fichier donné dans le dossier indiqué;
 					</item>
 					<item>
@@ -724,6 +731,7 @@
 				</paragraph>
 			</act>
 		</learningObject>
+		
 		<learningObject title="L'éditeur (le retour)">
 			<clarify>
 				<paragraph>
@@ -765,10 +773,12 @@
 			<act>
 				<paragraph title="Exercice" icon="act" />
 				<paragraph>
-					Mettons tout ça en pratique au travers d'un petit exercice. <newLine />
+					Mettons tout ça en pratique au travers d'un petit exercice.
+				</paragraph>
+				<paragraph>
 					Nous avons créé sur <formatted style="code">linux1</formatted> un petit fichier
-					(son nom est <formatted style="code">/eCours/java/td/td1/notes</formatted>).<newLine />
-					Votre objectif est de le copier chez vous
+					(son nom est <formatted style="code">/eCours/java/td/td1/notes</formatted>).
+					Votre objectif est de le <formatted style="bold">copier</formatted> chez vous
 					(dans votre dossier <formatted style="code">td1</formatted>)
 					et d'y apporter quelques modifications.
 				</paragraph>
@@ -781,9 +791,12 @@
 				</list>
 			</act>
 		</learningObject>
-		<learningObject title="Conclusion">
+	</unit>
+	
+	<unit label="Conclusion" title="Conclusion">
+		
+		<learningObject title="Félicitations">
 			<clarify>
-				<paragraph title="Bravo" icon="icon_bravo" />
 				<paragraph>
 					Vous êtes arrivés au bout de ce premier TD.<newLine />
 					Avant de quitter le laboratoire, n'oubliez pas de :
@@ -808,8 +821,9 @@
 					À la semaine prochaine et soyez à l'heure !
 				</paragraph>
 			</clarify>
+		</learningObject>
+		<learningObject title="Ressources">
 			<clarify>
-				<paragraph title="Ressources" icon="icon_web_resource" />
 				<paragraph>
 					Vous voulez en savoir plus sur ce que vous avez fait aujourd'hui ?
 				</paragraph>
@@ -819,10 +833,10 @@
 					une série de documents qui peuvent être utiles. Voyez notamment :
 				</paragraph>
 				<list listStyle="unordered">
-					<item>Un <formatted style="bold">guide visuel Linux</formatted> que vous avez déjà utilisé;</item>
-					<item>Un <formatted style="bold">aide-mémoire</formatted> écrit par nos soins sur l'utilisation de Windows et Linux;</item>
-					<item>Un <formatted style="bold">quick reference</formatted> sur l'utilisation de <formatted style="bold">vi</formatted>;</item>
-					<item>Un <formatted style="bold">quick reference</formatted> sur les commandes <formatted style="bold">linux</formatted>.</item>
+					<item>un <formatted style="bold">guide visuel Linux</formatted> que vous avez déjà utilisé;</item>
+					<item>un <formatted style="bold">aide-mémoire</formatted> écrit par nos soins sur l'utilisation de Windows et Linux;</item>
+					<item>un <formatted style="bold">quick reference</formatted> sur l'utilisation de <formatted style="bold">vi</formatted>;</item>
+					<item>un <formatted style="bold">quick reference</formatted> sur les commandes <formatted style="bold">linux</formatted>.</item>
 				</list>
 			</clarify>
 		</learningObject>
