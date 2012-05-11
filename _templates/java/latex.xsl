@@ -16,6 +16,7 @@
 	<xsl:param name="documentclass" select="'article'"/>
 	<xsl:param name="pagebreak_level" select="'lesson'"/>
 	<xsl:param name="chapter_numeration" select="'yes'"/>
+	<xsl:param name="display_links" select="'yes'"/>
 	<!-- ===== / ===== -->
 	<!-- Ajout du package pifonts pour la police dingbats utilisée pour les cases à cocher des QCM -->
 	<!-- Mise en forme de la premièer page : on utilise le plus possible le tag metadata -->
@@ -304,11 +305,11 @@
     </xsl:template>
 
     <xsl:template match="elml:formatted[@style='code']">
-        <xsl:text>\texttt{</xsl:text><xsl:apply-templates/><xsl:text>}</xsl:text>
+        <xsl:text>\texttt{</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>}</xsl:text>
     </xsl:template>
 
     <xsl:template match="elml:formatted[@style='java']">
-        <xsl:text> \verb|</xsl:text><xsl:apply-templates/><xsl:text>|</xsl:text>
+        <xsl:text>\verb|</xsl:text><xsl:apply-templates/><xsl:text>|</xsl:text>
     </xsl:template>
 
     <xsl:template match="elml:paragraph[@cssClass='code']">
@@ -397,6 +398,171 @@
 	</xsl:choose>
 	</xsl:template>
 
+	<!-- tentative de gestion des accents dans les URLs -->
+    <xsl:template match="elml:link">
+        <xsl:param name="label" select="@targetLabel"/>
+        <xsl:param name="TempURL">
+            <xsl:choose>
+                <xsl:when test="not((@role='student') or (@role=$role) or (not (@role)))">
+                    <xsl:text>none</xsl:text>
+                </xsl:when>
+                <xsl:when test="starts-with(@uri, 'http') or starts-with(@uri, 'mailto:')">
+                    <xsl:value-of select="@uri"/>
+                </xsl:when>
+                <xsl:when test="@uri">
+                    <xsl:value-of select="$server"/>
+                    <xsl:text>/</xsl:text>
+                    <xsl:value-of select="/elml:lesson/@label"/>
+                    <xsl:text>/</xsl:text>
+                    <xsl:value-of select="$lang"/>
+                    <xsl:choose>
+                        <xsl:when test="starts-with(@uri, '..')">
+                            <xsl:value-of select="substring-after(@uri, '..')"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:text>/text/</xsl:text>
+                            <xsl:value-of select="@uri"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:choose>
+                        <xsl:when test="@targetLesson and not(@targetLesson = /elml:lesson/@label)">
+                            <xsl:value-of select="$server"/>
+                            <xsl:text>/</xsl:text>
+                            <xsl:value-of select="@targetLesson"/>
+                            <xsl:text>/</xsl:text>
+                            <xsl:value-of select="$lang"/>
+                            <xsl:text>/</xsl:text>
+                        </xsl:when>
+                        <xsl:when test="name(//*[@label=$label])='unit'">
+                            <xsl:value-of select="/elml:lesson/@label"/>
+                            <xsl:text>unit</xsl:text>
+                            <xsl:value-of select="@targetLabel"/>
+                            <xsl:value-of select="$filename_suffix"/>
+                        </xsl:when>
+                        <xsl:when test="name(//*[@label=$label])='learningObject'">
+                            <xsl:value-of select="/elml:lesson/@label"/>
+                            <xsl:value-of select="//*[@label=$label]/../@label"/>
+                            <xsl:value-of select="@targetLabel"/>
+                            <xsl:value-of select="$filename_suffix"/>
+                        </xsl:when>
+                        <xsl:when test="@targetLabel">
+                            <xsl:value-of select="/elml:lesson/@label"/>
+                            <xsl:value-of select="//*[@label=$label]/../@label"/>
+                            <xsl:value-of select="@targetLabel"/>
+                            <xsl:value-of select="$filename_suffix"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="/elml:lesson/@label"/>
+                            <xsl:text>index</xsl:text>
+                            <xsl:value-of select="$filename_suffix"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:param>
+        <xsl:choose>
+            <xsl:when test="((boolean(name(preceding-sibling::node()[1])) or boolean(name(following-sibling::node()[1]))) and not(../text())) or (count(../*)=number('1') and (name(parent::node())='look' or name(parent::node())='act' or name(parent::node())='clarify'))">
+                <xsl:text>
+					\par
+				</xsl:text>
+                <xsl:choose>
+                    <xsl:when test="not((@role='student') or (@role=$role) or (not (@role))) or $display_links='no'">
+                        <xsl:apply-templates/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:choose>
+                            <xsl:when test="starts-with($TempURL, 'http') or starts-with($TempURL, 'mailto:')">
+                                <xsl:apply-templates/>
+                                <xsl:text>: \url{</xsl:text>
+                                <xsl:value-of select="replace($TempURL,'http://','')" disable-output-escaping="yes"/>
+                                <xsl:text>} </xsl:text>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:apply-templates/>
+                                <xsl:text>: </xsl:text>
+                                <xsl:value-of select="$name_page"/>
+                                <xsl:text disable-output-escaping="yes">~</xsl:text>
+                                <xsl:text>\pageref{</xsl:text>
+                                <xsl:value-of select="replace($TempURL, '_','')" disable-output-escaping="yes"/>
+                                <xsl:text>}. </xsl:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:otherwise>
+                </xsl:choose>
+                <xsl:if test="@size or @type or @legend">
+                    <xsl:text> (</xsl:text>
+                    <xsl:if test="@legend">
+                        <xsl:value-of select="@legend"/>
+                    </xsl:if>
+                    <xsl:if test="@size or @type">
+                        <xsl:text>, </xsl:text>
+                    </xsl:if>
+                    <xsl:if test="@size">
+                        <xsl:value-of select="$name_size"/>
+                        <xsl:text disable-output-escaping="yes">:~</xsl:text>
+                        <xsl:value-of select="@size"/>
+                        <xsl:if test="@type">
+                            <xsl:text>, </xsl:text>
+                        </xsl:if>
+                    </xsl:if>
+                    <xsl:if test="@type">
+                        <xsl:value-of select="$name_type"/>
+                        <xsl:text>: </xsl:text>
+                        <xsl:value-of select="@type"/>
+                    </xsl:if>
+                    <xsl:text>)</xsl:text>
+                </xsl:if>
+                <xsl:text>
+					\par
+				</xsl:text>
+            </xsl:when>
+            <xsl:when test="not((@role='student') or (@role=$role) or (not (@role))) or $display_links='no'">
+                <xsl:apply-templates/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:choose>
+                    <xsl:when test="starts-with($TempURL, 'http') or starts-with($TempURL, 'mailto:')">
+                        <xsl:apply-templates/>
+                        <xsl:text> (\url{</xsl:text>
+                        <xsl:value-of select="replace($TempURL,'http://','')"/>
+                        <xsl:text>})</xsl:text>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:apply-templates/>
+                        <xsl:text> (</xsl:text>
+                        <xsl:value-of select="$name_page"/>
+                        <xsl:text disable-output-escaping="yes">~</xsl:text>
+                        <xsl:text>\pageref{</xsl:text>
+                        <xsl:value-of select="replace($TempURL, '_','')" disable-output-escaping="yes"/>
+                        <xsl:text>})</xsl:text>
+                    </xsl:otherwise>
+                </xsl:choose>
+                <xsl:if test="$display_links='yes' and (@size or @type or @legend)">
+                    <xsl:text>{\footnotesize </xsl:text>
+                    <xsl:text> </xsl:text>
+                    <xsl:if test="@legend">
+                        <xsl:value-of select="@legend"/>
+                        <xsl:text>. </xsl:text>
+                    </xsl:if>
+                    <xsl:if test="@size">
+                        <xsl:value-of select="$name_size"/>
+                        <xsl:text disable-output-escaping="yes">:~</xsl:text>
+                        <xsl:value-of select="@size"/>
+                        <xsl:text>. </xsl:text>
+                    </xsl:if>
+                    <xsl:if test="@type">
+                        <xsl:value-of select="$name_type"/>
+                        <xsl:text>: </xsl:text>
+                        <xsl:value-of select="@type"/>
+                        <xsl:text>. </xsl:text>
+                    </xsl:if>
+                    <xsl:text>}</xsl:text>
+                </xsl:if>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
 
 
 </xsl:stylesheet>

@@ -20,18 +20,13 @@
 					Ces exercices préparatoires sont composés de 3 parties :
 				</paragraph>
 				<list listStyle="unordered">
-					<item>Quelques questions pour vérifier ce que vous avez retenu du TD1;</item>
-					<item>Les documents théoriques à lire avant d'aller au laboratoire;</item>
-					<item>Une simulation de la mini interrogation qui vous attend en début de laboratoire.</item>
+					<item>quelques questions pour vérifier ce que vous avez retenu du TD1;</item>
+					<item>les documents théoriques à lire avant d'aller au laboratoire;</item>
+					<item>une simulation de la mini interrogation qui vous attend en début de laboratoire.</item>
 				</list>
 			</entry>
 
 			<learningObject title="Révision du TD1">
-				<clarify>
-					<paragraph title="Objectifs" icon="objective"> 
-						Voyons ce que vous avez retenu du TD1.
-					</paragraph>
-				</clarify>
     
 				<act>
 					<selfCheck title="La connexion" shuffle="no">

@@ -95,7 +95,7 @@
         
 				<paragraph>  
 					Si vous voulez en savoir plus, vous pouvez lire ce petit    
-					<link uri="http://fr.wikipedia.org/wiki/Encodage_de_caract%E8res">article</link>
+					<link uri="http://fr.wikipedia.org/wiki/Encodage_de_caractères">article</link>
 					sur wikipedia ou encore cet
 					<link uri="http://blog.namok.be?post/2009/11/30/Unicode%2C-UTF8%2C-UTF16%2C-UTF32%2C-...-et-tutti-quanti">article</link>  
 					de pbt 
@@ -144,8 +144,8 @@
       
 				<list listStyle="unordered">
 					<item>Une option modifie le sens d'une commande </item>  
-					<item>Elle commence par le signe "<formatted style="code">-</formatted>" suivi d'une seule lettre</item>  
-					<item>Ou encore par le double tiret "<formatted style="code">--</formatted>" suivi d'un nom d'option</item>  
+					<item>Elle commence par le signe "<formatted style="java">-</formatted>" suivi d'une seule lettre</item>  
+					<item>Ou encore par le double tiret "<formatted style="java">--</formatted>" suivi d'un nom d'option</item>  
 				</list>  
 				
 				<paragraph>
