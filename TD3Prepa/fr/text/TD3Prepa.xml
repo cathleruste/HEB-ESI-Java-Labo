@@ -2,7 +2,7 @@
 <lesson xmlns="http://www.elml.ch" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
-	label="TD3Prepa" title="TD3 - exercices préparatoires">
+	label="TD3Prepa" title="TD3 - Exercices préparatoires">
 
 		<entry>
 			<paragraph>  
@@ -117,38 +117,38 @@
 							(c-à-d qu'il doit compiler et respecter les conventions) parmi les suivantes ?
 						</question>
 						<answer feedback="Java est sensible à la casse, il différencie donc majuscule et minuscule." correct="no"> 
-							version 1
+							code 1
 							<paragraph cssClass="code">
     public class exercice {
-        // Mettre ici les methodes  
+        // put methods here  
     }</paragraph>
 						</answer>
 						<answer feedback="les mots clé public et class doivent être en minuscule" correct="no"> 
-							version 2
+							code 2
 							<paragraph cssClass="code">
     public CLASS Exercice {
-        // Mettre ici les methodes   
+        // put methods here  
     }</paragraph>
 						</answer>
 						<answer feedback="le nom de la classe commence par une majuscule" correct="yes">
-							version 3 
+							code 3 
 							<paragraph cssClass="code">
     public class Exercice {  
-        // Mettre ici les methodes  
+        // put methods here  
     }</paragraph>
 						</answer>
 						<answer feedback="le nom de la classe commence par une majuscule" correct="yes"> 
-							version 4 
+							code 4 
 							<paragraph cssClass="code">
     public class MonExercice {  
-        // Mettre ici les methodes  
+        // put methods here  
     }</paragraph>
 						</answer>
 						<answer feedback="" correct="no"> 
-							version 5 
+							code 5 
 							<paragraph cssClass="code">
     PUBLIC CLASS EXERCICE { 
-        // Mettre ici les methodes  
+        // put methods here  
     }</paragraph>
 						</answer>
 					</multipleChoice>
@@ -156,21 +156,21 @@
         
 				<selfCheck title="Nom d'un programme" shuffle="yes">
 					<fillInBlanks>
-						<question>Quels sont les noms des fichiers dont la structure générale du programme est la suivante ?</question>
+						<question>Dans quels fichiers doivent être placés les programmes suivants :</question>
 						<gapText> 
 							<paragraph cssClass="java">
     public class Exercice {  
-        // Methodes    
+        // Methods    
     }						</paragraph>
 							<gap answers="Exercice.java">Exercice.java</gap> 
 							<paragraph cssClass="java">
     public class SommeChiffres {
-        // Methodes   
+        // Methods    
     }						</paragraph>
 							<gap answers="SommeChiffres.java">SommeChiffres.java</gap> 
 							<paragraph cssClass="java">
     public class sommechiffres {    
-        // Methodes   
+        // Methods    
     }						</paragraph>
 							<gap answers="sommechiffres.java">sommechiffres.java</gap> 
 						</gapText>
@@ -262,7 +262,7 @@
 						<question>Quels morceaux de code, parmi les suivants, NE sont PAS corrects ? Pourquoi ?
 						</question>
 						<answer feedback="On a besoin de la ligne d'import" correct="yes"> 
-							version 1
+							code 1
 							<paragraph cssClass="java">
     import java.util.Scanner;
     public class Exercice { 
@@ -275,10 +275,10 @@
 						</answer>          
             
 						<answer feedback="En effet, ce code est tout à fait correct" correct="no"> 
-							version 2
+							code 2
 							<paragraph cssClass="java">
     import java.util.Scanner;
-    public class Exercice{  
+    public class Exercice {  
         public static void main(String[] args) {
             Scanner clavier = new Scanner(System.in);
             int nombre1;
@@ -288,7 +288,7 @@
 						</answer>
             
 						<answer feedback="En effet, ce code est tout à fait correct" correct="no"> 
-							version 3
+							code 3
 							<paragraph cssClass="java">
     import java.util.Scanner;
     public class Exercice {
@@ -301,7 +301,7 @@
 						</answer>
             
 						<answer feedback="On a besoin de la déclaration et de la création d'un objet Scanner" correct="yes"> 
-							version 4
+							code 4
 							<paragraph cssClass="java">
     import java.util.Scanner;
     public class Exercice { 
@@ -318,17 +318,17 @@
 					<fillInBlanks>
 						<question>Complétez les méthodes suivantes afin de permettre une lecture au clavier adéquate.</question>
 						<gapText>
-							<paragraph cssClass="java">
+							<paragraph cssClass="javawithblanks">
 import java.util.Scanner;
-public class ExerciceLecture {
+public class ReadingExercice {
     public static void main (String[] args) {  
-        Scanner clavier = new Scanner(System.in);  
-        int nbEntier = clavier.<gap answers="">nextInt()</gap>;
-        double nbReel = clavier.<gap answers="">nextDouble()</gap> ;
-        boolean ok = clavier.<gap answers="">nextBoolean()</gap> ;
-        String chaine = clavier.<gap answers="">next()</gap> ; // Si on lit un mot
-        String chaine = clavier.<gap answers="">nextLine()</gap> ; // Si on lit toute une ligne 
-        char caractere = clavier.<gap answers="">next.charAt()</gap> ;
+        Scanner keyboard = new Scanner(System.in);  
+        int integerNb = keyboard.<gap answers="">nextInt()</gap>;
+        double realNb = keyboard.<gap answers="">nextDouble()</gap> ;
+        boolean ok = keyboard.<gap answers="">nextBoolean()</gap> ;
+        String string1 = keyboard.<gap answers="">next()</gap> ; // We read a word
+        String string2 = keyboard.<gap answers="">nextLine()</gap> ; // We read a line 
+        char aCharacter = keyboard.<gap answers="">next.charAt()</gap> ;
     }
 }							</paragraph>
 						</gapText>
@@ -343,7 +343,7 @@ public class ExerciceLecture {
 							<formatted style="code">double Taxe;</formatted>  
 						</answer>
 		            <answer feedback="Pour une constante, le nom doit être tout en majuscules et utiliser &quot;_&quot; pour séparer les mot." correct="yes"> 
-		               <formatted style="code">final double TVA;</formatted>
+		               <formatted style="java">final double TVA;</formatted>
 		            </answer>
 		            <answer feedback="Dans tous les cas : le nom doit être explicite (sauf abréviations courantes). Ici, taxeValeurAjoutée est accepté quoique un peu long et tva est tellement courant..." correct="yes"> 
 		               <formatted style="code">double taxeValeurAjoutée;</formatted>  
@@ -352,7 +352,7 @@ public class ExerciceLecture {
 		               <formatted style="code">final double TAUXTVA;</formatted> 
 		            </answer>
 		            <answer feedback="Pour une constante, le nom doit être tout en majuscules et utiliser &quot;_&quot; pour séparer les mot." correct="yes"> 
-		               <formatted style="code">final double TAUX_TVA</formatted> 
+		               <formatted style="java">final double TAUX_TVA</formatted> 
 		            </answer>
 		            <answer feedback="Dans tous les cas : le nom doit être explicite (sauf abréviations courantes)." correct="no"> 
 		               <formatted style="code">double t;</formatted>
@@ -389,13 +389,18 @@ public class ExerciceLecture {
 			</act> 
 		</learningObject>
     
-		<learningObject title="À lire"> 
+		<learningObject title="Logique"> 
 			<clarify>
 				<paragraph>  
 					Assurez-vous de venir au laboratoire avec vos solutions des exercices 4, 8, 10, 11 et 12 
 					du chapitre 3 "Algorithmes séquentiels" de votre cours de logique.  
 				</paragraph>   
-				<paragraph title="Théorie" icon="icon_reading"> 
+			</clarify>
+		</learningObject>
+
+		<learningObject title="Théorie"> 
+			<clarify>
+				<paragraph> 
 					Avant de venir au prochain labo, lisez attentivement le point 20 du guide visuel.  
 				</paragraph>   
 			</clarify>
@@ -403,7 +408,7 @@ public class ExerciceLecture {
     
 		<learningObject title="Bravo">
 			<clarify>
-				<paragraph title="Bravo" icon="icon_bravo"> 
+				<paragraph> 
 					Si vous avez réussi à répondre correctement aux questions précédentes, 
 					c'est que vous êtes prêts à venir au laboratoire dans les meilleures conditions!  
 				</paragraph>   

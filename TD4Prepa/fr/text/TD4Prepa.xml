@@ -282,7 +282,7 @@
           si nombre1 = 0 alors
               écrire nombre1, " est nul"
           sinon
-              écrire nombre1, " est negatif"
+              écrire nombre1, " est négatif"
           fin si
       fin si
   fin module	
@@ -327,7 +327,7 @@ public class Test{
 		
 		<learningObject title="Bravo">
 			<clarify>
-				<paragraph title="Bravo" icon="icon_bravo">
+				<paragraph>
 					Si vous avez réussi à répondre correctement aux questions précédentes,
 					c'est que vous êtes prêts à venir au laboratoire dans les meilleures conditions!
 				</paragraph>

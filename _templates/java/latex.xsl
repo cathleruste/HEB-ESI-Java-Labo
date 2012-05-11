@@ -73,9 +73,8 @@
     basicstyle=\footnotesize,
     frameround=tttt, frame=trbl, framerule=0pt, rulecolor=\color{gray},
     lineskip=-1pt,   % pour rapprocher les lignes
-    flexiblecolumns,
-    tabsize=4, escapechar=\\,
-    extendedchars=true
+    flexiblecolumns, escapechar=\\,
+    tabsize=4, extendedchars=true
   }
 \lstnewenvironment{Java}[1][]{\lstset{style=lstverb,language=java,#1}}{}
 				\ifx\pdfoutput\undefined
@@ -305,19 +304,38 @@
     </xsl:template>
 
     <xsl:template match="elml:formatted[@style='code']">
-        <xsl:text>\texttt{</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>}</xsl:text>
+        <xsl:text>\verb@</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>@</xsl:text>
     </xsl:template>
 
     <xsl:template match="elml:formatted[@style='java']">
-        <xsl:text>\verb|</xsl:text><xsl:apply-templates/><xsl:text>|</xsl:text>
+        <xsl:text>\verb|</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>|</xsl:text>
     </xsl:template>
 
     <xsl:template match="elml:paragraph[@cssClass='code']">
+        <xsl:param name="display">
+            <xsl:call-template name="elml:display"/>
+        </xsl:param>
+        <xsl:if test="$display='yes'">
         <xsl:text>\begin{verbatim}</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>\end{verbatim}</xsl:text>
+		</xsl:if>
     </xsl:template>
 
     <xsl:template match="elml:paragraph[@cssClass='java']">
-        <xsl:text>\mbox{}\begin{Java}</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>\end{Java}</xsl:text>
+        <xsl:param name="display">
+            <xsl:call-template name="elml:display"/>
+        </xsl:param>
+        <xsl:if test="$display='yes'">
+        <xsl:text>\begin{Java}</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>\end{Java}</xsl:text>
+		</xsl:if>
+    </xsl:template>
+
+    <xsl:template match="elml:paragraph[@cssClass='javawithblanks']">
+        <xsl:param name="display">
+            <xsl:call-template name="elml:display"/>
+        </xsl:param>
+        <xsl:if test="$display='yes'">
+        <xsl:text>\begin{Java}</xsl:text><xsl:apply-templates/><xsl:text>\end{Java}</xsl:text>
+		</xsl:if>
     </xsl:template>
 
     <xsl:template match="elml:question">
@@ -368,8 +386,9 @@
 		<xsl:otherwise>
 			<xsl:choose>
 				 <xsl:when test="string-length(.)&lt;2"><xsl:text> \textcolor{gray}{\underline{\hspace*{1em}}} </xsl:text></xsl:when>
-				 <xsl:when test="string-length(.)&lt;4"><xsl:text> \textcolor{gray}{\underline{\hspace*{3em}}} </xsl:text></xsl:when>
-				 <xsl:when test="string-length(.)&lt;8"><xsl:text> \textcolor{gray}{\underline{\hspace*{6em}}} </xsl:text></xsl:when>
+				 <xsl:when test="string-length(.)&lt;4"><xsl:text> \textcolor{gray}{\underline{\hspace*{2em}}} </xsl:text></xsl:when>
+				 <xsl:when test="string-length(.)&lt;6"><xsl:text> \textcolor{gray}{\underline{\hspace*{3em}}} </xsl:text></xsl:when>
+				 <xsl:when test="string-length(.)&lt;8"><xsl:text> \textcolor{gray}{\underline{\hspace*{5em}}} </xsl:text></xsl:when>
 				 <xsl:when test="string-length(.)&lt;16"><xsl:text> \textcolor{gray}{\underline{\hspace*{10em}}} </xsl:text></xsl:when>
 				 <xsl:when test="string-length(.)&lt;32"><xsl:text> \textcolor{gray}{\underline{\hspace*{20em}}} </xsl:text></xsl:when>
 				 <xsl:otherwise><xsl:text> \textcolor{grey}{\underline{\hspace*{25em}}} </xsl:text></xsl:otherwise>
@@ -379,7 +398,7 @@
 	</xsl:template>
 
     <!-- Texte à trous avec taille fonction de la longueur de la bonne réponse. Dans Java -->
-	<xsl:template match="//elml:paragraph[@cssClass='java']//elml:gap">
+	<xsl:template match="//elml:paragraph[@cssClass='javawithblanks']//elml:gap">
 	<xsl:choose>
 		<xsl:when test="$role='tutor'">
 			 <xsl:text> \textit{</xsl:text>
@@ -391,8 +410,8 @@
 				 <xsl:when test="string-length(.)&lt;2"><xsl:text> \_\_ </xsl:text></xsl:when>
 				 <xsl:when test="string-length(.)&lt;4"><xsl:text> \_\_\_\_ </xsl:text></xsl:when>
 				 <xsl:when test="string-length(.)&lt;8"><xsl:text> \_\_\_\_\_\_\_\_ </xsl:text></xsl:when>
-				 <xsl:when test="string-length(.)&lt;16"><xsl:text> \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ </xsl:text></xsl:when>
-				 <xsl:otherwise><xsl:text> \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ </xsl:text></xsl:otherwise>
+				 <xsl:when test="string-length(.)&lt;16"><xsl:text> \_\_\_\_\_\_\_\_\_\_\_\_\_\_ </xsl:text></xsl:when>
+				 <xsl:otherwise><xsl:text> \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ </xsl:text></xsl:otherwise>
 			</xsl:choose>
 		</xsl:otherwise>
 	</xsl:choose>

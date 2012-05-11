@@ -107,12 +107,22 @@
 		<code><xsl:apply-templates/></code>
 	</xsl:template>
   
-    <xsl:template match="elml:paragraph[@cssClass='java']">
+    <xsl:template match="elml:paragraph[@cssClass='java'] | elml:paragraph[@cssClass='javawithblanks']">
+		<xsl:param name="display">
+			<xsl:call-template name="elml:display"/>
+		</xsl:param>
+		<xsl:if test="$display='yes'">
 			<pre><xsl:apply-templates/></pre>
+		</xsl:if>
     </xsl:template>
 
     <xsl:template match="elml:paragraph[@cssClass='code']">
+		<xsl:param name="display">
+			<xsl:call-template name="elml:display"/>
+		</xsl:param>
+		<xsl:if test="$display='yes'">
 			<pre><xsl:apply-templates/></pre>
+		</xsl:if>
     </xsl:template>
 
 	<!-- Si titre dans popup ne pas metre le texte par déaut en plus)-->
