@@ -123,6 +123,167 @@ System.out.println("Etudiant g*****");
 				</list>
 			</act>
 		</learningObject>
+
+		<learningObject title="Les choix">
+			<act>
+				<paragraph title="Exercice" icon="act"/>
+				<paragraph>
+					Étant donné le code suivant, 
+					l’instruction de choix (if-else) peut être remplacée par une seule affectation laquelle ?
+				</paragraph>
+				<paragraph cssClass="java">
+import java.util.Scanner;
+public class Ex {
+
+    public static void main (String[] args) {	
+        Scanner clavier = new Scanner(System.in);
+        int entier1;
+        boolean vautMoinsUn; //sera vrai si le nombre vaut -1
+        entier1 = clavier.nextInt();
+
+        if (entier1 == -1) {
+            vautMoinsUn = true; 
+        } else {
+            vautMoinsUn = false;
+        }
+        System.out.println (vautMoinsUn);
+    }
+}				</paragraph>
+
+				<paragraph title="Quel affichage obtient-on ?" icon="act"/>
+				<paragraph>
+					Copiez dans votre répertoire td4 le programme <formatted style="code">Ex1</formatted>
+					qui se trouve dans <formatted style="code">/eCours/java/td/td4/Ex1.java</formatted>.
+					Écrivez (avant de l’exécuter) quel sera l’affichage obtenu dans les différents cas de jeux de données 
+					repris ci dessous. 
+					Justifiez vos réponses. Exécutez le programme pour vérifier vos réponses.
+				</paragraph>
+				<paragraph cssClass="java">
+<![CDATA[					
+import java.util.Scanner;
+public class Ex1 {
+
+    public static void main (String[] args) {
+        Scanner clavier = new Scanner(System.in);
+        int entier1;
+        int entier2;
+        entier1 = clavier.nextInt();
+        entier2 = clavier.nextInt();
+
+        if (entier1>0) {
+            if (entier2>0) {
+                System.out.println (entier1 + ", " + entier2 + " positives");
+			}
+		else {			
+            System.out.println (entier1 + " is negative");
+        } 
+    }
+}
+}}]]>			</paragraph>
+				<table>
+					<tablerow>
+						<tableheading>entier1</tableheading>
+						<tableheading>entier2</tableheading>
+						<tableheading>affiché</tableheading>
+					</tablerow>
+					<tablerow>
+						<tabledata>1</tabledata>
+						<tabledata>2</tabledata>
+						<tabledata></tabledata>
+					</tablerow>
+					<tablerow>
+						<tabledata>1</tabledata>
+						<tabledata>-2</tabledata>
+						<tabledata></tabledata>
+					</tablerow>
+					<tablerow>
+						<tabledata>-1</tabledata>
+						<tabledata>-2</tabledata>
+						<tabledata></tabledata>
+					</tablerow>
+				</table>
+
+				<paragraph title="Quel affichage obtient-on ?" icon="act"/>
+				<paragraph>
+					Copiez le programme <formatted style="java">Ex2</formatted> 
+					dans <formatted style="java">/eCours/java/td/td4/Ex2.java</formatted>
+					dans votre répertoire <formatted style="java">td4</formatted>.
+				</paragraph>
+				<paragraph>
+					Écrivez (avant de l’exécuter) quel sera l’affichage obtenu dans les
+					différents cas de jeux de données repris ci dessous. Justifiez vos
+					réponses. Exécutez le programme pour vérifier vos réponses.
+				</paragraph>
+				<paragraph cssClass="java">
+<![CDATA[					
+import java.util.Scanner;
+public class Ex2 {
+    public static void main (String[] args){
+        Scanner clavier = new Scanner(System.in);
+        int entier1;
+        int entier2;
+        entier1 = clavier.nextInt();
+        entier2 = clavier.nextInt();
+
+        if (entier1>0) {
+            if (entier2>0) {
+                System.out.println (entier1 + ", " + entier2 + " positives");
+            } 
+        }
+        else {
+            System.out.println (entier1 + " is negative");
+        } 
+    }
+}}]]>				</paragraph>
+				<table>
+					<tablerow>
+						<tableheading>entier1</tableheading>
+						<tableheading>entier2</tableheading>
+						<tableheading>affiché</tableheading>
+					</tablerow>
+					<tablerow>
+						<tabledata>1</tabledata>
+						<tabledata>2</tabledata>
+						<tabledata></tabledata>
+					</tablerow>
+					<tablerow>
+						<tabledata>1</tabledata>
+						<tabledata>-2</tabledata>
+						<tabledata></tabledata>
+					</tablerow>
+					<tablerow>
+						<tabledata>-1</tabledata>
+						<tabledata>-2</tabledata>
+						<tabledata></tabledata>
+					</tablerow>
+				</table>
+
+				<paragraph title="Maximum de 2 nombres" icon="act">
+					Syllabus de logique page 44 exercice 3 du chapitre 4.
+				</paragraph>
+
+				<paragraph title="Test de signe" icon="act">
+					Syllabus de logique page 44 exercice 5 du chapitre 4.
+				</paragraph>
+				<paragraph>
+					En logique, on utiliserait un « selon que »; 
+					écrivez-le en java en utilisant des « if-else imbriqués ».
+					Comment présenter le code pour montrer qu'il s'agit en fait d'un « selon que » ?
+				</paragraph>
+
+				<paragraph title="Jour du mois" icon="act">
+					Syllabus de logique page 45 exercice 14 du chapitre 4.
+				</paragraph>
+				<paragraph>
+					(Utilisez l’instruction « switch » pour résoudre cet exercice mais 
+					<formatted style="bold">pas</formatted> avec 30 cas, 7 suffisent!).
+				</paragraph>
+
+				<paragraph title="Année bissextile" icon="act">
+					Syllabus de logique page 45 exercice 9 du chapitre 4.
+				</paragraph>
+			</act>
+		</learningObject>
 		
 	</unit>
 	
