@@ -78,11 +78,10 @@ System.out.println("Etudiant g*****");
 public 
 class 
 Exercice{
-public 
-static 
+public static 
 void 
-main 
-(String [] args){
+main (
+String [] args){
 System.out.println("Etudiant g*****");
 }
 }				</paragraph>
@@ -95,15 +94,33 @@ System.out.println("Etudiant g*****");
 				</popup>
 
 				<paragraph title="Concaténation de fichier" icon="act">
-					Dans /eCours/java/td/td4 se trouvent 2 programmes java : Début.java et Fin.java. 
+					Dans <formatted style="code">/eCours/java/td/td4</formatted> se trouvent 2 programmes java : 
+					<formatted style="code">Début.java</formatted> et <formatted style="code">Fin.java</formatted>. 
 				</paragraph>
 				<list>
-					<item>Copiez ces fichiers dans votre répertoire td4.</item>
-					<item>Fusionnez le programme Fin à la fin de Début.</item>
+					<item>Copiez ces fichiers dans votre répertoire <formatted style="code">td4</formatted>.</item>
+					<item>Fusionnez le programme <formatted style="code">Fin</formatted> à la fin de <formatted style="code">Début</formatted>.</item>
 				</list>
 				<paragraph>
 					Vous avez maintenant un nouveau programme complet que vous pouvez utiliser. 
 				</paragraph>
+			</act>
+		</learningObject>
+
+		<learningObject title="Aller plus loin avec l'éditeur">
+			<act>
+				<paragraph title="Configuration de l'éditeur" icon="act"/>
+				<paragraph>
+					Lorsque que vous codez un programme Java, il y a des morceaux de codes qui reviennent systématiquement : 
+					public static..., System.out..., etc. 
+					Ce serait pratique de pouvoir disposer de raccourcis pour les écrire. Et bien, c'est possible !
+				</paragraph>
+				<list listStyle="ordered">
+					<item> Copiez dans votre home le fichier <formatted style="bold">.vimrc</formatted> 
+					(notez le<formatted style="bold"> .</formatted>) se trouvant chez ~pbt</item>
+					<item>Examinez-le et repérez les lignes qui créent des raccourcis pour l'éditeur.</item>
+					<item>Testez-les !</item>
+				</list>
 			</act>
 		</learningObject>
 		
