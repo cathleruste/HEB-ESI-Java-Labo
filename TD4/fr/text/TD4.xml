@@ -170,17 +170,17 @@ public class Ex1 {
         entier1 = clavier.nextInt();
         entier2 = clavier.nextInt();
 
-        if (entier1>0) {
-            if (entier2>0) {
+        if (entier1 > 0) {
+            if (entier2 > 0) {
                 System.out.println (entier1 + ", " + entier2 + " positives");
 			}
-		else {			
-            System.out.println (entier1 + " is negative");
-        } 
+		    else {			
+                System.out.println (entier1 + " is negative");
+            } 
+        }
     }
-}
-}}]]>			</paragraph>
-				<table>
+}]]>			</paragraph>
+				<table legend="Tests du programme Ex1">
 					<tablerow>
 						<tableheading>entier1</tableheading>
 						<tableheading>entier2</tableheading>
@@ -234,8 +234,8 @@ public class Ex2 {
             System.out.println (entier1 + " is negative");
         } 
     }
-}}]]>				</paragraph>
-				<table>
+}]]>				</paragraph>
+				<table legend="Tests du programme Ex2">
 					<tablerow>
 						<tableheading>entier1</tableheading>
 						<tableheading>entier2</tableheading>
