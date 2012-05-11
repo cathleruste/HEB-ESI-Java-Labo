@@ -49,6 +49,8 @@
             </xsl:if>
             <xsl:text disable-output-escaping="yes">
 				\usepackage{pifont}  <!-- MCD: Pour dingbats -->
+				\usepackage[utf8]{inputenc}
+				\usepackage[T1]{fontenc} 
 				\usepackage{fancyhdr}
 				\usepackage{textcomp}
 				\usepackage{makeidx}
@@ -306,11 +308,11 @@
     </xsl:template>
 
     <xsl:template match="elml:paragraph[@cssClass='code']">
-        <xsl:text>\begin{verbatim}</xsl:text><xsl:apply-templates/><xsl:text>\end{verbatim}</xsl:text>
+        <xsl:text>\begin{verbatim}</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>\end{verbatim}</xsl:text>
     </xsl:template>
 
     <xsl:template match="elml:paragraph[@cssClass='java']">
-        <xsl:text>\mbox{}\begin{Java}</xsl:text><xsl:apply-templates/><xsl:text>\end{Java}</xsl:text>
+        <xsl:text>\mbox{}\begin{Java}</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>\end{Java}</xsl:text>
     </xsl:template>
 
     <xsl:template match="elml:question">

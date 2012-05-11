@@ -92,7 +92,7 @@
   symbol : class string
   location:class ErrCompilation
   public static void main ( string[] args ) {
-
+  ^ 
   1
   error						</paragraph>
 							<paragraph>
@@ -277,19 +277,19 @@
 		
       lire nombre1
       si nombre1 < 0 alors
-          ecrire nombre1, " est positif"
+          écrire nombre1, " est positif"
       sinon
           si nombre1 = 0 alors
-              ecrire nombre1, ' est nul"
+              écrire nombre1, " est nul"
           sinon
-              ecrire nombre1, " est negatif"
+              écrire nombre1, " est negatif"
           fin si
       fin si
   fin module	
-]]>
-				</paragraph>
+]]>				</paragraph>
 				<popup> 
 					<paragraph cssClass="java">
+<![CDATA[
 import java.util.Scanner;
 public class Test{
 
@@ -301,17 +301,17 @@ public class Test{
 		System.out.println("Entrez la valeur du nombre"); 
 		nombre1 = clavier.nextInt();
 		System.out.print(nombre1); 
-		if (nombre1 &gt; 0) {		
-			System.out.println(" est positif");<newLine/>
+		if (nombre1 < 0) {		
+			System.out.println(" est positif");
 		} else if (nombre1 == 0){		
-			System.out.println(" est nul");
+			System.out.println(" est nul ");
 		} else {
-			System.out.println(" est négatif");<newLine/>
+			System.out.println(" est négatif");
 		}
 	
 	}
 
-}					</paragraph>
+}]]>				</paragraph>
 				</popup>
 			</clarify>
 		</learningObject>
