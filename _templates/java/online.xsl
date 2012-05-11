@@ -104,19 +104,9 @@
 	</xsl:template>
 
 	<xsl:template match="elml:formatted[@style='java']">
-		<span><pre><xsl:apply-templates/></pre></span>
+		<code><xsl:apply-templates/></code>
 	</xsl:template>
   
-	<xsl:template match="elml:formatted[@style='verb']">
-		<span><pre><xsl:apply-templates/></pre></span>
-	</xsl:template>
-
-	<xsl:template match="elml:formatted[@style='verbatim']">
-		<div class="input">
-			<pre><xsl:apply-templates/></pre>
-		</div>
-	</xsl:template>
-
     <xsl:template match="elml:paragraph[@cssClass='java']">
 			<pre><xsl:apply-templates/></pre>
     </xsl:template>
