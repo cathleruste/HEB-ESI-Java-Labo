@@ -320,6 +320,15 @@
 		</xsl:if>
     </xsl:template>
 
+    <xsl:template match="elml:paragraph[@cssClass='output']">
+        <xsl:param name="display">
+            <xsl:call-template name="elml:display"/>
+        </xsl:param>
+        <xsl:if test="$display='yes'">
+        <xsl:text>\begin{scriptsize}\begin{verbatim}</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>\end{verbatim}\end{scriptsize}</xsl:text>
+		</xsl:if>
+    </xsl:template>
+
     <xsl:template match="elml:paragraph[@cssClass='java']">
         <xsl:param name="display">
             <xsl:call-template name="elml:display"/>
@@ -390,8 +399,8 @@
 				 <xsl:when test="string-length(.)&lt;6"><xsl:text> \textcolor{gray}{\underline{\hspace*{3em}}} </xsl:text></xsl:when>
 				 <xsl:when test="string-length(.)&lt;8"><xsl:text> \textcolor{gray}{\underline{\hspace*{5em}}} </xsl:text></xsl:when>
 				 <xsl:when test="string-length(.)&lt;16"><xsl:text> \textcolor{gray}{\underline{\hspace*{10em}}} </xsl:text></xsl:when>
-				 <xsl:when test="string-length(.)&lt;32"><xsl:text> \textcolor{gray}{\underline{\hspace*{20em}}} </xsl:text></xsl:when>
-				 <xsl:otherwise><xsl:text> \textcolor{grey}{\underline{\hspace*{25em}}} </xsl:text></xsl:otherwise>
+				 <xsl:when test="string-length(.)&lt;32"><xsl:text> \textcolor{gray}{\underline{\hspace*{24em}}} </xsl:text></xsl:when>
+				 <xsl:otherwise><xsl:text> \textcolor{gray}{\underline{\hspace*{20em}}} </xsl:text></xsl:otherwise>
 			</xsl:choose>
 		</xsl:otherwise>
 	</xsl:choose>

@@ -125,6 +125,15 @@
 		</xsl:if>
     </xsl:template>
 
+    <xsl:template match="elml:paragraph[@cssClass='output']">
+		<xsl:param name="display">
+			<xsl:call-template name="elml:display"/>
+		</xsl:param>
+		<xsl:if test="$display='yes'">
+			<pre><xsl:apply-templates/></pre>
+		</xsl:if>
+    </xsl:template>
+
 	<!-- Si titre dans popup ne pas metre le texte par déaut en plus)-->
 	<xsl:template match="elml:popup">
 		<xsl:param name="display">
