@@ -614,4 +614,34 @@ function trim(s) {
 		 ]]> </xsl:text>
     </xsl:template>
 
+	<!-- Metadat -->
+    <xsl:template match="elml:organisation">
+            <ul>
+                <li><xsl:text>Niveau : </xsl:text><xsl:value-of select="@level"/></li>
+                <li><xsl:text>Module : </xsl:text><xsl:value-of select="@module"/></li>
+                <li><xsl:text>Leçon  : </xsl:text><xsl:value-of select="/elml:lesson/@title"/></li>
+            </ul>
+	</xsl:template>
+	<xsl:template match="elml:prerequisites"/>
+	<xsl:template match="elml:preReqItem"/>
+	<xsl:template match="elml:keywords"/>
+    <xsl:template match="elml:technical"/>
+    <xsl:template match="elml:technicalRequirement"/>
+	<xsl:template match="elml:lessonInfo">
+		<xsl:apply-templates/>
+	</xsl:template>
+    <xsl:template match="elml:educational"/>
+    <xsl:template match="elml:lifecycle">
+            <ul>
+				<li>Version : <xsl:value-of select="elml:version"/></li>
+				<li>Auteurs : <xsl:apply-templates select="elml:contribute"/></li>
+            </ul>
+    </xsl:template>
+    <xsl:template match="elml:contribute">
+        <xsl:for-each select="elml:person">
+			<xsl:value-of select="@name"/><xsl:text>  </xsl:text>
+        </xsl:for-each>
+    </xsl:template>
+
+
 </xsl:stylesheet>
