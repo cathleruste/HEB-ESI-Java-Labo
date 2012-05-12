@@ -50,7 +50,7 @@
             </xsl:if>
             <xsl:text disable-output-escaping="yes">
 				\usepackage{pifont}  <!-- MCD: Pour dingbats -->
-				\usepackage[utf8]{inputenc}
+				\usepackage[utf8x]{inputenc}
 				\usepackage[T1]{fontenc} 
 				\usepackage{fancyhdr}
 				\usepackage{textcomp}
