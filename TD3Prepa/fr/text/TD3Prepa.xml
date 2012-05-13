@@ -377,7 +377,7 @@ public class ReadingExercice {
 				</paragraph>
 				<paragraph cssClass="code">
 	Final.java:5:: cannot assign a value to final variable tva</paragraph>
-				<selfCheck title="" shuffle="yes" >
+				<selfCheck shuffle="yes" >
 					<multipleChoice>
 						<question>ce message veut dire que</question>
 						<answer feedback="Non, ce  n'est pas ça !" correct="no">le nom tva ne respecte pas la convention de nom</answer>

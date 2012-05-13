@@ -419,7 +419,7 @@
 				 <xsl:when test="string-length(.)&lt;2"><xsl:text> \_\_ </xsl:text></xsl:when>
 				 <xsl:when test="string-length(.)&lt;4"><xsl:text> \_\_\_\_ </xsl:text></xsl:when>
 				 <xsl:when test="string-length(.)&lt;8"><xsl:text> \_\_\_\_\_\_\_\_ </xsl:text></xsl:when>
-				 <xsl:when test="string-length(.)&lt;16"><xsl:text> \_\_\_\_\_\_\_\_\_\_\_\_\_\_ </xsl:text></xsl:when>
+				 <xsl:when test="string-length(.)&lt;16"><xsl:text> \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ </xsl:text></xsl:when>
 				 <xsl:otherwise><xsl:text> \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ </xsl:text></xsl:otherwise>
 			</xsl:choose>
 		</xsl:otherwise>
