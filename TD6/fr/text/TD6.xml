@@ -175,9 +175,7 @@
 						<solution/>
 					</fillInBlanks>
 				</selfCheck>
-			</act>
 
-			<clarify>
 				<paragraph title="FAQ" icon="icon_faq"/>
 				<paragraph>
 					<formatted style="bold">Et si mon prof ne me dit pas ce que contient le CLASSPATH, comment voir son contenu?</formatted>
@@ -226,9 +224,7 @@
 					il vous suffit d'ajouter une variable classpath ou de modifier la valeur de celle-ci. 
 					Toutefois, il est grand temps de penser à installer un linux ! 
 				</paragraph>
-			</clarify>
 
-			<act>
 				<selfCheck title="Exercice" shuffle="yes">
 					<fillInBlanks>
 						<question>
@@ -413,7 +409,7 @@
 						</tabledata>
 						<tabledata>
 							<paragraph>
-								<formatted style="italic">java g32010.td6.Test</formatted>
+								<formatted style="code">java g32010.td6.Test</formatted>
 							</paragraph>
 						</tabledata>
 					</tablerow>
@@ -421,8 +417,109 @@
 
 			</clarify>
 
+			<act>
+				
+				<paragraph title="Utiliser un package" icon="act"/>
+				<list listStyle="ordered">
+					<item>Modifiez votre programme Hello.java en y ajoutant l'instruction suivante à la première ligne: 
+					<formatted style="java">package gxxxxx.td6;</formatted></item>
+					<item>Compilez et exécutez le programme. Qu'est-ce qui change ?</item>
+					<item>Pourquoi est-il important d'assigner un package à nos programmes ?</item>
+					<item>Au fait ! Comment faire pour exécuter (sans le copier chez vous) le programme d'un de vos condisciples ?</item>
+				</list>
+				
+				<paragraph title="Comprendre le fonctionnement des packages" icon="act"/>
+				<list listStyle="ordered">
+					<item>Considérons le fichier <formatted style="code">/eCours/java/td6/Ex1.class</formatted>.
+						<list listStyle="unordered">
+							<item>Quel doit être le package de ce programme pour être en accord avec son emplacement ?</item>
+							<item>Justifiez votre réponse en vous référant au contenu de la variable
+								<formatted style="code">CLASSPATH</formatted>.</item>
+						</list>
+					</item>
+					<item>Comment voir le contenu d'une variable d'environnement <formatted style="code">CLASSPATH</formatted> ?</item>
+					<item>Il vous arrivera souvent d'oublier de spécifier le nom complet de la classe lors de l'exécution. 
+						<list listStyle="unordered">
+							<item>Faites le test et notez le message d'erreur renvoyé dans ce cas.</item>
+							<item>Comparez-le au cas où vous indiquez un nom de classe inexistant.</item>
+						</list>
+					</item>
+					<item>Au fait ! Pourquoi cela marchait-il lorsqu'on ne spécifiait pas de package ?</item>
+				</list>
+
+			</act>
+
 		</learningObject>
 		
+		<learningObject title="Boucles">
+			<clarify>
+				<paragraph>
+					Voici quelques exercices donnés au cours de logique, traduisez-les en java. 
+					N'oubliez pas d'utiliser un package et des méthodes pour chacun de vos programmes!
+				</paragraph>
+			</clarify>
+			<act>
+				<paragraph title="Compter jusque 10" icon="act">
+					Syllabus de logique "version avec tant que" et "version avec pour" de l'exemple 1 page 73 du chapitre 7.
+				</paragraph>
+				<paragraph title="Compter de 1 à N" icon="act">
+					Syllabus de logique solution de l'exemple 2 page 73 du chapitre 7.
+				</paragraph>
+				<paragraph title="Afficher pair" icon="act">
+					Syllabus de logique solutions 1 et 2 de l'exemple 3 page 74 du chapitre 7.
+				</paragraph>
+				<paragraph title="Somme de nombres" icon="act">
+					Syllabus de logique variantes 1, 2 et 3 de l'exemple 5 pages 75 et 76 du chapitre 7.
+				</paragraph>
+			</act>
+		</learningObject>
+		
+		<learningObject title="Trucs et astuces du jour">
+			<clarify>
+				<paragraph title="tail" icon="icon_reading"/>
+				<paragraph>
+					En bash, la commande <formatted style="input">tail</formatted>
+					affiche la dernière partie (par défaut : 10 lignes) de chacun des fichiers indiqués.
+				</paragraph>
+				<paragraph>
+					Si aucun fichier n'est fourni, ou si le nom '-' est mentionné,
+					la lecture se fera depuis l'entrée standard.
+				</paragraph>
+				<paragraph>
+					Si plusieurs fichiers sont fournis, un en-tête est affiché avant chaque
+					fichier contenant son nom encadré par `==&gt;' et `&lt;=='.
+				</paragraph>
+				<paragraph>
+					Utilisez le manuel pour découvrir les options de cette commande. 
+				</paragraph>
+
+			</clarify>
+			<act>
+				
+				<paragraph title="tail" icon="icon_reading"/>
+				<list listStyle="ordered">
+					<item>
+						Visualisez les 15 dernières lignes fichier
+						<formatted style="code">~/.bash_history</formatted> par la commande tail.
+					</item>
+					<item>Contient-il les dernières commandes ?</item>
+					<item>Qui a  le droit de visionner ce fichier ? </item>
+				</list>
+
+				<paragraph title="history" icon="act"/>
+				<list listStyle="ordered">
+					<item>
+						Ouvrez deux consoles et exécutez-y des commandes différentes.
+						Tapez plusieurs fois à la suite une même commande.
+					</item>
+					<item>
+						Qu'en est-il de l'affichage produit par la commande history dans
+						les deux consoles et du fichier <formatted style="code">~/.bash_history</formatted> ?
+					</item>
+				</list>
+			</act>
+		</learningObject>
+
 	</unit>
 	
 	<metadata>
