@@ -11,9 +11,10 @@ dt   /* Used for representing the glossary term (not the explanation!). */  { fo
 sub, sup   /* Used in the eLML element "formatted" */ { font-size: 0.6em }
 p.citation { margin-left:50%; text-align: right; font-style: italic;
 	background-color: #EEEEEE; border: 0.1em dotted gray; padding-right: 2em; }
-#ecole { font-size: 1.3em; }
-#cours { font-size: 1.2em; }
-#annee { font-size: 1.3em; }
+#ecole { font-size: 1.3em; position: absolute; left: 60px; top: 10px }
+#cours { font-size: 1.2em; position: absolute; left: 60px; top: 40px}
+#annee { font-size: 1.3em; position: absolute; right:20px; top: 40px}
+#logo  {}
 .background /* Define the background color of your layout  here. */  { background-color: #e5eff1 }
 .background_nav /* Define the background color of your navigation  here (if different from the main background color! Else just set this to the same value as .bacground). */  { background-color: #e8f6f8 ; text-align: left}
 .popupTitle   /* Defines the title of a eLML popup box. This is the part that you click on to open/close the box. */ { color: #efb77f; font-size: 1em; font-weight: bold; cursor: pointer; }

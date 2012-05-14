@@ -56,20 +56,15 @@
 	</xsl:template>
 	
 	<xsl:template name="logo">
-		<table border="0" width='100%'>
-		<tr>
-		<td valign='top'><img src="../../../_templates/{$layout}/icons/logo-esi.jpg" alt="LOGO ESO"/></td>
-		<td valign='top'>
-			<span id="ecole">Haute École de Bruxelles - École Supérieure d'Informatique</span><br/>
-			<span id="cours"><xsl:value-of select="/elml:lesson/elml:metadata/elml:organisation/@module"/> - 
-				<xsl:value-of select="/elml:lesson/elml:metadata/elml:organisation/@level"/></span><br/>
-		</td>
-		<td align='right' width='10%' valign='top'>
-			<span id="annee"><xsl:value-of select="/elml:lesson/elml:metadata/elml:lessonInfo/elml:lifecycle/elml:version"/></span>
-		</td>
-		<td> </td>
-		</tr>
-		</table>
+		<div id="logo"><img src="../../../_templates/{$layout}/icons/logo-esi.jpg" alt="LOGO ESO"/></div>
+		<div id="ecole">Haute École de Bruxelles - École Supérieure d'Informatique</div>
+		<div id="cours">
+				<xsl:value-of select="/elml:lesson/elml:metadata/elml:organisation/@module"/> - 
+				<xsl:value-of select="/elml:lesson/elml:metadata/elml:organisation/@level"/>
+		</div>
+		<div id="annee">
+			<xsl:value-of select="/elml:lesson/elml:metadata/elml:lessonInfo/elml:lifecycle/elml:version"/>
+		</div>
 	</xsl:template>
 	
 	<!-- Pourquoi avoir modifier le traitement de paragraph ? -->
