@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" label="TD3" title="Td3 - Mes premiers programmes">
+  
+<metadata>
+    <organisation level="1ère année" module="Laboratoires Java">
+      <creationPosition><posNumber>3</posNumber></creationPosition>
+    </organisation>
+    <lessonInfo>
+      <lifecycle>
+        <version>2012 - 2013</version>
+        <contribute>
+          <person name="ARO"/>
+          <person name="BEJ"/>
+          <person name="CLR"/>
+          <person name="HAL"/>
+          <person name="MBA"/>
+          <person name="MCD"/>
+          <person name="NPX"/>
+          <person name="PBT"/>
+        </contribute>
+      </lifecycle>
+    </lessonInfo>
+</metadata>
+  
+  <entry>
+    <paragraph>  
+      Ce TD a pour objectif de vous familiariser avec <formatted style="code">l'éditeur vi</formatted> à travers l'édition de vos premiers programmes simples.  
+    </paragraph>  
+  </entry>
+  
+  <unit label="TD3" title="Td3 - Mes premiers programmes">
+    <entry>
+			<paragraph>  
+				<formatted style="bold">Rappels</formatted> :   
+			</paragraph>  
+			<list listStyle="unordered">
+				<item>Ce TD est accompagné d'exercices à faire <formatted style="bold">avant</formatted> de venir au laboratoire.</item>  
+				<item>Prenez bien note des réponses aux exercices.</item>  
+			</list>
+		</entry>  
+  
+    <learningObject title="La ligne de commande"> 
+    <!-- Est-ce logique de commencer un learningObject par un paragraph ??? -->
+      <paragraph>  
+        <formatted style="bold">  
+          Dans votre répertoire home, créez un répertoire td3.   <newLine/>
+          Ce répertoire contiendra tous les programmes Java que vous écrirez aujourd'hui.  <newLine/>
+          Désormais, vous prendrez cette habitude pour chaque td.</formatted>   
+      </paragraph>  
+      <paragraph>
+        Parfois, vous devez entrer une commande assez longue parce que les noms de fichiers sont longs et/ou nombreux.<newLine/>
+        Linux offre plusieurs facilités pour simplifier l'entrée de longues commandes.  
+      </paragraph>
+      
+      <clarify>
+        <paragraph title="La complétion de la commande" icon="icon_reading"/> 
+        <paragraph>
+          Lorsque vous appuyez sur la touche <formatted style="input">TAB</formatted>,
+          le shell tente de compléter le début de commande que vous avez déjà tapé. <newLine/>
+          Si plusieurs possibilités existent, elles sont affichées si vous appuyez 2x sur  <formatted style="input">TAB</formatted>.  
+        </paragraph>
+      </clarify>
+      
+      <clarify><paragraph title="Expérience" icon="icon_experiment"/> 
+        <paragraph>  
+          Supposons que vous ne vous rappeliez plus très bien de la commande qui permet de modifier le mot de passe. <newLine/>
+          Vous vous rappelez juste qu'elle commence par <formatted style="input">pas</formatted>.  
+        </paragraph>  
+        <list listStyle="ordered">
+          <item>Tapez <formatted style="italic"><formatted style="input">pas</formatted></formatted>.</item>  
+          <item>Appuyez 2x sur la touche <formatted style="input">TAB</formatted>.</item>  
+          <item>Entrez un <formatted style="italic"><formatted style="input">s</formatted></formatted>.</item>  
+          <item>Appuyez à nouveau sur <formatted style="input">TAB</formatted>.</item>  
+        </list>
+      </clarify>
+      
+      <clarify>
+        <paragraph title="La complétion des noms de fichiers" icon="icon_reading"/> 
+        <paragraph>
+          La touche de tabulation permet également de compléter un nom de fichier. 
+        </paragraph>
+      </clarify>
+      
+      <act>
+        <paragraph title="Exercice" icon="act"/> 
+        <list listStyle="ordered">
+          <item>
+            Dans votre dossier td3, copiez le fichier <newLine/>
+            <formatted style="input">/eCours/java/td/td3/monfichieraunomtellementlongquilmeparaitpeuprobabledeletaper2xsanserreur</formatted>
+          </item>  
+          <item>Affichez le contenu de ce fichier en évitant de retaper son nom.</item>  
+        </list>
+      </act>
+      
+      <clarify>
+        <paragraph title="Joker" icon="icon_reading"/> 
+        <paragraph>
+          Le point 20 du guide visuel parle des jokers, c'est donc le moment de les utiliser :) 
+        </paragraph>
+      </clarify>
+      
+      <clarify>
+        <paragraph title="Exercices" icon="icon_experiment"/> 
+        <list listStyle="ordered">
+          <item>
+            Copiez dans votre répertoire td3 créé ci-dessus tous les fichiers du répertoire /eCours/java/td/td3 dont l'extension est .java 
+            (c'est possible sans passer par un <formatted style="input">cd /eCours/java/td/td3</formatted>)
+          </item>  
+          <item>Copiez dans votre répertoire td3 tous les fichiers du répertoire /eCours/java/td/td3 dont la deuxième lettre est un 'x'.</item>  
+          <item>Listez le contenu des répertoires des étudiants (pour rappel, les répertoires des étudiants sont ceux qui se trouvent dans /home et qui commencent par un 'g'). </item>  
+          <item>Listez le contenu des répertoires des professeurs (pour rappel, les  
+          répertoires des professeurs sont ceux qui se trouvent dans /home et qui sont composés de 3 lettres).</item>  
+        </list>
+      </clarify>
+      
+      <clarify>
+        <paragraph title="Revenir à une commande précédente" icon="icon_reading"/> 
+        <paragraph>  
+          Il arrive souvent qu'on doive entrer une commande qu'on a déjà écrite il y a peu (ou en tout cas fort proche de ce qu'on a déjà écrit). 
+          C'est là que les flèches viennent à notre secours.  
+        </paragraph>  
+        <paragraph>  
+          La flèche vers le haut permet de revenir aux commandes précédentes et de les modifier. À utiliser sans modération...  
+        </paragraph>  
+      </clarify>
+    </learningObject>
+  
+    <learningObject title="Un programme correct"> 
+      <act>
+        <paragraph title="Compiler / exécuter un programme" icon="act"/> 
+        <paragraph>  
+          Commençons par un programme correct et tentons de l'exécuter.  
+        </paragraph>
+        <paragraph>  
+          Le fichier <formatted style="input">/eCours/java/td/td3/Ex.java</formatted>  
+          contient un petit programme Java tout simple qui affiche un  
+          message de bienvenue. Nous allons l'exécuter.  
+        </paragraph>  
+        <list listStyle="ordered">
+          <item>Normalement, vous avez déjà copié ce fichier chez vous dans un dossier td3.</item>  
+          <item>Lisez-le et voyez si vous devinez ce qu'il fait.</item>  
+          <item>Compilez-le. À quoi correspond cette phase ? Quel(s) est (sont) le(s) fichier(s) créé(s) ? </item>  
+          <item>Exécutez-le. </item>  
+        </list>
+      </act>
+    </learningObject>
+  
+    <learningObject title="Mon premier programme"> 
+      <clarify>
+        <paragraph>  
+          Vous allez à présent écrire votre premier programme de bout en bout. Pour ne pas déroger à la tradition, ce sera le « Hello-World! »   
+          (La plupart des manuels de présentation d'un langage commencent par ce grand classique !).  
+        </paragraph>  
+        <paragraph>  
+          Vous devez maintenant être capable de faire ça tout seul, sans qu'on vous donne la réponse. Mais si vous avez un problème, vous pouvez toujours appeler votre professeur :)   
+        </paragraph>  
+      </clarify>
+      
+      <act><paragraph title="Hello world" icon="act"/> 
+        <list listStyle="ordered">
+          <item>Écrivez votre premier programme nommé Hello.java qui affiche le message « Hello, world ! » </item>  
+          <item>Compilez-le et exécutez-le</item>  
+        </list>
+      </act>
+      
+      <clarify>
+        <paragraph title="Hello World ?" icon=""/> 
+        <paragraph>  
+          Vous ne vous souvenez plus comment afficher « Hello World » à l'écran ?  
+        </paragraph>  
+        <popup title="Allez, on vous aide en vous fournissant le code à écrire :  ">   
+          <paragraph cssClass="java">
+public class Hello {
+    public static void main (String[] args) {	
+        System.out.println ("Hello World");
+    }
+}				</paragraph> 
+        </popup> 
+      </clarify>
+      
+      <act><paragraph title="Permutation" icon="act"/> 
+        Écrivez le programme qui réalise la permutation du contenu de 2 variables.  
+      </act>
+    </learningObject>
+    
+    <learningObject title="Détecter et corriger les erreurs"> 
+      <paragraph>  
+        Jusque là, vous avez pu travailler avec un programme correct. 
+        Voyons maintenant comment procéder lorsque des erreurs apparaissent (et ça ne manquera pas d'arriver !)   
+      </paragraph>  
+      
+      <clarify><paragraph title="Comprendre une erreur de compilation" icon="icon_reading"/> 
+        <paragraph>  
+          Un rôle important de la compilation est de repérer les erreurs lexicales et/ou syntaxiques que recèle un fichier source 
+          et de les décrire le plus clairement possible afin que le programmeur puisse y remédier. 
+          Il est important d'apprendre à comprendre ces messages d'erreur.   
+        </paragraph>  
+        <multimedia src="../image/ErreurCompil.jpg" type="jpeg"/>
+      </clarify>
+      
+      <clarify><paragraph title="Comprendre une erreur d'exécution" icon="icon_reading"/> 
+        <paragraph>  
+          Lorsqu'on exécute une classe, la machine virtuelle va chercher un fichier ".class" correspondant puis l'exécuter. Il y a donc 2 types d'erreurs bien distincts :  
+        </paragraph>  
+        <list listStyle="unordered">
+          <item>soit il ne peut pas trouver le fichier ".class" demandé;</item>  
+          <item>soit il peut trouver une erreur lors de l'exécution de cette classe (division par zéro par exemple).</item>  
+        </list>
+        <paragraph>  
+          Le message d'erreur sera différent; apprenez à les reconnaitre.   
+        </paragraph>  
+        <multimedia src="../image/ErreurExec.jpg" type="jpeg"/>
+      </clarify> 
+      <paragraph>
+        La qualité d'un programmeur se voit surtout à sa capacité à réagir face aux erreurs. 
+        Prenez note des situations que vous allez rencontrer et des solutions afin de réagir efficacement lorsque vous les rencontrerez à nouveau.  
+      </paragraph>
+      <paragraph>  
+        Vous avez copié dans votre répertoire td3 tous les fichiers .java se trouvant dans /eCours/java/td/td3.  
+      </paragraph>  
+      <paragraph>  
+        Hormis Ex.java utilisé précédemment, tous ces fichiers sont erronés. Les erreurs sont tantôt à la compilation, tantôt à l'exécution. Nous vous demandons de détecter et de corriger les erreurs des programmes Ex1 à Ex4 et de noter dans le tableau ci-dessous (dans la version papier) le type d'erreur ainsi que le message engendré.  
+      </paragraph>       
+      <table width="100%">
+        <tablerow>
+          <tableheading width="20%">Exercice</tableheading>
+          <tableheading width="30%">Erreur</tableheading>
+          <tableheading width="50">Message affiché </tableheading>
+        </tablerow>
+        <tablerow>
+          <tableheading>Ex1 </tableheading>
+          <tabledata></tabledata>
+          <tabledata></tabledata>
+        </tablerow>
+        <tablerow>
+          <tableheading>Ex2</tableheading>
+          <tabledata></tabledata>
+          <tabledata></tabledata>
+        </tablerow>
+        <tablerow>
+          <tableheading>Ex3</tableheading>
+          <tabledata></tabledata>
+          <tabledata></tabledata>
+        </tablerow>
+        <tablerow>
+          <tableheading>Ex4</tableheading>
+          <tabledata></tabledata>
+          <tabledata></tabledata>
+        </tablerow>
+      </table>
+    </learningObject>
+    
+    <learningObject title="Tout seul..."> 
+      <paragraph>
+        Voici un exercice vu au cours de logique, reprennez l' algorithme écrit en logique et écrivez le programme java correspondant.
+      </paragraph>      
+      <act>
+        <paragraph title="Surface d'un triangle" icon="act"/> 
+        <paragraph>  
+          Syllabus de logique exercice 4 du chapitre 3   
+        </paragraph>  
+      </act>
+    </learningObject>
+    
+    <learningObject title="Quelques astuces...">
+      <clarify>
+        <paragraph title="Trucs et astuces" icon="icon_reading"/> 
+        <paragraph>  
+          Dans l'éditeur de texte <formatted style="bold">vi</formatted> :  
+        </paragraph>  
+        <paragraph>  
+         en mode exécution :   
+        </paragraph>  
+        <list>  
+          <item><formatted style="input">set nu</formatted> : affiche les numéros de ligne </item>
+          <item><formatted style="input">set nonu</formatted> : supprime les numéros de ligne </item>
+        </list>
+        <paragraph>  
+        en mode commande :   
+        </paragraph>
+        <list>
+          <item><formatted style="input">G</formatted> : place le curseur sur la dernière ligne </item>
+          <item><formatted style="input"><formatted style="italic">n</formatted>G</formatted> : place le curseur sur la ligne numéro <formatted style="italic">n</formatted> </item>
+          <item><formatted style="input">J</formatted> : permet de joindre 2 lignes </item>
+          <item>
+          <formatted style="input">/toto</formatted> : permet de positionner le curseur sur le mot <formatted style="italic">toto</formatted> <newLine/>
+          (<formatted style="input">n</formatted> permet de trouver chacun des mots <formatted style="italic">toto</formatted> suivants et
+           <formatted style="input">N</formatted> chacun des mots <formatted style="italic">toto</formatted> précédents) </item>
+        </list>
+      </clarify>
+      
+      <act>
+        <paragraph title="Dans Hello World" icon="act"/> 
+        Ouvrez votre programme Hello World :   
+        <list listStyle="ordered">
+          <item>affichez les numéros de ligne</item>  
+          <item>placez-vous sur la 3ème ligne</item>  
+          <item>placez-vous sur le mot «Hello»</item>  
+        </list>
+      </act>
+    </learningObject>
+    
+    <learningObject title="À vous"> 
+      <act>
+        <paragraph title="Détection des erreurs" icon="act"/> 
+        <paragraph>  
+        Nous vous demandons maintenant de détecter les erreurs des Ex5 à Ex12 et de noter dans le tableau ci-dessous (dans la version papier) le type d'erreur ainsi que le message engendré. Corrigez ces erreurs.    
+        </paragraph>  
+        <table width="100%">
+          <tablerow>
+            <tableheading width="20%">Exercice</tableheading>
+            <tableheading width="30%">Erreur</tableheading>
+            <tableheading width="50">Message affiché </tableheading>
+          </tablerow>
+          <tablerow>
+            <tableheading>Ex5 </tableheading>
+            <tabledata></tabledata>
+            <tabledata></tabledata>
+          </tablerow>
+          <tablerow>
+            <tableheading>Ex6</tableheading>
+            <tabledata></tabledata>
+            <tabledata></tabledata>
+          </tablerow>
+          <tablerow>
+            <tableheading>Ex7</tableheading>
+            <tabledata></tabledata>
+            <tabledata></tabledata>
+          </tablerow>
+          <tablerow>
+            <tableheading>Ex8</tableheading>
+            <tabledata></tabledata>
+            <tabledata></tabledata>
+          </tablerow>
+          <tablerow>
+            <tableheading>Ex9 </tableheading>
+            <tabledata></tabledata>
+            <tabledata></tabledata>
+          </tablerow>
+          <tablerow>
+            <tableheading>Ex10</tableheading>
+            <tabledata></tabledata>
+            <tabledata></tabledata>
+          </tablerow>
+          <tablerow>
+            <tableheading>Ex11</tableheading>
+            <tabledata></tabledata>
+            <tabledata></tabledata>
+          </tablerow>
+          <tablerow>
+            <tableheading>Ex12</tableheading>
+            <tabledata></tabledata>
+            <tabledata></tabledata>
+          </tablerow>
+        </table>   
+      </act>
+      
+      <act>
+        <paragraph title="Exercices de logique" icon="act"/> 
+        <paragraph>
+          Voici quelques exercices vus au cours de logique, reprennez les algorithmes écrits en logique et écrivez les programmes java correspondants.
+        </paragraph> 
+      </act>
+      
+      <act>
+        <paragraph title="Somme des chiffres d'un nombre" icon="act"/> 
+        <paragraph>  
+          Syllabus de logique exercice 10 du chapitre 3  
+        </paragraph>  
+      </act>
+      
+      <act>
+        <paragraph title="La conversion d'heures, minutes, secondes en secondes" icon="act"/> 
+        <paragraph>  
+          Syllabus de logique exercice 11 du chapitre 3  
+        </paragraph>  
+      </act>
+      
+      <act>
+        <paragraph title="La conversion de secondes en heures, minutes, secondes" icon="act"/> 
+        <paragraph>  
+          Syllabus de logique exercice 12 du chapitre 3  
+        </paragraph>  
+      </act>
+    </learningObject>
+    
+    <learningObject title="Transfert de fichiers"> 
+      <paragraph>  
+        Vous n'avez peut-être pas fini. Pour pouvoir continuer à la maison sans tout recommencer, <newLine/>
+        il serait bon de pouvoir récupérer ce que vous avez déjà fait sur linux1. <newLine/>
+        Il existe plusieurs méthodes décrites dans l'aide-mémoire (dans le répertoire <formatted style="italic">aide</formatted>). <newLine/>
+        En voici une.  <newLine/>
+        
+      </paragraph>  
+      
+      <list listStyle="ordered">
+        <item>Ouvrez l'explorateur de fichier Windows (par exemple en cliquant sur l'icône "My Computer".</item>  
+        <item>
+          Dans le champ d'adresse, tapez l'adresse <formatted style="input">ftp://linux1</formatted><newLine/>
+          <multimedia src="../image/transfert.jpg" type="jpeg"/>
+          </item>  
+        <item>Une boite de dialogue vous demande votre login et mot de passe (sur <formatted style="italic">linux1</formatted>).</item>  
+        <item>Vous voyez apparaitre un dossier "linux1" qui correspond à votre dossier sur <formatted style="italic">linux1</formatted>. </item>
+        <item>
+          Vous pouvez y prendre/déposer des fichiers comme vous le feriez pour un dossier Windows. 
+          Vous pouvez par exemple les mettre sur une <formatted style="bold">clé USB</formatted>.
+        </item>
+      </list>  
+    </learningObject>
+  </unit>
+</lesson>
