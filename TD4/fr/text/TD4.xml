@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<lesson xmlns="http://www.elml.ch" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd"
+		label="TD4" title="TD4 - Alternatives">
+
+	<entry>
+		<paragraph>  
+			Ce TD a pour objectif de vous familiariser avec les structures alternatives
+			(<formatted style="code">if</formatted>,
+			<formatted style="code">if - else</formatted>, 
+			<formatted style="code">switch</formatted>).
+			Afin de ne pas perdre de temps lors de l'édition et de pouvoir consacrer ce temps à la réflexion,
+			il est important de connaitre chaque semaine un peu mieux l'éditeur <formatted style="code">vi</formatted>. 
+			C'est pourquoi nous donnons aussi quelques trucs supplémentaires.
+		</paragraph>  
+	</entry>
+	
+	<unit label="TD4" title="TD4 - Alternatives">
+		
+		<entry>
+			<paragraph>  
+				<formatted style="bold">Rappels</formatted> :   
+			</paragraph>  
+			<list listStyle="unordered">
+				<item>Ce TD est accompagné d'exercices à faire <formatted style="bold">avant</formatted> de venir au laboratoire.</item>  
+				<item>Prenez bien note des réponses aux exercices.</item>  
+			</list>
+		</entry>
+
+		<learningObject title="Trucs et astuces du jour">
+			
+			<clarify>
+				<paragraph title="Sous vi :" icon="icon_reading"/>
+				<paragraph>
+					En mode commande : 
+				</paragraph>
+				<list>
+					<item><formatted style="code">gg=G</formatted> : indente correctement votre code.</item>
+					<item><formatted style="code">.</formatted> : répète la dernière commande d'édition..</item>
+					<item><formatted style="code">$</formatted> : place le curseur sur le dernier caractère de la ligne.</item>
+					<item><formatted style="code">a</formatted> : pour passer en mode insertion après le curseur.</item>
+					<item><formatted style="code">A</formatted> : permet de passer en mode insertion à la fin de la ligne.</item>
+				</list>
+				<paragraph>
+					En mode exécution : 
+				</paragraph>
+				<list>
+					<item><formatted style="code">r nomFichierAInclure</formatted> : pour inclure un autre fichier dans le fichier courant édité avec vi.</item>
+				</list>
+			</clarify>
+			
+			<act>
+				<selfCheck title="Indenter" shuffle="no">
+					<fillInBlanks>
+						<question>
+							Voici, sous vi, le code fourni par un étudiant... il n'est pas indenté, comment faire?
+						</question>
+						<gapText>
+							<paragraph cssClass="java">
+public class Exercice{
+public static void main (String [] args){
+System.out.println("Etudiant g*****");
+}
+}						</paragraph>
+							<paragraph>
+								<gap answers="">gg=G</gap>
+							</paragraph>
+							<solution/>
+						</gapText>
+					</fillInBlanks>
+				</selfCheck>
+
+				<paragraph title="Réflexivité" icon="question">
+					Pire encore..., comment faire?
+				</paragraph>
+				<paragraph cssClass="java">
+public 
+class 
+Exercice{
+public static 
+void 
+main (
+String [] args){
+System.out.println("Etudiant g*****");
+}
+}				</paragraph>
+				<popup visible="online">
+						<paragraph>
+							D'abord, il faut joindre les morceaux qui peuvent l'être grâce à la commande 
+							<formatted style="input">J</formatted>.
+							ensuite, il faut indenter grâce à <formatted style="input">gg=G</formatted>
+						</paragraph>
+				</popup>
+
+				<paragraph title="Concaténation de fichier" icon="act">
+					Dans <formatted style="code">/eCours/java/td/td4</formatted> se trouvent 2 programmes java : 
+					<formatted style="code">Début.java</formatted> et <formatted style="code">Fin.java</formatted>. 
+				</paragraph>
+				<list>
+					<item>Copiez ces fichiers dans votre répertoire <formatted style="code">td4</formatted>.</item>
+					<item>Fusionnez le programme <formatted style="code">Fin</formatted> à la fin de <formatted style="code">Début</formatted>.</item>
+				</list>
+				<paragraph>
+					Vous avez maintenant un nouveau programme complet que vous pouvez utiliser. 
+				</paragraph>
+			</act>
+		</learningObject>
+
+		<learningObject title="Aller plus loin avec l'éditeur">
+			<act>
+				<paragraph title="Configuration de l'éditeur" icon="act"/>
+				<paragraph>
+					Lorsque que vous codez un programme Java, il y a des morceaux de codes qui reviennent systématiquement : 
+					public static..., System.out..., etc. 
+					Ce serait pratique de pouvoir disposer de raccourcis pour les écrire. Et bien, c'est possible !
+				</paragraph>
+				<list listStyle="ordered">
+					<item> Copiez dans votre home le fichier <formatted style="bold">.vimrc</formatted> 
+					(notez le<formatted style="bold"> .</formatted>) se trouvant chez ~pbt</item>
+					<item>Examinez-le et repérez les lignes qui créent des raccourcis pour l'éditeur.</item>
+					<item>Testez-les !</item>
+				</list>
+			</act>
+		</learningObject>
+
+		<learningObject title="Les choix">
+			<act>
+				<paragraph title="Exercice" icon="act"/>
+				<paragraph>
+					Étant donné le code suivant, 
+					l’instruction de choix (if-else) peut être remplacée par une seule affectation laquelle ?
+				</paragraph>
+				<paragraph cssClass="java">
+import java.util.Scanner;
+public class Ex {
+
+    public static void main (String[] args) {	
+        Scanner clavier = new Scanner(System.in);
+        int entier1;
+        boolean vautMoinsUn; //sera vrai si le nombre vaut -1
+        entier1 = clavier.nextInt();
+
+        if (entier1 == -1) {
+            vautMoinsUn = true; 
+        } else {
+            vautMoinsUn = false;
+        }
+        System.out.println (vautMoinsUn);
+    }
+}				</paragraph>
+
+				<paragraph title="Quel affichage obtient-on ?" icon="act"/>
+				<paragraph>
+					Copiez dans votre répertoire td4 le programme <formatted style="code">Ex1</formatted>
+					qui se trouve dans <formatted style="code">/eCours/java/td/td4/Ex1.java</formatted>.
+					Écrivez (avant de l’exécuter) quel sera l’affichage obtenu dans les différents cas de jeux de données 
+					repris ci dessous. 
+					Justifiez vos réponses. Exécutez le programme pour vérifier vos réponses.
+				</paragraph>
+				<paragraph cssClass="java">
+<![CDATA[					
+import java.util.Scanner;
+public class Ex1 {
+
+    public static void main (String[] args) {
+        Scanner clavier = new Scanner(System.in);
+        int entier1;
+        int entier2;
+        entier1 = clavier.nextInt();
+        entier2 = clavier.nextInt();
+
+        if (entier1 > 0) {
+            if (entier2 > 0) {
+                System.out.println (entier1 + ", " + entier2 + " positives");
+			}
+		    else {			
+                System.out.println (entier1 + " is negative");
+            } 
+        }
+    }
+}]]>			</paragraph>
+				<table legend="Tests du programme Ex1">
+					<tablerow>
+						<tableheading>entier1</tableheading>
+						<tableheading>entier2</tableheading>
+						<tableheading>affiché</tableheading>
+					</tablerow>
+					<tablerow>
+						<tabledata>1</tabledata>
+						<tabledata>2</tabledata>
+						<tabledata></tabledata>
+					</tablerow>
+					<tablerow>
+						<tabledata>1</tabledata>
+						<tabledata>-2</tabledata>
+						<tabledata></tabledata>
+					</tablerow>
+					<tablerow>
+						<tabledata>-1</tabledata>
+						<tabledata>-2</tabledata>
+						<tabledata></tabledata>
+					</tablerow>
+				</table>
+
+				<paragraph title="Quel affichage obtient-on ?" icon="act"/>
+				<paragraph>
+					Copiez le programme <formatted style="java">Ex2</formatted> 
+					dans <formatted style="java">/eCours/java/td/td4/Ex2.java</formatted>
+					dans votre répertoire <formatted style="java">td4</formatted>.
+				</paragraph>
+				<paragraph>
+					Écrivez (avant de l’exécuter) quel sera l’affichage obtenu dans les
+					différents cas de jeux de données repris ci dessous. Justifiez vos
+					réponses. Exécutez le programme pour vérifier vos réponses.
+				</paragraph>
+				<paragraph cssClass="java">
+<![CDATA[					
+import java.util.Scanner;
+public class Ex2 {
+    public static void main (String[] args){
+        Scanner clavier = new Scanner(System.in);
+        int entier1;
+        int entier2;
+        entier1 = clavier.nextInt();
+        entier2 = clavier.nextInt();
+
+        if (entier1>0) {
+            if (entier2>0) {
+                System.out.println (entier1 + ", " + entier2 + " positives");
+            } 
+        }
+        else {
+            System.out.println (entier1 + " is negative");
+        } 
+    }
+}]]>				</paragraph>
+				<table legend="Tests du programme Ex2">
+					<tablerow>
+						<tableheading>entier1</tableheading>
+						<tableheading>entier2</tableheading>
+						<tableheading>affiché</tableheading>
+					</tablerow>
+					<tablerow>
+						<tabledata>1</tabledata>
+						<tabledata>2</tabledata>
+						<tabledata></tabledata>
+					</tablerow>
+					<tablerow>
+						<tabledata>1</tabledata>
+						<tabledata>-2</tabledata>
+						<tabledata></tabledata>
+					</tablerow>
+					<tablerow>
+						<tabledata>-1</tabledata>
+						<tabledata>-2</tabledata>
+						<tabledata></tabledata>
+					</tablerow>
+				</table>
+
+				<paragraph title="Maximum de 2 nombres" icon="act">
+					Syllabus de logique page 44 exercice 3 du chapitre 4.
+				</paragraph>
+
+				<paragraph title="Test de signe" icon="act">
+					Syllabus de logique page 44 exercice 5 du chapitre 4.
+				</paragraph>
+				<paragraph>
+					En logique, on utiliserait un « selon que »; 
+					écrivez-le en java en utilisant des « if-else imbriqués ».
+					Comment présenter le code pour montrer qu'il s'agit en fait d'un « selon que » ?
+				</paragraph>
+
+				<paragraph title="Jour du mois" icon="act">
+					Syllabus de logique page 45 exercice 14 du chapitre 4.
+				</paragraph>
+				<paragraph>
+					(Utilisez l’instruction « switch » pour résoudre cet exercice mais 
+					<formatted style="bold">pas</formatted> avec 30 cas, 7 suffisent!).
+				</paragraph>
+
+				<paragraph title="Année bissextile" icon="act">
+					Syllabus de logique page 45 exercice 9 du chapitre 4.
+				</paragraph>
+			</act>
+		</learningObject>
+		
+	</unit>
+	
+	<metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition>
+				<posNumber>4</posNumber>
+			</creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+		<technical>
+			<technicalRequirement>
+				<type>Browser</type>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+		</technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2012 - 2013</version>
+				<contribute>
+					<person name="ARO" />
+					<person name="BEJ" />
+					<person name="CLR" />
+					<person name="DNA" />
+					<person name="HAL" />
+					<person name="MBA" />
+					<person name="MCD" />
+					<person name="NPX" />
+					<person name="PBT" />
+				</contribute>
+			</lifecycle>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+		<rights>
+			<cost>no</cost>
+			<copyright>CC-BY</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by/3.0/</copyrightURL>
+		</rights>
+	</metadata>
+
+</lesson>

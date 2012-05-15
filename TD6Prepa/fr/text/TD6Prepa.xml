@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd"
+        label="TD6Prepa" title="TD6 - Exercices préparatoires">
+
+	<entry>
+		<paragraph>  
+			Afin d'arriver au laboratoire dans les meilleures conditions, 
+			il est bien de revoir la matière qui sera mise en pratique. 
+			C'est pourquoi nous vous fournissons quelques exercices préparatoires 
+			à faire à la maison pour vous permettre d'évaluer si vous êtes prêts. 
+		</paragraph>
+	</entry>
+
+	<unit label="TD6Ex" title="Exercices préparatoires au TD6">
+
+		<entry>
+			<paragraph>  
+				Vous trouverez les réponses dans les 5 premières leçons du cours ou dans les tds précédents.  
+			</paragraph>
+		</entry>
+
+		<learningObject title="Rappel des tds précédents">
+			<act>
+				
+				<selfCheck title="Les commandes linux" shuffle="no">
+					<fillInBlanks>
+						<question>Quelle commande linux permet de faire l'action suivante ?</question>
+						<gapText>
+							<list listStyle="unordered">
+								<item>modifier les permissions d'un fichier : <gap answers="">chmod</gap> (suivi des options)</item>
+								<item>afficher les 10 dernières commandes : <gap answers="">history</gap> <gap answers="">10</gap></item>
+								<item>relancer la dernière commande commençant par <formatted style="code">echo</formatted> : <gap answers="">!echo</gap></item>
+								<item>relancer la dernière commande qui contient le mot <formatted style="code">name</formatted> : <gap answers="">!?name?</gap></item>
+							</list>
+						</gapText>
+						<solution/>
+					</fillInBlanks>
+				</selfCheck>
+				
+				<selfCheck title="Configuration de l'éditeur" shuffle="no">
+					<fillInBlanks>
+						<question>Comment s'appelle le fichier dans lequel se trouve l'ensemble des raccourcis 
+						que vous pouvez utiliser en écrivant vos programmes java?</question>
+						<gapText>
+							<gap answers="">.vimrc</gap>
+						</gapText>
+						<solution/>
+					</fillInBlanks>
+				</selfCheck>
+			</act>
+			
+		</learningObject>
+
+		<learningObject title="Survol du langage : Les instructions répétitives">
+			
+			<act>
+				<selfCheck title="Instructions répétitives" shuffle="no">
+					<multipleChoice>
+						<question>
+							Quelles instructions répétitives sont correctes parmi les suivantes? <newLine/>
+							Expliquez pourquoi les autres ne le sont pas.
+						</question>
+						<answer feedback="" correct="no">proposition 1
+							<paragraph cssClass="java">
+While ( condition ) {
+	// instructions
+}							</paragraph>
+
+						</answer>
+						<answer feedback="" correct="no">proposition 2
+							<paragraph cssClass="java">
+do while ( condition ) {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="yes">proposition 3
+							<paragraph cssClass="java">
+while ( true ) {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="no">proposition 4
+							<paragraph cssClass="java">
+while ( true ) do {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="no">proposition 5
+							<paragraph cssClass="java">
+FOR ( int i=0; i&lt;=10; i=i+2 ) DO {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="yes">proposition 6
+							<paragraph cssClass="java">
+for ( int i=0; i&lt;=10; i=i+2 ) {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="no">proposition 7
+							<paragraph cssClass="java">
+for ( int i=0; i&lt;=10; i=i+2 ) do {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="yes">proposition 8
+							<paragraph cssClass="java">
+for ( int i=9; i&gt;=0; i=i-2 ) {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="no">proposition 9
+							<paragraph cssClass="java">
+for ( int i=9; i&gt;=0; i=i-2 ) do {
+	// instructions
+}							</paragraph>
+						</answer>
+					</multipleChoice>
+				</selfCheck>
+				
+				<selfCheck title="Activité 'remplir les blancs'" shuffle="yes">
+					<fillInBlanks>
+						<question></question>
+						<gapText>
+							<paragraph>
+								Quel opérateur de comparaison Java représente la relation suivante? 
+							</paragraph>
+							<list listStyle="ordered">
+								<item>"est strictement plus petit que" ? <gap answers="">&lt;</gap></item>
+								<item>"est plus petit ou égal à" ?       <gap answers="">&lt;=</gap></item>
+								<item>"est égal à" ?                     <gap answers="">==</gap></item>
+								<item>"est strictement plus grand que" ? <gap answers="">&gt;</gap></item>
+								<item>"est plus grand ou égal à" ?       <gap answers="">&gt;=</gap></item>
+							</list>
+							<paragraph>
+								Quel opérateur booléen Java représente l'opérateur logique suivant? 
+							</paragraph>
+							<list listStyle="ordered">
+								<item>le ET :  <gap answers="">&amp;&amp;</gap></item>
+								<item>le OU :  <gap answers="">||</gap></item>
+								<item>le NON : <gap answers="">!</gap></item>
+							</list>
+						</gapText>
+						<solution/>
+					</fillInBlanks>
+				</selfCheck>
+
+			</act>
+
+			<clarify>
+				<paragraph title="Expérience" icon="icon_experiment">
+					Indiquez l'affichage obtenu par ce code.
+				</paragraph>
+				<paragraph cssClass="java">
+<![CDATA[public class Boucles{
+
+	public static void main ( String[] args ) {
+		int facteur;
+		final int VALEUR = 3;
+	
+		for (facteur = 1 ; facteur <= 10 ; facteur++){		
+			System.out.print(facteur*VALEUR+" ");
+		}
+		System.out.println();
+	}
+}]]>			</paragraph>
+
+				<paragraph title="Exercice Tant que" icon="act">
+					Écrivez en Java l'algorithme logique suivant.
+				</paragraph>
+				<paragraph cssClass="code">
+<![CDATA[MODULE Test
+
+    nombre1 : Entier
+    produit : Entier
+    produit ← 1 
+
+    LIRE nombre1
+    TANT QUE nombre1 ≠ 0 FAIRE
+        produit ← produit * nombre1
+        ÉCRIRE "entrez un nombre"
+        LIRE nombre1 
+    FIN TANT QUE
+    ÉCRIRE produit
+    
+FIN MODULE
+]]>			    </paragraph>
+				<popup visible="online"> 
+					<paragraph cssClass="java">
+<![CDATA[import java.util.Scanner;
+public class Test {
+
+	public static void main(String [] args) {
+	
+		Scanner clavier = new Scanner(System.in); 
+		int nombre1; 
+		int produit;
+		produit = 1; 
+		try { 		
+			System.out.println("Entrez la valeur du nombre"); 
+			nombre1 = clavier.nextInt();
+			while (nombre1 != 0) {
+				produit = produit * nombre1;
+				System.out.println("Entrez la valeur du nombre"); 
+				nombre1 = clavier.nextInt();			
+			} 		
+		} catch (Exception e) {
+			System.err.println("Une erreur s'est produite");
+			System.exit(1); 
+		} 
+		System.out.println("Le produit vaut " + produit);	
+	}
+}]]>				</paragraph>
+				</popup>
+
+				<paragraph title="Exercice Pour" icon="act">
+					Écrivez en Java l'algorithme logique suivant.
+				</paragraph>
+				<paragraph cssClass="code">
+<![CDATA[MODULE Test
+
+    nombre1: Entier
+    i : Entier
+
+    LIRE nombre1
+    POUR i DE 1 A nombre1 FAIRE
+        ÉCRIRE i
+    FIN POUR
+
+FIN MODULE
+]]>			     </paragraph>
+
+				<popup visible="online"> 
+					<paragraph cssClass="java">
+<![CDATA[import java.util.Scanner;
+public class Test {
+
+    public static void main(String [] args){
+	
+        Scanner clavier = new Scanner(System.in); 
+        int nombre1; 
+	
+        try { 
+            nombre1 = clavier.nextInt();
+        } catch (Exception e) {
+            System.err.println("Une erreur s'est produite");
+            System.exit(1); 
+        }
+        for (int i=1; i<= nombre1; i++) { 
+            System.out.println(i); 
+        } 
+    }
+    
+}]]>				</paragraph>
+				</popup>
+
+			</clarify>
+
+		</learningObject>
+
+		<learningObject title="Survol du langage : La notion de package">
+			
+			<act>
+				<selfCheck title="API" shuffle="yes">
+					<fillInBlanks>
+						<question></question>
+						<gapText>
+							<paragraph>
+								Ouvrez l'API java et recherchez la classe
+								<formatted style="italic">IllegalFormatException</formatted>.
+							</paragraph>
+							<list listStyle="unordered">
+								<item>
+									Quel est le package de la classe <formatted style="italic">IllegalFormatException</formatted> 
+									documentée dans l'API java ?   
+									<gap answers="">java.util</gap>
+								</item>
+								<item>
+									Quel est le nom qualifié de cette classe ?<newLine/>   
+									<gap answers="">java.util.IllegalFormatException</gap>
+								</item>
+							</list>
+							<paragraph>
+								Écrivez la déclaration correcte d'une variable nommée
+								<formatted style="italic">clavier</formatted> de type 
+								<formatted style="italic">Scanner</formatted> sans import de la classe.
+							</paragraph>
+							<paragraph>
+								<gap answers="">java.util.Scanner</gap> <gap answers="">clavier</gap>
+							</paragraph>
+						</gapText>
+						<solution/>
+					</fillInBlanks>
+				</selfCheck>
+
+				<selfCheck title="Choix Multiple " shuffle="yes">
+					<multipleChoice>
+						<question>
+							<paragraph>Soit le code :</paragraph>
+							<paragraph cssClass="java">
+package td.td6; 
+public class ErrCompilation {
+    import java.util.Scanner;
+    public static void main (String [] args) { 
+        System.out.println("coucou");
+    }
+}							</paragraph>
+							<paragraph>
+								la commande <formatted style="code">javac ErrCompilation.java</formatted> 
+								provoque les erreurs suivantes :
+							</paragraph>
+							<paragraph cssClass="output">
+ErrCompilation.java:2: illegal start of type
+import java.util.Scanner;
+^
+ErrCompilation.java:2: ';' expected
+import java.util.Scanner;
+^
+ErrCompilation.java:2: illegal start of type
+import java.util.Scanner;
+^
+ErrCompilation.java:2: ';' expected
+import java.util.Scanner;
+^
+ErrCompilation.java:2: &lt;identifier&gt; expected
+import java.util.Scanner;
+^
+5 errors
+							</paragraph>
+							<paragraph>
+							Il s'agit d'une erreur générée par le compilateur javac car :
+							</paragraph>
+						</question>
+						<answer feedback="" correct="no">import s'écrit avec une majuscule</answer>
+						<answer feedback="" correct="no">le package utilisé est incorrect</answer>
+						<answer feedback="" correct="yes">le import est mal placé dans le code</answer>
+						<answer feedback="" correct="no">Scanner s'écrit avec une minuscule</answer>
+						<answer feedback="" correct="no">on n'utilise pas Scanner dans le code</answer>
+					</multipleChoice>
+				</selfCheck>
+
+				<selfCheck title="Choix Multiple " shuffle="yes">
+					<multipleChoice>
+						<question>
+							<paragraph>Soit le code :</paragraph>
+							<paragraph cssClass="java">
+import java.util.Scanner;
+package survol;
+public class ErrCompilation{
+	public static void main (String [] args){
+		System.out.println("coucou");
+	}
+}							</paragraph>
+							<paragraph>
+								la commande “javac ErrCompilation.java” provoque l'erreur suivante :
+							</paragraph>
+							<paragraph cssClass="output">
+ErrCompilation.java:3: class, interface, or enum expected
+package survol;
+^
+1 error
+							</paragraph>
+							<paragraph>
+								Il s'agit d'une erreur générée par le compilateur javac car :
+							</paragraph>
+						</question>
+						<answer feedback="" correct="no">package s'écrit avec une majuscule</answer>
+						<answer feedback="" correct="yes">l'instruction package est mal placée dans le code</answer>
+						<answer feedback="" correct="no">le package utilisé est incorrect</answer>
+					</multipleChoice>
+				</selfCheck>
+
+				<selfCheck title="Choix Multiple " shuffle="yes">
+					<multipleChoice>
+						<question>
+							Après correction du code précédent situé dans le répertoire survol,
+							la suite de commandes 
+							<formatted style="code">javac ErrExecution.java ; java ErrExecution.java</formatted>  
+							provoque l'erreur suivante :
+							<paragraph cssClass="output">
+Exception
+in thread "main" java.lang.NoClassDefFoundError:
+ErrCompilation (wrong name: survol/ErrCompilation)
+at
+java.lang.ClassLoader.defineClass1(Native Method)
+at
+java.lang.ClassLoader.defineClass(ClassLoader.java:632)
+at
+java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+at
+java.net.URLClassLoader.defineClass(URLClassLoader.java:277)
+at
+java.net.URLClassLoader.access$000(URLClassLoader.java:73)
+at
+java.net.URLClassLoader$1.run(URLClassLoader.java:212)
+at
+java.security.AccessController.doPrivileged(Native Method)
+at
+java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+at
+java.lang.ClassLoader.loadClass(ClassLoader.java:319)
+at
+sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+at
+java.lang.ClassLoader.loadClass(ClassLoader.java:264)
+at
+java.lang.ClassLoader.loadClassInternal(ClassLoader.java:332)
+Could
+not find the main class: ErrCompilation. Program will exit.
+							</paragraph>
+							<paragraph>
+								Il s'agit d'une erreur générée par la machine virtuelle java car :
+							</paragraph>
+						</question>
+						<answer feedback="" correct="yes">pour exécuter on doit donner le nom qualifié de la classe</answer>
+						<answer feedback="" correct="no">la déclarative de package ne correspond pas à l'emplacement du fichier .class</answer>
+						<answer feedback="" correct="no">la machine virtuelle n'est pas configurée pour reconnaitre l'utilisation de packages</answer>
+						<answer feedback="" correct="no">le fichier .class devrait se trouver ailleurs que le source java</answer>
+					</multipleChoice>
+				</selfCheck>
+
+			</act>
+
+		</learningObject>
+	
+		<learningObject title="Logique">
+			<clarify>
+				<paragraph>
+					Assurez-vous de venir au laboratoire avec le chapitre 7 
+					"Les boucles" de votre cours de logique. 
+				</paragraph>
+			</clarify>
+		</learningObject>
+
+		<learningObject title="Bravo">
+			<clarify>
+				<paragraph>
+					Si vous avez réussi à répondre correctement aux questions précédentes,
+					c'est que vous êtes prêts à venir au laboratoire dans les meilleures conditions!
+				</paragraph>
+			</clarify>
+		</learningObject>
+
+	</unit>
+  
+	<metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition>
+				<posNumber>3</posNumber>
+			</creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+      <technical>
+         <technicalRequirement>
+				<type>Browser</type>
+            <name>any</name>
+            <minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+      </technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2012 - 2013</version>
+				<contribute>
+					<person name="ARO" />
+					<person name="BEJ" />
+					<person name="CLR" />
+					<person name="DNA" />
+					<person name="HAL" />
+					<person name="MBA" />
+					<person name="MCD" />
+					<person name="NPX" />
+					<person name="PBT" />
+				</contribute>
+			</lifecycle>
+         <educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+      <rights>
+			<cost>no</cost>
+         <copyright>CC-BY</copyright>
+         <copyrightURL>http://creativecommons.org/licenses/by/3.0/</copyrightURL>
+      </rights>
+	</metadata>
+	
+</lesson>

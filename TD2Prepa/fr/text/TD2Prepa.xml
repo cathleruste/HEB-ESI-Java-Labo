@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+	<lesson 	xmlns="http://www.elml.ch" 
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+				label="TD2Prepa" title="TD2 - Exercices préparatoires">
+		
+		<entry>
+			<paragraph>  
+				Afin d'arriver au laboratoire dans les meilleures conditions, 
+				il est bien de revoir la matière qui sera mise en pratique. 
+				C'est pourquoi nous vous fournissons quelques exercices préparatoires 
+				à faire à la maison pour vous permettre d'évaluer si vous êtes prêts.  
+			</paragraph>
+		</entry>
+		
+		<unit label="TD2Ex" title="Exercices préparatoires au TD2">
+
+			<entry>
+				<paragraph>
+					Ces exercices préparatoires sont composés de 3 parties :
+				</paragraph>
+				<list listStyle="unordered">
+					<item>quelques questions pour vérifier ce que vous avez retenu du TD1;</item>
+					<item>les documents théoriques à lire avant d'aller au laboratoire;</item>
+					<item>une simulation de la mini interrogation qui vous attend en début de laboratoire.</item>
+				</list>
+			</entry>
+
+			<learningObject title="Révision du TD1">
+    
+				<act>
+					<selfCheck title="La connexion" shuffle="no">
+						<fillInBlanks>
+							<question>
+								Remplissez les blancs.
+							</question>
+							<gapText> 
+								<paragraph>
+									Nous allons faire les laboratoires sur une machine
+									qui se nomme <gap answers="linux1">linux1</gap> 
+									et qui tourne le système d'exploitation        
+									<gap answers="Linux,linux">Linux</gap>. 
+									Pour s'y connecter, nous utilisons le programme Windows        
+									<gap answers="putty">putty</gap>. 
+									Nous communiquerons avec la machine en mode  
+									<gap answers="console">console</gap> 
+									grâce à un <gap answers="shell">shell</gap> 
+									qui se nomme <gap answers="bash">bash</gap>. 
+								</paragraph>
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+					</selfCheck>
+      
+					<selfCheck title="Les commandes de base" shuffle="yes">
+						<fillInBlanks>
+							<question> 
+								La semaine passée, vous avez vu quelques commandes de base.
+								Vous en rappelez-vous ?  
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>
+										La commande pour voir le contenu d'un dossier 
+										(la liste de ce qu'il contient)
+										est <gap answers="ls">ls</gap> 
+									</item>  
+									<item>
+										La commande pour éditer le contenu d'un fichier est        
+										<gap answers="vi">vi</gap> 
+									</item>  
+									<item>
+										La commande pour changer son mot de passe est       
+										<gap answers="passwd">passwd</gap> 
+									</item>  
+									<item>
+										La commande pour se déconnecter de linux1 est       
+										<gap answers="exit">exit</gap> 
+									</item>  
+									<item>
+										La commande pour copier un fichier est      
+										<gap answers="cp">cp</gap> 
+									</item>  
+									<item>
+										La commande pour renommer un fichier est      
+										<gap answers="mv">mv</gap> 
+									</item>  
+									<item>
+										La commande pour déplacer un fichier est      
+										<gap answers="mv">mv</gap> 
+									</item>  
+									<item>
+										La commande pour changer de dossier courant est             
+										<gap answers="cd">cd</gap> 
+									</item>  
+									<item>
+										La commande pour créer un répertoire est      
+										<gap answers="mkdir">mkdir</gap> 
+									</item>  
+									<item>
+										La commande pour visualiser le contenu d'un fichier sans l'éditer est      
+										<gap answers="cat">cat</gap> 
+									</item>  
+									<item>
+										La commande pour voir quel est le dossier courant est        
+										<gap answers="pwd">pwd</gap> 
+									</item>  
+									<item>
+										La commande pour détruire un fichier est  
+										<gap answers="rm">rm</gap> 
+									</item>  
+									<item>
+										La commande pour détruire un dossier vide est  
+										<gap answers="rmdir">rmdir</gap> 
+									</item>  
+								</list>  
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+					</selfCheck>
+      
+					<selfCheck title="La ligne de commande" shuffle="no">
+						<fillInBlanks>
+							<question/>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>
+										Qu'est-ce qui permet de distinguer / séparer les différentes parties d'une commande ? 
+										<gap answers="l'espace,espace">l'espace</gap> 
+									</item>  
+									<item>
+										Dans la commande <formatted style="input">vitest</formatted>, combien y a-t-il de parties ?  
+										<gap answers="1,un,une">1</gap> 
+									</item>  
+								</list>
+							</gapText>
+							<solution/>
+						</fillInBlanks>
+					</selfCheck>
+    
+					<selfCheck title="Les commandes vi" shuffle="yes">
+						<fillInBlanks>
+							<question></question>
+							<gapText>
+								<paragraph>Quelle commande vi permet faire l'action suivante ?</paragraph>
+								<list listStyle="unordered">
+									<item>de passer du mode commande au mode insertion <gap answers="i">i</gap></item>  
+									<item>de passer du mode commande au mode exécution <gap answers=":">:</gap></item>  
+									<item>de revenir au mode commande <gap answers="esc,ESC">esc</gap></item>
+								</list>
+								<paragraph>En mode commande, comment :</paragraph>								  
+								<list listStyle="unordered">
+									<item>effacer un caractère <gap answers="x">x</gap></item>  
+									<item>couper la ligne sous le curseur <gap answers="dd">dd</gap></item>  
+									<item>copier la ligne sous le curseur <gap answers="yy">yy</gap></item>  
+									<item>coller la ligne précédemment copiée ou collée <gap answers="p">p</gap></item>  
+								</list>  
+								<paragraph>En mode exécution comment
+										(n'oubliez pas de commencer par la commande 
+										qui permet de passer au mode exécution) :
+								</paragraph>								  
+								<list listStyle="unordered">
+									<item>sauver sans quitter l'éditeur                  
+										<gap answers=":w">:w</gap> 
+									</item>  
+									<item>sauver le fichier sous le nom "exercice"                 
+										<gap answers=":w exercice">:w exercice</gap> 
+									</item>  
+									<item>quitter sans sauver <gap answers=":q!">:q!</gap></item>  
+									<item>quitter en sauvant  <gap answers=":x">:x</gap></item>  
+								</list>
+							</gapText>
+							<solution/>
+						</fillInBlanks>
+					</selfCheck>
+				</act>
+    
+				<clarify>
+					<paragraph title="L'éditeur" icon="icon_question"> 
+						Donnez les commandes nécessaires pour :
+					</paragraph>	
+					<list listStyle="unordered">
+						<item>mettre le mot 'Bonjour' dans un fichier texte appelé <formatted style="bold">MonPremierTD</formatted>;</item>  
+						<item>copier cette première ligne et la coller 3 fois en dessous; </item>  
+						<item>sauver et fermer le fichier.</item>  
+					</list>
+				</clarify>
+    
+			</learningObject>
+			
+			<learningObject title="Théorie à revoir">
+				<clarify>
+					<paragraph> 
+						Avant de venir au prochain labo, lisez attentivement les points 10 à 19 du guide visuel. 
+						L'interro du début de laboratoire portera aussi sur cette matière.
+					</paragraph>
+				</clarify>
+			</learningObject>
+    
+			<learningObject title="Exemple de MIL">
+				<clarify>
+					<paragraph>  
+						Afin de vous préparer au mieux à la Mini Interro de Laboratoire (MIL)
+						qui vous attend en début de prochain labo,
+						voici un exemple de ce que vous auriez pu avoir comme questions.  
+					</paragraph>  
+    
+					<paragraph title="1. (3 points)"/>  
+    
+					<list listStyle="unordered">
+						<item>
+							Vrai ou faux : Avec Linux, tous les systèmes de fichiers sont assemblés
+							en un seul système de fichiers dont le dossier principal est désigné par
+							<formatted style="code">C:</formatted>
+						</item>  
+						<item>
+							Vrai ou faux : <formatted style="code">/home/g12345/tds</formatted> est un chemin relatif.
+						</item>  
+						<item>
+							Choisissez la réponse correcte : La commande qui affiche tous les groupes de l'utilisateur est :
+							<formatted style="code">users</formatted> - 
+							<formatted style="code">groups</formatted> - 
+							<formatted style="code">chgrp</formatted> - 
+							<formatted style="code">chmod</formatted>
+						</item>  
+					</list>
+    
+					<paragraph title="2. (1 point)"/>  
+    
+					<paragraph>  
+						Dans l'éditeur <formatted style="code">vi</formatted> que fait la commande suivante :  
+						<formatted style="code">yy</formatted>
+					</paragraph>  
+    
+					<paragraph title="3. (1 point)"/>  
+        
+					<paragraph>
+						Expliquez ce qu'est le <formatted style="italic">mode console</formatted> 
+						utilisé sur <formatted style="code">linux1</formatted>.  
+					</paragraph>  
+    
+					<paragraph title="4. (2 points)"/>  
+        
+					<paragraph>
+						Donnez les commandes linux pour :  
+					</paragraph>  
+					<list listStyle="unordered">
+						<item>afficher le contenu du dossier courant</item>  
+						<item>supprimer un fichier <formatted style="code">Hello.java</formatted> qui se trouve dans le dossier courant</item>  
+					</list>
+    
+					<paragraph title="5. (3 points)"/>  
+        
+					<paragraph>  
+						Dans les commandes linux suivantes, lesquelles sont correctes?  
+					</paragraph>  
+    
+					<list listStyle="unordered">
+						<item><formatted style="code">cp monFichier nouveauFichier</formatted></item>  
+						<item><formatted style="code">Rm monFichier</formatted></item>  
+						<item><formatted style="code">:x</formatted></item>  
+					</list>
+				</clarify>
+			</learningObject>
+		</unit>
+  	<metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition>
+				<posNumber>2</posNumber>
+			</creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+      <technical>
+         <technicalRequirement>
+				<type>Browser</type>
+            <name>any</name>
+            <minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+      </technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2012 - 2013</version>
+				<contribute>
+					<person name="ARO" />
+					<person name="BEJ" />
+					<person name="CLR" />
+					<person name="DNA" />
+					<person name="HAL" />
+					<person name="MBA" />
+					<person name="MCD" />
+					<person name="NPX" />
+					<person name="PBT" />
+				</contribute>
+			</lifecycle>
+         <educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+      <rights>
+			<cost>no</cost>
+         <copyright>CC-BY</copyright>
+         <copyrightURL>http://creativecommons.org/licenses/by/3.0/</copyrightURL>
+      </rights>
+	</metadata>
+
+</lesson>
