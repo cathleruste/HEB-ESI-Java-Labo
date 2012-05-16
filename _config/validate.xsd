@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:elml="http://www.elml.ch" targetNamespace="http://www.elml.ch" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.0">
+	<xs:annotation>
+		<xs:documentation> ---------------------------------------------------------------------------------------------------------------------------------------------------- eLesson Markup Language eLML XML-Structure Redesign of GITTA.DTD March 2004 Susanne Bleisch and Joel Fisler by order of Edutech, SVC Mandate v 3.0, 20.3.06 ---------------------------------------------------------------------------------------------------------------------------------------------------- This schema brings together all eLML schemas in one project. If you want to use another bibliography or metadata schema than the standard eLML ones, then you can define it here. Additionally, in this schema you can also define all your project specific settings. More information can be found on the Website at http://sourceforge.net/projects/elml ---------------------------------------------------------------------------------------------------------------------------------------------------- </xs:documentation>
+	</xs:annotation>
+	<!-- ======================== Include the other schemas ======================== -->
+	<!--The name of the main eLML schema file.-->
+	<xs:include schemaLocation="elml.xsd"/>
+	<!--The name of your metadata schema. If you use your own metadata standard, insert the according xsd file here.-->
+	<xs:include schemaLocation="../../core/structure/metadata_elml.xsd"/>
+	<!--The name of your bibliography schema. If you use your own referencing schema, insert the according xsd file here.-->
+	<xs:include schemaLocation="../../core/structure/biblio_harvard.xsd"/>
+	<!-- ======================== Customisable attribute and type definitions ======================== -->
+	<!-- cssClass Definition -->
+	<!-- Define here any additional css classes that you need for the definition of eLML content elements. If you don't want to use css classes then leave this definition as it is -->
+	<xs:attributeGroup name="CSSClassImp">
+		<xs:attribute name="cssClass" use="optional">
+			<xs:annotation>
+				<xs:documentation>The attribute cssClass allows to specify the name of a CSS class which then needs to be defined in the layout used for transformation.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="citation"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Organisation required -->
+	<xs:attributeGroup name="OrganisationReq">
+		<xs:attribute name="level" use="required">
+			<xs:annotation>
+				<xs:documentation>The attribute level describes the level on which the current lesson is positioned. It can contain one of the three values Basic, Intermediate or Advanced.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="1ère année"/>
+					<xs:enumeration value="2ème année"/>
+					<xs:enumeration value="3ème année"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="module" use="required">
+			<xs:annotation>
+				<xs:documentation>The attribute module contains the name of the module to which the current lesson belongs to.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Laboratoires Java"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Icon implied -->
+	<xs:attributeGroup name="IconImp">
+		<xs:attribute name="icon">
+			<xs:annotation>
+				<xs:documentation>The icon attribute allows to specify which icon is used to mark a paragraph as special. The value important displays an exclamation mark, the value question displays a question mark and the value remark displays an arrow to the left. It needs an icon gif in the layout section.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="important"/>
+					<xs:enumeration value="question"/>
+					<xs:enumeration value="remark"/>
+					<xs:enumeration value="act"/>
+					<xs:enumeration value="bravo"/>
+					<xs:enumeration value="objectif"/>
+					<xs:enumeration value="objective"/>
+					<xs:enumeration value="icon_bravo"/>
+					<xs:enumeration value="icon_experiment"/>
+					<xs:enumeration value="icon_faq"/>
+					<xs:enumeration value="icon_key_points"/>
+					<xs:enumeration value="icon_question"/>
+					<xs:enumeration value="icon_reading"/>
+					<xs:enumeration value="icon_web_resource"/>
+					<xs:enumeration value="icon_casestudy"/>				
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Institute required -->
+	<xs:attributeGroup name="InstituteReq">
+		<xs:attribute name="institute" use="required">
+			<xs:annotation>
+				<xs:documentation>The attribute institute allows to select one of the predefined institute names in the validate.xsd.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="UZH"/>
+					<xs:enumeration value="YourUniveristy"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Departement required -->
+	<xs:attributeGroup name="DepartementReq">
+		<xs:attribute name="departement" use="required">
+			<xs:annotation>
+				<xs:documentation>The attribute departement allows to select one of the predefined departement names in the validate.xsd.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="MELS"/>
+					<xs:enumeration value="YourDepartment"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- PredefinedLabelsType -->
+	<xs:simpleType name="PredefinedLabelsType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="none"/>
+			<xs:enumeration value="TD1"/>
+			<xs:enumeration value="TD2Prepa"/>
+			<xs:enumeration value="TD2"/>
+			<xs:enumeration value="TD3Prepa"/>
+			<xs:enumeration value="TD3"/>
+			<xs:enumeration value="TD3Prepa"/>
+			<xs:enumeration value="TD3"/>
+			<xs:enumeration value="website"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- LanguageType -->
+	<xs:simpleType name="LanguageType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="de"/>
+			<xs:enumeration value="fr"/>
+			<xs:enumeration value="it"/>
+			<xs:enumeration value="en"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Copyright Type -->
+	<xs:simpleType name="CopyrightType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CC-BY"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ======================== Default types and attributes - do not change ======================== -->
+	<!-- YesNoType -->
+	<xs:simpleType name="YesNoType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="no"/>
+			<xs:enumeration value="yes"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Role implied -->
+	<xs:attributeGroup name="RoleImp">
+		<xs:attribute name="role">
+			<xs:annotation>
+				<xs:documentation>The attribute role can be set to 'tutor' or 'student'. Elements with role set to tutor will only be visible to tutors and not to students. Elements set to 'student' are visible for tutors and students.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="tutor"/>
+					<xs:enumeration value="student"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- LessonLabel required -->
+	<xs:attributeGroup name="LessonLabelReq">
+		<xs:attribute name="label" use="required">
+			<xs:annotation>
+				<xs:documentation>The attribute labels allows to select one of the in the validate.xsd predefined lesson labels.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="elml:PredefinedLabelsType"/>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- BibIDRef required -->
+	<xs:attributeGroup name="BibIDRefReq">
+		<xs:attribute name="bibIDRef" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>The attribute bibIDRef allows referencing a resource item by the value of the bibID of the referenced item.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- BibIDRef implied -->
+	<xs:attributeGroup name="BibIDRefImp">
+		<xs:attribute name="bibIDRef" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The attribute bibIDRef allows referencing a resource item by the value of the bibID of the referenced item.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- BibPageNr -->
+	<xs:attributeGroup name="BibPageNr">
+		<xs:attribute name="pageNr" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The attribute pageNr contains the number of the relevant pages of a source. It does contain only the numbers without any p, p., or pages written.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Sorting -->
+	<xs:attributeGroup name="SortingImp">
+		<xs:attribute name="sorting">
+			<xs:annotation>
+				<xs:documentation>The attribute sorting allows to turn the sorting of the bibliography entries alphabetically (author names) off, byAuthor, byYear, groupByYear or groupByType. If sorting is set to off, then the order of the entries is taken from the XML file. If sorting is set to byAuthor, then the values are sorted alphabetically by the author names. If sorting is set to byYear then the values are sorted after the year of publication and within the same year alphabetically by the author names. If sorting is set to groupByYear then the values are grouped (and titled) according to the publication years (within the same year alphabetically by author names). If sorting is set to groupByType then the values are grouped (and titled) according to their categories, e.g. all books, all websites,... (within the same category alphabetically by author names; titles can be changed in the titles.xsl).</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="off"/>
+					<xs:enumeration value="byAuthor"/>
+					<xs:enumeration value="byYear"/>
+					<xs:enumeration value="groupByYear"/>
+					<xs:enumeration value="groupByType"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Visible implied -->
+	<xs:attributeGroup name="VisibleImp">
+		<xs:attribute name="visible">
+			<xs:annotation>
+				<xs:documentation>The attribute visible allows to specify where a paragraph or multimedia object is apparant. The values for selection are all (default), online or print.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="all"/>
+					<xs:enumeration value="online"/>
+					<xs:enumeration value="print"/>
+					<xs:enumeration value="none"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		</xs:attributeGroup>
+</xs:schema>

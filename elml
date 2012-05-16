@@ -1,0 +1,47 @@
+#!/bin/bash
+
+STYLE=java
+
+function usage() {
+	echo "usage:"
+	echo "    elml valider leçon - pour vérifier la syntaxe du fichier de la leçon"
+	echo "    elml pdf leçon     - pour le PDF de la leçon"
+	echo "    elml scorm leçon   - pour le scorm de la leçon"
+	echo "    elml all leçon     - pour le PDF + scorm de la leçon"
+}
+
+function valider() {
+	xmllint --noout --schema _config/validate.xsd $LESSON/fr/text/$LESSON.xml
+}
+
+function pdf() {
+	java -cp /usr/local/saxon/saxon9he.jar net.sf.saxon.Transform -t -s:$LESSON/fr/text/$LESSON.xml -xsl:_templates/$STYLE/latex.xsl
+	if [[ $? == 0 ]]; then
+		OLD=`pwd`
+		cd $LESSON/fr/latex
+		pdflatex $LESSON.tex
+		cp $LESSON.pdf ../../../dist
+		mv $LESSON.pdf ../text
+		cd $OLD
+	fi
+}
+
+
+function scorm() {
+	java -cp /usr/local/saxon/saxon9he.jar net.sf.saxon.Transform -t -s:$LESSON/fr/text/$LESSON.xml -xsl:_templates/$STYLE/online.xsl
+	zip -qr dist/$LESSON.zip imsmanifest.xml sitemap.xml $LESSON _templates/java
+	rm imsmanifest.xml sitemap.xml
+}
+
+if [[ $#<2 ]]; then usage; exit 1; fi
+LESSON=$2
+
+case $1 in
+    valider ) valider ;;
+    pdf ) pdf ;;
+    scorm ) scorm ;;
+    all ) scorm; pdf ;;
+    * ) usage ;;
+esac
+
+

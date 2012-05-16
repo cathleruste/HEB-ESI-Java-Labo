@@ -1,0 +1,1370 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:elml="http://www.elml.ch" targetNamespace="http://www.elml.ch" elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.0">
+	<xs:annotation>
+		<xs:documentation>
+			----------------------------------------------------------------------------------------------------------------------------------------------------
+			eLesson Markup Language eLML XML-Structure Redesign of GITTA.DTD March 2004 Susanne Bleisch and Joel Fisler by order of Edutech,
+			SVC Mandate
+			----------------------------------------------------------------------------------------------------------------------------------------------------
+			This XML structure is based on the GITTA - Geographic Information Technology and Training Alliance (SVC project 200128) XML
+			structure which has been developed and used through the process of creating the GITTA elearning materials. It was roughly based
+			on the Learning Material Markup Language LMML (for more Information see http://www.lmml.de). The didactical model is based on
+			the ECLASS model (E-CLASS: Creating a Guide to Online Course Development For Distance Learning Faculty by Dr. S. M. Gerson,
+			Johnson County Community College, KS 66210, http://www.westga.edu/~distance/ojdla/winter34/gerson34.html). More information can
+			be found on the Website at http://sourceforge.net/projects/elml or http://www.elml.ch
+			----------------------------------------------------------------------------------------------------------------------------------------------------
+		</xs:documentation>
+	</xs:annotation>
+	<!-- ============
+If you want to use eLML.xsd without a project (without a validate.xsd file)
+then uncomment and change accordingly the following XMLSchema code lines and reference the elml.xsd file directly from your content files. 
+		=============-->
+	<!--The name of your bibliography schema and your own metadata standard. If you use your own referencing schema and/or your own metadata standard/definition, insert the according xsd file names here.
+	<xs:include schemaLocation="biblio_harvard.xsd"/>
+	<xs:include schemaLocation="metadata_elml.xsd"/>
+	<xs:attributeGroup name="IconImp">
+		<xs:attribute name="icon">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="important"/>
+					<xs:enumeration value="question"/>
+					<xs:enumeration value="remark"/>
+					<xs:enumeration value="act"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="CSSClassImp">
+		<xs:attribute name="cssClass" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="whateveryoulike"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="SortingImp">
+		<xs:attribute name="sorting">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="off"/>
+					<xs:enumeration value="byAuthor"/>
+					<xs:enumeration value="byYear"/>
+					<xs:enumeration value="groupByYear"/>
+					<xs:enumeration value="groupByType"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="VisibleImp">
+		<xs:attribute name="visible">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="all"/>
+					<xs:enumeration value="online"/>
+					<xs:enumeration value="print"/>
+					<xs:enumeration value="none"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="BibIDRefImp">
+		<xs:attribute name="bibIDRef" type="xs:string">
+			</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="BibIDRefReq">
+		<xs:attribute name="bibIDRef" type="xs:string" use="required">
+			</xs:attribute>
+	</xs:attributeGroup>-->
+	<!-- ==============================================================================================================
+
+																	Attribute Definitions  
+
+==============================================================================================================-->
+	<!-- All the attribute definitions are down just below. The elements defined further below reference the attribute definitions. Basically,
+	no element should contain attribute definitions. Therefore, later changes of attributes can be done easily within the attribute 
+	definitions and need no change within the elements. The project specific attributes and type definitions are defined in the external 
+	XML schema named validate.xsd which imports the current XML schema.
+	-->
+	<!-- Label required -->
+	<xs:attributeGroup name="LabelReq">
+		<xs:attribute name="label" type="elml:LabelType" use="required">
+			<xs:annotation>
+				<xs:documentation>The attribute label is restricted to 25 characters which can be a random selection from the values 'a-z', 'A-Z', '0-9' and '_'.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Label implied -->
+	<xs:attributeGroup name="LabelImp">
+		<xs:attribute name="label" type="elml:LabelType">
+			<xs:annotation>
+				<xs:documentation>The attribute label is restricted to 25 characters which can be a random selection from the values 'a-z',
+					'A-Z', '0-9' and '_'.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- labelRef implied -->
+	<xs:attributeGroup name="LabelRefImp">
+		<xs:attribute name="labelRef" type="elml:LabelType">
+			<xs:annotation>
+				<xs:documentation>The attribute labelRef contains the references to a valid label of one other element within a lesson.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- labelRef required -->
+	<xs:attributeGroup name="LabelRefReq">
+		<xs:attribute name="labelRef" type="elml:LabelType" use="required">
+			<xs:annotation>
+				<xs:documentation>The attribute labelRef contains the references to a valid label of one other element within a lesson.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Title required -->
+	<xs:attributeGroup name="TitleReq">
+		<xs:attribute name="title" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>The attribute title contains a string representing a title.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Title implied -->
+	<xs:attributeGroup name="TitleImp">
+		<xs:attribute name="title" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The attribute title contains a string representing a title.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- NavTitle implied -->
+	<xs:attributeGroup name="NavTitleImp">
+		<xs:attribute name="navTitle" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The attribute navTitle contains a string representing a short title that is used for the navigation. The
+					attribute shall be used, when the original title of the lesson, unit or learningObject is too long for the
+				navigation.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- IntStatement implied -->
+	<xs:attributeGroup name="IntStatementImp">
+		<xs:attribute name="intStatement" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The attribute intStatement may containan introductionary string to the learning
+				objectives.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Presentation implied -->
+	<xs:attributeGroup name="PresentationImp">
+		<xs:attribute name="presentation">
+			<xs:annotation>
+				<xs:documentation>The attribute presentation can be used to set the presentation of the learningObjectives either to list or
+					table.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="list"/>
+					<xs:enumeration value="table"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Legend implied -->
+	<xs:attributeGroup name="LegendImp">
+		<xs:attribute name="legend" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The attribute legend contains a string representing an image or other elements legend.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Uri implied - includes uri, targetLesson, targetLabel, type, size, comment -->
+	<xs:attributeGroup name="UriImp">
+		<xs:attribute name="uri" type="xs:anyURI">
+			<xs:annotation>
+				<xs:documentation>The attribute uri contains a valid URI.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="targetLesson" type="elml:PredefinedLabelsType">
+			<xs:annotation>
+				<xs:documentation>The attribute targetLesson contains one of the lesson labels defined in the validate.xsd.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="targetLessonLang" type="elml:LanguageType">
+			<xs:annotation>
+				<xs:documentation>The attribute targetLessonLang contains the definition of the language of the target lesson.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="targetLabel" type="elml:LabelType">
+			<xs:annotation>
+				<xs:documentation>The attribute targetLabel contains a label specified within an element within the same lesson (specifies
+					the target element of an internal link).</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="type" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The attribute type contains a string describing the type of a linked element (e.g. pdf for a PDF-Document,
+					or shp for a Shape-File). This is especially useful for links to downloadable material.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="size" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The attribute size contains the file size of downloadable material (e.g. 7KB or 15MB).</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="target" type="elml:targetType">
+			<xs:annotation>
+				<xs:documentation>The attribute target allows to specify if the link should e.g. be openend in a new window (_blank) or in the
+					same window (_top). The attribute allows any strings. If you want to limit the allowed strings (e.g. only '_blank' and '_top') then you'll need to add a xs:redefine section to your validate.xsd file instead of the xs:include sections that includes elml.xsd and redefine the this attribute group as to only allow the specific strings for the attribute target.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- targetType for attribute target - to be redefined in the project specific validate.xsd files -->
+	<xs:simpleType name="targetType">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<!-- NewLine implied -->
+	<xs:attributeGroup name="NewLineImp">
+		<xs:attribute name="space">
+			<xs:annotation>
+				<xs:documentation>The attribute space allows the values short or long. Short creates a simple line break (equivalent to
+					&lt;br&gt; in HTML) while long starts visually a new paragraph. </xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="short"/>
+					<xs:enumeration value="long"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Type required -->
+	<xs:attributeGroup name="TypeReq">
+		<xs:attribute name="type" use="required">
+			<xs:annotation>
+				<xs:documentation>The attribute type allows to specify the type of a multimedia element (similar to mime types). Possible values are gif,
+					jpeg, png, flash, svg, quicktime, mpeg, mp3, mp4, ogg, webm, vrml, x3d, realone, mathml, div and applet.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="gif"/>
+					<xs:enumeration value="jpeg"/>
+					<xs:enumeration value="png"/>
+					<xs:enumeration value="flash"/>
+					<xs:enumeration value="svg"/>
+					<xs:enumeration value="quicktime"/>
+					<xs:enumeration value="mpeg"/>
+					<xs:enumeration value="mp3"/>
+					<xs:enumeration value="mp4"/>
+					<xs:enumeration value="ogg"/>
+					<xs:enumeration value="webm"/>
+					<xs:enumeration value="applet"/>
+					<xs:enumeration value="vrml"/>
+					<xs:enumeration value="x3d"/>
+					<xs:enumeration value="realone"/>
+					<xs:enumeration value="mathml"/>
+					<xs:enumeration value="div"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Thumbnail - includes thumbnail, thumbmime -->
+	<xs:attributeGroup name="Thumbnail">
+		<xs:attribute name="thumbnail" type="xs:anyURI">
+			<xs:annotation>
+				<xs:documentation>The attribute thumbnail contains the URI to the thumbnail file (e.g. ../multimedia/test_thumb.jpg) in case
+					an image shall be displayed with a thumbnail.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Source implied -->
+	<xs:attributeGroup name="SourceImp">
+		<xs:attribute name="src" type="xs:anyURI">
+			<xs:annotation>
+				<xs:documentation>The attribute src contains the URI to the multimedia file (e.g.
+				../multimedia/test.jpg).</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- vAlignment implied -->
+	<xs:attributeGroup name="vAlignmentImp">
+		<xs:attribute name="valign">
+			<xs:annotation>
+				<xs:documentation>The attribute valign allows to specify the vertical alignment of content within columns and
+					tables.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="top"/>
+					<xs:enumeration value="middle"/>
+					<xs:enumeration value="bottom"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Alignment implied -->
+	<xs:attributeGroup name="AlignmentImp">
+		<xs:attribute name="align">
+			<xs:annotation>
+				<xs:documentation>The attribute align allows to specify the horizontal alignment of multimedia objects and content within columns and
+					tables.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="left"/>
+					<xs:enumeration value="center"/>
+					<xs:enumeration value="right"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- GlossaryRef required -->
+	<xs:attributeGroup name="GlossaryRefReq">
+		<xs:attribute name="glossRef" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>The attribute glossRef allows to specify (for the purpose of referencing) one of the terms specified in
+					the attribute term of the element definition.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Glossary required - includes term -->
+	<xs:attributeGroup name="GlossaryReq">
+		<xs:attribute name="term" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>The attribute term contains a string with the term which is defined in the element definition. The
+					attribute glossRef references these terms. Characters, Numbers, Blanks, etc. are allowed.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Size implied - includes units, width, height -->
+	<xs:attributeGroup name="SizeImp">
+		<xs:attribute name="width" type="xs:positiveInteger">
+			<xs:annotation>
+				<xs:documentation>The attribute width allows to specify the width of an image, multimedia object, table, etc. as a positive
+					Number.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="height" type="xs:positiveInteger">
+			<xs:annotation>
+				<xs:documentation>The attribute height allows to specify the height of an image, multimedia object, table, etc. as a
+					positive Number.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="units">
+			<xs:annotation>
+				<xs:documentation>The attribute units allows the values pixels or percent. It is used to specify what the units of the
+					numbers specified in the attributes width and height are. </xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="pixels"/>
+					<xs:enumeration value="percent"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Span implied - includes rowspan, colspan -->
+	<xs:attributeGroup name="SpanImp">
+		<xs:attribute name="rowspan" type="xs:positiveInteger">
+			<xs:annotation>
+				<xs:documentation>The attribute rowspan allows to specify the number of rows that are spanned by this table
+				cell.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="colspan" type="xs:positiveInteger">
+			<xs:annotation>
+				<xs:documentation>The attribute colspan allows to specify the number of columns that are spanned by this table
+				cell.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- ListStyle implied -->
+	<xs:attributeGroup name="ListStyleImp">
+		<xs:attribute name="listStyle">
+			<xs:annotation>
+				<xs:documentation>The attribute listStyle allows to specify the type of list. Values to select are ordered (with numbers) or
+					unordered (with symbols).</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="ordered"/>
+					<xs:enumeration value="unordered"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- MetaSetUpInfo implied -->
+	<xs:attributeGroup name="MetaSetUpInfoImp">
+		<xs:attribute name="metaSetUpInfo" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>The attribute metaSetUpInfo allows to specify what needs to be set up on, for example, an eLearning
+					platform, so that these exercise or self assessement can be done (eg. set up a discussion forum with the topic 'Exercise
+					1').</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Style implied -->
+	<xs:attributeGroup name="StyleImp">
+		<xs:attribute name="style" use="optional">
+			<xs:annotation>
+				<xs:documentation>The attribute style allows to define how the text within the element formatted should be displayed. Values
+					to select are bold, italic, underlined, crossedOut, upperCase, lowerCase, subscript, superscript and
+				code.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="bold"/>
+					<xs:enumeration value="italic"/>
+					<xs:enumeration value="underlined"/>
+					<xs:enumeration value="crossedOut"/>
+					<xs:enumeration value="upperCase"/>
+					<xs:enumeration value="lowerCase"/>
+					<xs:enumeration value="subscript"/>
+					<xs:enumeration value="superscript"/>
+					<xs:enumeration value="code"/>
+					<xs:enumeration value="input"/>
+					<xs:enumeration value="verbatim"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Year only (for citations) implied -->
+	<xs:attributeGroup name="YearOnlyImp">
+		<xs:attribute name="yearOnly" type="elml:YesNoType">
+			<xs:annotation>
+				<xs:documentation> The attribute yearOnly allows defining if a bibliography reference should be made with author name and
+					year of publication or with year of publication only. Default is author name and year of publication (attribute set to
+					'no').</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- IndexAtt implied -->
+	<xs:attributeGroup name="IndexAttImp">
+		<xs:attribute name="mainEntry" type="elml:YesNoType">
+			<xs:annotation>
+				<xs:documentation> The attribute mainEntry allows defining if a index item is the main entry meaning that here is the best
+					description/use of this index item. Default is no.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="affiliatedTo" type="xs:string">
+			<xs:annotation>
+				<xs:documentation> The attribute affiliatedTo allows defining a specific notation of the index item. For example, if the
+					index item is 'houses' then it might be affiliated to 'house' so to have only one notation in the final index. If the
+					attribute is not set then the word(s) marked up as index item are taken for the final index.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Question required -->
+	<xs:attributeGroup name="QuestionReq">
+		<xs:attribute name="category" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>The optional attribute category can be used to define different levels of questions. How the content of this attribute is handled and what is allowed within is left to the author of the project specific XSLT files.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="shuffle" type="elml:YesNoType">
+			<xs:annotation>
+				<xs:documentation>The attribute shuffle allows defining if the answers to the questions should be (re-)arranged randomly each time the (e.g. html) page is reloaded.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- Answers required -->
+	<xs:attributeGroup name="AnswersReq">
+		<xs:attribute name="correct" type="elml:YesNoType" use="required">
+			<xs:annotation>
+				<xs:documentation>The required attribute correct allows defining if an answer is the correct one (yes) or if it is a wrong answer designed to trick the student (no).</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="feedback" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>The optional attribute feedback allows to give the student a short text feedback about his wrong (or correct) choice of answer. It might also contain a hint as to where in the lesson the student might find the correct answer for the question.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<!-- =======================================================================================================
+
+                                                                      Type Definitions for Attributes  
+
+=======================================================================================================-->
+	<!-- LabelType -->
+	<xs:simpleType name="LabelType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="25"/>
+			<xs:pattern value="([A-Za-z0-9_])*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- =======================================================================================================
+
+                                                                      Element Definitions  
+
+=======================================================================================================-->
+	<!-- Element lesson -->
+	<xs:element name="lesson">
+		<xs:annotation>
+			<xs:documentation>The element lesson is the root element of any eLML xml file. To work through a lesson needs typically about
+				1.5 to 2 hours.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice maxOccurs="2">
+					<xs:element ref="elml:entry"/>
+					<xs:element ref="elml:goals" minOccurs="0"/>
+				</xs:choice>
+				<xs:element ref="elml:unit" maxOccurs="40"/>
+				<xs:choice minOccurs="0" maxOccurs="2">
+					<xs:element ref="elml:selfAssessment" minOccurs="0" maxOccurs="5"/>
+					<xs:element ref="elml:summary" minOccurs="0"/>
+				</xs:choice>
+				<xs:element ref="elml:furtherReading" minOccurs="0"/>
+				<xs:element ref="elml:glossary" minOccurs="0"/>
+				<xs:element ref="elml:bibliography" minOccurs="0"/>
+				<xs:element ref="elml:index" minOccurs="0"/>
+				<xs:element ref="elml:listOfFigures" minOccurs="0"/>
+				<xs:element ref="elml:listOfTables" minOccurs="0"/>
+				<xs:element ref="elml:metadata" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="elml:LessonLabelReq"/>
+			<xs:attributeGroup ref="elml:TitleReq"/>
+			<xs:attributeGroup ref="elml:NavTitleImp"/>
+		</xs:complexType>
+		<xs:unique name="uniqueLabel">
+			<xs:selector xpath=".//elml:*"/>
+			<xs:field xpath="@label"/>
+		</xs:unique>
+		<xs:keyref name="keytargetLabel" refer="elml:uniqueLabel">
+			<xs:selector xpath=".//elml:*"/>
+			<xs:field xpath="@targetLabel"/>
+		</xs:keyref>
+		<xs:keyref name="keylabelRef" refer="elml:uniqueLabel">
+			<xs:selector xpath=".//elml:*"/>
+			<xs:field xpath="@labelRef"/>
+		</xs:keyref>
+		<xs:key name="keyTerm">
+			<xs:selector xpath=".//elml:definition"/>
+			<xs:field xpath="@term"/>
+		</xs:key>
+		<xs:keyref name="keyRefTerm" refer="elml:keyTerm">
+			<xs:selector xpath=".//elml:term"/>
+			<xs:field xpath="@glossRef"/>
+		</xs:keyref>
+		<xs:key name="keyBibID">
+			<xs:selector xpath="./elml:bibliography/*"/>
+			<xs:field xpath="@bibID"/>
+		</xs:key>
+		<xs:keyref name="keyRefBibID" refer="elml:keyBibID">
+			<xs:selector xpath=".//elml:*"/>
+			<xs:field xpath="@bibIDRef"/>
+		</xs:keyref>
+		<xs:key name="keyContextID">
+			<xs:selector xpath="./elml:context/*"/>
+			<xs:field xpath="@contextID"/>
+		</xs:key>
+		<xs:keyref name="keyRefContextID" refer="elml:keyContextID">
+			<xs:selector xpath=".//elml:*"/>
+			<xs:field xpath="@contextIDRef"/>
+		</xs:keyref>
+	</xs:element>
+	<!-- Element unit -->
+	<xs:element name="unit">
+		<xs:annotation>
+			<xs:documentation>The element unit allows to structure the content of a lesson in one or more units.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice minOccurs="0" maxOccurs="2">
+					<xs:element ref="elml:entry" minOccurs="0"/>
+					<xs:element ref="elml:goals" minOccurs="0"/>
+				</xs:choice>
+				<xs:element ref="elml:learningObject" maxOccurs="40"/>
+				<xs:choice minOccurs="0" maxOccurs="2">
+					<xs:element ref="elml:selfAssessment" minOccurs="0" maxOccurs="5"/>
+					<xs:element ref="elml:summary" minOccurs="0"/>
+				</xs:choice>
+				<xs:element ref="elml:furtherReading" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="elml:LabelReq"/>
+			<xs:attributeGroup ref="elml:TitleReq"/>
+			<xs:attributeGroup ref="elml:NavTitleImp"/>
+			<xs:attributeGroup ref="elml:RoleImp"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element learningObject -->
+	<xs:element name="learningObject">
+		<xs:annotation>
+			<xs:documentation>The element learningObject allows to structure the content of a unit in one or more learningObjects. A
+				learningObject contains typically one topic which is explained (clarify part), shown by examples (look part) and learned
+				through exercises (act part). The order of these parts is random and not all parts need to be used mandatorily. The parts my
+				occur zero, one or more times.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="elml:clarify"/>
+				<xs:element ref="elml:look"/>
+				<xs:element ref="elml:act"/>
+			</xs:choice>
+			<xs:attributeGroup ref="elml:LabelImp"/>
+			<xs:attributeGroup ref="elml:TitleReq"/>
+			<xs:attributeGroup ref="elml:NavTitleImp"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element entry -->
+	<xs:element name="entry" type="elml:CLType">
+		<xs:annotation>
+			<xs:documentation>The element entry contains the introduction to a topic on lesson and unit level.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- Element clarify -->
+	<xs:element name="clarify" type="elml:CLIType">
+		<xs:annotation>
+			<xs:documentation>The element clarify contains the explanations (clarify it) to a topic in a learningObject.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- Element look -->
+	<xs:element name="look" type="elml:CLIType">
+		<xs:annotation>
+			<xs:documentation>The element look contains the examples (look at it) to a topic in a learningObject.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- Element act -->
+	<xs:element name="act" type="elml:SType">
+		<xs:annotation>
+			<xs:documentation>The element act contains the exercises (get active, do something) to a topic in a
+			learningObject.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- Element goals -->
+	<xs:element name="goals">
+		<xs:annotation>
+			<xs:documentation>The element goals is the parent element of the lObjective elements.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="elml:lObjective" maxOccurs="20"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="elml:IntStatementImp"/>
+			<xs:attributeGroup ref="elml:PresentationImp"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element lObjective -->
+	<xs:element name="lObjective">
+		<xs:annotation>
+			<xs:documentation>Each element lObjective contains one learning object which wants to be achieved by studying this lesson or
+				unit.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="elml:formatted"/>
+			</xs:choice>
+			<xs:attributeGroup ref="elml:RoleImp"/>
+			<!--Note: text is allowed within! -->
+		</xs:complexType>
+	</xs:element>
+	<!-- Element selfAssessment -->
+	<xs:element name="selfAssessment" type="elml:SIIType">
+		<xs:annotation>
+			<xs:documentation>The element selfAssessment contains the exercises which allow to control if the learning objectives were
+				achieved (on lesson and on unit level).</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- Element summary -->
+	<xs:element name="summary" type="elml:CLIIType">
+		<xs:annotation>
+			<xs:documentation>The element summary summarizes the key elements and facts of a lesson or unit.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- Element furtherReading - includes resItem -->
+	<xs:element name="furtherReading">
+		<xs:annotation>
+			<xs:documentation>The element furtherReading contains the elements resItem (on lesson and unit level).</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="resItem" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Each element resItem is the reference to an item in the bibliography which is recommended for the
+							student to read for getting more information about the topic.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attributeGroup ref="elml:BibIDRefReq"/>
+								<xs:attributeGroup ref="elml:BibPageNr"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attributeGroup ref="elml:SortingImp"/>
+			<xs:attributeGroup ref="elml:VisibleImp"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element glossary - includes definition -->
+	<xs:element name="glossary">
+		<xs:annotation>
+			<xs:documentation>The element glossary is the parent element of all definitions within the glossary.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="definition" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Each element definition contains the definition to a specific or new term. The terms and
+							definitions are displayed in the glossary and can be referenced from within the lesson
+						content.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType mixed="true">
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element ref="elml:list"/>
+							<xs:element ref="elml:term"/>
+							<xs:element ref="elml:multimedia"/>
+							<xs:element ref="elml:formatted"/>
+							<xs:element ref="elml:link"/>
+							<xs:element ref="elml:citation"/>
+							<xs:element ref="elml:newLine"/>
+							<xs:element ref="elml:paragraph"/>
+							<xs:element ref="elml:indexItem"/>
+							<xs:element ref="elml:table"/>
+						</xs:choice>
+						<xs:attributeGroup ref="elml:GlossaryReq"/>
+						<xs:attributeGroup ref="elml:BibIDRefImp"/>
+						<xs:attributeGroup ref="elml:BibPageNr"/>
+						<!--Note: text is allowed within! -->
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attributeGroup ref="elml:VisibleImp"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element index -->
+	<xs:element name="index">
+		<xs:annotation>
+			<xs:documentation>The element index allows to define if an index will be present in the lesson or not. Use it when it should be present and leave it when it should not. When the index is present then also indexItems within the content of the lesson should be defined.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attributeGroup ref="elml:VisibleImp"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element listOfFigures -->
+	<xs:element name="listOfFigures">
+		<xs:annotation>
+			<xs:documentation>The element listOfFigures allows to define if a listOfFigures will be present in the lesson or not. Use it when it should be present and leave it when it should not. When the listOfFigures element is present then also multimedia elements within the content of the lesson should be defined.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attributeGroup ref="elml:VisibleImp"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element listOfTables -->
+	<xs:element name="listOfTables">
+		<xs:annotation>
+			<xs:documentation>The element listOfTables allows to define if a listOfTables will be present in the lesson or not. Use it when it should be present and leave it when it should not. When the listOfTables element is present then also table elements within the content of the lesson should be defined.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attributeGroup ref="elml:VisibleImp"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element column - includes columnLeft, columnMiddle, columnRight -->
+	<xs:element name="column">
+		<xs:annotation>
+			<xs:documentation>The element column is a structure element to structure the page into two or three columns which themselves can
+				contain content.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="columnLeft" type="elml:ColumnType">
+					<xs:annotation>
+						<xs:documentation>The element columnLeft defines the left column and contains content.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="columnMiddle" type="elml:ColumnType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The element columnMiddle defines the middle column and contains content.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="columnRight" type="elml:ColumnType">
+					<xs:annotation>
+						<xs:documentation>The element columnRight defines the right column and contains content.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attributeGroup ref="elml:LabelImp"/>
+			<xs:attributeGroup ref="elml:LabelRefImp"/>
+			<xs:attributeGroup ref="elml:CSSClassImp"/>
+			<xs:attributeGroup ref="elml:VisibleImp"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element table - includes tablerow, tableheading, tabledata-->
+	<xs:element name="table">
+		<xs:annotation>
+			<xs:documentation>The element table allows to define a table out of table rows and table cells (table data and table
+			headings).</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="tablerow" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Each element tablerow defines one row of a table.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice maxOccurs="unbounded">
+							<xs:element name="tabledata" type="elml:TableCellType" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Each element tabledata defines one table data cell of a table.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="tableheading" type="elml:TableCellType" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Each element tableheading defines one table heading cell of a table.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:choice>
+						<xs:attributeGroup ref="elml:CSSClassImp"/>
+						<xs:attributeGroup ref="elml:LabelImp"/>
+						<xs:attributeGroup ref="elml:LabelRefImp"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attributeGroup ref="elml:LabelImp"/>
+			<xs:attributeGroup ref="elml:LabelRefImp"/>
+			<xs:attributeGroup ref="elml:TitleImp"/>
+			<xs:attributeGroup ref="elml:IconImp"/>
+			<xs:attributeGroup ref="elml:SizeImp"/>
+			<xs:attributeGroup ref="elml:LegendImp"/>
+			<xs:attributeGroup ref="elml:BibIDRefImp"/>
+			<xs:attributeGroup ref="elml:BibPageNr"/>
+			<xs:attributeGroup ref="elml:RoleImp"/>
+			<xs:attributeGroup ref="elml:VisibleImp"/>
+			<xs:attributeGroup ref="elml:CSSClassImp"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element list - includes item -->
+	<xs:element name="list">
+		<xs:annotation>
+			<xs:documentation>The element list defines a list consisting of at least one item.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="item" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Each element item contains one list item of a list (one point).</xs:documentation>
+					</xs:annotation>
+					<xs:complexType mixed="true">
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element ref="elml:list"/>
+							<xs:element ref="elml:term"/>
+							<xs:element ref="elml:multimedia"/>
+							<xs:element ref="elml:formatted"/>
+							<xs:element ref="elml:link"/>
+							<xs:element ref="elml:citation"/>
+							<xs:element ref="elml:popup"/>
+							<xs:element ref="elml:newLine"/>
+							<xs:element ref="elml:paragraph"/>
+							<xs:element ref="elml:indexItem"/>
+						</xs:choice>
+						<xs:attributeGroup ref="elml:CSSClassImp"/>
+						<xs:attributeGroup ref="elml:LabelImp"/>
+						<xs:attributeGroup ref="elml:LabelRefImp"/>
+						<!--Note: text is allowed within! -->
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attributeGroup ref="elml:LabelImp"/>
+			<xs:attributeGroup ref="elml:LabelRefImp"/>
+			<xs:attributeGroup ref="elml:TitleImp"/>
+			<xs:attributeGroup ref="elml:IconImp"/>
+			<xs:attributeGroup ref="elml:ListStyleImp"/>
+			<xs:attributeGroup ref="elml:BibIDRefImp"/>
+			<xs:attributeGroup ref="elml:BibPageNr"/>
+			<xs:attributeGroup ref="elml:CSSClassImp"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element annotation -->
+	<xs:element name="annotation">
+		<xs:annotation>
+			<xs:documentation>The element annotation can contain additional/background information to a section of a lesson.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="elml:list"/>
+				<xs:element ref="elml:term"/>
+				<xs:element ref="elml:multimedia"/>
+				<xs:element ref="elml:formatted"/>
+				<xs:element ref="elml:link"/>
+				<xs:element ref="elml:citation"/>
+				<xs:element ref="elml:newLine"/>
+				<xs:element ref="elml:paragraph"/>
+				<xs:element ref="elml:indexItem"/>
+				<xs:element ref="elml:table"/>
+			</xs:choice>
+			<xs:attributeGroup ref="elml:LabelRefImp"/>
+			<!--Note: text is allowed within! -->
+		</xs:complexType>
+	</xs:element>
+	<!-- Element box -->
+	<xs:element name="box" type="elml:ParaTypeBox">
+		<xs:annotation>
+			<xs:documentation>The element box is a representation element. It is basically the same as the element paragraph but is
+				displayed with a border and background colour.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- Element term -->
+	<xs:element name="term">
+		<xs:annotation>
+			<xs:documentation>The element term allows to reference a glossary definition from within the text (if used beside a paragraph it
+				is displayed as paragraph, if used within a paragraph it is displayed inline).</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attributeGroup ref="elml:GlossaryRefReq"/>
+					<xs:attributeGroup ref="elml:IconImp"/>
+					<xs:attributeGroup ref="elml:CSSClassImp"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element indexItem -->
+	<xs:element name="indexItem">
+		<xs:annotation>
+			<xs:documentation> The element indexItem allows to markup (a) specific word(s) as items for the final index.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attributeGroup ref="elml:IndexAttImp"/>
+					<xs:attributeGroup ref="elml:CSSClassImp"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element multimedia -->
+	<xs:element name="multimedia">
+		<xs:annotation>
+			<xs:documentation>The element multimedia allows to integrate images, interactions, animations, etc. into the
+			content.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:complexContent mixed="true">
+				<xs:restriction base="xs:anyType">
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:any processContents="skip"/>
+					</xs:choice>
+					<xs:attributeGroup ref="elml:LabelImp"/>
+					<xs:attributeGroup ref="elml:LabelRefImp"/>
+					<xs:attributeGroup ref="elml:TitleImp"/>
+					<xs:attributeGroup ref="elml:IconImp"/>
+					<xs:attributeGroup ref="elml:SourceImp"/>
+					<xs:attributeGroup ref="elml:TypeReq"/>
+					<xs:attributeGroup ref="elml:AlignmentImp"/>
+					<xs:attributeGroup ref="elml:SizeImp"/>
+					<xs:attributeGroup ref="elml:LegendImp"/>
+					<xs:attributeGroup ref="elml:BibIDRefImp"/>
+					<xs:attributeGroup ref="elml:BibPageNr"/>
+					<xs:attributeGroup ref="elml:Thumbnail"/>
+					<xs:attributeGroup ref="elml:VisibleImp"/>
+					<xs:attributeGroup ref="elml:CSSClassImp"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element formatted -->
+	<xs:element name="formatted">
+		<xs:annotation>
+			<xs:documentation>The element formatted allows to specially format parts of text.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="elml:formatted"/>
+			</xs:choice>
+			<xs:attributeGroup ref="elml:StyleImp"/>
+			<xs:attributeGroup ref="elml:CSSClassImp"/>
+			<xs:attributeGroup ref="elml:LabelImp"/>
+			<xs:attributeGroup ref="elml:LabelRefImp"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element popup -->
+	<xs:element name="popup" type="elml:ParaType">
+		<xs:annotation>
+			<xs:documentation>The element popup is a representation element. It is basically the same as the element paragraph but is
+				displayed with a border and background colour and is only shown if clicked on the link.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- Element link -->
+	<xs:element name="link">
+		<xs:annotation>
+			<xs:documentation>The element link allows to link internally (to other parts of the lesson), externally (to other sources in the
+				internet) or to downloadable material (local on the GITTA server in the multimedia folder or external via the
+				internet/ftp/etc on another server).</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="elml:multimedia"/>
+				<xs:element ref="elml:newLine"/>
+			</xs:choice>
+			<xs:attributeGroup ref="elml:UriImp"/>
+			<xs:attributeGroup ref="elml:LegendImp"/>
+			<xs:attributeGroup ref="elml:IconImp"/>
+			<xs:attributeGroup ref="elml:RoleImp"/>
+			<xs:attributeGroup ref="elml:CSSClassImp"/>
+			<!--Note: text is allowed within! -->
+		</xs:complexType>
+	</xs:element>
+	<!-- Element citation -->
+	<xs:element name="citation">
+		<xs:annotation>
+			<xs:documentation>The element citation allows to markup text as citation from one of the resources listed in the bibliography.
+				See the testlesson to see how this can be done.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="elml:term"/>
+				<xs:element ref="elml:formatted"/>
+				<xs:element ref="elml:newLine"/>
+				<xs:element ref="elml:indexItem"/>
+			</xs:choice>
+			<xs:attributeGroup ref="elml:BibIDRefReq"/>
+			<xs:attributeGroup ref="elml:BibPageNr"/>
+			<xs:attributeGroup ref="elml:IconImp"/>
+			<xs:attributeGroup ref="elml:YearOnlyImp"/>
+			<xs:attributeGroup ref="elml:CSSClassImp"/>
+			<!--Note: text is allowed within! -->
+		</xs:complexType>
+	</xs:element>
+	<!-- Element newLine -->
+	<xs:element name="newLine">
+		<xs:annotation>
+			<xs:documentation>The element newLine allows to insert a short or long line break.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attributeGroup ref="elml:NewLineImp"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element paragraph -->
+	<xs:element name="paragraph">
+		<xs:annotation>
+			<xs:documentation>The element paragraph is a simple paragraph of text.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="elml:term"/>
+				<xs:element ref="elml:multimedia"/>
+				<xs:element ref="elml:formatted"/>
+				<xs:element ref="elml:link"/>
+				<xs:element ref="elml:citation"/>
+				<xs:element ref="elml:newLine"/>
+				<xs:element ref="elml:indexItem"/>
+			</xs:choice>
+			<xs:attributeGroup ref="elml:LabelImp"/>
+			<xs:attributeGroup ref="elml:LabelRefImp"/>
+			<xs:attributeGroup ref="elml:RoleImp"/>
+			<xs:attributeGroup ref="elml:TitleImp"/>
+			<xs:attributeGroup ref="elml:IconImp"/>
+			<xs:attributeGroup ref="elml:VisibleImp"/>
+			<xs:attributeGroup ref="elml:CSSClassImp"/>
+			<!--Note: text is allowed within! -->
+		</xs:complexType>
+	</xs:element>
+	<!-- ******* Elements needed for element controlQuestion ******* -->
+	<!-- Element selfCheck -->
+	<xs:element name="selfCheck">
+		<xs:annotation>
+			<xs:documentation>The element selfCheck allows inserting three types of questions (see subelements for the types possible) for the student to check if the learning goals were reached.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="elml:multipleChoice"/>
+				<xs:element ref="elml:fillInBlanks"/>
+			</xs:choice>
+			<xs:attributeGroup ref="elml:LabelImp"/>
+			<xs:attributeGroup ref="elml:TitleImp"/>
+			<xs:attributeGroup ref="elml:QuestionReq"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element multipleChoice -->
+	<xs:element name="multipleChoice">
+		<xs:annotation>
+			<xs:documentation>The element multipleChoice allows defining a question and a set of answers from which the student can choose the correct one(s) (one or several correct answers possible).</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="elml:question"/>
+				<xs:element ref="elml:answer" maxOccurs="20"/>
+				<xs:element ref="elml:solution" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element fillInBlanks -->
+	<xs:element name="fillInBlanks">
+		<xs:annotation>
+			<xs:documentation>The element fillInBlanks allows defining a question and a text where the student has to fill in the blank spaces with the correct word(s).</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="elml:question"/>
+				<xs:element ref="elml:gapText"/>
+				<xs:element ref="elml:solution" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element question -->
+	<xs:element name="question" type="elml:AnswerType">
+		<xs:annotation>
+			<xs:documentation>The element question allows to define the question that should be in direct context of the content of the lesson or unit so far and allow to check if the learning goals have been reached.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- Element answer -->
+	<xs:element name="answer">
+		<xs:annotation>
+			<xs:documentation>The element answer allows defining one or several answers (one or more correct answers depending on the question type selected) to the question posed.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="elml:AnswerType">
+					<xs:attributeGroup ref="elml:AnswersReq"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element gapText -->
+	<xs:element name="gapText">
+		<xs:annotation>
+			<xs:documentation>The element gapText allows defining the text containing the spaces left out for the student to fill in.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="elml:gap"/>
+				<xs:element ref="elml:list"/>
+				<xs:element ref="elml:term"/>
+				<xs:element ref="elml:multimedia"/>
+				<xs:element ref="elml:formatted"/>
+				<xs:element ref="elml:link"/>
+				<xs:element ref="elml:citation"/>
+				<xs:element ref="elml:newLine"/>
+				<xs:element ref="elml:indexItem"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element gap -->
+	<xs:element name="gap">
+		<xs:annotation>
+			<xs:documentation>The element gap allows defining the gaps that are to be filled in by the student.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="answers" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The attribute answers allows to specify which word(s) are correct in this space. Several correct words are entered separated by commas - e.g. "gap, GAP, Gap".</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<!-- Element solution -->
+	<xs:element name="solution" type="elml:AnswerType">
+		<xs:annotation>
+			<xs:documentation>The element solution allows specifying the correct solution and maybe giving some background information that explains the answer(s).</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- Element toc -->
+	<xs:element name="toc">
+		<xs:annotation>
+			<xs:documentation>The element toc allows inserting a table of content into all structure elements (ECLASS).</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="scope">
+				<xs:annotation>
+					<xs:documentation>The attribute scope defines the scope of the inserted toc. Valid values are lessons, lesson and unit.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="lessons"/>
+						<xs:enumeration value="lesson"/>
+						<xs:enumeration value="unit"/>
+						<xs:enumeration value="learningObject"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="recurse" type="elml:YesNoType">
+				<xs:annotation>
+					<xs:documentation>The attribute recurse allows defining if the toc lists e.g. only the other lessons (toc scope="lessons") or also their units and learningObjects.</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<!-- ================================================================================================================ 
+
+															START Type Definitions
+
+================================================================================================================-->
+	<!-- CLType (uses all content elements) -->
+	<xs:complexType name="CLType">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element ref="elml:toc"/>
+			<xs:element ref="elml:column"/>
+			<xs:element ref="elml:table"/>
+			<xs:element ref="elml:list"/>
+			<xs:element ref="elml:box"/>
+			<xs:element ref="elml:term"/>
+			<xs:element ref="elml:multimedia"/>
+			<xs:element ref="elml:popup"/>
+			<xs:element ref="elml:link"/>
+			<xs:element ref="elml:citation"/>
+			<xs:element ref="elml:paragraph"/>
+			<xs:element ref="elml:annotation"/>
+		</xs:choice>
+		<xs:attributeGroup ref="elml:LabelImp"/>
+		<xs:attributeGroup ref="elml:TitleImp"/>
+	</xs:complexType>
+	<!-- CLIType (uses all content elements) -->
+	<xs:complexType name="CLIType">
+		<xs:complexContent>
+			<xs:extension base="elml:CLType">
+				<xs:attributeGroup ref="elml:CSSClassImp"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- CLIIType (uses all content elements) -->
+	<xs:complexType name="CLIIType">
+		<xs:complexContent>
+			<xs:extension base="elml:CLType">
+				<xs:attributeGroup ref="elml:NavTitleImp"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- SType same as CLType with element controlQuestion and attribute MetaSetUpInfoImp added-->
+	<xs:complexType name="SType">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element ref="elml:toc"/>
+			<xs:element ref="elml:column"/>
+			<xs:element ref="elml:table"/>
+			<xs:element ref="elml:list"/>
+			<xs:element ref="elml:box"/>
+			<xs:element ref="elml:term"/>
+			<xs:element ref="elml:multimedia"/>
+			<xs:element ref="elml:popup"/>
+			<xs:element ref="elml:link"/>
+			<xs:element ref="elml:citation"/>
+			<xs:element ref="elml:paragraph"/>
+			<xs:element ref="elml:selfCheck"/>
+			<xs:element ref="elml:annotation"/>
+		</xs:choice>
+		<xs:attributeGroup ref="elml:LabelImp"/>
+		<xs:attributeGroup ref="elml:TitleImp"/>
+		<xs:attributeGroup ref="elml:MetaSetUpInfoImp"/>
+	</xs:complexType>
+	<!-- SIIType based on SType with attribute NavTitleImp added -->
+	<xs:complexType name="SIIType">
+		<xs:complexContent>
+			<xs:extension base="elml:SType">
+				<xs:attributeGroup ref="elml:NavTitleImp"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- ColumnType (uses all content elements except column) -->
+	<xs:complexType name="ColumnType" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="elml:table"/>
+			<xs:element ref="elml:list"/>
+			<xs:element ref="elml:box"/>
+			<xs:element ref="elml:term"/>
+			<xs:element ref="elml:multimedia"/>
+			<xs:element ref="elml:formatted"/>
+			<xs:element ref="elml:popup"/>
+			<xs:element ref="elml:link"/>
+			<xs:element ref="elml:citation"/>
+			<xs:element ref="elml:newLine"/>
+			<xs:element ref="elml:paragraph"/>
+			<xs:element ref="elml:indexItem"/>
+			<xs:element ref="elml:annotation"/>
+		</xs:choice>
+		<xs:attributeGroup ref="elml:SizeImp"/>
+		<xs:attributeGroup ref="elml:AlignmentImp"/>
+		<xs:attributeGroup ref="elml:vAlignmentImp"/>
+		<xs:attributeGroup ref="elml:CSSClassImp"/>
+		<xs:attributeGroup ref="elml:LabelImp"/>
+		<xs:attributeGroup ref="elml:LabelRefImp"/>
+	</xs:complexType>
+	<!-- TableCellType (uses list, term, multimedia, formatted, link, citation, popup, newLine, paragraph, indexItem) -->
+	<xs:complexType name="TableCellType" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="elml:list"/>
+			<xs:element ref="elml:term"/>
+			<xs:element ref="elml:multimedia"/>
+			<xs:element ref="elml:formatted"/>
+			<xs:element ref="elml:link"/>
+			<xs:element ref="elml:citation"/>
+			<xs:element ref="elml:popup"/>
+			<xs:element ref="elml:box"/>
+			<xs:element ref="elml:newLine"/>
+			<xs:element ref="elml:paragraph"/>
+			<xs:element ref="elml:indexItem"/>
+		</xs:choice>
+		<xs:attributeGroup ref="elml:LabelImp"/>
+		<xs:attributeGroup ref="elml:SizeImp"/>
+		<xs:attributeGroup ref="elml:SpanImp"/>
+		<xs:attributeGroup ref="elml:AlignmentImp"/>
+		<xs:attributeGroup ref="elml:vAlignmentImp"/>
+		<xs:attributeGroup ref="elml:CSSClassImp"/>
+		<xs:attributeGroup ref="elml:LabelRefImp"/>
+		<!--Note: text is allowed within! -->
+	</xs:complexType>
+	<!-- ParaType (use basically content elements column, table, list, term, multimedia, formatted, link, citation, newLine, paragraph, indexItem) -->
+	<xs:complexType name="ParaType" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="elml:column"/>
+			<xs:element ref="elml:table"/>
+			<xs:element ref="elml:list"/>
+			<xs:element ref="elml:term"/>
+			<xs:element ref="elml:multimedia"/>
+			<xs:element ref="elml:formatted"/>
+			<xs:element ref="elml:link"/>
+			<xs:element ref="elml:citation"/>
+			<xs:element ref="elml:newLine"/>
+			<xs:element ref="elml:paragraph"/>
+			<xs:element ref="elml:indexItem"/>
+			<xs:element ref="elml:annotation"/>
+		</xs:choice>
+		<xs:attributeGroup ref="elml:LabelImp"/>
+		<xs:attributeGroup ref="elml:LabelRefImp"/>
+		<xs:attributeGroup ref="elml:TitleImp"/>
+		<xs:attributeGroup ref="elml:IconImp"/>
+		<xs:attributeGroup ref="elml:CSSClassImp"/>
+		<!--Note: text is allowed within! -->
+	</xs:complexType>
+	<xs:complexType name="ParaTypeBox" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="elml:column"/>
+			<xs:element ref="elml:table"/>
+			<xs:element ref="elml:list"/>
+			<xs:element ref="elml:term"/>
+			<xs:element ref="elml:multimedia"/>
+			<xs:element ref="elml:formatted"/>
+			<xs:element ref="elml:link"/>
+			<xs:element ref="elml:citation"/>
+			<xs:element ref="elml:newLine"/>
+			<xs:element ref="elml:paragraph"/>
+			<xs:element ref="elml:indexItem"/>
+			<xs:element ref="elml:popup"/>
+			<xs:element ref="elml:annotation"/>
+		</xs:choice>
+		<xs:attributeGroup ref="elml:LabelImp"/>
+		<xs:attributeGroup ref="elml:LabelRefImp"/>
+		<xs:attributeGroup ref="elml:TitleImp"/>
+		<xs:attributeGroup ref="elml:IconImp"/>
+		<xs:attributeGroup ref="elml:CSSClassImp"/>
+		<xs:attributeGroup ref="elml:VisibleImp"/>
+		<!--Note: text is allowed within! -->
+	</xs:complexType>
+	<!-- AnswerType (use only content elements list, term, multimedia, formatted, link, citation, newLine, paragraph, indexItem) -->
+	<xs:complexType name="AnswerType" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="elml:list"/>
+			<xs:element ref="elml:term"/>
+			<xs:element ref="elml:multimedia"/>
+			<xs:element ref="elml:formatted"/>
+			<xs:element ref="elml:link"/>
+			<xs:element ref="elml:citation"/>
+			<xs:element ref="elml:newLine"/>
+			<xs:element ref="elml:indexItem"/>
+		</xs:choice>
+		<!--Note: text is allowed within! -->
+	</xs:complexType>
+</xs:schema>

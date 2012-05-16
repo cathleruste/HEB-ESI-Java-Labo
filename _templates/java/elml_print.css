@@ -1,0 +1,37 @@
+body         /* Used only to set the font style, size, color and other basic stuff. */   { color: black; font-size: 11px; font-family: Georgia, "Times New Roman", Times, serif; background-color: white; text-align: justify; margin: 10px }
+th  { font-weight: bold; text-align: justify }
+td   /* Some browser do not accept the definition of the font size only in the BODY tag, therefore it is defined here again. */ { font-size: 11px; text-align: justify }
+p        /* Be aware that justify alignment might not be supportet by all browsers. */ { font-size: 11px; text-align: justify; margin-top: 0; margin-bottom: 5px; margin-left: 0 }
+h1    /* Use your own colors to represent titles. Be aware that margins are cumulating if you have eg. a H2 title follwoing a H1 title. */  { font-size: 16px; font-weight: bold; margin-top: 15px; margin-bottom: 5px; clear: both }
+h2    { font-size: 14px; font-weight: bold; margin-top: 15px; margin-bottom: 5px; clear: both }
+h3    { font-size: 12px; font-weight: bold; margin-top: 15px; margin-bottom: 5px; clear: both }
+h4    { font-size: 11px; font-weight: bold; clear: both }
+h5  { font-size: 11px; clear: both }
+img   /* This overrides the border setting of the IMG tag. */ { border: none }
+code   /* Adjust the font size to your needs. */ { color: rgb(26,26,26); font-size: 8px; font-family: Courier, serif; font-weight: normal; line-height: 10px }
+dt   /* Used for representing the glossary term (not the explanation!). */ { font-weight: bold; clear: both; text-align: justify }
+/* ol, ul  { margin-top: 0; padding-top: 2px } */
+li { margin-bottom: 2px; text-align: justify }
+sub, sup   /* Used in the eLML element "formatted" */ { font-size: 8px }
+.popupTitle   /* Defines the title of a eLML popup box. This is the part that you click on to open/close the box. */ { color: #efb77f; font-weight: bold;}
+.popupText    /* Defines the text of a eLML popup box. This is the part that appears when you click on the title. */ { background-color: #e0e0e0; display: none; margin-right: 1cm; margin-bottom: 0.5cm; margin-left: 1cm; padding: 5px; border: solid 2px #003000  }
+.box     /* The eLML box element. */ { background-color: #e0e0e0; background-position: 0 100%; margin: 10px 30px; padding: 5px; border: solid 2px #003000 }
+.tutor      /* Paragraphs or parts only visible to tutors will be displayed like this. */ { color: red; font-weight: bold; background-color: yellow }
+.icon  /* The icon is used in paragraph types like table, list, box etc. where the remark attribute is set. */ { margin: 3px 12px 3px 0; float: left; clear: left }
+.content_table  /* All tables in eLML that are not part of the layout use this class. Define borders and margins here. */ { margin-top: 10px; padding-top: 2px }
+.footer  /* Define the footer style. */ { font-size: 9px }
+.term  /* A glossary term that is used inline in the text. */  { font-weight: bold; cursor: help }
+.bibTitle  /* The title of a bibliography element (eg. book) in the bibliography list. Usually italic. */ { font-style: italic }
+.bibAuthor /* The author of a bibliography element (eg. book). Usually bold. */  { font-weight: bold; text-transform: uppercase }
+.bibCommentFurther    /* The comment of a bibliography element (eg. book) in the recommended/further reading list. Not displayed in the bibliography list! */ { font-size: 9px }
+.bibCommentSource   /* The comment of a bibliography element (eg. book) in the bibliography list. */ { font-size: 9px }
+.legend  /* eLML elements like tables, multimedia (image, flash), lists etc. can have legends displayed usally centered below the element. */ { font-size: 9px }
+/* .navigation   Define what the navigation looks like.   { font-weight: normal; margin: 0 }*/
+/* a.navigationLink  Define what the navigation links looks like. { color: #1a1a1a; font-weight: normal } */
+
+.multimedia_paragraph_left  /* for multimedia objects that are used as paragraph and have no align or align=left */ { float: none; clear: both; padding: 1em 1em 1em 0; display: block; }
+.multimedia_paragraph_center  /* for multimedia objects that are used as paragraph and have align=center */ { text-align: center; width: 100%; float: none; clear: both; padding: 1em; display: block; }
+.multimedia_paragraph_right  /* for multimedia objects that are used as paragraph and have align=right */ { text-align: right; float: none; clear: both; padding: 1em 0 1em 1em; display: block; }
+.multimedia_inline_left  /* for multimedia objects that are used as inline and have align=left */ { float: left; padding-right: 1em; padding-left: 0; display: inline; }
+.multimedia_inline_center  /* for multimedia objects that are used as paragraph and have align=center */ { text-align: center; width: 100%; float: left; padding-right: 1em; padding-left: 1em; display: inline; }
+.multimedia_inline_right  /* for multimedia objects that are used as paragraph and have align=right */ { text-align: right; float: right; padding-right: 0; padding-left: 1em; display: inline; }
