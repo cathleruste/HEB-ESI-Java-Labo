@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd"
         label="TD4Prepa" title="TD4 - Exercices préparatoires">
@@ -24,7 +24,7 @@
 		<learningObject title="Rappel des tds précédents - partie linux">
 			
 			<act>
-				<selfCheck title="Les commandes vi" shuffle="yes">
+				<selfCheck title="Les commandes vi" shuffle="no">
 					<fillInBlanks>
 						<question></question>
 						<gapText>
@@ -50,6 +50,13 @@
 							<list listStyle="unordered">
 								<item>de quitter en sauvant <gap answers="">:x</gap></item>
 								<item>d'afficher les numéros de ligne <gap answers="">:set</gap> <gap answers="">nu</gap></item>
+								<item>de retrouver le mot <formatted style="italic">abbr</formatted> <gap answers="">:/abbr</gap></item>
+              </list>
+              <paragraph>
+								En mode commande :
+							</paragraph>
+              <list listStyle="unordered">
+								<item>de retrouver le mot <formatted style="italic">abbr</formatted> suivant <gap answers="">n</gap></item>
 							</list>
 						</gapText>
 						<solution></solution>
