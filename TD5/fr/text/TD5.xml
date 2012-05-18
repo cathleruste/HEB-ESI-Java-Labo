@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" label="TD5" title="Td5 : Méthodes">
+	
+  <entry>
+    <paragraph>  
+      Ce TD a pour objectif de vous familiariser avec les méthodes.</paragraph>  
+    <paragraph title="Rappels :"/>  
+    <list listStyle="unordered">
+      <item>Ce TD est accompagné d'exercices à faire <formatted style="bold">avant</formatted> de venir au laboratoire.</item>  
+      <item>Prenez bien note des réponses aux exercices.</item>  
+    </list>
+  </entry>
+  
+  <unit label="TD5" title="Td5 : Méthodes">
+  
+		<learningObject title="Les méthodes de classe">
+		
+			<act>
+			  <paragraph title="Maximum de nombres" icon="act"/> 
+				<list listStyle="ordered">
+				  <item>Reprenez la méthode de la préparation de ce td qui calcule le maximum de 2 nombres (<formatted style="italic">max2</formatted>).</item>  
+					<item>
+					  Écrivez à présent une méthode qui utilise <formatted style="italic">max2</formatted> pour calculer le maximum de 3 nombres.<newLine/>
+					  Cette méthode recevra 3 entiers en paramètre.
+          </item>  
+					<item>Idem pour le maximum de 4 nombres.</item>  
+			  </list>
+			  
+			  <paragraph title="Réflexion" icon="question"/>  
+				<paragraph>  
+					Quel nom avez-vous donné à la méthode qui calcule le maximum de 3 nombres?  
+        </paragraph>
+        <paragraph>
+					Pensez-vous que l'appeler "méthode" aurait-été judicieux?  
+				</paragraph>  
+				<paragraph>  
+					La méthode <formatted style="italic">max2</formatted> n'affiche pas son résultat à l'écran mais le retourne, qu'en pensez-vous?  
+				</paragraph>  
+				<paragraph>  
+					Avez-vous pensé à documenter le code de vos méthodes? Pourquoi pensez-vous que ce soit utile de le faire?  
+				</paragraph>  
+				<popup title="Une méthode ?">Une méthode
+				  <list listStyle="unordered">
+				    <item>possède un nom explicite <newLine/>  
+							(et non, le nom "méthode" est fort peu judicieux...) 
+            </item>  
+						<item>fait une et une seule chose <newLine/>  
+							(calcule le maximum, l'affichage serait une chose supplémentaire à faire) 
+            </item>  
+						<item>est fortement documentée <newLine/>  
+							(c'est toujours pratique de savoir ce que fait une méthode et comment elle le fait, 
+							surtout si vous devez relire votre méthode à un moment ou  relire celle de votre voisin)
+            </item>  
+			    </list>
+        </popup>
+      </act>
+      
+			<act>
+			  <paragraph title="Plus un" icon="act"/> 
+				<paragraph>  
+					Écrire une méthode de classe dénommée <formatted style="italic">plusUn</formatted> prenant en paramètre un entier. 
+					Cette méthode se contentera d'ajouter 1 à l'entier reçu en paramètre. 
+					Est-il nécessaire de retourner l'entier modifié pour bénéficier du traitement effectué?  
+				</paragraph>  
+      </act>
+		</learningObject>
+		
+		<learningObject title="Trucs et astuces du jour">
+			<clarify>
+			  <paragraph title="history" icon="icon_reading"/> 
+			  <paragraph>
+				  En bash, la commande <formatted style="input">history <formatted style="italic">n</formatted></formatted>; 
+				  donne la liste numérotée des <formatted style="italic">n</formatted> dernières commandes.<newLine/>
+          Lorsque l'on quitte la session, l'historique est sauvegardé dans un fichier 
+          (<formatted style="input">~/<formatted style="italic">.bash_history</formatted></formatted> par défaut).
+          <list listStyle="unordered">
+            <item> <formatted style="input">!!</formatted> relance la dernière commande.</item>  
+            <item> <formatted style="input">!10</formatted> relance la 10ème commande.</item>  
+            <item> <formatted style="input">!-2</formatted> relance l'avant dernière commande.</item>  
+            <item> <formatted style="input">!ls</formatted> relance la dernière commande commençant par ls.</item>  
+            <item> <formatted style="input">!?toto</formatted> renouvelle la dernière commande qui contient la chaine de caractères 'toto'.</item>  
+		    	</list>
+        </paragraph>
+      </clarify>
+      
+			<act><paragraph title="history" icon="act"/> 
+        <paragraph>
+          <list listStyle="ordered"><item>Affichez la liste des 15 dernières commandes</item>  
+            <item>Relancez la dernière commande commençant par "java"</item>  
+            <item>Relancez la dernière commande qui contient l'extension ".java"</item>  
+          </list>
+        </paragraph>
+      </act>
+		</learningObject>
+		
+		<learningObject title="Les méthodes de classe (suite)">
+			<act>
+			  <paragraph title="Nombre de jours dans un mois" icon="act"/> 
+        <list listStyle="ordered">
+          <item>
+            Écrivez dans une classe <formatted style="italic">Util</formatted> une méthode 
+            <formatted style="italic">nbJours</formatted> qui calcule et retourne le nombre de jours d'un mois donné en paramètre. 
+            Le mois est donné sous forme d'un entier entre 1 et 12. 
+          </item>  
+          <item>Dans une autre classe, écrivez un programme (méthode main) qui teste la méthode <formatted style="italic">nbJours()</formatted>.</item>  
+          <item>
+            Écrivez dans la classe Util une méthode <formatted style="italic">estBissextile</formatted> (cfr. td 4) 
+            qui teste si une année donnée en paramètre est bissextile ou pas.
+          </item>  
+          <item>
+            Reprenez votre méthode <formatted style="italic">nbJours</formatted>, ajoutez lui un paramètre : l'année 
+            et utilisez la méthode <formatted style="italic">estBissextile</formatted> afin de rendre votre réponse plus précise.
+          </item>  
+        </list>
+      </act>
+		</learningObject>
+		
+	</unit>
+</lesson>
