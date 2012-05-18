@@ -264,8 +264,15 @@
 				</paragraph>  
 			</act>
       
-			<act>
+      <act>
 				<paragraph title="Exercice 2" icon="act"/> 
+				<paragraph>  
+					Quelle commande permet de nettoyer l'écran ?  
+				</paragraph>  
+			</act>
+      
+			<act>
+				<paragraph title="Exercice 3" icon="act"/> 
 				<paragraph>  
 					Quelle commande permet d'imprimer un fichier ?  
 				</paragraph>  
@@ -499,11 +506,8 @@
 				<paragraph>  
 					Soit le fichier "Max.java" de la capture d'écran ci-dessous.  
 				</paragraph>  
-				<multimedia src="../image/ls-l.jpg" type="jpeg" legend="Capture d'écran"/>
-				<paragraph>  
-					Est-ce qu'un professeur peut l'éditer ?  
-				</paragraph>  
-				<popup> Non ! Le droit d'écriture n'est accordé qu'au propriétaire.  </popup> 
+				<multimedia src="../image/ls-l.jpg" type="jpeg"/>
+				<popup title="Est-ce qu'un professeur peut l'éditer ? "> Non ! Le droit d'écriture n'est accordé qu'au propriétaire.  </popup> 
 
 				<selfCheck title="Déterminez les bonnes permissions" shuffle="no">
 					<fillInBlanks>
@@ -518,11 +522,13 @@
 							<list listStyle="unordered">
 								<item>
 									Quel groupe faut-il donner au fichier ?
-									<gap answers="etudiants">etudiants</gap> 
+									<gap answers="etudiants, etudiants1">etudiants</gap> 
 								</item>  
 								<item>
 									Quelle commande permet de donner ce groupe au fichier ?
-									<gap answers="chgrp etudiants">chgrp etudiants</gap> 
+									<gap answers="chgrp">chgrp</gap> 
+									<gap answers="etudiants, etudiants1">etudiants</gap> 
+									<gap answers="Max.java">Max.java</gap> 
 								</item>  
 								<item>
 									Quelles permissions donner au fichier ?                
@@ -538,7 +544,9 @@
 								</item>  
 								<item>
 									Quelle commande permet de donner ces permissions au fichier ?
-									<gap answers="chmod 604 Max.java">chmod 604 Max.java</gap> 
+									<gap answers="chmod">chmod</gap> 
+									<gap answers="604">604</gap> 
+									<gap answers="Max.java">Max.java</gap> 
 								</item>  
 							</list>
 						</gapText>
@@ -551,7 +559,7 @@
 					Reprenez les permissions affichées dans la capture d'écran ci-dessous 
 					et exprimez-les avec un nombre de 3 chiffres.  
 				</paragraph>  
-				<multimedia src="../image/ls-l-permissions.jpg" type="jpeg" legend="Capture d'écran"/>
+				<multimedia src="../image/ls-l-permissions.jpg" type="jpeg"/>
 
 				<paragraph title="Permissions par défaut" icon="icon_experiment"/> 
 				<list listStyle="ordered">

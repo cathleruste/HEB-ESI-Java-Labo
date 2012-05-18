@@ -31,6 +31,7 @@
 							<list listStyle="unordered">
 								<item>se déconnecter <gap answers="">exit</gap></item>  
 								<item>changer son mot de passe <gap answers="">passwd</gap></item>  
+								<item>nettoyer l'écran <gap answer="">clear</gap></item>
 								<item>voir le contenu d'un dossier au format long
 									<gap answers="">ls</gap> <gap answers="">-l</gap> 
 								</item>  
@@ -41,11 +42,19 @@
 								<item>modifier le propriétaire d'un fichier (par le super-utilisateur!)         
 									<gap answers="">chown</gap> 
 								</item>  
-								<item>retirer la permission de traverser le répertoire 
+								<item>
+								  retirer la permission de traverser le répertoire 
 									<formatted style="code">tds</formatted> à tous       
 									<gap answers="">chmod</gap> 
 									<gap answers="">a-x</gap> 
 									<gap answers="">tds</gap> 
+								</item>  
+								<item>
+								  placer le fichier <formatted style="code">Hello.java</formatted> 
+									dans le groupe <formatted style="code">etudiants1</formatted> 
+									<gap answers="">chgrp</gap> 
+									<gap answers="">etudiants1</gap> 
+									<gap answers="">Hello.java</gap> 
 								</item>  
 							</list>
 						</gapText>
