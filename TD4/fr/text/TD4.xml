@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <lesson xmlns="http://www.elml.ch" 
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd"
@@ -51,7 +51,7 @@
 			</clarify>
 			
 			<act>
-				<selfCheck title="Indenter" shuffle="yes">
+				<selfCheck title="Indenter" shuffle="no">
 					<fillInBlanks>
 						<question>
 							Voici, sous vi, le code fourni par un étudiant... il n'est pas indenté, comment faire?
@@ -108,6 +108,11 @@ System.out.println("Etudiant g*****");
 		</learningObject>
 
 		<learningObject title="Aller plus loin avec l'éditeur">
+		  <clarify>
+   		  Avant tout, nous aurons besoin de pouvoir voir les fichiers cachés dans la liste des fichiers d'un répertoire. <newLine/>
+   		  <popup title="Quelle option de ls permet de visualiser les fichiers cachés ? "><formatted style="code">ls -a</formatted> </popup> 
+   		  <popup title="À quoi reconnait-on les fichiers cachés ? ">Ils commencent par un <formatted style="code">.</formatted> </popup> 
+		  </clarify>
 			<act>
 				<paragraph title="Configuration de l'éditeur" icon="act"/>
 				<paragraph>
@@ -118,7 +123,11 @@ System.out.println("Etudiant g*****");
 				<list listStyle="ordered">
 					<item> Copiez dans votre home le fichier <formatted style="bold">.vimrc</formatted> 
 					(notez le<formatted style="bold"> .</formatted>) se trouvant chez ~pbt</item>
-					<item>Examinez-le et repérez les lignes qui créent des raccourcis pour l'éditeur.</item>
+					<item>
+					  Examinez-le et repérez les lignes qui créent des raccourcis pour l'éditeur. <newLine/>
+					  Ces lignes commencent par <formatted style="code">abbr</formatted>.
+					  Faites une recherche de ce mot <formatted style="code">abbr</formatted> sous vi.
+					</item>
 					<item>Testez-les !</item>
 				</list>
 			</act>
