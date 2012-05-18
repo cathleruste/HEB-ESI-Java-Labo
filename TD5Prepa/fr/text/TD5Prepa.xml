@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+        label="TD5Prepa" title="Td5 - Exercices préparatoires">
+  
+ <entry>
+		<paragraph>  
+			Afin d'arriver au laboratoire dans les meilleures conditions, 
+			il est bien de revoir la matière qui sera mise en pratique. 
+			C'est pourquoi nous vous fournissons quelques exercices préparatoires 
+			à faire à la maison pour vous permettre d'évaluer si vous êtes prêts. 
+		</paragraph>
+	</entry>
+
+  <unit label="TD5Ex" title="Td5 - Exercices préparatoires">
+  
+		<entry>
+			<paragraph>  
+				Vous trouverez les réponses dans les 5 premières leçons du cours ou dans les tds précédents.  
+			</paragraph>
+		</entry>
+
+		<learningObject title="Rappel des tds précédents">
+      <act>
+        <selfCheck title="Les commandes vi" shuffle="yes">
+          <fillInBlanks>
+            <question>Quelle commande vi permet faire l'action suivante ? </question>
+            <gapText> 
+              <paragraph>
+                En mode commande :
+              </paragraph>
+              <list listStyle="unordered">
+                <item>joindre 2 lignes <gap answers="">J</gap></item>  
+                <item>insérer en fin de ligne <gap answers="">A</gap></item>  
+                <item>répéter la dernière commande d'édition<gap answers="">.</gap></item>  
+              </list>  
+              <paragraph>
+                En mode exécution :
+              </paragraph>
+              <list listStyle="unordered">
+                <item>d'inclure un fichier dans un autre <gap answers="">:r</gap></item>  
+              </list> 
+            </gapText>
+            <solution/>
+          </fillInBlanks>
+        </selfCheck>
+        
+        <selfCheck title="Choix Multiple " shuffle="yes">
+          <multipleChoice>
+            <question>  
+              Soit le code
+              <paragraph cssClass="java">
+<![CDATA[
+public class ErrCompilation{
+
+	public static int abs(int nombre) { 
+
+		int absolu;
+
+		if (nombre < 0) {		
+			absolu = -nombre;
+		} 
+		
+		return absolu;
+		
+	}
+
+}]]>				</paragraph>
+              <paragraph>
+                la commande
+              </paragraph>
+              <paragraph cssClass="code">
+  javac ErrCompilation.java 
+              </paragraph>
+              <paragraph>
+                provoque l'erreur suivante :
+              </paragraph>
+              <paragraph cssClass="code">
+ErrCompilation.java:7:
+variable absolu might not have been initialized
+return absolu;
+^
+1 error  
+              </paragraph>
+              <paragraph>
+                il s'agit d'une erreur générée par le compilateur javac car :
+              </paragraph>
+            </question>
+            <answer feedback="En effet, si on ne rentre pas dans le if, la variable absolu ne sera pas initialisée." correct="yes">
+              la variable absolu n'est pas toujours initialisée
+            </answer>
+            <answer feedback="" correct="no">la variable absolu a un nom invalide </answer>
+            <answer feedback="" correct="no">la variable absolu n'est pas du bon type </answer>
+            <answer feedback="" correct="no">cette méthode ne doit pas avoir d'instruction return </answer>
+            <answer feedback="" correct="no">la valeur donnée à absolu n'est pas du bon type </answer>
+          </multipleChoice>
+        </selfCheck>
+        
+        <selfCheck title="Quel sera l'affichage obtenu par ce code ?" shuffle="yes">
+          <fillInBlanks>
+            <question>  
+							<paragraph cssClass="java">
+public class MaMoyenne { 
+  
+    public static void main (String[] args) {  
+    
+		  int nombre1;
+		  int nombre2;
+		
+		  nombre1 = 4;
+		  nombre2 = 1;
+		  
+		  System.out.println ((nombre1 + nombre2) / 2);  
+		
+	  }  
+  
+}  
+              </paragraph>
+            </question>
+            <gapText> 
+              <gap answers="">2</gap>
+            </gapText>
+            <solution>
+              La division entre 2 entiers est la division entière !
+            </solution>
+          </fillInBlanks>
+        </selfCheck>
+        
+        <selfCheck title="Activité &quot;remplir les blancs&quot;" shuffle="yes">
+          <fillInBlanks>
+            <question>  
+              <paragraph cssClass="java">
+<![CDATA[
+public class Outils{
+
+	public static int abs(int nombre) { 
+
+		int absolu = nombre;
+
+		if (nombre < 0) {		
+			absolu = -nombre;
+		} 
+		
+		return absolu;
+		
+	}
+	
+	public static void main (String[] args) {  
+	
+		int valAbsolue;  
+		
+		...  
+		System.out.println (valAbsolue);  
+		
+	}
+
+}]]>				</paragraph>
+              <paragraph>
+                Ajoutez l'instruction qui assigne à <formatted style="italic">valAbsolue</formatted> 
+                le résultat de l'appel à la méthode <formatted style="italic">abs</formatted> avec comme paramètre la valeur 
+                <formatted style="italic">-4</formatted>?
+              </paragraph>
+            </question>
+            <gapText> 
+              <gap answers="">valAbsolue</gap> 
+              <gap answers="">=</gap> 
+              <gap answers="abs(-4), abs (-4), abs ( -4 ), abs( -4)">abs(-4)</gap> ;
+            </gapText>
+            <solution/>
+          </fillInBlanks>
+        </selfCheck>
+      </act>
+    </learningObject>
+    
+    <learningObject title="Survol du langage : méthodes de classe">
+      <clarify> 
+        <paragraph>  
+          Soit le code suivant :  
+        </paragraph>  
+        <paragraph cssClass="java">
+<![CDATA[
+public class Opération {
+
+  public static void entête(){
+  
+    System.out.println("Opérations");  
+    
+	}   
+	
+	public static double lireNonNul() {  
+	  
+		Scanner clavier = new Scanner(System.in);
+		int a = 0;
+		
+		a = clavier.nextDouble();
+	  
+		// Ceci est une boucle while, équivalent au "tant que" logique  
+		// Cela signifie ici que nous allons lire un nombre au clavier 
+		// tant que la variable a vaut 0 : 
+		while ( a == 0 ) {  
+		  System.out.println( "Entrer un nombre non nul!");
+		  a = clavier.nextDouble();  
+		}  
+		
+		return a;  
+	  
+	}  
+	
+	public static int max2 ( int nb1, int nb2 ) {  
+	  
+		int max;
+		
+		if (nb1 > nb2) {
+			max = nb1;
+		} else {
+			max = nb2;
+		}
+		
+		return max;  
+  
+	}  
+  
+}]]>				</paragraph>
+      </clarify>
+      <act>
+        <selfCheck title="Appels de méthodes de classe dans la même classe" shuffle="yes">
+          <multipleChoice>
+            <question>
+              Parmi les appels de méthodes suivants dans la méthode main <formatted style="bold">de la même classe</formatted>, lesquels sont corrects?  
+            </question>
+            <answer feedback="" correct="no"><formatted style="java">entête("Opérations");</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">entête(10);</formatted></answer>
+            <answer feedback="" correct="yes"><formatted style="java">entête();</formatted></answer>
+            <answer feedback="" correct="no">
+              <formatted style="java">String chaine = entête();</formatted><newLine/><formatted style="java">System.out.println(chaine);²</formatted>
+            </answer>
+            <answer feedback="" correct="yes"><formatted style="java">double nombre = lireNonNul();</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">double nombre = lireNonNul(5);</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">int max2 = max2(3.2,2.3);</formatted></answer>
+            <answer feedback="" correct="yes"><formatted style="java">int max2 = max2(3,2);</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">int max2 = max2(3,2,5);</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">int max2 = max2(3.5);</formatted></answer>
+          </multipleChoice>
+        </selfCheck>
+        
+        <selfCheck title="Appels de méthodes de classe dans une autre classe" shuffle="yes">
+          <multipleChoice>
+            <question>
+              Parmi les appels de méthodes suivants dans la méthode main <formatted style="bold">d'une autre classe</formatted>, 
+              lesquels sont corrects (en supposant qu'aucune classe n'ait été importée)?  
+            </question>
+            <answer feedback="" correct="no"><formatted style="java">entête("Opérations");</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">Opération.entête("Opérations");</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">entête();</formatted></answer>
+            <answer feedback="" correct="yes"><formatted style="java">Opération.entête();</formatted></answer>
+            <answer feedback="" correct="yes"><formatted style="java">double nombre = Opération.lireNonNul();</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">double nombre = lireNonNul();</formatted></answer>
+            <answer feedback="" correct="yes"><formatted style="java">int max2 = Opération.max2(1,2);</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">int max2 = max2(1,2);</formatted></answer>
+          </multipleChoice>
+        </selfCheck>
+      </act>
+    </learningObject>
+    
+    <learningObject title="Logique">
+      <clarify> 
+        <paragraph>  
+          Assurez-vous de venir au laboratoire avec vos solutions des exercices  
+          4 et 5 du chapitre 5 "Les modules" de votre  
+          cours de logique.   
+        </paragraph>  
+        <paragraph>
+          Préparez aussi la logique du programme suivant :<newLine/>  
+          un programme <formatted style="italic">plusUn</formatted> prenant en paramètre un entier. Il se  
+          contentera d'ajouter 1 à l'entier reçu en paramètre.  
+        </paragraph>
+      </clarify>
+    </learningObject>
+    
+    <learningObject title="Bravo">
+      <clarify>
+        <paragraph title="Bravo" icon="icon_bravo"/> 
+        <paragraph>
+          Si vous avez réussi à répondre correctement aux questions précédentes,  
+          c'est que vous êtes prêts à venir au laboratoire dans les meilleures  
+          conditions!  
+        </paragraph>
+      </clarify>
+    </learningObject>
+  </unit>
+</lesson>
