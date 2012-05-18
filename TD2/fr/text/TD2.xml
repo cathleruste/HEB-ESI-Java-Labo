@@ -56,20 +56,25 @@
 					</item>  
 					<item>
 						<formatted style="bold">Avant</formatted> d'appuyez sur le bouton de connexion, 
-						apportez les 2 modifications suivantes :  
+						apportez les modifications suivantes :  
 						<list listStyle="unordered">
 							<item>
-								Pour pouvoir utiliser le clavier numérique il faut cocher la case 
+								Pour pouvoir utiliser le clavier numérique, il faut cocher la case 
 								"<formatted style="italic">Disable application keypad mode</formatted>"   
 								dans l'onglet "<formatted style="italic">Terminal &gt; Features"</formatted>.
-								<popup title="Cliquez pour voir l'image"><multimedia src="../image/putty-keypad.jpg" type="jpeg"/></popup>
+								<multimedia src="../image/putty-keypad.jpg" type="jpeg"/>
 							</item>
 							<item>
 								Pour pouvoir utiliser les accents, il faut indiquer à putty que nous nous connectons à une machine utilisant 
 								le codage <formatted style="italic">utf8</formatted> et pas le <formatted style="italic">latin1</formatted>.  
 								Pour cela, choisissez "utf8" dans la liste 
 								"<formatted style="italic">Window &gt; Translation &gt; Received data</formatted>"
-							</item>  
+							</item> 
+							<item>
+								Pour modifier l'aspect de votre console, faites un petit tour dans l'onglet 
+								"<formatted style="italic">Window</formatted>" qui contient les catégories 
+								"<formatted style="italic">Appearance</formatted>" et "<formatted style="italic">Colours</formatted>"
+							</item> 
 						</list>
 					</item>  
 					<item>
@@ -452,7 +457,7 @@
 					Un retour vers les points 17 à 19 du guide visuel sera peut-être encore nécessaire...  
 				</paragraph>  
 
-				<selfCheck title="Déterminez les bonnes permissions" shuffle="yes">
+				<selfCheck title="Déterminez les bonnes permissions" shuffle="no">
 					<fillInBlanks>
 						<question>  
 							Remplissez les blancs avec la permission correcte (r, w, x ou -). 
@@ -471,7 +476,7 @@
 									Pour la version compilée (le bytecode), la permission la plus adéquate est
 									<newLine/>
 									<gap answers="r">r</gap> 
-									<gap answers="w">w</gap> 
+									<gap answers="w">-</gap> 
 									<gap answers="-">-</gap> 
 								</item>  
 								<item>
@@ -483,7 +488,10 @@
 								</item>  
 							</list> 
 						</gapText>
-						<solution></solution>
+						<solution>
+						  Pour la version compilée, la permission suffisante pour l'exécuter par la jvm est <formatted style="code">r--</formatted> <newLine/>
+						  mais il est vrai que, lorsque le compilateur génère le bytecode, la permission <formatted style="code">-w-</formatted> y est également.
+            </solution>
 					</fillInBlanks>
 				</selfCheck>
 
@@ -497,7 +505,7 @@
 				</paragraph>  
 				<popup> Non ! Le droit d'écriture n'est accordé qu'au propriétaire.  </popup> 
 
-				<selfCheck title="Déterminez les bonnes permissions" shuffle="yes">
+				<selfCheck title="Déterminez les bonnes permissions" shuffle="no">
 					<fillInBlanks>
 						<question>
 							Soit le fichier "Max.java" de la capture d'écran ci-dessus.
@@ -513,6 +521,10 @@
 									<gap answers="etudiants">etudiants</gap> 
 								</item>  
 								<item>
+									Quelle commande permet de donner ce groupe au fichier ?
+									<gap answers="chgrp etudiants">chgrp etudiants</gap> 
+								</item>  
+								<item>
 									Quelles permissions donner au fichier ?                
 				               <gap answers="r">r</gap> 
 				               <gap answers="w">w</gap> 
@@ -523,6 +535,10 @@
 				               <gap answers="r">r</gap> 
 				               <gap answers="-">-</gap> 
 				               <gap answers="-">-</gap> 
+								</item>  
+								<item>
+									Quelle commande permet de donner ces permissions au fichier ?
+									<gap answers="chmod 604 Max.java">chmod 604 Max.java</gap> 
 								</item>  
 							</list>
 						</gapText>
