@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <lesson xmlns="http://www.elml.ch" 
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd"
@@ -32,13 +32,16 @@
 					Cette classe portera le nom Exercice suivi du numéro de l'exercice.
 				</paragraph>
 				<paragraph>
-					N'oubliez pas d'utiliser un package pour chacun de vos programmes!
-					Nous vous demandons de créer un répertoire <formatted style="code">td6Bis</formatted> 
-					dans lequel vous créerez un répertoire <formatted style="code">sources</formatted> 
-					et un répertoire <formatted style="code">classes</formatted>.
-					Vous avez déjà vu lors du td précédent qu'il existe une option permettant de placer les 
-					<formatted style="code">.class</formatted> dans un répertoire différent de celui des sources.
-					Faites attention à mettre un package correct en fonction.  
+				  Pour poursuivre l'apprentissage, vous utiliserez des <formatted style="code">package</formatted> pour chacun de vos programmes.<newLine/>
+				  Nous vous demandons de créer un répertoire <formatted style="code">~/td6Bis</formatted> 
+				  dans lequel vous créerez un répertoire <formatted style="code">sources</formatted> et un répertoire <formatted style="code">classes</formatted>.
+				  <newLine/>
+				  Vos mettrez les fichiers contenant les sources dans le répertoires <formatted style="code">sources</formatted> que vous venez de créer 
+				  et vous y travaillerez.<newLine/>
+				  Vous avez déjà vu lors du td précédent qu'il existe une option permettant de demander au compilateur <formatted style="code">javac</formatted> 
+				  de placer les fichiers contenant les bytecode <formatted style="code">.class</formatted> dans un répertoire différent de celui des sources, 
+				  en l'occurrence le répertoire <formatted style="code">classes</formatted> que vous venez de créer. <newLine/>
+				  Faites attention à définir un package correct pour que ceci se produise.
 				</paragraph>
 				<paragraph>
 					Nous allons aussi ici utiliser les exceptions.
