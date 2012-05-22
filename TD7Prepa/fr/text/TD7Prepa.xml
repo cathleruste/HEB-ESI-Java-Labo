@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	      xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd"
+	      label="TD7Prepa" title="TD7 - Exercices préparatoires">
+	
+	<entry>
+		<paragraph>  
+			Afin d'arriver au laboratoire dans les meilleures conditions, 
+			il est bien de revoir la matière qui sera mise en pratique. 
+			C'est pourquoi nous vous fournissons quelques exercices préparatoires 
+			à faire à la maison pour vous permettre d'évaluer si vous êtes prêts. 
+		</paragraph>
+	</entry>
+	
+	<unit label="TD7Ex" title="Exercices préparatoires au TD7">
+		
+		<entry>
+			<paragraph>  
+				Vous trouverez les réponses dans les premières leçons du cours ou dans les tds précédents.  
+			</paragraph>
+		</entry>
+
+		<learningObject title="Survol du langage : Les tableaux à une dimension">
+			<clarify>
+			  <paragraph title="Un vecteur" icon="icon_reading"/> 
+          Un vecteur ou tableau à une dimension est une suite d’éléments de même type portant  
+          tous le même nom mais se distinguant les uns des autres par un indice.  
+				</clarify>
+				
+				<act>
+				  <selfCheck title="Bornes d'un tableau" shuffle="no">
+				    <fillInBlanks>
+				      <question></question>
+				        <gapText> 
+							    La variable permettant de se déplacer dans un tableau s'appelle un 
+                  <gap answers="">indice</gap> 
+							    <newLine/>  
+								  La première valeur d'un tableau à <formatted style="bold">n</formatted> éléments se trouve à la position            
+								  <gap answers="">0</gap> 
+								  et la dernière valeur se trouve à la position 
+								  <gap answers="n-1, n- 1, n - 1, n -1">n-1</gap> 
+								</gapText>
+								<solution></solution>
+              </fillInBlanks>
+            </selfCheck>
+          <!-- Je suis obligée de le mettre en commentaire pour que le multipleChoice qui suit fonctionne!!!!! !-->
+          <!--/act-->
+          
+          <clarify>
+            <paragraph title="Pourquoi un tableau et pas plusieurs variables ?" icon="icon_reading"/>
+            <paragraph>
+				      Le fait d'envisager une seule "grande" variable, compartimentée en plusieurs "sous-variables" permet une grande économie de lignes 
+				      de code et une grande flexibilité.<newLine/>  
+              Par exemple : si on désire stocker le chiffre d’affaire d’une entreprise pour une  
+              année donnée, mois par mois, il suffit d'utiliser un tableau de taille 12.
+            </paragraph>
+          </clarify>
+          
+          <clarify>
+            <paragraph title="Déclaration, création et initialisation d'un tableau " icon="icon_reading"/> 
+            <paragraph>
+              Un tableau possède un type et une taille. <newLine/>
+              Le type est soit l'un des types simples (int, double, char,..) ou une réference (String,...).<newLine/>
+              La taille du tableau est le nombre (strictement positif ) de ses éléments. <newLine/>
+              La taille ne fait pas partie du type.  
+				    </paragraph>
+          </clarify>
+          
+          <!--act-->
+            <selfCheck title="" shuffle="yes">
+              <multipleChoice>
+                <question>La déclaration d'un tableau </question>
+                <answer feedback="" correct="no"><tabledata> réserve un emplacement mémoire sur le tas.</tabledata></answer>
+                <answer feedback="" correct="yes"><tabledata> réserve un emplacement mémoire sur la pile. </tabledata></answer>
+              </multipleChoice>
+            </selfCheck>
+            
+            <selfCheck title="Création" shuffle="no">
+              <fillInBlanks>
+                <question></question>
+                <gapText> 
+                	Pour créer un tableau, le mot clé utilisé est <gap answers="">new</gap> 
+                	et pour pouvoir créer un tableau nommé <formatted style="bold">entiers</formatted> de 10 entiers précédemment déclaré, 
+                	il faut écrire l'instruction <gap answers="">entiers</gap> <gap answers="">=</gap> <gap answers="">new</gap> 
+                	<gap answers="">int</gap> <gap answers="[10], [ 10 ]">[10]</gap>;
+							  </gapText>
+							  <solution>La création permet de réserver l'espace mémoire sur le tas (heap). Pour cela il faut spécifier la taille souhaitée.</solution>
+              </fillInBlanks>
+            </selfCheck>
+            
+            <selfCheck title="" shuffle="yes">
+              <multipleChoice>
+                <question>La création d'un tableau</question>
+                <answer feedback="" correct="yes"><tabledata> se fait sur le tas </tabledata></answer>
+                <answer feedback="" correct="no"><tabledata> se fait sur la pile </tabledata></answer>
+              </multipleChoice>
+            </selfCheck>
+            
+            <selfCheck title="Initialisation" shuffle="no">
+              <fillInBlanks>
+                <question></question>
+                <gapText> 
+                  Le mot clé <formatted style="italic">new</formatted> permet également d'initialiser tous les éléments du tableau fraichement créé à une valeur par défaut. 
+                  <newLine/>
+                  Cette valeur est de <gap answers="zéro, 0">0</gap> pour les numériques (int, double, char), <newLine/>
+                  de <gap answers="">false</gap> pour les boolean <newLine/>
+                  et de <gap answers="">null</gap> pour les objets (réference).
+				        </gapText>
+				        <solution/>
+              </fillInBlanks>
+            </selfCheck>
+            
+            <paragraph title="Réflexivité" icon="question"/>  
+				    <paragraph>  
+					    Est-il possible de déclarer, de créer et d'initialiser un tableau de 10 éléments en une seule opération ?  
+				    </paragraph>  
+				    <popup title="Vérification">  
+              <paragraph>  
+                Oui, on peut condenser l'écriture :
+              </paragraph>  
+              <paragraph cssClass="java">  
+int [] entiers = new int[10];  
+              </paragraph>  
+              <paragraph>
+                et pour une initialisation personnalisée:
+              </paragraph>
+              <paragraph cssClass="java">  
+int [] entiers = {0,4,5,6,6,7,2,1,8,9};
+              </paragraph>
+				    </popup>
+          <!--/act-->
+          
+          <clarify>
+            <paragraph title="Vérif" icon="icon_activity"/>
+            <paragraph>
+				      Prenez votre carnet de réponses et écrivez la boucle permettant d'initialiser les éléments d'un tableau d'entiers de 10 éléments à la valeur de leur indice.   
+            </paragraph>
+				    <popup title="Vérification">   
+				      <paragraph cssClass="java">
+for(int i=0; i&lt;10; i++) {
+  entiers[i] = i ;
+}  
+					    </paragraph>
+				    </popup> 
+          </clarify> 
+          
+          <!--act-->
+				    <selfCheck title="Cochez les affirmations qui sont vraies : " shuffle="no">
+            <multipleChoice>
+              <question>
+                Considerons le tableau <formatted style="java">entiers</formatted> contenant les élements <formatted style="java">{3,4,5}</formatted>.
+              </question>
+              <answer feedback="Un tableau connait sa taille via son attribut length" correct="yes">Le tableau connait sa taille</answer>
+              <answer feedback="Il n'est pas possible d'utiliser des indices se trouvant en dehors des bornes du tableau." correct="no">
+                <formatted style="java">entiers[3]</formatted> vaut 5.
+              </answer>
+              <answer feedback="Il n'est pas possible d'utiliser des indices se trouvant en dehors des bornes du tableau." correct="no">
+                <formatted style="java">entiers[3]= 4;</formatted> affecte à la case 3 la valeur 4.
+              </answer>
+              <answer feedback="La taille n'a pas d'importance ici car on manipule la réference du tableau et non pas ses valeurs." correct="yes">
+                Si <formatted style="java">entiers20</formatted> est un tableau de 20 entiers, on peut écrire l'instruction 
+                <formatted style="java">entiers20 = entiers;</formatted>.  
+              </answer>
+              <answer feedback="Étant donné qu'un tableau connait sa taille via son attribut length, 
+              on ne doit plus la fournir comme second paramètre à la méthode." correct="yes">
+                Un tableau peut être le seul paramètre d'une méthode.
+              </answer>
+              <answer feedback="C'est plutôt un grand avantage de pouvoir retourner plusieurs valeurs non  ? 
+              En fait on ne retourne qu'une  réference vers toutes ces valeurs." correct="yes">
+                Un tableau peut être une valeur de retour d'une méthode.
+              </answer>
+            </multipleChoice>
+          </selfCheck>
+          
+          <selfCheck title="Sélection multiple" shuffle="yes">
+            <multipleChoice>
+              <question>  
+							  Partons de la représentation suivante de <formatted style="java">entiers </formatted>en mémoire  
+							  <multimedia src="../image/tab3.jpg" type="jpeg"/>
+							  Quelle(s) instruction(s) mène(nt) à ce résultat.   
+							</question>
+              <answer feedback="" correct="no">
+                <tabledata> 
+                  <paragraph cssClass="java">
+int [] entiers;
+entiers = new int [3];
+                  </paragraph>
+								</tabledata>
+              </answer>
+              
+              <answer feedback="" correct="no">
+                <tabledata> 
+								  <paragraph cssClass="java">
+int [] entiers = new int [3]; 
+                  </paragraph>
+								</tabledata>
+              </answer>
+              
+              <answer feedback="" correct="no">
+                <tabledata> 
+                  <paragraph cssClass="java">
+int [] entiers = new int [];
+                  </paragraph>
+								</tabledata>
+              </answer>
+              
+              <answer feedback="" correct="yes">
+                <tabledata> 
+                  <paragraph cssClass="java">
+int [] entiers = {3,3,3};
+                  </paragraph>
+								</tabledata>
+              </answer>
+              
+              <answer feedback="" correct="yes">
+                <tabledata> 
+                  <paragraph cssClass="java">
+<![CDATA[
+int [] entiers = new int [3];
+for (int i=0; i<entiers.length; i++){
+  entiers[i] = 3;
+}]]>				    </paragraph>
+								</tabledata>
+              </answer>
+              
+              
+              <answer feedback="" correct="no">
+                <tabledata> 
+                  <paragraph cssClass="java">
+int[] entiers;
+entiers = {3,3,3};
+                </paragraph>
+              </tabledata>
+            </answer>
+            
+            <answer feedback="" correct="no">
+              <tabledata> 
+                <paragraph cssClass="java">
+int [3] entiers = {3,3,3};
+                </paragraph>
+              </tabledata>
+            </answer>
+            
+            <answer feedback="" correct="no">
+              <tabledata> 
+                <paragraph cssClass="java">
+int [] entiers;
+entiers= new {3,3,3};
+                </paragraph>
+              </tabledata>
+            </answer>
+          </multipleChoice>
+        </selfCheck>
+        
+        <selfCheck title="Quiz" shuffle="yes">
+          <multipleChoice>
+            <question>Pour ce tableau de 3 éléments, l'instruction <formatted style="java">System.out.println (entiers[6]);</formatted></question>
+            <answer feedback="" correct="no">n'affiche rien.</answer>
+            <answer feedback="" correct="no">affiche une valeur se trouvant en mémoire.</answer>
+            <answer feedback="" correct="no">provoque une erreur à la compilation.</answer>
+            <answer feedback="" correct="yes">provoque une  erreur à l'exécution.</answer>
+          </multipleChoice>
+        </selfCheck>
+      </act> 
+		</learningObject>
+		
+		<learningObject title="Survol du langage : La javadoc">
+			<act>
+				<selfCheck title="Javadoc" shuffle="yes">
+					<fillInBlanks>
+						<question></question>
+						<gapText> 
+							<paragraph>  
+								Le commentaire javadoc est identifié comme commençant par   
+								<gap answers="">/**</gap> 
+								et se terminant par 
+								<gap answers="">*/</gap> 
+								.
+							</paragraph>  
+							<paragraph>  
+								Les tags les plus courants sont :  
+							</paragraph>  
+							<paragraph>  
+								<gap answers="">@param</gap> pour décrire les paramètres,<newLine/>
+								<gap answers="">@return</gap> pour décrire ce qui est retourné,<newLine/>
+								<gap answers="">@throws</gap> pour spécifier les exceptions lancées,<newLine/>
+								<gap answers="">@return</gap> pour donner une note sur l'auteur.  
+							</paragraph>  
+							<paragraph>  
+								La documentation est produite au format  
+								<gap answers="">html</gap> 
+								. 
+							</paragraph> 
+						</gapText>
+						<solution/>
+					</fillInBlanks>
+				</selfCheck>
+				
+				<selfCheck title="Exercice" shuffle="yes">
+					<fillInBlanks>
+						<question>Complétez la javadoc de la méthode max2 suivante  
+						</question>
+						<gapText>
+						  <paragraph cssClass="java">
+/** 
+* Exercice, regroupe les méthodes de classe des exercices préparatoires du td7.
+* @author g32010
+*/
+public class Exercice{
+  <gap answers="">/**</gap> 
+  * Donne le maximum de 2 entiers. 
+  * Si les 2 nombres ont la même valeur, le résultat retourné sera cette valeur.
+  * <gap answers="">@param</gap> <gap answers="">nb1</gap> le premier nombre à comparer.  
+  * <gap answers="">@param</gap> <gap answers="">nb2</gap> le second nombre à comparer.  
+  * <gap answers="">@return</gap> le maximum des deux nombres entrés. 
+  <gap answers="">*/</gap> 
+  public static int max2 (int nb1, int nb2){
+    ...
+  }
+}
+							</paragraph>  
+						</gapText>
+						<solution/>
+					</fillInBlanks>
+				</selfCheck>
+				
+				<selfCheck title="Génération de la javadoc" shuffle="yes">
+					<fillInBlanks>
+						<question></question>
+						<gapText> 
+							<paragraph>  
+								Quelle commande permet de générer la javadoc de la classe <formatted style="java">Exercice</formatted> écrite ci-dessus?  <newLine/>
+								<gap answers="">javadoc</gap> <gap answers="">Exercice.java</gap> 
+							</paragraph>  
+							<paragraph>  
+								Quelle commande permet de générer la javadoc de toutes les classes du répertoire courant? <newLine/>
+								<gap answers="">javadoc</gap> <gap answers="">*.java</gap> 
+							</paragraph>  
+							<paragraph>  
+								Quelle commande permet de générer la javadoc de toutes les classes du répertoire courant et de les placer dans un répertoire 
+								<formatted style="italic">documentation</formatted> situé dans le répertoire courant?  <newLine/>
+								<gap answers="">javadoc</gap> <gap answers="">-d</gap> <gap answers="documentation, ./documentation">documentation</gap> 
+								<gap answers="">*.java</gap> 
+							</paragraph>
+						</gapText>
+						<solution/>
+					</fillInBlanks>
+				</selfCheck>
+			</act>
+		</learningObject>
+		
+		<learningObject title="Logique">
+			<clarify> 
+				Assurez-vous de venir au laboratoire avec vos solutions des exercices 1, 2, 3, 8, 9b, 10 et 13 du chapitre 8 "Les tableaux" de votre  
+				cours de logique.   
+			</clarify>
+		</learningObject>
+		
+		<learningObject title="Bravo">
+			<clarify><paragraph title="Bravo" icon="icon_bravo"/> 
+				Si vous avez réussi à répondre correctement aux questions précédentes,  
+				c'est que vous êtes prêt à venir au laboratoire dans les meilleures  
+				conditions!  
+      </clarify>
+		</learningObject>
+	
+	</unit>
+  
+	<metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition>
+				<posNumber>3</posNumber>
+			</creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+      <technical>
+         <technicalRequirement>
+				<type>Browser</type>
+            <name>any</name>
+            <minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+      </technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2012 - 2013</version>
+				<contribute>
+					<person name="ARO" />
+					<person name="BEJ" />
+					<person name="CLR" />
+					<person name="DNA" />
+					<person name="HAL" />
+					<person name="MBA" />
+					<person name="MCD" />
+					<person name="NPX" />
+					<person name="PBT" />
+				</contribute>
+			</lifecycle>
+         <educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+      <rights>
+			<cost>no</cost>
+         <copyright>CC-BY</copyright>
+         <copyrightURL>http://creativecommons.org/licenses/by/3.0/</copyrightURL>
+      </rights>
+	</metadata>
+	
+</lesson>
