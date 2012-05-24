@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<lesson xmlns="http://www.elml.ch" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="TD7BisPrepa" title="Td7Bis - Exercices préparatoires">
+	
+	
+	<entry>
+		<paragraph>  
+			Afin d'arriver au laboratoire dans les meilleures conditions, 
+			il est bien de revoir la matière qui sera mise en pratique. 
+			C'est pourquoi nous vous fournissons quelques exercices préparatoires 
+			à faire à la maison pour vous permettre d'évaluer si vous êtes prêts. 
+		</paragraph>
+	</entry>
+	
+	<unit label="TD7BisPrepa" title="Exercices préparatoires au TD7Bis">
+		
+		<entry>
+			<paragraph>  
+				Vous trouverez les réponses dans les premières leçons du cours ou dans les tds précédents.  
+			</paragraph>
+		</entry>
+
+		<learningObject title="Survol du langage : JUnit">
+			<act>
+				<selfCheck title="Tests" shuffle="no">
+					<fillInBlanks>
+						<question></question>
+						<gapText>  
+							<paragraph>    
+								Le type de tests qui  teste séparément chaque méthode est appelé tests <gap answers="">unitaires</gap>.
+							</paragraph>    
+							<paragraph>    
+								Avant de commencer à tester, il faut écrire un <gap answers="">plan</gap> de tests afin de s'assurer qu'on teste tous les cas.
+							</paragraph>    
+							<paragraph>    
+								Bien sûr, il n'est pas pensable de tester toutes les valeurs possibles, il faut donc choisir des valeurs représentatives 
+								(c-à-d cas général, cas particuliers et valeurs limites).    
+							</paragraph>    
+							<paragraph><gap answers="">JUnit</gap> est un outil pour automatiser les tests unitaires.
+							</paragraph>    
+							<paragraph>La classe de test contient une méthode de test par cas.<newLine/>    
+								Cette méthode est <gap answers="">autonome</gap> (ne reçoit rien ne retourne rien) 
+								et elle ne contient que des <gap answers="">affirmations</gap> 
+								(appel de la méthode à tester, comparaison entre le résultat attendu et le résultat obtenu).
+							</paragraph>    
+							<paragraph>    
+								Une méthode est reconnue comme étant un test unitaire grâce au tag <formatted style="java"><gap answers="">@Test</gap></formatted>.    
+							</paragraph>    
+							<paragraph>    
+								<formatted style="java"><gap answers="">assertEquals</gap>(int1, int2)</formatted> 
+								vérifie que les 2 valeurs entières <formatted style="java">int1</formatted> et <formatted style="java">int2</formatted> sont identiques,    
+								<newLine/>
+								<formatted style="java"><gap answers="">assertTrue</gap>(val)</formatted> 
+								vérifie que la valeur du booléen <formatted style="java">val</formatted> est à vrai,     
+								<newLine/>
+								<formatted style="java"><gap answers="">assertFalse</gap>(val)</formatted> 
+								vérifie que la valeur du booléen <formatted style="java">val</formatted> est à faux.    
+							</paragraph>    
+							<paragraph>    
+								Le tag <formatted style="java"><gap answers="">@Test</gap> (<gap answers="">expected=IllegalArgumentException.class</gap>)</formatted> 
+                permet de vérifier que la méthode lance bien une exception de type <formatted style="java">IllegalArgumentException</formatted>.    
+							</paragraph>
+							<paragraph>
+                Dans la classe de tests, 2 instructions <formatted style="java">import</formatted> sont nécessaires :    
+                <newLine/>    
+                <formatted style="java">import <gap answers="">org</gap>.<gap answers="">junit</gap>.	<gap answers="">Test</gap>;</formatted>
+                // Pour que @Test soit connu
+                <newLine/>    
+                <formatted style="java">import <gap answers="">static</gap> 
+                <gap answers="">org</gap>.<gap answers="">junit</gap>.<gap answers="">Assert</gap>.<gap answers="">*</gap>;</formatted>
+                // Pour que les méthodes de vérification ci-dessus soient reconnues.
+							</paragraph>
+							<paragraph>    
+								La commande <formatted style="java"><gap answers="">java</gap> 
+								<gap answers="">org</gap>.<gap answers="">junit</gap>.<gap answers="">runner</gap>.<gap answers="">JUnitCore</gap>
+								<gap answers="">g32000.tds.td7BisPrepa.ExerciceTest</gap></formatted><newLine/>
+								permet de lancer les tests de la classe <formatted style="java">ExerciceTest</formatted> 
+								dont le package est <formatted style="java">g32000.tds.td7BisPrepa</formatted> précédemment compilée.    
+							</paragraph>    
+						</gapText>
+						<solution/>
+					</fillInBlanks>
+				</selfCheck>
+			</act>
+			
+			<clarify><paragraph title="Vérif" icon="icon_activity"/>
+			  <paragraph>
+          Lors du td précédent, on vous a demandé d'écrire la méthode donnant l'occurrence des chiffres d'un nombre. <newLine/>
+          Écrivez dans votre carnet un plan de tests pour cette méthode.    
+          <newLine/>  
+          <popup title="Avez-vous pensé :"> 
+            <list listStyle="unordered">
+              <item>aux cas généraux (plusieurs exemples)</item>    
+              <item>à un nombre dont tous les chiffres sont identiques</item>    
+              <item>au nombre 0</item>    
+              <item>que si le nombre fourni est négatif, une exception doit être lancée </item>    
+            </list>
+          </popup>  
+				</paragraph>
+      </clarify>
+		</learningObject>
+		
+		<learningObject title="Logique">
+			<clarify>  
+			  <paragraph>
+				  Assurez-vous de venir au laboratoire avec vos solutions <newLine/>
+				  des exercices 15 et 17 du chapitre 8 "Les tableaux" <newLine/>
+				  ainsi qu'avec le chapitre 9 "Le tri" de votre cours de logique .
+        </paragraph>
+			</clarify>
+		</learningObject>
+		
+		<learningObject title="Bravo">
+			<clarify>
+			  <paragraph title="Bravo" icon="icon_bravo"/>  
+			  <paragraph>
+          Si vous avez réussi à répondre correctement aux questions précédentes,    
+          c'est que vous êtes prêt à venir au laboratoire dans les meilleures    
+          conditions!    
+				</paragraph>
+      </clarify>
+		</learningObject>
+		
+	</unit>
+	
+	<metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition>
+				<posNumber>7Bis</posNumber>
+			</creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+		<technical>
+			<technicalRequirement>
+				<type>Browser</type>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+		</technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2012 - 2013</version>
+				<contribute>
+					<person name="ARO" />
+					<person name="BEJ" />
+					<person name="CLR" />
+					<person name="DNA" />
+					<person name="HAL" />
+					<person name="MBA" />
+					<person name="MCD" />
+					<person name="NPX" />
+					<person name="PBT" />
+				</contribute>
+			</lifecycle>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+		<rights>
+			<cost>no</cost>
+			<copyright>CC-BY</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by/3.0/</copyrightURL>
+		</rights>
+	</metadata>
+
+</lesson>
