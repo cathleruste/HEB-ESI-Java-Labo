@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<lesson xmlns="http://www.elml.ch" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+    label="TD7Bis" title="Td7Bis : Les tableaux (suite)">
+  
+  
+	<entry>
+		<paragraph>  
+			Ce TD a pour objectif de vous familiariser avec les tableaux à une dimension et JUnit.
+		</paragraph>  
+	</entry>
+
+	<unit label="TD7Bis" title="Td7Bis : Les tableaux (suite)">
+		<learningObject title="Exercices">
+			<act>
+			  <paragraph title="Tests" icon="act"/>  
+				<paragraph>    
+					Lors de la préparation de ce td, on vous a demandé d'écrire un plan de tests pour la méthode 
+					<formatted style="bold"><formatted style="italic">occurence</formatted></formatted> écrite lors du td précédent. <newLine/>
+					Maintenant, il est temps de passer à l'action et de coder les tests correspondants! À vous de jouer...    
+				</paragraph>    
+				
+				<paragraph>    
+					Pour vous aider, nous vous donnons quand même le code d'une méthode de test pour le cas général :)    
+				</paragraph>    
+				
+				<paragraph cssClass="java">
+<![CDATA[
+@Test
+public void occurence_cas1() {
+  int nb = 122555;
+  int [] tabOccurencesAttendues = {0,1,2,0,0,3,0,0,0,0};
+  int [] tabOccurencesObtenues = MaClasse.occurence(nb);
+  
+  // Vérifions d'abord que la taille du tableau obtenu est la bonne
+  assertEquals(tabOccurencesAttendues.length, tabOccurencesObtenues.length);
+  
+  // Vérifions ensuite que chacun des éléments du tableau des occurences 
+  // obtenues est bien celui qu'on attendait
+  
+  for (int i=0; i<tabOccurencesAttendues.length; i++){
+    assertEquals (tabOccurencesAttendues[i], tabOccurencesObtenues[i]);
+  }    
+}]]>  </paragraph>
+
+      </act>
+      
+			<clarify>
+        <paragraph title="Lancer les tests" icon="icon_reading"/>  
+				<paragraph>
+					Pour lancer le test, il suffit de<newLine/>    
+					<list listStyle="unordered">
+            <item>Compiler la classe.</item>  
+            <item>Lancer la commande : <formatted style="code">java org.junit.runner.JUnitCore package.MaclasseTest</formatted>.<newLine/>
+              Cette commande lance le test et affiche un message récapitulatif du nombre de tests et du décompte de ceux qui ont réussi ou échoué.<newLine/>
+              Si cela ne fonctionne pas c'est que la JVM ne trouve pas la classe <formatted style="code">org.junit.runner.JUnitCore</formatted> 
+              qui se trouve dans le fichier jar <formatted style="code">/usr/share/java/junit4.jar</formatted>, 
+              il faudra dont ajouter ce chemin à votre <formatted style="code">CLASSPATH</formatted> 
+              et relancer un <formatted style="italic">shell</formatted> afin que la variable d'environnement soit relue.<newLine/>    
+              Certains d'entre vous ne voudront pas entrer cette longue commande lors de chaque test.<newLine/>    
+              Rien ne les empêche de définir un alias avec <formatted style="code">alias javatest='java org.junit.runner.JUnitCore'</formatted>
+            </item>  
+          </list>
+				</paragraph>    
+      </clarify>
+      
+			<act>
+			  <paragraph title="Les doublons" icon="act"/>  
+        <paragraph>
+				  Syllabus de logique exercice 17 du chapitre 8. <newLine/>
+				  Votre méthode recevra un tableau en paramètre et retournera un booléen. <newLine/>
+				  Écrivez le plan de tests, montrez-le à votre professeur. Ensuite, vous écrirez les tests correspondants et la javadoc.    
+				</paragraph>
+      </act>
+      
+			<act>
+			  <paragraph title="Pour les plus rapides : Moyenne d'éléments" icon="act"/>  
+			  <paragraph>
+          Syllabus de logique exercice 15 du chapitre 8. <newLine/>
+          Votre méthode recevra un tableau en paramètre et retournera un entier représentant la moyenne. <newLine/>
+          Écrivez le plan de tests, les tests et la javadoc correspondants.    
+				</paragraph>
+      </act>
+      
+			<clarify>
+			  <paragraph title="Travailler chez vous" icon="icon_reading"/>  
+				<paragraph>    
+					JUnit n'est pas fourni avec JDK, vous devez l'installer.<newLine/>
+					Pour cela    
+				  <list listStyle="ordered">
+				    <item>allez sur le site JUnit et téléchargez JUnit (version 4.x)</item>    
+            <item>décompressez-le dans un dossier de votre choix.<newLine/>    
+              Le mieux étant bien sûr d'organiser vos dossiers, fichiers, 
+              nous ne pouvons que vivement vous conseiller de regrouper toutes vos librairies java à un même endroit. <newLine/>    
+              Dans <formatted style="code">/usr/local/share/java</formatted> par exemple.    
+            </item>    
+            <item>modifiez votre CLASSPATH pour y ajouter le fichier <formatted style="italic">junit-4.x.jar</formatted></item>    
+			    </list>
+			  </paragraph>
+			</clarify>
+			
+			<clarify>
+			  <paragraph title="Complément" icon="icon_reading"/>  
+			  <paragraph>
+          Nous n'avons présenté qu'une partie de la technologie JUnit. <newLine/>
+          Deux points importants restent en suspens.
+          <list listStyle="ordered">
+				    <item>Comment simplifier le travail d'initialisation des données de test ?</item>
+				    <item>Comment tester plusieurs classes en une fois ?</item>
+          </list>
+          Ceux qui sont intéressés et veulent en savoir plus, trouveront de nombreuses informations sur le site de JUnit.
+				</paragraph>
+				</clarify>
+				
+		</learningObject>
+		
+	</unit>
+	
+	<metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition>
+				<posNumber>7Bis</posNumber>
+			</creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+		<technical>
+			<technicalRequirement>
+				<type>Browser</type>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+		</technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2012 - 2013</version>
+				<contribute>
+					<person name="ARO" />
+					<person name="BEJ" />
+					<person name="CLR" />
+					<person name="DNA" />
+					<person name="HAL" />
+					<person name="MBA" />
+					<person name="MCD" />
+					<person name="NPX" />
+					<person name="PBT" />
+				</contribute>
+			</lifecycle>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+		<rights>
+			<cost>no</cost>
+			<copyright>CC-BY</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by/3.0/</copyrightURL>
+		</rights>
+	</metadata>
+
+</lesson>
