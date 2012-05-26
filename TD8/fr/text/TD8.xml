@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<lesson xmlns="http://www.elml.ch" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+    label="TD8" title="Td8 : Les tableaux à 2 dimensions">
+    
+	<entry>
+		<paragraph>  
+			Ce TD a pour objectif de vous familiariser avec les tableaux à deux dimensions.
+		</paragraph>  
+	</entry>
+
+	<unit label="TD8" title="Td8 : Les tableaux à 2 dimensions">
+		<learningObject title="Exercices">
+			<act>
+			  <paragraph title="Les nuls" icon="act"/>
+				<paragraph>
+					Syllabus de logique exercice 1 du chapitre 10. 
+				</paragraph>
+				<paragraph>
+					N'oubliez pas d'écrire la <formatted style="italic">javadoc</formatted> et les <formatted style="italic">tests jUnit</formatted> pour cette méthode. <newLine/>
+					Écrivez aussi la méthode <formatted style="java">main</formatted> qui appellera cette méthode. 
+				</paragraph>
+				
+				<paragraph title="Le contour du tableau" icon="act"/>
+				<paragraph>
+					Syllabus de logique exercice 2 du chapitre 10. 
+				</paragraph>
+				<paragraph>
+					N'oubliez pas d'écrire la <formatted style="italic">javadoc</formatted> et les <formatted style="italic">tests jUnit</formatted> pour cette méthode. <newLine/>
+					Écrivez aussi la méthode <formatted style="java">main</formatted> qui appellera cette méthode. 
+				</paragraph>
+				
+				<paragraph title="Tous positifs" icon="act"/>
+				<paragraph>
+					Syllabus de logique exercice 5 du chapitre 10. 
+				</paragraph>
+				<paragraph>
+					N'oubliez pas d'écrire la <formatted style="italic">javadoc</formatted> et les <formatted style="italic">tests jUnit</formatted> pour cette méthode. <newLine/>
+					Écrivez aussi la méthode <formatted style="java">main</formatted> qui appellera cette méthode. 
+				</paragraph>
+				
+				<paragraph title="Le carré magique" icon="act"/>
+				<paragraph>
+					Syllabus de logique exercice 6 du chapitre 10. <newLine/>
+					Si le tableau reçu en paramètre n'est pas un tableau carré, une <formatted style="italic">IllegalArgumentException</formatted> sera lancée. 
+				</paragraph>
+				<paragraph>
+					N'oubliez pas d'écrire la <formatted style="italic">javadoc</formatted> et les <formatted style="italic">tests jUnit</formatted> pour cette méthode. <newLine/>
+					Écrivez aussi la méthode <formatted style="java">main</formatted> qui appellera cette méthode. 
+				</paragraph>
+      </act>
+		</learningObject>
+	</unit>
+	
+	<metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition>
+				<posNumber>7</posNumber>
+			</creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+		<technical>
+			<technicalRequirement>
+				<type>Browser</type>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+		</technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2012 - 2013</version>
+				<contribute>
+					<person name="ARO" />
+					<person name="BEJ" />
+					<person name="CLR" />
+					<person name="DNA" />
+					<person name="HAL" />
+					<person name="MBA" />
+					<person name="MCD" />
+					<person name="NPX" />
+					<person name="PBT" />
+				</contribute>
+			</lifecycle>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+		<rights>
+			<cost>no</cost>
+			<copyright>CC-BY</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by/3.0/</copyrightURL>
+		</rights>
+	</metadata>
+
+</lesson>
