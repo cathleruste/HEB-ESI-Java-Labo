@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<lesson xmlns="http://www.elml.ch" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+    label="TD8Prepa" title="Td8 - Exercices préparatoires">
+  
+  
+	<entry>
+		<paragraph>  
+			Afin d'arriver au laboratoire dans les meilleures conditions, 
+			il est bien de revoir la matière qui sera mise en pratique. 
+			C'est pourquoi nous vous fournissons quelques exercices préparatoires 
+			à faire à la maison pour vous permettre d'évaluer si vous êtes prêts. 
+		</paragraph>
+	</entry>
+	
+	<unit label="TD8Prepa" title="Exercices préparatoires au TD8">
+		
+		<learningObject title="Survol du langage : Les tableaux à deux dimensions">
+    
+      <clarify>
+        <paragraph title="Tableau à deux dimensions" icon="icon_reading"/>
+				<paragraph>
+          Comme pour un tableau à une dimension, un tableau à deux dimensions est une suite d’éléments portant
+          tous le même nom mais se distinguant les uns des autres par un double indice. <newLine/>
+          Ce type de tableau nous est familier par sa présence dans beaucoup de situations courantes : 
+          calendrier, grille horaire, grille de mots croisés, jeux se déroulant sur un quadrillage (damier, échiquier…), etc.
+        </paragraph>
+      </clarify>
+      
+      <act>
+        <selfCheck title="Bornes d'un tableau" shuffle="yes">
+          <fillInBlanks>
+            <question></question>
+            <gapText>
+							<paragraph>
+								Les variables permettant de se déplacer dans un tableau s'appellent les 
+								<gap answers="">indices</gap>.
+							</paragraph>
+							<paragraph>
+								La première valeur d'un tableau de <formatted style="bold">5*10</formatted> éléments se trouve à la position 
+								<gap answers="">0</gap>
+								,
+								<gap answers="">0</gap>
+								et la dernière à la position 
+								<gap answers="">4</gap>
+								,
+								<gap answers="">9</gap>
+							</paragraph>
+							<paragraph>
+								La première valeur d'un tableau de <formatted style="bold">n*m</formatted> éléments se trouve à la position 
+								<gap answers="">0</gap>
+								,
+								<gap answers="">0</gap>
+								et la dernière à la position         
+								<gap answers="n-1,n - 1,n -1,n- 1">n-1</gap>
+								,
+								<gap answers="m-1,m - 1,m -1,m- 1">m-1</gap>
+							</paragraph>
+            </gapText>
+            <solution/>
+          </fillInBlanks>
+        </selfCheck>
+      <!--/act-->
+      
+      <clarify>
+        <paragraph title="Existe-il des tableaux de plus de deux dimensions ?" icon="icon_reading"/>
+        <paragraph>
+				Certaines situations nécessitent l’usage de tableaux à trois, quatre, voire plus de dimensions.  <newLine/>
+				Pour comprendre leur fonctionnement, il faut savoir qu'un tableau à deux dimensions n'est qu'un tableau à une dimension 
+				dont chacun des éléments est lui-même un tableau à une dimension. <newLine/>
+				De même, un tableau à trois dimensions est un tableau à une dimension dont chacun des éléments est un tableau à deux dimensions, etc.
+				</paragraph>
+      </clarify>
+      
+      <clarify>
+        <paragraph title="Déclaration, création et initialisation d'un tableau " icon="icon_reading"/>
+        <paragraph>
+				  Un tableau possède un type et une dimension. <newLine/>
+				  Le type est soit l'un des types simples (int,double,char,..) ou une réference (String,objet d'une classe,....). <newLine/>
+				  La dimension d’un tableau est le nombre d’indices qu’on utilise pour faire référence à un de ses éléments
+				</paragraph>
+      </clarify>
+      
+      <!--act-->
+        <selfCheck title="Déclaration et création" shuffle="yes">
+          <fillInBlanks>
+            <question> </question>
+            <gapText>
+							L'instruction de <formatted style="bold">déclaration</formatted> d'un tableau de chaines à deux dimensions appelé <formatted style="java">chainess</formatted> est            
+							<gap answers="">String</gap>
+							<gap answers="[][],[ ] [ ],[] [],[ ][],[ ] [],[][ ],[] [ ]">[][]</gap>
+							<gap answers="">chainess</gap>
+							; 
+							<paragraph>
+								L'instruction de <formatted style="bold">création (et seulement de création)</formatted> 
+								d'un tableau d'entiers à deux dimensions de 5*3 entiers appelé <formatted style="java">entierss</formatted> est 
+								<gap answers="">entierss</gap>
+								<gap answers="">=</gap>
+								<gap answers="">new</gap>
+								<gap answers="">int</gap>
+								<gap answers="[5][3],[ 5 ][ 3 ],[5] [3],[ 5 ] [ 3 ]">[5][3]</gap>
+								;         
+							</paragraph>
+							<paragraph>
+								L'instruction de <formatted style="bold">déclaration et de création</formatted> d'un tableau de caractères à trois dimensions de 5*3*4 caractères appelé 
+								<formatted style="java">caractèresss</formatted> est 
+								<gap answers="">char</gap>
+								<gap answers="[][][],[ ][ ][ ],[] [] [],[ ] [ ] [ ]">[][][]</gap>
+								<gap answers="">caractèresss</gap>
+								<gap answers="">=</gap>
+								<gap answers="">new</gap>
+								<gap answers="">char</gap>
+								<gap answers="[5][3][4],[ 5 ][ 3 ][ 4 ],[5] [3] [4],[ 5 ] [ 3 ] [ 4 ]">[5][3][4]</gap>
+								; 
+							</paragraph>
+            </gapText>
+            <solution>
+              Vous constatez que la dimension d'un tableau est aussi le nombre de crochets que l'on utilise lors de sa création 
+              et que la taille est également spécifiée par la même occasion.<newLine/> 
+              Cependant, il ne faut pas confondre ces deux notions.
+            </solution>
+          </fillInBlanks>
+        </selfCheck>
+      
+        <selfCheck title="Initialisation" shuffle="no">
+          <fillInBlanks>
+            <question></question>
+            <gapText>
+              L'instruction <formatted style="java">entierss = new int[5][3];</formatted> 
+              crée un tableau à deux dimensions où les éléments sont initialisés à                  
+              <gap answers="">0</gap>. 
+              <paragraph>
+                L'instruction qui permet de déclarer, créer et initialiser un tableau de réels <formatted style="java">réelss</formatted> 
+                initialisé avec les valeurs données 
+              </paragraph>
+              <table>
+                <tablerow>
+                  <tabledata>
+                    1.1
+                  </tabledata>
+                  <tabledata>
+                    1.2
+                  </tabledata>
+                </tablerow>
+                <tablerow>
+                  <tabledata>
+                    2.1
+                  </tabledata>
+                  <tabledata>
+                    2.2
+                  </tabledata>
+                </tablerow>
+                <tablerow>
+                  <tabledata>
+                    3.1
+                  </tabledata>
+                  <tabledata>
+                    3.2
+                  </tabledata>
+                </tablerow>
+              </table>
+              <paragraph>
+                est                  
+                <gap answers="">double</gap>
+                
+                <gap answers="[][],[ ] [ ],[] [],[ ][],[ ] [],[][ ],[] [ ]">[][]</gap>
+                
+                <gap answers="">réelss</gap>
+                =     
+                <gap answers="{{1.1,1.2},{2.1,2.2},{3.1,3.2}},{{1.1, 1.2}, {2.1, 2.2}, {3.1, 3.2}},{ {1.1,1.2},{2.1,2.2},{3.1,3.2} },{ {1.1, 1.2}, {2.1, 2.2}, {3.1, 3.2} }">
+                  {{1.1,1.2},{2.1,2.2},{3.1,3.2}}
+                </gap>
+                ;                
+              </paragraph>
+            </gapText>
+            <solution/>
+          </fillInBlanks>
+        </selfCheck>
+        
+        <selfCheck title="Sélection multiple" shuffle="yes">
+          <multipleChoice>
+            <question>Le tableau <formatted style="java">entierss</formatted> contenant les élements <formatted style="java">{{3,4},{5},{6,7,8}}</formatted></question>
+            <answer feedback="" correct="no">est un tableau d'entiers.</answer>
+            <answer feedback="" correct="yes">est un tableau de tableaux d'entiers.</answer>
+            <answer feedback="" correct="no">est un tableau à trois dimensions.</answer>
+            <answer feedback="" correct="yes">est un tableau à deux dimensions.</answer>
+            <answer feedback="" correct="no">est un tableau à une dimension.</answer>
+          </multipleChoice>
+        </selfCheck>
+        
+        
+        <selfCheck title="Vrai ou faux" shuffle="no">
+        
+          <paragraph>
+            Reprenons le tableau <formatted style="java">entierss</formatted> contenant les élements <formatted style="java">{{3,4},{5},{6,7,8}}</formatted>.
+          </paragraph>
+        
+          <multipleChoice>
+            <question><formatted style="java">entierss[1]</formatted> vaut 5.</question>
+            <answer feedback="Pour atteindre un élément du tableau à deux dimensions il faut utiliser deux indices. Rappelez vous que le nombre de crochets est égal à la dimension du tableau et au nombre d'indices nécessaires pour atteindre un élément." 
+              correct="no">vrai</answer>
+            <answer feedback="" correct="yes">faux</answer>
+          </multipleChoice>
+        </selfCheck>
+        
+        <selfCheck title="" shuffle="no">
+          <multipleChoice>
+            <question><formatted style="java">entierss[1][2]</formatted> vaut 4.</question>
+            <answer feedback="entierss[1][2] est un élément qui n'existe pas." correct="no">vrai</answer>
+            <answer feedback="" correct="yes">faux</answer>
+            </multipleChoice>
+        </selfCheck>
+        
+        <selfCheck title="" shuffle="no">
+          <multipleChoice>
+            <question><formatted style="java">entierss[2][1] = 4;</formatted> remplace la valeur 7 par la valeur 4.</question>
+            <answer feedback="" correct="yes">vrai</answer>
+            <answer feedback="" correct="no">faux</answer>
+          </multipleChoice>
+        </selfCheck>
+        
+        <selfCheck title="" shuffle="no">
+          <multipleChoice>
+            <question>Si <formatted style="java">entiersss</formatted> est un tableau à 3 dimensions, il est possible d'écrire l'instruction<formatted style="java">entierss = entiersss;</formatted></question>
+            <answer feedback="La déclaration d'un tableau réserve un emplacement sur la pile pour une référence du type du tableau. Comme nos références ont des types différents cela provoque une erreur de compilation pour cause d'incompatibilité." 
+              correct="no">vrai</answer>
+            <answer feedback="" correct="yes">faux</answer>
+          </multipleChoice>
+        </selfCheck>
+        
+        <selfCheck title="Quiz" shuffle="yes">
+          <multipleChoice>
+            <question>Pour notre tableau <formatted style="java">entierss</formatted> contenant toujours 
+              les élements <formatted style="java">{{3,4},{5},{6,7,8}}</formatted>, l'instruction <formatted style="java">System.out.println (entierss[1][1]);</formatted>
+            </question>
+            <answer feedback="" correct="no">n'affiche rien.</answer>
+            <answer feedback="" correct="no">affiche une valeur se trouvant en mémoire.</answer>
+            <answer feedback="" correct="no">provoque une erreur à la compilation.</answer>
+            <answer feedback="" correct="yes">provoque une  erreur à l'exécution.</answer>
+          </multipleChoice>
+        </selfCheck>
+        
+        <selfCheck title="tailles d'un tableau à deux dimensions" shuffle="yes">
+          <fillInBlanks>
+            <question/>
+            <gapText>La taille de la première dimension de <formatted style="java">entierss</formatted> contenant 
+            les élements <formatted style="java">{{3,4},{5,5},{6,7}}</formatted> est donnée par 
+              <gap answers="">entierss.length</gap>. <newLine/>
+              Cette valeur vaut     
+              <gap answers="">3</gap>
+              dans notre exemple.  <newLine/>
+              La taille de la seconde dimension est donnée par 
+              <gap answers="entiers[0].length,entiers[1].length,entiers[2].length">entiers[0].length</gap>.<newLine/>
+              Cette valeur vaut     
+              <gap answers="">2</gap>
+              dans notre exemple.
+            </gapText>
+            <solution/>
+          </fillInBlanks>
+        </selfCheck>
+      </act>
+    </learningObject>
+    
+		<learningObject title="Logique">
+			<clarify>
+				Assurez-vous de venir au laboratoire avec vos solutions des exercices 1, 2, 5 et 6 du chapitre 10 "Les tableaux à 2 dimensions" de votre
+				cours de logique. 
+			</clarify>
+		</learningObject>
+		
+		<learningObject title="Bravo">
+			<clarify><paragraph title="Bravo" icon="icon_bravo"/>
+				Si vous avez réussi à répondre correctement aux questions précédentes,
+				c'est que vous êtes prêt à venir au laboratoire dans les meilleures
+				conditions!
+      </clarify>
+		</learningObject>
+	</unit>
+  
+	<metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition>
+				<posNumber>8</posNumber>
+			</creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+      <technical>
+         <technicalRequirement>
+				<type>Browser</type>
+            <name>any</name>
+            <minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+      </technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2012 - 2013</version>
+				<contribute>
+					<person name="ARO" />
+					<person name="BEJ" />
+					<person name="CLR" />
+					<person name="DNA" />
+					<person name="HAL" />
+					<person name="MBA" />
+					<person name="MCD" />
+					<person name="NPX" />
+					<person name="PBT" />
+				</contribute>
+			</lifecycle>
+         <educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+      <rights>
+			<cost>no</cost>
+         <copyright>CC-BY</copyright>
+         <copyrightURL>http://creativecommons.org/licenses/by/3.0/</copyrightURL>
+      </rights>
+	</metadata>
+	
+</lesson>
