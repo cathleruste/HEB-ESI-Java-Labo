@@ -67,6 +67,7 @@
 				\usepackage{array}
 				\usepackage{url}
 				\usepackage{ragged2e}
+
 				\usepackage{listings}
 \lstdefinestyle{lstverb}
   {
@@ -178,29 +179,35 @@
             </xsl:choose>
             <xsl:text>}	
 			\date{}
-			\author{}
+			\author{\scriptsize{</xsl:text>
+			<xsl:for-each select="/elml:lesson/elml:metadata/elml:lessonInfo/elml:lifecycle/elml:contribute/elml:person">
+				<xsl:value-of select="@name" disable-output-escaping="yes"/>
+				<xsl:if test="not(position()=last())">
+					<xsl:text>, </xsl:text>
+				</xsl:if>
+			</xsl:for-each>
+			<xsl:text>}}
 			\fancyhead[L]{
 				\small\textsc{Haute École de Bruxelles}\\
 	    			\small\textsc{École Supérieure d'Informatique}
 			}
 			\fancyhead[R]{
-				\small\textsc{</xsl:text>
+				\small{</xsl:text>
 	    <xsl:value-of select="/elml:lesson/elml:metadata/elml:organisation/@module"/>
-			<xsl:text>}\\
+			<xsl:text>} - 
 			\small{</xsl:text>
 	    <xsl:value-of select="/elml:lesson/elml:metadata/elml:organisation/@level"/>
-	    <xsl:text>}}
-				\fancyfoot[L]{\tiny{</xsl:text>
-                    <xsl:for-each select="/elml:lesson/elml:metadata/elml:lessonInfo/elml:lifecycle/elml:contribute/elml:person">
-                        <xsl:value-of select="@name"/>
-                        <xsl:if test="not(position()=last())"><xsl:text> -- </xsl:text></xsl:if>
-                    </xsl:for-each>
-		<xsl:text>}}
-				\fancyfoot[C]{}
-				\fancyfoot[R]{{\tiny version </xsl:text>
+			<xsl:text>}\\
+			\small{</xsl:text>
 	    <xsl:value-of select="/elml:lesson/elml:metadata/elml:lessonInfo/elml:lifecycle/elml:version"/>
-				<xsl:text> (\today)}}
-				\pagestyle{plain}			
+	    <xsl:text>}}
+				\fancyfoot[L]{ </xsl:text>
+		<xsl:text disable-output-escaping="yes">}
+				\fancyfoot[C]{}
+				\fancyfoot[R]{\tiny{\textcolor{gray}{version du \today}}}
+				\pagestyle{plain}
+				\reversemarginpar
+				\usepackage{rotating}						
 				\begin{document}
 				<!--\setcounter{section}{-1}-->
 				<!--\addtocounter{section}{</xsl:text>-->
@@ -208,6 +215,25 @@
 				<!--<xsl:text>}-->
 				\maketitle
 				\thispagestyle{fancy}
+        \marginpar{\begin{sideways}
+            \begin{minipage}[t]{1cm}
+            \begin{tiny}
+            \includegraphics[width=1\linewidth,height=1\textheight,keepaspectratio=true]{/home/marco/Developpement/Java1-Labo/LaboJava/_templates/java/icons/cc.jpg}
+			\end{tiny}
+			\end{minipage}
+            \begin{minipage}[b]{19cm}
+            \begin{tiny}
+            \textcolor{gray}{</xsl:text>
+			<xsl:value-of select="/elml:lesson/elml:metadata/elml:rights/elml:copyright"/><xsl:text> (\texttt{</xsl:text>
+			<xsl:value-of select="/elml:lesson/elml:metadata/elml:rights/elml:copyrightURL"/>
+			<xsl:text disable-output-escaping="yes">})
+			\vspace{-1em}
+			\\Les autorisations au-delà du champ de cette licence peuvent être obtenues à 
+			\texttt{</xsl:text><xsl:value-of select="$server"/><xsl:text>}
+			- \texttt{</xsl:text><xsl:value-of select="$contact"/><xsl:text>}
+			}\end{tiny}
+			\end{minipage}
+        \end{sideways}}
             </xsl:text>
 				<xsl:apply-templates select="./elml:lesson/elml:entry"/>
 				<xsl:text>\tableofcontents

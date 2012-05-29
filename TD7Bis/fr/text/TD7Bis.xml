@@ -33,11 +33,10 @@ public void occurence_cas1() {
   int [] tabOccurencesAttendues = {0,1,2,0,0,3,0,0,0,0};
   int [] tabOccurencesObtenues = MaClasse.occurence(nb);
   
-  // Vérifions d'abord que la taille du tableau obtenu est la bonne
+  // We check that the array size is correct
   assertEquals(tabOccurencesAttendues.length, tabOccurencesObtenues.length);
   
-  // Vérifions ensuite que chacun des éléments du tableau des occurences 
-  // obtenues est bien celui qu'on attendait
+  // Then, we check that each element is the expected one
   
   for (int i=0; i<tabOccurencesAttendues.length; i++){
     assertEquals (tabOccurencesAttendues[i], tabOccurencesObtenues[i]);
@@ -119,9 +118,7 @@ public void occurence_cas1() {
 	
 	<metadata>
 		<organisation level="1ère année" module="Laboratoires Java">
-			<creationPosition>
-				<posNumber>7Bis</posNumber>
-			</creationPosition>
+			<creationPosition><posNumber>7</posNumber></creationPosition>
 		</organisation>
 		<prerequisites><preReqItem label="none"/></prerequisites>
 		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
@@ -152,9 +149,10 @@ public void occurence_cas1() {
 		</lessonInfo>
 		<rights>
 			<cost>no</cost>
-			<copyright>CC-BY</copyright>
-			<copyrightURL>http://creativecommons.org/licenses/by/3.0/</copyrightURL>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
 		</rights>
 	</metadata>
+
 
 </lesson>

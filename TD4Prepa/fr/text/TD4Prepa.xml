@@ -345,19 +345,17 @@ public class Test{
   
 	<metadata>
 		<organisation level="1ère année" module="Laboratoires Java">
-			<creationPosition>
-				<posNumber>3</posNumber>
-			</creationPosition>
+			<creationPosition><posNumber>4</posNumber></creationPosition>
 		</organisation>
 		<prerequisites><preReqItem label="none"/></prerequisites>
 		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
-      <technical>
-         <technicalRequirement>
+		<technical>
+			<technicalRequirement>
 				<type>Browser</type>
-            <name>any</name>
-            <minimumVersion>unknown</minimumVersion>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
 			</technicalRequirement>
-      </technical>
+		</technical>
 		<lessonInfo>
 			<language language="fr" derived="no"/>
 			<lifecycle>
@@ -374,13 +372,13 @@ public class Test{
 					<person name="PBT" />
 				</contribute>
 			</lifecycle>
-         <educational><typicalLearningTime><time/></typicalLearningTime></educational>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
 		</lessonInfo>
-      <rights>
+		<rights>
 			<cost>no</cost>
-         <copyright>CC-BY</copyright>
-         <copyrightURL>http://creativecommons.org/licenses/by/3.0/</copyrightURL>
-      </rights>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
+		</rights>
 	</metadata>
 	
 </lesson>

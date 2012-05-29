@@ -26,10 +26,10 @@
     
       <clarify>
         <paragraph>  
-          <formatted style="bold">  
-            Dans votre répertoire home, créez un répertoire td3.   <newLine/>
-            Ce répertoire contiendra tous les programmes Java que vous écrirez aujourd'hui.  <newLine/>
-            Désormais, vous prendrez cette habitude pour chaque td.</formatted>   
+          <formatted style="bold">Dans votre répertoire home, créez un répertoire td3.
+            Ce répertoire contiendra tous les programmes Java que vous écrirez aujourd'hui.
+            Désormais, vous prendrez cette habitude pour chaque td.
+          </formatted>   
         </paragraph>  
         <paragraph>
           Parfois, vous devez entrer une commande assez longue parce que les noms de fichiers sont longs et/ou nombreux.<newLine/>
@@ -217,11 +217,11 @@ public class Hello {
         <paragraph>  
           Hormis Ex.java utilisé précédemment, tous ces fichiers sont erronés. Les erreurs sont tantôt à la compilation, tantôt à l'exécution. Nous vous demandons de détecter et de corriger les erreurs des programmes Ex1 à Ex4 et de noter dans le tableau ci-dessous (dans la version papier) le type d'erreur ainsi que le message engendré.  
         </paragraph>       
-        <table width="100%">
+        <table width="100" units="percent">
           <tablerow>
-            <tableheading width="20%">Exercice</tableheading>
-            <tableheading width="30%">Erreur</tableheading>
-            <tableheading width="50">Message affiché </tableheading>
+            <tableheading width="20" units="percent">Exercice</tableheading>
+            <tableheading width="30" units="percent">Erreur</tableheading>
+            <tableheading width="50" units="percent">Message affiché </tableheading>
           </tablerow>
           <tablerow>
             <tableheading>Ex1 </tableheading>
@@ -309,11 +309,11 @@ public class Hello {
         <paragraph>  
         Nous vous demandons maintenant de détecter les erreurs des Ex5 à Ex12 et de noter dans le tableau ci-dessous (dans la version papier) le type d'erreur ainsi que le message engendré. Corrigez ces erreurs.    
         </paragraph>  
-        <table width="100%">
+        <table width="100" units="percent">
           <tablerow>
-            <tableheading width="20%">Exercice</tableheading>
-            <tableheading width="30%">Erreur</tableheading>
-            <tableheading width="50">Message affiché </tableheading>
+            <tableheading width="20" units="percent">Exercice</tableheading>
+            <tableheading width="30" units="percent">Erreur</tableheading>
+            <tableheading width="50" units="percent">Message affiché </tableheading>
           </tablerow>
           <tablerow>
             <tableheading>Ex5 </tableheading>
@@ -416,9 +416,7 @@ public class Hello {
   
 	<metadata>
 		<organisation level="1ère année" module="Laboratoires Java">
-			<creationPosition>
-				<posNumber>4</posNumber>
-			</creationPosition>
+			<creationPosition><posNumber>3</posNumber></creationPosition>
 		</organisation>
 		<prerequisites><preReqItem label="none"/></prerequisites>
 		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
@@ -449,9 +447,10 @@ public class Hello {
 		</lessonInfo>
 		<rights>
 			<cost>no</cost>
-			<copyright>CC-BY</copyright>
-			<copyrightURL>http://creativecommons.org/licenses/by/3.0/</copyrightURL>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
 		</rights>
 	</metadata>
+
 
 </lesson>

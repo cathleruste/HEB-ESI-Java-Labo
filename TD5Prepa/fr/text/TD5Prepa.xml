@@ -179,11 +179,11 @@ public class Outils{
         </paragraph>  
         <paragraph cssClass="java">
 <![CDATA[
-public class Opération {
+public class Operation {
 
-  public static void entête(){
+  public static void entete(){
   
-    System.out.println("Opérations");  
+    System.out.println("Operations");  
     
 	}   
 	
@@ -194,7 +194,7 @@ public class Opération {
 		
 		a = clavier.nextDouble();
 	  
-		// Ceci est une boucle while, équivalent au "tant que" logique  
+		// Ceci est une boucle while, equivalent au "tant que" logique  
 		// Cela signifie ici que nous allons lire un nombre au clavier 
 		// tant que la variable a vaut 0 : 
 		while ( a == 0 ) {  
@@ -228,11 +228,11 @@ public class Opération {
             <question>
               Parmi les appels de méthodes suivants dans la méthode main <formatted style="bold">de la même classe</formatted>, lesquels sont corrects?  
             </question>
-            <answer feedback="" correct="no"><formatted style="java">entête("Opérations");</formatted></answer>
-            <answer feedback="" correct="no"><formatted style="java">entête(10);</formatted></answer>
-            <answer feedback="" correct="yes"><formatted style="java">entête();</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">entete("Operations");</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">entete(10);</formatted></answer>
+            <answer feedback="" correct="yes"><formatted style="java">entete();</formatted></answer>
             <answer feedback="" correct="no">
-              <formatted style="java">String chaine = entête();</formatted><newLine/><formatted style="java">System.out.println(chaine);²</formatted>
+              <formatted style="java">String chaine = entete();</formatted><newLine/><formatted style="java">System.out.println(chaine);²</formatted>
             </answer>
             <answer feedback="" correct="yes"><formatted style="java">double nombre = lireNonNul();</formatted></answer>
             <answer feedback="" correct="no"><formatted style="java">double nombre = lireNonNul(5);</formatted></answer>
@@ -249,13 +249,13 @@ public class Opération {
               Parmi les appels de méthodes suivants dans la méthode main <formatted style="bold">d'une autre classe</formatted>, 
               lesquels sont corrects (en supposant qu'aucune classe n'ait été importée)?  
             </question>
-            <answer feedback="" correct="no"><formatted style="java">entête("Opérations");</formatted></answer>
-            <answer feedback="" correct="no"><formatted style="java">Opération.entête("Opérations");</formatted></answer>
-            <answer feedback="" correct="no"><formatted style="java">entête();</formatted></answer>
-            <answer feedback="" correct="yes"><formatted style="java">Opération.entête();</formatted></answer>
-            <answer feedback="" correct="yes"><formatted style="java">double nombre = Opération.lireNonNul();</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">entete("Operations");</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">Operation.entete("Operations");</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">entete();</formatted></answer>
+            <answer feedback="" correct="yes"><formatted style="java">Operation.entete();</formatted></answer>
+            <answer feedback="" correct="yes"><formatted style="java">double nombre = Operation.lireNonNul();</formatted></answer>
             <answer feedback="" correct="no"><formatted style="java">double nombre = lireNonNul();</formatted></answer>
-            <answer feedback="" correct="yes"><formatted style="java">int max2 = Opération.max2(1,2);</formatted></answer>
+            <answer feedback="" correct="yes"><formatted style="java">int max2 = Operation.max2(1,2);</formatted></answer>
             <answer feedback="" correct="no"><formatted style="java">int max2 = max2(1,2);</formatted></answer>
           </multipleChoice>
         </selfCheck>
@@ -288,4 +288,43 @@ public class Opération {
       </clarify>
     </learningObject>
   </unit>
+  
+  	<metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition><posNumber>5</posNumber></creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+		<technical>
+			<technicalRequirement>
+				<type>Browser</type>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+		</technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2012 - 2013</version>
+				<contribute>
+					<person name="ARO" />
+					<person name="BEJ" />
+					<person name="CLR" />
+					<person name="DNA" />
+					<person name="HAL" />
+					<person name="MBA" />
+					<person name="MCD" />
+					<person name="NPX" />
+					<person name="PBT" />
+				</contribute>
+			</lifecycle>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+		<rights>
+			<cost>no</cost>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
+		</rights>
+	</metadata>
+
 </lesson>

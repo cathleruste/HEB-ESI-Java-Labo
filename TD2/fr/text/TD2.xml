@@ -686,9 +686,7 @@
 	
 	<metadata>
 		<organisation level="1ère année" module="Laboratoires Java">
-			<creationPosition>
-				<posNumber>2</posNumber>
-			</creationPosition>
+			<creationPosition><posNumber>2</posNumber></creationPosition>
 		</organisation>
 		<prerequisites><preReqItem label="none"/></prerequisites>
 		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
@@ -719,9 +717,10 @@
 		</lessonInfo>
 		<rights>
 			<cost>no</cost>
-			<copyright>CC-BY</copyright>
-			<copyrightURL>http://creativecommons.org/licenses/by/3.0/</copyrightURL>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
 		</rights>
 	</metadata>
+
 
 </lesson>

@@ -43,10 +43,7 @@
 								<solution></solution>
               </fillInBlanks>
             </selfCheck>
-          <!-- Je suis obligée de le mettre en commentaire pour que le multipleChoice qui suit fonctionne!!!!! !-->
-          <!--/act-->
           
-          <clarify>
             <paragraph title="Pourquoi un tableau et pas plusieurs variables ?" icon="icon_reading"/>
             <paragraph>
 				      Le fait d'envisager une seule "grande" variable, compartimentée en plusieurs "sous-variables" permet une grande économie de lignes 
@@ -54,9 +51,7 @@
               Par exemple : si on désire stocker le chiffre d’affaire d’une entreprise pour une  
               année donnée, mois par mois, il suffit d'utiliser un tableau de taille 12.
             </paragraph>
-          </clarify>
-          
-          <clarify>
+
             <paragraph title="Déclaration, création et initialisation d'un tableau " icon="icon_reading"/> 
             <paragraph>
               Un tableau possède un type et une taille. <newLine/>
@@ -64,14 +59,12 @@
               La taille du tableau est le nombre (strictement positif ) de ses éléments. <newLine/>
               La taille ne fait pas partie du type.  
 				    </paragraph>
-          </clarify>
           
-          <!--act-->
             <selfCheck title="" shuffle="yes">
               <multipleChoice>
                 <question>La déclaration d'un tableau </question>
-                <answer feedback="" correct="no"><tabledata> réserve un emplacement mémoire sur le tas.</tabledata></answer>
-                <answer feedback="" correct="yes"><tabledata> réserve un emplacement mémoire sur la pile. </tabledata></answer>
+                <answer feedback="" correct="no">réserve un emplacement mémoire sur le tas.</answer>
+                <answer feedback="" correct="yes">réserve un emplacement mémoire sur la pile.</answer>
               </multipleChoice>
             </selfCheck>
             
@@ -91,8 +84,8 @@
             <selfCheck title="" shuffle="yes">
               <multipleChoice>
                 <question>La création d'un tableau</question>
-                <answer feedback="" correct="yes"><tabledata> se fait sur le tas </tabledata></answer>
-                <answer feedback="" correct="no"><tabledata> se fait sur la pile </tabledata></answer>
+                <answer feedback="" correct="yes">se fait sur le tas</answer>
+                <answer feedback="" correct="no">se fait sur la pile</answer>
               </multipleChoice>
             </selfCheck>
             
@@ -128,9 +121,7 @@ int [] entiers = new int[10];
 int [] entiers = {0,4,5,6,6,7,2,1,8,9};
               </paragraph>
 				    </popup>
-          <!--/act-->
-          
-          <clarify>
+
             <paragraph title="Vérif" icon="icon_activity"/>
             <paragraph>
 				      Prenez votre carnet de réponses et écrivez la boucle permettant d'initialiser les éléments d'un tableau d'entiers de 10 éléments à la valeur de leur indice.   
@@ -142,9 +133,7 @@ for(int i=0; i&lt;10; i++) {
 }  
 					    </paragraph>
 				    </popup> 
-          </clarify> 
-          
-          <!--act-->
+
 				    <selfCheck title="Cochez les affirmations qui sont vraies : " shuffle="no">
             <multipleChoice>
               <question>
@@ -180,74 +169,58 @@ for(int i=0; i&lt;10; i++) {
 							  Quelle(s) instruction(s) mène(nt) à ce résultat.   
 							</question>
               <answer feedback="" correct="no">
-                <tabledata> 
                   <paragraph cssClass="java">
 int [] entiers;
 entiers = new int [3];
                   </paragraph>
-								</tabledata>
               </answer>
               
               <answer feedback="" correct="no">
-                <tabledata> 
 								  <paragraph cssClass="java">
 int [] entiers = new int [3]; 
                   </paragraph>
-								</tabledata>
               </answer>
               
               <answer feedback="" correct="no">
-                <tabledata> 
                   <paragraph cssClass="java">
 int [] entiers = new int [];
                   </paragraph>
-								</tabledata>
               </answer>
               
               <answer feedback="" correct="yes">
-                <tabledata> 
                   <paragraph cssClass="java">
 int [] entiers = {3,3,3};
                   </paragraph>
-								</tabledata>
               </answer>
               
               <answer feedback="" correct="yes">
-                <tabledata> 
                   <paragraph cssClass="java">
 <![CDATA[
 int [] entiers = new int [3];
 for (int i=0; i<entiers.length; i++){
   entiers[i] = 3;
 }]]>				    </paragraph>
-								</tabledata>
               </answer>
               
               
               <answer feedback="" correct="no">
-                <tabledata> 
                   <paragraph cssClass="java">
 int[] entiers;
 entiers = {3,3,3};
                 </paragraph>
-              </tabledata>
             </answer>
             
             <answer feedback="" correct="no">
-              <tabledata> 
                 <paragraph cssClass="java">
 int [3] entiers = {3,3,3};
                 </paragraph>
-              </tabledata>
             </answer>
             
             <answer feedback="" correct="no">
-              <tabledata> 
                 <paragraph cssClass="java">
 int [] entiers;
 entiers= new {3,3,3};
                 </paragraph>
-              </tabledata>
             </answer>
           </multipleChoice>
         </selfCheck>
@@ -303,22 +276,21 @@ entiers= new {3,3,3};
 						<gapText>
 						  <paragraph cssClass="java">
 /** 
-* Exercice, regroupe les méthodes de classe des exercices préparatoires du td7.
+* Group all the class methods of the preparation exercices of the TD7.
 * @author g32010
 */
-public class Exercice{
+public class Exercice {
   <gap answers="">/**</gap> 
-  * Donne le maximum de 2 entiers. 
-  * Si les 2 nombres ont la même valeur, le résultat retourné sera cette valeur.
-  * <gap answers="">@param</gap> <gap answers="">nb1</gap> le premier nombre à comparer.  
-  * <gap answers="">@param</gap> <gap answers="">nb2</gap> le second nombre à comparer.  
-  * <gap answers="">@return</gap> le maximum des deux nombres entrés. 
+  * Give the maximum of the 2 numbers.
+  * If the 2 numbers have the same value, that value is returned.
+  * <gap answers="">@param</gap> <gap answers="">nb1</gap> the first number to compare.  
+  * <gap answers="">@param</gap> <gap answers="">nb2</gap> the second number to compare.  
+  * <gap answers="">@return</gap> the maximum of the 2 numbers. 
   <gap answers="">*/</gap> 
   public static int max2 (int nb1, int nb2){
     ...
   }
-}
-							</paragraph>  
+}		</paragraph>  
 						</gapText>
 						<solution/>
 					</fillInBlanks>
@@ -368,19 +340,17 @@ public class Exercice{
   
 	<metadata>
 		<organisation level="1ère année" module="Laboratoires Java">
-			<creationPosition>
-				<posNumber>3</posNumber>
-			</creationPosition>
+			<creationPosition><posNumber>7</posNumber></creationPosition>
 		</organisation>
 		<prerequisites><preReqItem label="none"/></prerequisites>
 		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
-      <technical>
-         <technicalRequirement>
+		<technical>
+			<technicalRequirement>
 				<type>Browser</type>
-            <name>any</name>
-            <minimumVersion>unknown</minimumVersion>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
 			</technicalRequirement>
-      </technical>
+		</technical>
 		<lessonInfo>
 			<language language="fr" derived="no"/>
 			<lifecycle>
@@ -397,13 +367,14 @@ public class Exercice{
 					<person name="PBT" />
 				</contribute>
 			</lifecycle>
-         <educational><typicalLearningTime><time/></typicalLearningTime></educational>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
 		</lessonInfo>
-      <rights>
+		<rights>
 			<cost>no</cost>
-         <copyright>CC-BY</copyright>
-         <copyrightURL>http://creativecommons.org/licenses/by/3.0/</copyrightURL>
-      </rights>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
+		</rights>
 	</metadata>
+
 	
 </lesson>
