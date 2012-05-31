@@ -639,5 +639,4 @@ function trim(s) {
         </xsl:for-each>
     </xsl:template>
 
-
 </xsl:stylesheet>

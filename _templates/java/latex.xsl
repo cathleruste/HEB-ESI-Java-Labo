@@ -194,15 +194,15 @@
 			\definecolor{light-gray}{gray}{0.8}
 			\renewcommand{\headrulewidth}{0pt}
 			\fancyhead[L]{
-				\small\textsc{Haute École de Bruxelles}\\
-	    			\small\textsc{École Supérieure d'Informatique}
+				\footnotesize\textsc{Haute École de Bruxelles}\\
+	    			\footnotesize\textsc{École Supérieure d'Informatique}
 			}
 			\fancyhead[R]{
-				\small\textsc{Bachelor en Informatique}\\
-				\small\textsc{</xsl:text>
+				\footnotesize{Bachelor en Informatique}\\
+				\footnotesize{</xsl:text>
 	    <xsl:value-of select="/elml:lesson/elml:metadata/elml:organisation/@module"/>
 			<xsl:text>} - 
-			\small{</xsl:text>
+			\footnotesize{</xsl:text>
 	    <xsl:value-of select="/elml:lesson/elml:metadata/elml:organisation/@level"/>
 	    <xsl:text>}}
 				\fancyfoot[L]{ </xsl:text>
@@ -224,7 +224,7 @@
         \marginpar{\begin{sideways}
             \begin{minipage}[t]{1cm}
             \begin{tiny}
-            \includegraphics[width=1\linewidth,height=1\textheight,keepaspectratio=true]{/home/marco/Developpement/Java1-Labo/LaboJava/_templates/java/icons/cc.jpg}
+            \includegraphics[width=1\linewidth,height=1\textheight,keepaspectratio=true]{/home/marco/Developpement/Java1-Labo/LaboJava/_templates/java/icons/cc-gris.jpg}
 			\end{tiny}
 			\end{minipage}
             \begin{minipage}[b]{19cm}
@@ -243,7 +243,7 @@
             </xsl:text>
 				<xsl:apply-templates select="./elml:lesson/elml:entry"/>
 				<xsl:text>
-				\vspace{1em}\textcolor{light-gray}{\rule{\linewidth}{.2pt}}\vspace{-5em}\tableofcontents\vspace{-1em}\textcolor{light-gray}{\rule{\linewidth}{.2pt}}
+				\vspace{-2em}\tableofcontents
 				\pagestyle{plain}
             \clearpage
             </xsl:text>
