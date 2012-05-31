@@ -37,15 +37,15 @@
 							<gapText> 
 								<paragraph>
 									Nous allons faire les laboratoires sur une machine
-									qui se nomme <gap answers="linux1">linux1</gap> 
+									qui se nomme <gap answers="">linux1</gap> 
 									et qui tourne le système d'exploitation        
 									<gap answers="Linux,linux">Linux</gap>. 
 									Pour s'y connecter, nous utilisons le programme Windows        
-									<gap answers="putty">putty</gap>. 
+									<gap answers="">putty</gap>. 
 									Nous communiquerons avec la machine en mode  
-									<gap answers="console">console</gap> 
-									grâce à un <gap answers="shell">shell</gap> 
-									qui se nomme <gap answers="bash">bash</gap>. 
+									<gap answers="">console</gap> 
+									grâce à un <gap answers="">shell</gap> 
+									qui se nomme <gap answers="">bash</gap>. 
 								</paragraph>
 							</gapText>
 							<solution></solution>
@@ -55,64 +55,24 @@
 					<selfCheck title="Les commandes de base" shuffle="yes">
 						<fillInBlanks>
 							<question> 
-								La semaine passée, vous avez vu quelques commandes de base.
-								Vous en rappelez-vous ?  
+								Voyons voir si vous vous rappelez des quelques commandes de base vues la semaine passée.
+								La commande pour :  
 							</question>
 							<gapText> 
 								<list listStyle="unordered">
-									<item>
-										La commande pour voir le contenu d'un dossier 
-										(la liste de ce qu'il contient)
-										est <gap answers="ls">ls</gap> 
-									</item>  
-									<item>
-										La commande pour éditer le contenu d'un fichier est        
-										<gap answers="vi">vi</gap> 
-									</item>  
-									<item>
-										La commande pour changer son mot de passe est       
-										<gap answers="passwd">passwd</gap> 
-									</item>  
-									<item>
-										La commande pour se déconnecter de linux1 est       
-										<gap answers="exit">exit</gap> 
-									</item>  
-									<item>
-										La commande pour copier un fichier est      
-										<gap answers="cp">cp</gap> 
-									</item>  
-									<item>
-										La commande pour renommer un fichier est      
-										<gap answers="mv">mv</gap> 
-									</item>  
-									<item>
-										La commande pour déplacer un fichier est      
-										<gap answers="mv">mv</gap> 
-									</item>  
-									<item>
-										La commande pour changer de dossier courant est             
-										<gap answers="cd">cd</gap> 
-									</item>  
-									<item>
-										La commande pour créer un répertoire est      
-										<gap answers="mkdir">mkdir</gap> 
-									</item>  
-									<item>
-										La commande pour visualiser le contenu d'un fichier sans l'éditer est      
-										<gap answers="cat">cat</gap> 
-									</item>  
-									<item>
-										La commande pour voir quel est le dossier courant est        
-										<gap answers="pwd">pwd</gap> 
-									</item>  
-									<item>
-										La commande pour détruire un fichier est  
-										<gap answers="rm">rm</gap> 
-									</item>  
-									<item>
-										La commande pour détruire un dossier vide est  
-										<gap answers="rmdir">rmdir</gap> 
-									</item>  
+									<item>voir le contenu d'un dossier (la liste de ce qu'il contient) est <gap answers="ls">ls</gap></item>  
+									<item>éditer le contenu d'un fichier est <gap answers="vi">vi</gap></item>  
+									<item>changer son mot de passe est <gap answers="passwd">passwd</gap></item>  
+									<item>se déconnecter de linux1 est <gap answers="exit">exit</gap></item>  
+									<item>copier un fichier est <gap answers="cp">cp</gap></item>  
+									<item>renommer un fichier est <gap answers="mv">mv</gap></item>  
+									<item>déplacer un fichier est <gap answers="mv">mv</gap></item>  
+									<item>changer de dossier courant est <gap answers="cd">cd</gap></item>  
+									<item>créer un répertoire est <gap answers="mkdir">mkdir</gap></item>  
+									<item>visualiser le contenu d'un fichier sans l'éditer est <gap answers="cat">cat</gap></item>  
+									<item>voir quel est le dossier courant est <gap answers="pwd">pwd</gap></item>  
+									<item>détruire un fichier est <gap answers="rm">rm</gap></item>  
+									<item>détruire un dossier vide est <gap answers="rmdir">rmdir</gap></item>  
 								</list>  
 							</gapText>
 							<solution></solution>
@@ -142,11 +102,11 @@
 						<fillInBlanks>
 							<question></question>
 							<gapText>
-								<paragraph>Quelle commande vi permet faire l'action suivante ?</paragraph>
+								<paragraph>Quelle commande <formatted style="code">vi</formatted> permet de faire l'action suivante ?</paragraph>
 								<list listStyle="unordered">
-									<item>de passer du mode commande au mode insertion <gap answers="i">i</gap></item>  
-									<item>de passer du mode commande au mode exécution <gap answers=":">:</gap></item>  
-									<item>de revenir au mode commande <gap answers="esc,ESC">esc</gap></item>
+									<item>passer du mode commande au mode insertion <gap answers="i">i</gap></item>  
+									<item>passer du mode commande au mode exécution <gap answers=":">:</gap></item>  
+									<item>revenir au mode commande <gap answers="esc,ESC">esc</gap></item>
 								</list>
 								<paragraph>En mode commande, comment :</paragraph>								  
 								<list listStyle="unordered">
@@ -191,8 +151,9 @@
 			<learningObject title="Théorie à revoir">
 				<clarify>
 					<paragraph> 
-						Avant de venir au prochain labo, lisez attentivement les points 10 à 19 du guide visuel. 
-						L'interro du début de laboratoire portera aussi sur cette matière.
+						Avant de venir au prochain labo, lisez <formatted style="bold">attentivement</formatted>
+						les points 10 à 19 du guide visuel. 
+						L'interrogation du début de laboratoire portera aussi sur cette matière.
 					</paragraph>
 				</clarify>
 			</learningObject>
@@ -245,14 +206,14 @@
 						Donnez les commandes linux pour :  
 					</paragraph>  
 					<list listStyle="unordered">
-						<item>afficher le contenu du dossier courant</item>  
+						<item>afficher le contenu du dossier courant;</item>  
 						<item>supprimer un fichier <formatted style="code">Hello.java</formatted> qui se trouve dans le dossier courant</item>  
 					</list>
     
 					<paragraph title="5. (3 points)"/>  
         
 					<paragraph>  
-						Dans les commandes linux suivantes, lesquelles sont correctes?  
+						Dans les commandes <formatted style="bold">linux</formatted> suivantes, lesquelles sont correctes?  
 					</paragraph>  
     
 					<list listStyle="unordered">
