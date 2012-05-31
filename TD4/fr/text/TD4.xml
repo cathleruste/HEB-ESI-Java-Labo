@@ -108,11 +108,21 @@ System.out.println("Etudiant g*****");
 		</learningObject>
 
 		<learningObject title="Aller plus loin avec l'éditeur">
+			
 		  <clarify>
-   		  Avant tout, nous aurons besoin de pouvoir voir les fichiers cachés dans la liste des fichiers d'un répertoire. <newLine/>
-   		  <popup title="Quelle option de ls permet de visualiser les fichiers cachés ? "><formatted style="code">ls -a</formatted> </popup> 
-   		  <popup title="À quoi reconnait-on les fichiers cachés ? ">Ils commencent par un <formatted style="code">.</formatted> </popup> 
+			<paragraph>
+				Avant tout, nous aurons besoin de pouvoir voir les fichiers cachés dans la liste des fichiers d'un répertoire.
+			</paragraph>
+			<paragraph>
+				Quelle option de ls permet de visualiser les fichiers cachés ?
+			</paragraph>
+			<popup title="la réponse"><formatted style="code">ls -a</formatted></popup> 
+			<paragraph>
+				À quoi reconnait-on les fichiers cachés ?
+			</paragraph>
+			<popup title="la réponse">Ils commencent par un <formatted style="code">.</formatted></popup> 
 		  </clarify>
+		  
 			<act>
 				<paragraph title="Configuration de l'éditeur" icon="act"/>
 				<paragraph>
@@ -168,8 +178,7 @@ public class Ex {
 					Justifiez vos réponses. Exécutez le programme pour vérifier vos réponses.
 				</paragraph>
 				<paragraph cssClass="java">
-<![CDATA[					
-import java.util.Scanner;
+<![CDATA[import java.util.Scanner;
 public class Ex1 {
 
     public static void main (String[] args) {
@@ -189,11 +198,11 @@ public class Ex1 {
         }
     }
 }]]>			</paragraph>
-				<table legend="Tests du programme Ex1">
+				<table>
 					<tablerow>
-						<tableheading>entier1</tableheading>
-						<tableheading>entier2</tableheading>
-						<tableheading>affiché</tableheading>
+						<tableheading width="60" units="pixels">entier1</tableheading>
+						<tableheading width="60" units="pixels">entier2</tableheading>
+						<tableheading width="300" units="pixels">affiché</tableheading>
 					</tablerow>
 					<tablerow>
 						<tabledata>1</tabledata>
@@ -224,8 +233,7 @@ public class Ex1 {
 					réponses. Exécutez le programme pour vérifier vos réponses.
 				</paragraph>
 				<paragraph cssClass="java">
-<![CDATA[					
-import java.util.Scanner;
+<![CDATA[import java.util.Scanner;
 public class Ex2 {
     public static void main (String[] args){
         Scanner clavier = new Scanner(System.in);
@@ -244,11 +252,11 @@ public class Ex2 {
         } 
     }
 }]]>				</paragraph>
-				<table legend="Tests du programme Ex2">
+				<table>
 					<tablerow>
-						<tableheading>entier1</tableheading>
-						<tableheading>entier2</tableheading>
-						<tableheading>affiché</tableheading>
+						<tableheading width="60" units="pixels">entier1</tableheading>
+						<tableheading width="60" units="pixels">entier2</tableheading>
+						<tableheading width="300" units="pixels">affiché</tableheading>
 					</tablerow>
 					<tablerow>
 						<tabledata>1</tabledata>
