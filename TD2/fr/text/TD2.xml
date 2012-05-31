@@ -62,7 +62,9 @@
 								Pour pouvoir utiliser le clavier numérique, il faut cocher la case 
 								"<formatted style="italic">Disable application keypad mode</formatted>"   
 								dans l'onglet "<formatted style="italic">Terminal &gt; Features"</formatted>.
-								<multimedia src="../image/putty-keypad.jpg" type="jpeg"/>
+								<popup title="une capture d'écran">
+									<multimedia src="../image/putty-keypad.jpg" type="jpeg"/>
+								</popup>
 							</item>
 							<item>
 								Pour pouvoir utiliser les accents, il faut indiquer à putty que nous nous connectons à une machine utilisant 
@@ -78,7 +80,7 @@
 						</list>
 					</item>  
 					<item>
-						C'est bon, vous pouvez vous connecter et vérifier que le clavier numérique fonctionne
+						C'est bon ! Vous pouvez vous connecter et vérifier que le clavier numérique fonctionne
 						et que les accents apparaissent correctement. 
 					</item>  
 				</list>
@@ -103,7 +105,7 @@
 					<link uri="http://fr.wikipedia.org/wiki/Encodage_de_caractères">article</link>
 					sur wikipedia ou encore cet
 					<link uri="http://blog.namok.be?post/2009/11/30/Unicode%2C-UTF8%2C-UTF16%2C-UTF32%2C-...-et-tutti-quanti">article</link>  
-					de pbt 
+					de Pierre Bettens. 
 				</paragraph>  
         
 				<paragraph>  
@@ -133,8 +135,9 @@
 					La session que vous venez de créer est sauvée sur le poste de travail.
 					Si lors du prochain TD, vous vous connectez sur une autre machine, elle ne sera pas connue.
 					Vous devrez donc effectuer cette configuration une fois par machine utilisée. 
-					(En fait, il est possible d'écrire un petit fichier à stocker dans votre Z: avec la bonne configuration,
-					l'aide de putty vous explique comment faire MAIS, svp, ne perdez pas de temps à le faire maintenant!)   
+					(En fait, il est possible d'écrire un petit fichier à stocker dans votre 
+					<formatted style="code">Z:</formatted> avec la bonne configuration,
+					l'aide de putty vous explique comment faire <formatted style="bold">mais</formatted>, svp, ne perdez pas de temps à le faire maintenant!)   
 				</paragraph>                 
 			</clarify>
      
@@ -148,9 +151,9 @@
 				</paragraph>  
       
 				<list listStyle="unordered">
-					<item>Une option modifie le sens d'une commande </item>  
-					<item>Elle commence par le signe "<formatted style="java">-</formatted>" suivi d'une seule lettre</item>  
-					<item>Ou encore par le double tiret "<formatted style="java">--</formatted>" suivi d'un nom d'option</item>  
+					<item>Une option modifie le sens d'une commande.</item>  
+					<item>Elle commence par le signe "<formatted style="java">-</formatted>" suivi d'une seule lettre.</item>  
+					<item>Ou encore par le double tiret "<formatted style="java">--</formatted>" suivi d'un nom d'option.</item>  
 				</list>  
 				
 				<paragraph>
@@ -200,7 +203,7 @@
 				</paragraph>  
       
 				<paragraph>  
-					Solution 1 : Vous pouvez entrer la commande avec l'option <formatted style="input">--help</formatted>
+					<formatted style="italic">Solution 1</formatted> : Vous pouvez entrer la commande avec l'option <formatted style="input">--help</formatted>
 					qui affiche une aide succinte sur l'utilisation de la commande.
 					La  plupart des commandes comprennent cette option mais <formatted style="bold">pas toutes</formatted>.   
 				</paragraph>  
@@ -210,7 +213,7 @@
 				</paragraph>  
       
 				<paragraph>  
-					Solution 2 : Pour une information plus complète, il existe la commande <formatted style="input">man</formatted>.  
+					<formatted style="italic">Solution 2</formatted> : Pour une information plus complète, il existe la commande <formatted style="input">man</formatted>.  
 				</paragraph>  
       
 				<paragraph>  
@@ -267,19 +270,10 @@
       <act>
 				<paragraph title="Exercice 2" icon="act"/> 
 				<paragraph>  
-					Quelle commande permet de nettoyer l'écran ?  
+					Quelle commande permet de <formatted style="italic">nettoyer</formatted> l'écran ?  
 				</paragraph>  
 			</act>
       
-			<act>
-				<paragraph title="Exercice 3" icon="act"/> 
-				<paragraph>  
-					Quelle commande permet d'imprimer un fichier ?  
-				</paragraph>  
-				<paragraph>  
-					<formatted style="bold">Note</formatted> : Ne cherchez pas à l'utiliser, aucune imprimante n'est installée sur linux1.  
-				</paragraph>  
-			</act>
 		</learningObject>
     
 		<learningObject title="Système de fichiers, chemin absolu et relatif"> 
@@ -444,8 +438,8 @@
 				</paragraph>  
 				<paragraph>  
 					Oui. 
-					Les groupes dépendent à la fois du système particulier utilisé
-					et de la façon dont l'administrateur (le root) l'a configuré.   
+					Les groupes dépendent à la fois de la distribution particulière utilisée
+					et de la façon dont l'administrateur (le root) a configuré le système.   
 				</paragraph>  
 			</clarify>
 		</learningObject>
@@ -506,8 +500,11 @@
 				<paragraph>  
 					Soit le fichier "Max.java" de la capture d'écran ci-dessous.  
 				</paragraph>  
-				<multimedia src="../image/ls-l.jpg" type="jpeg"/>
-				<popup title="Est-ce qu'un professeur peut l'éditer ? "> Non ! Le droit d'écriture n'est accordé qu'au propriétaire.  </popup> 
+				<multimedia src="../image/ls-l.jpg" type="jpeg" legend="Contenu détaillé d'un dossier"/>
+				<paragraph>
+					Est-ce qu'un professeur peut l'éditer ? 
+				</paragraph>
+				<popup title="la réponse"> Non ! Le droit d'écriture n'est accordé qu'au propriétaire.  </popup> 
 
 				<selfCheck title="Déterminez les bonnes permissions" shuffle="no">
 					<fillInBlanks>
@@ -559,7 +556,7 @@
 					Reprenez les permissions affichées dans la capture d'écran ci-dessous 
 					et exprimez-les avec un nombre de 3 chiffres.  
 				</paragraph>  
-				<multimedia src="../image/ls-l-permissions.jpg" type="jpeg"/>
+				<multimedia src="../image/ls-l-permissions.jpg" type="jpeg" legend="Contenu détaillé d'un dossier"/>
 
 				<paragraph title="Permissions par défaut" icon="icon_experiment"/> 
 				<list listStyle="ordered">
@@ -597,8 +594,8 @@
 					des fichiers qui s'y trouvent pour que tout le monde puisse  
 				</paragraph>  
 				<list listStyle="ordered">
-		         <item>voir quels fichiers s'y trouvent mais sans pouvoir lire le contenu de ces fichiers.</item>  
-		         <item>modifier le contenu d'un des fichiers mais pas supprimer ce fichier.</item>  
+		         <item>voir quels fichiers s'y trouvent mais sans pouvoir lire le contenu de ces fichiers;</item>  
+		         <item>modifier le contenu d'un des fichiers mais pas supprimer ce fichier;</item>  
 		         <item>supprimer un fichier mais pas modifier son contenu.</item>  
 				</list>
 
@@ -612,7 +609,7 @@
 				<paragraph>  
 					<formatted style="bold">Vous dites que dans un affichage en format long, 
 					le premier caractère indique si c'est un fichier simple ('-') ou un dossier ('d'). 
-					Pourtant j'ai déjà vu d'autres symboles; c'était quoi ?
+					Pourtant j'ai déjà vu d'autres symboles. C'était quoi ?
 					</formatted>  
 				</paragraph>  
 				<paragraph>  
@@ -637,7 +634,7 @@
 					<link uri="http://en.wikipedia.org/wiki/Permissions_Unix">ceci</link>.  
 				</paragraph>  
 				<paragraph>  
-					<formatted style="bold">Vous n'avez pas expliqué le sens de la 2ème colonne 
+					<formatted style="bold">Vous n'avez pas expliqué le sens de la 2<formatted style="superscript">ème</formatted> colonne 
 					fournie par la commande ls (juste avant le propriétaire) ?
 					</formatted>  
 				</paragraph>  
@@ -674,8 +671,8 @@
 				</paragraph>  
 				<paragraph>  
 					Non. Vous devrez rapidement disposer d'un Linux fonctionnel à la maison.
-					Regardez la page "installation d'un Linux" dans la formation "Langage Java 1ère année" 
-					mis à votre disposition sur le site d'Elearning. 
+					Regardez la page "installation d'un Linux" dans la formation "Langage Java 1<formatted style="superscript">ère</formatted> année" 
+					mis à votre disposition sur <formatted style="italic">poÉSI</formatted>. 
 					Vous trouverez quelques informations de départ pour vous orienter 
 					et des liens vers les sites d'informations les plus utiles.  
 				</paragraph>

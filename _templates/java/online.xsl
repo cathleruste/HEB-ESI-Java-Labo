@@ -156,7 +156,7 @@
 				</xsl:if>
 				<xsl:choose>
 					<xsl:when test="@title and not($name_solutiontext='')">
-						<xsl:value-of select="@title"/>
+						<xsl:text>Cliquez pour voir </xsl:text><xsl:value-of select="@title"/>
 					</xsl:when>
 					<xsl:when test="@title and $name_solutiontext=''">
 						<xsl:value-of select="@title"/>
