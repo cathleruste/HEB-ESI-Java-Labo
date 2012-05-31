@@ -78,7 +78,7 @@
 					</fillInBlanks>
 				</selfCheck>
 				
-				<selfCheck title="Choix Multiple" shuffle="yes">
+				<selfCheck title="Comprendre les erreurs" shuffle="yes">
 					<multipleChoice>
 						<question>
 							<paragraph>
@@ -113,7 +113,7 @@
 					</multipleChoice>
 				</selfCheck>
 				
-				<selfCheck title="Choix Multiple" shuffle="yes">
+				<selfCheck title="Comprendre les erreurs" shuffle="yes">
 					<multipleChoice>
 						<question>
 							<paragraph>
@@ -148,7 +148,7 @@
 					</multipleChoice>
 				</selfCheck>
 
-				<selfCheck title="Choix Multiple" shuffle="yes">
+				<selfCheck title="Comprendre les erreurs" shuffle="yes">
 					<multipleChoice>
 						<question>
 							<paragraph>
@@ -275,7 +275,7 @@
 			<clarify>
 				<paragraph title="Exercice" icon="act"/>
 				<paragraph>
-					Dans votre carnet, écrivez en Java l'algorithme logique suivant 
+					Écrivez en Java l'algorithme logique suivant 
 				</paragraph>
 				<paragraph cssClass="code">
 <![CDATA[
@@ -294,7 +294,7 @@
       fin si
   fin module	
 ]]>				</paragraph>
-				<popup> 
+				<popup title="la réponse"> 
 					<paragraph cssClass="java">
 <![CDATA[
 import java.util.Scanner;
