@@ -25,6 +25,7 @@
 	</entry>
 	
 	<unit label="Intro" title="Introduction">
+		
 		<entry>
 			<paragraph>
 				Les TDs sont composés :
@@ -45,6 +46,7 @@
 				</item>
 			</list>
 		</entry>
+		
 		<learningObject title="Consignes">
 			<clarify>
 			<paragraph>
@@ -73,14 +75,41 @@
 					mais vous en aurez oublié une grande partie si vous ne notez rien. 
 					Le plus pratique est probablement d'annoter la version <formatted style="bold">papier</formatted>.
 				</item>
-				<item>
-					Ayez toujours avec vous le <formatted style="bold">guide visuel</formatted>
-					et l'<formatted style="bold">aide-mémoire</formatted>. 
-					Ils vous seront utiles tout au long des tds.
-				</item>
 			</list>
 			</clarify>
 		</learningObject>
+		
+		<learningObject title="Ressources">
+			<clarify>
+				<paragraph>
+					Nous avons rassemblé sur le site
+					(<formatted style="bold">suivez le lien "Aide"</formatted>), 
+					une série de documents qui peuvent être utiles. Voyez notamment :
+				</paragraph>
+				<list listStyle="unordered">
+					<item>
+						Un <formatted style="bold">guide visuel Linux</formatted> :
+						Document écrit par nos soins qui explique de façon simple et visuelle les bases de Linux.
+						Vous pouvez le consulter quand vous n'avez pas <formatted style="bold">compris</formatted> un point de matière.
+						Certains points sont à lire <formatted style="bold">avant</formatted> de venir au laboratoire.
+						(ex: pour ce TD, les points 1 à 8 seront utiles)
+					</item>
+					<item>
+						Un <formatted style="bold">aide-mémoire</formatted> :
+						Document écrit par nos soins sur l'utilisation de Windows et Linux;
+						Vous pouvez le consulter quand vous avez <formatted style="bold">oublié</formatted> quelque chose
+						(le nom d'une commande, une procédure, ...).
+					</item>
+					<item>
+						Un <formatted style="bold">quick reference vi</formatted> : Reprend en condensé toutes les commandes vi les plus utiles. 
+					</item>
+					<item>
+						Un <formatted style="bold">quick reference linux</formatted> : Reprend en condensé toutes les commandes Linux les plus utiles. 
+					</item>
+				</list>
+			</clarify>
+		</learningObject>
+
 	</unit>
 		
 	<unit label="Windows" title="Windows">
@@ -93,7 +122,67 @@
 				Voyons tout de même comment changer votre mot de passe.
 			</paragraph>
 		</entry>
-		
+
+		<learningObject title="Se connecter sous Windows">
+			<clarify>
+				<paragrah>
+					Pour utiliser les PC du laboratoire, vous devez vous connecter.
+				</paragrah>
+				<list listStyle="unordered">
+					<item>
+						le <formatted style="bold">username</formatted> est composé d'un
+						<formatted style="code">g</formatted> suivi de votre numéro d'étudiant.
+						Votre professeur peut vous le communiquer.
+					</item>
+					<item>
+						le <formatted style="bold">mot de passe</formatted> vous est également
+						fourni par votre professeur.
+						Attention à la casse (minuscule/majuscule) qui doit être respectée.
+					</item>
+				</list>
+				<paragrah>
+					Notez et gardez votre mot de passe.
+					Vous allez le changer sous peu mais celui-ci vous servira en cas de problème.
+				</paragrah>
+			</clarify>
+		</learningObject>
+	
+		<learningObject title="Accéder à poÉSI">
+			<clarify>
+				<paragrah>
+					poÉSI (plateforme online de l'ÉSI) est la plateforme d'apprentissage que nous utilisons à l'école.
+					C'est là que vous trouverez tous les documents pédagogiques pour vos cours.
+				</paragrah>
+				<paragrah>
+					Ce document-ci (et bien d'autres) se trouvent sur poÉSI. On vous propose de vous y rendre.
+				</paragrah>
+				<list listStyle="ordered">
+					<item>Ouvrez le navigateur web de votre choix.</item>
+					<item>Rendez-vous sur <link uri="http://elearning.esi.heb.be">poÉSI</link>.</item>
+					<item>Connectez-vous; le login et mot de passe sont les mêmes que sous Windows.</item>
+					<item>Rendez-vous à la formation Java.</item>
+					<item>Ouvrez la version en ligne de ce document.</item>
+				</list>
+				<paragrah>
+					Vous pouvez à présent poursuivre sur la version en ligne qui propose des exercices interactifs.
+					(mais seule la version papier vous permet de prendre des notes)
+				</paragrah>
+				<paragraph title="FAQ" icon="icon_faq" />
+				<paragraph>
+					<formatted style="bold">Je ne parviens pas à me connecter.</formatted>
+				</paragraph>
+				<paragraph>Il est possible que votre compte ne soit pas encore activé.
+					Votre professeur peut vous donner un compte temporaire.</paragraph>
+				<paragraph>
+					<formatted style="bold">Je ne trouve pas le cours Java.</formatted>
+				</paragraph>
+				<paragraph>C'est qu'il ne fait pas encore partie de la liste de vos cours.
+					Pour vous inscrire, allez dans l'onglet "Mes cours"; cliquez sur "Catalogue de cours" ensuite sur "S'inscrire aux cours".
+				</paragraph>
+
+			</clarify>
+		</learningObject>
+
 		<learningObject title="Changer le mot de passe sous Windows">
 			<act>
 				<paragraph title="Réflexion" icon="question">
@@ -169,9 +258,9 @@
 						</paragraph>
 						<paragraph>
 							<formatted style="bold">Note</formatted> :
-							Prenez d'autant plus le temps si vous éprouvez des difficultés avec l'anglais; 
-							les messages d'erreurs seront généralement en anglais.
-							<formatted style="bold">Il faut absolument vous entrainer à lire des messages simples.</formatted>
+							Prenez d'autant plus le temps si vous éprouvez des difficultés avec l'anglais
+							car la plupart des messages d'erreurs seront dans cette langue.
+							<formatted style="bold">Il faut absolument vous entrainer à lire des messages simples en Anglais.</formatted>
 						</paragraph>
 					</item>
 					<item>
@@ -205,7 +294,9 @@
 				</paragraph>
 			</clarify>
 		</learningObject>
+		
 	</unit>
+	
 	<unit label="Linux" title="Linux">
 		<entry>
 			<paragraph cssClass="citation">
@@ -526,16 +617,11 @@
 			</look>
 			<clarify>
 				<paragraph title="Question" icon="icon_question" />
-				<paragraph>Est-ce qu'on peut dire que</paragraph>
-				<list listStyle="unordered">
-					<item><formatted style="input">ls bin</formatted></item>
-				</list>
-				<paragraph>est strictement équivalent à</paragraph>
-				<list listStyle="unordered">
-					<item><formatted style="input">cd bin</formatted></item>
-					<item><formatted style="input">ls</formatted></item>
-				</list>
-				<paragraph>?</paragraph>
+				<paragraph>
+					Est-ce qu'on peut dire que <formatted style="input">ls bin</formatted>
+					est strictement équivalent à <formatted style="input">cd bin</formatted>
+					suivi de <formatted style="input">ls</formatted> ?
+				</paragraph>
 				<popup visible="online">Non !</popup>
 				<paragraph>Comment le mettre en évidence ?</paragraph>
 				<popup visible="online">
@@ -820,24 +906,6 @@
 				<paragraph>
 					À la semaine prochaine et soyez à l'heure !
 				</paragraph>
-			</clarify>
-		</learningObject>
-		<learningObject title="Ressources">
-			<clarify>
-				<paragraph>
-					Vous voulez en savoir plus sur ce que vous avez fait aujourd'hui ?
-				</paragraph>
-				<paragraph>
-					Nous avons rassemblé sur le site
-					(<formatted style="bold">suivez le lien "Aide"</formatted>), 
-					une série de documents qui peuvent être utiles. Voyez notamment :
-				</paragraph>
-				<list listStyle="unordered">
-					<item>un <formatted style="bold">guide visuel Linux</formatted> que vous avez déjà utilisé;</item>
-					<item>un <formatted style="bold">aide-mémoire</formatted> écrit par nos soins sur l'utilisation de Windows et Linux;</item>
-					<item>un <formatted style="bold">quick reference</formatted> sur l'utilisation de <formatted style="bold">vi</formatted>;</item>
-					<item>un <formatted style="bold">quick reference</formatted> sur les commandes <formatted style="bold">linux</formatted>.</item>
-				</list>
 			</clarify>
 		</learningObject>
 	</unit>

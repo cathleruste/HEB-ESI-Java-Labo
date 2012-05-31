@@ -62,6 +62,7 @@
 				<xsl:value-of select="/elml:lesson/elml:metadata/elml:organisation/@module"/> - 
 				<xsl:value-of select="/elml:lesson/elml:metadata/elml:organisation/@level"/>
 		</div>
+		<div id="formation">Bachelor en Informatique</div>
 		<div id="annee">
 			<xsl:value-of select="/elml:lesson/elml:metadata/elml:lessonInfo/elml:lifecycle/elml:version"/>
 		</div>

@@ -67,7 +67,11 @@
 				\usepackage{array}
 				\usepackage{url}
 				\usepackage{ragged2e}
-
+				
+				\usepackage[titles]{tocloft}
+				\setlength{\cftbeforesecskip}{0.5ex}
+				\setlength{\cftbeforesubsecskip}{0.2ex}
+				\addto\captionsfrench{\renewcommand\contentsname{}}
 				\usepackage{listings}
 \lstdefinestyle{lstverb}
   {
@@ -187,24 +191,26 @@
 				</xsl:if>
 			</xsl:for-each>
 			<xsl:text>}}
+			\definecolor{light-gray}{gray}{0.8}
+			\renewcommand{\headrulewidth}{0pt}
 			\fancyhead[L]{
 				\small\textsc{Haute École de Bruxelles}\\
 	    			\small\textsc{École Supérieure d'Informatique}
 			}
 			\fancyhead[R]{
-				\small{</xsl:text>
+				\small\textsc{Bachelor en Informatique}\\
+				\small\textsc{</xsl:text>
 	    <xsl:value-of select="/elml:lesson/elml:metadata/elml:organisation/@module"/>
 			<xsl:text>} - 
 			\small{</xsl:text>
 	    <xsl:value-of select="/elml:lesson/elml:metadata/elml:organisation/@level"/>
-			<xsl:text>}\\
-			\small{</xsl:text>
-	    <xsl:value-of select="/elml:lesson/elml:metadata/elml:lessonInfo/elml:lifecycle/elml:version"/>
 	    <xsl:text>}}
 				\fancyfoot[L]{ </xsl:text>
 		<xsl:text disable-output-escaping="yes">}
 				\fancyfoot[C]{}
-				\fancyfoot[R]{\tiny{\textcolor{gray}{version du \today}}}
+				\fancyfoot[R]{\tiny{\textcolor{gray}{version </xsl:text>
+				<xsl:value-of select="/elml:lesson/elml:metadata/elml:lessonInfo/elml:lifecycle/elml:version"/>
+				<xsl:text disable-output-escaping="yes"> (\today)}}}
 				\pagestyle{plain}
 				\reversemarginpar
 				\usepackage{rotating}						
@@ -236,7 +242,8 @@
         \end{sideways}}
             </xsl:text>
 				<xsl:apply-templates select="./elml:lesson/elml:entry"/>
-				<xsl:text>\tableofcontents
+				<xsl:text>
+				\vspace{1em}\textcolor{light-gray}{\rule{\linewidth}{.2pt}}\vspace{-5em}\tableofcontents\vspace{-1em}\textcolor{light-gray}{\rule{\linewidth}{.2pt}}
 				\pagestyle{plain}
             \clearpage
             </xsl:text>
