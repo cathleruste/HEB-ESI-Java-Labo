@@ -2,7 +2,7 @@
 <lesson xmlns="http://www.elml.ch" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
-    label="TD3" title="Td3 - Mes premiers programmes">
+    label="TD3" title="TD3 - Mes premiers programmes">
   
   <entry>
     <paragraph>  
@@ -72,7 +72,8 @@
         <list listStyle="ordered">
           <item>
             Dans votre dossier td3, copiez le fichier <newLine/>
-            <formatted style="input">/eCours/java/td/td3/monfichieraunomtellementlongquilmeparaitpeuprobabledeletaper2xsanserreur</formatted>
+            <formatted style="code">monfichieraunomtellementlongquilmeparaitpeuprobabledeletaper2xsanserreur</formatted>
+            qui se trouve dans le dossier <formatted style="code">/eCours/java/td/td3</formatted>.
           </item>  
           <item>Affichez le contenu de ce fichier en évitant de retaper son nom.</item>  
         </list>
@@ -147,17 +148,16 @@
       <act>
         <paragraph title="Hello world" icon="act"/> 
         <list listStyle="ordered">
-          <item>Écrivez votre premier programme nommé Hello.java qui affiche le message « Hello, world ! » </item>  
-          <item>Compilez-le et exécutez-le</item>  
+          <item>Écrivez votre premier programme nommé Hello.java qui affiche le message « Hello, world ! ».</item>  
+          <item>Compilez-le et exécutez-le.</item>  
         </list>
       </act>
       
       <clarify>
-        <paragraph title="Hello World ?" icon=""/> 
         <paragraph>  
           Vous ne vous souvenez plus comment afficher « Hello World » à l'écran ?  
         </paragraph>  
-        <popup title="Allez, on vous aide en vous fournissant le code à écrire :  ">   
+        <popup title="le code à écrire">   
           <paragraph cssClass="java">
 public class Hello {
     public static void main (String[] args) {	
@@ -188,7 +188,7 @@ public class Hello {
           et de les décrire le plus clairement possible afin que le programmeur puisse y remédier. 
           Il est important d'apprendre à comprendre ces messages d'erreur.   
         </paragraph>  
-        <multimedia src="../image/ErreurCompil.jpg" type="jpeg"/>
+        <multimedia src="../image/ErreurCompil.jpg" type="jpeg" legend="Erreur de compilation"/>
       </clarify>
       
       <clarify>
@@ -203,7 +203,7 @@ public class Hello {
         <paragraph>  
           Le message d'erreur sera différent; apprenez à les reconnaitre.   
         </paragraph>  
-        <multimedia src="../image/ErreurExec.jpg" type="jpeg"/>
+        <multimedia src="../image/ErreurExec.jpg" type="jpeg" legend="Erreur à l'exécution"/>
       </clarify>
       
       <clarify>
@@ -401,7 +401,9 @@ public class Hello {
           <item>Ouvrez l'explorateur de fichier Windows (par exemple en cliquant sur l'icône "My Computer".</item>  
           <item>
             Dans le champ d'adresse, tapez l'adresse <formatted style="input">ftp://linux1</formatted><newLine/>
-            <multimedia src="../image/transfert.jpg" type="jpeg"/>
+            <popup title="une capture d'écran">
+				<multimedia src="../image/transfert.jpg" type="jpeg"/>
+			</popup>
             </item>  
           <item>Une boite de dialogue vous demande votre login et mot de passe (sur <formatted style="italic">linux1</formatted>).</item>  
           <item>Vous voyez apparaitre un dossier "linux1" qui correspond à votre dossier sur <formatted style="italic">linux1</formatted>. </item>
