@@ -72,6 +72,9 @@
 				\setlength{\cftbeforesecskip}{0.5ex}
 				\setlength{\cftbeforesubsecskip}{0.2ex}
 				\addto\captionsfrench{\renewcommand\contentsname{}}
+				
+				\usepackage[font=scriptsize]{caption}
+				
 				\usepackage{listings}
 \lstdefinestyle{lstverb}
   {
@@ -629,5 +632,83 @@
         </xsl:choose>
     </xsl:template>
 
+	<!-- Si une table ne contient ni legend ni title -> pas de caption -->
+    <xsl:template match="elml:table" mode="icon">
+        <xsl:param name="columnwidth" select="$textwidth div count(./elml:tablerow[1]/child::node())"/>
+        <xsl:text>
+				\par
+                \begin{longtable}{</xsl:text>
+        <xsl:for-each select="elml:tablerow[1]/*">
+            <xsl:choose>
+                <xsl:when test="@colspan">
+                    <xsl:call-template name="elml:columncreate">
+                        <xsl:with-param name="columnamount" select="@colspan"/>
+                        <xsl:with-param name="columnwidth" select="$columnwidth"/>
+                    </xsl:call-template>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:call-template name="elml:columncreate">
+                        <xsl:with-param name="columnamount" select="1"/>
+                        <xsl:with-param name="columnwidth" select="$columnwidth"/>
+                    </xsl:call-template>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:for-each>
+        <xsl:text>|}</xsl:text>
+        <xsl:text>\hline
+		\endhead
+        </xsl:text>
+        <xsl:choose>
+            <xsl:when test="@title and @legend">
+                <xsl:text>
+                    \caption[</xsl:text>
+                <xsl:value-of select="@legend"/>
+                <xsl:text>]{</xsl:text>
+                <xsl:value-of select="@title"/>
+                <xsl:text>: </xsl:text>
+                <xsl:value-of select="@legend"/>
+                <xsl:if test="@bibIDRef">
+                    <xsl:text> \protect</xsl:text>
+                    <xsl:call-template name="elml:BibliographyRef"/>
+                </xsl:if>
+                <xsl:text>}
+                </xsl:text>
+            </xsl:when>
+            <xsl:when test="@legend">
+                <xsl:text>
+                    \caption[</xsl:text>
+                <xsl:value-of select="@legend"/>
+                <xsl:text>]{</xsl:text>
+                <xsl:value-of select="@legend"/>
+                <xsl:if test="@bibIDRef">
+                    <xsl:text> \protect</xsl:text>
+                    <xsl:call-template name="elml:BibliographyRef"/>
+                </xsl:if>
+                <xsl:text>}
+                </xsl:text>
+            </xsl:when>
+            <xsl:when test="@title">
+                <xsl:text>
+                    \caption[</xsl:text>
+                <xsl:value-of select="@title"/>
+                <xsl:text>]{</xsl:text>
+                <xsl:value-of select="@title"/>
+                <xsl:if test="@bibIDRef">
+                    <xsl:text> \protect</xsl:text>
+                    <xsl:call-template name="elml:BibliographyRef"/>
+                </xsl:if>
+                <xsl:text>}
+                </xsl:text>
+            </xsl:when>
+        </xsl:choose>
+        <xsl:call-template name="elml:Label"/>
+        <xsl:text>
+			\endfoot
+        </xsl:text>
+        <xsl:apply-templates mode="#default"/>
+        <xsl:text>
+			\end{longtable}
+		</xsl:text>
+    </xsl:template>
 
 </xsl:stylesheet>
