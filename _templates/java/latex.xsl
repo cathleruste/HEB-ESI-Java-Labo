@@ -309,13 +309,17 @@
         </xsl:result-document>
     </xsl:template>
 
-    <!-- Les popup ne seront pas repris dans la version LaTeX -->
     <xsl:template match="elml:popup">
 	    <xsl:param name="display">
             <xsl:call-template name="elml:display"/>
         </xsl:param>
         <xsl:if test="$display='yes'">
-			<xsl:text> {\footnotesize\emph{(plus d'information dans la version en ligne)}} </xsl:text>
+			<xsl:text> {\footnotesize\emph{(</xsl:text>
+			<xsl:if test="@title">
+				<xsl:value-of select="@title"/> 
+			</xsl:if>
+			<xsl:if test="@title=''">un complément d'information</xsl:if> 
+			<xsl:text> est disponible dans la version en ligne)}\par} </xsl:text>
 	    </xsl:if>
     </xsl:template>
 

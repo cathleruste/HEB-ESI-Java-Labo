@@ -188,7 +188,7 @@
 				<paragraph title="Réflexion" icon="question">
 					À votre avis, pourquoi vous demande-t-on de modifier votre mot de passe ?
 				</paragraph>
-				<popup>
+				<popup title="la réponse">
 					<paragraph>
 						Le mot de passe initial peut être <formatted style="italic">trouvé</formatted>
 						par un autre étudiant.
@@ -209,8 +209,7 @@
 			<act>
 				<selfCheck title="Exemples de mots de passe" shuffle="yes">
 					<multipleChoice>
-						<question>Quelles sont les propositions qui vous paraissent correctes comme mot de passe ?<newLine />
-							(plusieurs réponses possibles)<newLine/>
+						<question>Quelles sont les propositions qui vous paraissent correctes comme mot de passe ?
 						</question>
 						<answer feedback="Trop simple (pour autant que votre copine s'appelle Nadia)" correct="no">nadia</answer>
 						<answer feedback="OK (mais choisissez en un autre, maintenant, tout le monde le connait)" correct="yes">M0nAm1eN@di@</answer>
@@ -231,7 +230,7 @@
 							Appuyez sur <formatted style="input">ALT-CTRL-DEL</formatted>
 							et choisissez <formatted style="input">Change password...</formatted>.
 						</paragraph>
-						<popup title="Cliquez pour voir l'image">
+						<popup title="une capture d'écran">
 							<multimedia src="../image/change_password_1.jpg" type="jpeg" />
 						</popup>
 					</item>
@@ -359,7 +358,7 @@
 						(<formatted style="italic">Host Name</formatted>) 
 						à laquelle vous voulez vous connecter
 						(ici <formatted style="code">linux1</formatted>).
-						<popup title="Cliquez pour voir l'image">
+						<popup title="une capture d'écran">
 							<multimedia src="../image/putty-login.jpg" type="jpeg" />
 						</popup>
 					</item>
@@ -622,9 +621,9 @@
 					est strictement équivalent à <formatted style="input">cd bin</formatted>
 					suivi de <formatted style="input">ls</formatted> ?
 				</paragraph>
-				<popup visible="online">Non !</popup>
+				<popup title="la réponse">Non !</popup>
 				<paragraph>Comment le mettre en évidence ?</paragraph>
-				<popup visible="online">
+				<popup title="la réponse">
 						Dans le 1 <formatted style="superscript">er</formatted> cas, 
 						on ne modifie pas le dossier courant. 
 						Dans le 2 <formatted style="superscript">ème</formatted> cas oui. <newLine />
