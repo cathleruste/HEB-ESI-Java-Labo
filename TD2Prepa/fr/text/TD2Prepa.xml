@@ -13,7 +13,7 @@
 			</paragraph>
 		</entry>
 		
-		<unit label="TD2Ex" title="Exercices préparatoires au TD2">
+		<unit label="TD2Prepa" title="Exercices préparatoires au TD2">
 
 			<entry>
 				<paragraph>
@@ -21,7 +21,7 @@
 				</paragraph>
 				<list listStyle="unordered">
 					<item>quelques questions pour vérifier ce que vous avez retenu du TD1;</item>
-					<item>les documents théoriques à lire avant d'aller au laboratoire;</item>
+					<item>les différents points des documents théoriques à lire avant d'aller au laboratoire;</item>
 					<item>une simulation de la mini interrogation qui vous attend en début de laboratoire.</item>
 				</list>
 			</entry>
@@ -43,7 +43,7 @@
 									Pour s'y connecter, nous utilisons le programme Windows        
 									<gap answers="">putty</gap>. 
 									Nous communiquerons avec la machine en mode  
-									<gap answers="">console</gap> 
+									<gap answers="texte,console">console</gap> 
 									grâce à un <gap answers="">shell</gap> 
 									qui se nomme <gap answers="">bash</gap>. 
 								</paragraph>
@@ -55,7 +55,7 @@
 					<selfCheck title="Les commandes de base" shuffle="yes">
 						<fillInBlanks>
 							<question> 
-								Voyons voir si vous vous rappelez des quelques commandes de base vues la semaine passée.
+								Voyons voir si vous vous rappelez des quelques commandes de base vues la semaine passée.<newLine />
 								La commande pour :  
 							</question>
 							<gapText> 
@@ -70,7 +70,7 @@
 									<item>changer de dossier courant est <gap answers="cd">cd</gap></item>  
 									<item>créer un répertoire est <gap answers="mkdir">mkdir</gap></item>  
 									<item>visualiser le contenu d'un fichier sans l'éditer est <gap answers="cat">cat</gap></item>  
-									<item>voir quel est le dossier courant est <gap answers="pwd">pwd</gap></item>  
+									<item>voir quel est le dossier courant (son chemin) est <gap answers="pwd">pwd</gap></item>  
 									<item>détruire un fichier est <gap answers="rm">rm</gap></item>  
 									<item>détruire un dossier vide est <gap answers="rmdir">rmdir</gap></item>  
 								</list>  
@@ -115,7 +115,7 @@
 									<item>copier la ligne sous le curseur <gap answers="yy">yy</gap></item>  
 									<item>coller la ligne précédemment copiée ou collée <gap answers="p">p</gap></item>  
 								</list>  
-								<paragraph>En mode exécution comment
+								<paragraph>En mode exécution, comment
 										(n'oubliez pas de commencer par la commande 
 										qui permet de passer au mode exécution) :
 								</paragraph>								  
