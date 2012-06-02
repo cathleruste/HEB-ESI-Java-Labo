@@ -19,8 +19,8 @@
 			a pour but de vous permettre de prendre en main les outils informatiques 
 			avec lesquels vous allez travailler aux laboratoires de Java : 
 			où se trouvent les énoncés,
-			comment me connecter à <formatted style="italic">Windows</formatted> 
-			et les premiers pas sur <formatted style="italic">Linux</formatted>.
+			comment vous connecter à <formatted style="code">Windows</formatted> 
+			et vos premiers pas sur <formatted style="code">Linux</formatted>.
 		</paragraph>		
 	</entry>
 	
@@ -96,15 +96,15 @@
 					</item>
 					<item>
 						Un <formatted style="bold">aide-mémoire</formatted> :
-						Document écrit par nos soins sur l'utilisation de Windows et Linux;
+						Document écrit par nos soins sur l'utilisation de Windows et Linux.
 						Vous pouvez le consulter quand vous avez <formatted style="bold">oublié</formatted> quelque chose
 						(le nom d'une commande, une procédure, ...).
 					</item>
 					<item>
-						Un <formatted style="bold">quick reference vi</formatted> : Reprend en condensé toutes les commandes vi les plus utiles. 
+						Un <formatted style="bold">quick reference vi</formatted> : Reprend, en condensé, toutes les commandes vi les plus utiles. 
 					</item>
 					<item>
-						Un <formatted style="bold">quick reference linux</formatted> : Reprend en condensé toutes les commandes Linux les plus utiles. 
+						Un <formatted style="bold">quick reference linux</formatted> : Reprend, en condensé, toutes les commandes Linux les plus utiles. 
 					</item>
 				</list>
 			</clarify>
@@ -132,7 +132,7 @@
 					<item>
 						le <formatted style="bold">username</formatted> est composé d'un
 						<formatted style="code">g</formatted> suivi de votre numéro d'étudiant.
-						Votre professeur peut vous le communiquer.
+						Votre professeur peut vous le communiquer. Vous le trouverez aussi sur votre carte d'étudiant.
 					</item>
 					<item>
 						le <formatted style="bold">mot de passe</formatted> vous est également
@@ -164,8 +164,8 @@
 					<item>Ouvrez la version en ligne de ce document.</item>
 				</list>
 				<paragrah>
-					Vous pouvez à présent poursuivre sur la version en ligne qui propose des exercices interactifs.
-					(mais seule la version papier vous permet de prendre des notes)
+					Vous pouvez à présent poursuivre sur la version en ligne qui propose des exercices interactifs
+					(mais seule la version papier vous permet de prendre des notes).
 				</paragrah>
 				<paragraph title="FAQ" icon="icon_faq" />
 				<paragraph>
@@ -177,8 +177,13 @@
 					<formatted style="bold">Je ne trouve pas le cours Java.</formatted>
 				</paragraph>
 				<paragraph>C'est qu'il ne fait pas encore partie de la liste de vos cours.
-					Pour vous inscrire, allez dans l'onglet "Mes cours"; cliquez sur "Catalogue de cours" ensuite sur "S'inscrire aux cours".
+					Pour vous inscrire, ensuite sur "S'inscrire aux cours".
 				</paragraph>
+				<list listStyle="ordered">
+					<item>allez dans l'onglet "Mes cours"</item>
+					<item>cliquez sur "Catalogue de cours"</item>
+					<item>ensuite cliquez sur "S'inscrire aux cours".</item>
+        </list>
 
 			</clarify>
 		</learningObject>
@@ -258,7 +263,7 @@
 						<paragraph>
 							<formatted style="bold">Note</formatted> :
 							Prenez d'autant plus le temps si vous éprouvez des difficultés avec l'anglais
-							car la plupart des messages d'erreurs seront dans cette langue.
+							car la plupart des messages d'erreur seront dans cette langue.
 							<formatted style="bold">Il faut absolument vous entrainer à lire des messages simples en Anglais.</formatted>
 						</paragraph>
 					</item>
@@ -299,7 +304,7 @@
 	<unit label="Linux" title="Linux">
 		<entry>
 			<paragraph cssClass="citation">
-				« <formatted style="italic">Linux ? Il y a moins bien mais c'est plus cher</formatted> ».
+				« <formatted style="italic">Linux ? Il y a moins bien <newLine /> mais c'est plus cher</formatted> ». <newLine />
 				auteur inconnu
 			</paragraph>
 		</entry>
@@ -376,7 +381,7 @@
 								(<formatted style="input">gxxxxx</formatted>) 
 								puis sur la touche <formatted style="input">ENTREE</formatted>.<newLine />
 								<formatted style="bold">Note</formatted> :
-								Le clavier numérique ne fonctionne pas encore; nous verrons comment le configurer.
+								Le clavier numérique ne fonctionne pas encore; nous verrons comment le configurer lors du prochain TD.
 							</item>
 						</list>
 						<list listStyle="unordered">
@@ -417,7 +422,7 @@
 					En Linux, <formatted style="bold">les majuscules et les minuscules n'ont pas le même sens, vous devez respecter la casse.</formatted>
 				</paragraph>
 				<paragraph>
-					Faites une autre expérience.
+					Faites une autre expérience. <newLine />
 					Tapez les 3 commandes suivantes qui ne se différencient que par la présence ou non d'espaces.
 				</paragraph>
 				<list listStyle="unordered">
@@ -764,11 +769,11 @@
 						copie le fichier donné dans le dossier indiqué;
 					</item>
 					<item>
-						<formatted style="input">rm fichier</formatted>
+						<formatted style="input">rm nomDuFichier</formatted>
 						détruit le fichier dont on donne le nom;
 					</item>
 					<item>
-						<formatted style="input">rmdir dossier</formatted>
+						<formatted style="input">rmdir nomDuDossier</formatted>
 						détruit le dossier dont on donne le nom (Attention, le dossier doit être vide !).
 					</item>
 				</list>
@@ -777,20 +782,20 @@
 				<paragraph title="Exercice 1" icon="act" />
 				<paragraph>
 					Créez un dossier <formatted style="code">td1</formatted>
-					et déplacez-y le fichier de test que vous avez déjà créé.
+					et déplacez-y le fichier <formatted style="code">test</formatted> que vous avez déjà créé.
 				</paragraph>
 				<paragraph>
 					<formatted style="bold">Rappel</formatted> :
 					Notez bien votre réponse.
 					Il est difficile de tout retenir la première fois;
-					vous serez bien content la semaine prochaine de pouvoir retrouver comment vous avez fait !
+					vous serez bien content en relisant vos notes de pouvoir retrouver comment vous avez fait !
 				</paragraph>
 			</act>
 			<act>
 				<paragraph title="Exercice 2" icon="act" />
 				<list listStyle="ordered">
 					<item>
-						Prenez une copie de votre fichier de test
+						Prenez une copie de votre fichier <formatted style="code">test</formatted> 
 						(appelez-la <formatted style="code">test2</formatted>).
 					</item>
 					<item>Éditez ce fichier et ajoutez-y quelques mots.</item>
@@ -846,7 +851,7 @@
 					</item>
 					<item>
 						<formatted style="input">yy</formatted>
-						<formatted style="italic"> copie</formatted>la ligne sous le curseur;
+						<formatted style="italic"> copie</formatted> la ligne sous le curseur;
 					</item>
 					<item>
 						<formatted style="input">p</formatted>
