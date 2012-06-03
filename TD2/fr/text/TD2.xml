@@ -169,8 +169,10 @@
 					</item>  
 					<item>
 						Tapez la commande <formatted style="input">cat -n td1/test</formatted>.
-						L'option demande de numéroter les lignes. 
-						(note: on suppose que vous avez bien créé ce fichier lors du td précédent) 
+						L'option demande de numéroter les lignes 
+						(note: nous supposons que vous avez bien créé le répertoire <formatted style="italic">td1</formatted> 
+						qui contient le fichier <formatted style="italic">test</formatted> lors du labo précédent 
+						et que vous vous trouvez dans <formatted style="italic">votre home</formatted>).
 					</item>  
 					<item>
 						Essayez <formatted style="input">cat --number td1/test</formatted>. 
@@ -585,7 +587,10 @@
 					<item>Créez un fichier "brol" dans le dossier "td2" avec quelques mots.</item>  
 					<item>Faites en sorte que personne d'autre ne puisse en voir le contenu.</item>  
 					<item>Faites en sorte que tout le monde puisse voir son contenu mais pas le modifier. </item>  
-					<item>Faites en sorte que les autres étudiants ne puissent pas voir son contenu mais les professeurs bien. </item>  
+					<item>
+					  Faites en sorte que les autres étudiants ne puissent pas voir son contenu mais les professeurs bien. 
+					  Attention, pour ce faire, il faut pouvoir distinguer les étudiants des enseignants; et donc, distinguer les groupes.
+					</item>  
 				</list>
 
 				<paragraph title="Exercices" icon="act"/> 
