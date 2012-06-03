@@ -1,4 +1,4 @@
-package java.tds.td6.classes;
+package java.tds.td6;
 
 /**
  * regroupe les codes de différentes couleurs 
