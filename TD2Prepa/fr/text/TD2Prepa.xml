@@ -156,6 +156,62 @@
 						L'interrogation du début de laboratoire portera aussi sur cette matière.
 					</paragraph>
 				</clarify>
+				
+				<act>
+				<selfCheck title="Choix multiples" shuffle="yes">
+					<multipleChoice>
+						<question>Le raccourci qui désigne la home de l'utilisateur <formatted style="italic">g12345</formatted> est
+						</question>
+						<answer feedback="" correct="no">.</answer>
+						<answer feedback="" correct="yes">~</answer>
+						<answer feedback="" correct="yes">~g12345</answer>
+						<answer feedback="" correct="no">/</answer>
+					</multipleChoice>
+				</selfCheck>
+				
+				<selfCheck title="" shuffle="yes">
+					<multipleChoice>
+						<question>La racine du système de fichier sous Linux est
+						</question>
+						<answer feedback="" correct="no">.</answer>
+						<answer feedback="" correct="no">~</answer>
+						<answer feedback="" correct="no">~g12345</answer>
+						<answer feedback="" correct="yes">/</answer>
+					</multipleChoice>
+				</selfCheck>
+				
+				<selfCheck title="" shuffle="yes">
+					<multipleChoice>
+						<question>Le(s)quel(s) de ces chemins est/sont un chemin absolu ?
+						</question>
+						<answer feedback="" correct="yes">/home/g54321/td2Prepa</answer>
+						<answer feedback="" correct="yes">~g54321/td2Prepa</answer>
+						<answer feedback="" correct="no">g54321/td2Prepa</answer>
+						<answer feedback="" correct="no">td2Prepa</answer>
+					</multipleChoice>
+				</selfCheck>
+				
+				<selfCheck title="" shuffle="yes">
+					<multipleChoice>
+						<question>Le(s)quel(s) de ces chemins est/sont un chemin relatif ?
+						</question>
+						<answer feedback="" correct="yes">td2Prepa</answer>
+						<answer feedback="" correct="yes">../td2Prepa</answer>
+						<answer feedback="" correct="yes">./.././eCours/td2Prepa</answer>
+						<answer feedback="" correct="no">/eCours/java/tds/td2Prepa</answer>
+					</multipleChoice>
+				</selfCheck>
+				
+				<selfCheck title="" shuffle="yes">
+					<multipleChoice>
+						<question>Le nom de la commande qui permet de modifier les permissions d'un fichier est
+						</question>
+						<answer feedback="" correct="yes">chmod</answer>
+						<answer feedback="" correct="no">chgrp</answer>
+						<answer feedback="" correct="no">chown</answer>
+					</multipleChoice>
+				</selfCheck>
+			</act>
 			</learningObject>
     
 			<learningObject title="Exemple de MIL">
