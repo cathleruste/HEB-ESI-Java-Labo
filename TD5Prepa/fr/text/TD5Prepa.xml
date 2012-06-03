@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
-        label="TD5Prepa" title="Td5 - Exercices préparatoires">
+        label="TD5Prepa" title="TD5 - Exercices préparatoires">
   
  <entry>
 		<paragraph>  
@@ -12,7 +12,7 @@
 		</paragraph>
 	</entry>
 
-  <unit label="TD5Ex" title="Td5 - Exercices préparatoires">
+  <unit label="TD5Ex" title="Exercices préparatoires au TD5">
   
 		<entry>
 			<paragraph>  
@@ -34,24 +34,17 @@
                 <item>insérer en fin de ligne <gap answers="">A</gap></item>  
                 <item>répéter la dernière commande d'édition<gap answers="">.</gap></item>  
               </list>  
-              <paragraph>
-                En mode exécution :
-              </paragraph>
-              <list listStyle="unordered">
-                <item>d'inclure un fichier dans un autre <gap answers="">:r</gap></item>  
-              </list> 
             </gapText>
             <solution/>
           </fillInBlanks>
         </selfCheck>
         
-        <selfCheck title="Choix Multiple " shuffle="yes">
+        <selfCheck title="Comprendre les erreurs" shuffle="yes">
           <multipleChoice>
             <question>  
               Soit le code
               <paragraph cssClass="java">
-<![CDATA[
-public class ErrCompilation{
+<![CDATA[public class ErrCompilation {
 
 	public static int abs(int nombre) { 
 
@@ -87,12 +80,12 @@ return absolu;
               </paragraph>
             </question>
             <answer feedback="En effet, si on ne rentre pas dans le if, la variable absolu ne sera pas initialisée." correct="yes">
-              la variable absolu n'est pas toujours initialisée
+              la variable <formatted style="java">absolu</formatted> n'est pas toujours initialisée
             </answer>
-            <answer feedback="" correct="no">la variable absolu a un nom invalide </answer>
-            <answer feedback="" correct="no">la variable absolu n'est pas du bon type </answer>
+            <answer feedback="" correct="no">la variable <formatted style="java">absolu</formatted> a un nom invalide </answer>
+            <answer feedback="" correct="no">la variable <formatted style="java">absolu</formatted> n'est pas du bon type </answer>
             <answer feedback="" correct="no">cette méthode ne doit pas avoir d'instruction return </answer>
-            <answer feedback="" correct="no">la valeur donnée à absolu n'est pas du bon type </answer>
+            <answer feedback="" correct="no">la valeur donnée à <formatted style="java">absolu</formatted> n'est pas du bon type </answer>
           </multipleChoice>
         </selfCheck>
         
@@ -130,8 +123,7 @@ public class MaMoyenne {
           <fillInBlanks>
             <question>  
               <paragraph cssClass="java">
-<![CDATA[
-public class Outils{
+<![CDATA[public class Outils {
 
 	public static int abs(int nombre) { 
 
@@ -178,28 +170,30 @@ public class Outils{
           Soit le code suivant :  
         </paragraph>  
         <paragraph cssClass="java">
-<![CDATA[
-public class Operation {
+<![CDATA[public class Operation {
 
-  public static void entete(){
-  
-    System.out.println("Operations");  
+    public static void entete() {
     
+        System.out.println("Operations");
+        
 	}   
 	
 	public static double lireNonNul() {  
 	  
 		Scanner clavier = new Scanner(System.in);
-		int a = 0;
+		int a;
 		
 		a = clavier.nextDouble();
 	  
 		// Ceci est une boucle while, equivalent au "tant que" logique  
 		// Cela signifie ici que nous allons lire un nombre au clavier 
 		// tant que la variable a vaut 0 : 
-		while ( a == 0 ) {  
+		
+		while ( a == 0 ) {   
+		
 		  System.out.println( "Entrer un nombre non nul!");
 		  a = clavier.nextDouble();  
+		  
 		}  
 		
 		return a;  
@@ -222,7 +216,9 @@ public class Operation {
   
 }]]>				</paragraph>
       </clarify>
+      
       <act>
+		  
         <selfCheck title="Appels de méthodes de classe dans la même classe" shuffle="yes">
           <multipleChoice>
             <question>
@@ -232,7 +228,7 @@ public class Operation {
             <answer feedback="" correct="no"><formatted style="java">entete(10);</formatted></answer>
             <answer feedback="" correct="yes"><formatted style="java">entete();</formatted></answer>
             <answer feedback="" correct="no">
-              <formatted style="java">String chaine = entete();</formatted><newLine/><formatted style="java">System.out.println(chaine);²</formatted>
+              <formatted style="java">String chaine = entete();</formatted><newLine/><formatted style="java">  System.out.println(chaine);</formatted>
             </answer>
             <answer feedback="" correct="yes"><formatted style="java">double nombre = lireNonNul();</formatted></answer>
             <answer feedback="" correct="no"><formatted style="java">double nombre = lireNonNul(5);</formatted></answer>
@@ -279,7 +275,6 @@ public class Operation {
     
     <learningObject title="Bravo">
       <clarify>
-        <paragraph title="Bravo" icon="icon_bravo"/> 
         <paragraph>
           Si vous avez réussi à répondre correctement aux questions précédentes,  
           c'est que vous êtes prêts à venir au laboratoire dans les meilleures  
