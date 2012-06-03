@@ -304,7 +304,7 @@
 	<unit label="Linux" title="Linux">
 		<entry>
 			<paragraph cssClass="citation">
-				« <formatted style="italic">Linux ? Il y a moins bien <newLine /> mais c'est plus cher</formatted> ». <newLine />
+				« <formatted style="italic">Linux ? Il y a moins bien mais c'est plus cher</formatted> ».
 				auteur inconnu
 			</paragraph>
 		</entry>
@@ -346,7 +346,8 @@
 				</list>
 				<paragraph>
 					Le mot de passe sous Windows et sous Linux sont 2 mots de passe différents (initialisés à la même valeur).
-					<newLine />
+        </paragraph>
+        <paragraph>
 					Vous avez modifié votre mot de passe sous Windows mais pas encore sous Linux (vous le ferez plus tard...)
 				</paragraph>
 			</clarify>
@@ -374,7 +375,7 @@
 						cliquez sur "<formatted style="bold">Yes</formatted>" en toute confiance.
 					</item>
 					<item>
-						Identifiez-vous !<newLine/>
+						Identifiez-vous !
 						<list listStyle="unordered">
 							<item>
 								Tapez votre nom d'utilisateur 
@@ -418,11 +419,15 @@
 					Entrez à présent  la commande <formatted style="input">LS</formatted>.
 				</paragraph>
 				<paragraph>
-					Vous voyez que le résultat est différent : il ne comprend pas ce que vous lui voulez.<newLine />
+					Vous voyez que le résultat est différent : il ne comprend pas ce que vous lui voulez.
+        </paragraph>
+        <paragraph>
 					En Linux, <formatted style="bold">les majuscules et les minuscules n'ont pas le même sens, vous devez respecter la casse.</formatted>
 				</paragraph>
 				<paragraph>
-					Faites une autre expérience. <newLine />
+					Faites une autre expérience. 
+        </paragraph>
+        <paragraph>
 					Tapez les 3 commandes suivantes qui ne se différencient que par la présence ou non d'espaces.
 				</paragraph>
 				<list listStyle="unordered">
@@ -480,7 +485,9 @@
 			<act>
 				<paragraph title="Vérification" icon="act" />
 				<paragraph>
-					Pour vérifier que tout s'est bien passé, vous pouvez vous déconnecter et vous reconnecter.<newLine />
+					Pour vérifier que tout s'est bien passé, vous pouvez vous déconnecter et vous reconnecter.
+        </paragraph>
+        <paragraph>
 					Pour quitter proprement <formatted style="code">linux1</formatted>, 
 					la commande est <formatted style="input">exit</formatted>.
 				</paragraph>
@@ -510,7 +517,9 @@
 					<formatted style="bold">J'ai quitté en fermant la fenêtre, c'est pas plus simple ?</formatted>
 				</paragraph>
 				<paragraph>
-					Oui ! Mais c'est impoli de quitter quelqu'un sans lui dire au revoir ! ;) <newLine />
+					Oui ! Mais c'est impoli de quitter quelqu'un sans lui dire au revoir ! ;) 
+        </paragraph>
+        <paragraph>
 					Plus sérieusement, vous coupez brutalement la conversation avec <formatted style="code">linux1</formatted>
 					ce qui peut laisser trainer des programmes actifs et vous empêcher de vous connecter la prochaine fois.
 				</paragraph>
@@ -888,7 +897,9 @@
 		<learningObject title="Félicitations">
 			<clarify>
 				<paragraph>
-					Vous êtes arrivés au bout de ce premier TD.<newLine />
+					Vous êtes arrivés au bout de ce premier TD.
+        </paragraph>
+        <paragraph>
 					Avant de quitter le laboratoire, n'oubliez pas de :
 				</paragraph>
 				<list listStyle="unordered">
