@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" label="TD5" title="Td5 : Méthodes">
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" label="TD5" title="TD5 : Méthodes">
 	
   <entry>
     <paragraph>  
@@ -12,7 +12,7 @@
     </list>
   </entry>
   
-  <unit label="TD5" title="Td5 : Méthodes">
+  <unit label="TD5" title="TD5 : Méthodes">
   
 		<learningObject title="Les méthodes de classe">
 		
@@ -21,7 +21,7 @@
 				<list listStyle="ordered">
 				  <item>Reprenez la méthode de la préparation de ce td qui calcule le maximum de 2 nombres (<formatted style="italic">max2</formatted>).</item>  
 					<item>
-					  Écrivez à présent une méthode qui utilise <formatted style="italic">max2</formatted> pour calculer le maximum de 3 nombres.<newLine/>
+					  Écrivez à présent une méthode qui utilise <formatted style="italic">max2</formatted> pour calculer le maximum de 3 nombres.
 					  Cette méthode recevra 3 entiers en paramètre.
           </item>  
 					<item>Idem pour le maximum de 4 nombres.</item>  
@@ -40,7 +40,8 @@
 				<paragraph>  
 					Avez-vous pensé à documenter le code de vos méthodes? Pourquoi pensez-vous que ce soit utile de le faire?  
 				</paragraph>  
-				<popup title="Une méthode ?">Une méthode
+				
+				<popup title="la réponse">Une méthode
 				  <list listStyle="unordered">
 				    <item>possède un nom explicite <newLine/>  
 							(et non, le nom "méthode" est fort peu judicieux...) 
@@ -76,7 +77,7 @@
           (<formatted style="input">~/<formatted style="italic">.bash_history</formatted></formatted> par défaut).
           <list listStyle="unordered">
             <item> <formatted style="input">!!</formatted> relance la dernière commande.</item>  
-            <item> <formatted style="input">!10</formatted> relance la 10ème commande.</item>  
+            <item> <formatted style="input">!10</formatted> relance la 10<formatted style="superscript">ème</formatted> commande.</item>  
             <item> <formatted style="input">!-2</formatted> relance l'avant dernière commande.</item>  
             <item> <formatted style="input">!ls</formatted> relance la dernière commande commençant par ls.</item>  
             <item> <formatted style="input">!?toto</formatted> renouvelle la dernière commande qui contient la chaine de caractères 'toto'.</item>  
@@ -84,7 +85,7 @@
         </paragraph>
       </clarify>
       
-			<act><paragraph title="history" icon="act"/> 
+			<act><paragraph title="Exercice" icon="act"/> 
         <paragraph>
           <list listStyle="ordered"><item>Affichez la liste des 15 dernières commandes</item>  
             <item>Relancez la dernière commande commençant par "java"</item>  
