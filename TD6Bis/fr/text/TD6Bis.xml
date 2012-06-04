@@ -6,8 +6,10 @@
 
 	<entry>
 		<paragraph>  
-			Ce TD a pour objectif de parfaire votre connaissance des
-			instructions de boucles (for, while).
+			Ce TD a pour objectifs de parfaire votre connaissance des
+			instructions de boucles (for, while), de continuer votre 
+			familiarisation avec la notion de package et de vous initer
+			à la gestion des exceptions.
 		</paragraph> 
 	</entry>
 	
@@ -25,27 +27,37 @@
 
 			<clarify>
 				<paragraph title="Consignes">
-					Voici quelques exercices que vous avez résolu au cours de logique, traduisez-les en java.
+					Pour ce TD, vous allez traduire en Java quelques exercices que vous avez résolu au cours de logique.
+					Vous écrirez une classe par exercice, le tout dans un dossier <formatted style="code">td6Bis</formatted>.
 				</paragraph>
 				<paragraph>
-					Vous écrirez une classe par exercice.
-					Cette classe portera le nom Exercice suivi du numéro de l'exercice.
+				  Pour poursuivre l'apprentissage, vous utiliserez des <formatted style="code">package</formatted> pour chacun de vos programmes.
+				  Nous vous offrons deux possibilités :
 				</paragraph>
+				<list listStyle="ordered">
+					<item>
+						Les sources sont placés dans le dossier <formatted style="code">td6Bis</formatted>
+						et les classes dans un dossier <formatted style="code">~/classes</formatted>
+						(qui sera commun à tous vos TDs)
+					</item>  
+					<item>
+						Les sources sont placés dans le dossier <formatted style="code">td6Bis/sources</formatted>
+						et les classes dans le dossier <formatted style="code">td6Bis/classes</formatted>
+					</item>  
+				</list>
 				<paragraph>
-				  Pour poursuivre l'apprentissage, vous utiliserez des <formatted style="code">package</formatted> pour chacun de vos programmes.<newLine/>
-				  Nous vous demandons de créer un répertoire <formatted style="code">~/td6Bis</formatted> 
-				  dans lequel vous créerez un répertoire <formatted style="code">sources</formatted> et un répertoire <formatted style="code">classes</formatted>.
-				  <newLine/>
-				  Vos mettrez les fichiers contenant les sources dans le répertoires <formatted style="code">sources</formatted> que vous venez de créer 
-				  et vous y travaillerez.<newLine/>
-				  Vous avez déjà vu lors du td précédent qu'il existe une option permettant de demander au compilateur <formatted style="code">javac</formatted> 
-				  de placer les fichiers contenant les bytecode <formatted style="code">.class</formatted> dans un répertoire différent de celui des sources, 
-				  en l'occurrence le répertoire <formatted style="code">classes</formatted> que vous venez de créer. <newLine/>
-				  Faites attention à définir un package correct pour que ceci se produise.
+					Dans les 2 cas, vous devrez :
 				</paragraph>
-				<paragraph>
-					Nous allons aussi ici utiliser les exceptions.
-				</paragraph>
+				<list listStyle="unordered">
+					<item>
+						Choisir judicieusement votre nom de package. Il est hors de question qu'il contienne le mot
+						<formatted style="italic">classes</formatted> qui est purement technique.
+						Il devrait plutôt être du genre <formatted style="code">g12345/td6Bis</formatted> 
+					</item>  
+					<item>
+						Adapter le <formatted style="code">CLASSPATH</formatted> pour que ça fonctionne.
+					</item>  
+				</list>
 			</clarify>
 			
 			<act>
