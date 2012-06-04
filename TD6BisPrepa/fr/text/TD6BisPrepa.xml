@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd"
+        label="TD6BisPrepa" title="TD6Bis - Exercices préparatoires">
+
+	<entry>
+		<paragraph>  
+			Afin d'arriver au laboratoire dans les meilleures conditions, 
+			il est bien de revoir la matière qui sera mise en pratique. 
+			C'est pourquoi nous vous fournissons quelques exercices préparatoires 
+			à faire à la maison pour vous permettre d'évaluer si vous êtes prêts. 
+		</paragraph>
+	</entry>
+
+	<unit label="TD6BisEx" title="Exercices préparatoires au TD6 bis">
+
+		<entry>
+			<paragraph>  
+				Vous trouverez les réponses dans les premières leçons du cours ou dans les tds précédents.  
+			</paragraph>
+		</entry>
+
+		<learningObject title="Rappel des tds précédents">
+			<act>
+				
+				<selfCheck title="package" shuffle="yes">
+					<fillInBlanks>
+						<question>
+							<paragraph>
+								Sachant que le résultat de la commande "echo $CLASSPATH" est 
+							</paragraph>
+							<paragraph cssClass="code">.:/home:/usr/local/java:/home/g32000</paragraph>
+							<paragraph>
+								quel package associer à Exercice.java si Exercice.class se trouve dans
+							</paragraph>
+						</question>
+						<gapText>
+							<list listStyle="ordered">
+								<item>
+									/home/<formatted style="bold">g32010</formatted>/Exercice.class :
+									package <gap answers="">g32010</gap>;
+								</item>
+								<item>
+									/home/<formatted style="bold">g32010</formatted>/tds/td6/Exercice.class :
+									package <gap answers="">g32010.tds.td6</gap>;
+								</item>
+								<item>
+									/home/<formatted style="bold">g32000</formatted>/tds/td6/Exercice.class :
+									package <gap answers="tds.td6,g32010.tds.td6">g32010.tds.td6</gap>;
+								</item>
+							</list>
+						</gapText>
+						<solution/>
+					</fillInBlanks>
+				</selfCheck>
+				
+				<selfCheck title="CLASSPATH" shuffle="no">
+					<fillInBlanks>
+						<question>
+							<paragraph>
+								Sachant que l'instruction package de Exercice.java est 
+								package g32010.exercices.exercicesTd6;
+								et que Exercice.class se trouve dans
+								/home/étudiants/g32010/exercices/exercicesTd6.
+								quel doit être le contenu de la variable CLASSPATH? 
+							</paragraph>
+						</question>
+						<gapText>
+							<gap answers="">/home/étudiants</gap>
+						</gapText>
+						<solution/>
+					</fillInBlanks>
+				</selfCheck>
+
+				<selfCheck title="Activité &quot;remplir les blancs&quot;" shuffle="no">
+					<fillInBlanks>
+						<question>
+							Ouvrez l'API java et recherchez la classe <formatted style="italic">Integer</formatted>.
+							Quel est le package de cette classe ?
+						</question>
+						<gapText>
+							<gap answers="">java.lang</gap>
+						</gapText>
+						<solution/>
+					</fillInBlanks>
+				</selfCheck>
+
+				<paragraph>
+					En quoi ce package est particulier ?
+				</paragraph>
+
+			</act>
+		</learningObject>
+
+		<learningObject title="Survol du langage : les exceptions">
+
+			<act>
+				
+				<selfCheck title="Mots clés" shuffle="yes">
+					<fillInBlanks>
+						<question>
+							Complétez le morceau de code suivant afin de pouvoir lancer l'exception de type IllegalArgumentException
+						</question>
+						<gapText>
+							<paragraph cssClass="javawithblanks">
+public static int maxPositif (int nb1, int nb2) { 
+
+	int max;
+
+    if (nb1&lt;0 || nb2&lt;0) 
+        <gap answers="">throw</gap> <gap answers="">new</gap> IllegalArgumentException(); 
+	
+	if (nb1&lt;max) {
+        max = nb1;
+	} else {
+	    max = nb2;
+	}
+
+    return max;
+} 
+							</paragraph>
+						</gapText>
+						<solution/>
+					</fillInBlanks>
+				</selfCheck>
+
+				<selfCheck title="Mots clés" shuffle="yes">
+					<fillInBlanks>
+						<question>
+							Complétez le morceau de code suivant afin de pouvoir attraper l'exception de type IllegalArgumentException 
+							susceptible d'être lancée par la méthode maxPositif de la même classe.
+						</question>
+						<gapText>
+							<paragraph cssClass="javawithblanks">
+public static void appelMaxPositif() {
+
+    Scanner clavier = new Scanner(System.in);
+    
+    <gap answers="">try</gap> {
+        int max = maxPositif(clavier.nextInt(), clavier.nextInt());
+    } <gap answers="">catch</gap> (IllegalArgumentException ex) {
+        // gestion de l ' exception
+    }
+    
+}
+							</paragraph>
+						</gapText>
+						<solution/>
+					</fillInBlanks>
+				</selfCheck>
+
+			</act>
+		
+		</learningObject>
+
+		<learningObject title="Logique">
+			<clarify>
+				<paragraph>
+					Assurez-vous de venir au laboratoire avec les exercices 7, 9, 10 et 19
+					du chapitre 7 "Les boucles" de votre cours de logique. 
+				</paragraph>
+			</clarify>
+		</learningObject>
+
+		<learningObject title="Bravo">
+			<clarify>
+				<paragraph>
+					Si vous avez réussi à répondre correctement aux questions précédentes,
+					c'est que vous êtes prêt à venir au laboratoire dans les meilleures conditions!
+				</paragraph>
+			</clarify>
+		</learningObject>
+
+	</unit>
+  
+	<metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition><posNumber>6</posNumber></creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+		<technical>
+			<technicalRequirement>
+				<type>Browser</type>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+		</technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2012 - 2013</version>
+				<contribute>
+					<person name="ARO" />
+					<person name="BEJ" />
+					<person name="CLR" />
+					<person name="DNA" />
+					<person name="HAL" />
+					<person name="MBA" />
+					<person name="MCD" />
+					<person name="NPX" />
+					<person name="PBT" />
+				</contribute>
+			</lifecycle>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+		<rights>
+			<cost>no</cost>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
+		</rights>
+	</metadata>
+
+	
+</lesson>
