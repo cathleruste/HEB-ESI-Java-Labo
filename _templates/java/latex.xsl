@@ -17,6 +17,174 @@
 	<xsl:param name="pagebreak_level" select="'lesson'"/>
 	<xsl:param name="chapter_numeration" select="'yes'"/>
 	<xsl:param name="display_links" select="'yes'"/>
+	
+	    <xsl:character-map name="latex">
+        <!-- Quote for ZapfDingbats character -->
+        <xsl:output-character character="&#xE004;" string="&quot;"/>
+        <!--
+        <xsl:output-character character="&lt;" string="\ensuremath{&lt;}"/>
+        <xsl:output-character character="&gt;" string="\ensuremath{&gt;}"/>
+        -->
+        <!-- ASCII characters -->
+        <xsl:output-character character="&quot;" string="''"/>
+        <xsl:output-character character="’" string="'"/>
+        <xsl:output-character character="‘" string="'"/>
+        <xsl:output-character character="$" string="\$"/>
+        <xsl:output-character character="#" string="\#"/>
+        <xsl:output-character character="%" string="\%"/>
+        <xsl:output-character character="~" string="\char`\~"/>
+        <xsl:output-character character="&amp;" string="\&amp;"/>
+        <xsl:output-character character="^" string="\char`\^"/>
+        <xsl:output-character character="„" string="\glqq "/>
+        <xsl:output-character character="“" string="\grqq "/>
+        <xsl:output-character character="…" string="..."/>
+        <!-- Latin 1 Chars -->
+        <xsl:output-character character="—" string="-"/>
+        <xsl:output-character character="–" string="-"/>
+        <xsl:output-character character="¡" string="\textexclamdown "/>
+        <xsl:output-character character="¢" string="\textcent "/>
+        <xsl:output-character character="£" string="\textsterling "/>
+        <xsl:output-character character="¤" string="\textcurrency "/>
+        <xsl:output-character character="¥" string="\textyen "/>
+        <xsl:output-character character="¦" string="\textbrokenbar "/>
+        <xsl:output-character character="§" string="\textsection "/>
+        <xsl:output-character character="¨" string="\textasciidieresis "/>
+        <xsl:output-character character="©" string="\copyright "/>
+        <xsl:output-character character="ª" string="\textordfeminine "/>
+        <xsl:output-character character="«" string="\guillemotleft "/>
+        <xsl:output-character character="¬" string="\textlnot "/>
+        <xsl:output-character character="®" string="\textregistered "/>
+        <xsl:output-character character="¯" string="\textasciimacron "/>
+        <xsl:output-character character="°" string="\textdegree "/>
+        <xsl:output-character character="±" string="\textpm "/>
+        <xsl:output-character character="²" string="\texttwosuperior "/>
+        <xsl:output-character character="³" string="\textthreesuperior "/>
+        <xsl:output-character character="´" string="\textasciiacute "/>
+        <xsl:output-character character="µ" string="\textmu "/>
+        <xsl:output-character character="¶" string="\textparagraph "/>
+        <xsl:output-character character="·" string="\textbullet "/>
+        <xsl:output-character character="¹" string="\textonesuperior "/>
+        <xsl:output-character character="º" string="\textordmasculine "/>
+        <xsl:output-character character="»" string="\guillemotright "/>
+        <xsl:output-character character="¼" string="\textonequarter "/>
+        <xsl:output-character character="½" string="\textonehalf "/>
+        <xsl:output-character character="¾" string="\textthreequarters "/>
+        <xsl:output-character character="¿" string="\textquestiondown "/>
+        <xsl:output-character character="À" string="\`A"/>
+        <xsl:output-character character="Á" string="\'A"/>
+        <xsl:output-character character="Â" string="\^A"/>
+        <xsl:output-character character="Ã" string="\~A"/>
+        <xsl:output-character character="Ä" string="\&quot;A"/>
+        <xsl:output-character character="Å" string="\AA"/>
+        <xsl:output-character character="Æ" string="\AE"/>
+        <xsl:output-character character="Ç" string="\c C"/>
+        <xsl:output-character character="È" string="\`E"/>
+        <xsl:output-character character="É" string="\'E"/>
+        <xsl:output-character character="Ê" string="\^E"/>
+        <xsl:output-character character="Ë" string="\&quot;E"/>
+        <xsl:output-character character="Ì" string="\`I"/>
+        <xsl:output-character character="Í" string="\'I"/>
+        <xsl:output-character character="Î" string="\^I"/>
+        <xsl:output-character character="Ï" string="\&quot;I"/>
+        <xsl:output-character character="Ñ" string="\~N"/>
+        <xsl:output-character character="Ò" string="\`O"/>
+        <xsl:output-character character="Ó" string="\'O"/>
+        <xsl:output-character character="Ô" string="\^O"/>
+        <xsl:output-character character="Õ" string="\~O"/>
+        <xsl:output-character character="Ö" string="\&quot;O"/>
+        <xsl:output-character character="×" string="\texttimes "/>
+        <xsl:output-character character="Ø" string="\O"/>
+        <xsl:output-character character="Ù" string="\`U"/>
+        <xsl:output-character character="Ú" string="\'U"/>
+        <xsl:output-character character="Û" string="\^U"/>
+        <xsl:output-character character="Ü" string="\&quot;U"/>
+        <xsl:output-character character="Ý" string="\'Y"/>
+        <xsl:output-character character="ß" string="\ss "/>
+        <xsl:output-character character="à" string="\`a"/>
+        <xsl:output-character character="á" string="\'a"/>
+        <xsl:output-character character="â" string="\^a"/>
+        <xsl:output-character character="ã" string="\~a"/>
+        <xsl:output-character character="ä" string="\&quot;a"/>
+        <xsl:output-character character="å" string="\aa"/>
+        <xsl:output-character character="æ" string="\ae"/>
+        <xsl:output-character character="ç" string="\c c"/>
+        <xsl:output-character character="è" string="\`e"/>
+        <xsl:output-character character="é" string="\'e"/>
+        <xsl:output-character character="ê" string="\^e"/>
+        <xsl:output-character character="ë" string="\&quot;e"/>
+        <xsl:output-character character="ì" string="\`i"/>
+        <xsl:output-character character="í" string="\'i"/>
+        <xsl:output-character character="î" string="\^i"/>
+        <xsl:output-character character="ï" string="\&quot;i"/>
+        <xsl:output-character character="ñ" string="\~n"/>
+        <xsl:output-character character="ò" string="\`o"/>
+        <xsl:output-character character="ó" string="\'o"/>
+        <xsl:output-character character="ô" string="\^o"/>
+        <xsl:output-character character="õ" string="\~o"/>
+        <xsl:output-character character="ö" string="\&quot;o"/>
+        <xsl:output-character character="÷" string="\textdiv"/>
+        <xsl:output-character character="ø" string="\o"/>
+        <xsl:output-character character="ù" string="\`u"/>
+        <xsl:output-character character="ú" string="\'u"/>
+        <xsl:output-character character="û" string="\^u"/>
+        <xsl:output-character character="ü" string="\&quot;u"/>
+        <xsl:output-character character="ý" string="\'y"/>
+        <xsl:output-character character="ÿ" string="\&quot;y"/>
+        <xsl:output-character character="•" string="\textbullet "/>
+        <xsl:output-character character="_" string="\_"/>
+        <xsl:output-character character="&#0160;" string=" "/>
+        <xsl:output-character character="→" string="\rightarrow"/>
+        <!-- Greek Characters -->
+        <xsl:output-character character="α" string="\alpha"/>
+        <xsl:output-character character="θ" string="\theta"/>
+        <xsl:output-character character="τ" string="\tau"/>
+        <xsl:output-character character="β" string="\beta"/>
+        <xsl:output-character character="ϑ" string="\vartheta"/>
+        <xsl:output-character character="π" string="\pi"/>
+        <xsl:output-character character="υ" string="\upsilon"/>
+        <xsl:output-character character="γ" string="\gamma"/>
+        <xsl:output-character character="ι" string="\iota"/>
+        <xsl:output-character character="ϖ" string="\varpi"/>
+        <xsl:output-character character="φ" string="\phi"/>
+        <xsl:output-character character="δ" string="\delta"/>
+        <xsl:output-character character="κ" string="\kappa"/>
+        <xsl:output-character character="ρ" string="\rho"/>
+        <xsl:output-character character="ϕ" string="\varphi"/>
+        <xsl:output-character character="ϵ" string="\epsilon"/>
+        <xsl:output-character character="λ" string="\lambda"/>
+        <xsl:output-character character="ϱ" string="\varrho"/>
+        <xsl:output-character character="χ" string="\chi"/>
+        <xsl:output-character character="ε" string="\varepsilon"/>
+        <xsl:output-character character="µ" string="\mu"/>
+        <xsl:output-character character="σ" string="\sigma"/>
+        <xsl:output-character character="ψ" string="\psi"/>
+        <xsl:output-character character="ζ" string="\zeta"/>
+        <xsl:output-character character="ν" string="\nu"/>
+        <xsl:output-character character="ς" string="\varsigma"/>
+        <xsl:output-character character="ω" string="\omega"/>
+        <xsl:output-character character="η" string="\eta"/>
+        <xsl:output-character character="ξ" string="\xi"/>
+        <xsl:output-character character="Γ" string="\Gamma"/>
+        <xsl:output-character character="Λ" string="\Lambda"/>
+        <xsl:output-character character="Σ" string="\Sigma"/>
+        <xsl:output-character character="Ψ" string="\Psi"/>
+        <xsl:output-character character="∆" string="\Delta"/>
+        <xsl:output-character character="Ξ" string="\Xi"/>
+        <xsl:output-character character="Υ" string="\Upsilon"/>
+        <xsl:output-character character="Ω" string="\Omega"/>
+        <xsl:output-character character="Θ" string="\Theta"/>
+        <xsl:output-character character="Π" string="\Pi"/>
+        <xsl:output-character character="Φ" string="\Phi"/>
+        <xsl:output-character character="ο" string="o"/>
+        <!-- Problemfälle:
+            
+            <xsl:output-character character="_" string="\_"/>
+            <xsl:output-character character="\" string="\textbackslash"/>
+            <xsl:output-character character="{" string="\{"/>
+            <xsl:output-character character="}" string="\}"/>
+        -->
+    </xsl:character-map>
+    
 	<!-- ===== / ===== -->
 	<!-- Ajout du package pifonts pour la police dingbats utilisée pour les cases à cocher des QCM -->
 	<!-- Mise en forme de la premièer page : on utilise le plus possible le tag metadata -->
@@ -383,7 +551,7 @@
             <xsl:call-template name="elml:display"/>
         </xsl:param>
         <xsl:if test="$display='yes'">
-        <xsl:text>\begin{Java}</xsl:text><xsl:apply-templates/><xsl:text>\end{Java}</xsl:text>
+			<xsl:text>\begin{Java}</xsl:text><xsl:apply-templates/><xsl:text>\end{Java}</xsl:text>
 		</xsl:if>
     </xsl:template>
 
@@ -391,7 +559,7 @@
         <xsl:apply-templates/>
     </xsl:template>
 
-    <!-- Pas de newLine dans une <question> -->    
+<!-- Pas de newLine dans une <question> -->    
     <xsl:template match="//elml:question//elml:newLine"/>
 
     <!-- Test pour enlever le niveau d'indentation supérieure -->
