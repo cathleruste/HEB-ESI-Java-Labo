@@ -31,6 +31,7 @@ function scorm() {
 	java -cp /usr/local/saxon/saxon9he.jar net.sf.saxon.Transform -t -s:$LESSON/fr/text/$LESSON.xml -xsl:_templates/$STYLE/online.xsl
 	zip -qr dist/$LESSON.zip imsmanifest.xml sitemap.xml $LESSON _templates/java
 	rm imsmanifest.xml sitemap.xml
+	ln -sf ../$LESSON/fr/html/index.html dist/$LESSON.html
 }
 
 if [[ $#<2 ]]; then usage; exit 1; fi
