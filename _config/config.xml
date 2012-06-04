@@ -24,7 +24,7 @@
     <!--Enter an URL to your bugtracker form here (or leave empty if you dont have one) -->
     <bugtracker></bugtracker>
     <!--Would you like to use a navigation in your online version? "yes" or "no" -->
-    <use_navigation>no</use_navigation>
+    <use_navigation>yes</use_navigation>
   </online>
   <!--These parameters are only used for the print version -->
   <print>
