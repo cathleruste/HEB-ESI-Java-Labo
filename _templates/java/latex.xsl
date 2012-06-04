@@ -879,4 +879,21 @@
 		</xsl:text>
     </xsl:template>
 
+    <!-- Le calcul de la taille ne m'avait pas l'air correct -->
+    <xsl:template name="elml:image_width_height">
+        <xsl:choose>
+            <xsl:when test="@units='percent' and @width">
+                <xsl:value-of select="@width div 100"/>
+                <xsl:text>\linewidth,</xsl:text>
+            </xsl:when>
+            <xsl:when test="@width and ((@width * $converter_pixel_mm) &lt; (textwidth * 10))">
+                <xsl:value-of select="@width * $converter_pixel_mm"/>
+                <xsl:text>mm,</xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:text>0.8\linewidth,</xsl:text>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
 </xsl:stylesheet>
