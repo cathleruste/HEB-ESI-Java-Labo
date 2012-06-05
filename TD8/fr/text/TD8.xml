@@ -2,7 +2,7 @@
 <lesson xmlns="http://www.elml.ch" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
-    label="TD8" title="Td8 : Les tableaux à 2 dimensions">
+    label="TD8" title="TD8 : Les tableaux à 2 dimensions">
     
 	<entry>
 		<paragraph>  
@@ -10,7 +10,7 @@
 		</paragraph>  
 	</entry>
 
-	<unit label="TD8" title="Td8 : Les tableaux à 2 dimensions">
+	<unit label="TD8" title="TD8 : Les tableaux à 2 dimensions">
 		<learningObject title="Exercices">
 			<act>
 			  <paragraph title="Les nuls" icon="act"/>
