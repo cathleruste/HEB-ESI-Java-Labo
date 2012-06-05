@@ -13,7 +13,7 @@
 			</paragraph>
 		</entry>
 		
-		<unit label="TD3Ex" title="Exercices préparatoires au TD3">
+		<unit label="TD3Prepa" title="Exercices préparatoires au TD3">
 
 			<entry>
 				<paragraph>  
@@ -97,7 +97,39 @@
 			                  <gap answers="">-</gap> 
 			                  <gap answers="">-</gap> 
 			                  <gap answers="">-</gap> 
-								</item>  
+								</item>
+              </list> 
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
+				
+				<selfCheck title="" shuffle="no">
+					<fillInBlanks>
+						<question>Modifiez les permissions </question>
+						<gapText> 
+							<list listStyle="unordered">
+								<item>
+									pour que le fichier <formatted style="code">/home/gxxxxx/td3/fichier</formatted> 
+									puisse être lu et modifié par votre professeur et vous même mais seulement lu par les autres étudiants 
+									<newLine/>
+				                <gap answers="">chmod</gap> 
+			                  <gap answers="6,7">6</gap> 
+			                  <gap answers="4,5">4</gap>  
+			                  <gap answers="6,7">6</gap> 
+			                  <gap answers="/home/gxxxxx/td3/fichier,fichier">/home/gxxxxx/td3/fichier</gap> 
+								</item> 
+								<item>
+								  À quel groupe ce fichier doit-il appartenir ?
+									<newLine/>
+				               <gap answers="etudiants,etudiants1">etudiants</gap> 
+								</item> 
+								<item>
+								  Quelle commande permet de modifier le groupe du fichier afin de l'adapter à ce qui est demandé ci-dessus ?
+									<newLine/>
+									      <gap answers="">chgrp</gap> 
+				               <gap answers="etudiants,etudiants1">etudiants</gap> 
+								</item> 
 							</list> 
 						</gapText>
 						<solution></solution>
@@ -165,7 +197,7 @@
         
 				<selfCheck title="Nom d'un programme" shuffle="yes">
 					<fillInBlanks>
-						<question>Dans quels fichiers doivent être placés les programmes suivants :</question>
+						<question>Quels noms doivent avoir les fichiers dans lesquels sont placés les programmes suivants :</question>
 						<gapText> 
 							<paragraph cssClass="java">
     public class Exercice {  
@@ -223,7 +255,7 @@
 							<gap answers="main">main</gap> 
 							(            
 							<gap answers="String">String</gap> 
-							<gap answers="[]">[]</gap> 
+							<gap answers="[],[ ]">[]</gap> 
 							<gap answers="args">args</gap> 
 							)   
 						</gapText>
@@ -235,7 +267,7 @@
 					<fillInBlanks>
 						<question>
 							<paragraph>
-								Donnez l'équivalent java du type logique suivant
+								Donnez l'équivalent Java du type logique suivant
 							</paragraph>
 						</question>
 						<gapText> 
@@ -337,7 +369,7 @@ public class ReadingExercice {
         boolean ok = keyboard.<gap answers="">nextBoolean()</gap> ;
         String string1 = keyboard.<gap answers="">next()</gap> ; // We read a word
         String string2 = keyboard.<gap answers="">nextLine()</gap> ; // We read a line 
-        char aCharacter = keyboard.<gap answers="">next.charAt()</gap> ;
+        char aCharacter = keyboard.<gap answers="">next().charAt()</gap> ;
     }
 }							</paragraph>
 						</gapText>
@@ -397,7 +429,68 @@ public class ReadingExercice {
 				</selfCheck>  
 			</act> 
 		</learningObject>
-    
+
+		<learningObject title="Théorie"> 
+			<clarify>
+				<paragraph> 
+					Avant de venir au prochain labo, lisez attentivement le point 20 du guide visuel.  
+				</paragraph>   
+			</clarify>
+			
+			<act>
+				<selfCheck title="Sélection multiple" shuffle="no">
+					<multipleChoice>
+						<question>La commande <formatted style="code">rm td*.java</formatted> supprime le(s) fichier(s) :
+						</question>
+						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractères" correct="yes"> 
+              td.java
+						</answer>
+						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractères mais le fichier doit se terminer par .java" correct="no"> 
+							td2
+						</answer>
+						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractères" correct="yes"> 
+							td2.java
+						</answer>
+						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractères" correct="yes"> 
+							td3Prepa.java
+						</answer>
+						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractères" correct="yes"> 
+							td3.java
+						</answer>
+						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractères" correct="yes"> 
+							td10.java
+						</answer>
+					</multipleChoice>
+				</selfCheck>
+        
+        <selfCheck title="" shuffle="no">
+					<multipleChoice>
+						<question>La commande <formatted style="code">rm td?.java</formatted> supprime le(s) fichier(s) :
+						</question>
+						<answer feedback="Le ? est remplacé par un et un seul caractère" correct="no"> 
+              td.java
+						</answer>
+						<answer feedback="Le ? est remplacé par un et un seul caractère mais le fichier doit se terminer par .java" correct="no"> 
+							td2
+						</answer>
+						<answer feedback="Le ? est remplacé par un et un seul caractère" correct="yes"> 
+							td2.java
+						</answer>
+						<answer feedback="Le ? est remplacé par un et un seul caractère" correct="no"> 
+							td3Prepa.java
+						</answer>
+						<answer feedback="Le ? est remplacé par un et un seul caractère" correct="yes"> 
+							td3.java
+						</answer>
+						<answer feedback="Le ? est remplacé par un et un seul caractère" correct="no"> 
+							td10.java
+						</answer>
+					</multipleChoice>
+				</selfCheck>
+        
+			</act>
+		</learningObject>
+  
 		<learningObject title="Logique"> 
 			<clarify>
 				<paragraph>  
@@ -407,14 +500,6 @@ public class ReadingExercice {
 			</clarify>
 		</learningObject>
 
-		<learningObject title="Théorie"> 
-			<clarify>
-				<paragraph> 
-					Avant de venir au prochain labo, lisez attentivement le point 20 du guide visuel.  
-				</paragraph>   
-			</clarify>
-		</learningObject>
-    
 		<learningObject title="Bravo">
 			<clarify>
 				<paragraph> 
