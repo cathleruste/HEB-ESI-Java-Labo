@@ -90,13 +90,22 @@
         <paragraph title="Exercices" icon="icon_experiment"/> 
         <list listStyle="ordered">
           <item>
-            Copiez dans votre répertoire td3 créé ci-dessus tous les fichiers du répertoire /eCours/java/td/td3 dont l'extension est .java 
+            Copiez dans votre répertoire td3 créé ci-dessus tous les fichiers du répertoire
+            <formatted style="code">/eCours/java/td/td3</formatted> dont l'extension est <formatted style="code">.java</formatted> 
             (c'est possible sans passer par un <formatted style="input">cd /eCours/java/td/td3</formatted>)
           </item>  
-          <item>Copiez dans votre répertoire td3 tous les fichiers du répertoire /eCours/java/td/td3 dont la deuxième lettre est un 'x'.</item>  
-          <item>Listez le contenu des répertoires des étudiants (pour rappel, les répertoires des étudiants sont ceux qui se trouvent dans /home et qui commencent par un 'g'). </item>  
-          <item>Listez le contenu des répertoires des professeurs (pour rappel, les  
-          répertoires des professeurs sont ceux qui se trouvent dans /home et qui sont composés de 3 lettres).</item>  
+          <item>
+            Copiez dans votre répertoire td3 tous les fichiers du répertoire 
+            <formatted style="code">/eCours/java/td/td3</formatted> dont la deuxième lettre est un '<formatted style="code">x</formatted>'.
+          </item>  
+          <item>
+            Listez le contenu des répertoires des étudiants (pour rappel, les répertoires des étudiants sont ceux 
+            qui se trouvent dans <formatted style="code">/home</formatted> et qui commencent par un '<formatted style="code">g</formatted>').
+          </item>  
+          <item>
+            Listez le contenu des répertoires des professeurs (pour rappel, les  
+            répertoires des professeurs sont ceux qui se trouvent dans <formatted style="code">/home</formatted> et qui sont composés de 3 lettres).
+          </item>  
         </list>
       </clarify>
       
@@ -198,12 +207,14 @@ public class Hello {
         </paragraph>  
         <list listStyle="unordered">
           <item>soit il ne peut pas trouver le fichier ".class" demandé;</item>  
-          <item>soit il peut trouver une erreur lors de l'exécution de cette classe (division par zéro par exemple).</item>  
+          <item>
+            soit il peut trouver une erreur lors de l'exécution de cette classe (division par zéro par exemple).
+            <multimedia src="../image/ErreurExec.jpg" type="jpeg" legend="Erreur à l'exécution"/>
+          </item>  
         </list>
         <paragraph>  
           Le message d'erreur sera différent; apprenez à les reconnaitre.   
         </paragraph>  
-        <multimedia src="../image/ErreurExec.jpg" type="jpeg" legend="Erreur à l'exécution"/>
       </clarify>
       
       <clarify>
@@ -251,7 +262,7 @@ public class Hello {
     
       <clarify>
         <paragraph>
-          Voici un exercice vu au cours de logique, reprennez l' algorithme écrit en logique et écrivez le programme java correspondant.
+          Voici un exercice vu au cours de logique, reprennez l' algorithme écrit en logique et écrivez le programme Java correspondant.
         </paragraph>
       </clarify>
       
@@ -398,7 +409,7 @@ public class Hello {
         </paragraph>  
         
         <list listStyle="ordered">
-          <item>Ouvrez l'explorateur de fichier Windows (par exemple en cliquant sur l'icône "My Computer".</item>  
+          <item>Ouvrez l'explorateur de fichier Windows (par exemple en cliquant sur l'icône "My Computer").</item>  
           <item>
             Dans le champ d'adresse, tapez l'adresse <formatted style="input">ftp://linux1</formatted><newLine/>
             <popup title="une capture d'écran">
