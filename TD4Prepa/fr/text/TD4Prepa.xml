@@ -12,7 +12,7 @@
 		</paragraph>
 	</entry>
 
-	<unit label="TD4Ex" title="Exercices préparatoires au TD4">
+	<unit label="TD4Prepa" title="Exercices préparatoires au TD4">
 
 		<entry>
 			<paragraph>  
@@ -29,7 +29,7 @@
 						<question></question>
 						<gapText>
 							<paragraph>
-								Quelle commande vi permet de ;
+								Quelle commande vi permet de :
 							</paragraph>
 							<list listStyle="unordered">
 								<item>passer du mode commande en mode insertion <gap answers="">i</gap></item>
@@ -50,7 +50,7 @@
 							<list listStyle="unordered">
 								<item>de quitter en sauvant <gap answers="">:x</gap></item>
 								<item>d'afficher les numéros de ligne <gap answers="">:set</gap> <gap answers="">nu</gap></item>
-								<item>de retrouver le mot <formatted style="italic">abbr</formatted> <gap answers="">:/abbr</gap></item>
+								<item>de retrouver le mot <formatted style="italic">abbr </formatted> <gap answers="">:/abbr</gap></item>
               </list>
               <paragraph>
 								En mode commande :
@@ -142,7 +142,7 @@
 						</question>
 						<answer feedback="" correct="no">la machine virtuelle est mal installée</answer>
 						<answer feedback="" correct="no">le source n'a pas été compilé</answer>
-						<answer feedback="" correct="yes">l'entête de la méthode main est incorrect</answer>
+						<answer feedback="il manque le mot clé static" correct="yes">l'entête de la méthode main est incorrect</answer>
 						<answer feedback="" correct="no">on exécute la mauvaise classe</answer>
 						<solution>En effet, quel est-il d'ailleurs ?</solution>
 					</multipleChoice>
@@ -186,8 +186,8 @@
 						</question>
 						<answer feedback="" correct="no">la machine virtuelle est mal installée</answer>
 						<answer feedback="" correct="no">l'entête de la méthode main est incorrect</answer>
-						<answer feedback="" correct="yes">on exécute la mauvaise classe</answer>
-						<solution>En effet... quelle classe tente-t-il d'exécuter ?</solution>
+						<answer feedback="En effet... quelle classe tente-t-il d'exécuter ? (Relisez bien la commande d'exécution)" correct="yes">on exécute la mauvaise classe</answer>
+						<solution></solution>
 					</multipleChoice>
 				</selfCheck>
 
@@ -198,8 +198,8 @@
 			<act>
 				<selfCheck title="Instructions de choix" shuffle="no">
 					<multipleChoice>
-					<question>Quelles instructions de choix ne sont 
-					<formatted style="bold">pas correctes</formatted> parmi les suivantes ? Expliquez pourquoi.</question>
+					<question>Quelles instructions de choix NE sont 
+					<formatted style="bold">PAS correctes</formatted> parmi les suivantes ? Expliquez pourquoi.</question>
 					<answer feedback="Il faut respecter la casse" correct="yes">
 						version 1
 						<paragraph cssClass="java">
@@ -262,7 +262,7 @@
 				<selfCheck title="Opérateurs de comparaison" shuffle="yes">
 					<multipleChoice>
 						<question>Quels opérateurs parmi les suivants sont des opérateurs de comparaison ?</question>
-						<answer feedback="" correct="no">=</answer>
+						<answer feedback="pour comparer l'égalité, l'opérateur est ==, l'opérateur = est celui de l'affectation" correct="no">=</answer>
 						<answer feedback="" correct="yes">&lt;</answer>
 						<answer feedback="" correct="yes">&lt;=</answer>
 						<answer feedback="" correct="no">=&lt;</answer>
