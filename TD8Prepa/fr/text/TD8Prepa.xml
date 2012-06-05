@@ -2,7 +2,7 @@
 <lesson xmlns="http://www.elml.ch" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
-    label="TD8Prepa" title="Td8 - Exercices préparatoires">
+    label="TD8Prepa" title="TD8 - Exercices préparatoires">
   
   
 	<entry>
@@ -135,29 +135,17 @@
                 initialisé avec les valeurs données 
               </paragraph>
               <table>
-                <tablerow>
-                  <tabledata>
-                    1.1
-                  </tabledata>
-                  <tabledata>
-                    1.2
-                  </tabledata>
+                <tablerow >
+                  <tabledata width="30" units="pixels" align="center">1.1</tabledata>
+                  <tabledata width="30" units="pixels" align="center">1.2</tabledata>
                 </tablerow>
                 <tablerow>
-                  <tabledata>
-                    2.1
-                  </tabledata>
-                  <tabledata>
-                    2.2
-                  </tabledata>
+                  <tabledata align="center">2.1</tabledata>
+                  <tabledata align="center">2.2</tabledata>
                 </tablerow>
                 <tablerow>
-                  <tabledata>
-                    3.1
-                  </tabledata>
-                  <tabledata>
-                    3.2
-                  </tabledata>
+                  <tabledata align="center">3.1</tabledata>
+                  <tabledata align="center">3.2</tabledata>
                 </tablerow>
               </table>
               <paragraph>
@@ -188,44 +176,44 @@
             <answer feedback="" correct="no">est un tableau à une dimension.</answer>
           </multipleChoice>
         </selfCheck>
-        
-        
-        <selfCheck title="Vrai ou faux" shuffle="no">
-        
-          <paragraph>
+
+          <paragraph title="Vrai ou faux" >
             Reprenons le tableau <formatted style="java">entierss</formatted> contenant les élements <formatted style="java">{{3,4},{5},{6,7,8}}</formatted>.
           </paragraph>
-        
+                
+        <selfCheck shuffle="no">
           <multipleChoice>
             <question><formatted style="java">entierss[1]</formatted> vaut 5.</question>
             <answer feedback="Pour atteindre un élément du tableau à deux dimensions il faut utiliser deux indices. Rappelez vous que le nombre de crochets est égal à la dimension du tableau et au nombre d'indices nécessaires pour atteindre un élément." 
               correct="no">vrai</answer>
-            <answer feedback="" correct="yes">faux</answer>
+            <answer feedback=" " correct="yes">faux</answer>
           </multipleChoice>
         </selfCheck>
         
-        <selfCheck title="" shuffle="no">
+        <selfCheck shuffle="no">
           <multipleChoice>
             <question><formatted style="java">entierss[1][2]</formatted> vaut 4.</question>
             <answer feedback="entierss[1][2] est un élément qui n'existe pas." correct="no">vrai</answer>
-            <answer feedback="" correct="yes">faux</answer>
+            <answer feedback=" " correct="yes">faux</answer>
             </multipleChoice>
         </selfCheck>
         
-        <selfCheck title="" shuffle="no">
+        <selfCheck shuffle="no">
           <multipleChoice>
             <question><formatted style="java">entierss[2][1] = 4;</formatted> remplace la valeur 7 par la valeur 4.</question>
-            <answer feedback="" correct="yes">vrai</answer>
-            <answer feedback="" correct="no">faux</answer>
+            <answer feedback=" " correct="yes">vrai</answer>
+            <answer feedback=" " correct="no">faux</answer>
           </multipleChoice>
         </selfCheck>
         
-        <selfCheck title="" shuffle="no">
+        <selfCheck shuffle="no">
           <multipleChoice>
-            <question>Si <formatted style="java">entiersss</formatted> est un tableau à 3 dimensions, il est possible d'écrire l'instruction<formatted style="java">entierss = entiersss;</formatted></question>
+            <question>Si <formatted style="java">entiersss</formatted> est un tableau à 3 dimensions,
+            il est possible d'écrire l'instruction
+            <formatted style="java">entierss = entiersss;</formatted></question>
             <answer feedback="La déclaration d'un tableau réserve un emplacement sur la pile pour une référence du type du tableau. Comme nos références ont des types différents cela provoque une erreur de compilation pour cause d'incompatibilité." 
               correct="no">vrai</answer>
-            <answer feedback="" correct="yes">faux</answer>
+            <answer feedback=" " correct="yes">faux</answer>
           </multipleChoice>
         </selfCheck>
         
@@ -241,24 +229,24 @@
           </multipleChoice>
         </selfCheck>
         
-        <selfCheck title="tailles d'un tableau à deux dimensions" shuffle="yes">
+        <selfCheck title="Tailles d'un tableau à deux dimensions" shuffle="no">
           <fillInBlanks>
-            <question/>
-            <gapText>La taille de la première dimension de <formatted style="java">entierss</formatted> contenant 
-            les élements <formatted style="java">{{3,4},{5,5},{6,7}}</formatted> est donnée par 
-              <gap answers="">entierss.length</gap>. <newLine/>
-              Cette valeur vaut     
-              <gap answers="">3</gap>
-              dans notre exemple.  <newLine/>
-              La taille de la seconde dimension est donnée par 
-              <gap answers="entiers[0].length,entiers[1].length,entiers[2].length">entiers[0].length</gap>.<newLine/>
-              Cette valeur vaut     
-              <gap answers="">2</gap>
-              dans notre exemple.
+            <question>
+					Soit le tableau <formatted style="java">entierss</formatted> contenant 
+					les élements <formatted style="java">{{3,4},{5,5},{6,7}}</formatted>.
+			</question>
+            <gapText>
+					La taille de sa première dimension est donnée par <gap answers="">entierss.length</gap>.
+					Cette valeur vaut <gap answers="">3</gap> dans notre exemple.
+					<newLine/>
+					La taille de sa seconde dimension est donnée par 
+					<gap answers="entiers[0].length,entiers[1].length,entiers[2].length">entiers[0].length</gap>.
+					Cette valeur vaut <gap answers="">2</gap> dans notre exemple.
             </gapText>
             <solution/>
           </fillInBlanks>
         </selfCheck>
+        
       </act>
     </learningObject>
     
@@ -270,7 +258,7 @@
 		</learningObject>
 		
 		<learningObject title="Bravo">
-			<clarify><paragraph title="Bravo" icon="icon_bravo"/>
+			<clarify>
 				Si vous avez réussi à répondre correctement aux questions précédentes,
 				c'est que vous êtes prêt à venir au laboratoire dans les meilleures
 				conditions!
