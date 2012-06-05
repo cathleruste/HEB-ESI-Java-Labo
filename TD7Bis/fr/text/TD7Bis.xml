@@ -2,7 +2,7 @@
 <lesson xmlns="http://www.elml.ch" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
-    label="TD7Bis" title="Td7Bis : Les tableaux (suite)">
+    label="TD7Bis" title="TD7Bis : Les tableaux (suite)">
   
   
 	<entry>
@@ -11,7 +11,7 @@
 		</paragraph>  
 	</entry>
 
-	<unit label="TD7Bis" title="Td7Bis : Les tableaux (suite)">
+	<unit label="TD7Bis" title="TD7Bis : Les tableaux (suite)">
 		<learningObject title="Exercices">
 			<act>
 			  <paragraph title="Tests" icon="act"/>  
@@ -26,18 +26,19 @@
 				</paragraph>    
 				
 				<paragraph cssClass="java">
-<![CDATA[
-@Test
+<![CDATA[@Test
 public void occurence_cas1() {
   int nb = 122555;
   int [] tabOccurencesAttendues = {0,1,2,0,0,3,0,0,0,0};
   int [] tabOccurencesObtenues = MaClasse.occurence(nb);
   
+  // We check that the array exists
+  assertTrue(tabOccurencesObtenues!=null);
+
   // We check that the array size is correct
   assertEquals(tabOccurencesAttendues.length, tabOccurencesObtenues.length);
   
-  // Then, we check that each element is the expected one
-  
+  // We check that each element is the expected one
   for (int i=0; i<tabOccurencesAttendues.length; i++){
     assertEquals (tabOccurencesAttendues[i], tabOccurencesObtenues[i]);
   }    
@@ -46,22 +47,35 @@ public void occurence_cas1() {
       </act>
       
 			<clarify>
-        <paragraph title="Lancer les tests" icon="icon_reading"/>  
-				<paragraph>
-					Pour lancer le test, il suffit de<newLine/>    
-					<list listStyle="unordered">
-            <item>Compiler la classe.</item>  
-            <item>Lancer la commande : <formatted style="code">java org.junit.runner.JUnitCore package.MaclasseTest</formatted>.<newLine/>
-              Cette commande lance le test et affiche un message récapitulatif du nombre de tests et du décompte de ceux qui ont réussi ou échoué.<newLine/>
-              Si cela ne fonctionne pas c'est que la JVM ne trouve pas la classe <formatted style="code">org.junit.runner.JUnitCore</formatted> 
+			<paragraph title="Lancer les tests" icon="icon_reading"/>  
+			<paragraph>
+				Pour lancer le test, il suffit de :    
+			</paragraph>    
+			<list listStyle="ordered">
+				<item>
+					Compiler la classe.
+				</item>  
+				<item>
+					Lancer la commande : <formatted style="code">java org.junit.runner.JUnitCore package.MaclasseTest</formatted>.
+					<newLine/>
+					Cette commande lance le test et affiche un message récapitulatif du nombre de tests
+					et du décompte de ceux qui ont réussi ou échoué.
+				</item>  
+			</list>
+			<paragraph>
+              Si cela ne fonctionne pas c'est que la JVM ne trouve pas la classe
+              <formatted style="code">org.junit.runner.JUnitCore</formatted> 
               qui se trouve dans le fichier jar <formatted style="code">/usr/share/java/junit4.jar</formatted>, 
               il faudra dont ajouter ce chemin à votre <formatted style="code">CLASSPATH</formatted> 
-              et relancer un <formatted style="italic">shell</formatted> afin que la variable d'environnement soit relue.<newLine/>    
-              Certains d'entre vous ne voudront pas entrer cette longue commande lors de chaque test.<newLine/>    
-              Rien ne les empêche de définir un alias avec <formatted style="code">alias javatest='java org.junit.runner.JUnitCore'</formatted>
-            </item>  
-          </list>
-				</paragraph>    
+              et relancer un <formatted style="italic">shell</formatted> afin que la variable d'environnement soit relue.
+			</paragraph>    
+			<paragraph>
+              Certains d'entre vous ne voudront pas entrer cette longue commande lors de chaque test.    
+              Rien ne les empêche de définir un alias avec la commande :
+			</paragraph>    
+			<paragraph cssClass="code">
+    alias javatest='java org.junit.runner.JUnitCore'
+			</paragraph>    
       </clarify>
       
 			<act>
@@ -86,15 +100,15 @@ public void occurence_cas1() {
 			  <paragraph title="Travailler chez vous" icon="icon_reading"/>  
 				<paragraph>    
 					JUnit n'est pas fourni avec JDK, vous devez l'installer.<newLine/>
-					Pour cela    
+					Pour cela :
 				  <list listStyle="ordered">
-				    <item>allez sur le site JUnit et téléchargez JUnit (version 4.x)</item>    
-            <item>décompressez-le dans un dossier de votre choix.<newLine/>    
+				    <item>Allez sur le site JUnit et téléchargez JUnit (version 4.x)</item>    
+            <item>Décompressez-le dans un dossier de votre choix.<newLine/>    
               Le mieux étant bien sûr d'organiser vos dossiers, fichiers, 
-              nous ne pouvons que vivement vous conseiller de regrouper toutes vos librairies java à un même endroit. <newLine/>    
-              Dans <formatted style="code">/usr/local/share/java</formatted> par exemple.    
+              nous ne pouvons que vivement vous conseiller de regrouper toutes vos librairies java à un même endroit.   
+              (dans <formatted style="code">/usr/local/share/java</formatted> par exemple)    
             </item>    
-            <item>modifiez votre CLASSPATH pour y ajouter le fichier <formatted style="italic">junit-4.x.jar</formatted></item>    
+            <item>Modifiez votre CLASSPATH pour y ajouter le fichier <formatted style="italic">junit-4.x.jar</formatted></item>    
 			    </list>
 			  </paragraph>
 			</clarify>
