@@ -2,7 +2,7 @@
 <lesson xmlns="http://www.elml.ch" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
-	label="TD7BisPrepa" title="Td7Bis - Exercices préparatoires">
+	label="TD7BisPrepa" title="TD7Bis - Exercices préparatoires">
 	
 	
 	<entry>
@@ -24,7 +24,7 @@
 
 		<learningObject title="Survol du langage : JUnit">
 			<act>
-				<selfCheck title="Tests" shuffle="no">
+				<selfCheck title="Les tests" shuffle="no">
 					<fillInBlanks>
 						<question></question>
 						<gapText>  
@@ -39,42 +39,57 @@
 								(c-à-d cas général, cas particuliers et valeurs limites).    
 							</paragraph>    
 							<paragraph><gap answers="">JUnit</gap> est un outil pour automatiser les tests unitaires.
-							</paragraph>    
-							<paragraph>La classe de test contient une méthode de test par cas.<newLine/>    
+							</paragraph>
+							<!-- MCD: Ne me parait pas évident. Le mettre sans trou ?
+							<paragraph>    
 								Cette méthode est <gap answers="">autonome</gap> (ne reçoit rien ne retourne rien) 
 								et elle ne contient que des <gap answers="">affirmations</gap> 
 								(appel de la méthode à tester, comparaison entre le résultat attendu et le résultat obtenu).
 							</paragraph>    
+							-->
 							<paragraph>    
-								Une méthode est reconnue comme étant un test unitaire grâce au tag <formatted style="java"><gap answers="">@Test</gap></formatted>.    
+								Une classe de test contient une méthode de test par cas.
+								Une méthode est reconnue comme étant un test unitaire grâce au tag <formatted style="javawithblanks"><gap answers="">@Test</gap></formatted>.
+								Elle contient des affirmations :
 							</paragraph>    
-							<paragraph>    
-								<formatted style="java"><gap answers="">assertEquals</gap>(int1, int2)</formatted> 
+							<list style="unordered"> 
+								<item>
+								<formatted style="javawithblanks"><gap answers="">assertEquals</gap>(int1, int2)</formatted> 
 								vérifie que les 2 valeurs entières <formatted style="java">int1</formatted> et <formatted style="java">int2</formatted> sont identiques,    
-								<newLine/>
-								<formatted style="java"><gap answers="">assertTrue</gap>(val)</formatted> 
+								</item>								
+								<item>
+								<formatted style="javawithblanks"><gap answers="">assertTrue</gap>(val)</formatted> 
 								vérifie que la valeur du booléen <formatted style="java">val</formatted> est à vrai,     
-								<newLine/>
-								<formatted style="java"><gap answers="">assertFalse</gap>(val)</formatted> 
-								vérifie que la valeur du booléen <formatted style="java">val</formatted> est à faux.    
-							</paragraph>    
+								</item>								
+								<item>
+								<formatted style="javawithblanks"><gap answers="">assertFalse</gap>(val)</formatted> 
+								vérifie que la valeur de <formatted style="java">val</formatted> est à faux.    
+								</item>								
+							</list>    
 							<paragraph>    
-								Le tag <formatted style="java"><gap answers="">@Test</gap> (<gap answers="">expected=IllegalArgumentException.class</gap>)</formatted> 
+								Le tag <formatted style="javawithblanks"><gap answers="">@Test</gap> (<gap answers="">expected=IllegalArgumentException.class</gap>)</formatted> 
                 permet de vérifier que la méthode lance bien une exception de type <formatted style="java">IllegalArgumentException</formatted>.    
 							</paragraph>
 							<paragraph>
                 Dans la classe de tests, 2 instructions <formatted style="java">import</formatted> sont nécessaires :    
-                <newLine/>    
-                <formatted style="java">import <gap answers="">org</gap>.<gap answers="">junit</gap>.	<gap answers="">Test</gap>;</formatted>
+							<list style="unordered"> 
+							<item>
+								<formatted style="javawithblanks">import <gap answers="">org</gap>.<gap answers="">junit</gap>.<gap answers="">Test</gap>;</formatted>
                 // Pour que @Test soit connu
-                <newLine/>    
-                <formatted style="java">import <gap answers="">static</gap> 
+                </item>
+                <item>
+                <formatted style="javawithblanks">import <gap answers="">static</gap> 
                 <gap answers="">org</gap>.<gap answers="">junit</gap>.<gap answers="">Assert</gap>.<gap answers="">*</gap>;</formatted>
                 // Pour que les méthodes de vérification ci-dessus soient reconnues.
+                </item>
+                </list>
 							</paragraph>
 							<paragraph>    
-								La commande <formatted style="java"><gap answers="">java</gap> 
-								<gap answers="">org</gap>.<gap answers="">junit</gap>.<gap answers="">runner</gap>.<gap answers="">JUnitCore</gap>
+								La commande
+								<newLine/>
+								<formatted style="javawithblanks">
+								<gap answers="">java</gap> 
+								<gap answers="">org.junit.runner.JUnitCore</gap>
 								<gap answers="">g32000.tds.td7BisPrepa.ExerciceTest</gap></formatted><newLine/>
 								permet de lancer les tests de la classe <formatted style="java">ExerciceTest</formatted> 
 								dont le package est <formatted style="java">g32000.tds.td7BisPrepa</formatted> précédemment compilée.    
@@ -85,12 +100,13 @@
 				</selfCheck>
 			</act>
 			
-			<clarify><paragraph title="Vérif" icon="icon_activity"/>
+			<clarify><paragraph title="Vérification" icon="icon_activity"/>
 			  <paragraph>
           Lors du td précédent, on vous a demandé d'écrire la méthode donnant l'occurrence des chiffres d'un nombre. <newLine/>
-          Écrivez dans votre carnet un plan de tests pour cette méthode.    
+          Écrivez sur papier un plan de tests pour cette méthode.    
           <newLine/>  
-          <popup title="Avez-vous pensé :"> 
+          <popup title="un conseil">
+			  <paragraph>Avez-vous pensé ?</paragraph> 
             <list listStyle="unordered">
               <item>aux cas généraux (plusieurs exemples)</item>    
               <item>à un nombre dont tous les chiffres sont identiques</item>    
@@ -105,8 +121,8 @@
 		<learningObject title="Logique">
 			<clarify>  
 			  <paragraph>
-				  Assurez-vous de venir au laboratoire avec vos solutions <newLine/>
-				  des exercices 15 et 17 du chapitre 8 "Les tableaux" <newLine/>
+				  Assurez-vous de venir au laboratoire avec vos solutions 
+				  des exercices 15 et 17 du chapitre 8 "Les tableaux" 
 				  ainsi qu'avec le chapitre 9 "Le tri" de votre cours de logique .
         </paragraph>
 			</clarify>
@@ -114,7 +130,6 @@
 		
 		<learningObject title="Bravo">
 			<clarify>
-			  <paragraph title="Bravo" icon="icon_bravo"/>  
 			  <paragraph>
           Si vous avez réussi à répondre correctement aux questions précédentes,    
           c'est que vous êtes prêt à venir au laboratoire dans les meilleures    

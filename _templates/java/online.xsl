@@ -189,8 +189,8 @@
 				<xsl:when test="string-length(.)&lt;4">25</xsl:when>
 				<xsl:when test="string-length(.)&lt;8">50</xsl:when>
 				<xsl:when test="string-length(.)&lt;16">100</xsl:when>
-				<xsl:when test="string-length(.)&lt;32">200</xsl:when>
-				<xsl:otherwise>400</xsl:otherwise>
+				<xsl:when test="string-length(.)&lt;32">150</xsl:when>
+				<xsl:otherwise>240</xsl:otherwise>
 			</xsl:choose>
 		</xsl:param>
 		<input type="text" value="" class="itemText" id="{$selfCheckLabel}_{generate-id(.)}" style="width:{$gap_stringlength}px"/>
