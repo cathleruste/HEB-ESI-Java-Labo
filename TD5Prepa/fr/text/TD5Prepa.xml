@@ -16,7 +16,7 @@
   
 		<entry>
 			<paragraph>  
-				Vous trouverez les réponses dans les 5 premières leçons du cours ou dans les tds précédents.  
+				Vous trouverez les réponses dans les leçons du cours ou dans les tds précédents.  
 			</paragraph>
 		</entry>
 
@@ -32,7 +32,7 @@
               <list listStyle="unordered">
                 <item>joindre 2 lignes <gap answers="">J</gap></item>  
                 <item>insérer en fin de ligne <gap answers="">A</gap></item>  
-                <item>répéter la dernière commande d'édition<gap answers="">.</gap></item>  
+                <item>répéter la dernière commande d'édition <gap answers="">.</gap></item>  
               </list>  
             </gapText>
             <solution/>
@@ -82,10 +82,10 @@ return absolu;
             <answer feedback="En effet, si on ne rentre pas dans le if, la variable absolu ne sera pas initialisée." correct="yes">
               la variable <formatted style="java">absolu</formatted> n'est pas toujours initialisée
             </answer>
-            <answer feedback="" correct="no">la variable <formatted style="java">absolu</formatted> a un nom invalide </answer>
-            <answer feedback="" correct="no">la variable <formatted style="java">absolu</formatted> n'est pas du bon type </answer>
-            <answer feedback="" correct="no">cette méthode ne doit pas avoir d'instruction return </answer>
-            <answer feedback="" correct="no">la valeur donnée à <formatted style="java">absolu</formatted> n'est pas du bon type </answer>
+            <answer feedback="Non, ce n'est pas ça." correct="no">la variable <formatted style="java">absolu</formatted> a un nom invalide </answer>
+            <answer feedback="Non, ce n'est pas ça." correct="no">la variable <formatted style="java">absolu</formatted> n'est pas du bon type </answer>
+            <answer feedback="Non, ce n'est pas ça." correct="no">cette méthode ne doit pas avoir d'instruction return </answer>
+            <answer feedback="Non, ce n'est pas ça." correct="no">la valeur donnée à <formatted style="java">absolu</formatted> n'est pas du bon type </answer>
           </multipleChoice>
         </selfCheck>
         
@@ -114,7 +114,7 @@ public class MaMoyenne {
               <gap answers="">2</gap>
             </gapText>
             <solution>
-              La division entre 2 entiers est la division entière !
+              La division entre deux entiers est la division entière !
             </solution>
           </fillInBlanks>
         </selfCheck>
@@ -172,11 +172,11 @@ public class MaMoyenne {
         <paragraph cssClass="java">
 <![CDATA[public class Operation {
 
-    public static void entete() {
+  public static void entete() {
     
-        System.out.println("Operations");
-        
-	}   
+    System.out.println("Operations");
+    
+  }   
 	
 	public static double lireNonNul() {  
 	  
@@ -267,8 +267,10 @@ public class MaMoyenne {
         </paragraph>  
         <paragraph>
           Préparez aussi la logique du programme suivant :<newLine/>  
-          un programme <formatted style="italic">plusUn</formatted> prenant en paramètre un entier. Il se  
-          contentera d'ajouter 1 à l'entier reçu en paramètre.  
+          <formatted style="input">
+            un module <formatted style="italic">plusUn</formatted> prend en paramètre un entier et il se  
+            contente d'ajouter 1 à l'entier reçu en paramètre.  
+          </formatted>
         </paragraph>
       </clarify>
     </learningObject>
