@@ -4,10 +4,11 @@ STYLE=java
 
 function usage() {
 	echo "usage:"
-	echo "    elml valider leçon - pour vérifier la syntaxe du fichier de la leçon"
-	echo "    elml pdf leçon     - pour le PDF de la leçon"
-	echo "    elml scorm leçon   - pour le scorm de la leçon"
-	echo "    elml all leçon     - pour le PDF + scorm de la leçon"
+	echo "    elml valider leçon ... - pour vérifier la syntaxe du fichier de la leçon"
+	echo "    elml pdf     leçon ... - pour le PDF de la leçon"
+	echo "    elml html    leçon ... - pour la version HTML (avec menu)"
+	echo "    elml scorm   leçon ... - pour le scorm de la leçon (sans menu)"
+	echo "    elml all     leçon ... - pour le PDF + HTML + scorm de la leçon"
 }
 
 function valider() {
@@ -27,11 +28,18 @@ function pdf() {
 }
 
 
+function html() {
+	java -cp /usr/local/saxon/saxon9he.jar net.sf.saxon.Transform -t -s:$LESSON/fr/text/$LESSON.xml -xsl:_templates/$STYLE/online.xsl
+	ln -sf ../$LESSON/fr/html/index.html dist/$LESSON.html
+	rm imsmanifest.xml sitemap.xml
+}
+
 function scorm() {
+	sed -i -e "s|<use_navigation>yes</use_navigation>|<use_navigation>no</use_navigation>|" _config/config.xml
 	java -cp /usr/local/saxon/saxon9he.jar net.sf.saxon.Transform -t -s:$LESSON/fr/text/$LESSON.xml -xsl:_templates/$STYLE/online.xsl
 	zip -qr dist/$LESSON.zip imsmanifest.xml sitemap.xml $LESSON _templates/java
 	rm imsmanifest.xml sitemap.xml
-	ln -sf ../$LESSON/fr/html/index.html dist/$LESSON.html
+	sed -i -e "s|<use_navigation>no</use_navigation>|<use_navigation>yes</use_navigation>|" _config/config.xml
 }
 
 if [[ $#<2 ]]; then usage; exit 1; fi
@@ -41,7 +49,7 @@ case $1 in
     valider ) valider ;;
     pdf ) pdf ;;
     scorm ) scorm ;;
-    all ) scorm; pdf ;;
+    all ) scorm; html; pdf ;;
     * ) usage ;;
 esac
 
