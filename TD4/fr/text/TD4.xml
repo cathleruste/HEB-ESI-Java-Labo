@@ -304,6 +304,33 @@ public class Ex2 {
 					(Utilisez l’instruction « <formatted style="code">switch</formatted> » pour résoudre cet exercice mais 
 					<formatted style="bold">pas</formatted> avec 30 cas, 7 suffisent!).
 				</paragraph>
+				
+				
+			<clarify>
+				<paragraph title="Exercice" icon="act"/>
+				<paragraph>
+					Écrivez en Java l'algorithme logique suivant 
+				</paragraph>
+				<paragraph cssClass="code">
+<![CDATA[
+  module Test
+      category : chaine
+      ageMax :int
+		
+      lire category
+      selon que category vaut
+          "pousset" : ageMax <- 8
+          "poussin" : ageMax <- 11
+          "benjamin" : ageMax <- 13
+          "minime" : ageMax <- 15
+          "cadet" ou "cadette" : ageMax <- 17
+          "junior" : ageMax <- 20
+          autre : ageMax <- 100
+      fin selon que
+      écrire category, ageMax
+  fin module	
+]]>				</paragraph>
+			</clarify>
 
 				<paragraph title="Année bissextile" icon="act">
 					Syllabus de logique exercice 9 du chapitre 4.
