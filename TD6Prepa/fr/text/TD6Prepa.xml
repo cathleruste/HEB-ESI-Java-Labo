@@ -12,11 +12,11 @@
 		</paragraph>
 	</entry>
 
-	<unit label="TD6Ex" title="Exercices préparatoires au TD6">
+	<unit label="TD6Prepa" title="Exercices préparatoires au TD6">
 
 		<entry>
 			<paragraph>  
-				Vous trouverez les réponses dans les 5 premières leçons du cours ou dans les tds précédents.  
+				Vous trouverez les réponses dans les premières leçons du cours ou dans les tds précédents.  
 			</paragraph>
 		</entry>
 
@@ -236,13 +236,9 @@ public class Test {
         Scanner clavier = new Scanner(System.in); 
         int nombre1; 
 	
-        try { 
-            nombre1 = clavier.nextInt();
-        } catch (Exception e) {
-            System.err.println("Une erreur s'est produite");
-            System.exit(1); 
-        }
-        for (int i=1; i<= nombre1; i++) { 
+        nombre1 = clavier.nextInt();
+        
+        for (int i=1; i <= nombre1; i++) { 
             System.out.println(i); 
         } 
     }
@@ -371,7 +367,8 @@ package survol;
 						<question>
 							Après correction du code précédent situé dans le répertoire survol,
 							la suite de commandes 
-							<formatted style="code">javac ErrExecution.java ; java ErrExecution.java</formatted>  
+							<paragraph><formatted style="code">javac ErrCompilation.java</formatted></paragraph>
+							<paragraph><formatted style="code">java ErrCompilation</formatted></paragraph>
 							provoque l'erreur suivante :
 							<paragraph cssClass="output">
 Exception
