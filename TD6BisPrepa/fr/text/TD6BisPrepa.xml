@@ -12,7 +12,7 @@
 		</paragraph>
 	</entry>
 
-	<unit label="TD6BisEx" title="Exercices préparatoires au TD6 bis">
+	<unit label="TD6BisPrepa" title="Exercices préparatoires au TD6 bis">
 
 		<entry>
 			<paragraph>  
@@ -29,7 +29,7 @@
 							<paragraph>
 								Sachant que le résultat de la commande "echo $CLASSPATH" est 
 							</paragraph>
-							<paragraph cssClass="code">.:/home:/usr/local/java:/home/g32000</paragraph>
+							<paragraph cssClass="code">.:/home:/usr/local/java:/home/g12345</paragraph>
 							<paragraph>
 								quel package associer à Exercice.java si Exercice.class se trouve dans
 							</paragraph>
@@ -45,8 +45,8 @@
 									package <gap answers="">g32010.tds.td6</gap>;
 								</item>
 								<item>
-									/home/<formatted style="bold">g32000</formatted>/tds/td6/Exercice.class :
-									package <gap answers="tds.td6,g32010.tds.td6">g32010.tds.td6</gap>;
+									/home/<formatted style="bold">g12345</formatted>/tds/td6/Exercice.class :
+									package <gap answers="">tds.td6</gap>;
 								</item>
 							</list>
 						</gapText>
@@ -58,11 +58,11 @@
 					<fillInBlanks>
 						<question>
 							<paragraph>
-								Sachant que l'instruction package de Exercice.java est 
-								package g32010.exercices.exercicesTd6;
-								et que Exercice.class se trouve dans
-								/home/étudiants/g32010/exercices/exercicesTd6.
-								quel doit être le contenu de la variable CLASSPATH? 
+								Sachant que l'instruction <formatted style="code">package</formatted> de <formatted style="code">Exercice.java</formatted> est 
+								<formatted style="java">package g32010.exercices.exercicesTd6;</formatted>
+								et que <formatted style="code">Exercice.class</formatted> se trouve dans
+								<formatted style="code">/home/étudiants/g32010/exercices/exercicesTd6</formatted>;
+								quel doit être le contenu de la variable <formatted style="code">CLASSPATH</formatted>? 
 							</paragraph>
 						</question>
 						<gapText>
@@ -86,7 +86,7 @@
 				</selfCheck>
 
 				<paragraph>
-					En quoi ce package est particulier ?
+					En quoi ce package est-il particulier ?
 				</paragraph>
 
 			</act>
@@ -106,12 +106,12 @@
 public static int maxPositif (int nb1, int nb2) { 
 
 	int max;
-
-    if (nb1&lt;0 || nb2&lt;0) 
-        <gap answers="">throw</gap> <gap answers="">new</gap> IllegalArgumentException(); 
 	
-	if (nb1&lt;max) {
-        max = nb1;
+	if (nb1&lt;0 || nb2&lt;0) 
+        <gap answers="">throw</gap> <gap answers="">new</gap> IllegalArgumentException(); 
+  
+  if (nb1&lt;max) {
+      max = nb1;
 	} else {
 	    max = nb2;
 	}
@@ -139,7 +139,7 @@ public static void appelMaxPositif() {
     <gap answers="">try</gap> {
         int max = maxPositif(clavier.nextInt(), clavier.nextInt());
     } <gap answers="">catch</gap> (IllegalArgumentException ex) {
-        // gestion de l ' exception
+        // gestion de l'exception
     }
     
 }
