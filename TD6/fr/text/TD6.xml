@@ -6,9 +6,9 @@
 
 	<entry>
 		<paragraph>  
-			Ce TD a pour objectif de vous familiariser avec la notion de package 
-			et les instructions de boucles (for, while) 
-			et de compléter vos connaissances de l'environnement de travail linux &amp; vi.
+			Ce TD a pour objectif de vous familiariser avec la notion de package, 
+			avec les instructions de boucles (for, while) 
+			et de compléter vos connaissances de l'environnement de travail linux.
 		</paragraph> 
 		<paragraph title="Rappels :"/>  
 		<list listStyle="unordered">
@@ -122,12 +122,12 @@
 					</item>
 					<item>
 						Pour créer un tel package,
-						il suffit de commencer les fichiers sources contenant les classes à regrouper
+						il suffit de commencer les <formatted style="bold">fichiers sources</formatted> contenant les classes à regrouper
 						par l'instruction <formatted style="java">package</formatted> suivi du nom 
 						que l'on désire donner au package.
 					</item>
 					<item>
-						Les fichiers classes doivent se trouver dans l'arborescence de répertoires donnée par le package.
+						Les <formatted style="bold">fichiers classes</formatted> doivent se trouver dans l'arborescence de répertoires donnée par le package.
 					</item>
 				</list>
 	
@@ -147,7 +147,7 @@
 					Ceci signifie que la classe <formatted style="java">Couleur</formatted>
 					dont le package est <formatted style="java">java.tds.td6</formatted>
 					se trouve (suivant le package) dans la hiérachie de répertoires
-					<formatted style="code">java/ds/td6</formatted>
+					<formatted style="code">java/tds/td6</formatted>
 					et le répertoire <formatted style="code">java</formatted>
 					(en tête de cette hiérarchie) 
 					se trouve lui-même dans une hiérarchie de répertoires connue du 
@@ -192,7 +192,12 @@
 				<paragraph>
 					Oui, si vous voulez par exemple ajouter la hiérarchie de répertoires 
 					<formatted style="code">/home/g32010</formatted>, 
-					il vous suffit d'écrire : <formatted style="code">CLASSPATH=$CLASSPATH:/home/g32010</formatted>
+					il vous suffit d'écrire : 
+        </paragraph>
+				<paragraph>
+					<formatted style="code">CLASSPATH=$CLASSPATH:/home/g32010</formatted>
+        </paragraph>
+        <paragraph>
 					(Remarquez qu'il n'y a pas d'espace...)
 				</paragraph>
 				<paragraph>
@@ -220,11 +225,13 @@
 					la modification sera sauvegardée d'une  connexion à l'autre :).
 				</paragraph>
 				<paragraph>
- 					<formatted style="bold">Mais je n'ai pas encore installé linux chez moi, je ne peux donc pas utiliser de package ?</formatted>
+				  <formatted style="bold">Mais je n'ai pas encore installé linux chez moi, je ne peux donc pas utiliser de package ?</formatted>
 				</paragraph>
 				<paragraph>
 					Sous Windows aussi il existe des variables d'environnement,
 					il vous suffit d'ajouter une variable classpath ou de modifier la valeur de celle-ci. 
+        </paragraph>
+        <paragraph>
 					Toutefois, il est grand temps de penser à installer un linux ! 
 				</paragraph>
 
@@ -255,15 +262,15 @@
 				<paragraph>
 				  Remarquez que seuls les fichiers <formatted style="code">.class</formatted> sont concernés par le <formatted style="code">CLASSPATH</formatted>. 
 				  Le compilateur <formatted style="code">javac</formatted> peut mettre les fichiers .<formatted style="code">class</formatted> 
-				  dans une arborescence adéquate en fonction du <formatted style="code">package</formatted> définit dans le fichier source, 
+				  dans une arborescence adéquate en fonction du <formatted style="code">package</formatted> définit dans le fichier source; 
 				  arborescence qu'il crée si nécessaire, en utilisant l'option <formatted style="code">-d <formatted style="italic">chemin</formatted></formatted> 
 				  où <formatted style="italic">chemin</formatted> est un des chemins repris dans la variable <formatted style="code">CLASSPATH</formatted>. 
 				  <newLine/>
 				  On l'utilise en écrivant par exemple
 				</paragraph>
 				<paragraph cssClass="code">
-    javac … -d /home          # à l'école 
-    javac … -d /home/moi      # à la maison
+    javac *.java -d /home          # à l'école 
+    javac *.java -d /home/moi      # à la maison
 				</paragraph>
 				
 			</act>
@@ -303,7 +310,7 @@
 							<paragraph><newLine/></paragraph>
 							<paragraph>
 								Vous obteniez un fichier <formatted style="code">Test.java</formatted>
-								dans votre répertoire.
+								dans votre répertoire courant.
 							</paragraph>
 						</tabledata>
 					</tablerow>
@@ -393,6 +400,10 @@
 							</paragraph>
 						</tabledata>
 						<tabledata>
+						  <paragraph>
+								Dans votre répertoire 
+								<formatted style="code">/home/g32010/td6/</formatted> :
+							</paragraph>
 							<paragraph>
 								<formatted style="code">javac Test.java</formatted>
 							</paragraph>
@@ -442,14 +453,17 @@
 								Supposons que :
 							</paragraph>
 							<list listStyle="unordered"> 
+							  <item>
+								  le dossier personnel est <formatted style="code">/home/g32010</formatted>,
+								</item>
 								<item>
 								  le fichier <formatted style="code">Test.java</formatted> se trouve dans 
 								  <formatted style="code">~/td6/Test.java</formatted>,
 								</item>
 								<item>le package est <formatted style="code">g32010.td6</formatted>,</item>
-								<item>Le CLASSPATH contient <formatted style="code">~/classes</formatted>,</item>
+								<item>Le CLASSPATH contient <formatted style="code">/home</formatted>,</item>
 								<item>la classe s'appelle <formatted style="code">Test</formatted>,</item>
-								<item>le chemin absolu du fichier <formatted style="italic">class</formatted> est <formatted style="code">~/classes/td6/Test.class</formatted>.</item>
+								<item>le chemin absolu du fichier <formatted style="italic">class</formatted> est <formatted style="code">~/td6/Test.class</formatted>.</item>
 							</list>
 							<paragraph>
 								Dans le répertoire <formatted style="code">~/td6</formatted> : 
@@ -468,18 +482,19 @@
 						</tabledata>
 						<tabledata>
 							<paragraph>
-								En le compilant, dans le répertoire où se trouve le <formatted style="italic">.java</formatted>, avec la commande <formatted style="code">javac</formatted> suivie de l'option<formatted style="code">-d</formatted>
+								En le compilant, dans le répertoire où se trouve le <formatted style="italic">.java</formatted>, 
+								avec la commande <formatted style="code">javac</formatted> suivie de l'option<formatted style="code">-d</formatted>
 								suivie du morceau de chemin se trouvant dans le <formatted style="code">CLASSPATH</formatted>
 							</paragraph>
 						</tabledata>
 						<tabledata>
 							<paragraph>
 							  Dans le répertoire <formatted style="code">~/td6</formatted><newLine/>
-								<formatted style="code">javac -d ~/classes Test.java</formatted>
+								<formatted style="code">javac -d /home Test.java</formatted>
 							</paragraph>
 							<paragraph>
 								Vous obtenez un fichier <formatted style="code">Test.class</formatted> dans votre répertoire 
-								<formatted style="code">~/classes/td6</formatted>, conformément à ce qui est écrit dans 
+								<formatted style="code">~/td6</formatted>, conformément à ce qui est écrit dans 
 								l'instruction <formatted style="code">package</formatted>.							
 							</paragraph>
 						</tabledata>
@@ -577,16 +592,16 @@
 			</clarify>
 			<act>
 				<paragraph title="Compter jusque 10" icon="act">
-					Syllabus de logique "version avec tant que" et "version avec pour" de l'exemple 1 page 73 du chapitre 7.
+					Syllabus de logique "version avec tant que" et "version avec pour" de l'exemple 1 du chapitre 7.
 				</paragraph>
 				<paragraph title="Compter de 1 à N" icon="act">
-					Syllabus de logique solution de l'exemple 2 page 73 du chapitre 7.
+					Syllabus de logique solution de l'exemple 2 du chapitre 7.
 				</paragraph>
 				<paragraph title="Afficher pair" icon="act">
-					Syllabus de logique solutions 1 et 2 de l'exemple 3 page 74 du chapitre 7.
+					Syllabus de logique solutions 1 et 2 de l'exemple 3 du chapitre 7.
 				</paragraph>
 				<paragraph title="Somme de nombres" icon="act">
-					Syllabus de logique variantes 1, 2 et 3 de l'exemple 5 pages 75 et 76 du chapitre 7.
+					Syllabus de logique variantes 1, 2 et 3 de l'exemple 5 du chapitre 7.
 				</paragraph>
 			</act>
 		</learningObject>
@@ -612,8 +627,8 @@
 				<paragraph title="tail" icon="icon_reading"/>
 				<list listStyle="ordered">
 					<item>
-						Visualisez les 15 dernières lignes fichier
-						<formatted style="code">~/.bash_history</formatted> par la commande tail.
+						Visualisez les 15 dernières lignes du fichier
+						<formatted style="code">~/.bash_history</formatted> par la commande <formatted style="code">tail</formatted>.
 					</item>
 					<item>Contient-il les dernières commandes ?</item>
 					<item>Qui a  le droit de visionner ce fichier ? </item>
@@ -626,7 +641,7 @@
 						Tapez plusieurs fois à la suite une même commande.
 					</item>
 					<item>
-						Qu'en est-il de l'affichage produit par la commande history dans
+						Qu'en est-il de l'affichage produit par la commande <formatted style="code">history</formatted> dans
 						les deux consoles et du fichier <formatted style="code">~/.bash_history</formatted> ?
 					</item>
 				</list>
