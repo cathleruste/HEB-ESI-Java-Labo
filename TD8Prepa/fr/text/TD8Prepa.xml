@@ -76,7 +76,7 @@
       <clarify>
         <paragraph title="Déclaration, création et initialisation d'un tableau " icon="icon_reading"/>
         <paragraph>
-				  Un tableau possède un type et une dimension. <newLine/>
+				  Un tableau possède <formatted style="bold">un type</formatted> et <formatted style="bold">un nombre de dimension(s)</formatted>. <newLine/>
 				  Le type est soit l'un des types simples (int,double,char,..) ou une réference (String,objet d'une classe,....). <newLine/>
 				  La dimension d’un tableau est le nombre d’indices qu’on utilise pour faire référence à un de ses éléments
 				</paragraph>
@@ -156,6 +156,7 @@
                 
                 <gap answers="">réelss</gap>
                 =     
+                
                 <gap answers="{{1.1,1.2},{2.1,2.2},{3.1,3.2}},{{1.1, 1.2}, {2.1, 2.2}, {3.1, 3.2}},{ {1.1,1.2},{2.1,2.2},{3.1,3.2} },{ {1.1, 1.2}, {2.1, 2.2}, {3.1, 3.2} }">
                   {{1.1,1.2},{2.1,2.2},{3.1,3.2}}
                 </gap>
@@ -186,7 +187,7 @@
             <question><formatted style="java">entierss[1]</formatted> vaut 5.</question>
             <answer feedback="Pour atteindre un élément du tableau à deux dimensions il faut utiliser deux indices. Rappelez vous que le nombre de crochets est égal à la dimension du tableau et au nombre d'indices nécessaires pour atteindre un élément." 
               correct="no">vrai</answer>
-            <answer feedback=" " correct="yes">faux</answer>
+            <answer feedback="C'est entierss[1][0] qui vaut 5. entiers[1] est le tableau à une dimension qui vaut {5}." correct="yes">faux</answer>
           </multipleChoice>
         </selfCheck>
         
@@ -194,15 +195,15 @@
           <multipleChoice>
             <question><formatted style="java">entierss[1][2]</formatted> vaut 4.</question>
             <answer feedback="entierss[1][2] est un élément qui n'existe pas." correct="no">vrai</answer>
-            <answer feedback=" " correct="yes">faux</answer>
+            <answer feedback="entierss[1][2] est un élément qui n'existe pas." correct="yes">faux</answer>
             </multipleChoice>
         </selfCheck>
         
         <selfCheck shuffle="no">
           <multipleChoice>
             <question><formatted style="java">entierss[2][1] = 4;</formatted> remplace la valeur 7 par la valeur 4.</question>
-            <answer feedback=" " correct="yes">vrai</answer>
-            <answer feedback=" " correct="no">faux</answer>
+            <answer feedback="" correct="yes">vrai</answer>
+            <answer feedback="" correct="no">faux</answer>
           </multipleChoice>
         </selfCheck>
         
@@ -213,7 +214,7 @@
             <formatted style="java">entierss = entiersss;</formatted></question>
             <answer feedback="La déclaration d'un tableau réserve un emplacement sur la pile pour une référence du type du tableau. Comme nos références ont des types différents cela provoque une erreur de compilation pour cause d'incompatibilité." 
               correct="no">vrai</answer>
-            <answer feedback=" " correct="yes">faux</answer>
+            <answer feedback="La déclaration d'un tableau réserve un emplacement sur la pile pour une référence du type du tableau. Comme nos références ont des types différents cela provoque une erreur de compilation pour cause d'incompatibilité." correct="yes">faux</answer>
           </multipleChoice>
         </selfCheck>
         
@@ -249,7 +250,291 @@
         
       </act>
     </learningObject>
+  
+    <learningObject title="Survol du langage : i++ et ++i">
     
+      <clarify>
+        <paragraph title="Pré/post incrémentation" icon="icon_reading"/>
+				<paragraph>
+				  L'instuction <formatted style="java">i++;</formatted> est équivalente à <formatted style="java">++i;</formatted> 
+				  mais ce n'est pas le cas de l'expression<formatted style="java">i++</formatted> et de <formatted style="java">++i</formatted>.
+        </paragraph>
+      </clarify>
+      
+      <act>
+      
+        <selfCheck title="Quiz" shuffle="yes">
+          <fillInBlanks>
+            <question>Soient les instructions suivantes :
+              <paragraph cssClass="java">
+<![CDATA[
+  int i=1;
+  i++;
+  System.out.println(i);
+}]]>      </paragraph>
+            </question>
+            <gapText>affiche <gap answers="">2</gap> 
+            </gapText>
+            <solution>L'instruction <formatted style="java">i++;</formatted> incrémente la variable i de 1.</solution>
+          </fillInBlanks>
+        </selfCheck>
+       
+        <selfCheck title="Quiz" shuffle="yes">
+          <fillInBlanks>
+            <question>Soient les instructions suivantes :
+              <paragraph cssClass="java">
+<![CDATA[
+  int i=1;
+  ++i;
+  System.out.println(i);
+}]]>      </paragraph>
+            </question>
+            <gapText>affiche <gap answers="">2</gap> 
+            </gapText>
+            <solution>L'instruction <formatted style="java">++i;</formatted> incrémente la variable i de 1.</solution>
+          </fillInBlanks>
+        </selfCheck>
+      
+        <selfCheck title="Quiz" shuffle="yes">
+          <multipleChoice>
+            <question>La boucle 
+              <paragraph cssClass="java">
+<![CDATA[
+  for (int i=0; i<10; i=i+1){
+    System.out.print(i + " ");
+  }    
+]]>      </paragraph>
+affiche
+            </question>
+            <answer feedback="" correct="no">0 1 2 3 4 5 6 7 8 9 10</answer>
+            <answer feedback="" correct="yes">0 1 2 3 4 5 6 7 8 9 </answer>
+            <answer feedback="" correct="no">1 2 3 4 5 6 7 8 9 10</answer>
+            <answer feedback="" correct="no">0 1 2 3 4 5 6 7 8 9 10</answer>
+            <answer feedback="" correct="no">0 1 2 3 4 5 6 7 8 9 10 11</answer>
+            <answer feedback="" correct="no">1 2 3 4 5 6 7 8 9 10 11</answer>
+          </multipleChoice>
+        </selfCheck>
+
+      
+        <selfCheck title="Quiz" shuffle="yes">
+          <multipleChoice>
+            <question>La boucle 
+              <paragraph cssClass="java">
+<![CDATA[
+  for (int i=0; i<10; i++){
+    System.out.print(i + " ");
+  }    
+]]>      </paragraph>
+affiche
+            </question>
+            <answer feedback="" correct="no">0 1 2 3 4 5 6 7 8 9 10</answer>
+            <answer feedback="" correct="yes">0 1 2 3 4 5 6 7 8 9 </answer>
+            <answer feedback="" correct="no">1 2 3 4 5 6 7 8 9 10</answer>
+            <answer feedback="" correct="no">0 1 2 3 4 5 6 7 8 9 10</answer>
+            <answer feedback="" correct="no">0 1 2 3 4 5 6 7 8 9 10 11</answer>
+            <answer feedback="" correct="no">1 2 3 4 5 6 7 8 9 10 11</answer>
+          </multipleChoice>
+        </selfCheck>
+        
+        <selfCheck title="Quiz" shuffle="yes">
+          <multipleChoice>
+            <question>La boucle 
+              <paragraph cssClass="java">
+<![CDATA[
+  for (int i=0; i<10; ++i){
+    System.out.print(i + " ");
+  }    
+]]>      </paragraph>
+affiche
+            </question>
+            <answer feedback="" correct="no">0 1 2 3 4 5 6 7 8 9 10</answer>
+            <answer feedback="" correct="yes">0 1 2 3 4 5 6 7 8 9 </answer>
+            <answer feedback="" correct="no">1 2 3 4 5 6 7 8 9 10</answer>
+            <answer feedback="" correct="no">0 1 2 3 4 5 6 7 8 9 10</answer>
+            <answer feedback="" correct="no">0 1 2 3 4 5 6 7 8 9 10 11</answer>
+            <answer feedback="" correct="no">1 2 3 4 5 6 7 8 9 10 11</answer>
+          </multipleChoice>
+        </selfCheck>
+        
+        
+        <selfCheck title="Quiz" shuffle="yes">
+          <fillInBlanks>
+            <question>Soient les instructions suivantes :
+              <paragraph cssClass="java">
+<![CDATA[
+  int i=1;
+  i=i++ + ++i;
+  System.out.println(i);
+]]>      </paragraph>
+            </question>
+            <gapText>affiche <gap answers="">4</gap> 
+            </gapText>
+            <solution>
+              Décomposons l'instruction <formatted style="java">i=i++ + ++i;</formatted> :
+              <table 	title="" wdith="300" units="pixels">
+					<tablerow>
+						<tableheading width="100" units="pixels">valeur de i</tableheading>
+						<tableheading width="100" units="pixels">valeur de l'expression intermédiaire</tableheading>
+						<tableheading width="100" units="pixels"><formatted style="java">i++ + ++i</formatted></tableheading>
+					</tablerow>
+					
+					<tablerow>
+						<tabledata>
+							<paragraph>
+								Au départ, <formatted style="java">i</formatted> vaut 1
+							</paragraph>
+						</tabledata>
+						<tabledata>
+						  <paragraph>
+						  </paragraph>
+						</tabledata>
+						<tabledata>
+						  <paragraph>
+						  </paragraph>
+						</tabledata>
+					</tablerow>
+					
+					<tablerow>
+						<tabledata>
+						  <paragraph>
+						    1
+						  </paragraph>
+						</tabledata>
+						<tabledata>
+							<paragraph>
+							  Évaluons l'expression <formatted style="java">i++</formatted> : 
+							</paragraph>
+							<paragraph>
+							  l'expression prend la valeur de <formatted style="java">i</formatted> avant que la variable ne soit incrémentée, 
+							  c-à-d que l'expression <formatted style="java">i++</formatted> vaut 1
+							</paragraph>
+						</tabledata>
+						<tabledata>
+						  <paragraph>
+    					  1 + ...
+						  </paragraph>
+						</tabledata>
+					</tablerow>
+					
+					<tablerow>
+						<tabledata>
+							<paragraph>
+							  et <formatted style="java">i</formatted> passe à 2
+							</paragraph>
+						</tabledata>
+						<tabledata>
+							<paragraph>
+							</paragraph>
+						</tabledata>
+						<tabledata>
+						  <paragraph>
+						    1 + ...
+						  </paragraph>
+						</tabledata>
+					</tablerow>
+					
+					<tablerow>
+						<tabledata>
+						  <paragraph>
+						    2
+						  </paragraph>
+						</tabledata>
+						<tabledata>
+							<paragraph>
+							  Évaluons l'expression <formatted style="java">++i</formatted> : 
+							</paragraph>
+							<paragraph>
+							  l'expression prend la valeur de <formatted style="java">i</formatted> après que la variable soit incrémentée
+							</paragraph>
+						</tabledata>
+						<tabledata>
+						  <paragraph>
+    					  1 + 
+						  </paragraph>
+						</tabledata>
+					</tablerow>
+					
+					<tablerow>
+						<tabledata>
+						  <paragraph>
+						    <formatted style="java">i</formatted> prend la valeur 3
+						  </paragraph>
+						</tabledata>
+						<tabledata>
+							<paragraph>
+							</paragraph>
+						</tabledata>
+						<tabledata>
+						  <paragraph>
+    					  1 + 
+						  </paragraph>
+						</tabledata>
+					</tablerow>
+					
+					<tablerow>
+						<tabledata>
+						  <paragraph>
+						    3
+						  </paragraph>
+						</tabledata>
+						<tabledata>
+							<paragraph>
+							  et l'expression <formatted style="java">i++</formatted> prend la valeur 3
+							</paragraph>
+						</tabledata>
+						<tabledata>
+						  <paragraph>
+    					  1 + 3
+						  </paragraph>
+						</tabledata>
+					</tablerow>
+					
+					<tablerow>
+						<tabledata>
+						  <paragraph>
+						    3
+						  </paragraph>
+						</tabledata>
+						<tabledata>
+							<paragraph>
+							  l'expression <formatted style="java">i = i++ + ++i</formatted> affecte à <formatted style="java">i</formatted> 
+							  la valeur de l'expression <formatted style="java">i++ + ++i</formatted> c-à-d la valeur 1 + 3 c-à-d la valeur 4
+							</paragraph>
+						</tabledata>
+						<tabledata>
+						  <paragraph>
+    					  1 + 3
+						  </paragraph>
+						</tabledata>
+					</tablerow>
+					
+					<tablerow>
+						<tabledata>
+						  <paragraph>
+						    4
+						  </paragraph>
+						</tabledata>
+						<tabledata>
+							<paragraph>
+							</paragraph>
+						</tabledata>
+						<tabledata>
+						  <paragraph>
+						  </paragraph>
+						</tabledata>
+					</tablerow>
+					
+        </table>
+            
+            </solution>
+          </fillInBlanks>
+        </selfCheck>
+        
+      </act>
+    
+    </learningObject>
+  
+  
 		<learningObject title="Logique">
 			<clarify>
 				Assurez-vous de venir au laboratoire avec vos solutions des exercices 1, 2, 5 et 6 du chapitre 10 "Les tableaux à 2 dimensions" de votre
