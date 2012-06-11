@@ -22,7 +22,7 @@
 				</paragraph>    
 				
 				<paragraph>    
-					Pour vous aider, nous vous donnons quand même le code d'une méthode de test pour le cas général :)    
+					Pour vous aider, nous vous donnons quand même le code d'<formatted style="bold">une méthode de test</formatted> pour le cas général :)    
 				</paragraph>    
 				
 				<paragraph cssClass="java">
@@ -56,42 +56,58 @@ public void occurence_cas1() {
 					Compiler la classe.
 				</item>  
 				<item>
-					Lancer la commande : <formatted style="code">java org.junit.runner.JUnitCore package.MaclasseTest</formatted>.
+					Lancer la commande : <formatted style="code">java org.junit.runner.JUnitCore package.MaClasseTest</formatted>.
 					<newLine/>
-					Cette commande lance le test et affiche un message récapitulatif du nombre de tests
+					Cette commande lance les tests et affiche un message récapitulatif du nombre de tests
 					et du décompte de ceux qui ont réussi ou échoué.
 				</item>  
 			</list>
 			<paragraph>
-              Si cela ne fonctionne pas c'est que la JVM ne trouve pas la classe
+              Si cela ne fonctionne pas directement sur Linux1 c'est que la JVM ne trouve pas la classe
               <formatted style="code">org.junit.runner.JUnitCore</formatted> 
               qui se trouve dans le fichier jar <formatted style="code">/usr/share/java/junit4.jar</formatted>, 
               il faudra dont ajouter ce chemin à votre <formatted style="code">CLASSPATH</formatted> 
               et relancer un <formatted style="italic">shell</formatted> afin que la variable d'environnement soit relue.
 			</paragraph>    
 			<paragraph>
-              Certains d'entre vous ne voudront pas entrer cette longue commande lors de chaque test.    
+              Certains d'entre vous ne voudront pas entrer cette longue commande lors de chaque lancement de tests.    
               Rien ne les empêche de définir un alias avec la commande :
 			</paragraph>    
 			<paragraph cssClass="code">
     alias javatest='java org.junit.runner.JUnitCore'
 			</paragraph>    
+			<paragraph>
+			  et ils n'auront plus alors qu'à exécuter la commande
+        <formatted style="code">javatest package.MaClasseTest</formatted>
+        pour lancer la classe de tests.
+			</paragraph>
       </clarify>
       
 			<act>
 			  <paragraph title="Les doublons" icon="act"/>  
         <paragraph>
-				  Syllabus de logique exercice 17 du chapitre 8. <newLine/>
-				  Votre méthode recevra un tableau en paramètre et retournera un booléen. <newLine/>
-				  Écrivez le plan de tests, montrez-le à votre professeur. Ensuite, vous écrirez les tests correspondants et la javadoc.    
+				  Syllabus de logique exercice 17 du chapitre 8. 
+        </paragraph>
+        <paragraph>
+				  Votre méthode recevra un tableau en paramètre et retournera un booléen. 
+        </paragraph>
+        <paragraph>
+				  Écrivez le plan de tests, montrez-le à votre professeur. 
+        </paragraph>
+        <paragraph>
+				  Ensuite, vous écrirez les tests correspondants et la javadoc.    
 				</paragraph>
       </act>
       
 			<act>
 			  <paragraph title="Pour les plus rapides : Moyenne d'éléments" icon="act"/>  
 			  <paragraph>
-          Syllabus de logique exercice 15 du chapitre 8. <newLine/>
-          Votre méthode recevra un tableau en paramètre et retournera un entier représentant la moyenne. <newLine/>
+          Syllabus de logique exercice 15 du chapitre 8. 
+        </paragraph>
+        <paragraph>
+          Votre méthode recevra un tableau en paramètre et retournera un entier représentant la moyenne. 
+        </paragraph>
+        <paragraph>
           Écrivez le plan de tests, les tests et la javadoc correspondants.    
 				</paragraph>
       </act>
@@ -99,11 +115,13 @@ public void occurence_cas1() {
 			<clarify>
 			  <paragraph title="Travailler chez vous" icon="icon_reading"/>  
 				<paragraph>    
-					JUnit n'est pas fourni avec JDK, vous devez l'installer.<newLine/>
+					JUnit n'est pas fourni avec JDK, vous devez l'installer.
+        </paragraph>
+        <paragraph>
 					Pour cela :
 				  <list listStyle="ordered">
 				    <item>Allez sur le site JUnit et téléchargez JUnit (version 4.x)</item>    
-            <item>Décompressez-le dans un dossier de votre choix.<newLine/>    
+            <item>Décompressez-le dans un dossier de votre choix. 
               Le mieux étant bien sûr d'organiser vos dossiers, fichiers, 
               nous ne pouvons que vivement vous conseiller de regrouper toutes vos librairies java à un même endroit.   
               (dans <formatted style="code">/usr/local/share/java</formatted> par exemple)    
@@ -116,7 +134,9 @@ public void occurence_cas1() {
 			<clarify>
 			  <paragraph title="Complément" icon="icon_reading"/>  
 			  <paragraph>
-          Nous n'avons présenté qu'une partie de la technologie JUnit. <newLine/>
+          Nous n'avons présenté qu'une partie de la technologie JUnit. 
+        </paragraph>
+        <paragraph>
           Deux points importants restent en suspens.
           <list listStyle="ordered">
 				    <item>Comment simplifier le travail d'initialisation des données de test ?</item>
