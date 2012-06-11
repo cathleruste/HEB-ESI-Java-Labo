@@ -12,7 +12,7 @@
 		</paragraph>
 	</entry>
 	
-	<unit label="TD7Ex" title="Exercices préparatoires au TD7">
+	<unit label="TD7Prepa" title="Exercices préparatoires au TD7">
 		
 		<entry>
 			<paragraph>  
@@ -24,7 +24,7 @@
 			
 			<clarify>
 				<paragraph title="Un vecteur" icon="icon_reading"> 
-					Un vecteur ou tableau à une dimension est une suite d’éléments de même type portant  
+					Un tableau à une dimension est une suite d’éléments de même type portant  
 					tous le même nom mais se distinguant les uns des autres par un indice.  
 				</paragraph>
 			</clarify>
@@ -52,7 +52,7 @@
 				</selfCheck>
           
 				<paragraph title="Pourquoi un tableau et pas plusieurs variables ?" icon="icon_reading">
-					Le fait d'envisager une seule "grande" variable, compartimentée en plusieurs "sous-variables" 
+					Le fait d'envisager une seule "grande" variable, compartimentée en plusieurs "sous-variables", 
 					permet une grande économie de lignes de code et une grande flexibilité. 
 				</paragraph>
 				<paragraph>
@@ -87,7 +87,7 @@
 							</paragraph>
 							<paragraph>
 								Pour pouvoir créer un tableau nommé <formatted style="bold">entiers</formatted> 
-								de 10 entiers précédemment déclaré, il faut écrire l'instruction
+								de 10 entiers <formatted style="bold">précédemment déclaré</formatted>, il faut écrire l'instruction
 								<gap answers="">entiers</gap> <gap answers="">=</gap> <gap answers="">new</gap> <gap answers="">int</gap> <gap answers="[10], [ 10 ]">[10]</gap>;
 							</paragraph>
 						</gapText>
@@ -136,13 +136,13 @@
 						Oui, on peut condenser l'écriture :
 					</paragraph>  
 					<paragraph cssClass="java">  
-						int [] entiers = new int[10];  
+int [] entiers = new int[10];  
 					</paragraph>  
 					<paragraph>
 						et pour une initialisation personnalisée:
 					</paragraph>
 					<paragraph cssClass="java">  
-						int [] entiers = {0,4,5,6,6,7,2,1,8,9};
+int [] entiers = {0,4,5,6,6,7,2,1,8,9};
 					</paragraph>
 				</popup>
 
@@ -174,7 +174,7 @@
 						<answer feedback="Il n'est pas possible d'utiliser des indices se trouvant en dehors des bornes du tableau." correct="no">
 							<formatted style="java">entiers[3]=4;</formatted> affecte la valeur 4 à la 3<formatted style="superscript">ème</formatted> case.
 						</answer>
-						<answer feedback="Metre une case à 0 ne la supprime pas" correct="no">
+						<answer feedback="Mettre une case à 0 ne la supprime pas" correct="no">
 							<formatted style="java">entiers[1]=0;</formatted> supprime la case d'indice 1.
 						</answer>
 						<answer feedback="La taille n'a pas d'importance ici car on manipule la réference du tableau et non pas ses valeurs." correct="yes">
