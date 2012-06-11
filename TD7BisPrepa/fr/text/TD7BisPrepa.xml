@@ -40,13 +40,11 @@
 							</paragraph>    
 							<paragraph><gap answers="">JUnit</gap> est un outil pour automatiser les tests unitaires.
 							</paragraph>
-							<!-- MCD: Ne me parait pas évident. Le mettre sans trou ?
 							<paragraph>    
-								Cette méthode est <gap answers="">autonome</gap> (ne reçoit rien ne retourne rien) 
-								et elle ne contient que des <gap answers="">affirmations</gap> 
+								Cette méthode est autonome (ne reçoit rien ne retourne rien) 
+								et elle ne contient que des affirmations 
 								(appel de la méthode à tester, comparaison entre le résultat attendu et le résultat obtenu).
 							</paragraph>    
-							-->
 							<paragraph>    
 								Une classe de test contient une méthode de test par cas.
 								Une méthode est reconnue comme étant un test unitaire grâce au tag <formatted style="javawithblanks"><gap answers="">@Test</gap></formatted>.
@@ -54,16 +52,22 @@
 							</paragraph>    
 							<list style="unordered"> 
 								<item>
-								<formatted style="javawithblanks"><gap answers="">assertEquals</gap>(int1, int2)</formatted> 
-								vérifie que les 2 valeurs entières <formatted style="java">int1</formatted> et <formatted style="java">int2</formatted> sont identiques,    
+								<formatted style="javawithblanks"><gap answers="">assertEquals</gap>(intAttendu, intObtenu)</formatted> 
+								<paragraph>
+								  vérifie que les 2 valeurs entières <formatted style="java">intAttendu</formatted> et <formatted style="java">intObtenus</formatted> sont identiques;
+								</paragraph>
 								</item>								
 								<item>
 								<formatted style="javawithblanks"><gap answers="">assertTrue</gap>(val)</formatted> 
-								vérifie que la valeur du booléen <formatted style="java">val</formatted> est à vrai,     
+								<paragraph>
+								  vérifie que la valeur du booléen <formatted style="java">val</formatted> est à vrai,     
+                </paragraph>
 								</item>								
 								<item>
 								<formatted style="javawithblanks"><gap answers="">assertFalse</gap>(val)</formatted> 
-								vérifie que la valeur de <formatted style="java">val</formatted> est à faux.    
+								<paragraph>
+								  vérifie que la valeur de <formatted style="java">val</formatted> est à faux.    
+                </paragraph>
 								</item>								
 							</list>    
 							<paragraph>    
