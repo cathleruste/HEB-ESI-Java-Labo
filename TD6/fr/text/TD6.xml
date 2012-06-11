@@ -461,9 +461,9 @@
 								  <formatted style="code">~/td6/Test.java</formatted>,
 								</item>
 								<item>le package est <formatted style="code">g32010.td6</formatted>,</item>
-								<item>Le CLASSPATH contient <formatted style="code">/home</formatted>,</item>
+								<item>Le CLASSPATH contient <formatted style="code">~/classes</formatted>,</item>
 								<item>la classe s'appelle <formatted style="code">Test</formatted>,</item>
-								<item>le chemin absolu du fichier <formatted style="italic">class</formatted> est <formatted style="code">~/td6/Test.class</formatted>.</item>
+								<item>le chemin absolu du fichier <formatted style="italic">class</formatted> est <formatted style="code">~/classes/g32010/td6/Test.class</formatted>.</item>
 							</list>
 							<paragraph>
 								Dans le répertoire <formatted style="code">~/td6</formatted> : 
@@ -490,11 +490,11 @@
 						<tabledata>
 							<paragraph>
 							  Dans le répertoire <formatted style="code">~/td6</formatted><newLine/>
-								<formatted style="code">javac -d /home Test.java</formatted>
+								<formatted style="code">javac -d ~/classes Test.java</formatted>
 							</paragraph>
 							<paragraph>
 								Vous obtenez un fichier <formatted style="code">Test.class</formatted> dans votre répertoire 
-								<formatted style="code">~/td6</formatted>, conformément à ce qui est écrit dans 
+								<formatted style="code">~/classes/g32010/td6</formatted>, conformément à ce qui est écrit dans 
 								l'instruction <formatted style="code">package</formatted>.							
 							</paragraph>
 						</tabledata>
