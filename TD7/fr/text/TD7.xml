@@ -24,7 +24,7 @@
 					servant à tester <formatted style="java">UtilTabInt</formatted> .
 				</paragraph>
 				<paragraph> 
-					Séparez clairement vos sources et vos classes comme on vous a déjà proposé de le faire lors du précédent TD
+					Séparez clairement vos sources et vos classes comme on vous a déjà proposé de le faire lors du TD précédent 
 					et choisissez votre package en conséquence.
 				</paragraph>
 				<paragraph>    
@@ -34,10 +34,10 @@
 				</paragraph>
 				<paragraph>    
 					Pour la classe <formatted style="java">UtilTabInt</formatted> et pour chaque méthode de cette classe, 
-					<formatted style="bold">écrivez la javadoc</formatted> correspondante et générez la.
+					<formatted style="bold">écrivez la javadoc</formatted> correspondante et générez-la.
 				</paragraph>
 				<paragraph>    
-					Montrez à votre professeur ce que vous avez écrit au fur et à mesure.    
+					Montrez à votre professeur ce que vous avez exécuté au fur et à mesure.    
 				</paragraph>
 				<list listStyle="ordered">
 					<item>
@@ -78,7 +78,7 @@
 					<item>
 						Écrivez, dans la classe <formatted style="java">UtilTabInt</formatted>, 
 						une méthode de classe <formatted style="java">sommer</formatted> 
-						telle que dans le syllabus de logique page 87 exercice 1 du chapitre 8.
+						telle que dans le syllabus de logique exercice 1 du chapitre 8.
 					</item>    
 					<item>
 						Dans la méthode <formatted style="java">main</formatted>, 
@@ -88,7 +88,7 @@
 					<item>
 						Écrivez, dans la classe <formatted style="java">UtilTabInt</formatted>, 
 						une méthode de classe <formatted style="java">maximum</formatted> 
-						telle que dans le syllabus de logique page 87 exercice 2 du chapitre 8. 
+						telle que dans le syllabus de logique exercice 2 du chapitre 8. 
 					</item>    
 					<item>
 						Dans la méthode <formatted style="java">main</formatted>, 
@@ -98,7 +98,7 @@
 					<item>
 						Écrivez, dans la classe <formatted style="java">UtilTabInt</formatted>, 
 						une méthode de classe <formatted style="java">indiceMax</formatted> 
-						telle que dans le syllabus de logique page 87 exercice 3 du chapitre 8.
+						telle que dans le syllabus de logique exercice 3 du chapitre 8.
 					</item>    
 					<item>
 						Dans la méthode <formatted style="java">main</formatted>, 
@@ -120,12 +120,12 @@
 					<item>
 						Écrivez, dans la classe <formatted style="java">UtilTabInt</formatted>, 
 						une méthode de classe <formatted style="java">estTrié</formatted>    
-						telle que dans le syllabus de logique page 87 exercice 8 du chapitre 8.
+						telle que dans le syllabus de logique exercice 8 du chapitre 8.
 					</item>    
 					<item>
 						Dans la méthode <formatted style="java">main</formatted>, 
 						appelez la méthode <formatted style="java">estTrié</formatted> 
-						pour afficher si les tableaux que vous avez créé sont triés ou non.
+						pour afficher si les tableaux que vous avez créés sont triés ou non.
 					</item>    
 					<item>
 						Écrivez, dans la classe <formatted style="java">UtilTabInt</formatted>, 
@@ -140,7 +140,6 @@
 							<item>créé de la taille donnée</item>
 							<item>et dont les éléments sont initialisés à la valeur du deuxième paramètre reçu.</item>
 						</list>
-						Veillez à utiliser les méthodes déjà écrites ci-dessus. 
 					</item>    
 					<item>
 						Dans la méthode <formatted style="java">main</formatted>, 
@@ -150,7 +149,7 @@
 					<item>
 						Écrivez, dans la classe <formatted style="java">UtilTabInt</formatted>, 
 						une méthode de classe <formatted style="java">inverser</formatted> 
-						telle que dans le syllabus de logique page 88 exercice 10 du chapitre 8.
+						telle que dans le syllabus de logique exercice 10 du chapitre 8.
 					</item>    
 					<item>
 						Dans la méthode <formatted style="java">main</formatted>, 
@@ -160,9 +159,9 @@
 					<item>
 						Écrivez, dans la classe <formatted style="java">UtilTabInt</formatted>, 
 						une méthode de classe <formatted style="java">positionsMin</formatted> 
-						telle que dans le syllabus de logique page 88 exercice 9b du chapitre 8.
+						telle que dans le syllabus de logique exercice 9b du chapitre 8.
 						<newLine/>
-						Attention, ici, la méthode n'affichera pas le tableau des positions minimales mais le retournera.
+						<formatted style="bold">Attention</formatted>, ici, la méthode n'affichera pas le tableau des positions minimales mais le retournera.
 					</item>    
 					<item>
 						Dans la méthode <formatted style="java">main</formatted>, 
@@ -175,7 +174,7 @@
 			<act>
 			  <paragraph title="Occurrence des chiffres" icon="act"/>  
 				<paragraph>    
-					Syllabus de logique page 88 exercice 13 du chapitre 8. Ici, la méthode n'affichera pas à l'écran le tableau de résultat mais le retournera.     
+					Syllabus de logique exercice 13 du chapitre 8. Ici, la méthode n'affichera pas à l'écran le tableau de résultat mais le retournera.     
 				</paragraph>    
 				<paragraph>    
 					Dans cet exercice, il vous est demandé de fournir en paramètre à la méthode de classe un nombre positif ou nul. 
