@@ -2,7 +2,7 @@
 
 STYLE=java
 
-function usage() {
+function usage {
 	echo "usage:"
 	echo "    elml valider leçon ... - pour vérifier la syntaxe du fichier de la leçon"
 	echo "    elml pdf     leçon ... - pour le PDF de la leçon"
@@ -12,10 +12,27 @@ function usage() {
 }
 
 function valider() {
+	for LESSON in $LESSONS;
+	do
+		echo "=== $LESSON ==="
+		valider1 $LESSON
+	done
+}
+
+function valider1() {
+	LESSON=$1
 	xmllint --noout --schema _config/validate.xsd $LESSON/fr/text/$LESSON.xml
 }
 
 function pdf() {
+	for LESSON in $LESSONS;
+	do
+		echo "=== $LESSON ==="
+		pdf1 $LESSON
+	done
+}
+
+function pdf1() {
 	java -cp /usr/local/saxon/saxon9he.jar net.sf.saxon.Transform -t -s:$LESSON/fr/text/$LESSON.xml -xsl:_templates/$STYLE/latex.xsl
 	if [[ $? == 0 ]]; then
 		OLD=`pwd`
@@ -27,14 +44,29 @@ function pdf() {
 	fi
 }
 
-
 function html() {
+	for LESSON in $LESSONS;
+	do
+		echo "=== $LESSON ==="
+		html1 $LESSON
+	done
+}
+
+function html1() {
 	java -cp /usr/local/saxon/saxon9he.jar net.sf.saxon.Transform -t -s:$LESSON/fr/text/$LESSON.xml -xsl:_templates/$STYLE/online.xsl
 	ln -sf ../$LESSON/fr/html/index.html dist/$LESSON.html
 	rm imsmanifest.xml sitemap.xml
 }
 
 function scorm() {
+	for LESSON in $LESSONS;
+	do
+		echo "=== $LESSON ==="
+		scorm1 $LESSON
+	done
+}
+
+function scorm1() {
 	sed -i -e "s|<use_navigation>yes</use_navigation>|<use_navigation>no</use_navigation>|" _config/config.xml
 	java -cp /usr/local/saxon/saxon9he.jar net.sf.saxon.Transform -t -s:$LESSON/fr/text/$LESSON.xml -xsl:_templates/$STYLE/online.xsl
 	zip -qr dist/$LESSON.zip imsmanifest.xml sitemap.xml $LESSON _templates/java
@@ -42,14 +74,24 @@ function scorm() {
 	sed -i -e "s|<use_navigation>no</use_navigation>|<use_navigation>yes</use_navigation>|" _config/config.xml
 }
 
+function all() {
+	for LESSON in $LESSONS;
+	do
+		echo "=== $LESSON ==="
+		scorm1 $LESSON
+		html1 $LESSON
+		pdf1 $LESSON
+	done
+}
+
 if [[ $#<2 ]]; then usage; exit 1; fi
-LESSON=$2
+LESSONS=${@:2}
 
 case $1 in
     valider ) valider ;;
     pdf ) pdf ;;
     scorm ) scorm ;;
-    all ) scorm; html; pdf ;;
+    all ) all ;;
     * ) usage ;;
 esac
 
