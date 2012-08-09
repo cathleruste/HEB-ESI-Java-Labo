@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<lesson xmlns="http://www.elml.ch" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="TDOO2" title="TdOO : Orienté Objet">
+	
+	<entry>
+		<paragraph title="Objectifs" icon="objective"/> 
+		<paragraph>
+			Ce td n'est précédé d'aucun td d'exercices préparatoires MAIS le td précédent d'OO est supposé terminé!  
+    </paragraph>
+  </entry>
+  
+	<unit label="TdOO2" title="TdOO : Orienté Objet (suite)">
+		<entry>
+			<paragraph>  
+				Continuons maintenant notre voyage dans l'orienté objet.
+      </paragraph>  
+    </entry>
+    
+		<learningObject title="Un rectangle">
+			<clarify> 
+				<paragraph>  
+					Notre but est de définir des rectangles dans un plan cartésien et de les manipuler.   
+				</paragraph>  
+				<paragraph>  
+					Pour représenter un rectangle, nous avons besoin de connaitre deux positions dans l'espace : 
+					le coin supérieur gauche et le coin inférieur droit.   
+				</paragraph>  
+				<paragraph>  
+					Chacun des coins est représenté par un point ayant deux paramètres (abscisse et ordonnée).   
+				</paragraph>  
+				<paragraph>  
+					Nous allons créer dans un premier temps une classe <formatted style="java">Point</formatted> 
+					avant de définir une classe <formatted style="java">Rectangle</formatted>.  
+				</paragraph>  
+				<paragraph>  
+					À vous de tester correctement le bon fonctionnement de vos classes après chaque modification. 
+					N'oubliez pas <formatted style="java"><formatted style="bold">Junit</formatted></formatted> pour ce faire ;)   
+				</paragraph>  
+			</clarify>
+		</learningObject>
+		
+		<learningObject title="La classe Point">
+			<act><paragraph title="Point" icon="act"/> 
+				<paragraph>  
+					Définissons la classe <formatted style="java">Point</formatted> qui représente un point dans l'espace et testons la au fur et à mesure.  
+				</paragraph>  
+				<list listStyle="ordered">
+				  <item>
+				    Il y a deux attributs privés : 
+            <formatted style="code">abs</formatted> pour l'abscisse et <formatted style="code">ord</formatted> pour l'ordonnée.
+          </item>  
+					<item>
+					  Le constructeur reçoit les valeurs des 2 attributs. Pas de test à faire : tout est valide.
+          </item>  
+					<item>
+					  Écrivez une méthode <formatted style="java">main</formatted> qui crée 
+					  un <formatted style="java">Point point1</formatted> avec les valeurs 2 et 3 et 
+					  un <formatted style="java">Point point2</formatted> avec les valeurs 4 et 5. 
+					  Compilez et exécutez la.
+          </item>  
+					<item>
+					  Prévoyez les accesseurs et les mutateurs de <formatted style="java">Point</formatted>.
+          </item>  
+					<item>
+					  Dans le <formatted style="java">main</formatted>, faites appel à ces méthodes. 
+          </item>  
+					<item>
+					  Ajoutez une méthode <formatted style="java">toString()</formatted> 
+					  qui retourne la chaine représentant le point sous la forme « (abs, ord) ».
+          </item>  
+					<item>
+					  Dans le <formatted style="java">main</formatted>, affichez le point que vous avez créé, 
+					  avant et après modification (appel aux setter). Compilez et exécutez la.
+          </item>  
+					<item>
+					  Ajoutez la méthode <formatted style="java">boolean estADroite(Point autre)</formatted> 
+					  qui vérifie si le point est bien strictement « à droite » de l'autre point donné en paramètre.
+          </item>
+          <item>
+						Faites de même pour tester si un point est « à gauche », « en haut », « en bas ».
+          </item>  
+					<item>
+					  Dans le <formatted style="java">main</formatted>, 
+					  vérifiez que <formatted style="java">point1</formatted> est bien en bas à gauche de <formatted style="java">point2</formatted> et 
+					  que <formatted style="java">point2</formatted> est en haut à droite de <formatted style="java">point1</formatted>. Compilez et exécutez la.
+          </item>  
+        </list>
+      </act>
+		</learningObject>
+		
+		<learningObject title="La classe Rectangle">
+			<act><paragraph title="Rectangle" icon="act"/> 
+				<paragraph>  
+					Définissez une classe <formatted style="java">Rectangle</formatted> pouvant décrire de façon commode un rectangle 
+					dans un espace à deux dimensions et dont les cotés sont parallèles aux axes des coordonnées.  
+				</paragraph>  
+				<list listStyle="ordered">
+				  <item> 
+				    Pour les attributs, on vous propose d'en utiliser deux : 
+				    le coin supérieur gauche et le coin inférieur droit (qui sont des <formatted style="java">Point</formatted> bien sûr...).
+          </item>  
+					<item>
+					  Le constructeur reçoit les valeurs des attributs et vérifie leur cohérence 
+					  (le coin supérieur gauche est bien à gauche et en haut du coin inférieur droit). 
+					  Une <formatted style="java">IllegalArgumentException</formatted> est lancée si ce n'est pas le cas.
+          </item>  
+					<item>
+					  Prévoyez les accesseurs et les mutateurs.
+          </item>  
+					<item>
+					  Ajoutez une méthode <formatted style="java">toString()</formatted> qui retourne la chaine 
+					  « [SG=(abs, ord), ID=(abs,ord)] ». Bien sûr, vous utiliserez la méthode homonyme de la classe <formatted style="java">Point</formatted>.
+          </item>  
+					<item>
+					  Écrivez une méthode <formatted style="java">main</formatted> qui crée et affiche le rectangle dont le coin SG est (2,5) et le coin ID est (4,1).
+          </item>  
+					<item>
+					  Écrivez une méthode calculant sa surface et une autre son périmètre.
+					  <popup>
+					    Vous pouvez écrire d'autres méthode privées pour faciliter votre travail.
+            </popup>
+          </item>  
+					<item>
+					  Dans votre méthode <formatted style="java">main</formatted>, calculez et affichez la surface et le périmètre du rectangle créé. 
+          </item>  
+					<item>
+					  Écrivez une méthode indiquant si un point reçu en paramètre est compris dans le rectangle.
+          </item>  
+					<item>
+					  Testez cette méthode dans le <formatted style="java">main</formatted>.
+          </item>  
+					<item>
+					  Écrivez une méthode indiquant si un point reçu en paramètre est sur un bord du rectangle.
+          </item>  
+					<item>
+					  Testez cette méthode dans le <formatted style="java">main</formatted>.
+          </item>  
+					<item>
+					  Écrivez une méthode indiquant si un rectangle donné en paramètre est complétement à l'intérieur du rectangle.
+					  <popup>
+						  Il suffit de faire des tests sur les bords.
+            </popup>
+          </item>  
+					<item>
+					  Testez cette méthode dans le <formatted style="java">main</formatted>.
+          </item>  
+					<item>
+					  Écrivez une méthode indiquant si un rectangle donné en paramètre possède une intersection avec le rectangle.
+					  <popup>
+						  Il est plus facile de vérifier l'inverse. Le rectangle a une intersection si il n'est ni au dessus, ni en dessous, ni à gauche, ni à droite.
+            </popup>
+          </item>  
+					<item>
+					  Testez cette méthode dans le <formatted style="java">main</formatted>.
+          </item>
+        </list>
+      </act>
+      
+			<act><paragraph title="Rectangle (suite)" icon="act"/> 
+				Vous pouvez ajouter à votre classe Rectangle toutes les méthodes proposées dans le syllabus de logique exercice 4 du chapitre 11.  
+      </act>
+		</learningObject>
+	</unit>
+	
+	<metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition><posNumber>10</posNumber></creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+		<technical>
+			<technicalRequirement>
+				<type>Browser</type>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+		</technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2012 - 2013</version>
+				<contribute>
+					<person name="BEJ" />
+					<person name="CLG" />
+					<person name="CLR" />
+					<person name="DNA" />
+					<person name="MCD" />
+					<person name="NPX" />
+					<person name="PBT" />
+				</contribute>
+			</lifecycle>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+		<rights>
+			<cost>no</cost>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
+		</rights>
+	</metadata>
+
+</lesson>

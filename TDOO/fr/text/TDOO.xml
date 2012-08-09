@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<lesson xmlns="http://www.elml.ch" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="TDOO" title="TdOO : Orienté Objet">
+	
+	<entry>
+		<paragraph title="Objectifs" icon="objective"/> 
+		<paragraph>
+			Il est temps de passer à l'orienté objet. Nous allons vous demander de coder quelques classes simples.  
+    </paragraph>
+  </entry>
+  
+  
+	<unit label="TDOO" title="Orienté Objet">
+
+    <learningObject title="Approche en douceur : la classe Date">
+			<clarify> 
+				Pour notre premier programme objet, nous allons créer une classe Date.
+				Vous avez déjà travaillé avec une telle classe au cours de logique. Utilisons donc ce que vous avez vu.
+			</clarify>
+		</learningObject>
+		
+		<learningObject title="Les classes Date, MainDate et TestDate">
+			<act><paragraph icon="act"/> 
+			  <list listStyle="ordered">
+			    <item>
+			      <paragraph>
+              Créez une classe Date avec les attributs (privés) suivant :
+              <list listStyle="unordered">
+                <item>jour de type entier</item>
+                <item>mois de type entier</item>
+                <item>année de type entier</item>
+              </list>
+              N'oubliez pas de mettre votre classe dans le <formatted style="java">package g12345.tdOO</formatted>  
+            </paragraph>
+				  </item>
+				  <item>
+				    <paragraph>
+              Ajoutez à cette classe un constructeur qui reçoit les valeurs des attributs. 
+              Nous ne vous demandons pas encore de vérifier la validité des paramètres. 
+            </paragraph>
+				  </item>
+				  <item>
+				    <paragraph>
+              Ajoutez la méthode <formatted style="java">toString()</formatted> qui retourne la chaine de caractères représentant 
+              la date au format donné dans l'exemple ci-dessous :<newLine/>  
+              * le 01/01/2013 *  
+              <popup>Afin de formater vos données, n'hésitez pas à consulter l'API de la classe <formatted style="java">java.text.DecimalFormat</formatted></popup>
+            </paragraph>
+          </item>
+          <item>
+            <paragraph>
+              MAIN : Créez une classe <formatted style="java"> MainDate</formatted> 
+              avec une méthode <formatted style="java">main</formatted> qui crée trois dates et les affiche.
+            </paragraph>
+          </item>
+          <item>
+            <paragraph>
+              Revenez à la classe <formatted style="java">Date</formatted> et ajoutez les accesseurs pour chacun des attributs.  
+            </paragraph>
+				  </item>
+				  <item>
+				    <paragraph>
+				      Toujours dans la classe <formatted style="java">Date</formatted>, regardons maintenant à valider la date fournie au constructeur.
+            </paragraph>
+            <paragraph>
+              La valeur du mois doit être comprise entre 1 et 12 inclus et la validité de la valeur du jour dépend du mois et de l'année. 
+              Lors du td5, vous avez écrit une classe <formatted style="java">Util</formatted> contenant une méthode 
+              <formatted style="java">nbJours</formatted> que vous utiliserez ici. 
+            </paragraph>
+            <paragraph>
+              Si un des paramètres fournis n'est pas valide, vous lancerez une  
+              <formatted style="code">IllegalArgumentException</formatted>.
+				    </paragraph>
+          </item>
+          <item>
+            <paragraph>
+              TEST : Écivez une méthode de test utilisant JUnit pour tester la validité de votre constructeur. 
+              Pensez à tester des cas corrects, les cas limites et des cas incorrects (qui provoquent des lancements d'exception).
+            </paragraph>
+          </item>
+          <item>
+            <paragraph>
+              Revenez à la classe <formatted style="java">Date</formatted> et ajoutez-y une méthode permettant de vérifier si deux dates sont égales ou non. 
+              Deux dates sont égales si elles ont la même valeur pour le jour, le mois et l'année.
+            </paragraph>
+          </item>
+          <item>
+            <paragraph>
+              MAIN : Modifiez la méthode <formatted style="java">main</formatted> afin de vérifier si la première date et la dernière sont égales.
+            </paragraph>
+          </item>
+          <item>
+            <paragraph>
+              Revenez à la classe <formatted style="java">Date</formatted> et ajoutez-y un constructeur sans paramètre qui initialise la date à la date du jour.
+              <popup>
+                <paragraph>
+                  Pour obtenir la date du jour vous devez faire appel aux classes <formatted style="java">Calendar</formatted> et 
+                  <formatted style="java">GregorianCalendar</formatted> du <formatted style="java">package java.util</formatted>.
+                </paragraph>
+                <paragraph>  
+                  Pour obtenir les jours, mois et années de la date du jour :    
+                </paragraph>
+                <paragraph cssClass="java">
+  <![CDATA[Calendar now = new GregorianCalendar();
+int annéeNow = now.get(Calendar.YEAR);
+
+/* Un petit tour vers l'API de la classe GregorianCalendar vous montrera
+ * qu'elle utilise la valeur 0 pour janvier.
+ * Un ajustement est donc nécessaire pour correspondre 
+ * à notre exemple où janvier commence à 1 */
+ 
+int moisNow = now.get(Calendar.MONTH)+1;
+int jourNow = now.get(Calendar.DAY_OF_MONTH);
+  ]]>          </paragraph>
+                <paragraph>
+                  après avoir fait les <formatted style="code">import</formatted> nécessaires bien sûr!  
+                </paragraph>
+              </popup>
+            </paragraph>
+          </item>
+				  <item>
+				    <paragraph>
+              Toujours dans la classe Date, ajoutez une méthode <formatted style="java">int compareTo(Date autreDate)</formatted> qui   
+              <list listStyle="unordered">
+                <item>retourne 0 si <formatted style="java">autreDate</formatted> est égale à la date courante</item>  
+                <item>retourne un entier négatif si la date courante est antérieure à l'<formatted style="java">autreDate</formatted></item>  
+                <item>retourne un entier positif si la date courante est postérieure à l'<formatted style="java">autreDate</formatted></item>  
+              </list>
+            </paragraph>
+          </item>
+          <item>
+            <paragraph>
+              TEST : Écivez une méthode de test pour tester la validité de votre méthode <formatted style="java">compareTo</formatted>.
+            </paragraph>
+          </item>
+          <item>
+            <paragraph>
+              MAIN : Modifiez la méthode <formatted style="java">main</formatted> afin d'afficher si la première date vient avant la seconde ou non.
+            </paragraph>
+          </item>
+        </list>
+      </act>
+		</learningObject>
+		
+		<learningObject title="Continuons...">
+			<act><paragraph title="Personne" icon="act"/> 
+				Syllabus de logique exercice 2 du chapitre 11.
+      </act>
+			<act><paragraph title="Anniversaire des personnes" icon="act"/>
+				Syllabus de logique exercice 3 du chapitre 11. Nous utiliserons ici un tableau de Personne (et pas encore les listes)  
+      </act>
+		</learningObject>
+	</unit>
+	
+	<metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition><posNumber>10</posNumber></creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+		<technical>
+			<technicalRequirement>
+				<type>Browser</type>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+		</technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2012 - 2013</version>
+				<contribute>
+					<person name="BEJ" />
+					<person name="CLG" />
+					<person name="CLR" />
+					<person name="DNA" />
+					<person name="MCD" />
+					<person name="NPX" />
+					<person name="PBT" />
+				</contribute>
+			</lifecycle>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+		<rights>
+			<cost>no</cost>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
+		</rights>
+	</metadata>
+
+</lesson>
