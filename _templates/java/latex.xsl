@@ -24,9 +24,9 @@
         <!--
         <xsl:output-character character="&lt;" string="\ensuremath{&lt;}"/>
         <xsl:output-character character="&gt;" string="\ensuremath{&gt;}"/>
+        <xsl:output-character character="&quot;" string="''"/>
         -->
         <!-- ASCII characters -->
-        <xsl:output-character character="&quot;" string="''"/>
         <xsl:output-character character="’" string="'"/>
         <xsl:output-character character="‘" string="'"/>
         <xsl:output-character character="$" string="\$"/>

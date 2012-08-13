@@ -90,6 +90,7 @@ LESSONS=${@:2}
 case $1 in
     valider ) valider ;;
     pdf ) pdf ;;
+    html ) html ;;
     scorm ) scorm ;;
     all ) all ;;
     * ) usage ;;
