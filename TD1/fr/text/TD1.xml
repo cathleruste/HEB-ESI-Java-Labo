@@ -177,11 +177,11 @@
 					<formatted style="bold">Je ne trouve pas le cours Java.</formatted>
 				</paragraph>
 				<paragraph>C'est qu'il ne fait pas encore partie de la liste de vos cours.
-					Pour vous inscrire, ensuite sur "S'inscrire aux cours".
+					Pour vous inscrire,
 				</paragraph>
 				<list listStyle="ordered">
-					<item>allez dans l'onglet "Mes cours"</item>
-					<item>cliquez sur "Catalogue de cours"</item>
+					<item>allez dans l'onglet "Mes cours",</item>
+					<item>cliquez sur "Catalogue de cours",</item>
 					<item>ensuite cliquez sur "S'inscrire aux cours".</item>
         </list>
 
