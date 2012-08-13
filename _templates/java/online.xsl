@@ -181,6 +181,11 @@
 		</xsl:if>
 	</xsl:template>
 	
+	<!-- Gesiton de la taille du trou
+	+ Ajout de l'attribut 'separator' donnant le caractère servant de séparateur dans les réponses.
+	Permet de gérer les cas où la ',' est dans la réponse.
+	Javascript adapté en conséquence.
+	-->
 	<xsl:template match="elml:gap">
 		<xsl:param name="selfCheckLabel"/>
 		<xsl:param name="gap_stringlength">
@@ -193,11 +198,18 @@
 				<xsl:otherwise>240</xsl:otherwise>
 			</xsl:choose>
 		</xsl:param>
+		<xsl:param name="separator">
+			<xsl:choose>
+				<xsl:when test="@separator"><xsl:value-of select="@separator"/></xsl:when>
+				<xsl:otherwise>,</xsl:otherwise>
+			</xsl:choose>
+		</xsl:param>
 		<input type="text" value="" class="itemText" id="{$selfCheckLabel}_{generate-id(.)}" style="width:{$gap_stringlength}px"/>
 		<xsl:text> </xsl:text><span class="gapText">
+		<xsl:value-of select="$separator"/>
 		<xsl:value-of select="." disable-output-escaping="yes"/>
 		<xsl:if test="@answers!=''">
-			<xsl:text>,</xsl:text>
+			<xsl:value-of select="$separator"/>
 		</xsl:if>
 		<xsl:value-of select="@answers"/>
 		</span>
@@ -380,7 +392,9 @@ var inputs = itemNode.getElementsByTagName ('input');
 				var correct = false;
 				var value = inputs[i].value;
 				var synonymsNode = inputs[i].nextSibling.nextSibling;
-				var synonyms = synonymsNode.innerHTML.split(",");
+				var separator = synonymsNode.innerHTML.charAt(0);
+				var synonyms = synonymsNode.innerHTML.split(separator);
+				synonyms.shift();
 				var itemLabel = inputs[i].parentNode;
 				var itemAnswer = itemLabel.parentNode;
 				var itemHelp = itemAnswer.getElementsByTagName ('div')[1];
@@ -433,7 +447,9 @@ if (itemNode) {
 	if (inputs) {
 		for (var i = 0; i < inputs.length; ++i) {
 			var synonymsNode = inputs[i].nextSibling.nextSibling;
-			var synonyms = synonymsNode.innerHTML.split(",");
+			var separator = synonymsNode.innerHTML.charAt(0);
+			var synonyms = synonymsNode.innerHTML.split(separator);
+			synonyms.shift();
 			var itemLabel = inputs[i].parentNode;
 			var itemAnswer = itemLabel.parentNode;
 			var itemHelp = itemAnswer.getElementsByTagName ('div')[1];
