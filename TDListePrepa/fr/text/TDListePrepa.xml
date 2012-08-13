@@ -104,7 +104,7 @@
 								  <formatted style="code">listeInt.<gap answers="get(10),get (10),get( 10 ),get ( 10 )">get (10)</gap>;</formatted>
 								</item>  
 								<item>remplacement du 10ème élément par la valeur 3 :  
-								  <formatted style="code">listeInt.<gap answers="set(10, 3),set(10,3),set( 10, 3 ),set( 10,3 ),set (10, 3),set (10,3),set ( 10,3 ),set( 10, 3 )" separator="/">set (10, 3)</gap>;</formatted>
+								  <formatted style="code">listeInt.<gap answers="set(10, 3)/set(10,3)/set( 10, 3 )/set( 10,3 )/set (10, 3)/set (10,3)/set ( 10,3 )/set( 10, 3 )" separator="/">set (10, 3)</gap>;</formatted>
 								</item>  
 								<item>vrai si la liste contient la valeur 3 : 
 								  <formatted style="code">listeInt.<gap answers="contains(3),contains( 3 ),contains (3),contains ( 3 )">contains (3)</gap>;</formatted>
