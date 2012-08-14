@@ -6,7 +6,6 @@
 
 	
 	<entry>
-		<paragraph title="Objectifs" icon="objective"/> 
 		<paragraph>
 			Ces quelques questions ont pour but de vérifier si vous êtes prêts pour  
 			venir faire le TD sur les listes au laboratoire.  
@@ -46,7 +45,7 @@
 							<list listStyle="unordered">
 							  <item>
 							    <paragraph>de chaines : </paragraph>
-							    <formatted style="code">
+							    <formatted style="javawhitblanks">
 							      <gap answers="">List &lt; String &gt;</gap> 
 							      listeChaine = 
 										<gap answers="">new ArrayList &lt; String &gt;()</gap>
@@ -55,7 +54,7 @@
                 </item>  
 								<item>
 								  <paragraph>d'entiers : </paragraph>
-							    <formatted style="code">
+							    <formatted style="javawhitblanks">
 							      <gap answers="">List &lt; Integer &gt;</gap> 
 							      listeInt = 
 										<gap answers="">new ArrayList &lt; Integer &gt;()</gap>
@@ -64,7 +63,7 @@
                 </item>  
 								<item>
 								  <paragraph>de caractères : </paragraph>
-							    <formatted style="code">
+							    <formatted style="javawhitblanks">
 							      <gap answers="">List &lt; Character &gt;</gap> 
 							      listeChaine = 
 										<gap answers="">new ArrayList &lt; Character &gt;()</gap>
