@@ -5,7 +5,6 @@
 	label="TDListe" title="TD sur les listes">
 	
 	<entry>
-		<paragraph title="Objectifs" icon="objective"/> 
 		<paragraph>
 		  Ce TD a pour but de vous familiariser aux listes.
     </paragraph>
