@@ -5,7 +5,6 @@
 	label="TDOO" title="TdOO : Orienté Objet">
 	
 	<entry>
-		<paragraph title="Objectifs" icon="objective"/> 
 		<paragraph>
 			Il est temps de passer à l'orienté objet. Nous allons vous demander de coder quelques classes simples.  
     </paragraph>
