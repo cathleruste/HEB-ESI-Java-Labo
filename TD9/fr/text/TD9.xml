@@ -660,7 +660,7 @@ echo $?
           La copie ne sera pas exécutée si la première commande a échoué.
         </paragraph>
 <paragraph cssClass="java">
-<![CDATA[mkdir rep || echo "erreur dans la création du répertoire"
+<![CDATA[mkdir rep || echo "error while creating the directory"
 ]]> </paragraph>
         <paragraph>
 						Le message est affiché uniquement si la première commande échoue.
