@@ -9,6 +9,7 @@ function usage {
 	echo "    elml html    leçon ... - pour la version HTML (avec menu)"
 	echo "    elml scorm   leçon ... - pour le scorm de la leçon (sans menu)"
 	echo "    elml all     leçon ... - pour le PDF + HTML + scorm de la leçon"
+	echo "    elml updateProfs  prof1 prof2 ... - Met à jour les profs de toutes les leçons"
 }
 
 function valider() {
@@ -84,6 +85,17 @@ function all() {
 	done
 }
 
+function updateProfs() {
+	PROFS=$LESSONS;
+	sed -i -e "/<person.*>/d;" TD*/fr/text/TD*.xml;
+	PERSONS=""
+	for PROF in $PROFS
+	do
+		PERSONS="$PERSONS <person name=\"$PROF\" \/> "
+	done
+	sed -i -e "/<\/contribute>/ i $PERSONS" TD*/fr/text/TD*.xml;
+}
+
 if [[ $#<2 ]]; then usage; exit 1; fi
 LESSONS=${@:2}
 
@@ -93,6 +105,7 @@ case $1 in
     html ) html ;;
     scorm ) scorm ;;
     all ) all ;;
+    updateProfs ) updateProfs ;;
     * ) usage ;;
 esac
 
