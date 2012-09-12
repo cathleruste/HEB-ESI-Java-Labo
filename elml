@@ -28,7 +28,7 @@ function valider1() {
 function pdf() {
 	for LESSON in $LESSONS;
 	do
-		echo "=== $LESSON ==="
+		echo "=== PDF $LESSON ==="
 		pdf1 $LESSON
 	done
 }
@@ -48,7 +48,7 @@ function pdf1() {
 function html() {
 	for LESSON in $LESSONS;
 	do
-		echo "=== $LESSON ==="
+		echo "=== HTML $LESSON ==="
 		html1 $LESSON
 	done
 }
@@ -62,7 +62,7 @@ function html1() {
 function scorm() {
 	for LESSON in $LESSONS;
 	do
-		echo "=== $LESSON ==="
+		echo "=== SCORM $LESSON ==="
 		scorm1 $LESSON
 	done
 }
