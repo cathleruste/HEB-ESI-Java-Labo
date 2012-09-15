@@ -29,6 +29,7 @@ SCORMS  = $(addsuffix .zip, $(addprefix $(DIST), $(LECONS)))
 .PHONY: html
 .PHONY: scorm
 .PHONY: all
+.PHONY: clean
 
 default: pdf
 all: pdf html scorm
@@ -50,3 +51,5 @@ debug:
 	@echo "*** LECONS : $(LECONS)"
 	@echo "*** PDFS : $(PDFS)"
 
+clean:
+	rm -f dist/*

@@ -57,6 +57,7 @@ function html1() {
 	java -cp /usr/local/saxon/saxon9he.jar net.sf.saxon.Transform -t -s:$LESSON/fr/text/$LESSON.xml -xsl:_templates/$STYLE/online.xsl
 	ln -sf ../$LESSON/fr/html/index.html dist/$LESSON.html
 	rm imsmanifest.xml sitemap.xml
+	zip -ru dist/LaboJava.zip $LESSON _templates
 }
 
 function scorm() {
