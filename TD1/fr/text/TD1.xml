@@ -58,7 +58,7 @@
 				</item>
 				<item>
 					Vous pouvez <formatted style="bold">coopérer</formatted> avec vos condisciples 
-					mais on vous demande de ne <formatted style="bold">pas copier</formatted> les réponses.
+					mais nous vous demandons de ne <formatted style="bold">pas copier</formatted> les réponses.
 					Si vous voulez progresser,
 					<formatted style="bold">chercher</formatted> la réponse est plus important que de la trouver. 
 				</item>
@@ -88,23 +88,23 @@
 				</paragraph>
 				<list listStyle="unordered">
 					<item>
-						Un <formatted style="bold">guide visuel Linux</formatted> :
-						Document écrit par nos soins qui explique de façon simple et visuelle les bases de Linux.
+						un <formatted style="bold">guide visuel Linux</formatted> :
+						document écrit par nos soins qui explique de façon simple et visuelle les bases de Linux.
 						Vous pouvez le consulter quand vous n'avez pas <formatted style="bold">compris</formatted> un point de matière.
 						Certains points sont à lire <formatted style="bold">avant</formatted> de venir au laboratoire.
-						(ex: pour ce TD, les points 1 à 8 seront utiles)
+						(ex: pour ce TD, les points 1 à 8 seront utiles) ;
 					</item>
 					<item>
-						Un <formatted style="bold">aide-mémoire</formatted> :
-						Document écrit par nos soins sur l'utilisation de Windows et Linux.
+						un <formatted style="bold">aide-mémoire</formatted> :
+						document écrit par nos soins sur l'utilisation de Windows et Linux.
 						Vous pouvez le consulter quand vous avez <formatted style="bold">oublié</formatted> quelque chose
-						(le nom d'une commande, une procédure, ...).
+						(le nom d'une commande, une procédure, ...) ;
 					</item>
 					<item>
-						Un <formatted style="bold">quick reference vi</formatted> : Reprend, en condensé, toutes les commandes vi les plus utiles. 
+						un <formatted style="bold">quick reference vi</formatted> : reprend, en condensé, toutes les commandes vi les plus utiles ;
 					</item>
 					<item>
-						Un <formatted style="bold">quick reference linux</formatted> : Reprend, en condensé, toutes les commandes Linux les plus utiles. 
+						un <formatted style="bold">quick reference linux</formatted> : reprend, en condensé, toutes les commandes Linux les plus utiles. 
 					</item>
 				</list>
 			</clarify>
@@ -135,13 +135,13 @@
 						Votre professeur peut vous le communiquer. Vous le trouverez aussi sur votre carte d'étudiant.
 					</item>
 					<item>
-						le <formatted style="bold">mot de passe</formatted> vous est également
+						le <formatted style="bold">password</formatted> vous est également
 						fourni par votre professeur.
 						Attention à la casse (minuscule/majuscule) qui doit être respectée.
 					</item>
 				</list>
 				<paragrah>
-					Notez et gardez votre mot de passe.
+					Notez et <formatted style="bold">gardez</formatted> votre mot de passe.
 					Vous allez le changer sous peu mais celui-ci vous servira en cas de problème.
 				</paragrah>
 			</clarify>
@@ -180,8 +180,8 @@
 					Pour vous inscrire,
 				</paragraph>
 				<list listStyle="ordered">
-					<item>allez dans l'onglet "Mes cours",</item>
-					<item>cliquez sur "Catalogue de cours",</item>
+					<item>allez dans l'onglet "Mes cours" ;</item>
+					<item>cliquez sur "Catalogue de cours" ;</item>
 					<item>ensuite cliquez sur "S'inscrire aux cours".</item>
         </list>
 
@@ -232,7 +232,7 @@
 				<list listStyle="ordered">
 					<item>
 						<paragraph>
-							Appuyez sur <formatted style="input">ALT-CTRL-DEL</formatted>
+							Appuyez sur <formatted style="input">CTRL-ALT-DEL</formatted>
 							et choisissez <formatted style="input">Change password...</formatted>.
 						</paragraph>
 						<popup title="une capture d'écran">
@@ -305,7 +305,7 @@
 		<entry>
 			<paragraph cssClass="citation">
 				« <formatted style="italic">Linux ? Il y a moins bien mais c'est plus cher</formatted> ».
-				auteur inconnu
+				Auteur inconnu
 			</paragraph>
 		</entry>
 		<learningObject title="Présentation">
@@ -319,7 +319,7 @@
 					<formatted style="bold">Tiens, c'est quoi Linux et pourquoi l'utiliser ? C'est quoi une machine partagée?</formatted>
 				</paragraph>
 				<paragraph>
-					Si vous vous posez encore ces questions, je vous invite vivement à relire le point 1 du guide visuel.
+					Si vous vous posez encore ces questions, je vous invite vivement à lire le point 1 du guide visuel.
 				</paragraph>
 			</clarify>
 		</learningObject>
@@ -356,26 +356,26 @@
 				<paragraph>Il y a 3 étapes :</paragraph>
 				<list listStyle="ordered">
 					<item>
-						Lancez l'application <formatted style="code">putty</formatted>
-						(vous la trouverez dans le menu ou comme raccourci sur le bureau).
+						lancez l'application <formatted style="code">putty</formatted>
+						(vous la trouverez dans le menu ou comme raccourci sur le bureau) ;
 					</item>
 					<item>
-						Indiquez à putty le nom de la machine
+						indiquez à <formatted style="code">putty</formatted> le nom de la machine
 						(<formatted style="italic">Host Name</formatted>) 
 						à laquelle vous voulez vous connecter
-						(ici <formatted style="code">linux1</formatted>).
+						(ici <formatted style="code">linux1</formatted>) ;
 						<popup title="une capture d'écran">
 							<multimedia src="../image/putty-login.jpg" type="jpeg" />
 						</popup>
 					</item>
 					<item>
-						Cliquez sur "<formatted style="bold">Open</formatted>"; 
+						cliquez sur "<formatted style="bold">Open</formatted>"; 
 						la connexion se fait !
 						S'il vous présente une boite de message avec un "<formatted style="bold">Security Alert</formatted>", 
-						cliquez sur "<formatted style="bold">Yes</formatted>" en toute confiance.
+						cliquez sur "<formatted style="bold">Yes</formatted>" en toute confiance ;
 					</item>
 					<item>
-						Identifiez-vous !
+						identifiez-vous !
 						<list listStyle="unordered">
 							<item>
 								Tapez votre nom d'utilisateur 
@@ -400,7 +400,7 @@
 			<clarify>
 				<paragraph>
 					Si vous ne savez plus ce qu'est le mode console ou comment entrer une commande, 
-					retournez d'abord faire un petit tour aux points 2 et 3 du guide visuel.
+					allez d'abord faire un petit tour aux points 2 et 3 du guide visuel.
 				</paragraph>
 				<paragraph title="Ma première commande" icon="icon_experiment" />
 				<paragraph>
@@ -448,7 +448,10 @@
 				</paragraph>
 				<list listStyle="unordered">
 					<item>Les règles à respecter sont quasiment les mêmes que sur Windows. Attention toutefois à ne pas choisir un mot du dictionnaire.</item>
-					<item>Vous pouvez d'ailleurs reprendre le même mot de passe que celui que vous avez choisi pour Windows.</item>
+					<item>
+					  Vous pouvez d'ailleurs reprendre le même mot de passe que celui que vous avez choisi pour Windows.
+					  Mais contrairement à celui sous Windows, le mot de passe Linux pourra être conservé toute l'année.
+					</item>
 				</list>
 			</clarify>
 			<act>
@@ -508,13 +511,13 @@
 					<formatted style="bold">Et si j'ai oublié le nom d'une commande ?</formatted>
 				</paragraph>
 				<paragraph>
-					Vous verrez la semaine prochaine les moyens à votre disposition pour retrouver le nom d'une commande ou comment l'utiliser correctement.
+					Vous verrez la semaine prochaine les moyens mis à votre disposition pour retrouver le nom d'une commande ou pour apprendre à l'utiliser correctement.
 				</paragraph>
 			</clarify>
 			<clarify>
 				<paragraph title="FAQ" icon="icon_faq" />
 				<paragraph>
-					<formatted style="bold">J'ai quitté en fermant la fenêtre, c'est pas plus simple ?</formatted>
+					<formatted style="bold">J'ai quitté en fermant la fenêtre, ce n'est pas plus simple ?</formatted>
 				</paragraph>
 				<paragraph>
 					Oui ! Mais c'est impoli de quitter quelqu'un sans lui dire au revoir ! ;) 
@@ -615,7 +618,7 @@
 				<list listStyle="unordered">
 					<item>
 						En préambule, tapez la commande <formatted style="input">cd</formatted>
-						pour revenir dans votre <formatted style="italic">home</formatted>
+						pour revenir dans <formatted style="italic">votre home</formatted>
 						(dossier personnel).
 					</item>
 					<item>
@@ -658,7 +661,7 @@
 				<list listStyle="unordered">
 					<item>
 						En préambule, tapez la commande <formatted style="input">cd</formatted>
-						pour revenir dans votre <formatted style="italic">home</formatted>
+						pour revenir dans <formatted style="italic">votre home</formatted>
 						(dossier personnel).
 					</item>
 					<item>
@@ -755,31 +758,31 @@
 					<item>
 						<formatted style="input">cat nomDuFichier</formatted>
 						affiche à l'écran le contenu du fichier dont le nom est donné 
-						(ce n'est pas un éditeur, on voit le contenu et c'est tout);
+						(ce n'est pas un éditeur, on voit le contenu et c'est tout) ;
 					</item>
 					<item>
 						<formatted style="input">mkdir nomDuDossier</formatted>
-						crée un dossier (vide);
+						crée un dossier (vide) nommé "<formatted style="italic">nomDuDossier</formatted>" ;
 					</item>
 					<item>
 						<formatted style="input">mv nomDuFichier nouveauNomDeFichier</formatted>
-						renomme le fichier donné sous le nom "nouveauNomDeFichier";
+						renomme le fichier donné "<formatted style="italic">nomDuFichier</formatted>" sous le nom "<formatted style="italic">nouveauNomDeFichier</formatted>" ;
 					</item>
 					<item>
 						<formatted style="input">mv nomDuFichier nomDuDossier</formatted>
-						déplace le fichier donné dans le dossier indiqué;
+						déplace le fichier donné dans le dossier indiqué ;
 					</item>
 					<item>
 						<formatted style="input">cp nomDuFichier nouveauNomDeFichier</formatted>
-						crée une copie du fichier sous le nom "nouveauNomDeFichier";
+						crée une copie du fichier sous le nom "<formatted style="italic">nouveauNomDeFichier</formatted>" ;
 					</item>
 					<item>
 						<formatted style="input">cp nomDuFichier nomDuDossier</formatted>
-						copie le fichier donné dans le dossier indiqué;
+						copie le fichier donné dans le dossier indiqué ;
 					</item>
 					<item>
 						<formatted style="input">rm nomDuFichier</formatted>
-						détruit le fichier dont on donne le nom;
+						détruit le fichier dont on donne le nom ;
 					</item>
 					<item>
 						<formatted style="input">rmdir nomDuDossier</formatted>
@@ -834,7 +837,7 @@
 		<learningObject title="L'éditeur (le retour)">
 			<clarify>
 				<paragraph>
-					Revenons sur l'éditeur et apprenons quelques commandes supplémentaires
+					Revenons sur l'éditeur <formatted style="code">vi</formatted> et apprenons quelques commandes supplémentaires
 				</paragraph>
 				<list listStyle="unordered">
 					<item>
@@ -907,12 +910,12 @@
 						quitter proprement la connexion avec <formatted style="code">linux1</formatted>
 						(<formatted style="input">exit</formatted>).
 					</item>
-					<item>éteindre l'ordinateur.</item>
+					<item>éteindre l'ordinateur ou vous déloguer.</item>
 				</list>
 				<paragraph>
 					Attention, afin d'arriver au laboratoire dans les meilleures conditions, il est 
 					bien de revoir la matière qui sera mise en pratique.
-					C'est pourquoi nous vous fournissons quelques exercices préparatoires à faire à la maison 
+					C'est pourquoi nous vous fournissons quelques <formatted style="bold">exercices préparatoires</formatted> à faire à la maison 
 					pour vous permettre d'évaluer si vous êtes prêt.
 					Afin de vérifier que vous préparez bien ces exercices, une
 					<formatted style="bold">interrogation</formatted>

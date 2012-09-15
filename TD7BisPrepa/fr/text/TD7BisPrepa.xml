@@ -10,7 +10,7 @@
 			Afin d'arriver au laboratoire dans les meilleures conditions, 
 			il est bien de revoir la matière qui sera mise en pratique. 
 			C'est pourquoi nous vous fournissons quelques exercices préparatoires 
-			à faire à la maison pour vous permettre d'évaluer si vous êtes prêts. 
+			à faire à la maison pour vous permettre d'évaluer si vous êtes prêt. 
 		</paragraph>
 	</entry>
 	
@@ -47,7 +47,7 @@
 							</paragraph>    
 							<paragraph>    
 								Une classe de test contient une méthode de test par cas.
-								Une méthode est reconnue comme étant un test unitaire grâce au tag <formatted style="javawithblanks"><gap answers="">@Test</gap></formatted>.
+								Chaque méthode de test est reconnue comme étant un test unitaire grâce au tag <formatted style="javawithblanks"><gap answers="">@Test</gap></formatted>.
 								Elle contient des affirmations :
 							</paragraph>    
 							<list style="unordered"> 
@@ -95,8 +95,8 @@
 								<gap answers="">java</gap> 
 								<gap answers="">org.junit.runner.JUnitCore</gap>
 								<gap answers="">g32000.tds.td7BisPrepa.ExerciceTest</gap></formatted><newLine/>
-								permet de lancer les tests de la classe <formatted style="java">ExerciceTest</formatted> 
-								dont le package est <formatted style="java">g32000.tds.td7BisPrepa</formatted> précédemment compilée.    
+								permet de lancer les tests de la classe <formatted style="java">ExerciceTest</formatted>, 
+								dont le package est <formatted style="java">g32000.tds.td7BisPrepa</formatted>, précédemment compilée.    
 							</paragraph>    
 						</gapText>
 						<solution/>
@@ -106,7 +106,7 @@
 			
 			<clarify><paragraph title="Vérification" icon="icon_activity"/>
 			  <paragraph>
-          Lors du td précédent, on vous a demandé d'écrire la méthode donnant l'occurrence des chiffres d'un nombre. <newLine/>
+          Lors du td précédent, nous vous avons demandé d'écrire la méthode donnant l'occurrence des chiffres d'un nombre. <newLine/>
           Écrivez sur papier un plan de tests pour cette méthode.    
           <newLine/>  
           <popup title="un conseil">
@@ -127,7 +127,7 @@
 			  <paragraph>
 				  Assurez-vous de venir au laboratoire avec vos solutions 
 				  des exercices 15 et 17 du chapitre 8 "Les tableaux" 
-				  ainsi qu'avec le chapitre 9 "Le tri" de votre cours de logique .
+				  ainsi qu'avec le chapitre 9 "Le tri" de votre cours de logique.
         </paragraph>
 			</clarify>
 		</learningObject>

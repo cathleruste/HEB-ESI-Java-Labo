@@ -8,7 +8,7 @@
 			Afin d'arriver au laboratoire dans les meilleures conditions, 
 			il est bien de revoir la matière qui sera mise en pratique. 
 			C'est pourquoi nous vous fournissons quelques exercices préparatoires 
-			à faire à la maison pour vous permettre d'évaluer si vous êtes prêts. 
+			à faire à la maison pour vous permettre d'évaluer si vous êtes prêt. 
 		</paragraph>
 	</entry>
 	
@@ -22,13 +22,6 @@
 
 		<learningObject title="Survol du langage : Les tableaux à une dimension">
 			
-			<clarify>
-				<paragraph title="Un vecteur" icon="icon_reading"> 
-					Un tableau à une dimension est une suite d’éléments de même type portant  
-					tous le même nom mais se distinguant les uns des autres par un indice.  
-				</paragraph>
-			</clarify>
-				
 			<act>
 				
 				<selfCheck title="Bornes d'un tableau" shuffle="no">
@@ -50,20 +43,11 @@
 						<solution></solution>
 					</fillInBlanks>
 				</selfCheck>
-          
-				<paragraph title="Pourquoi un tableau et pas plusieurs variables ?" icon="icon_reading">
-					Le fait d'envisager une seule "grande" variable, compartimentée en plusieurs "sous-variables", 
-					permet une grande économie de lignes de code et une grande flexibilité. 
-				</paragraph>
-				<paragraph>
-					Par exemple : si on désire stocker le chiffre d’affaire d’une entreprise pour une  année donnée,
-					mois par mois, il suffit d'utiliser un tableau de taille 12.
-				</paragraph>
-
+        
 				<paragraph title="Déclaration, création et initialisation d'un tableau " icon="icon_reading"/>
 				<paragraph>
 					Un tableau possède un type et une taille.
-					Le type est soit l'un des types simples (int, double, char,..) ou une réference (String,...).
+					Le type de ses éléments est soit l'un des types simples (int, double, char,..) ou une réference (String,...).
 				</paragraph>
 				<paragraph>
 					La taille du tableau est le nombre (strictement positif ) de ses éléments.
@@ -120,7 +104,7 @@
 							<list style="unordered">
 								<item>pour les numériques (int, double, char) : <gap answers="zéro,0">0</gap></item>
 								<item>pour les boolean : <gap answers="">false</gap></item>
-								<item>pour les objets (réference) : <gap answers="">null</gap></item>
+								<item>pour les objets (type réference) : <gap answers="">null</gap></item>
 							</list>						
 						</gapText>
 						<solution/>
@@ -166,7 +150,7 @@ int [] entiers = {0,4,5,6,6,7,2,1,8,9};
 							contenant les élements <formatted style="java">{3,4,5}</formatted>.
 						</question>
 						<answer feedback="Un tableau connait sa taille via son attribut length" correct="yes">
-							Le tableau connait sa taille
+							Le tableau connait sa taille.
 						</answer>
 						<answer feedback="Il n'est pas possible d'utiliser des indices se trouvant en dehors des bornes du tableau." correct="no">
 							<formatted style="java">entiers[3]</formatted> vaut 5.
@@ -314,7 +298,7 @@ entiers= new {3,3,3};
 				
 				<selfCheck title="Exercice" shuffle="yes">
 					<fillInBlanks>
-						<question>Complétez la javadoc de la méthode max2 suivante  
+						<question>Complétez la javadoc de la méthode <formatted style="italic">max2</formatted> suivante  
 						</question>
 						<gapText>
 						  <paragraph cssClass="javawithblanks">
@@ -356,6 +340,10 @@ public class Exercice {
 								<formatted style="italic">documentation</formatted> situé dans le répertoire courant?
 								<gap answers="">javadoc</gap> <gap answers="">-d</gap> <gap answers="documentation, ./documentation">documentation</gap> 
 								<gap answers="">*.java</gap> 
+							</paragraph>
+							<paragraph>
+							  Si vous voulez garder dans la javadoc les caractères accentués écrits dans le code, 
+							  recherchez du côté de l'option <formatted style="italic">charset</formatted> de <formatted style="italic">javadoc</formatted>.
 							</paragraph>
 						</gapText>
 						<solution/>

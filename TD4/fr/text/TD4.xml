@@ -38,10 +38,10 @@
 					En mode commande : 
 				</paragraph>
 				<list>
-					<item><formatted style="code">gg=G</formatted> : indente correctement votre code.</item>
-					<item><formatted style="code">.</formatted> : répète la dernière commande d'édition..</item>
-					<item><formatted style="code">$</formatted> : place le curseur sur le dernier caractère de la ligne.</item>
-					<item><formatted style="code">a</formatted> : permet de passer en mode insertion après le curseur.</item>
+					<item><formatted style="code">gg=G</formatted> : indente correctement votre code ;</item>
+					<item><formatted style="code">.</formatted> : répète la dernière commande d'édition ;</item>
+					<item><formatted style="code">$</formatted> : place le curseur sur le dernier caractère de la ligne ;</item>
+					<item><formatted style="code">a</formatted> : permet de passer en mode insertion après le curseur ;</item>
 					<item><formatted style="code">A</formatted> : permet de passer en mode insertion à la fin de la ligne.</item>
 				</list>
 				<paragraph>
@@ -96,7 +96,7 @@ System.out.println("Etudiant g*****");
 				</popup>
 
 				<paragraph title="Concaténation de fichier" icon="act">
-					Dans <formatted style="code">/eCours/java/td/td4</formatted> se trouvent 2 programmes java : 
+					Dans <formatted style="code">/eCours/java/td/td4</formatted> se trouvent 2 programmes Java : 
 					<formatted style="code">Début.java</formatted> et <formatted style="code">Fin.java</formatted>. 
 				</paragraph>
 				<list>
@@ -151,7 +151,7 @@ System.out.println("Etudiant g*****");
 				<paragraph>
 					Étant donné le code suivant, 
 					l’instruction de choix (<formatted style="code">if</formatted>-<formatted style="code">else</formatted>) 
-					peut être remplacée par une seule affectation laquelle ?
+					peut être remplacée par une seule affectation, laquelle ?
 				</paragraph>
 				<paragraph cssClass="java">
 import java.util.Scanner;

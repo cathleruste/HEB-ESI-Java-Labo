@@ -37,7 +37,7 @@
 					
 			<clarify>
 				<paragraph>  
-					<formatted style="bold">On a déjà vu comment se connecter à linux1 !</formatted>  
+					<formatted style="bold">Nous avons déjà vu comment se connecter à linux1 !</formatted>  
 				</paragraph>  
       
 				<paragraph>  
@@ -120,9 +120,12 @@
 				</paragraph>  
         
 				<list listStyle="unordered">
-					<item>Revenez à la fenêtre "<formatted style="italic">Session</formatted>".</item>  
-					<item>Entrez un nom dans la champ de saisie "<formatted style="italic">Saved Sessions</formatted>" (par exemple : "<formatted style="italic">Linux1</formatted>")</item>  
-					<item>Cliquez sur le bouton "<formatted style="italic">Save</formatted>".  </item>  
+					<item>revenez à la fenêtre "<formatted style="italic">Session</formatted>" ;</item>  
+					<item>
+					  entrez un nom dans la champ de saisie "<formatted style="italic">Saved Sessions</formatted>" 
+					  (par exemple : "<formatted style="italic">Linux1</formatted>") ;
+          </item>  
+					<item>Cliquez sur le bouton "<formatted style="italic">Save</formatted>" ; </item>  
 					<item>À présent, il suffira de double-cliquer sur la session "Linux1" pour ouvrir une connexion à linux1.</item>  
 				</list>
         
@@ -151,9 +154,9 @@
 				</paragraph>  
       
 				<list listStyle="unordered">
-					<item>Une option modifie le sens d'une commande.</item>  
-					<item>Elle commence par le signe "<formatted style="java">-</formatted>" suivi d'une seule lettre.</item>  
-					<item>Ou encore par le double tiret "<formatted style="java">--</formatted>" suivi d'un nom d'option.</item>  
+					<item>une option modifie le sens d'une commande ;</item>  
+					<item>elle commence par le signe "<formatted style="java">-</formatted>" suivi d'une seule lettre ;</item>  
+					<item>ou encore par le double tiret "<formatted style="java">--</formatted>" suivi d'un nom d'option.</item>  
 				</list>  
 				
 				<paragraph>
@@ -354,7 +357,7 @@
 				<paragraph title="Exercices" icon="act"/> 
 				<list listStyle="ordered">
 					<item>Visualisez le contenu d'un des fichiers que vous avez déjà créé pour ce TD en utilisant un chemin relatif.</item>  
-					<item>Faites de même avec un fichier du TD 1. </item>  
+					<item>Faites de même avec un fichier du TD1. </item>  
 					<item>Faites de même avec un fichier de votre voisin. </item>  
 					<item>
 						Quel est le dossier désigné par la notation suivante : <newLine/>
@@ -414,7 +417,7 @@
 					<item>Quel est votre groupe principal ? </item>  
 					<item>Quels sont les groupes auxquels appartient votre professeur ?</item>  
 					<item>Avez-vous un groupe en commun avec lui ?</item>  
-					<item>Quel(s) groupe(s) avez-vous en commun avec les autres étudiants de votre groupe ?</item>  
+					<item>Quel(s) groupe(s) Linux avez-vous en commun avec les autres étudiants de votre groupe ESI ?</item>  
 				</list>
 			</act>
       
@@ -530,7 +533,7 @@
 									<gap answers="Max.java">Max.java</gap> 
 								</item>  
 								<item>
-									Quelles permissions donner au fichier ?                
+									Quelles permissions minimales donner au fichier ?                
 				               <gap answers="r">r</gap> 
 				               <gap answers="w">w</gap> 
 				               <gap answers="-">-</gap> 
@@ -649,7 +652,7 @@
 					mais je sens que vous commencez déjà à regretter d'avoir posé la question ;)  
 				</paragraph>  
 				<paragraph>  
-					<formatted style="bold">On a vu qu'un fichier est créé avec des permissions par défaut. 
+					<formatted style="bold">Nous avons vu qu'un fichier est créé avec des permissions par défaut. 
 					C'est configurable ?
 					</formatted>  
 				</paragraph>  
@@ -677,7 +680,7 @@
 				<paragraph>  
 					Non. Vous devrez rapidement disposer d'un Linux fonctionnel à la maison.
 					Regardez la page "installation d'un Linux" dans la formation "Langage Java 1<formatted style="superscript">ère</formatted> année" 
-					mis à votre disposition sur <formatted style="italic">poÉSI</formatted>. 
+					mise à votre disposition sur <formatted style="italic">poÉSI</formatted>. 
 					Vous trouverez quelques informations de départ pour vous orienter 
 					et des liens vers les sites d'informations les plus utiles.  
 				</paragraph>

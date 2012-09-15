@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" label="TD5" title="TD5 : Méthodes">
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" label="TD5" title="TD5 - Méthodes">
 	
   <entry>
     <paragraph>  
@@ -12,14 +12,14 @@
     </list>
   </entry>
   
-  <unit label="TD5" title="TD5 : Méthodes">
+  <unit label="TD5" title="TD5 - Méthodes">
   
 		<learningObject title="Les méthodes de classe">
 		
 			<act>
 			  <paragraph title="Maximum de nombres" icon="act"/> 
 				<list listStyle="ordered">
-				  <item>Reprenez la méthode de la préparation de ce td qui calcule le maximum de 2 nombres (<formatted style="italic">max2</formatted>).</item>  
+				  <item>Reprenez la méthode de la préparation de ce TD qui calcule le maximum de 2 nombres (<formatted style="italic">max2</formatted>).</item>  
 					<item>
 					  Écrivez à présent une méthode qui utilise <formatted style="italic">max2</formatted> pour calculer le maximum de 3 nombres.
 					  Cette méthode recevra 3 entiers en paramètre.
@@ -71,7 +71,7 @@
 			<clarify>
 			  <paragraph title="history" icon="icon_reading"/> 
 			  <paragraph>
-				  En bash, la commande <formatted style="input">history <formatted style="italic">n</formatted></formatted>; 
+				  En bash, la commande <formatted style="input">history <formatted style="italic">n</formatted></formatted> 
 				  donne la liste numérotée des <formatted style="italic">n</formatted> dernières commandes.<newLine/>
           Lorsque l'on quitte la session, l'historique est sauvegardé dans un fichier 
           (<formatted style="input">~/<formatted style="italic">.bash_history</formatted></formatted> par défaut).
@@ -100,7 +100,7 @@
 			  <paragraph title="Nombre de jours dans un mois" icon="act"/> 
         <list listStyle="ordered">
           <item>
-            Écrivez dans une classe <formatted style="italic">Util</formatted> une méthode 
+            Écrivez, dans une classe <formatted style="italic">Util</formatted>, une méthode 
             <formatted style="italic">nbJours</formatted> qui calcule et retourne le nombre de jours d'un mois donné en paramètre. 
             Le mois est donné sous forme d'un entier entre 1 et 12. 
           </item>  
@@ -109,7 +109,7 @@
             qui teste la méthode <formatted style="italic">nbJours()</formatted>.
           </item>  
           <item>
-            Écrivez, dans la classe <formatted style="italic">Util</formatted>, une méthode <formatted style="italic">estBissextile</formatted> (cfr. td 4) 
+            Écrivez, dans la classe <formatted style="italic">Util</formatted>, une méthode <formatted style="italic">estBissextile</formatted> (cfr. TD 4) 
             qui teste si une année donnée en paramètre est bissextile ou pas.
           </item>  
           <item>

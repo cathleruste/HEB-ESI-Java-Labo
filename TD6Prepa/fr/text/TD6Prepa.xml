@@ -8,7 +8,7 @@
 			Afin d'arriver au laboratoire dans les meilleures conditions, 
 			il est bien de revoir la matière qui sera mise en pratique. 
 			C'est pourquoi nous vous fournissons quelques exercices préparatoires 
-			à faire à la maison pour vous permettre d'évaluer si vous êtes prêts. 
+			à faire à la maison pour vous permettre d'évaluer si vous êtes prêt. 
 		</paragraph>
 	</entry>
 
@@ -259,11 +259,11 @@ public class Test {
 						<gapText>
 							<paragraph>
 								Ouvrez l'API java et recherchez la classe
-								<formatted style="italic">IllegalFormatException</formatted>.
+								<formatted style="code">IllegalFormatException</formatted>.
 							</paragraph>
 							<list listStyle="unordered">
 								<item>
-									Quel est le package de la classe <formatted style="italic">IllegalFormatException</formatted> 
+									Quel est le package de la classe <formatted style="code">IllegalFormatException</formatted> 
 									documentée dans l'API java ?   
 									<gap answers="">java.util</gap>
 								</item>
@@ -274,8 +274,8 @@ public class Test {
 							</list>
 							<paragraph>
 								Écrivez la déclaration correcte d'une variable nommée
-								<formatted style="italic">clavier</formatted> de type 
-								<formatted style="italic">Scanner</formatted> sans import de la classe.
+								<formatted style="code">clavier</formatted> de type 
+								<formatted style="code">Scanner</formatted> sans import de la classe.
 							</paragraph>
 							<paragraph>
 								<gap answers="">java.util.Scanner</gap> <gap answers="">clavier</gap>
@@ -294,7 +294,7 @@ package td.td6;
 public class ErrCompilation {
     import java.util.Scanner;
     public static void main (String [] args) { 
-        System.out.println("coucou");
+        System.out.println("TD6Prépa");
     }
 }							</paragraph>
 							<paragraph>
@@ -340,11 +340,11 @@ import java.util.Scanner;
 package survol;
 public class ErrCompilation{
 	public static void main (String [] args){
-		System.out.println("coucou");
+		System.out.println("TD6Prépa");
 	}
 }							</paragraph>
 							<paragraph>
-								la commande “javac ErrCompilation.java” provoque l'erreur suivante :
+								la commande <formatted style="code">javac ErrCompilation.java</formatted> provoque l'erreur suivante :
 							</paragraph>
 							<paragraph cssClass="output">
 ErrCompilation.java:3: class, interface, or enum expected
@@ -353,20 +353,22 @@ package survol;
 1 error
 							</paragraph>
 							<paragraph>
-								Il s'agit d'une erreur générée par le compilateur javac car :
+								Il s'agit d'une erreur générée par le compilateur <formatted style="code">javac</formatted> car :
 							</paragraph>
 						</question>
 						<answer feedback="" correct="no"><formatted style="java">package</formatted> s'écrit avec une majuscule</answer>
-						<answer feedback="" correct="yes">l'instruction package est mal placée dans le code</answer>
-						<answer feedback="" correct="no">le package utilisé est incorrect</answer>
+						<answer feedback="" correct="yes">l'instruction <formatted style="java">package</formatted> est mal placée dans le code</answer>
+						<answer feedback="" correct="no">le <formatted style="java">package</formatted> utilisé est incorrect</answer>
 					</multipleChoice>
 				</selfCheck>
 
 				<selfCheck title="Choix Multiple " shuffle="yes">
 					<multipleChoice>
 						<question>
-							Après correction du code précédent situé dans le répertoire survol,
-							la suite de commandes 
+						  <paragraph>
+							  Après correction du code précédent situé dans le répertoire survol,
+							  la suite de commandes :
+              </paragraph>
 							<paragraph><formatted style="code">javac ErrCompilation.java</formatted></paragraph>
 							<paragraph><formatted style="code">java ErrCompilation</formatted></paragraph>
 							provoque l'erreur suivante :
@@ -389,13 +391,13 @@ at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:332)
 Could not find the main class: ErrCompilation. Program will exit.
 							</paragraph>
 							<paragraph>
-								Il s'agit d'une erreur générée par la machine virtuelle java car :
+								Il s'agit d'une erreur générée par la machine virtuelle Java car :
 							</paragraph>
 						</question>
 						<answer feedback="" correct="yes">pour exécuter on doit donner le nom qualifié de la classe</answer>
 						<answer feedback="" correct="no">la déclarative de package ne correspond pas à l'emplacement du fichier .class</answer>
 						<answer feedback="" correct="no">la machine virtuelle n'est pas configurée pour reconnaitre l'utilisation de packages</answer>
-						<answer feedback="" correct="no">le fichier .class devrait se trouver ailleurs que le source java</answer>
+						<answer feedback="" correct="no">le fichier .class devrait se trouver ailleurs que le source Java</answer>
 					</multipleChoice>
 				</selfCheck>
 

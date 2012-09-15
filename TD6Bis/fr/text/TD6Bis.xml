@@ -27,7 +27,7 @@
 
 			<clarify>
 				<paragraph title="Consignes">
-					Pour ce TD, vous allez traduire en Java quelques exercices que vous avez résolu au cours de logique.
+					Pour ce TD, vous allez traduire en Java quelques exercices que vous avez résolus au cours de logique.
 					Vous écrirez une classe par exercice, le tout dans un dossier <formatted style="code">td6Bis</formatted>.
 				</paragraph>
 				<paragraph>
@@ -50,12 +50,12 @@
 				</paragraph>
 				<list listStyle="unordered">
 					<item>
-						Choisir judicieusement votre nom de package. Il est hors de question qu'il contienne le mot
+						choisir judicieusement votre nom de package. Il est hors de question qu'il contienne le mot
 						<formatted style="italic">classes</formatted> qui est purement technique.
-						Il devrait plutôt être du genre <formatted style="code">g12345/td6Bis</formatted> 
+						il devrait plutôt être du genre <formatted style="code">g12345/td6Bis</formatted> 
 					</item>  
 					<item>
-						Adapter le <formatted style="code">CLASSPATH</formatted> pour que ça fonctionne.
+						adapter le <formatted style="code">CLASSPATH</formatted> pour que ça fonctionne.
 					</item>  
 				</list>
 			</clarify>
@@ -63,23 +63,23 @@
 			<act>
 				<paragraph title="Exercice 1 - Somme de chiffres" icon="act">
 					Syllabus de logique exercice 9 du chapitre 7. 
-					Écrivez une méthode de classe nommée <formatted style="java">sommeChiffres</formatted>
+					Écrivez une méthode de classe nommée <formatted style="code">sommeChiffres</formatted>
 					résolvant cet exercice. 
 					La méthode reçoit un entier en paramètre.
 				</paragraph>
 				<paragraph>
 					Dans cet exercice, il vous est demandé d'entrer un nombre positif. 
-					Dans votre méthode <formatted style="java">sommeChiffres</formatted>,
+					Dans votre méthode <formatted style="code">sommeChiffres</formatted>,
 					lancez une exception de type <formatted style="java">IllegalArgumentException</formatted>
 					si elle reçoit un entier négatif.
 				</paragraph>
 				<paragraph>
-					Écrivez une méthode <formatted style="java">main</formatted> qui fera appel à cette méthode <formatted style="java">sommeChiffres</formatted>.
+					Écrivez une méthode <formatted style="java">main</formatted> qui fera appel à cette méthode <formatted style="code">sommeChiffres</formatted>.
 				</paragraph>
 
 				<paragraph title="Exercice 2 - Conversion binaire-décimale" icon="act">
 					Syllabus de logique exercice 10 du chapitre 7. 
-					Écrivez une classe Exercice2 qui contiendra une méthode de classe résolvant cet exercice.
+					Écrivez une classe <formatted style="code">ConversionBinDec</formatted> qui contiendra une méthode de classe résolvant cet exercice.
 				</paragraph>
 				<paragraph>
 					Dans cet exercice, il vous est demandé d'améliorer le programme 
@@ -100,6 +100,7 @@
 					Appelez cette méthode dans une méthode <formatted style="java">main</formatted>.
 				</paragraph>
 
+        <paragraph title="Pour les plus rapides"/>
 				<paragraph title="Exercice 4 - Génération de suites" icon="act">
 					Syllabus de logique exercice 7 du chapitre 7.
 					Écrivez une méthode de classe pour chaque suite résolvant cet exercice.
@@ -108,7 +109,7 @@
 				<paragraph>
 					Dans cet exercice, il vous est demandé d'entrer un nombre positif.
 					Dans vos méthodes, lancez une exception de type <formatted style="java">IllegalArgumentException</formatted>
-					si elle reçoit un entier négatif.
+					si elle reçoit un entier négatif ou nul.
 				</paragraph>
 				<paragraph>
 					Écrivez une méthode <formatted style="java">main</formatted> qui fera appel à ces méthodes.

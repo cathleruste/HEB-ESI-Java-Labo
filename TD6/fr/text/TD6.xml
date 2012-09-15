@@ -27,16 +27,16 @@
 		<learningObject title="Introduction">
 
 			<clarify>
-				<paragraph title="Pratiquement pour les tds" icon="icon_reading"/>
+				<paragraph title="Pratiquement pour les TDs" icon="icon_reading"/>
 				<paragraph>
 					Pour <formatted style="bold">votre</formatted> code, 
-					nous vous recommandons de rassembler vos classes par package portant le nom du td
+					nous vous recommandons de rassembler vos classes par package portant le nom du TD
 					(exemple «<formatted style="java">g32010.td6</formatted>» 
 					ou «<formatted style="java">g32010.tds.td6</formatted>»). 
 				</paragraph>
 				<paragraph>
 					L’appartenance d’une classe à un package déterminé est nécessaire à la compilation. 
-					Dès lors vous devrez rajouter comme <formatted style="bold">première instruction en tête de fichier</formatted> 
+					Dès lors vous devrez rajouter comme <formatted style="bold">première instruction du source</formatted> 
 					(c-à-d avant même l'instruction <formatted style="java">public class NomClasse</formatted>) :
 				</paragraph>
 				<paragraph cssClass="code">
@@ -46,10 +46,10 @@
 				<paragraph title="Nom complet d'une classe" icon="icon_reading"/>
 				<paragraph>
 					Le nom qualifié d'une classe est obtenu en accolant
-					le nom de la classe au nom du package,
+					le nom de la classe au nom du package ;
 					on obtient ainsi un nom unique pour cette classe.
 					On parlera du «<formatted style="bold">nom complet</formatted>» 
-					ou du «<formatted style="bold">nom qualifié</formatted>» de la classe.
+					 ou du «<formatted style="bold">nom qualifié</formatted>»  de la classe.
 				</paragraph>
 				<paragraph>
 					Par exemple, le nom complet de la classe <formatted style="code">Couleur</formatted> 
@@ -76,11 +76,13 @@
 				<paragraph title="Package et stockage de fichier..." icon="icon_reading"/>
 				<paragraph>
 					La notion de package est liée à celle de répertoire.
-					Sur le serveur linux1, nous ferons correspondre à chaque nom de package
+					Sur le serveur <formatted style="italic">linux1</formatted>, nous ferons correspondre à chaque nom de package
 					une arborescence de répertoires de la manière suivante :
 					<formatted style="java">java.tds.td6</formatted> sera associé 
 					à <formatted style="code">java/tds/td6</formatted> 
-					(cette arborescence se trouve actuellement sous <formatted style="code">/eCours</formatted> sur linux1). 
+					(cette arborescence se trouve actuellement sous le répertoire <formatted style="code">/eCours</formatted> sur <formatted style="italic">linux1</formatted>,
+					ce répertoire a été créé pour contenir tous les fichiers écrits par les professeurs et mis à votre disposition sur <formatted style="italic">linux1</formatted>,
+					ceci signifie que vous n'avez pas le droit de <formatted style="bold">modifier</formatted> quoi que ce soit dans ce répertoire). 
 					Nous stockerons tous les fichiers contenant les définitions des classes de ce package
 					dans le répertoire associé.
 				</paragraph>
@@ -118,16 +120,16 @@
 				</paragraph>
 				<list listStyle="unordered">
 					<item>
-						Un package est un regroupement de classes.
+						un package est un regroupement de classes ;
 					</item>
 					<item>
-						Pour créer un tel package,
+						pour créer un tel package,
 						il suffit de commencer les <formatted style="bold">fichiers sources</formatted> contenant les classes à regrouper
 						par l'instruction <formatted style="java">package</formatted> suivi du nom 
-						que l'on désire donner au package.
+						que l'on désire donner au package ;
 					</item>
 					<item>
-						Les <formatted style="bold">fichiers classes</formatted> doivent se trouver dans l'arborescence de répertoires donnée par le package.
+						les <formatted style="bold">fichiers classes</formatted> doivent se trouver dans l'arborescence de répertoires donnée par le package.
 					</item>
 				</list>
 	
@@ -167,8 +169,8 @@
 						<question>
 							Sachant que la classe <formatted style="java">SurfaceTriangle</formatted> se trouve dans 
 							<formatted style="code">/home/g32010/tds/td6</formatted> 
-							et qu'on retrouve <formatted style="code">/home</formatted> dans la variable CLASSPATH, 
-							donnez l'instruction <formatted style="java">package</formatted> correspondant à la situation.
+							et qu'on retrouve <formatted style="code">/home</formatted> dans la variable <formatted style="code">CLASSPATH</formatted>, 
+							donnez l'instruction <formatted style="java">package</formatted> correspondant à la situation :
 						</question>
 						<gapText>
 							<paragraph cssClass="javawithblanks">
@@ -212,12 +214,12 @@
     export CLASSPATH  # Nécessaire uniquement si CLASSPATH n'était pas encore défini
 				</paragraph>
 				<paragraph>
-					<formatted style="bold">Tiens, je viens de changer mon CLASSPATH, 
-						je me suis déconnecté et la valeur que j'avais ajouté au CLASSPATH a disparu!
+					<formatted style="bold">Tiens, je viens de changer mon <formatted style="code">CLASSPATH</formatted>, 
+						je me suis déconnecté et la valeur que j'avais ajouté au <formatted style="code">CLASSPATH</formatted> a disparu!
 					</formatted>
 				</paragraph>
 				<paragraph>
-					Non non vous ne rêvez pas... la modification n'a pas été sauvegardée... 
+					Non non, vous ne rêvez pas... la modification n'a pas été sauvegardée... 
 					Je vous entends d'ici 
 					"<formatted style="italic">Mais je vais devoir le refaire à chaque fois alors :S</formatted>".
 					Rassurez-vous, en ajoutant les deux instructions ci-dessus à votre 
@@ -229,7 +231,7 @@
 				</paragraph>
 				<paragraph>
 					Sous Windows aussi il existe des variables d'environnement,
-					il vous suffit d'ajouter une variable classpath ou de modifier la valeur de celle-ci. 
+					il vous suffit d'ajouter une variable <formatted style="code">CLASSPATH</formatted> ou de modifier la valeur de celle-ci. 
         </paragraph>
         <paragraph>
 					Toutefois, il est grand temps de penser à installer un linux ! 
@@ -352,7 +354,7 @@
 					</tablerow>
 				</table>
 								
-				<paragraph title="2ème approche : package avec source et class dans le même dossier."/>
+				<paragraph title="2ème approche : package avec source et classe dans le même dossier."/>
 				<table 	title="Maintenant que vous travaillez avec la notion de package,"
 						wdith="470" units="pixels">
 					<tablerow>
@@ -375,7 +377,7 @@
 								Supposons que :
 							</paragraph>
 							<list listStyle="unordered"> 
-								<item>Le CLASSPATH contient <formatted style="code">/home</formatted>,</item>
+								<item>le CLASSPATH contient <formatted style="code">/home</formatted>,</item>
 								<item>le package est <formatted style="code">g32010.td6</formatted>,</item>
 								<item>la classe s'appelle <formatted style="code">Test</formatted>,</item>
 								<item>le chemin absolu du fichier est <formatted style="code">/home/g32010/td6/Test.java</formatted>.</item>
@@ -516,6 +518,7 @@
 						</tabledata>
 					</tablerow>
 				</table>
+				<!-- 4ème approche : celle de pbt : je ne me souviens plus de ce que c'était! -->
 				<paragraph>
 					<formatted style="bold">Remarque</formatted> :
 					Avec cette 3<formatted style="superscript">ème</formatted> approche le nom du package
@@ -527,6 +530,7 @@
 				
 				<paragraph title="Utiliser un package" icon="act"/>
 				<list listStyle="ordered">
+				  <item>Modifiez votre <formatted style="code">CLASSPATH</formatted>;</item>
 					<item>
 					  Modifiez votre programme <formatted style="code">Hello.java</formatted> de votre répertoire <formatted style="code">td3</formatted> 
 					  en y ajoutant l'instruction suivante à la première ligne: <newLine/>

@@ -8,7 +8,7 @@
 			Afin d'arriver au laboratoire dans les meilleures conditions, 
 			il est bien de revoir la matière qui sera mise en pratique. 
 			C'est pourquoi nous vous fournissons quelques exercices préparatoires 
-			à faire à la maison pour vous permettre d'évaluer si vous êtes prêts. 
+			à faire à la maison pour vous permettre d'évaluer si vous êtes prêt. 
 		</paragraph>
 	</entry>
 
@@ -27,27 +27,27 @@
 					<fillInBlanks>
 						<question>
 							<paragraph>
-								Sachant que le résultat de la commande "echo $CLASSPATH" est 
+								Sachant que le résultat de la commande "<formatted style="code">echo $CLASSPATH</formatted>" est 
 							</paragraph>
 							<paragraph cssClass="code">.:/home:/usr/local/java:/home/g12345</paragraph>
 							<paragraph>
-								quel package associer à Exercice.java si Exercice.class se trouve dans
+								quel package associer à <formatted style="code">Exercice.java</formatted> si <formatted style="code">Exercice.class</formatted> se trouve dans
 							</paragraph>
 						</question>
 						<gapText>
 							<list listStyle="ordered">
-								<item>
+								<item><formatted style="code">
 									/home/<formatted style="bold">g32010</formatted>/Exercice.class :
 									package <gap answers="">g32010</gap>;
-								</item>
-								<item>
+								</formatted></item>
+								<item><formatted style="code">
 									/home/<formatted style="bold">g32010</formatted>/tds/td6/Exercice.class :
 									package <gap answers="">g32010.tds.td6</gap>;
-								</item>
-								<item>
+								</formatted></item>
+								<item><formatted style="code">
 									/home/<formatted style="bold">g12345</formatted>/tds/td6/Exercice.class :
 									package <gap answers="">tds.td6</gap>;
-								</item>
+								</formatted></item>
 							</list>
 						</gapText>
 						<solution/>
@@ -75,11 +75,11 @@
 				<selfCheck title="Activité &quot;remplir les blancs&quot;" shuffle="no">
 					<fillInBlanks>
 						<question>
-							Ouvrez l'API java et recherchez la classe <formatted style="italic">Integer</formatted>.
+							Ouvrez l'API java et recherchez la classe <formatted style="code">Integer</formatted>.
 							Quel est le package de cette classe ?
 						</question>
 						<gapText>
-							<gap answers="">java.lang</gap>
+							<gap answers="">java.lang</gap>.
 						</gapText>
 						<solution/>
 					</fillInBlanks>
@@ -99,7 +99,7 @@
 				<selfCheck title="Mots clés" shuffle="yes">
 					<fillInBlanks>
 						<question>
-							Complétez le morceau de code suivant afin de pouvoir lancer l'exception de type IllegalArgumentException
+							Complétez le morceau de code suivant afin de pouvoir lancer l'exception de type <formatted style="code">IllegalArgumentException</formatted>
 						</question>
 						<gapText>
 							<paragraph cssClass="javawithblanks">
@@ -107,14 +107,14 @@ public static int maxPositif (int nb1, int nb2) {
 
 	int max;
 	
-	if (nb1&lt;0 || nb2&lt;0) 
+	if (nb1&lt;0 || nb2&lt;0) {
         <gap answers="">throw</gap> <gap answers="">new</gap> IllegalArgumentException(); 
-  
+  }
   if (nb1&lt;max) {
       max = nb1;
-	} else {
+  } else {
 	    max = nb2;
-	}
+  }
 
     return max;
 } 
@@ -127,8 +127,8 @@ public static int maxPositif (int nb1, int nb2) {
 				<selfCheck title="Mots clés" shuffle="yes">
 					<fillInBlanks>
 						<question>
-							Complétez le morceau de code suivant afin de pouvoir attraper l'exception de type IllegalArgumentException 
-							susceptible d'être lancée par la méthode maxPositif de la même classe.
+							Complétez le morceau de code suivant afin de pouvoir attraper l'exception de type <formatted style="code">IllegalArgumentException</formatted> 
+							susceptible d'être lancée par la méthode <formatted style="code">maxPositif</formatted> de la même classe.
 						</question>
 						<gapText>
 							<paragraph cssClass="javawithblanks">

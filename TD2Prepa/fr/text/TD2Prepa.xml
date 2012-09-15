@@ -9,7 +9,7 @@
 				Afin d'arriver au laboratoire dans les meilleures conditions, 
 				il est bien de revoir la matière qui sera mise en pratique. 
 				C'est pourquoi nous vous fournissons quelques exercices préparatoires 
-				à faire à la maison pour vous permettre d'évaluer si vous êtes prêts.  
+				à faire à la maison pour vous permettre d'évaluer si vous êtes prêt.  
 			</paragraph>
 		</entry>
 		
@@ -38,7 +38,7 @@
 								<paragraph>
 									Nous allons faire les laboratoires sur une machine
 									qui se nomme <gap answers="">linux1</gap> 
-									et qui tourne le système d'exploitation        
+									et qui tourne sur le système d'exploitation        
 									<gap answers="Linux,linux">Linux</gap>. 
 									Pour s'y connecter, nous utilisons le programme Windows        
 									<gap answers="">putty</gap>. 
@@ -263,7 +263,7 @@
 					</paragraph>  
 					<list listStyle="unordered">
 						<item>afficher le contenu du dossier courant;</item>  
-						<item>supprimer un fichier <formatted style="code">Hello.java</formatted> qui se trouve dans le dossier courant</item>  
+						<item>supprimer un fichier <formatted style="code">Hello.java</formatted> qui se trouve dans le dossier courant.</item>  
 					</list>
     
 					<paragraph title="5. (3 points)"/>  

@@ -8,7 +8,7 @@
 			Afin d'arriver au laboratoire dans les meilleures conditions, 
 			il est bien de revoir la matière qui sera mise en pratique. 
 			C'est pourquoi nous vous fournissons quelques exercices préparatoires 
-			à faire à la maison pour vous permettre d'évaluer si vous êtes prêts. 
+			à faire à la maison pour vous permettre d'évaluer si vous êtes prêt. 
 		</paragraph>
 	</entry>
 
@@ -108,7 +108,7 @@
 						</question>
 			            <answer feedback="Non non, qu'il y ait 0, 1 ou plusieurs espaces ne change rien..." correct="no">il faut insérer des espaces dans la parenthèse</answer>
 			            <answer feedback="En effet, il s'agit bien de String et non string" correct="yes">string doit être écrit avec une majuscule au début</answer>
-			            <answer feedback="Non non, le fichier doit bien avoir le même nom que la classe avec l'extension java, c-à-d ErrCompilation.java" correct="no">fichier doit s'appeler string.java</answer>
+			            <answer feedback="Non non, le fichier doit bien avoir le même nom que la classe avec l'extension java, c-à-d ErrCompilation.java" correct="no">le fichier doit s'appeler string.java</answer>
 			            <answer feedback="Non non, ce sont bien des parenthèses..." correct="no">il faut remplacer les parenthèses par des accolades</answer>
 					</multipleChoice>
 				</selfCheck>

@@ -16,7 +16,7 @@
 			<act>
 			  <paragraph title="Tests" icon="act"/>  
 				<paragraph>    
-					Lors de la préparation de ce td, on vous a demandé d'écrire un plan de tests pour la méthode 
+					Lors de la préparation de ce TD, nous vous avons demandé d'écrire un plan de tests pour la méthode 
 					<formatted style="bold"><formatted style="italic">occurence</formatted></formatted> écrite lors du td précédent. <newLine/>
 					Maintenant, il est temps de passer à l'action et de coder les tests correspondants! À vous de jouer...    
 				</paragraph>    
@@ -26,22 +26,16 @@
 				</paragraph>    
 				
 				<paragraph cssClass="java">
-<![CDATA[@Test
+<![CDATA[import java.util.Arrays;
+...
+@Test
 public void occurence_cas1() {
   int nb = 122555;
   int [] tabOccurencesAttendues = {0,1,2,0,0,3,0,0,0,0};
   int [] tabOccurencesObtenues = MaClasse.occurence(nb);
   
-  // We check that the array exists
-  assertTrue(tabOccurencesObtenues!=null);
-
-  // We check that the array size is correct
-  assertEquals(tabOccurencesAttendues.length, tabOccurencesObtenues.length);
-  
-  // We check that each element is the expected one
-  for (int i=0; i<tabOccurencesAttendues.length; i++){
-    assertEquals (tabOccurencesAttendues[i], tabOccurencesObtenues[i]);
-  }    
+  // We check that the two arrays are equals
+  assertTrue(Arrays.equals(tabOccurencesAttendues, tabOccurencesObtenues);
 }]]>  </paragraph>
 
       </act>
@@ -65,13 +59,13 @@ public void occurence_cas1() {
 			<paragraph>
               Si cela ne fonctionne pas directement sur Linux1 c'est que la JVM ne trouve pas la classe
               <formatted style="code">org.junit.runner.JUnitCore</formatted> 
-              qui se trouve dans le fichier jar <formatted style="code">/usr/share/java/junit4.jar</formatted>, 
+              qui se trouve dans le fichier <formatted style="italic">jar</formatted> <formatted style="code">/usr/share/java/junit4.jar</formatted>, 
               il faudra dont ajouter ce chemin à votre <formatted style="code">CLASSPATH</formatted> 
               et relancer un <formatted style="italic">shell</formatted> afin que la variable d'environnement soit relue.
 			</paragraph>    
 			<paragraph>
               Certains d'entre vous ne voudront pas entrer cette longue commande lors de chaque lancement de tests.    
-              Rien ne les empêche de définir un alias avec la commande :
+              Rien ne les empêche de définir un <formatted style="italic">alias</formatted> avec la commande :
 			</paragraph>    
 			<paragraph cssClass="code">
     alias javatest='java org.junit.runner.JUnitCore'
@@ -123,7 +117,7 @@ public void occurence_cas1() {
 				    <item>Allez sur le site JUnit et téléchargez JUnit (version 4.x)</item>    
             <item>Décompressez-le dans un dossier de votre choix. 
               Le mieux étant bien sûr d'organiser vos dossiers, fichiers, 
-              nous ne pouvons que vivement vous conseiller de regrouper toutes vos librairies java à un même endroit.   
+              nous ne pouvons que vivement vous conseiller de regrouper toutes vos librairies Java à un même endroit.   
               (dans <formatted style="code">/usr/local/share/java</formatted> par exemple)    
             </item>    
             <item>Modifiez votre CLASSPATH pour y ajouter le fichier <formatted style="italic">junit-4.x.jar</formatted></item>    

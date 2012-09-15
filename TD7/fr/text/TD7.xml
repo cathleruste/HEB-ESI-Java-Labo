@@ -21,7 +21,7 @@
 				<paragraph>    
 					Écrivez aussi une classe <formatted style="java">Principale</formatted> 
 					qui ne contiendra qu'une méthode <formatted style="java">main</formatted>
-					servant à tester <formatted style="java">UtilTabInt</formatted> .
+					servant à tester <formatted style="java">UtilTabInt</formatted>.
 				</paragraph>
 				<paragraph> 
 					Séparez clairement vos sources et vos classes comme on vous a déjà proposé de le faire lors du TD précédent 
@@ -45,8 +45,11 @@
 						une méthode de classe <formatted style="java">initialiser</formatted>    
 						qui reçoit en paramètre un tableau d'entiers. 
 						Cette méthode initialisera toutes les valeurs du tableau à la valeur de l'indice dans le tableau.
-					</item>    
-					<item>
+						<popup title="Avez-vous pensé à tout ?">
+						  Votre méthode reçoit un tableau en paramètre, avez-vous pensé aux cas particuliers que vous pouvez rencontrer ?
+						  Que se passe-t-il si le tableau est null ? Et si il est vide ?
+            </popup>
+					<newLine/>
 						Dans la méthode <formatted style="java">main</formatted> 
 						de la classe <formatted style="java">Principale</formatted>, créez un tableau d'entiers de taille 10
 						et appelez la méthode <formatted style="java">initialiser</formatted> ci-dessus pour initialiser votre tableau.
@@ -62,8 +65,7 @@
 						Écrivez, dans la classe <formatted style="java">UtilTabInt</formatted>, 
 						une méthode de classe <formatted style="java">afficher</formatted> 
 						qui reçoit en paramètre un tableau d'entiers et qui affiche tous les éléments du tableau.
-					</item>    
-					<item>
+					  <newLine/>
 						Dans la méthode <formatted style="java">main</formatted> 
 						de la classe <formatted style="java">Principale</formatted> définie ci-dessus, 
 						appelez la méthode <formatted style="java">afficher</formatted> 
@@ -78,54 +80,30 @@
 					<item>
 						Écrivez, dans la classe <formatted style="java">UtilTabInt</formatted>, 
 						une méthode de classe <formatted style="java">sommer</formatted> 
-						telle que dans le syllabus de logique exercice 1 du chapitre 8.
-					</item>    
-					<item>
-						Dans la méthode <formatted style="java">main</formatted>, 
-						appelez la méthode <formatted style="java">sommer</formatted> 
-						pour trouver la somme des éléments du tableau que vous avez créé.
+						telle que dans le syllabus de logique exercice 1 du chapitre 8 et la tester dans le <formatted style="java">main</formatted>.
 					</item>    
 					<item>
 						Écrivez, dans la classe <formatted style="java">UtilTabInt</formatted>, 
 						une méthode de classe <formatted style="java">maximum</formatted> 
-						telle que dans le syllabus de logique exercice 2 du chapitre 8. 
-					</item>    
-					<item>
-						Dans la méthode <formatted style="java">main</formatted>, 
-						appelez la méthode <formatted style="java">maximum</formatted> 
-						pour trouver le maximum des éléments du tableau que vous avez créé.
+						telle que dans le syllabus de logique exercice 2 du chapitre 8 et la tester dans le <formatted style="java">main</formatted>.
 					</item>    
 					<item>
 						Écrivez, dans la classe <formatted style="java">UtilTabInt</formatted>, 
 						une méthode de classe <formatted style="java">indiceMax</formatted> 
-						telle que dans le syllabus de logique exercice 3 du chapitre 8.
-					</item>    
-					<item>
-						Dans la méthode <formatted style="java">main</formatted>, 
-						appelez la méthode <formatted style="java">indiceMax</formatted> 
-						pour trouver l'indice du maximum des éléments du tableau que vous avez créé. 
+						telle que dans le syllabus de logique exercice 3 du chapitre 8 et la tester dans le <formatted style="java">main</formatted>.
 					</item>    
 					<item>
 						Écrivez, dans la classe <formatted style="java">UtilTabInt</formatted>, 
 						une méthode de classe <formatted style="java">créer</formatted> 
 						qui reçoit en paramètre un entier représentant la taille du tableau 
-						et qui retourne le tableau d'entiers créé de la taille donnée et dont les éléments sont initialisés à 0.
+						et qui retourne le tableau d'entiers créé de la taille donnée et dont les éléments sont initialisés à 0. 
+						La tester dans le <formatted style="java">main</formatted>.
 						<popup title="une aide">Pensez-vous devoir parcourir tout le tableau pour initialiser ses éléments à 0 ?</popup>
-					</item>    
-					<item>
-						Dans la méthode <formatted style="java">main</formatted>, 
-						appelez la méthode <formatted style="java">créer</formatted> 
-						pour créer un second tableau d'entiers de taille 10.
 					</item>    
 					<item>
 						Écrivez, dans la classe <formatted style="java">UtilTabInt</formatted>, 
 						une méthode de classe <formatted style="java">estTrié</formatted>    
-						telle que dans le syllabus de logique exercice 8 du chapitre 8.
-					</item>    
-					<item>
-						Dans la méthode <formatted style="java">main</formatted>, 
-						appelez la méthode <formatted style="java">estTrié</formatted> 
-						pour afficher si les tableaux que vous avez créés sont triés ou non.
+						telle que dans le syllabus de logique exercice 8 du chapitre 8 et la tester dans le <formatted style="java">main</formatted>.
 					</item>    
 					<item>
 						Écrivez, dans la classe <formatted style="java">UtilTabInt</formatted>, 
@@ -140,33 +118,19 @@
 							<item>créé de la taille donnée</item>
 							<item>et dont les éléments sont initialisés à la valeur du deuxième paramètre reçu.</item>
 						</list>
-					</item>    
-					<item>
-						Dans la méthode <formatted style="java">main</formatted>, 
-						appelez la méthode <formatted style="java">créer</formatted> 
-						pour créer un troisième tableau d'entiers de taille 10 initialisé à la valeur 3.
+						La tester dans le <formatted style="java">main</formatted>.
 					</item>    
 					<item>
 						Écrivez, dans la classe <formatted style="java">UtilTabInt</formatted>, 
 						une méthode de classe <formatted style="java">inverser</formatted> 
-						telle que dans le syllabus de logique exercice 10 du chapitre 8.
-					</item>    
-					<item>
-						Dans la méthode <formatted style="java">main</formatted>, 
-						appelez la méthode <formatted style="java">inverser</formatted> 
-						pour créer un tableau d'entiers qui est l'inverse du premier que vous avez créé. Affichez-le.
+						telle que dans le syllabus de logique exercice 10 du chapitre 8 et la tester dans le <formatted style="java">main</formatted>.
 					</item>    
 					<item>
 						Écrivez, dans la classe <formatted style="java">UtilTabInt</formatted>, 
 						une méthode de classe <formatted style="java">positionsMin</formatted> 
-						telle que dans le syllabus de logique exercice 9b du chapitre 8.
+						telle que dans le syllabus de logique exercice 9b du chapitre 8 et la tester dans le <formatted style="java">main</formatted>.
 						<newLine/>
 						<formatted style="bold">Attention</formatted>, ici, la méthode n'affichera pas le tableau des positions minimales mais le retournera.
-					</item>    
-					<item>
-						Dans la méthode <formatted style="java">main</formatted>, 
-						appelez la méthode <formatted style="java">positionsMin</formatted> 
-						pour créer un tableau contenant les indices des positions minimales du tableau fourni. Affichez-le.
 					</item>    
 		        </list>
 		      </act>

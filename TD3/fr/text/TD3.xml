@@ -112,7 +112,7 @@
       <clarify>
         <paragraph title="Revenir à une commande précédente" icon="icon_reading"/> 
         <paragraph>  
-          Il arrive souvent qu'on doive entrer une commande qu'on a déjà écrite il y a peu (ou en tout cas fort proche de ce qu'on a déjà écrit). 
+          Il arrive souvent qu'il faille entrer une commande qu'on a déjà écrite il y a peu (ou en tout cas fort proche de ce qu'on a déjà écrit). 
           C'est là que les flèches viennent à notre secours.  
         </paragraph>  
         <paragraph>  
@@ -157,7 +157,7 @@
       <act>
         <paragraph title="Hello world" icon="act"/> 
         <list listStyle="ordered">
-          <item>Écrivez votre premier programme nommé Hello.java qui affiche le message « Hello, world ! ».</item>  
+          <item>Écrivez votre premier programme nommé<formatted style="java">Hello.java</formatted> qui affiche le message « Hello, world ! ».</item>  
           <item>Compilez-le et exécutez-le.</item>  
         </list>
       </act>
@@ -223,10 +223,14 @@ public class Hello {
           Prenez note des situations que vous allez rencontrer et des solutions afin de réagir efficacement lorsque vous les rencontrerez à nouveau.  
         </paragraph>
         <paragraph>  
-          Vous avez copié dans votre répertoire td3 tous les fichiers .java se trouvant dans /eCours/java/td/td3.  
+          Vous avez copié dans votre répertoire <formatted style="code">td3</formatted> tous les fichiers <formatted style="code">.java</formatted> 
+          se trouvant dans <formatted style="code">/eCours/java/td/td3</formatted>.  
         </paragraph>  
         <paragraph>  
-          Hormis Ex.java utilisé précédemment, tous ces fichiers sont erronés. Les erreurs sont tantôt à la compilation, tantôt à l'exécution. Nous vous demandons de détecter et de corriger les erreurs des programmes Ex1 à Ex4 et de noter dans le tableau ci-dessous (dans la version papier) le type d'erreur ainsi que le message engendré.  
+          Hormis <formatted style="code">Ex.java</formatted> utilisé précédemment, tous ces fichiers sont erronés. 
+          Les erreurs sont tantôt à la compilation, tantôt à l'exécution. Nous vous demandons de détecter et de corriger les erreurs 
+          des programmes <formatted style="italic">Ex1</formatted> à <formatted style="italic">Ex4</formatted> 
+          et de noter dans le tableau ci-dessous le type d'erreur ainsi que le message engendré.  
         </paragraph>       
         <table>
           <tablerow>
@@ -307,7 +311,7 @@ public class Hello {
         Ouvrez votre programme Hello World :   
         <list listStyle="ordered">
           <item>affichez les numéros de ligne</item>  
-          <item>placez-vous sur la 3ème ligne</item>  
+          <item>placez-vous sur la 3ème ligne sans utiliser la touche "flèche"</item>  
           <item>placez-vous sur le mot «Hello»</item>  
         </list>
       </act>
@@ -318,7 +322,8 @@ public class Hello {
       <act>
         <paragraph title="Détection des erreurs" icon="act"/> 
         <paragraph>  
-        Nous vous demandons maintenant de détecter les erreurs des Ex5 à Ex12 et de noter dans le tableau ci-dessous (dans la version papier) le type d'erreur ainsi que le message engendré. Corrigez ces erreurs.    
+        Nous vous demandons maintenant de détecter les erreurs des <formatted style="italic">Ex5</formatted> à <formatted style="italic">Ex12</formatted> 
+        et de noter dans le tableau ci-dessous le type d'erreur ainsi que le message engendré. Corrigez ces erreurs.    
         </paragraph>  
         <table>
           <tablerow>
@@ -372,7 +377,7 @@ public class Hello {
       <act>
         <paragraph title="Exercices de logique" icon="act"/> 
         <paragraph>
-          Voici quelques exercices vus au cours de logique, reprennez les algorithmes écrits en logique et écrivez les programmes java correspondants.
+          Voici quelques exercices vus au cours de logique, reprennez les algorithmes écrits en logique et écrivez les programmes Java correspondants.
         </paragraph> 
       </act>
       
@@ -402,7 +407,7 @@ public class Hello {
     
       <clarify>
         <paragraph>  
-          Vous n'avez peut-être pas fini. Pour pouvoir continuer à la maison sans tout recommencer, <newLine/>
+          Vous n'avez peut-être pas fini. Pour pouvoir continuer à la maison sans tout recommencer, 
           il serait bon de pouvoir récupérer ce que vous avez déjà fait sur linux1. <newLine/>
           Il existe plusieurs méthodes décrites dans l'aide-mémoire (dans le répertoire <formatted style="italic">aide</formatted>). <newLine/>
           En voici une.  <newLine/>

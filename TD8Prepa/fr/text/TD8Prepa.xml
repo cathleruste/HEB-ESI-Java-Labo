@@ -10,7 +10,7 @@
 			Afin d'arriver au laboratoire dans les meilleures conditions, 
 			il est bien de revoir la matière qui sera mise en pratique. 
 			C'est pourquoi nous vous fournissons quelques exercices préparatoires 
-			à faire à la maison pour vous permettre d'évaluer si vous êtes prêts. 
+			à faire à la maison pour vous permettre d'évaluer si vous êtes prêt. 
 		</paragraph>
 	</entry>
 	
@@ -23,8 +23,6 @@
 				<paragraph>
           Comme pour un tableau à une dimension, un tableau à deux dimensions est une suite d’éléments portant
           tous le même nom mais se distinguant les uns des autres par un double indice. <newLine/>
-          Ce type de tableau nous est familier par sa présence dans beaucoup de situations courantes : 
-          calendrier, grille horaire, grille de mots croisés, jeux se déroulant sur un quadrillage (damier, échiquier…), etc.
         </paragraph>
       </clarify>
       
@@ -38,49 +36,32 @@
 								<gap answers="">indices</gap>.
 							</paragraph>
 							<paragraph>
-								La première valeur d'un tableau de <formatted style="bold">5*10</formatted> éléments se trouve à la position 
+								La première valeur d'un tableau de <formatted style="bold">5*10</formatted> éléments se trouve à la position (
 								<gap answers="">0</gap>
-								,
+								, 
 								<gap answers="">0</gap>
-								et la dernière à la position 
+								) et la dernière à la position (
 								<gap answers="">4</gap>
-								,
+								, 
 								<gap answers="">9</gap>
+								)
 							</paragraph>
 							<paragraph>
-								La première valeur d'un tableau de <formatted style="bold">n*m</formatted> éléments se trouve à la position 
+								La première valeur d'un tableau de <formatted style="bold">n*m</formatted> éléments se trouve à la position (
 								<gap answers="">0</gap>
-								,
+								, 
 								<gap answers="">0</gap>
-								et la dernière à la position         
+								) et la dernière à la position (
 								<gap answers="n-1,n - 1,n -1,n- 1">n-1</gap>
-								,
+								, 
 								<gap answers="m-1,m - 1,m -1,m- 1">m-1</gap>
+								)
 							</paragraph>
             </gapText>
             <solution/>
           </fillInBlanks>
         </selfCheck>
       <!--/act-->
-      
-      <clarify>
-        <paragraph title="Existe-il des tableaux de plus de deux dimensions ?" icon="icon_reading"/>
-        <paragraph>
-				Certaines situations nécessitent l’usage de tableaux à trois, quatre, voire plus de dimensions.  <newLine/>
-				Pour comprendre leur fonctionnement, il faut savoir qu'un tableau à deux dimensions n'est qu'un tableau à une dimension 
-				dont chacun des éléments est lui-même un tableau à une dimension. <newLine/>
-				De même, un tableau à trois dimensions est un tableau à une dimension dont chacun des éléments est un tableau à deux dimensions, etc.
-				</paragraph>
-      </clarify>
-      
-      <clarify>
-        <paragraph title="Déclaration, création et initialisation d'un tableau " icon="icon_reading"/>
-        <paragraph>
-				  Un tableau possède <formatted style="bold">un type</formatted> et <formatted style="bold">un nombre de dimension(s)</formatted>. <newLine/>
-				  Le type est soit l'un des types simples (int,double,char,..) ou une réference (String,objet d'une classe,....). <newLine/>
-				  La dimension d’un tableau est le nombre d’indices qu’on utilise pour faire référence à un de ses éléments
-				</paragraph>
-      </clarify>
       
       <!--act-->
         <selfCheck title="Déclaration et création" shuffle="yes">
@@ -234,7 +215,7 @@
           <fillInBlanks>
             <question>
 					Soit le tableau <formatted style="java">entierss</formatted> contenant 
-					les élements <formatted style="java">{{3,4},{5,5},{6,7}}</formatted>.
+					les éléments <formatted style="java">{{3,4},{5,5},{6,7}}</formatted>.
 			</question>
             <gapText>
 					La taille de sa première dimension est donnée par <gap answers="">entierss.length</gap>.
@@ -257,7 +238,7 @@
         <paragraph title="Pré/post incrémentation" icon="icon_reading"/>
 				<paragraph>
 				  L'instuction <formatted style="java">i++;</formatted> est équivalente à <formatted style="java">++i;</formatted> 
-				  mais ce n'est pas le cas de l'expression<formatted style="java">i++</formatted> et de <formatted style="java">++i</formatted>.
+				  mais ce n'est pas le cas de l'expression <formatted style="java">i++</formatted> et de <formatted style="java">++i</formatted>.
         </paragraph>
       </clarify>
       
