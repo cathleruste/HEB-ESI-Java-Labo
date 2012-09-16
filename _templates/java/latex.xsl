@@ -417,6 +417,13 @@
 				\vspace{-2em}\tableofcontents
 				\pagestyle{plain}
             \clearpage
+            \fancyhead[L,C,R]{}
+            \fancyfoot[L,C]{}
+            \fancyfoot[R]{ \tiny{\textcolor{gray}{
+				</xsl:text><xsl:value-of select="/elml:lesson/@label"/><xsl:text> - page \thepage}}}
+				\thispagestyle{fancy}
+				\pagestyle{fancy}
+	   
             </xsl:text>
             <xsl:choose>
                 <xsl:when test="$multiple='on'">
