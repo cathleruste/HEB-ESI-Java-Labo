@@ -21,13 +21,59 @@
 				</xsl:attribute>
 			</xsl:if>
 			<xsl:call-template name="elml:LayoutBodySkiplinks"/>
+<!-- Enlever ce div pour ne plus avoir les petites flèches de navigation en haut -->
 			<xsl:call-template name="elml:navigation"/>
+			<div class="navigation_arrows">
+				<xsl:choose>
+					<xsl:when test="$prev='none.html'">
+						<img src="../../../_templates/{$layout}/navigation/back_off.gif" height="24" width="24" alt="No previous page available" border="0"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<a href="{$prev}">
+							<img src="../../../_templates/{$layout}/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0"/>
+						</a>
+					</xsl:otherwise>
+				</xsl:choose>
+				<xsl:choose>
+					<xsl:when test="$next='none.html'">
+						<img src="../../../_templates/{$layout}/navigation/next_off.gif" height="24" width="24" alt="No following page available" border="0"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<a href="{$next}">
+							<img src="../../../_templates/{$layout}/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0"/>
+						</a>
+					</xsl:otherwise>
+				</xsl:choose>
+			</div>
 			<a name="top"/>
 			<xsl:if test="name(.)='lesson' and $use_navigation='no'">
 				<xsl:call-template name="logo"/>
 			</xsl:if>
 			<xsl:call-template name="elml:LayoutBodyContent"/>
 			<hr/>
+			<div class="navigation_arrows">
+				<xsl:choose>
+					<xsl:when test="$prev='none.html'">
+						<img src="../../../_templates/{$layout}/navigation/back_off.gif" height="24" width="24" alt="No previous page available" border="0"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<a href="{$prev}">
+							<img src="../../../_templates/{$layout}/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0"/>
+						</a>
+					</xsl:otherwise>
+				</xsl:choose>
+				<xsl:choose>
+					<xsl:when test="$next='none.html'">
+						<img src="../../../_templates/{$layout}/navigation/next_off.gif" height="24" width="24" alt="No following page available" border="0"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<a href="{$next}">
+							<img src="../../../_templates/{$layout}/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0"/>
+						</a>
+					</xsl:otherwise>
+				</xsl:choose>
+			</div>
+
 			<xsl:call-template name="elml:footer"/>
 		</body>
 	</xsl:template>

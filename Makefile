@@ -32,7 +32,7 @@ SCORMS  = $(addsuffix .zip, $(addprefix $(DIST), $(LECONS)))
 .PHONY: clean
 
 default: pdf
-all: pdf html scorm
+all: pdf scorm html 
 
 pdf: $(PDFS)
 dist/%.pdf: %/fr/text/*.xml

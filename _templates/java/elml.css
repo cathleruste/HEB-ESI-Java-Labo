@@ -1,9 +1,9 @@
 body         /* Used only to set the font style, size, color and other basic stuff. */  { color: black; font-size: 1em; font-family: Arial, Helvetica, sans-serif; background-color: white; text-align: justify; margin: 10px }
-h1    /* Use your own colors to represent titles. Be aware that margins are cumulating if you have eg. a H2 title follwoing a H1 title. */ { font-size: 2em; font-weight: bold; clear: both; margin-bottom: 0.5em; color:#75507b }
-h2   { font-size: 1.8em; clear: both; margin-top: 1.5em; margin-bottom: 0.5em; color:#75507b }
-h3   { font-size: 1.6em; clear: both; margin-top: 1.5em; margin-bottom: 0.5em; color:#75507b }
-h4   { font-size: 1.4em; clear: both; margin-top: 1.5em; margin-bottom: 1.5em; color:#75507b }
-h5   { font-size: 1em; clear: both }
+h1    /* Use your own colors to represent titles. Be aware that margins are cumulating if you have eg. a H2 title follwoing a H1 title. */ { font-size: 2em; font-weight: bold; margin-bottom: 0.5em; color:#75507b }
+h2   { font-size: 1.8em; margin-top: 1.5em; margin-bottom: 0.5em; color:#75507b }
+h3   { font-size: 1.6em; margin-top: 1.5em; margin-bottom: 0.5em; color:#75507b }
+h4   { font-size: 1.4em; margin-top: 1.5em; margin-bottom: 1.5em; color:#75507b }
+h5   { font-size: 1em; }
 img   /* This overrides the border setting of the IMG tag. */  { border: none }
 code   /* Adjust the font size to your needs. */ { font-family: monospace;}
 tt { text-align: left }
@@ -45,11 +45,10 @@ p.citation { margin-left:50%; text-align: right; font-style: italic;
 .multimedia_inline_center  /* for multimedia objects that are used as paragraph and have align=center */ { text-align: center; width: 100%; float: left; padding-right: 1em; padding-left: 1em; display: inline; }
 .multimedia_inline_right  /* for multimedia objects that are used as paragraph and have align=right */ { text-align: right; float: right; padding-right: 0; padding-left: 1em; display: inline; }
 
-.navigation_arrows { float:right}
-#nav_lesson { background-color: #EEEEEE; border: 0.1em dotted gray; float:left; padding: 0.5em; list-style-type:none;
-font-size: 0.8em; } 
+.navigation_arrows { float:right; margin-left:1em}
+#nav_lesson { background-color: #EEEEEE; border: 0.1em dotted gray; float:right; padding: 0.5em; margin-top: -1em; margin-bottom:2em; margin-left: 2em; list-style-type:none; font-size: 0.8em; } 
 #nav_lesson ul { list-style-type:none }
-
+#nav_lesson li 	{padding-top: 0em;padding-bottom: 0em;margin-left:0em}
 /* Nouvelles classes : MCD */
 .exergue {color:#75507b; text-align:right} 
 .input {
@@ -60,7 +59,7 @@ font-size: 0.8em; }
   margin:  0em 0.1em 0em 0.1em;    
 }
 li 	{
-	list-style-position: outside;
+	list-style-position: inside;
 	padding-top: 0.2em;
     padding-bottom: 0.2em;
 	}
