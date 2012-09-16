@@ -36,18 +36,15 @@
 						</question>
 						<gapText>
 							<list listStyle="ordered">
-								<item><formatted style="code">
-									/home/<formatted style="bold">g32010</formatted>/Exercice.class :
+								<item><formatted style="code">/home/<formatted style="bold">g32010</formatted>/Exercice.class</formatted> :
 									package <gap answers="">g32010</gap>;
-								</formatted></item>
-								<item><formatted style="code">
-									/home/<formatted style="bold">g32010</formatted>/tds/td6/Exercice.class :
+								</item>
+								<item><formatted style="code">/home/<formatted style="bold">g32010</formatted>/tds/td6/Exercice.class</formatted> :
 									package <gap answers="">g32010.tds.td6</gap>;
-								</formatted></item>
-								<item><formatted style="code">
-									/home/<formatted style="bold">g12345</formatted>/tds/td6/Exercice.class :
+								</item>
+								<item><formatted style="code">/home/<formatted style="bold">g12345</formatted>/tds/td6/Exercice.class</formatted> :
 									package <gap answers="">tds.td6</gap>;
-								</formatted></item>
+								</item>
 							</list>
 						</gapText>
 						<solution/>
