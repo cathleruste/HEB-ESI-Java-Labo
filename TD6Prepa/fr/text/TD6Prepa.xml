@@ -294,7 +294,7 @@ package td.td6;
 public class ErrCompilation {
     import java.util.Scanner;
     public static void main (String [] args) { 
-        System.out.println("TD6Prépa");
+        System.out.println("TD6Prepa");
     }
 }							</paragraph>
 							<paragraph>
@@ -340,8 +340,8 @@ import java.util.Scanner;
 package survol;
 public class ErrCompilation{
 	public static void main (String [] args){
-		System.out.println("TD6Prépa");
-	}
+		System.out.println("TD6Prepa");
+	
 }							</paragraph>
 							<paragraph>
 								la commande <formatted style="code">javac ErrCompilation.java</formatted> provoque l'erreur suivante :

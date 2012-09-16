@@ -214,8 +214,8 @@
     export CLASSPATH  # Nécessaire uniquement si CLASSPATH n'était pas encore défini
 				</paragraph>
 				<paragraph>
-					<formatted style="bold">Tiens, je viens de changer mon <formatted style="code">CLASSPATH</formatted>, 
-						je me suis déconnecté et la valeur que j'avais ajouté au <formatted style="code">CLASSPATH</formatted> a disparu!
+					<formatted style="bold">Tiens, je viens de changer mon CLASSPATH, 
+						je me suis déconnecté et la valeur que j'avais ajouté au CLASSPATH a disparu!
 					</formatted>
 				</paragraph>
 				<paragraph>
