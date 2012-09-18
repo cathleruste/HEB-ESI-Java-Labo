@@ -887,8 +887,8 @@
 				<list listStyle="unordered">
 					<item>Réorganisez les lignes pour qu'elles soient dans l'ordre.</item>
 					<item>
-						Remplacez l'acronyme <formatted style="italic">mcd</formatted> par votre login
-						(<formatted style="italic">gxxxxx</formatted>) et la date par la date du jour.
+						Remplacez l'acronyme <formatted style="italic">gxxxxx</formatted> par votre login
+						et la date par la date du jour.
 					</item>
 				</list>
 			</act>

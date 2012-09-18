@@ -53,8 +53,8 @@
 				</paragraph>
 				<paragraph>
 					Par exemple, le nom complet de la classe <formatted style="code">Couleur</formatted> 
-					dont le package est <formatted style="java">java.tds.td6</formatted>
-					est <formatted style="java">java.tds.td6.Couleur</formatted>. 
+					dont le package est <formatted style="java">td.td6</formatted>
+					est <formatted style="java">td.td6.Couleur</formatted>. 
 				</paragraph>
 
 			</clarify>
@@ -78,9 +78,9 @@
 					La notion de package est liée à celle de répertoire.
 					Sur le serveur <formatted style="italic">linux1</formatted>, nous ferons correspondre à chaque nom de package
 					une arborescence de répertoires de la manière suivante :
-					<formatted style="java">java.tds.td6</formatted> sera associé 
-					à <formatted style="code">java/tds/td6</formatted> 
-					(cette arborescence se trouve actuellement sous le répertoire <formatted style="code">/eCours</formatted> sur <formatted style="italic">linux1</formatted>,
+					<formatted style="java">td.td6</formatted> sera associé 
+					à <formatted style="code">td/td6</formatted> 
+					(cette arborescence se trouve actuellement sous le répertoire <formatted style="code">/eCours/java</formatted> sur <formatted style="italic">linux1</formatted>,
 					ce répertoire a été créé pour contenir tous les fichiers écrits par les professeurs et mis à votre disposition sur <formatted style="italic">linux1</formatted>,
 					ceci signifie que vous n'avez pas le droit de <formatted style="bold">modifier</formatted> quoi que ce soit dans ce répertoire). 
 					Nous stockerons tous les fichiers contenant les définitions des classes de ce package
@@ -88,10 +88,10 @@
 				</paragraph>
 				<paragraph>
 					Donc, si <formatted style="java">Couleur</formatted> a pour package 
-					<formatted style="java">java.tds.td6</formatted>,
+					<formatted style="java">td.td6</formatted>,
 					le fichier <formatted style="code">Couleur.class</formatted>
 					devra se trouver dans le répertoire associé 
-					<formatted style="code">java/tds/td6</formatted>
+					<formatted style="code">td/td6</formatted>
 				</paragraph>
 
 				<selfCheck shuffle="no">
@@ -147,18 +147,18 @@
 				</paragraph>
 				<paragraph>
 					Ceci signifie que la classe <formatted style="java">Couleur</formatted>
-					dont le package est <formatted style="java">java.tds.td6</formatted>
+					dont le package est <formatted style="java">td.td6</formatted>
 					se trouve (suivant le package) dans la hiérachie de répertoires
-					<formatted style="code">java/tds/td6</formatted>
-					et le répertoire <formatted style="code">java</formatted>
+					<formatted style="code">td/td6</formatted>
+					et le répertoire <formatted style="code">td</formatted>
 					(en tête de cette hiérarchie) 
 					se trouve lui-même dans une hiérarchie de répertoires connue du 
 					<formatted style="code">CLASSPATH</formatted>,
-					en l'occurence <formatted style="code">/eCours/</formatted>. 
+					en l'occurence <formatted style="code">/eCours/java</formatted>. 
 				</paragraph>
 				<paragraph>
 					Donc, nous avons : 
-					<formatted style="code">/eCours/java/tds/td6/Couleur.class</formatted>.
+					<formatted style="code">/eCours/java/td/td6/Couleur.class</formatted>.
 				</paragraph>
 	 
 			</clarify>
@@ -459,7 +459,7 @@
 								  le dossier personnel est <formatted style="code">/home/g32010</formatted>,
 								</item>
 								<item>
-								  le fichier <formatted style="code">Test.java</formatted> se trouve dans 
+								  le chemin du fichier <formatted style="code">Test.java</formatted> est 
 								  <formatted style="code">~/td6/Test.java</formatted>,
 								</item>
 								<item>le package est <formatted style="code">g32010.td6</formatted>,</item>
@@ -517,11 +517,107 @@
 							</paragraph>
 						</tabledata>
 					</tablerow>
+        </table>
+        
+        <paragraph title="4ème approche : pour transporter vos sources et classes rapidement."/>
+				<table 	title="Pour transporter vos sources et classes rapidement"
+						wdith="470" units="pixels">
+					<tablerow>
+						<tableheading width="10" units="pixels"></tableheading>
+						<tableheading width="170" units="pixels">Voici comment vous procéderez</tableheading>
+						<tableheading width="280" units="pixels">Exemple</tableheading>
+					</tablerow>
+					<tablerow>
+						<tabledata>
+							1
+						</tabledata>
+						<tabledata>
+							<paragraph>
+							  En vous plaçant dans un répertoire "quelconque", votre répertoire de travail 
+							</paragraph>
+						</tabledata>
+						<tabledata>
+							<paragraph>
+								Supposons que :
+							</paragraph>
+							<list listStyle="unordered"> 
+							  <item>
+								  le dossier personnel est <formatted style="code">/home/g32010</formatted>,
+								</item>
+							  <item>
+								  vous travaillez dans <formatted style="code">~/td6</formatted>,
+								</item>
+								<item>
+								  vous créez le sous-répertoire <formatted style="code">~/td6/src</formatted>,
+								</item>
+								<item>
+								  le fichier <formatted style="code">Test.java</formatted> se trouve dans le sous-répertoire 
+								  <formatted style="code">~/td6/src</formatted>,
+								</item>
+								<item>le package est <formatted style="code">g32010.td6</formatted>,</item>
+								<item>Le CLASSPATH contient <formatted style="code">.</formatted>,</item>
+								<item>votre dossier courant est <formatted style="code">~/td6</formatted></item>
+								<item>la classe s'appelle <formatted style="code">Test</formatted>,</item>
+							</list>
+							<paragraph>
+								Dans le répertoire courant : 
+								vous éditez cette classe via <formatted style="code">vi src//Test.java</formatted>.
+								La première instruction est <formatted style="code">package g32010.td6;</formatted>
+							</paragraph>
+							<paragraph>
+								Vous obtenez un fichier <formatted style="code">Test.java</formatted>
+								dont le chemin est <formatted style="code">~/td6/src/Test.java</formatted>.
+							</paragraph>
+						</tabledata>
+					</tablerow>
+					<tablerow>
+						<tabledata>
+							2
+						</tabledata>
+						<tabledata>
+							<paragraph>
+								En le compilant, dans le répertoire courant, 
+								avec la commande <formatted style="code">javac</formatted> suivie du nom du sous-répertoire suivi de <formatted style="code">/*.java</formatted> 
+								suivie de l'option<formatted style="code">-d</formatted>
+								suivie du <formatted style="code">.</formatted>
+							</paragraph>
+						</tabledata>
+						<tabledata>
+							<paragraph>
+							  Dans le répertoire <formatted style="code">~/td6</formatted><newLine/>
+								<formatted style="code">javac -d . src/Test.java</formatted>
+							</paragraph>
+							<paragraph>
+								Vous obtenez un fichier <formatted style="code">Test.class</formatted> dans votre répertoire 
+								<formatted style="code">~/td6/g32010/td6</formatted>, conformément à ce qui est écrit dans 
+								l'instruction <formatted style="code">package</formatted>.
+							</paragraph>
+							<paragraph>
+							  L'arborescence est créée par le compilateur.
+							</paragraph>
+						</tabledata>
+					</tablerow>
+					<tablerow>
+						<tabledata>
+							3
+						</tabledata>
+						<tabledata>
+							<paragraph>
+								En exécutant la classe en donnant son <formatted style="bold">nom complet</formatted>
+								avec la commande <formatted style="code">java</formatted>
+							</paragraph>
+						</tabledata>
+						<tabledata>
+							<paragraph>
+								<formatted style="code">java g32010.td6.Test</formatted>
+							</paragraph>
+						</tabledata>
+					</tablerow>
 				</table>
-				<!-- 4ème approche : celle de pbt : je ne me souviens plus de ce que c'était! -->
+				
 				<paragraph>
 					<formatted style="bold">Remarque</formatted> :
-					Avec cette 3<formatted style="superscript">ème</formatted> approche le nom du package
+					Ce sont ces deux dernières approches que nous préconisons car le nom du package
 					ne doit pas forçément correspondre avec l'arborescence de dossiers du source.
 				</paragraph>
 			</clarify>
@@ -544,7 +640,7 @@
 				
 				<paragraph title="Comprendre le fonctionnement des packages" icon="act"/>
 				<list listStyle="ordered">
-					<item>Considérons le fichier <formatted style="code">/eCours/java/td6/Ex1.class</formatted>.
+					<item>Considérons le fichier <formatted style="code">/eCours/java/td/td6/Ex1.class</formatted>.
 						<list listStyle="unordered">
 							<item>Quel doit être le package de ce programme pour être en accord avec son emplacement ?</item>
 							<item>Justifiez votre réponse en vous référant au contenu de la variable
@@ -569,8 +665,8 @@
 					  <newLine/>
 					  Heureusement, nous y avons pensé aussi et avons mis à votre disposition une classe qui permettra de colorer un peu tout ça :)
 					</item>
-					<item>Cette classe s'appelle <formatted style="code">Couleur.class</formatted> et se situe dans <formatted style="code">/eCours/java/tds/td6</formatted>.</item>
-					<item>Son package est <formatted style="code">java.tds.td6</formatted></item>
+					<item>Cette classe s'appelle <formatted style="code">Couleur.class</formatted> et se situe dans <formatted style="code">/eCours/java/td/td6</formatted>.</item>
+					<item>Son package est <formatted style="code">td.td6</formatted></item>
 					<item>Modifiez votre <formatted style="code">CLASSPATH</formatted> en conséquence afin de pouvoir l'utiliser.</item>
 					<item>
 					  Faites le <formatted style="code">import</formatted> nécessaire dans votre classe <formatted style="code">Hello.java</formatted> 
