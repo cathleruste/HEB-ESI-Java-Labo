@@ -9,7 +9,7 @@ code   /* Adjust the font size to your needs. */ { font-family: monospace;}
 tt { text-align: left }
 dt   /* Used for representing the glossary term (not the explanation!). */  { font-weight: bold; margin-top: 1em; clear: both }
 sub, sup   /* Used in the eLML element "formatted" */ { font-size: 0.6em }
-p.citation { margin-left:50%; text-align: right; font-style: italic;
+p.citation { margin-right:50%; text-align: right; font-style: italic;
 	background-color: #EEEEEE; border: 0.1em dotted gray; padding-right: 2em; }
 #ecole     { font-size: 1.3em; position: absolute; left: 60px; top: 10px}
 #formation { font-size: 1.2em; position: absolute; left: 60px; top: 40px}

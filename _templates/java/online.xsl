@@ -661,4 +661,23 @@ function trim(s) {
         </xsl:for-each>
     </xsl:template>
 
+    <xsl:template match="elml:newLine">
+        <xsl:choose>
+            <xsl:when test="($html_version='1.1' or $html_version='5' or $css_framework='yaml') and @space='long'">
+                <br/>
+                <br/>
+            </xsl:when>
+            <xsl:when test="$html_version='1.1' or $html_version='5' or $css_framework='yaml'">
+                <br/>
+            </xsl:when>
+            <xsl:when test="@space='long'">
+                <br/>
+                <br/>
+            </xsl:when>
+            <xsl:otherwise>
+                <br/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
 </xsl:stylesheet>
