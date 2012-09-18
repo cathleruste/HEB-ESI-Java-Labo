@@ -1,8 +1,7 @@
 # ===============================================================
 # Automationsation de la création des documents
 # make pdf : pour créer les PDFs
-# make html : pour créer les versions en-ligne 
-# make scorm : pour créer les versions au format SCORM pour poÉSI
+# make html : pour créer les versions en-ligne (scorm et pur)
 # make all : pour tout créer
 # ===============================================================
 
@@ -22,17 +21,15 @@ SOURCES = $(wildcard */fr/text/*.xml)
 LECONS  = $(notdir $(basename $(SOURCES)))
 PDFS    = $(addsuffix .pdf, $(addprefix $(DIST), $(LECONS)))
 HTMLS   = $(addsuffix .html, $(addprefix $(DIST), $(LECONS)))
-SCORMS  = $(addsuffix .zip, $(addprefix $(DIST), $(LECONS)))
 
 .PHONY: default
 .PHONY: pdf
 .PHONY: html
-.PHONY: scorm
 .PHONY: all
 .PHONY: clean
 
 default: pdf
-all: pdf scorm html 
+all: pdf html 
 
 pdf: $(PDFS)
 dist/%.pdf: %/fr/text/*.xml
@@ -41,9 +38,6 @@ dist/%.pdf: %/fr/text/*.xml
 html: $(HTMLS)
 dist/%.html: %/fr/text/*.xml
 	@./elml html $*
-
-scorm: $(SCORMS)
-dist/%.zip: %/fr/text/*.xml
 	@./elml scorm $*
 
 debug:
