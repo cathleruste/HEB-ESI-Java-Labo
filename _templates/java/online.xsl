@@ -8,12 +8,6 @@
 	<!--<xsl:param name="use_navigation" select="'no'"/>-->
 	<!-- ***** Template definitions  ***** -->
 	<xsl:template name="elml:LayoutBody">
-		<xsl:param name="prev">
-			<xsl:call-template name="elml:prev_file"/>
-		</xsl:param>
-		<xsl:param name="next">
-			<xsl:call-template name="elml:next_file"/>
-		</xsl:param>
 		<body>
 			<xsl:if test="$manifest_type='scorm'">
 				<xsl:attribute name="onunload">
@@ -21,36 +15,27 @@
 				</xsl:attribute>
 			</xsl:if>
 			<xsl:call-template name="elml:LayoutBodySkiplinks"/>
-<!-- Enlever ce div pour ne plus avoir les petites flèches de navigation en haut -->
 			<xsl:call-template name="elml:navigation"/>
-			<div class="navigation_arrows">
-				<xsl:choose>
-					<xsl:when test="$prev='none.html'">
-						<img src="../../../_templates/{$layout}/navigation/back_off.gif" height="24" width="24" alt="No previous page available" border="0"/>
-					</xsl:when>
-					<xsl:otherwise>
-						<a href="{$prev}">
-							<img src="../../../_templates/{$layout}/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0"/>
-						</a>
-					</xsl:otherwise>
-				</xsl:choose>
-				<xsl:choose>
-					<xsl:when test="$next='none.html'">
-						<img src="../../../_templates/{$layout}/navigation/next_off.gif" height="24" width="24" alt="No following page available" border="0"/>
-					</xsl:when>
-					<xsl:otherwise>
-						<a href="{$next}">
-							<img src="../../../_templates/{$layout}/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0"/>
-						</a>
-					</xsl:otherwise>
-				</xsl:choose>
-			</div>
+			<xsl:call-template name="arrows"/>
 			<a name="top"/>
 			<xsl:if test="name(.)='lesson' and $use_navigation='no'">
 				<xsl:call-template name="logo"/>
 			</xsl:if>
 			<xsl:call-template name="elml:LayoutBodyContent"/>
 			<hr/>
+			<xsl:call-template name="arrows"/>
+			<xsl:call-template name="elml:footer"/>
+		</body>
+	</xsl:template>
+	
+	<xsl:template name="arrows">
+		<xsl:param name="prev">
+			<xsl:call-template name="elml:prev_file"/>
+		</xsl:param>
+		<xsl:param name="next">
+			<xsl:call-template name="elml:next_file"/>
+		</xsl:param>
+		<xsl:if test="$use_navigation='yes'">
 			<div class="navigation_arrows">
 				<xsl:choose>
 					<xsl:when test="$prev='none.html'">
@@ -73,13 +58,11 @@
 					</xsl:otherwise>
 				</xsl:choose>
 			</div>
-
-			<xsl:call-template name="elml:footer"/>
-		</body>
+		</xsl:if>
 	</xsl:template>
-	
+
 	<xsl:template name="logo">
-		<div id="logo"><img src="../../../_templates/{$layout}/icons/logo-esi.jpg" alt="LOGO ESO"/></div>
+		<div id="logo"><img src="../../../_templates/{$layout}/icons/logo-esi.jpg" alt="LOGO ESI"/></div>
 		<div id="ecole">Haute École de Bruxelles - École Supérieure d'Informatique</div>
 		<div id="cours">
 				<xsl:value-of select="/elml:lesson/elml:metadata/elml:organisation/@module"/> - 

@@ -45,8 +45,8 @@ p.citation { margin-left:50%; text-align: right; font-style: italic;
 .multimedia_inline_center  /* for multimedia objects that are used as paragraph and have align=center */ { text-align: center; width: 100%; float: left; padding-right: 1em; padding-left: 1em; display: inline; }
 .multimedia_inline_right  /* for multimedia objects that are used as paragraph and have align=right */ { text-align: right; float: right; padding-right: 0; padding-left: 1em; display: inline; }
 
-.navigation_arrows { float:right; margin-left:1em}
-#nav_lesson { background-color: #EEEEEE; border: 0.1em dotted gray; float:right; padding: 0.5em; margin-top: -1em; margin-bottom:2em; margin-left: 2em; list-style-type:none; font-size: 0.8em; } 
+.navigation_arrows {}
+#nav_lesson { background-color: #EEEEEE; border: 0.1em dotted gray; float:right; padding: 0.5em; margin-top: 0em; margin-bottom:2em; margin-left: 2em; list-style-type:none; font-size: 0.8em} 
 #nav_lesson ul { list-style-type:none }
 #nav_lesson li 	{padding-top: 0em;padding-bottom: 0em;margin-left:0em}
 /* Nouvelles classes : MCD */

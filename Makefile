@@ -37,8 +37,8 @@ dist/%.pdf: %/fr/text/*.xml
 
 html: $(HTMLS)
 dist/%.html: %/fr/text/*.xml
-	@./elml html $*
 	@./elml scorm $*
+	@./elml html $*
 
 debug:
 	@echo "*** SOURCES : $(SOURCES)"
