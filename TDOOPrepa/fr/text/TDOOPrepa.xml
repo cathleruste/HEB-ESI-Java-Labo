@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<lesson xmlns="http://www.elml.ch" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+  label="TDOOPrepa" title="TDOO - Orienté Objet - Exercices préparatoires">
+  <unit label="TDOOPrepa" title="TDOO - Orienté Objet - Exercices préparatoires">
+  
+    <entry>
+     <paragraph>
+        Ces quelques questions ont pour but de vérifier que vous êtes prêts à
+        venir faire le TDOO du laboratoire. Vous trouverez les réponses dans les leçons du cours ou dans les tds précédents.
+      </paragraph>
+    </entry>
+    
+    <learningObject label="TDOOPrepa" title="Rappel de l'OO">
+      <clarify>
+        <paragraph title="Un objet" icon="icon_reading"/>
+          Un objet est un "élément logiciel" qui :<newLine/>
+          <list listStyle="unordered">
+            <item>est capable de sauvegarder un état (partie données / attributs)</item>
+            <item>possède un comportement (partie code / méthodes)  </item>
+          </list>
+        </clarify>
+        <act>
+        <selfCheck title="État et comportements" shuffle="yes">
+          <fillInBlanks>
+            <question> </question>
+            <gapText>
+              Les variables représentant l’état d’un objet sont les    
+              <gap answers="">attributs</gap>.<newLine/>
+              Les comportements sont décrits dans des   
+              <gap answers="">méthodes</gap> associées à l'objet. 
+            </gapText>
+            <solution/>
+          </fillInBlanks>
+        </selfCheck>
+
+        <paragraph title="Méthodes et attributs" icon="icon_reading"/>
+        Les méthodes d’objet (d’instance) connaissent l’état de l'objet (sauvé dans les attributs)  et peuvent le modifier.
+
+        <paragraph title="Instance de classe" icon="icon_reading"/>
+        Toutes les instances (objets) d’une classe possèdent les mêmes attributs mais avec des valeurs différentes.
+        
+        <paragraph>
+          En effet, si l'on considère la classe Etudiant :
+        </paragraph>
+        <paragraph>
+          tous les étudiants ont une nature commune (un nom, un numéro d'étudiant, ...). 
+          Donc, chaque étudiant (comme par exemple Dupont et Durant) possède <formatted style="bold">la même série d'attributs</formatted> 
+          (la même nature)<newLine/>
+        </paragraph>
+        <paragraph>
+          mais Dupont et Durant sont des étudiants différents donc, <formatted style="bold">la valeur des attributs est différente</formatted>.  
+        </paragraph>
+
+        <selfCheck title="Encapsulation des données" shuffle="yes">
+          <fillInBlanks>
+            <question></question>
+            <gapText>
+              <paragraph>
+                L'encapsulation des données est le fait de rendre les attributs    
+                <gap answers="">privé</gap> 
+                et les méthodes pour y accéder 
+                <gap answers="">publiques</gap>.
+              </paragraph>
+              <paragraph>
+                Les méthodes particulières pour : 
+                <list listStyle="unordered">
+                  <item>initialiser l’objet s'appelle un <gap answers="">constructeur</gap></item>
+                  <item>interroger un attribut s'appelle un <gap answers="">accesseur</gap></item>
+                  <item>modifier un attribut s'appelle un <gap answers="">mutateur</gap></item>
+                </list>
+              </paragraph>
+            </gapText>
+          <solution/>
+          </fillInBlanks>
+        </selfCheck>
+
+        <selfCheck title="Constructeur" shuffle="no">
+          <multipleChoice>
+            <question>Un constructeur</question>
+            <answer feedback="Un constructeur ne retourne rien : il suffit de penser à la séquence lorsqu'on crée un nouvel objet pour s'en convaincre : 
+                * allocation de l'espace
+                * initialisation aux valeurs par défaut des attributs
+                * appel du constructeur seulement à la fin, ce n'est donc pas lui qui crée l'objet et ne retourne aucune valeur comme sa signature le dit bien" 
+                correct="yes">
+              <tabledata>ne retourne rien.</tabledata>
+            </answer>
+            <answer feedback="Un constructeur ne retourne rien : il suffit de penser à la séquence lorsqu'on crée un nouvel objet pour s'en convaincre : 
+                * allocation de l'espace
+                * initialisation aux valeurs par défaut des attributs
+                * appel du constructeur seulement à la fin, ce n'est donc pas lui qui crée l'objet et ne retourne aucune valeur comme sa signature le dit bien" 
+                correct="no">
+              <tabledata>retourne la référence/l'adresse de l'objet.</tabledata>
+            </answer>
+            <answer feedback="" correct="yes">
+              <tabledata>n'a pas de type de retour.</tabledata>
+            </answer>
+            <answer feedback="" correct="no">
+              <tabledata>a "void" comme type de retour.</tabledata>
+            </answer>
+            <answer feedback="" correct="no">
+              <tabledata>a un entier hexadécimal comme type de retour.</tabledata>
+            </answer>
+            <answer feedback="" correct="yes">
+              <tabledata>a toujours le même nom que celui de la classe.</tabledata>
+            </answer>
+            <answer feedback="" correct="no">
+              <tabledata>s'appelle main.</tabledata>
+            </answer>
+            <answer feedback="" correct="no">
+              <tabledata>ne reçoit jamais aucun paramètre.</tabledata>
+            </answer>
+            <answer feedback="" correct="yes">
+              <tabledata>peut avoir autant de paramètre(s) qu'on le souhaite.</tabledata>
+            </answer>
+            <answer feedback="" correct="no">
+              <tabledata>Il n'y a toujours qu'un seul constructeur par classe.</tabledata>
+            </answer>
+            <answer feedback="" correct="yes">
+              <tabledata>Il peut y avoir plusieurs constructeurs dans une même classe à condition que la liste des paramètres formels soit différente.</tabledata>
+            </answer>
+          </multipleChoice>
+        </selfCheck>
+        <paragraph title="Validité des attributs" icon="icon_reading"/>
+          Un constructeur peut effectuer des tests de validité sur les paramètres. On est donc sûr que l’objet est créé dans un état valide.
+        <paragraph>
+          Si un des paramètres n'est pas valide, le mieux est de lancer une exception.
+        </paragraph>
+        
+        <paragraph title="Instanciation d'un objet" icon="icon_reading"/>
+        <list listStyle="ordered">
+          <item>
+            Déclaration d’une variable d’un certain type : le type de la classe créée 
+            (réservation d’un emplacement mémoire sur la pile pouvant stocker une référence).
+          </item>
+          <item>Création de l’objet sur le tas.</item>
+          <item>Récupération d’une référence vers l’objet (qui sera stockée dans la variable)</item>
+        </list>
+        <selfCheck title="Instanciation" shuffle="yes">
+          <multipleChoice>
+            <question>Sachant que la classe Moment s'écrit de la façon suivante :
+				      <paragraph cssClass="java">
+<![CDATA[/**
+  * Représente un moment de la journée au format heure, minute, seconde.
+  */
+public class Moment{
+    private int heure;
+    private int minute;
+    private int seconde; 
+    
+    /**
+    * Construit un nouveau Moment avec les valeurs 0, 0, 0 pour les heures, minutes, secondes.
+    */
+    public Moment(){
+      heure = 0;
+      minute = 0;
+      seconde = 0; 
+    } 
+    
+    /**
+    * Construit un nouveau Moment avec les valeurs heure, minute, seconde fournies.
+    * @param heure l'heure du moment.
+    * @param minute les minutes du moment.
+    * @param seconde les secondes du moment.
+    * @throws IllegalArgumentException si heure n'est pas comprise entre 0 et 23 inclus 
+    * ou minute n'est pas comprise entre 0 et 60 inclus 
+    * ou seconde n'est pas comprise entre 0 et 60 inclus 
+    */
+    public Moment (int heure, int minute, int seconde){
+      if (heure<0 || heure>=24 || minute<0 || minute>=60 || seconde<0 || seconde>=60)
+        throw new IllegalArgumentException(); 
+      
+      this.heure = heure;
+      this.minute = minute;
+      this.seconde = seconde;
+    }
+    
+  }]]>			</paragraph>
+
+              Quelle(s) instanciation(s) parmi les suivantes est(sont) correcte(s) (par correcte, on entend ici qui compile ET ne lance pas d'exception lors de l'exécution)?
+            </question>
+            <answer feedback="" correct="yes">
+              <tabledata>Moment moment = new Moment();</tabledata>
+            </answer>
+            <answer feedback="" correct="yes">
+              <tabledata>
+                Moment moment;<newLine/>
+                moment = new Moment();
+              </tabledata>
+            </answer>
+            <answer feedback="" correct="no">
+              <tabledata>Moment moment = new Moment(3);</tabledata>
+            </answer>
+            <answer feedback="" correct="no">
+              <tabledata>Moment moment = new Moment(3,4);</tabledata>
+            </answer>
+            <answer feedback="" correct="yes">
+              <tabledata>Moment moment = new Moment(3,4,5);</tabledata>
+            </answer>
+            <answer feedback="" correct="no">
+              <tabledata>Moment moment = new Moment(-3,4,5);</tabledata>
+            </answer>
+          </multipleChoice>
+        </selfCheck>
+        <paragraph title="Accesseur" icon="icon_reading"/>
+        Un accesseur est une méthode donnant la valeur d’un attribut.
+        <paragraph title="Vérif" icon="icon_activity"/>
+        Prenez votre carnet de réponses et complétez la classe Moment ci-dessus avec ses accesseurs.
+        <popup>
+        <paragraph cssClass="java">
+  <![CDATA[/**
+  * Représente un moment de la journée au format heure, minute, seconde.
+  */
+  public class Moment{
+
+    private int heure;
+    private int minute;
+    private int seconde; 
+
+    /**
+    * Construit un nouveau Moment avec les valeurs 0, 0, 0 pour les heures, minutes, secondes.
+    */
+    public Moment(){
+      heure = 0;
+      minute = 0;
+      seconde = 0; 
+    } 
+    
+    /**
+    * Construit un nouveau Moment avec les valeurs heure, minute, seconde fournies.
+    * @param heure l'heure du moment.
+    * @param minute les minutes du moment.
+    * @param seconde les secondes du moment.
+    * @throws IllegalArgumentException si heure n'est pas comprise entre 0 et 23 inclus 
+    * ou minute n'est pas comprise entre 0 et 60 inclus 
+    * ou seconde n'est pas comprise entre 0 et 60 inclus 
+    */
+    public Moment (int heure, int minute, int seconde){
+    
+      if (heure<0 || heure>=24 || minute<0 || minute>=60 || seconde<0 || seconde>=60)
+        throw new IllegalArgumentException(); 
+      
+      this.heure = heure;
+      this.minute = minute;
+      this.seconde = seconde;
+    }
+    
+    /**
+    * Retourne l'heure du moment.
+    * @return l'heure du moment
+    */
+    public int getHeure(){
+      return heure;
+    }
+    
+    /**
+    * Retourne les minutes du moment.
+    * @return les minutes du moment
+    */
+    public int getMinute(){
+      return minute;
+    }
+    
+    /**
+    * Retourne les secondes du moment.
+    * @return les secondes du moment
+    */
+    public int getSeconde(){
+      return seconde;
+    }
+}]]>			</paragraph>
+        </popup>
+        <paragraph title="Mutateur" icon="icon_reading"/>
+        Un mutateur est une méthode servant à modifier un attribut.
+        <paragraph title="Vérif" icon="icon_activity"/>
+        Toujours dans votre carnet de réponses, complétez la classe Moment ci-dessus avec ses mutateurs.
+        Vous pouvez aussi modifier le constructeur afin que celui-ci appelle les mutateurs plutôt que de refaire les tests dans le constructeur.  
+        <popup>
+        <paragraph cssClass="java">
+     <![CDATA[/**
+  * Représente un moment de la journée au format heure, minute, seconde.
+  */
+  public class Moment{
+    
+    private int heure;
+    private int minute;
+    private int seconde; 
+    
+    /**
+    * Construit un nouveau Moment avec les valeurs 0, 0, 0 pour les heures, minutes, secondes.
+    */
+    public Moment(){
+      heure = 0;
+      minute = 0;
+      seconde = 0; 
+    } 
+    
+    /**
+    * Construit un nouveau Moment avec les valeurs heure, minute, seconde fournies.
+    * @param heure l'heure du moment.
+    * @param minute les minutes du moment.
+    * @param seconde les secondes du moment.
+    * @throws IllegalArgumentException si heure n'est pas comprise entre 0 et 23 inclus 
+    * ou minute n'est pas comprise entre 0 et 60 inclus 
+    * ou seconde n'est pas comprise entre 0 et 60 inclus 
+    */
+    public Moment (int heure, int minute, int seconde){
+    
+      if (heure<0 || heure>=24 || minute<0 || minute>=60 || seconde<0 || seconde>=60)
+        throw new IllegalArgumentException(); 
+      
+      this.heure = heure;
+      this.minute = minute;
+      this.seconde = seconde;
+    }
+    
+    /**
+    * Retourne l'heure du moment.
+    * @return l'heure du moment
+    */
+    public int getHeure(){
+      return heure;
+    }
+    
+    /**
+    * Retourne les minutes du moment.
+    * @return les minutes du moment
+    */
+    public int getMinute(){
+      return minute;
+    }
+    
+    /**
+    * Retourne les secondes du moment.
+    * @return les secondes du moment
+    */
+    public int getSeconde(){
+      return seconde;
+    }
+    
+    /**
+    * Modifie les heures du moment.
+    * @param heure les heures du moment
+    * @throws IllegalArgumentException si heure est négatif ou supérieur ou égal à 24
+    */
+    public void setHeure(int heure){
+      if (heure<0 || heure>=24) 
+        throw new IllegalArgumentException("Heure invalide");
+      
+      this.heure = heure;
+		}
+    
+    /**
+    * Modifie les minutes du moment.
+    * @param minute les minutes du moment
+    * @throws IllegalArgumentException si minute est négatif ou supérieur ou égal à 60
+    */
+    public void setMinute(int minute){
+      if (minute<0 || minute>=60) 
+        throw new IllegalArgumentException("Minute invalide");
+      
+      this.minute = minute;
+    }
+    
+    /**
+    * Modifie les secondes du moment.
+    * @param seconde les secondes du moment 
+    * @throws IllegalArgumentException si seconde est négatif ou supérieur ou égal à 60
+    */
+    public void setSeconde(int seconde){
+      if (seconde<0 || seconde>=60) 
+        throw new IllegalArgumentException("Seconde invalide");
+      
+      this.seconde = seconde;
+    }
+  }]]>			</paragraph>
+        </popup>
+        
+        <selfCheck title="Représentation textuelle" shuffle="yes">
+          <fillInBlanks>
+            <question></question>
+            <gapText>La méthode 
+              <gap answers="">toString</gap> donne une représentation textuelle (de l’état) d’un objet.
+              <paragraph> 
+                Son entête est <gap answers="">public </gap> <gap answers="">String</gap> <gap answers="">toString</gap> ()
+              </paragraph>
+              <paragraph>Cette méthode est appelée implicitement par la méthode <gap answers="">println</gap></paragraph>
+            </gapText>
+            <solution/>
+          </fillInBlanks>
+        </selfCheck>
+        
+        <selfCheck title="Égalité" shuffle="yes">
+          <fillInBlanks>
+            <question></question>
+            <gapText>
+              La méthode <gap answers="">equals</gap> donne l'égalité de 2 objets dans le même état, même si c'est dupliqué en mémoire.
+              <paragraph>
+                Son entête est <gap answers="">public</gap> <gap answers="">boolean</gap> <gap answers="">equals</gap> 
+                ( <gap answers="">Object</gap> <gap answers="">o</gap>)
+              </paragraph>
+            </gapText>
+            <solution/>
+          </fillInBlanks>
+        </selfCheck>
+      </act>
+    </learningObject>
+    
+    <learningObject title="Logique">
+      <clarify>
+      Assurez-vous de venir au laboratoire avec vos solutions des exercices 1, 2, 3 et 4 du chapitre 11 "Orienté Objet" de votre
+      cours de logique.
+      </clarify>
+    </learningObject>
+    
+    <learningObject title="Bravo">
+      <clarify>
+        <paragraph title="Bravo" icon="icon_bravo"/>
+        Si vous avez réussi à répondre correctement aux questions précédentes,
+        c'est que vous êtes prêt à venir au laboratoire dans les meilleures
+        conditions!
+      </clarify>
+    </learningObject>
+  </unit>
+  
+  
+	<metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition><posNumber>10</posNumber></creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+		<technical>
+			<technicalRequirement>
+				<type>Browser</type>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+		</technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2012 - 2013</version>
+				<contribute>
+<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" /> 
+				</contribute>
+			</lifecycle>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+		<rights>
+			<cost>no</cost>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
+		</rights>
+	</metadata>
+
+
+</lesson>
+
