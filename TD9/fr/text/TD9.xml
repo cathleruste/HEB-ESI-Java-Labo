@@ -6,468 +6,520 @@
 
 
 	<entry>
+		
 		<paragraph>
-			Ce TD a pour but principal de vous présenter certains aspects plus évolués et bien utiles de linux.
-    </paragraph>
-    <paragraph>
-      Les points 23, 25 et 26 du document <formatted style="italic">aide-mémoire des laboratoires Java</formatted> sont
-      à lire <formatted style="bold">avant</formatted> de venir au laboratoire.
+			Ce TD a pour but principal de vous présenter certains
+			aspects plus évolués et bien utiles de Linux.
 		</paragraph>
+		
+		<paragraph>
+			Les points 23, 25 et 26 du document 
+			<formatted style="italic">aide-mémoire des laboratoires Java</formatted>
+			sont à lire <formatted style="bold">avant</formatted>
+			de venir au laboratoire.
+		</paragraph>
+		
 	</entry>
 
 	<unit label="TD9" title="Linux avancé">
-
+		
 		<entry>
-		<paragraph>
-			Tout au long de ce TD vous devrez vous servir des <formatted style="bold">pages de manuel (man)</formatted>
-			pour vous familiariser avec certaines commandes.
-    </paragraph>
-    <paragraph>
-			Nous mettons également à votre disposition quelques classes dans le <formatted style="code">package td.td9</formatted>
-			pour les exécuter sur <formatted style="italic">linux1</formatted>.
-    </paragraph>
-    <paragraph>
-			Ces classes se trouvent dans le répertoire <formatted style="code">/eCours/java/td/td9</formatted>,
-			vous ajouterez à votre <formatted style="code">CLASSPATH</formatted> le chemin adéquat pour les utiliser.
-    </paragraph>
-    <box>
-      Les encadrés vous guident avec des notions de théorie minimales.
-    </box>
+			
+			<paragraph>
+				Tout au long de ce TD vous devrez vous servir des 
+				<formatted style="bold">pages de manuel (man)</formatted>
+				pour vous familiariser avec certaines commandes.
+			</paragraph>			
+			<paragraph>
+				Nous mettons également à votre disposition quelques classes
+				dans le <formatted style="code">package td.td9</formatted>
+				pour les exécuter sur
+				<formatted style="italic">linux1</formatted>.
+			</paragraph>
+			<paragraph>
+				Ces classes se trouvent dans le répertoire
+				<formatted style="code">/eCours/java/td/td9</formatted>,
+				vous ajouterez à votre
+				<formatted style="code">CLASSPATH</formatted>
+				le chemin adéquat pour les utiliser.
+			</paragraph>
+			<box>
+				Les encadrés vous guident avec des notions de théorie minimales.
+			</box>
+			
 		</entry>
 
-
 		<learningObject title="ps – kill">
-		  <clarify>
-		    <box>
-          <list listStyle="unordered">
-            <item>
-              La commande <formatted style="code">ps</formatted> affiche une image statique de l'état des processus en cours.
-            </item>
-            <item>
-              La commande <formatted style="code">kill</formatted> envoie un signal à un processus.
-              (Un signal est message simple envoyé à un processus. Les signaux ont un nom et un ou plusieurs numéros
-              selon le système d'exploitation.).
-            </item>
-            <item>Tout processus est identifié par un <formatted style="code">PID</formatted> (Processus Id)</item>
-          </list>
-        </box>
-      </clarify>
+			
+			<clarify>
+				<box>
+					<list listStyle="unordered">
+					<item>
+						La commande <formatted style="code">ps</formatted>
+						affiche une image statique de l'état des processus en cours.
+					</item>
+					<item>
+						La commande <formatted style="code">kill</formatted>
+						envoie un signal à un processus.
+						(Un signal est un message simple envoyé à un processus.
+						Les signaux ont un nom et un ou plusieurs numéros
+						selon le système d'exploitation.).
+					</item>
+					<item>
+						Tout processus est identifié par un
+						<formatted style="code">PID</formatted> (Processus Id)</item>
+					</list>
+				</box>
+			</clarify>
 
-      <look>
-        <paragraph title="Exemple" icon="look"/>
-        <multimedia src="../image/capt1.jpg" type="jpeg" legend="ps et kill" width="50" units="percent"/>
-        <paragraph>
-          <list listStyle="unordered">
-            <item>
-              <formatted style="code">kill 31873</formatted>
-              (envoie au processus de PID <formatted style="code">31873</formatted> le signal n° 15 (SIGTERM signal par défaut),
-              qui a comme effet par défaut de le terminer)
-            </item>
-            <item>
-              <formatted style="code">kill -s 9 31873</formatted> ou <formatted style="code">kill -9 31873</formatted>
-              (envoie explicitement le signal n° 9 (SIGKILL) au processus <formatted style="code">31873</formatted>, ceci le tuera)
-            </item>
-            <item>
-              La touche clavier <formatted style="code">Ctrl-c</formatted> envoie le signal n° 2 (SIGINT) au processus lié au terminal
-              et a comme effet de le <formatted style="bold">terminer</formatted>.
-            </item>
-            <item>
-              La touche clavier <formatted style="code">Ctrl-Z</formatted> envoie le signal n° 20 (SIGTSTP) au processus lié au terminal
-              et a comme effet de le <formatted style="bold">suspendre</formatted>. Ce dernier reste donc dans le système.
-            </item>
-            <item>
-              Pour obtenir le détail et la liste de tous les signaux : <formatted style="code">man 7 signal</formatted>.
-            </item>
-          </list>
-        </paragraph>
-      </look>
+			<look>
+				<paragraph title="Exemple" icon="look"/>
+				<multimedia src="../image/capt1.png" type="jpeg" 
+						legend="ps et kill" width="80" units="percent"/>
+				<paragraph>
+					<list listStyle="unordered">
+					<item>
+						<formatted style="code">kill 31873</formatted>
+						envoie au processus de PID 
+						<formatted style="code">31873</formatted>
+						le signal n° 15 (SIGTERM signal par défaut),
+						qui a comme effet par défaut de le terminer.
+					</item>
+					<item>
+						<formatted style="code">kill -s 9 31873</formatted> 
+						ou <formatted style="code">kill -9 31873</formatted>
+						envoie explicitement le signal n° 9 (SIGKILL) au processus 
+						<formatted style="code">31873</formatted>; ceci le tuera.
+					</item>
+					<item>
+						La touche clavier <formatted style="code">Ctrl-c</formatted>
+						envoie le signal n° 2 (SIGINT) au processus lié au terminal
+						et a comme effet de le
+						<formatted style="bold">terminer</formatted>.
+					</item>
+					<item>
+						La touche clavier <formatted style="code">Ctrl-z</formatted>
+						envoie le signal n° 20 (SIGTSTP) au processus lié au terminal
+						et a comme effet de le 
+						<formatted style="bold">suspendre</formatted>.
+						Ce dernier reste donc dans le système.
+					</item>
+					<item>
+						Pour obtenir le détail et la liste de tous les signaux :
+						<formatted style="code">man 7 signal</formatted>.
+					</item>
+					</list>
+				</paragraph>
+			</look>
+	
+			<act>
+				<paragraph title="Expérimentation - La boucle infinie" icon="act"/>
+				<list listStyle="ordered">
+					<item>
+						Visualisez vos processus en cours en utilisant la commande 
+						<formatted style="code">ps u</formatted>.
+					</item>
+					<item>
+						Ouvrez une seconde fenêtre putty, et exécutez-y la classe 
+						<formatted style="code">td.td9.Infini</formatted>.
+						Exécutez une nouvelle fois la commande 
+						<formatted style="code">ps u</formatted>
+						dans la première fenêtre.
+					</item>
+					<item>
+						<paragraph>
+							Retrouvez le processus correspondant au programme 
+							<formatted style="code">Infini</formatted> (son PID)
+							et tuez-le en utilisant la commande kill
+							avec les bons paramètres. Quel nom a le programme à tuer ?
+						</paragraph>
+						<paragraph>
+							Dû aux quotas des comptes étudiants sous linux1,
+							le système tue les processus après un temps défini
+							d'utilisation du CPU (timeout), il se pourrait donc que 
+							le processus s'arrête avant l'effet de votre action
+							(ce n'est pas le moment de s'endormir ;-)	).
+						</paragraph>
+					</item>
+					<item>
+						Lancez une deuxième exécution et suspendez votre programme 
+						par <formatted style="code">Ctrl-z</formatted>.
+						Vérifiez l'état du processus stoppé par la commande 
+						<formatted style="code">ps</formatted>
+						(<formatted style="code">man ps</formatted> et recherchez 
+						la signification du champ 
+						<formatted style="code">STAT</formatted>).
+					</item>
+					<item>
+						Reprenez le processus interrompu en lui envoyant le signal 
+						SIGCONT (<formatted style="code">man 7 signal</formatted> 
+						pour obtenir le numéro de ce signal)
+						et vérifiez son nouvel état avant qu'il ne soit éjecté par 
+						le système à cause du «timeout».
+					</item>
+					<item>
+						<paragraph>
+							Une deuxième manière de reprendre un processus suspendu
+							est de taper la commande
+							<formatted style="code">fg %<formatted style="italic">num</formatted></formatted> 
+							(faites un <formatted style="code">man bash</formatted>),
+							cela doit être fait dans la console dans laquelle vous 
+							avez tapé <formatted style="code">Ctrl-z</formatted>.
+							<formatted style="code"><formatted style=" italic">num</formatted></formatted>
+							est le numéro fourni par le système lorsque le processus 
+							a été suspendu par <formatted style="code">Ctrl-z</formatted>.
+						</paragraph>
+						<paragraph>
+							Essayez aussi <formatted style="code">fg</formatted> 
+							sans paramètre pour reprendre un processus suspendu.
+						</paragraph>
+					</item>
+				</list>
+			</act>
+		</learningObject>
 
-      <act>
-        <paragraph title="La boucle infinie" icon="act"/>
-        <list listStyle="ordered">
-          <item>Visualisez vos processus en cours en utilisant la commande <formatted style="code">ps u</formatted>.</item>
-          <item>
-            Ouvrez une seconde fenêtre putty, et exécutez-y la classe <formatted style="code">td.td9.Infini</formatted>.
-            Exécutez une nouvelle fois la commande <formatted style="code">ps u</formatted> dans la première fenêtre.
-          </item>
-          <item>
-            <paragraph>
-              Retrouvez le processus correspondant au programme <formatted style="code">Infini</formatted> (son PID)
-              et tuez-le en utilisant la commande kill  avec les bons paramètres. Quel nom a le programme à tuer ?
-            </paragraph>
-            <paragraph>
-              Dû aux quotas des comptes étudiants sous linux1, le système tue les processus après un temps défini d'utilisation du CPU (timeout),
-              il se pourrait donc que le processus s'arrête avant l'effet de votre action (ce n'est pas le moment de s'endormir ;-)  ).
-            </paragraph>
-          </item>
-          <item>
-            Lancez une deuxième exécution et suspendez votre programme par <formatted style="code">Ctrl-z</formatted>.
-            Vérifiez l'état du processus stoppé par la commande <formatted style="code">ps</formatted>
-            (<formatted style="code">man ps</formatted> et recherchez la signification du champ <formatted style="code">STAT</formatted>).
-          </item>
-          <item>
-            Reprenez le processus interrompu en lui envoyant le signal SIGCONT
-            (<formatted style="code">man 7 signal</formatted> pour obtenir le numéro de ce signal)
-            et vérifiez son nouvel état avant qu'il ne soit éjecté par le système à cause du « timeout ».
-          </item>
-          <item>
-            <paragraph>
-              Une deuxième manière de reprendre un processus suspendu est de taper la commande
-              <formatted style="code">fg %<formatted style="italic">num</formatted></formatted> (faites un <formatted style="code">man bash</formatted>) ,
-              cela doit être fait dans la console dans laquelle vous avez tapé <formatted style="code">Ctrl-z</formatted>.
-              <formatted style="code"><formatted style=" italic">num</formatted></formatted> est le numéro fourni par le système
-              lorsque le processus a été suspendu par <formatted style="code">Ctrl-z</formatted>.
-            </paragraph>
-            <paragraph>
-              Essayez aussi <formatted style="code">fg</formatted> sans paramètre pour reprendre un processus suspendu.
-            </paragraph>
-          </item>
-        </list>
-      </act>
-    </learningObject>
+	<learningObject title="Entrée standard, sortie standard, sortie d'erreur et redirections">
+		<clarify>
+		<box>
+			<list listStyle="unordered">
+			<item>
+				Tout programme qui s'exécute dispose de trois fichiers ouverts d'office par le système pour lui:
+				l'entrée standard, la sortie standard et la sortie d'erreur,
+				identifiés respectivement par les numéros 0, 1, 2.
+			</item>
+			<item>
+				L'instruction <formatted style="code">s = clavier.next ();</formatted> permet de lire des données à partir de 0 (entrée standard) , par défaut le clavier.
+			</item>
+			<item>
+				L'instruction <formatted style="code">System.out.println ();</formatted> permet un affichage de données sur 1 (sortie standard) , par défaut l'écran.
+			</item>
+			<item>
+				L'instruction <formatted style="code">System.err.println ();</formatted> permet un affichage de données sur 2 (sortie d'erreur) ,
+				par défaut également l'écran.
+			</item>
+			<item>
+				Ces trois fichiers peuvent être associés à autre chose que le clavier ou l'écran, à un fichier par exemple.
+				Cela se fait au niveau de la commande au moyen d'une redirection.
+				Une redirection de sortie se note « > » ou « 1> » si il s'agit ici de rediriger la sortie standard.
+				La sortie d'erreur sera redirigée en utilisant	« 2> ».
+				Ces redirections sont	réalisées par le shell avant l'exécution de la commande.
+			</item>
+			</list>
+		</box>
+		</clarify>
 
-    <learningObject title="Entrée standard, sortie standard, sortie d'erreur et redirections">
-      <clarify>
-        <box>
-          <list listStyle="unordered">
-            <item>
-              Tout programme qui s'exécute dispose de trois fichiers ouverts d'office par le système pour lui:
-              l'entrée standard, la sortie standard et la sortie d'erreur,
-              identifiés respectivement par les numéros 0, 1, 2.
-            </item>
-            <item>
-              L'instruction <formatted style="code">s = clavier.next ();</formatted> permet de lire des données à partir de 0 (entrée standard) , par défaut le clavier.
-            </item>
-            <item>
-              L'instruction <formatted style="code">System.out.println ();</formatted> permet un affichage de données sur 1 (sortie standard) , par défaut l'écran.
-            </item>
-            <item>
-              L'instruction <formatted style="code">System.err.println ();</formatted> permet un affichage de données sur 2 (sortie d'erreur) ,
-              par défaut également l'écran.
-            </item>
-            <item>
-              Ces trois fichiers peuvent être associés à autre chose que le clavier ou l'écran, à un fichier par exemple.
-              Cela se fait au niveau de la commande au moyen d'une redirection.
-              Une redirection de sortie se note « > » ou « 1> » si il s'agit ici de rediriger la sortie standard.
-              La sortie d'erreur sera redirigée en utilisant  « 2> ».
-              Ces redirections sont  réalisées par le shell avant l'exécution de la commande.
-            </item>
-          </list>
-        </box>
-      </clarify>
+		<look>
+		<paragraph title="Exemple" icon="look"/>
+		<paragraph cssClass="java">
+	<![CDATA[ls -l > liste
+]]>	 </paragraph>
+		<paragraph>
+			ou
+		</paragraph>
+		<paragraph cssClass="java">
+	<![CDATA[ls -l 1> liste
+]]>	 </paragraph>
+		<paragraph>
+			Ces deux commandes sont équivalentes, elles n'affichent pas le résultat à l'écran,
+			mais l'écrivent dans le fichier <formatted style="code">liste</formatted> créé ici ou écrasé s'il préexistait.
+			Par défaut <formatted style="code">ls -l</formatted> affiche le résultat à l'écran.
+			Nous avons <formatted style="italic">redirigé</formatted> cette sortie standard vers un fichier, en l'occurrence <formatted style="code">liste</formatted>.
+		</paragraph>
+		<paragraph>
+			Faites l'essai et vérifiez le contenu du fichier créé.
+		</paragraph>
+		<paragraph>
+			Vous avez maintenant un moyen pour distinguer la sortie standard et la sortie d'erreur standard en redirigeant l'une et/ou l'autre dans un fichier.
+		</paragraph>
+		</look>
 
-      <look>
-        <paragraph title="Exemple" icon="look"/>
-        <paragraph cssClass="java">
-  <![CDATA[ls -l > liste
-]]>   </paragraph>
-        <paragraph>
-          ou
-        </paragraph>
-        <paragraph cssClass="java">
-  <![CDATA[ls -l 1> liste
-]]>   </paragraph>
-        <paragraph>
-          Ces deux commandes sont équivalentes, elles n'affichent pas le résultat à l'écran,
-          mais l'écrivent dans le fichier <formatted style="code">liste</formatted> créé ici ou écrasé s'il préexistait.
-          Par défaut <formatted style="code">ls -l</formatted> affiche le résultat à l'écran.
-          Nous avons <formatted style="italic">redirigé</formatted> cette sortie standard vers un fichier, en l'occurrence <formatted style="code">liste</formatted>.
-        </paragraph>
-        <paragraph>
-          Faites l'essai et vérifiez le contenu du fichier créé.
-        </paragraph>
-        <paragraph>
-          Vous avez maintenant un moyen pour distinguer la sortie standard et la sortie d'erreur standard en redirigeant l'une et/ou l'autre dans un fichier.
-        </paragraph>
-      </look>
-
-      <act>
-        <paragraph title="Rediriger les sorties" icon="act"/>
-        <list listStyle="ordered">
-          <item>
-            Reprenez une de vos anciennes classes Java qui affiche quelque chose à l'écran, par exemple <formatted style="code">Hello</formatted>.
-          </item>
-          <item>
-            Exécutez-la une première fois par la commande
-            <paragraph><formatted style="java">java Hello</formatted></paragraph>
-          </item>
-          <item>
-            <paragraph>
-              Essayez les redirections des sorties <formatted style="italic">1</formatted> et <formatted style="italic">2</formatted>
-              et <formatted style="bold">justifiez</formatted> les comportements obtenus.
-            </paragraph>
-            <paragraph>
-              Examinez les contenus des fichiers <formatted style="italic">fichout</formatted> et <formatted style="italic">ficherr</formatted>
-            </paragraph>
+		<act>
+		<paragraph title="Rediriger les sorties" icon="act"/>
+		<list listStyle="ordered">
+			<item>
+			Reprenez une de vos anciennes classes Java qui affiche quelque chose à l'écran, par exemple <formatted style="code">Hello</formatted>.
+			</item>
+			<item>
+			Exécutez-la une première fois par la commande
+			<paragraph><formatted style="java">java Hello</formatted></paragraph>
+			</item>
+			<item>
+			<paragraph>
+				Essayez les redirections des sorties <formatted style="italic">1</formatted> et <formatted style="italic">2</formatted>
+				et <formatted style="bold">justifiez</formatted> les comportements obtenus.
+			</paragraph>
+			<paragraph>
+				Examinez les contenus des fichiers <formatted style="italic">fichout</formatted> et <formatted style="italic">ficherr</formatted>
+			</paragraph>
 <paragraph cssClass="java">
-  <![CDATA[java Hello > fichout
-]]>   </paragraph>
-            <popup visible="online">
-              Écrit le résultat de l'affichage standard du programme Hello (<formatted style="italic">Hello world</formatted>)
-              dans le fichier <formatted style="italic">fichout</formatted>.
-            </popup>
+	<![CDATA[java Hello > fichout
+]]>	 </paragraph>
+			<popup visible="online">
+				Écrit le résultat de l'affichage standard du programme Hello (<formatted style="italic">Hello world</formatted>)
+				dans le fichier <formatted style="italic">fichout</formatted>.
+			</popup>
 <paragraph cssClass="java">
-  <![CDATA[java Hello 2> ficherr
-]]>   </paragraph>
-            <popup visible="online">
-              Écrit le résultat de l'affichage d'erreur du programme Hello (c-à-d rien du tout ici)
-              dans le fichier <formatted style="italic">ficherr</formatted>.
-              L'affichage standard apparait à l'écran.
-            </popup>
-          </item>
-          <item>
-            Faites la même chose pour la commande erronée :
-  <paragraph cssClass="java">
-  <![CDATA[java Hella > fichout
-]]>   </paragraph>
-            <popup visible="online">
-              Le programme <formatted style="italic">Hella</formatted> n'existant pas, rien n'est écrit dans le fichier <formatted style="italic">fichout</formatted>
-              mais un message d'erreur apparait à l'écran.
-            </popup>
+	<![CDATA[java Hello 2> ficherr
+]]>	 </paragraph>
+			<popup visible="online">
+				Écrit le résultat de l'affichage d'erreur du programme Hello (c-à-d rien du tout ici)
+				dans le fichier <formatted style="italic">ficherr</formatted>.
+				L'affichage standard apparait à l'écran.
+			</popup>
+			</item>
+			<item>
+			Faites la même chose pour la commande erronée :
+	<paragraph cssClass="java">
+	<![CDATA[java Hella > fichout
+]]>	 </paragraph>
+			<popup visible="online">
+				Le programme <formatted style="italic">Hella</formatted> n'existant pas, rien n'est écrit dans le fichier <formatted style="italic">fichout</formatted>
+				mais un message d'erreur apparait à l'écran.
+			</popup>
 <paragraph cssClass="java">
-  <![CDATA[java Hella 2> ficherr
-]]>   </paragraph>
-            <popup visible="online">
-              Cette fois, le message d'erreur qui apparaissait à l'écran avec la commande précédente est redirigé dans le fichier
-              <formatted style="italic">ficherr</formatted>.
-              Plus rien n'apparait à l'écran.
-            </popup>
-          </item>
-          <item>
-            Faites la même chose pour les commandes :
-  <paragraph cssClass="java">
-  <![CDATA[ls > fichout
-]]>   </paragraph>
-            <popup visible="online">
-              Écrit le résultat de la commande <formatted style="code">ls</formatted> dans le fichier <formatted style="italic">fichout</formatted>.
-            </popup>
+	<![CDATA[java Hella 2> ficherr
+]]>	 </paragraph>
+			<popup visible="online">
+				Cette fois, le message d'erreur qui apparaissait à l'écran avec la commande précédente est redirigé dans le fichier
+				<formatted style="italic">ficherr</formatted>.
+				Plus rien n'apparait à l'écran.
+			</popup>
+			</item>
+			<item>
+			Faites la même chose pour les commandes :
+	<paragraph cssClass="java">
+	<![CDATA[ls > fichout
+]]>	 </paragraph>
+			<popup visible="online">
+				Écrit le résultat de la commande <formatted style="code">ls</formatted> dans le fichier <formatted style="italic">fichout</formatted>.
+			</popup>
 <paragraph cssClass="java">
-  <![CDATA[ls 2> ficherr
-]]>   </paragraph>
-            <popup visible="online">
-              La commande <formatted style="code">ls</formatted> n'engrengeant aucune erreur, le résultat de la commande sera affiché à l'écran
-              et rien ne sera écrit dans le fichier <formatted style="italic">ficherr</formatted>.
-            </popup>
+	<![CDATA[ls 2> ficherr
+]]>	 </paragraph>
+			<popup visible="online">
+				La commande <formatted style="code">ls</formatted> n'engrengeant aucune erreur, le résultat de la commande sera affiché à l'écran
+				et rien ne sera écrit dans le fichier <formatted style="italic">ficherr</formatted>.
+			</popup>
 <paragraph cssClass="java">
-  <![CDATA[ls NomDeFichierInexistant > fichout
-]]>   </paragraph>
-            <popup visible="online">
-              La commande <formatted style="italic">ls NomDeFichierInexistant</formatted> engrengeant une erreur,
-              rien n'est écrit dans le fichier <formatted style="italic">fichout</formatted>
-              mais un message d'erreur apparait à l'écran.
-            </popup>
+	<![CDATA[ls NomDeFichierInexistant > fichout
+]]>	 </paragraph>
+			<popup visible="online">
+				La commande <formatted style="italic">ls NomDeFichierInexistant</formatted> engrengeant une erreur,
+				rien n'est écrit dans le fichier <formatted style="italic">fichout</formatted>
+				mais un message d'erreur apparait à l'écran.
+			</popup>
 <paragraph cssClass="java">
-  <![CDATA[ls NomDeFichierInexistant 2> ficherr
-]]>   </paragraph>
-            <popup visible="online">
-              Cette fois, le message d'erreur qui apparaissait à l'écran avec la commande précédente est redirigé dans le fichier
-              <formatted style="italic">ficherr</formatted>.
-              Plus rien n'apparait à l'écran.
-            </popup>
-          </item>
-        </list>
+	<![CDATA[ls NomDeFichierInexistant 2> ficherr
+]]>	 </paragraph>
+			<popup visible="online">
+				Cette fois, le message d'erreur qui apparaissait à l'écran avec la commande précédente est redirigé dans le fichier
+				<formatted style="italic">ficherr</formatted>.
+				Plus rien n'apparait à l'écran.
+			</popup>
+			</item>
+		</list>
 
-        <box>
-          <list listStyle="unordered">
-            <item>
-              Symétriquement «l'entrée standard» peut être associée à un fichier au lieu du clavier.
-              Cela permet d'utiliser les données à partir du fichier au lieu de les entrer au clavier.
-              Modifier l'entrée standard est ce que l'on appelle une redirection de l'entrée.
-              Cela se fait grâce à la redirection d'entrée notée « &lt; ».
-            </item>
-            <item>
-              <paragraph>
-                <formatted style="code">commande &lt; fichier</formatted>
-              </paragraph>
-              <paragraph>
-                cela n'a de sens que si <formatted style="code">commande</formatted> fait des lectures au clavier.
-              </paragraph>
-            </item>
-          </list>
-        </box>
+		<box>
+			<list listStyle="unordered">
+			<item>
+				Symétriquement «l'entrée standard» peut être associée à un fichier au lieu du clavier.
+				Cela permet d'utiliser les données à partir du fichier au lieu de les entrer au clavier.
+				Modifier l'entrée standard est ce que l'on appelle une redirection de l'entrée.
+				Cela se fait grâce à la redirection d'entrée notée « &lt; ».
+			</item>
+			<item>
+				<paragraph>
+				<formatted style="code">commande &lt; fichier</formatted>
+				</paragraph>
+				<paragraph>
+				cela n'a de sens que si <formatted style="code">commande</formatted> fait des lectures au clavier.
+				</paragraph>
+			</item>
+			</list>
+		</box>
 
-        <paragraph title="Rediriger l'entrée" icon="act"/>
-        <list listStyle="unordered">
-          <item>
-            <paragraph>
-              Exécutez la classe <formatted style="code">td.td9.NombresPair</formatted> :
-            </paragraph>
+		<paragraph title="Rediriger l'entrée" icon="act"/>
+		<list listStyle="unordered">
+			<item>
+			<paragraph>
+				Exécutez la classe <formatted style="code">td.td9.NombresPair</formatted> :
+			</paragraph>
 
-            <paragraph>
-              Ce programme  lit sur l'entrée standard des nombres entiers jusqu'à la fin des données et affiche uniquement les pairs sur la sortie standard.
-              Il affiche ensuite le pourcentage de nombres pairs trouvés.
-            </paragraph>
-            <paragraph>
-              La combinaison de touches <formatted style="code">Ctrl-d</formatted> est l'équivalent de la marque « fin de fichier » pour le clavier,
-              c'est ainsi que vous terminerez l'acquisition de la série de nombres au clavier
-              (à ne pas confondre avec <formatted style="code">Ctrl-c</formatted> qui tue le processus  dans ce cas le dernier affichage n'apparait pas !).
-            </paragraph>
-            <paragraph>
-              Lancez <formatted style="code">td.td9.NombresPair</formatted> en entrant les nombres au clavier
-              et notez la différence de comportement entre <formatted style="code">Ctrl-d</formatted> et <formatted style="code">Ctrl-c</formatted>
-              pour terminer le processus.
-            </paragraph>
-            <paragraph>
-              Exécutez la classe d'abord en entrant les nombres au clavier suivis de <formatted style="code">Ctrl-d</formatted> lors de l'exécution,
-              ensuite en associant le clavier à un petit fichier texte où vous aurez écrit les nombres au préalable,
-              séparés par des blancs ou des caractères équivalents (pas de <formatted style="code">Ctrl-d  ici</formatted> ;-) ).
-              Vous redirigerez l'entrée de la commande sur ce fichier (nommé <formatted style="italic">Nombres</formatted>).
-              <selfCheck title="Quelle commande devez-vous taper ?" shuffle="no">
-                <fillInBlanks>
-                  <question/>
-                  <gapText>
-                    <gap answers="">java td.td9.NombresPairs &lt; Nombres</gap>
-                  </gapText>
-                  <solution/>
-                </fillInBlanks>
-              </selfCheck>
-            </paragraph>
-          </item>
-        </list>
+			<paragraph>
+				Ce programme	lit sur l'entrée standard des nombres entiers jusqu'à la fin des données et affiche uniquement les pairs sur la sortie standard.
+				Il affiche ensuite le pourcentage de nombres pairs trouvés.
+			</paragraph>
+			<paragraph>
+				La combinaison de touches <formatted style="code">Ctrl-d</formatted> est l'équivalent de la marque « fin de fichier » pour le clavier,
+				c'est ainsi que vous terminerez l'acquisition de la série de nombres au clavier
+				(à ne pas confondre avec <formatted style="code">Ctrl-c</formatted> qui tue le processus  dans ce cas le dernier affichage n'apparait pas !).
+			</paragraph>
+			<paragraph>
+				Lancez <formatted style="code">td.td9.NombresPair</formatted> en entrant les nombres au clavier
+				et notez la différence de comportement entre <formatted style="code">Ctrl-d</formatted> et <formatted style="code">Ctrl-c</formatted>
+				pour terminer le processus.
+			</paragraph>
+			<paragraph>
+				Exécutez la classe d'abord en entrant les nombres au clavier suivis de <formatted style="code">Ctrl-d</formatted> lors de l'exécution,
+				ensuite en associant le clavier à un petit fichier texte où vous aurez écrit les nombres au préalable,
+				séparés par des blancs ou des caractères équivalents (pas de <formatted style="code">Ctrl-d	ici</formatted> ;-) ).
+				Vous redirigerez l'entrée de la commande sur ce fichier (nommé <formatted style="italic">Nombres</formatted>).
+				<selfCheck title="Quelle commande devez-vous taper ?" shuffle="no">
+				<fillInBlanks>
+					<question/>
+					<gapText>
+					<gap answers="">java td.td9.NombresPairs &lt; Nombres</gap>
+					</gapText>
+					<solution/>
+				</fillInBlanks>
+				</selfCheck>
+			</paragraph>
+			</item>
+		</list>
 
-        <paragraph title="" icon="act"/>
-        <selfCheck title="Multiples 5" shuffle="no">
-          <fillInBlanks>
-            <question/>
-            <gapText>
-              <list listStyle="ordered">
-                <item>
-                  Examinons le source de la classe <formatted style="code">td.td9.Multiples5</formatted>
-                  dans <formatted style="code">/eCours/java/td/td9/src</formatted>.
-                  Elle lit des nombres multiples de 5 au clavier jusqu'à la fin du fichier et affiche le résultat de la division du nombre par 5.
-                  Si l'utilisateur entre un nombre non divisible par 5 le programme affiche un message sur la sortie d'erreur par l'instruction
-                  <formatted style="code">System.err.println(...)</formatted>.
-                </item>
-                <item>
-                  Exécutez ce programme normalement en donnant quelques nombres, dont certains non multiples de 5 en entrée.
-                  Terminez avec <formatted style="code">Ctrl-d</formatted>. Quelle commande devez-vous taper ?
-                  <gap answers="">java td.td9.Multiples5</gap>
-                </item>
-                <item>
-                  Exécutez ce programme en redirigeant l'entrée depuis un fichier <formatted style="italic">Nombres</formatted>.
-                  Celui-ci contiendra des nombres dont certains incorrects.
-                  <gap answers="">java td.td9.Multiples5 &lt; Nombres</gap>
-                </item>
-                <item>
-                  Exécutez comme au point 3  mais faites en sorte que l'exécution de votre classe n'affiche rien du tout à l'écran
-                  (il faudra donc rediriger <formatted style="bold">les</formatted> sorties vers les fichiers
-                  <formatted style="italic">Multiples5</formatted> et <formatted style="italic">Multipes5Erreur</formatted>).
-                  <gap answers="">java td.td9.Multiples5 &lt; Nombres &gt; Multiples5 2&gt; Multiples5Erreur</gap>
-                </item>
-              </list>
-            </gapText>
-            <solution/>
-          </fillInBlanks>
-        </selfCheck>
+		<paragraph title="" icon="act"/>
+		<selfCheck title="Multiples 5" shuffle="no">
+			<fillInBlanks>
+			<question/>
+			<gapText>
+				<list listStyle="ordered">
+				<item>
+					Examinons le source de la classe <formatted style="code">td.td9.Multiples5</formatted>
+					dans <formatted style="code">/eCours/java/td/td9/src</formatted>.
+					Elle lit des nombres multiples de 5 au clavier jusqu'à la fin du fichier et affiche le résultat de la division du nombre par 5.
+					Si l'utilisateur entre un nombre non divisible par 5 le programme affiche un message sur la sortie d'erreur par l'instruction
+					<formatted style="code">System.err.println(...)</formatted>.
+				</item>
+				<item>
+					Exécutez ce programme normalement en donnant quelques nombres, dont certains non multiples de 5 en entrée.
+					Terminez avec <formatted style="code">Ctrl-d</formatted>. Quelle commande devez-vous taper ?
+					<gap answers="">java td.td9.Multiples5</gap>
+				</item>
+				<item>
+					Exécutez ce programme en redirigeant l'entrée depuis un fichier <formatted style="italic">Nombres</formatted>.
+					Celui-ci contiendra des nombres dont certains incorrects.
+					<gap answers="">java td.td9.Multiples5 &lt; Nombres</gap>
+				</item>
+				<item>
+					Exécutez comme au point 3	mais faites en sorte que l'exécution de votre classe n'affiche rien du tout à l'écran
+					(il faudra donc rediriger <formatted style="bold">les</formatted> sorties vers les fichiers
+					<formatted style="italic">Multiples5</formatted> et <formatted style="italic">Multipes5Erreur</formatted>).
+					<gap answers="">java td.td9.Multiples5 &lt; Nombres &gt; Multiples5 2&gt; Multiples5Erreur</gap>
+				</item>
+				</list>
+			</gapText>
+			<solution/>
+			</fillInBlanks>
+		</selfCheck>
 
-        <box>
-          <paragraph>
-            Avec la simple redirection (en sortie), si le fichier existe déjà, il est écrasé. Nous pouvons choisir de ne pas l'écraser, mais de le compléter.
-            Il s'agit d'ajouter au contenu du fichier déjà existant.
-          </paragraph>
-          <paragraph>
-            Cela se fait grâce à la double redirection (en sortie) notée « >> ».
-          </paragraph>
-        </box>
+		<box>
+			<paragraph>
+			Avec la simple redirection (en sortie), si le fichier existe déjà, il est écrasé. Nous pouvons choisir de ne pas l'écraser, mais de le compléter.
+			Il s'agit d'ajouter au contenu du fichier déjà existant.
+			</paragraph>
+			<paragraph>
+			Cela se fait grâce à la double redirection (en sortie) notée « >> ».
+			</paragraph>
+		</box>
 
-        <paragraph title="Exemples à faire" icon="look"/>
-        <paragraph cssClass="java">
-  <![CDATA[ls > liste
+		<paragraph title="Exemples à faire" icon="look"/>
+		<paragraph cssClass="java">
+	<![CDATA[ls > liste
 ls > liste
 cat liste
-]]>   </paragraph>
-        <paragraph cssClass="java">
-  <![CDATA[ls >> liste
+]]>	 </paragraph>
+		<paragraph cssClass="java">
+	<![CDATA[ls >> liste
 ls >> liste
 cat liste
-]]>   </paragraph>
-      </act>
-    </learningObject>
+]]>	 </paragraph>
+		</act>
+	</learningObject>
 
-    <learningObject title="Filtres – pipes">
-      <clarify>
-        <box>
-          <list listStyle="unordered">
-            <item>
-              Un bon nombre de commandes linux, utilisées sans paramètre, sont des filtres.
-              Un filtre acquiert des données sur l'entrée standard et les envoie vers la sortie standard après les avoir éventuellement transformées.
-              C'est le cas de commandes comme <formatted style="code">tr</formatted>, <formatted style="code">cut</formatted>,
-              <formatted style="code">cat</formatted>, <formatted style="code"> sort</formatted>, <formatted style="code">head</formatted>,
-              <formatted style="code">tail</formatted>, <formatted style="code">split</formatted>, <formatted style="code">uniq</formatted>,
-              <formatted style="code">grep</formatted>, <formatted style="code">more</formatted>, <formatted style="code">less</formatted>,
-              <formatted style="code">wc</formatted>, <formatted style="code">grep</formatted>, ...
-              Voyez-en les pages de manuel respectives et l'aide (<formatted style="code">--help</formatted>) pour en connaitre le détail.
-            </item>
-            <item>
-              <formatted style="code">grep</formatted> est un filtre linux assez puissant,
-              cette commande permet notamment d'extraire d'un fichier les lignes contenant une expression.
-            </item>
-            <item>
-              De telles commandes peuvent être utilisées pour transformer la sortie d'autres commandes,
-              voire même enchainées dans une suite : la sortie de l'une sert d'entrée à la suivante. On réalise cela grâce aux pipes.
-              pipe est noté « | ».
-            </item>
-          </list>
-        </box>
-      </clarify>
+	<learningObject title="Filtres – pipes">
+		<clarify>
+		<box>
+			<list listStyle="unordered">
+			<item>
+				Un bon nombre de commandes linux, utilisées sans paramètre, sont des filtres.
+				Un filtre acquiert des données sur l'entrée standard et les envoie vers la sortie standard après les avoir éventuellement transformées.
+				C'est le cas de commandes comme <formatted style="code">tr</formatted>, <formatted style="code">cut</formatted>,
+				<formatted style="code">cat</formatted>, <formatted style="code"> sort</formatted>, <formatted style="code">head</formatted>,
+				<formatted style="code">tail</formatted>, <formatted style="code">split</formatted>, <formatted style="code">uniq</formatted>,
+				<formatted style="code">grep</formatted>, <formatted style="code">more</formatted>, <formatted style="code">less</formatted>,
+				<formatted style="code">wc</formatted>, <formatted style="code">grep</formatted>, ...
+				Voyez-en les pages de manuel respectives et l'aide (<formatted style="code">--help</formatted>) pour en connaitre le détail.
+			</item>
+			<item>
+				<formatted style="code">grep</formatted> est un filtre linux assez puissant,
+				cette commande permet notamment d'extraire d'un fichier les lignes contenant une expression.
+			</item>
+			<item>
+				De telles commandes peuvent être utilisées pour transformer la sortie d'autres commandes,
+				voire même enchainées dans une suite : la sortie de l'une sert d'entrée à la suivante. On réalise cela grâce aux pipes.
+				pipe est noté « | ».
+			</item>
+			</list>
+		</box>
+		</clarify>
 
-      <look>
-        <paragraph title="Exemple" icon="look"/>
-        <multimedia src="../image/capt2.jpg" type="jpeg" legend="cut, sort et uniq" width="50" units="percent"/>
-        <paragraph>
-          la commande <formatted style="code">cut</formatted> transforme la sortie de <formatted style="code">ls</formatted>.
-          <formatted style="code">cut -c 1-11</formatted> découpe les 11 premiers caractères de chaque ligne,
-          <formatted style="code">sort</formatted> transforme la sortie de <formatted style="code">cut</formatted> en triant les lignes,
-          <formatted style="code">uniq</formatted> transforme la sortie triée du <formatted style="code">sort</formatted>
-          en éliminant les lignes identiques qui se suivent.
-        </paragraph>
-        <paragraph title="" icon="look"/>
-        <multimedia src="../image/capt3.jpg" type="jpeg" legend="grep" width="50" units="percent"/>
-        <paragraph>
-          la commande <formatted style="code">grep</formatted> transforme la sortie de <formatted style="code">ls</formatted>,
-          elle extrait les lignes contenant la chaine <formatted style="italic">« g334 »</formatted>
-        </paragraph>
-      </look>
+		<look>
+		<paragraph title="Exemple" icon="look"/>
+		<multimedia src="../image/capt2.jpg" type="jpeg" legend="cut, sort et uniq" width="50" units="percent"/>
+		<paragraph>
+			la commande <formatted style="code">cut</formatted> transforme la sortie de <formatted style="code">ls</formatted>.
+			<formatted style="code">cut -c 1-11</formatted> découpe les 11 premiers caractères de chaque ligne,
+			<formatted style="code">sort</formatted> transforme la sortie de <formatted style="code">cut</formatted> en triant les lignes,
+			<formatted style="code">uniq</formatted> transforme la sortie triée du <formatted style="code">sort</formatted>
+			en éliminant les lignes identiques qui se suivent.
+		</paragraph>
+		<paragraph title="" icon="look"/>
+		<multimedia src="../image/capt3.jpg" type="jpeg" legend="grep" width="50" units="percent"/>
+		<paragraph>
+			la commande <formatted style="code">grep</formatted> transforme la sortie de <formatted style="code">ls</formatted>,
+			elle extrait les lignes contenant la chaine <formatted style="italic">« g334 »</formatted>
+		</paragraph>
+		</look>
 
-      <act>
-        <paragraph title="Pipe" icon="act"/>
-        <multimedia src="../image/capt4.jpg" type="jpeg" legend="tr et cut" width="50" units="percent"/>
+		<act>
+		<paragraph title="Pipe" icon="act"/>
+		<multimedia src="../image/capt4.jpg" type="jpeg" legend="tr et cut" width="50" units="percent"/>
 
-        <paragraph>
-          Décortiquez le pipe du dernier exemple
-        </paragraph>
-        <list listStyle="ordered">
-          <item>
-            Comprenez le dernier exemple en découpant la commande depuis la gauche.
-          </item>
-          <item>
-            Exécutez-en chaque partie. <formatted style="code">ps u</formatted>, <formatted style="code">ps u | tr -s' '</formatted>, ...
-            Aidez-vous des pages de manuel pour comprendre le résultat.
-          </item>
-          <item>
-            Quel est le rôle de la commande <formatted style="code">tr</formatted> ici ? Pourquoi est-elle indispensable ?
-            <popup visible="online">
-              La commande <formatted style="code">tr -s' '</formatted> remplace toutes les suites d'espace par un seul espace.
-              Elle est indispensable ici pour que le délimiteur entre les champs soit l'espace.
-              Cette information sera utilisée par la commande <formatted style="code">cut</formatted>.
-            </popup>
-          </item>
-          <item>
-            Remarquez qu'on utilise la commande <formatted style="code">cut</formatted> avec l'option <formatted style="code">-f</formatted> ici.
-          </item>
-        </list>
+		<paragraph>
+			Décortiquez le pipe du dernier exemple
+		</paragraph>
+		<list listStyle="ordered">
+			<item>
+			Comprenez le dernier exemple en découpant la commande depuis la gauche.
+			</item>
+			<item>
+			Exécutez-en chaque partie. <formatted style="code">ps u</formatted>, <formatted style="code">ps u | tr -s' '</formatted>, ...
+			Aidez-vous des pages de manuel pour comprendre le résultat.
+			</item>
+			<item>
+			Quel est le rôle de la commande <formatted style="code">tr</formatted> ici ? Pourquoi est-elle indispensable ?
+			<popup visible="online">
+				La commande <formatted style="code">tr -s' '</formatted> remplace toutes les suites d'espace par un seul espace.
+				Elle est indispensable ici pour que le délimiteur entre les champs soit l'espace.
+				Cette information sera utilisée par la commande <formatted style="code">cut</formatted>.
+			</popup>
+			</item>
+			<item>
+			Remarquez qu'on utilise la commande <formatted style="code">cut</formatted> avec l'option <formatted style="code">-f</formatted> ici.
+			</item>
+		</list>
 
 
-      <paragraph title="Postes utilisés" icon="look"/>
-      <selfCheck title="" shuffle="no">
-          <fillInBlanks>
-            <question/>
-            <gapText>
-              <list listStyle="ordered">
-                <item>
-                  Écrivez une commande utilisant un pipe pour lister toutes les connections à linux1.
-                  La commande <formatted style="code">who</formatted> vous aide à trouver l'information.
-                  On s'attend à une sortie du genre :
+		<paragraph title="Postes utilisés" icon="look"/>
+		<selfCheck title="" shuffle="no">
+			<fillInBlanks>
+			<question/>
+			<gapText>
+				<list listStyle="ordered">
+				<item>
+					Écrivez une commande utilisant un pipe pour lister toutes les connections à linux1.
+					La commande <formatted style="code">who</formatted> vous aide à trouver l'information.
+					On s'attend à une sortie du genre :
 <paragraph cssClass="java">
 <![CDATA[
 l302p05
@@ -475,133 +527,133 @@ l302p07
 l302p05
 l304p02
 ]]> </paragraph>
-                  <paragraph>
-                    deux fenêtres putty ouvertes sur le même poste comptent comme deux connections,
-                    ici le poste <formatted style="italic">05</formatted> du local <formatted style="italic">302</formatted>.
-                  </paragraph>
-                  <gap answers="">who | tr '(' ' ' | tr '.' ' ' | tr -s ' ' | cut -f 5 -d ' '</gap>
-                </item>
-                <item>
-                  En utilisant le filtre <formatted style="code">wc</formatted> avec la bonne option, comptez le nombre de connections ouvertes.
-                  <gap answers="">who | tr '(' ' ' | tr '.' ' ' | tr -s ' ' | cut -f 5 -d ' ' | wc -l</gap>
-                </item>
-                <item>
-                  Comptez maintenant le nombre de postes connectés
-                  (NB un même poste peut utiliser plusieurs connections, mais doit compter ici pour un seul, il faudra retirer la redondance).
-                  <gap answers="">who | tr '(' ' ' | tr '.' ' ' | tr -s ' ' | cut -f 5 -d ' ' | sort | uniq | wc -l</gap>
-                </item>
-                <item>
-                  Enchainez maintenant les commandes <formatted style="code">who</formatted>, <formatted style="code">grep</formatted>
-                  et <formatted style="code">wc</formatted> dans un pipe pour trouver le nombre de connections actives pour un utilisateur donné gXXXXX .
-                  La commande <formatted style="code">grep</formatted> servira à filtrer les lignes correspondant à l'utilisateur.
-                  <gap answers="">who | tr -s ' ' | cut -f 1 -d ' ' | grep gXXXXX | wc -l</gap>
-                </item>
-              </list>
-            </gapText>
-            <solution/>
-          </fillInBlanks>
-        </selfCheck>
+					<paragraph>
+					deux fenêtres putty ouvertes sur le même poste comptent comme deux connections,
+					ici le poste <formatted style="italic">05</formatted> du local <formatted style="italic">302</formatted>.
+					</paragraph>
+					<gap answers="">who | tr '(' ' ' | tr '.' ' ' | tr -s ' ' | cut -f 5 -d ' '</gap>
+				</item>
+				<item>
+					En utilisant le filtre <formatted style="code">wc</formatted> avec la bonne option, comptez le nombre de connections ouvertes.
+					<gap answers="">who | tr '(' ' ' | tr '.' ' ' | tr -s ' ' | cut -f 5 -d ' ' | wc -l</gap>
+				</item>
+				<item>
+					Comptez maintenant le nombre de postes connectés
+					(NB un même poste peut utiliser plusieurs connections, mais doit compter ici pour un seul, il faudra retirer la redondance).
+					<gap answers="">who | tr '(' ' ' | tr '.' ' ' | tr -s ' ' | cut -f 5 -d ' ' | sort | uniq | wc -l</gap>
+				</item>
+				<item>
+					Enchainez maintenant les commandes <formatted style="code">who</formatted>, <formatted style="code">grep</formatted>
+					et <formatted style="code">wc</formatted> dans un pipe pour trouver le nombre de connections actives pour un utilisateur donné gXXXXX .
+					La commande <formatted style="code">grep</formatted> servira à filtrer les lignes correspondant à l'utilisateur.
+					<gap answers="">who | tr -s ' ' | cut -f 1 -d ' ' | grep gXXXXX | wc -l</gap>
+				</item>
+				</list>
+			</gapText>
+			<solution/>
+			</fillInBlanks>
+		</selfCheck>
 
-        <paragraph title="Multiples de 3, de 4 et de 12" icon="look"/>
-        <selfCheck title="" shuffle="no">
-          <fillInBlanks>
-            <question/>
-            <gapText>
-              <list listStyle="oredered">
-                <item>
-                  Nous utilisons maintenant les deux classes :
-                  <formatted style="code">td.td9.Multiples3</formatted> qui affiche tous les multiples de 3 inférieurs à 1000 et
-                  <formatted style="code">td.td9.Multiples4</formatted> qui lit des nombres au clavier et ne réécrit que les multiples de 4.
-                  Ce dernier programme s'arrête grâce à la marque 'fin de fichier' pour le clavier (<formatted style="code">Ctrl-d</formatted>). Testez-les.
-                </item>
-                <item>
-                  Comment exécuter la classe <formatted style="code">td.td9.Multiples4</formatted> sans devoir toujours retaper les données au clavier ?
-                  <gap answers="">java td.td9.Multiples4 &lt; Nombres</gap>
-                </item>
-                <item>
-                  Construisez tous les multiples de 12 inférieurs à 1000 sans créer de nouveau programme java.
-                  Pensez que les multiples de 12 sont à la fois multiples de 3 et multiples de 4.
-                  Vous utiliserez sans doute un pipe pour enchainer ces deux derniers programmes ;-).
-                  <gap answers="">java td.td9.Multiples3 | java.td.td9.Multiples4</gap>
-                </item>
-              </list>
-            </gapText>
-            <solution/>
-          </fillInBlanks>
-        </selfCheck>
-      </act>
-    </learningObject>
+		<paragraph title="Multiples de 3, de 4 et de 12" icon="look"/>
+		<selfCheck title="" shuffle="no">
+			<fillInBlanks>
+			<question/>
+			<gapText>
+				<list listStyle="oredered">
+				<item>
+					Nous utilisons maintenant les deux classes :
+					<formatted style="code">td.td9.Multiples3</formatted> qui affiche tous les multiples de 3 inférieurs à 1000 et
+					<formatted style="code">td.td9.Multiples4</formatted> qui lit des nombres au clavier et ne réécrit que les multiples de 4.
+					Ce dernier programme s'arrête grâce à la marque 'fin de fichier' pour le clavier (<formatted style="code">Ctrl-d</formatted>). Testez-les.
+				</item>
+				<item>
+					Comment exécuter la classe <formatted style="code">td.td9.Multiples4</formatted> sans devoir toujours retaper les données au clavier ?
+					<gap answers="">java td.td9.Multiples4 &lt; Nombres</gap>
+				</item>
+				<item>
+					Construisez tous les multiples de 12 inférieurs à 1000 sans créer de nouveau programme java.
+					Pensez que les multiples de 12 sont à la fois multiples de 3 et multiples de 4.
+					Vous utiliserez sans doute un pipe pour enchainer ces deux derniers programmes ;-).
+					<gap answers="">java td.td9.Multiples3 | java.td.td9.Multiples4</gap>
+				</item>
+				</list>
+			</gapText>
+			<solution/>
+			</fillInBlanks>
+		</selfCheck>
+		</act>
+	</learningObject>
 
-    <learningObject title="find">
-      <clarify>
-        <box>
-          <list listStyle="unordered">
-            <item>
-              <formatted style="code">find</formatted> est une commande linux très puissante que nul ne peut ignorer.
-              Elle permet de rechercher dans une arborescence de fichiers ceux qui correspondent à un critère donné (taille, droits, nom, dates ...).
-              Elle permet également d'appliquer une commande à chacun des fichiers ainsi trouvés.
-            </item>
-          </list>
-        </box>
-      </clarify>
+	<learningObject title="find">
+		<clarify>
+		<box>
+			<list listStyle="unordered">
+			<item>
+				<formatted style="code">find</formatted> est une commande linux très puissante que nul ne peut ignorer.
+				Elle permet de rechercher dans une arborescence de fichiers ceux qui correspondent à un critère donné (taille, droits, nom, dates ...).
+				Elle permet également d'appliquer une commande à chacun des fichiers ainsi trouvés.
+			</item>
+			</list>
+		</box>
+		</clarify>
 
-      <look>
-        <paragraph title="Exemple" icon="look"/>
-        <paragraph>
-          <formatted style="code">find /home -name Hello.java</formatted>
-        </paragraph>
-        <paragraph>
-          Recherche dans l'arborescence <formatted style="code">/home</formatted> un fichier nommé <formatted style="code">Hello.java</formatted>
-        </paragraph>
-        <paragraph>
-          Pour éviter de voir défiler des tas de messages d'erreur pour chaque tentative d'accès non autorisé (droits sur les répertoires),
-          il suffit d'exécuter votre commande en redirigeant le fichier standard d'erreur vers le fichier poubelle <formatted style="code">/dev/null</formatted> :
-        </paragraph>
-        <paragraph>
-          <formatted style="code">find /home -name Hello.java 2> /dev/null</formatted>
-        </paragraph>
-      </look>
+		<look>
+		<paragraph title="Exemple" icon="look"/>
+		<paragraph>
+			<formatted style="code">find /home -name Hello.java</formatted>
+		</paragraph>
+		<paragraph>
+			Recherche dans l'arborescence <formatted style="code">/home</formatted> un fichier nommé <formatted style="code">Hello.java</formatted>
+		</paragraph>
+		<paragraph>
+			Pour éviter de voir défiler des tas de messages d'erreur pour chaque tentative d'accès non autorisé (droits sur les répertoires),
+			il suffit d'exécuter votre commande en redirigeant le fichier standard d'erreur vers le fichier poubelle <formatted style="code">/dev/null</formatted> :
+		</paragraph>
+		<paragraph>
+			<formatted style="code">find /home -name Hello.java 2> /dev/null</formatted>
+		</paragraph>
+		</look>
 
-      <act>
-        <paragraph title="find" icon="look"/>
-        <paragraph>
-          En vous servant des pages de manuel, utilisez la commande <formatted style="code">find</formatted>
-          pour lister tous les fichiers de l'arborescence de votre home, qui ont le droit d'exécution.
-        </paragraph>
-        <paragraph title="Challenge" icon="look"/>
-        <paragraph>
-          <formatted style="code">find</formatted> peut également être utilisé pour exécuter une commande sur tout fichier correspondant au critère de recherche.
-          Utilisez la commande <formatted style="code">find</formatted> pour rafraichir la date de modification de tous vos fichiers dont la taille serait égale à 2Kb.
-          La date de modification est rafraichie par la commande <formatted style="code">touch</formatted>.
-          Aidez-vous des pages de manuel et des moteurs de recherche ;-).
-        </paragraph>
-      </act>
-    </learningObject>
+		<act>
+		<paragraph title="find" icon="look"/>
+		<paragraph>
+			En vous servant des pages de manuel, utilisez la commande <formatted style="code">find</formatted>
+			pour lister tous les fichiers de l'arborescence de votre home, qui ont le droit d'exécution.
+		</paragraph>
+		<paragraph title="Challenge" icon="look"/>
+		<paragraph>
+			<formatted style="code">find</formatted> peut également être utilisé pour exécuter une commande sur tout fichier correspondant au critère de recherche.
+			Utilisez la commande <formatted style="code">find</formatted> pour rafraichir la date de modification de tous vos fichiers dont la taille serait égale à 2Kb.
+			La date de modification est rafraichie par la commande <formatted style="code">touch</formatted>.
+			Aidez-vous des pages de manuel et des moteurs de recherche ;-).
+		</paragraph>
+		</act>
+	</learningObject>
 
-    <learningObject title="Retour d'une commande – &amp;&amp;  – ||">
-      <clarify>
-        <box>
-          <list listStyle="unordered">
-            <item>
-              Tout programme qui se termine renvoie une valeur numérique au système d'exploitation au moyen de l'appel système
-              <formatted style="code">exit</formatted> (l'accolade fermante du <formatted style="java">main</formatted>
-              d'une classe java sera traduite par cet appel système).
-            </item>
-            <item>
-            La valeur numérique sert à renseigner le système sur la manière dont s'est terminé le programme :
-            0 veut dire que tout s'est bien passé, d'autres valeurs renseignent des statuts d'erreur.
-          </item>
-          <item>
-            Toute commande exécutée sur un terminal obéit à la même règle, la valeur retournée par une commande est stockée dans une
-            variable d'environnement du shell nommée "<formatted style="code">?</formatted>" (joli nom n'est-ce pas ?;-)).
-          </item>
-        </list>
-      </box>
-    </clarify>
+	<learningObject title="Retour d'une commande – &amp;&amp;	– ||">
+		<clarify>
+		<box>
+			<list listStyle="unordered">
+			<item>
+				Tout programme qui se termine renvoie une valeur numérique au système d'exploitation au moyen de l'appel système
+				<formatted style="code">exit</formatted> (l'accolade fermante du <formatted style="java">main</formatted>
+				d'une classe java sera traduite par cet appel système).
+			</item>
+			<item>
+			La valeur numérique sert à renseigner le système sur la manière dont s'est terminé le programme :
+			0 veut dire que tout s'est bien passé, d'autres valeurs renseignent des statuts d'erreur.
+			</item>
+			<item>
+			Toute commande exécutée sur un terminal obéit à la même règle, la valeur retournée par une commande est stockée dans une
+			variable d'environnement du shell nommée "<formatted style="code">?</formatted>" (joli nom n'est-ce pas ?;-)).
+			</item>
+		</list>
+		</box>
+	</clarify>
 
-    <look>
-        <paragraph title="Exemple" icon="look"/>
-        <paragraph cssClass="java">
+	<look>
+		<paragraph title="Exemple" icon="look"/>
+		<paragraph cssClass="java">
 <![CDATA[ls
 echo $?
 ]]> </paragraph>
@@ -609,94 +661,94 @@ echo $?
 <![CDATA[ls FichierInexistant
 echo $?
 ]]> </paragraph>
-        <paragraph title="Récupérer le code de sortie" icon="look"/>
-        <paragraph>
-          <list listStyle="ordered">
-            <item>
-              Copiez chez vous le source du programme <formatted style="code">Multiples5</formatted> donné
-              dans <formatted style="code">/eCours/java/td/td9/src</formatted>
-              et décommentez les lignes de l'<formatted style="code">exit</formatted> qui servent à renvoyer un statut d'erreur en cas de nombre erroné :
-              cela se fait en java par l'instruction <formatted style="java">System.exit(<formatted style="italic">&lt;code erreur&gt;</formatted>)</formatted>
-              où <formatted style="italic">code erreur</formatted> est un nombre différent de 0. Pensez à adapter le <formatted style="java">package</formatted>.
-            </item>
-            <item>
-              Exécutez ce nouveau code et affichez la valeur de retour après l'exécution de votre classe.
-            </item>
-          </list>
-        </paragraph>
+		<paragraph title="Récupérer le code de sortie" icon="look"/>
+		<paragraph>
+			<list listStyle="ordered">
+			<item>
+				Copiez chez vous le source du programme <formatted style="code">Multiples5</formatted> donné
+				dans <formatted style="code">/eCours/java/td/td9/src</formatted>
+				et décommentez les lignes de l'<formatted style="code">exit</formatted> qui servent à renvoyer un statut d'erreur en cas de nombre erroné :
+				cela se fait en java par l'instruction <formatted style="java">System.exit(<formatted style="italic">&lt;code erreur&gt;</formatted>)</formatted>
+				où <formatted style="italic">code erreur</formatted> est un nombre différent de 0. Pensez à adapter le <formatted style="java">package</formatted>.
+			</item>
+			<item>
+				Exécutez ce nouveau code et affichez la valeur de retour après l'exécution de votre classe.
+			</item>
+			</list>
+		</paragraph>
 
-        <box>
-          <paragraph>
-            <list listStyle="ordered">
-              <item>
-                Cette valeur retournée peut être utilisée comme un booléen ( 0 est vrai et !=0 est faux).
-              </item>
-              <item>
-                L'écriture suivante est donc possible, le fichier sera réellement créé seulement si la création du répertoire a fonctionné :
-                <paragraph><formatted style="code">if mkdir rep ; then cp fich rep; fi</formatted></paragraph>
-              </item>
-              <item>
-                Il existe des formes plus évoluées de test ainsi que d'autres structures de contrôle en bash
-                (<formatted style="code">if else</formatted>, <formatted style="code">while</formatted>,
-                <formatted style="code">for</formatted>, <formatted style="code">case</formatted>)
-                (pour plus d'info : <formatted style="code">man bash</formatted>).
-              </item>
-              <item>
-                Les commandes bash permettent l'utilisation des opérateurs particuliers :
-                <formatted style="code">&amp;&amp;</formatted> et <formatted style="code">||</formatted>,
-                ceux-ci se comportent un peu comme les opérateurs correspondants en java :
-                l'expression de droite n'est pas toujours évaluée selon comment s'est terminée celle de gauche (bien ou pas).
-                La valeur de retour des commandes est également utilisée dans ce cas.
-              </item>
-            </list>
-          </paragraph>
-        </box>
+		<box>
+			<paragraph>
+			<list listStyle="ordered">
+				<item>
+				Cette valeur retournée peut être utilisée comme un booléen ( 0 est vrai et !=0 est faux).
+				</item>
+				<item>
+				L'écriture suivante est donc possible, le fichier sera réellement créé seulement si la création du répertoire a fonctionné :
+				<paragraph><formatted style="code">if mkdir rep ; then cp fich rep; fi</formatted></paragraph>
+				</item>
+				<item>
+				Il existe des formes plus évoluées de test ainsi que d'autres structures de contrôle en bash
+				(<formatted style="code">if else</formatted>, <formatted style="code">while</formatted>,
+				<formatted style="code">for</formatted>, <formatted style="code">case</formatted>)
+				(pour plus d'info : <formatted style="code">man bash</formatted>).
+				</item>
+				<item>
+				Les commandes bash permettent l'utilisation des opérateurs particuliers :
+				<formatted style="code">&amp;&amp;</formatted> et <formatted style="code">||</formatted>,
+				ceux-ci se comportent un peu comme les opérateurs correspondants en java :
+				l'expression de droite n'est pas toujours évaluée selon comment s'est terminée celle de gauche (bien ou pas).
+				La valeur de retour des commandes est également utilisée dans ce cas.
+				</item>
+			</list>
+			</paragraph>
+		</box>
 
 
-        <paragraph title="Exemple" icon="look"/>
-        <paragraph cssClass="java">
+		<paragraph title="Exemple" icon="look"/>
+		<paragraph cssClass="java">
 <![CDATA[mkdir rep && cp file rep
 ]]> </paragraph>
-        <paragraph>
-          La copie ne sera pas exécutée si la première commande a échoué.
-        </paragraph>
+		<paragraph>
+			La copie ne sera pas exécutée si la première commande a échoué.
+		</paragraph>
 <paragraph cssClass="java">
 <![CDATA[mkdir rep || echo "error while creating the directory"
 ]]> </paragraph>
-        <paragraph>
+		<paragraph>
 						Le message est affiché uniquement si la première commande échoue.
-        </paragraph>
-        <paragraph title="Exploiter le code de sortie" icon="look"/>
-        <paragraph>
-          <selfCheck title="" shuffle="no">
-          <fillInBlanks>
-            <question/>
-            <gapText>
-              <list listStyle="ordered">
-                <item>
-                  Exécutez à nouveau votre code en récupérant la valeur de retour après la commande.
-                </item>
-                <item>
-                  Écrivez une commande bash qui affiche, via la commande <formatted style="code">echo</formatted>,
-                  le texte « Un des nombres en entrée est incorrect »
-                  en se servant de la classe <formatted style="code">td.td9.Multiple5</formatted>,
-                  l'opérateur adéquat et la commande <formatted style="code">echo</formatted>.
-                  <gap answers="">java td.td9.Multiples5 | echo "Valeur incorrecte"</gap>
-                </item>
-                <item>
-                  Faites la même chose en utilisant un <formatted style="code">if</formatted> dans le bash.
-                  Attention à bien respecter les mots clés (<formatted style="code">if</formatted> –
-                  <formatted style="code">then</formatted> – <formatted style="code">fi</formatted>) et les points-virgules.
-                  <gap answers="">if java td.td9.Multiples5 ; then echo "Valeur incorrecte" ; fi</gap>
-                </item>
-              </list>
-            </gapText>
-            <solution/>
-          </fillInBlanks>
-        </selfCheck>
-        </paragraph>
-      </look>
-    </learningObject>
+		</paragraph>
+		<paragraph title="Exploiter le code de sortie" icon="look"/>
+		<paragraph>
+			<selfCheck title="" shuffle="no">
+			<fillInBlanks>
+			<question/>
+			<gapText>
+				<list listStyle="ordered">
+				<item>
+					Exécutez à nouveau votre code en récupérant la valeur de retour après la commande.
+				</item>
+				<item>
+					Écrivez une commande bash qui affiche, via la commande <formatted style="code">echo</formatted>,
+					le texte « Un des nombres en entrée est incorrect »
+					en se servant de la classe <formatted style="code">td.td9.Multiple5</formatted>,
+					l'opérateur adéquat et la commande <formatted style="code">echo</formatted>.
+					<gap answers="">java td.td9.Multiples5 | echo "Valeur incorrecte"</gap>
+				</item>
+				<item>
+					Faites la même chose en utilisant un <formatted style="code">if</formatted> dans le bash.
+					Attention à bien respecter les mots clés (<formatted style="code">if</formatted> –
+					<formatted style="code">then</formatted> – <formatted style="code">fi</formatted>) et les points-virgules.
+					<gap answers="">if java td.td9.Multiples5 ; then echo "Valeur incorrecte" ; fi</gap>
+				</item>
+				</list>
+			</gapText>
+			<solution/>
+			</fillInBlanks>
+		</selfCheck>
+		</paragraph>
+		</look>
+	</learningObject>
 	</unit>
 
 	<metadata>
@@ -717,7 +769,7 @@ echo $?
 			<lifecycle>
 				<version>2012 - 2013</version>
 				<contribute>
-<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" />
+<person name="BEJ" />	<person name="CLG" />	<person name="CLR" />	<person name="DNA" />	<person name="MCD" />	<person name="NPX" />	<person name="PBT" />
 				</contribute>
 			</lifecycle>
 			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
