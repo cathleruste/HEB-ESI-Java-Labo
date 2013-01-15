@@ -178,263 +178,358 @@
 			</act>
 		</learningObject>
 
-	<learningObject title="Entrée standard, sortie standard, sortie d'erreur et redirections">
-		<clarify>
-		<box>
-			<list listStyle="unordered">
-			<item>
-				Tout programme qui s'exécute dispose de trois fichiers ouverts d'office par le système pour lui:
-				l'entrée standard, la sortie standard et la sortie d'erreur,
-				identifiés respectivement par les numéros 0, 1, 2.
-			</item>
-			<item>
-				L'instruction <formatted style="code">s = clavier.next ();</formatted> permet de lire des données à partir de 0 (entrée standard) , par défaut le clavier.
-			</item>
-			<item>
-				L'instruction <formatted style="code">System.out.println ();</formatted> permet un affichage de données sur 1 (sortie standard) , par défaut l'écran.
-			</item>
-			<item>
-				L'instruction <formatted style="code">System.err.println ();</formatted> permet un affichage de données sur 2 (sortie d'erreur) ,
-				par défaut également l'écran.
-			</item>
-			<item>
-				Ces trois fichiers peuvent être associés à autre chose que le clavier ou l'écran, à un fichier par exemple.
-				Cela se fait au niveau de la commande au moyen d'une redirection.
-				Une redirection de sortie se note « > » ou « 1> » si il s'agit ici de rediriger la sortie standard.
-				La sortie d'erreur sera redirigée en utilisant	« 2> ».
-				Ces redirections sont	réalisées par le shell avant l'exécution de la commande.
-			</item>
-			</list>
-		</box>
-		</clarify>
-
-		<look>
-		<paragraph title="Exemple" icon="look"/>
-		<paragraph cssClass="java">
-	<![CDATA[ls -l > liste
-]]>	 </paragraph>
-		<paragraph>
-			ou
-		</paragraph>
-		<paragraph cssClass="java">
-	<![CDATA[ls -l 1> liste
-]]>	 </paragraph>
-		<paragraph>
-			Ces deux commandes sont équivalentes, elles n'affichent pas le résultat à l'écran,
-			mais l'écrivent dans le fichier <formatted style="code">liste</formatted> créé ici ou écrasé s'il préexistait.
-			Par défaut <formatted style="code">ls -l</formatted> affiche le résultat à l'écran.
-			Nous avons <formatted style="italic">redirigé</formatted> cette sortie standard vers un fichier, en l'occurrence <formatted style="code">liste</formatted>.
-		</paragraph>
-		<paragraph>
-			Faites l'essai et vérifiez le contenu du fichier créé.
-		</paragraph>
-		<paragraph>
-			Vous avez maintenant un moyen pour distinguer la sortie standard et la sortie d'erreur standard en redirigeant l'une et/ou l'autre dans un fichier.
-		</paragraph>
-		</look>
-
-		<act>
-		<paragraph title="Rediriger les sorties" icon="act"/>
-		<list listStyle="ordered">
-			<item>
-			Reprenez une de vos anciennes classes Java qui affiche quelque chose à l'écran, par exemple <formatted style="code">Hello</formatted>.
-			</item>
-			<item>
-			Exécutez-la une première fois par la commande
-			<paragraph><formatted style="java">java Hello</formatted></paragraph>
-			</item>
-			<item>
-			<paragraph>
-				Essayez les redirections des sorties <formatted style="italic">1</formatted> et <formatted style="italic">2</formatted>
-				et <formatted style="bold">justifiez</formatted> les comportements obtenus.
-			</paragraph>
-			<paragraph>
-				Examinez les contenus des fichiers <formatted style="italic">fichout</formatted> et <formatted style="italic">ficherr</formatted>
-			</paragraph>
-<paragraph cssClass="java">
-	<![CDATA[java Hello > fichout
-]]>	 </paragraph>
-			<popup visible="online">
-				Écrit le résultat de l'affichage standard du programme Hello (<formatted style="italic">Hello world</formatted>)
-				dans le fichier <formatted style="italic">fichout</formatted>.
-			</popup>
-<paragraph cssClass="java">
-	<![CDATA[java Hello 2> ficherr
-]]>	 </paragraph>
-			<popup visible="online">
-				Écrit le résultat de l'affichage d'erreur du programme Hello (c-à-d rien du tout ici)
-				dans le fichier <formatted style="italic">ficherr</formatted>.
-				L'affichage standard apparait à l'écran.
-			</popup>
-			</item>
-			<item>
-			Faites la même chose pour la commande erronée :
-	<paragraph cssClass="java">
-	<![CDATA[java Hella > fichout
-]]>	 </paragraph>
-			<popup visible="online">
-				Le programme <formatted style="italic">Hella</formatted> n'existant pas, rien n'est écrit dans le fichier <formatted style="italic">fichout</formatted>
-				mais un message d'erreur apparait à l'écran.
-			</popup>
-<paragraph cssClass="java">
-	<![CDATA[java Hella 2> ficherr
-]]>	 </paragraph>
-			<popup visible="online">
-				Cette fois, le message d'erreur qui apparaissait à l'écran avec la commande précédente est redirigé dans le fichier
-				<formatted style="italic">ficherr</formatted>.
-				Plus rien n'apparait à l'écran.
-			</popup>
-			</item>
-			<item>
-			Faites la même chose pour les commandes :
-	<paragraph cssClass="java">
-	<![CDATA[ls > fichout
-]]>	 </paragraph>
-			<popup visible="online">
-				Écrit le résultat de la commande <formatted style="code">ls</formatted> dans le fichier <formatted style="italic">fichout</formatted>.
-			</popup>
-<paragraph cssClass="java">
-	<![CDATA[ls 2> ficherr
-]]>	 </paragraph>
-			<popup visible="online">
-				La commande <formatted style="code">ls</formatted> n'engrengeant aucune erreur, le résultat de la commande sera affiché à l'écran
-				et rien ne sera écrit dans le fichier <formatted style="italic">ficherr</formatted>.
-			</popup>
-<paragraph cssClass="java">
-	<![CDATA[ls NomDeFichierInexistant > fichout
-]]>	 </paragraph>
-			<popup visible="online">
-				La commande <formatted style="italic">ls NomDeFichierInexistant</formatted> engrengeant une erreur,
-				rien n'est écrit dans le fichier <formatted style="italic">fichout</formatted>
-				mais un message d'erreur apparait à l'écran.
-			</popup>
-<paragraph cssClass="java">
-	<![CDATA[ls NomDeFichierInexistant 2> ficherr
-]]>	 </paragraph>
-			<popup visible="online">
-				Cette fois, le message d'erreur qui apparaissait à l'écran avec la commande précédente est redirigé dans le fichier
-				<formatted style="italic">ficherr</formatted>.
-				Plus rien n'apparait à l'écran.
-			</popup>
-			</item>
-		</list>
-
-		<box>
-			<list listStyle="unordered">
-			<item>
-				Symétriquement «l'entrée standard» peut être associée à un fichier au lieu du clavier.
-				Cela permet d'utiliser les données à partir du fichier au lieu de les entrer au clavier.
-				Modifier l'entrée standard est ce que l'on appelle une redirection de l'entrée.
-				Cela se fait grâce à la redirection d'entrée notée « &lt; ».
-			</item>
-			<item>
+		<learningObject title="Entrée et sortie standards, sortie d'erreur et redirections">
+			
+			<clarify>
+				<box>
+					<list listStyle="unordered">
+					<item>
+						Tout programme qui s'exécute dispose de trois fichiers ouverts 
+						d'office par le système pour lui:
+						l'entrée standard, la sortie standard et la sortie d'erreur,
+						identifiés respectivement par les numéros 0, 1, 2.
+					</item>
+					<item>
+						En Java, on retrouve ces trois fichiers :
+						<list listStyle="unordered">
+						<item>
+							<formatted style="code">System.in</formatted>
+							pour 0 (entrée standard) 
+							qu'on retrouve dans la déclaration
+							<formatted style="code">Scanner clavier = new Scanner(System.in);</formatted>
+						</item>
+						<item>
+							<formatted style="code">System.out</formatted>
+							pour 1 (sortie standard) 
+							qu'on retrouve dans l'instruction
+							<formatted style="code">System.out.println();</formatted> 
+						</item>
+						<item>
+							<formatted style="code">System.err</formatted>
+							pour 2 (erreur standard) 
+							qu'on retrouve dans l'instruction
+							<formatted style="code">System.err.println();</formatted> 
+						</item>
+						</list>
+					</item>
+					<item>
+						Ces trois fichiers peuvent être associés à autre chose que 
+						le clavier ou l'écran, à un fichier par exemple.
+						Cela se fait au niveau de la commande au moyen d'une redirection.
+						Une redirection de sortie se note «>» ou «1>» 
+						pour rediriger la sortie standard et «2>» pour rediriger 
+						l'erreur standard.
+						Ces redirections sont	réalisées par le shell avant 
+						l'exécution de la commande et sont transparents pour cette
+						commande.
+					</item>
+					</list>
+				</box>
+			</clarify>
+	
+			<look>
+				<paragraph title="Exemple" icon="look"/>
+				<paragraph cssClass="java">
+<![CDATA[ls -l > liste
+]]></paragraph>
+					ou
+				<paragraph cssClass="java">
+<![CDATA[ls -l 1> liste
+]]></paragraph>
 				<paragraph>
-				<formatted style="code">commande &lt; fichier</formatted>
+					Ces deux commandes sont équivalentes,
+					elles n'affichent pas le résultat à l'écran,
+					mais l'écrivent dans le fichier 
+					<formatted style="code">liste</formatted> créé ici ou écrasé 
+					s'il préexistait.
+					Par défaut <formatted style="code">ls -l</formatted> 
+					affiche le résultat à l'écran.
+					Nous avons <formatted style="italic">redirigé</formatted> 
+					cette sortie standard vers un fichier, 
+					en l'occurrence <formatted style="code">liste</formatted>.
 				</paragraph>
 				<paragraph>
-				cela n'a de sens que si <formatted style="code">commande</formatted> fait des lectures au clavier.
+					Faites l'essai et vérifiez le contenu du fichier créé.
 				</paragraph>
-			</item>
-			</list>
-		</box>
+				<paragraph>
+					Vous avez maintenant un moyen pour distinguer
+					la sortie standard et la sortie d'erreur standard 
+					en redirigeant l'une et/ou l'autre dans un fichier.
+				</paragraph>
+			</look>
+	
+			<act>
+				
+				<paragraph title="Expérimentation - Rediriger les sorties" icon="act"/>
+				
+				<list listStyle="ordered">
+					
+					<item>
+						Reprenez une de vos anciennes classes Java qui affiche 
+						quelque chose à l'écran, 
+						par exemple <formatted style="code">Hello</formatted>.
+					</item>
+					
+					<item>
+						Exécutez-la une première fois par la commande
+						<formatted style="java">java Hello</formatted>
+					</item>
+					
+					<item>
+						Essayez les redirections des sorties
+						<formatted style="italic">1</formatted> et 
+						<formatted style="italic">2</formatted>
+						et <formatted style="bold">justifiez</formatted> 
+						les comportements obtenus.
+						Examinez les contenus des fichiers 
+						<formatted style="italic">fichout</formatted> et 
+						<formatted style="italic">ficherr</formatted>
+						<paragraph cssClass="java">
+<![CDATA[java Hello > fichout]]>					
+						</paragraph>
+						<popup visible="online">
+							Écrit le résultat de l'affichage standard du programme Hello 
+							(<formatted style="italic">Hello world</formatted>)
+							dans le fichier <formatted style="italic">fichout</formatted>.
+						</popup>
+						<paragraph cssClass="java">
+<![CDATA[java Hello 2> ficherr]]>					
+						</paragraph>
+						<popup visible="online">
+							Écrit le résultat de l'affichage d'erreur du programme Hello 
+							(c-à-d rien du tout ici)
+							dans le fichier <formatted style="italic">ficherr</formatted>.
+							L'affichage standard apparait à l'écran.
+						</popup>
+					</item>
+					
+					<item>
+						Faites la même chose pour les commandes erronées :
+						<paragraph cssClass="java">
+<![CDATA[java Hella > fichout]]>
+						</paragraph>
+						<popup visible="online">
+							Le programme <formatted style="italic">Hella</formatted> 
+							n'existant pas, rien n'est écrit dans le fichier 
+							<formatted style="italic">fichout</formatted>
+							mais un message d'erreur apparait à l'écran.
+						</popup>
+						<paragraph cssClass="java">
+<![CDATA[java Hella 2> ficherr]]>
+						</paragraph>
+						<popup visible="online">
+							Cette fois, le message d'erreur qui apparaissait à l'écran 
+							avec la commande précédente est redirigé dans le fichier
+							<formatted style="italic">ficherr</formatted>.
+							Plus rien n'apparait à l'écran.
+						</popup>
+					</item>
+					
+					<item>
+						Faites la même chose pour les commandes :
+						<paragraph cssClass="java">
+<![CDATA[ls > fichout]]>
+						</paragraph>
+						<popup visible="online">
+							Écrit le résultat de la commande 
+							<formatted style="code">ls</formatted> dans le fichier 
+							<formatted style="italic">fichout</formatted>.
+						</popup>
+						<paragraph cssClass="java">
+<![CDATA[ls 2> ficherr]]>
+						</paragraph>
+						<popup visible="online">
+							La commande <formatted style="code">ls</formatted> 
+							n'engrengeant aucune erreur, le résultat de la commande 
+							sera affiché à l'écran
+							et rien ne sera écrit dans le fichier 
+							<formatted style="italic">ficherr</formatted>.
+						</popup>
+						<paragraph cssClass="java">
+<![CDATA[ls NomDeFichierInexistant > fichout]]>
+						</paragraph>
+						<popup visible="online">
+							La commande 
+							<formatted style="code">ls NomDeFichierInexistant</formatted>
+							engrengeant une erreur,
+							rien n'est écrit dans le fichier
+							<formatted style="italic">fichout</formatted>
+							mais un message d'erreur apparait à l'écran.
+						</popup>
+						<paragraph cssClass="java">
+<![CDATA[ls NomDeFichierInexistant 2> ficherr]]>
+						</paragraph>
+						<popup visible="online">
+							Cette fois, le message d'erreur qui apparaissait à l'écran 
+							avec la commande précédente est redirigé dans le fichier
+							<formatted style="italic">ficherr</formatted>.
+							Plus rien n'apparait à l'écran.
+						</popup>
+					</item>
+				
+				</list>
+		
+				<box>
+					<list listStyle="unordered">
+					<item>
+						Symétriquement «l'entrée standard» peut être associée à un 
+						fichier au lieu du clavier.
+						Cela permet d'utiliser les données à partir du fichier 
+						au lieu de les entrer au clavier.
+						Modifier l'entrée standard est ce que l'on appelle une 
+						redirection de l'entrée.
+						Cela se fait grâce à la redirection d'entrée notée «&lt;».
+					</item>
+					<item>
+							<formatted style="code">commande &lt; fichier</formatted>
+							(n'a de sens que si 
+							<formatted style="code">commande</formatted> 
+							fait des lectures au clavier.)
+					</item>
+					</list>
+				</box>
+		
+				<paragraph title="Expérimentation - Rediriger l'entrée" icon="act"/>
+				
+					<paragraph>
+						Exécutez la classe 
+						<formatted style="code">td.td9.NombresPair</formatted>
+					</paragraph>
+		
+					<list listStyle="unordered">
+						
+					<item>
+						Ce programme lit sur l'entrée standard des nombres entiers 
+						jusqu'à la fin des données et affiche uniquement les pairs 
+						sur la sortie standard.
+						Il affiche ensuite le pourcentage de nombres pairs trouvés.
+					</item>
+					
+					<item>
+						La combinaison de touches 
+						<formatted style="code">Ctrl-d</formatted> est l'équivalent 
+						de la marque «fin de fichier» pour le clavier,
+						c'est ainsi que vous terminerez l'acquisition de la série 
+						de nombres au clavier
+						(à ne pas confondre avec 
+						<formatted style="code">Ctrl-c</formatted> 
+						qui tue le processus dans ce cas le dernier affichage 
+						n'apparait pas !).
+					</item>
+					
+					<item>
+						Lancez <formatted style="code">td.td9.NombresPair</formatted> 
+						en entrant les nombres au clavier
+						et notez la différence de comportement entre 
+						<formatted style="code">Ctrl-d</formatted> 
+						et <formatted style="code">Ctrl-c</formatted>
+						pour terminer le processus.
+					</item>
+					
+					<item>
+						Exécutez la classe en associant le clavier à un petit fichier 
+						texte (nommé <formatted style="italic">Nombres</formatted>)
+						où vous aurez écrit les nombres au préalable,
+						séparés par des blancs ou des caractères équivalents 
+						(pas de <formatted style="code">Ctrl-d	ici</formatted> ;-) ).
+						
+						<selfCheck title="Quelle commande devez-vous taper ?" shuffle="no">
+						<fillInBlanks>
+							<question/>
+							<gapText>
+							<gap answers="">java td.td9.NombresPairs &lt; Nombres</gap>
+							</gapText>
+							<solution/>
+						</fillInBlanks>
+						</selfCheck>
+					</item>
 
-		<paragraph title="Rediriger l'entrée" icon="act"/>
-		<list listStyle="unordered">
-			<item>
-			<paragraph>
-				Exécutez la classe <formatted style="code">td.td9.NombresPair</formatted> :
-			</paragraph>
-
-			<paragraph>
-				Ce programme	lit sur l'entrée standard des nombres entiers jusqu'à la fin des données et affiche uniquement les pairs sur la sortie standard.
-				Il affiche ensuite le pourcentage de nombres pairs trouvés.
-			</paragraph>
-			<paragraph>
-				La combinaison de touches <formatted style="code">Ctrl-d</formatted> est l'équivalent de la marque « fin de fichier » pour le clavier,
-				c'est ainsi que vous terminerez l'acquisition de la série de nombres au clavier
-				(à ne pas confondre avec <formatted style="code">Ctrl-c</formatted> qui tue le processus  dans ce cas le dernier affichage n'apparait pas !).
-			</paragraph>
-			<paragraph>
-				Lancez <formatted style="code">td.td9.NombresPair</formatted> en entrant les nombres au clavier
-				et notez la différence de comportement entre <formatted style="code">Ctrl-d</formatted> et <formatted style="code">Ctrl-c</formatted>
-				pour terminer le processus.
-			</paragraph>
-			<paragraph>
-				Exécutez la classe d'abord en entrant les nombres au clavier suivis de <formatted style="code">Ctrl-d</formatted> lors de l'exécution,
-				ensuite en associant le clavier à un petit fichier texte où vous aurez écrit les nombres au préalable,
-				séparés par des blancs ou des caractères équivalents (pas de <formatted style="code">Ctrl-d	ici</formatted> ;-) ).
-				Vous redirigerez l'entrée de la commande sur ce fichier (nommé <formatted style="italic">Nombres</formatted>).
-				<selfCheck title="Quelle commande devez-vous taper ?" shuffle="no">
-				<fillInBlanks>
+				</list>
+		
+				<paragraph title="" icon="act"/>
+				
+					<selfCheck title="Exercice - Multiples de 5" shuffle="no">
+					<fillInBlanks>
 					<question/>
 					<gapText>
-					<gap answers="">java td.td9.NombresPairs &lt; Nombres</gap>
+						
+						<paragraph>
+							Examinons le source de la classe 
+							<formatted style="code">td.td9.Multiples5</formatted>
+							dans 
+							<formatted style="code">/eCours/java/td/td9/src</formatted>.
+							Elle lit des nombres multiples de 5 au clavier jusqu'à la 
+							fin du fichier et affiche le résultat de la division du 
+							nombre par 5.
+							Si l'utilisateur entre un nombre non divisible par 5 
+							le programme affiche un message sur la sortie d'erreur 
+							par l'instruction
+							<formatted style="code">System.err.println(...)</formatted>.
+						</paragraph>
+						
+						<list listStyle="ordered">
+						<item>
+							Exécutez ce programme normalement en donnant quelques 
+							nombres, dont certains non multiples de 5 en entrée.
+							Terminez avec <formatted style="code">Ctrl-d</formatted>. 
+							Quelle commande devez-vous taper ?
+							<newLine/>
+							<gap answers="">java td.td9.Multiples5</gap>
+						</item>
+						<item>
+							Exécutez ce programme en redirigeant l'entrée depuis un 
+							fichier <formatted style="italic">Nombres</formatted>.
+							Celui-ci contiendra des nombres dont certains incorrects.
+							<newLine/>
+							<gap answers="">java td.td9.Multiples5 &lt; Nombres</gap>
+						</item>
+						<item>
+							Exécutez comme au point précédant	mais faites en sorte que 
+							l'exécution de votre classe n'affiche rien du tout à l'écran
+							(il faudra donc rediriger 
+							<formatted style="bold">les</formatted> sorties vers les 
+							fichiers <formatted style="italic">Multiples5</formatted> 
+							et <formatted style="italic">Multipes5Erreur</formatted>).
+							<newLine/>
+							<gap answers="">java td.td9.Multiples5 &lt; Nombres &gt; Multiples5 2&gt; Multiples5Erreur</gap>
+						</item>
+						</list>
+						
 					</gapText>
 					<solution/>
-				</fillInBlanks>
+					</fillInBlanks>
 				</selfCheck>
-			</paragraph>
-			</item>
-		</list>
-
-		<paragraph title="" icon="act"/>
-		<selfCheck title="Multiples 5" shuffle="no">
-			<fillInBlanks>
-			<question/>
-			<gapText>
-				<list listStyle="ordered">
-				<item>
-					Examinons le source de la classe <formatted style="code">td.td9.Multiples5</formatted>
-					dans <formatted style="code">/eCours/java/td/td9/src</formatted>.
-					Elle lit des nombres multiples de 5 au clavier jusqu'à la fin du fichier et affiche le résultat de la division du nombre par 5.
-					Si l'utilisateur entre un nombre non divisible par 5 le programme affiche un message sur la sortie d'erreur par l'instruction
-					<formatted style="code">System.err.println(...)</formatted>.
-				</item>
-				<item>
-					Exécutez ce programme normalement en donnant quelques nombres, dont certains non multiples de 5 en entrée.
-					Terminez avec <formatted style="code">Ctrl-d</formatted>. Quelle commande devez-vous taper ?
-					<gap answers="">java td.td9.Multiples5</gap>
-				</item>
-				<item>
-					Exécutez ce programme en redirigeant l'entrée depuis un fichier <formatted style="italic">Nombres</formatted>.
-					Celui-ci contiendra des nombres dont certains incorrects.
-					<gap answers="">java td.td9.Multiples5 &lt; Nombres</gap>
-				</item>
-				<item>
-					Exécutez comme au point 3	mais faites en sorte que l'exécution de votre classe n'affiche rien du tout à l'écran
-					(il faudra donc rediriger <formatted style="bold">les</formatted> sorties vers les fichiers
-					<formatted style="italic">Multiples5</formatted> et <formatted style="italic">Multipes5Erreur</formatted>).
-					<gap answers="">java td.td9.Multiples5 &lt; Nombres &gt; Multiples5 2&gt; Multiples5Erreur</gap>
-				</item>
-				</list>
-			</gapText>
-			<solution/>
-			</fillInBlanks>
-		</selfCheck>
-
-		<box>
-			<paragraph>
-			Avec la simple redirection (en sortie), si le fichier existe déjà, il est écrasé. Nous pouvons choisir de ne pas l'écraser, mais de le compléter.
-			Il s'agit d'ajouter au contenu du fichier déjà existant.
-			</paragraph>
-			<paragraph>
-			Cela se fait grâce à la double redirection (en sortie) notée « >> ».
-			</paragraph>
-		</box>
-
-		<paragraph title="Exemples à faire" icon="look"/>
-		<paragraph cssClass="java">
-	<![CDATA[ls > liste
+		
+				<box>
+					<paragraph>
+						Avec la simple redirection (en sortie), 
+						si le fichier existe déjà, il est écrasé. 
+						Nous pouvons choisir de ne pas l'écraser, 
+						mais de le compléter.
+						Il s'agit d'ajouter au contenu du fichier déjà existant.
+					</paragraph>
+					<paragraph>
+						Cela se fait grâce à la double redirection (en sortie) 
+						notée «<formatted style="code"><![CDATA[>>]]></formatted>».			
+					</paragraph>
+				</box>
+		
+				<paragraph title="Exemples à faire" icon="look"/>
+				<paragraph cssClass="java">
+<![CDATA[ls > liste
 ls > liste
 cat liste
-]]>	 </paragraph>
-		<paragraph cssClass="java">
-	<![CDATA[ls >> liste
+]]>
+				</paragraph>
+				<paragraph cssClass="java">
+<![CDATA[ls >> liste
 ls >> liste
 cat liste
-]]>	 </paragraph>
-		</act>
-	</learningObject>
+]]>	
+				</paragraph>
+		
+			</act>
+		</learningObject>
 
 	<learningObject title="Filtres – pipes">
 		<clarify>
