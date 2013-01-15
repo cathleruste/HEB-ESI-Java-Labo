@@ -531,153 +531,228 @@ cat liste
 			</act>
 		</learningObject>
 
-	<learningObject title="Filtres – pipes">
-		<clarify>
-		<box>
-			<list listStyle="unordered">
-			<item>
-				Un bon nombre de commandes linux, utilisées sans paramètre, sont des filtres.
-				Un filtre acquiert des données sur l'entrée standard et les envoie vers la sortie standard après les avoir éventuellement transformées.
-				C'est le cas de commandes comme <formatted style="code">tr</formatted>, <formatted style="code">cut</formatted>,
-				<formatted style="code">cat</formatted>, <formatted style="code"> sort</formatted>, <formatted style="code">head</formatted>,
-				<formatted style="code">tail</formatted>, <formatted style="code">split</formatted>, <formatted style="code">uniq</formatted>,
-				<formatted style="code">grep</formatted>, <formatted style="code">more</formatted>, <formatted style="code">less</formatted>,
-				<formatted style="code">wc</formatted>, <formatted style="code">grep</formatted>, ...
-				Voyez-en les pages de manuel respectives et l'aide (<formatted style="code">--help</formatted>) pour en connaitre le détail.
-			</item>
-			<item>
-				<formatted style="code">grep</formatted> est un filtre linux assez puissant,
-				cette commande permet notamment d'extraire d'un fichier les lignes contenant une expression.
-			</item>
-			<item>
-				De telles commandes peuvent être utilisées pour transformer la sortie d'autres commandes,
-				voire même enchainées dans une suite : la sortie de l'une sert d'entrée à la suivante. On réalise cela grâce aux pipes.
-				pipe est noté « | ».
-			</item>
-			</list>
-		</box>
-		</clarify>
+		<learningObject title="Filtres – pipes">
+			<clarify>
+				<box>
+					<list listStyle="unordered">
+					<item>
+						Un bon nombre de commandes linux, utilisées sans paramètre, 
+						sont des filtres.
+						Un filtre acquiert des données sur l'entrée standard et les 
+						envoie vers la sortie standard après les avoir éventuellement 
+						transformées.
+						C'est le cas de commandes comme 
+						<formatted style="code">tr</formatted>, 
+						<formatted style="code">cut</formatted>,
+						<formatted style="code">cat</formatted>, 
+						<formatted style="code"> sort</formatted>, 
+						<formatted style="code">head</formatted>,
+						<formatted style="code">tail</formatted>, 
+						<formatted style="code">split</formatted>, 
+						<formatted style="code">uniq</formatted>,
+						<formatted style="code">grep</formatted>, 
+						<formatted style="code">more</formatted>, 
+						<formatted style="code">less</formatted>,
+						<formatted style="code">wc</formatted>, 
+						<formatted style="code">grep</formatted>, ...
+						Voyez-en les pages de manuel respectives et l'aide 
+						(<formatted style="code">--help</formatted>) 
+						pour en connaitre le détail.
+					</item>
+					<item>
+						<formatted style="code">grep</formatted> est un filtre linux 
+						assez puissant.
+						Cette commande permet notamment d'extraire d'un fichier 
+						les lignes contenant une expression.
+					</item>
+					<item>
+						De telles commandes peuvent être utilisées pour transformer 
+						la sortie d'autres commandes, voire même enchainées dans une 
+						suite : la sortie de l'une sert d'entrée à la suivante. 
+						On le réalise cela grâce aux pipes (notés «|»).
+					</item>
+					</list>
+				</box>
+			</clarify>
+	
+			<look>
+				<paragraph title="Exemple 1" icon="look"/>
+				<multimedia src="../image/capt2.jpg" type="jpeg" 
+						legend="cut, sort et uniq" width="80" units="percent"/>
+				<paragraph>
+					La commande <formatted style="code">cut</formatted> transforme 
+					la sortie de <formatted style="code">ls</formatted>.
+					<formatted style="code">cut -c 1-11</formatted> découpe les 
+					11 premiers caractères de chaque ligne.
+					<formatted style="code">sort</formatted> transforme la sortie 
+					de <formatted style="code">cut</formatted> en triant les lignes.
+					<formatted style="code">uniq</formatted> transforme la sortie 
+					triée du <formatted style="code">sort</formatted>
+					en éliminant les lignes identiques qui se suivent.
+				</paragraph>
+				
+				<paragraph title="Exemple 2" icon="look"/>
+				<multimedia src="../image/capt4.jpg" type="jpeg" 
+						legend="grep" width="90" units="percent"/>
+				<paragraph>
+					La commande <formatted style="code">grep</formatted> transforme 
+					la sortie de <formatted style="code">ls</formatted>.
+					Elle extrait les lignes contenant la chaine 
+					<formatted style="code">g334</formatted>
+				</paragraph>
+			</look>
 
-		<look>
-		<paragraph title="Exemple" icon="look"/>
-		<multimedia src="../image/capt2.jpg" type="jpeg" legend="cut, sort et uniq" width="50" units="percent"/>
-		<paragraph>
-			la commande <formatted style="code">cut</formatted> transforme la sortie de <formatted style="code">ls</formatted>.
-			<formatted style="code">cut -c 1-11</formatted> découpe les 11 premiers caractères de chaque ligne,
-			<formatted style="code">sort</formatted> transforme la sortie de <formatted style="code">cut</formatted> en triant les lignes,
-			<formatted style="code">uniq</formatted> transforme la sortie triée du <formatted style="code">sort</formatted>
-			en éliminant les lignes identiques qui se suivent.
-		</paragraph>
-		<paragraph title="" icon="look"/>
-		<multimedia src="../image/capt3.jpg" type="jpeg" legend="grep" width="50" units="percent"/>
-		<paragraph>
-			la commande <formatted style="code">grep</formatted> transforme la sortie de <formatted style="code">ls</formatted>,
-			elle extrait les lignes contenant la chaine <formatted style="italic">« g334 »</formatted>
-		</paragraph>
-		</look>
-
-		<act>
-		<paragraph title="Pipe" icon="act"/>
-		<multimedia src="../image/capt4.jpg" type="jpeg" legend="tr et cut" width="50" units="percent"/>
-
-		<paragraph>
-			Décortiquez le pipe du dernier exemple
-		</paragraph>
-		<list listStyle="ordered">
-			<item>
-			Comprenez le dernier exemple en découpant la commande depuis la gauche.
-			</item>
-			<item>
-			Exécutez-en chaque partie. <formatted style="code">ps u</formatted>, <formatted style="code">ps u | tr -s' '</formatted>, ...
-			Aidez-vous des pages de manuel pour comprendre le résultat.
-			</item>
-			<item>
-			Quel est le rôle de la commande <formatted style="code">tr</formatted> ici ? Pourquoi est-elle indispensable ?
-			<popup visible="online">
-				La commande <formatted style="code">tr -s' '</formatted> remplace toutes les suites d'espace par un seul espace.
-				Elle est indispensable ici pour que le délimiteur entre les champs soit l'espace.
-				Cette information sera utilisée par la commande <formatted style="code">cut</formatted>.
-			</popup>
-			</item>
-			<item>
-			Remarquez qu'on utilise la commande <formatted style="code">cut</formatted> avec l'option <formatted style="code">-f</formatted> ici.
-			</item>
-		</list>
-
-
-		<paragraph title="Postes utilisés" icon="look"/>
-		<selfCheck title="" shuffle="no">
-			<fillInBlanks>
-			<question/>
-			<gapText>
+			<act>
+				
+				<paragraph title="Exercice - Pipe" icon="act"/>
+				<multimedia src="../image/capt4.jpg" type="jpeg" 
+						legend="tr et cut" width="80" units="percent"/>
+				<paragraph>
+					Comprenez le dernier exemple en découpant la commande depuis la gauche.
+				</paragraph>
 				<list listStyle="ordered">
 				<item>
-					Écrivez une commande utilisant un pipe pour lister toutes les connections à linux1.
-					La commande <formatted style="code">who</formatted> vous aide à trouver l'information.
-					On s'attend à une sortie du genre :
-<paragraph cssClass="java">
-<![CDATA[
-l302p05
+					Exécutez-en chaque partie :
+					<formatted style="code">ps u</formatted>, 
+					<formatted style="code">ps u | tr -s' '</formatted>, ...
+					Aidez-vous des pages de manuel pour comprendre le résultat.
+				</item>
+				<item>
+					Quel est le rôle de la commande 
+					<formatted style="code">tr</formatted> ici ? 
+					Pourquoi est-elle indispensable ?
+					<popup visible="online">
+						La commande <formatted style="code">tr -s' '</formatted> 
+						remplace toutes les suites d'espace par un seul espace.
+						Elle est indispensable ici pour que le délimiteur entre 
+						les champs soit l'espace.
+						Cette information sera utilisée par la commande 
+						<formatted style="code">cut</formatted>.
+					</popup>
+				</item>
+				<item>
+					Remarquez qu'on utilise la commande 
+					<formatted style="code">cut</formatted> 
+					avec l'option <formatted style="code">-f</formatted> ici.
+				</item>
+				</list>
+	
+				<paragraph title="Exercice - Postes utilisés" icon="look"/>
+				<selfCheck title="" shuffle="no">
+				<fillInBlanks>
+				<question/>
+				<gapText>
+					<list listStyle="ordered">
+					<item>
+						<paragraph>
+							Écrivez une commande utilisant un pipe pour lister toutes 
+							les connections à linux1.
+							La commande <formatted style="code">who</formatted> 
+							vous aide à trouver l'information.
+							On s'attend à une sortie du genre :
+						</paragraph>
+						<paragraph cssClass="java">
+<![CDATA[l302p05
 l302p07
 l302p05
 l304p02
-]]> </paragraph>
-					<paragraph>
-					deux fenêtres putty ouvertes sur le même poste comptent comme deux connections,
-					ici le poste <formatted style="italic">05</formatted> du local <formatted style="italic">302</formatted>.
-					</paragraph>
-					<gap answers="">who | tr '(' ' ' | tr '.' ' ' | tr -s ' ' | cut -f 5 -d ' '</gap>
-				</item>
-				<item>
-					En utilisant le filtre <formatted style="code">wc</formatted> avec la bonne option, comptez le nombre de connections ouvertes.
-					<gap answers="">who | tr '(' ' ' | tr '.' ' ' | tr -s ' ' | cut -f 5 -d ' ' | wc -l</gap>
-				</item>
-				<item>
-					Comptez maintenant le nombre de postes connectés
-					(NB un même poste peut utiliser plusieurs connections, mais doit compter ici pour un seul, il faudra retirer la redondance).
-					<gap answers="">who | tr '(' ' ' | tr '.' ' ' | tr -s ' ' | cut -f 5 -d ' ' | sort | uniq | wc -l</gap>
-				</item>
-				<item>
-					Enchainez maintenant les commandes <formatted style="code">who</formatted>, <formatted style="code">grep</formatted>
-					et <formatted style="code">wc</formatted> dans un pipe pour trouver le nombre de connections actives pour un utilisateur donné gXXXXX .
-					La commande <formatted style="code">grep</formatted> servira à filtrer les lignes correspondant à l'utilisateur.
-					<gap answers="">who | tr -s ' ' | cut -f 1 -d ' ' | grep gXXXXX | wc -l</gap>
-				</item>
-				</list>
-			</gapText>
-			<solution/>
-			</fillInBlanks>
-		</selfCheck>
+]]>
+						</paragraph>
+						<paragraph>
+							Deux fenêtres putty ouvertes sur le même poste comptent 
+							comme deux connections,
+							ici le poste <formatted style="italic">05</formatted> 
+							du local <formatted style="italic">302</formatted>.
+						</paragraph>
+						<newLine/>
+						<gap answers="">who | tr '(' ' ' | tr '.' ' ' | tr -s ' ' | cut -f 5 -d ' '</gap>
+					</item>
+					<item>
+						En utilisant le filtre 
+						<formatted style="code">wc</formatted> avec la bonne option, 
+						comptez le nombre de connections ouvertes.
+						<newLine/>
+						<gap answers="">who | tr '(' ' ' | tr '.' ' ' | tr -s ' ' | cut -f 5 -d ' ' | wc -l</gap>
+					</item>
+					<item>
+						Comptez maintenant le nombre de postes connectés
+						(NB un même poste peut utiliser plusieurs connections, 
+						mais doit compter ici pour un seul, il faudra retirer 
+						la redondance).
+						<newLine/>
+						<gap answers="">who | tr '(' ' ' | tr '.' ' ' | tr -s ' ' | cut -f 5 -d ' ' | sort | uniq | wc -l</gap>
+					</item>
+					</list>
+				</gapText>
+				<solution/>
+				</fillInBlanks>
+				</selfCheck>
 
-		<paragraph title="Multiples de 3, de 4 et de 12" icon="look"/>
-		<selfCheck title="" shuffle="no">
-			<fillInBlanks>
-			<question/>
-			<gapText>
-				<list listStyle="oredered">
-				<item>
-					Nous utilisons maintenant les deux classes :
-					<formatted style="code">td.td9.Multiples3</formatted> qui affiche tous les multiples de 3 inférieurs à 1000 et
-					<formatted style="code">td.td9.Multiples4</formatted> qui lit des nombres au clavier et ne réécrit que les multiples de 4.
-					Ce dernier programme s'arrête grâce à la marque 'fin de fichier' pour le clavier (<formatted style="code">Ctrl-d</formatted>). Testez-les.
-				</item>
-				<item>
-					Comment exécuter la classe <formatted style="code">td.td9.Multiples4</formatted> sans devoir toujours retaper les données au clavier ?
-					<gap answers="">java td.td9.Multiples4 &lt; Nombres</gap>
-				</item>
-				<item>
-					Construisez tous les multiples de 12 inférieurs à 1000 sans créer de nouveau programme java.
-					Pensez que les multiples de 12 sont à la fois multiples de 3 et multiples de 4.
-					Vous utiliserez sans doute un pipe pour enchainer ces deux derniers programmes ;-).
-					<gap answers="">java td.td9.Multiples3 | java.td.td9.Multiples4</gap>
-				</item>
-				</list>
-			</gapText>
-			<solution/>
-			</fillInBlanks>
-		</selfCheck>
-		</act>
-	</learningObject>
+				<paragraph title="Exercice - Connections actives" icon="look"/>
+				<selfCheck title="" shuffle="no">
+				<fillInBlanks>
+				<question/>
+				<gapText>
+					<paragraph>
+						Enchainez maintenant les commandes 
+						<formatted style="code">who</formatted>, 
+						<formatted style="code">grep</formatted>
+						et <formatted style="code">wc</formatted> dans un pipe pour 
+						trouver le nombre de connections actives pour un utilisateur 
+						donné gXXXXX.
+						La commande <formatted style="code">grep</formatted> 
+						servira à filtrer les lignes correspondant à l'utilisateur.
+						<gap answers="">who | tr -s ' ' | cut -f 1 -d ' ' | grep gXXXXX | wc -l</gap>
+					</paragraph>
+				</gapText>
+				<solution/>
+				</fillInBlanks>
+				</selfCheck>
+
+				<paragraph title="Exercice - Multiples de 3, de 4 et de 12" icon="look"/>
+				<selfCheck title="" shuffle="no">
+					<fillInBlanks>
+					<question/>
+					<gapText>
+						<paragraph>
+							Nous utilisons maintenant les deux classes :
+							<formatted style="code">td.td9.Multiples3</formatted> 
+							qui affiche tous les multiples de 3 inférieurs à 1000 et
+							<formatted style="code">td.td9.Multiples4</formatted> 
+							qui lit des nombres au clavier et ne réécrit que les 
+							multiples de 4. Ce dernier programme s'arrête grâce à la 
+							marque 'fin de fichier' pour le clavier 
+							(<formatted style="code">Ctrl-d</formatted>).
+						</paragraph>
+						<list listStyle="ordered">
+						<item>
+							Testez-les.
+						</item>
+						<item>
+							Comment exécuter la classe 
+							<formatted style="code">td.td9.Multiples4</formatted> 
+							sans devoir toujours retaper les données au clavier ?
+							<newLine/>
+							<gap answers="">java td.td9.Multiples4 &lt; Nombres</gap>
+						</item>
+						<item>
+							Construisez tous les multiples de 12 inférieurs à 1000 
+							sans créer de nouveau programme Java.
+							Pensez que les multiples de 12 sont à la fois multiples 
+							de 3 et multiples de 4.
+							Vous utiliserez sans doute un pipe pour enchainer ces deux 
+							derniers programmes ;-).
+							<newLine/>
+							<gap answers="">java td.td9.Multiples3 | java.td.td9.Multiples4</gap>
+						</item>
+						</list>
+					</gapText>
+					<solution/>
+					</fillInBlanks>
+				</selfCheck>
+		
+			</act>
+		</learningObject>
 
 	<learningObject title="find">
 		<clarify>
