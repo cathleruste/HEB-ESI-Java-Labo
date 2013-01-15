@@ -754,51 +754,69 @@ l304p02
 			</act>
 		</learningObject>
 
-	<learningObject title="find">
-		<clarify>
-		<box>
-			<list listStyle="unordered">
-			<item>
-				<formatted style="code">find</formatted> est une commande linux très puissante que nul ne peut ignorer.
-				Elle permet de rechercher dans une arborescence de fichiers ceux qui correspondent à un critère donné (taille, droits, nom, dates ...).
-				Elle permet également d'appliquer une commande à chacun des fichiers ainsi trouvés.
-			</item>
-			</list>
-		</box>
-		</clarify>
-
-		<look>
-		<paragraph title="Exemple" icon="look"/>
-		<paragraph>
-			<formatted style="code">find /home -name Hello.java</formatted>
-		</paragraph>
-		<paragraph>
-			Recherche dans l'arborescence <formatted style="code">/home</formatted> un fichier nommé <formatted style="code">Hello.java</formatted>
-		</paragraph>
-		<paragraph>
-			Pour éviter de voir défiler des tas de messages d'erreur pour chaque tentative d'accès non autorisé (droits sur les répertoires),
-			il suffit d'exécuter votre commande en redirigeant le fichier standard d'erreur vers le fichier poubelle <formatted style="code">/dev/null</formatted> :
-		</paragraph>
-		<paragraph>
-			<formatted style="code">find /home -name Hello.java 2> /dev/null</formatted>
-		</paragraph>
-		</look>
-
-		<act>
-		<paragraph title="find" icon="look"/>
-		<paragraph>
-			En vous servant des pages de manuel, utilisez la commande <formatted style="code">find</formatted>
-			pour lister tous les fichiers de l'arborescence de votre home, qui ont le droit d'exécution.
-		</paragraph>
-		<paragraph title="Challenge" icon="look"/>
-		<paragraph>
-			<formatted style="code">find</formatted> peut également être utilisé pour exécuter une commande sur tout fichier correspondant au critère de recherche.
-			Utilisez la commande <formatted style="code">find</formatted> pour rafraichir la date de modification de tous vos fichiers dont la taille serait égale à 2Kb.
-			La date de modification est rafraichie par la commande <formatted style="code">touch</formatted>.
-			Aidez-vous des pages de manuel et des moteurs de recherche ;-).
-		</paragraph>
-		</act>
-	</learningObject>
+		<learningObject title="find">
+			
+			<clarify>
+				<box>
+					<formatted style="code">find</formatted> est une commande linux 
+					très puissante que nul ne peut ignorer.
+					Elle permet de rechercher dans une arborescence de fichiers 
+					ceux qui correspondent à un critère donné 
+					(taille, droits, nom, dates ...).
+					Elle permet également d'appliquer une commande à chacun 
+					des fichiers ainsi trouvés.
+				</box>
+			</clarify>
+	
+			<look>
+				<paragraph title="Exemple" icon="look"/>
+						<paragraph cssClass="java">
+find /home -name Hello.java
+				</paragraph>
+				<paragraph>
+					Recherche dans l'arborescence 
+					<formatted style="code">/home</formatted> un fichier nommé 
+					<formatted style="code">Hello.java</formatted>
+				</paragraph>
+				<paragraph>
+					Pour éviter de voir défiler des tas de messages d'erreur pour 
+					chaque tentative d'accès non autorisé 
+					(droits sur les répertoires),
+					il suffit d'exécuter votre commande en redirigeant le fichier 
+					standard d'erreur vers le fichier poubelle 
+					<formatted style="code">/dev/null</formatted> :
+				</paragraph>
+					<paragraph cssClass="java">
+find /home -name Hello.java 2> /dev/null
+				</paragraph>
+			</look>
+	
+			<act>
+				
+				<paragraph title="Exercice" icon="look"/>
+				<paragraph>
+					En vous servant des pages de manuel, utilisez la commande 
+					<formatted style="code">find</formatted>
+					pour lister tous les fichiers de l'arborescence de votre home, 
+					qui ont le droit d'exécution.
+				</paragraph>
+				
+				<paragraph title="Challenge" icon="look"/>
+				<paragraph>
+					<formatted style="code">find</formatted> peut également être 
+					utilisé pour exécuter une commande sur tout fichier 
+					correspondant au critère de recherche.
+					Utilisez la commande <formatted style="code">find</formatted> 
+					pour rafraichir la date de modification de tous vos fichiers 
+					dont la taille serait égale à 2Kb.
+					La date de modification est rafraichie par la commande 
+					<formatted style="code">touch</formatted>.
+					Aidez-vous des pages de manuel et des moteurs de recherche ;-).
+				</paragraph>
+			
+			</act>
+			
+		</learningObject>
 
 	<learningObject title="Retour d'une commande – &amp;&amp;	– ||">
 		<clarify>
