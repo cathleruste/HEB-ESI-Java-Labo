@@ -62,8 +62,8 @@
 						La commande <formatted style="code">kill</formatted>
 						envoie un signal à un processus.
 						(Un signal est un message simple envoyé à un processus.
-						Les signaux ont un nom et un ou plusieurs numéros
-						selon le système d'exploitation.).
+						Les signaux ont un nom et un ou plusieurs numéro(s)
+						selon le système d'exploitation).
 					</item>
 					<item>
 						Tout processus est identifié par un
@@ -79,17 +79,17 @@
 				<paragraph>
 					<list listStyle="unordered">
 					<item>
-						<formatted style="code">kill 31873</formatted>
+						<formatted style="code">kill 3599</formatted>
 						envoie au processus de PID 
-						<formatted style="code">31873</formatted>
+						<formatted style="code">3599</formatted>
 						le signal n° 15 (SIGTERM signal par défaut),
 						qui a comme effet par défaut de le terminer.
 					</item>
 					<item>
-						<formatted style="code">kill -s 9 31873</formatted> 
-						ou <formatted style="code">kill -9 31873</formatted>
+						<formatted style="code">kill -s 9 3599</formatted> 
+						ou <formatted style="code">kill -9 3599</formatted>
 						envoie explicitement le signal n° 9 (SIGKILL) au processus 
-						<formatted style="code">31873</formatted>; ceci le tuera.
+						<formatted style="code">3599</formatted>; ceci le tuera.
 					</item>
 					<item>
 						La touche clavier <formatted style="code">Ctrl-c</formatted>
@@ -840,7 +840,7 @@ find /home -name Hello.java 2> /dev/null
 						Toute commande exécutée sur un terminal obéit à la même règle, 
 						la valeur retournée par une commande est stockée dans une
 						variable d'environnement du shell nommée 
-						"<formatted style="code">?</formatted>" (joli nom n'est-ce pas ?;-)).
+						"<formatted style="code">?</formatted>" (joli nom n'est-ce pas ? ;-)).
 					</item>
 					</list>
 				</box>
