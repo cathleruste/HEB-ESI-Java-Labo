@@ -128,17 +128,17 @@
 					</item>
 					<item>
 						<paragraph>
-							Retrouvez le processus correspondant au programme 
-							<formatted style="code">Infini</formatted> (son PID)
-							et tuez-le en utilisant la commande kill
-							avec les bons paramètres. Quel nom a le programme à tuer ?
+						Retrouvez le processus correspondant au programme 
+						<formatted style="code">Infini</formatted> (son PID)
+						et tuez-le en utilisant la commande kill
+						avec les bons paramètres. Quel nom a le programme à tuer ?
 						</paragraph>
 						<paragraph>
-							Dû aux quotas des comptes étudiants sous linux1,
-							le système tue les processus après un temps défini
-							d'utilisation du CPU (timeout), il se pourrait donc que 
-							le processus s'arrête avant l'effet de votre action
-							(ce n'est pas le moment de s'endormir ;-)	).
+						Dû aux quotas des comptes étudiants sous linux1,
+						le système tue les processus après un temps défini
+						d'utilisation du CPU (timeout), il se pourrait donc que 
+						le processus s'arrête avant l'effet de votre action
+						(ce n'est pas le moment de s'endormir ;-)	).
 						</paragraph>
 					</item>
 					<item>
@@ -159,19 +159,19 @@
 					</item>
 					<item>
 						<paragraph>
-							Une deuxième manière de reprendre un processus suspendu
-							est de taper la commande
-							<formatted style="code">fg %<formatted style="italic">num</formatted></formatted> 
-							(faites un <formatted style="code">man bash</formatted>),
-							cela doit être fait dans la console dans laquelle vous 
-							avez tapé <formatted style="code">Ctrl-z</formatted>.
-							<formatted style="code"><formatted style=" italic">num</formatted></formatted>
-							est le numéro fourni par le système lorsque le processus 
-							a été suspendu par <formatted style="code">Ctrl-z</formatted>.
+						Une deuxième manière de reprendre un processus suspendu
+						est de taper la commande
+						<formatted style="code">fg %<formatted style="italic">num</formatted></formatted> 
+						(faites un <formatted style="code">man bash</formatted>),
+						cela doit être fait dans la console dans laquelle vous 
+						avez tapé <formatted style="code">Ctrl-z</formatted>.
+						<formatted style="code"><formatted style=" italic">num</formatted></formatted>
+						est le numéro fourni par le système lorsque le processus 
+						a été suspendu par <formatted style="code">Ctrl-z</formatted>.
 						</paragraph>
 						<paragraph>
-							Essayez aussi <formatted style="code">fg</formatted> 
-							sans paramètre pour reprendre un processus suspendu.
+						Essayez aussi <formatted style="code">fg</formatted> 
+						sans paramètre pour reprendre un processus suspendu.
 						</paragraph>
 					</item>
 				</list>
@@ -219,7 +219,7 @@
 						Une redirection de sortie se note «>» ou «1>» 
 						pour rediriger la sortie standard et «2>» pour rediriger 
 						l'erreur standard.
-						Ces redirections sont	réalisées par le shell avant 
+						Ces redirections sont réalisées par le shell avant 
 						l'exécution de la commande et sont transparentes pour cette
 						commande.
 					</item>

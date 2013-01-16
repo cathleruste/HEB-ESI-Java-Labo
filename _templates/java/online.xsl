@@ -223,8 +223,9 @@
 				<xsl:when test="string-length(.)&lt;4">25</xsl:when>
 				<xsl:when test="string-length(.)&lt;8">50</xsl:when>
 				<xsl:when test="string-length(.)&lt;16">100</xsl:when>
-				<xsl:when test="string-length(.)&lt;32">150</xsl:when>
-				<xsl:otherwise>240</xsl:otherwise>
+				<xsl:when test="string-length(.)&lt;32">160</xsl:when>
+				<xsl:when test="string-length(.)&lt;64">300</xsl:when>
+				<xsl:otherwise>400</xsl:otherwise>
 			</xsl:choose>
 		</xsl:param>
 		<xsl:param name="separator">
