@@ -187,7 +187,7 @@
 						Tout programme qui s'exécute dispose de trois fichiers ouverts 
 						d'office par le système pour lui:
 						l'entrée standard, la sortie standard et la sortie d'erreur,
-						identifiés respectivement par les numéros 0, 1, 2.
+						identifiés respectivement par les numéros 0, 1 et 2.
 					</item>
 					<item>
 						En Java, on retrouve ces trois fichiers :
@@ -220,7 +220,7 @@
 						pour rediriger la sortie standard et «2>» pour rediriger 
 						l'erreur standard.
 						Ces redirections sont	réalisées par le shell avant 
-						l'exécution de la commande et sont transparents pour cette
+						l'exécution de la commande et sont transparentes pour cette
 						commande.
 					</item>
 					</list>
@@ -237,7 +237,7 @@
 <![CDATA[ls -l 1> liste
 ]]></paragraph>
 				<paragraph>
-					Ces deux commandes sont équivalentes,
+					Ces deux commandes sont équivalentes;
 					elles n'affichent pas le résultat à l'écran,
 					mais l'écrivent dans le fichier 
 					<formatted style="code">liste</formatted> créé ici ou écrasé 
