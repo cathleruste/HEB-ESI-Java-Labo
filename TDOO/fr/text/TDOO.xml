@@ -2,7 +2,7 @@
 <lesson xmlns="http://www.elml.ch" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
-	label="TDOO" title="TdOO : Orienté Objet">
+	label="TDOO" title="TDOO : Orienté Objet">
 	
 	<entry>
 		<paragraph>
