@@ -2,162 +2,191 @@
 <lesson xmlns="http://www.elml.ch" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
-	label="TDListePrepa" title="TD sur les listes">
+	label="TDListePrepa" title="TD sur les listes - Exercices préparatoires">
 
-	
 	<entry>
 		<paragraph>
 			Ces quelques questions ont pour but de vérifier si vous êtes prêts pour  
 			venir faire le TD sur les listes au laboratoire.  
-    </paragraph>
+	</paragraph>
   </entry>
   
 	<unit label="TDListePrepa" title="Exercices préparatoires au TD des listes">
+		
 		<learningObject title="Listes">
+			
 		  <act>
-		    <selfCheck title="Liste" shuffle="yes">
-		      <fillInBlanks>
-		        <question></question>
-            <gapText>
-							Une liste est une séquence d'éléments  
-							<gap answers="ordonnés,ordonné">ordonnés</gap> 
-							mais pas nécessairement triés auxquels on accède via leur  
-							<gap answers="">position</gap>.
-			      </gapText>
-			      <solution/>
-          </fillInBlanks>
-        </selfCheck>
-        
-        <selfCheck title="Exercice VRAI ou FAUX" shuffle="no">
+				
+				<selfCheck title="Liste" shuffle="yes">
+				  <fillInBlanks>
+					<question></question>
+					<gapText>
+						Une liste est une séquence d'éléments  
+						<gap answers="ordonnés,ordonné">ordonnés</gap> 
+						mais pas nécessairement triés auxquels on accède via leur  
+						<gap answers="">position</gap>.
+					</gapText>
+					 <solution/>
+					</fillInBlanks>
+				</selfCheck>
+			
+				<selfCheck title="Exercice VRAI ou FAUX" shuffle="no">
 					<multipleChoice>
-						<question>
-						  Le concept de Liste est présent dans le langage Java
-						</question>
-						<answer feedback="Le concept de Liste est présent grâce à l'API (dans la classe java.util.ArrayList)" correct="no">VRAI</answer>
-						<answer feedback="Le concept de Liste est présent grâce à l'API (dans la classe java.util.ArrayList)" correct="yes">FAUX</answer>
+					<question>
+						Le concept de Liste est présent dans le langage Java
+					</question>
+					<answer feedback="Le concept de Liste est présent grâce à l'API (dans la classe java.util.ArrayList)" correct="no">VRAI</answer>
+					<answer feedback="Le concept de Liste est présent grâce à l'API (dans la classe java.util.ArrayList)" correct="yes">FAUX</answer>
 					</multipleChoice>
 				</selfCheck>
-			 
-			  <selfCheck title="Déclaration/création" shuffle="yes">
-			    <fillInBlanks>
-			      <question>Pour déclarer et créer une liste </question>
-			      <gapText> 
-							<list listStyle="unordered">
-							  <item>
-							    <paragraph>de chaines : </paragraph>
-							    <formatted style="javawhitblanks">
-							      <gap answers="">List &lt; String &gt;</gap> 
-							      listeChaine = 
-										<gap answers="">new ArrayList &lt; String &gt;()</gap>
-										;
-                  </formatted>
-                </item>  
-								<item>
-								  <paragraph>d'entiers : </paragraph>
-							    <formatted style="javawhitblanks">
-							      <gap answers="">List &lt; Integer &gt;</gap> 
-							      listeInt = 
-										<gap answers="">new ArrayList &lt; Integer &gt;()</gap>
-										;
-                  </formatted>
-                </item>  
-								<item>
-								  <paragraph>de caractères : </paragraph>
-							    <formatted style="javawhitblanks">
-							      <gap answers="">List &lt; Character &gt;</gap> 
-							      listeChaine = 
-										<gap answers="">new ArrayList &lt; Character &gt;()</gap>
-										;
-                  </formatted>
-                </item>  
-							</list> 
-							</gapText>
-							<solution>
-							  <list listStyle="unordered">
-							    <item>N'oubliez pas que seuls les objets sont permis dans les listes. </item>
-                  <item>Pour les types primitifs, n'oubliez pas d'utiliser la notion de wrapper.</item>
-                  <item>
-                    Pensez aussi à déclarer votre liste du type de l'interface (<formatted style="code">List</formatted>)
-                    et à la créer du type qui implémente cette interface (<formatted style="code">ArrayList</formatted>).
-                  </item>
-                </list>
-							</solution>
-            </fillInBlanks>
-          </selfCheck>
-          
-          <selfCheck title="Méthodes de liste" shuffle="yes">
-            <fillInBlanks>
-              <question></question>
-              <gapText> 
-							  <list listStyle="unordered">
-							    <item>ajout de l'élément de valeur 1 : 
-							      <formatted style="code">listeInt.<gap answers="add(1),add (1),add( 1 ),add ( 1 )">add (1)</gap>;</formatted>
-                  </item>  
-								<item>la taille de la liste : 
-								  <formatted style="code">listeInt.<gap answers="size(),size (),size( ),size ( )">size ()</gap>;</formatted>
-								</item>  
-								<item>vrai si la liste est vide : 
-								  <formatted style="code">listeInt.<gap answers="isEmpty(),isEmpty (),isEmpty( ),isEmpty ( )">isEmpty ()</gap>;</formatted>
-								</item>  
-								<item>accès au 10ème élément :  
-								  <formatted style="code">listeInt.<gap answers="get(10),get (10),get( 10 ),get ( 10 )">get (10)</gap>;</formatted>
-								</item>  
-								<item>remplacement du 10ème élément par la valeur 3 :  
-								  <formatted style="code">listeInt.<gap answers="set(10, 3)/set(10,3)/set( 10, 3 )/set( 10,3 )/set (10, 3)/set (10,3)/set ( 10,3 )/set( 10, 3 )" separator="/">set (10, 3)</gap>;</formatted>
-								</item>  
-								<item>vrai si la liste contient la valeur 3 : 
-								  <formatted style="code">listeInt.<gap answers="contains(3),contains( 3 ),contains (3),contains ( 3 )">contains (3)</gap>;</formatted>
-								</item>  
-								<item>indice de la première occurence de l'élément 3 dans la liste : 
-								  <formatted style="code">listeInt.<gap answers="indexOf(3),indexOf( 3 ),indexOf (3),indexOf ( 3 )">indexOf (3)</gap>;</formatted>
-								</item>  
-								<item>suppression de l'élément en 10ème position : 
-								  <formatted style="code">listeInt.<gap answers="remove(10),remove( 10 ),remove (10),remove ( 10 )">remove (10)</gap>;</formatted>
-								</item>  
-								<item>suppression du premier élément de valeur 3 : 
-								  <formatted style="code">listeInt.<gap answers="remove(new Integer(3)),remove(new Integer(3)),remove( new Integer(3) ),remove (new Integer(3))">remove (new Integer(3))</gap>;</formatted>
-								</item>  
-							</list> 
-            </gapText>
-            <solution/>
-          </fillInBlanks>
-        </selfCheck>
-        
-        <selfCheck title="Collections" shuffle="yes">
-          <fillInBlanks>
-            <question>
-              Il existe une classe <formatted style="code">Collections</formatted> offrant des services pour les listes.  
-            </question>
-            <gapText> 
-							<paragraph>  
-								Pour l'utiliser, un <formatted style="code">import</formatted> est obligatoire :
-              </paragraph>  
-							<paragraph>  
-								<formatted style="code">import <gap answers="">java.util.Collections</gap>;</formatted>  
-							</paragraph>  
-							<paragraph>  
-								Elle offre les méthodes de classe suivantes :   
-							</paragraph>  
-							<list listStyle="unordered">
-							  <item>pour obtenir l'élément maximum de la liste <formatted style="italic">listeInt</formatted> :   
-									<formatted style="code"><gap answers="Collections.max(listeInt()),Collections.max( listeInt() )">Collections.max(listeInt())</gap> ;</formatted>
-                </item>  
-								<item>pour trier la liste <formatted style="italic">listInt</formatted> : 
-									<formatted style="code"><gap answers="Collections.sort(listeInt()),Collections.sort( listeInt() )">Collections.sort(listeInt())</gap> ;</formatted>
-                </item>  
-								<item>pour inverser la liste <formatted style="italic">listInt</formatted> :
-									<formatted style="code"><gap answers="Collections.reverse(listeInt()),Collections.reverse( listeInt() )">Collections.reverse(listeInt())</gap> ;</formatted>
-                </item>  
-								<item>pour mélanger la liste <formatted style="italic">listeInt</formatted> :
-									<formatted style="code"><gap answers="Collections.shuffle(listeInt()),Collections.shuffle( listeInt() )">Collections.shuffle(listeInt())</gap> ;</formatted>
-                </item>  
-              </list>
-		        </gapText>
-		        <solution/>
-          </fillInBlanks>
-        </selfCheck>
-      </act>
-    </learningObject>
+				 
+				<selfCheck title="Déclaration/création" shuffle="yes">
+					<fillInBlanks>
+					<question>Pour déclarer et créer une liste </question>
+					<gapText> 
+						<list listStyle="unordered">
+							<item>
+								<paragraph>de chaines : </paragraph>
+								<formatted style="javawhitblanks">
+									<gap answers="">List &lt; String &gt;</gap> 
+									listeChaine = 
+									<gap answers="">new ArrayList &lt; String &gt;()</gap>
+									;
+								</formatted>
+							</item>  
+							<item>
+								<paragraph>d'entiers : </paragraph>
+								<formatted style="javawhitblanks">
+									<gap answers="">List &lt; Integer &gt;</gap> 
+									listeInt = 
+									<gap answers="">new ArrayList &lt; Integer &gt;()</gap>
+									;
+								</formatted>
+							</item>  
+							<item>
+								<paragraph>de caractères : </paragraph>
+								<formatted style="javawhitblanks">
+									<gap answers="">List &lt; Character &gt;</gap> 
+									listeChaine = 
+									<gap answers="">new ArrayList &lt; Character &gt;()</gap>
+									;
+								</formatted>
+							</item>  
+						</list> 
+					</gapText>
+					<solution>
+						<list listStyle="unordered">
+							<item>
+								N'oubliez pas que seuls les objets sont permis dans les 
+								listes.
+							</item>
+							<item>
+								Pour les types primitifs, n'oubliez pas d'utiliser la 
+								notion de wrapper.
+							</item>
+							<item>
+								Pensez aussi à déclarer votre liste du type de l'interface 
+								(<formatted style="code">List</formatted>)
+								et à la créer du type qui implémente cette interface 
+								(<formatted style="code">ArrayList</formatted>).
+							</item>
+						</list>
+					</solution>
+					</fillInBlanks>
+				</selfCheck>
+			  
+			  <selfCheck title="Méthodes de liste" shuffle="yes">
+					<fillInBlanks>
+					<question></question>
+					<gapText> 
+						<list listStyle="unordered">
+							<item>ajout de l'élément de valeur 1 : 
+									  <formatted style="javawhitblanks">listeInt.<gap answers="add(1),add (1),add( 1 ),add ( 1 )">add(1)</gap>;</formatted>
+						  </item>  
+							<item>la taille de la liste : 
+							  <formatted style="javawhitblanks">listeInt.<gap answers="size(),size (),size( ),size ( )">size()</gap>;</formatted>
+							</item>  
+							<item>vrai si la liste est vide : 
+							  <formatted style="javawhitblanks">listeInt.<gap answers="isEmpty(),isEmpty (),isEmpty( ),isEmpty ( )">isEmpty()</gap>;</formatted>
+							</item>  
+							<item>accès au 11ème élément :  
+							  <formatted style="javawhitblanks">listeInt.<gap answers="get(10),get (10),get( 10 ),get ( 10 )">get(10)</gap>;</formatted>
+							</item>  
+							<item>remplacement du 11ème élément par la valeur 3 :  
+							  <formatted style="javawhitblanks">listeInt.<gap answers="set(10, 3)/set(10,3)/set( 10, 3 )/set( 10,3 )/set (10, 3)/set (10,3)/set ( 10,3 )/set( 10, 3 )" separator="/">set(10,3)</gap>;</formatted>
+							</item>  
+							<item>vrai si la liste contient la valeur 3 : 
+							  <formatted style="javawhitblanks">listeInt.<gap answers="contains(3),contains( 3 ),contains (3),contains ( 3 )">contains(3)</gap>;</formatted>
+							</item>  
+							<item>indice de la première occurence de l'élément 3 dans la liste : 
+							  <formatted style="javawhitblanks">listeInt.<gap answers="indexOf(3),indexOf( 3 ),indexOf (3),indexOf ( 3 )">indexOf(3)</gap>;</formatted>
+							</item>  
+							<item>suppression de l'élément en 11ème position : 
+							  <formatted style="javawhitblanks">listeInt.<gap answers="remove(10),remove( 10 ),remove (10),remove ( 10 )">remove(10)</gap>;</formatted>
+							</item>  
+							<item>suppression du premier élément de valeur 3 : 
+							  <formatted style="javawhitblanks">listeInt.<gap answers="remove(new Integer(3)),remove(new Integer(3)),remove( new Integer(3) ),remove (new Integer(3))">remove(new Integer(3))</gap>;</formatted>
+							</item>  
+						</list> 
+					</gapText>
+					<solution/>
+					</fillInBlanks>
+				</selfCheck>
+			
+				<selfCheck title="Collections" shuffle="yes">
+				  <fillInBlanks>
+					<question/>
+					<gapText> 
+						<paragraph>  
+							Il existe une classe 
+							<formatted style="code">Collections</formatted> 
+							offrant des services pour les listes.  
+							Pour l'utiliser, un <formatted style="code">import</formatted> 
+							est obligatoire :
+					  </paragraph>  
+						<paragraph>  
+							<formatted style="code">import <gap answers="">java.util.Collections</gap>;</formatted>  
+						</paragraph>  
+						<paragraph>  
+							Elle offre les méthodes de classe suivantes :   
+						</paragraph>  
+						<list listStyle="unordered">
+							<item>
+								pour obtenir l'élément maximum de la liste 
+								<formatted style="italic">listeInt</formatted> :   
+								<formatted style="javawhitblanks">
+									<gap answers="Collections.max(listeInt),Collections.max( listeInt )">Collections.max(listeInt)</gap> ;
+								</formatted>
+							</item>  
+							<item>
+								pour trier la liste 
+								<formatted style="italic">listInt</formatted> : 
+								<formatted style="javawhitblanks">
+									<gap answers="Collections.sort(listeInt),Collections.sort( listeInt )">Collections.sort(listeInt)</gap> ;
+								</formatted>
+							</item>  
+							<item>
+								pour inverser la liste 
+								<formatted style="italic">listInt</formatted> :
+								<formatted style="javawhitblanks">
+									<gap answers="Collections.reverse(listeInt),Collections.reverse( listeInt )">Collections.reverse(listeInt)</gap> ;
+								</formatted>
+							</item>  
+							<item>
+								pour mélanger la liste 
+								<formatted style="italic">listeInt</formatted> :
+								<formatted style="javawhitblanks">
+									<gap answers="Collections.shuffle(listeInt),Collections.shuffle( listeInt )">Collections.shuffle(listeInt)</gap> ;
+								</formatted>
+							</item>  
+					  </list>
+					</gapText>
+					<solution/>
+				  </fillInBlanks>
+					</selfCheck>
+			
+			</act>
+		</learningObject>
 	</unit>
 	
 	<metadata>
