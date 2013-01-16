@@ -917,19 +917,25 @@ echo $?
 					</paragraph>
 				</box>
 		
-				<paragraph title="Exemple" icon="look"/>
-				<paragraph cssClass="java">
-<![CDATA[mkdir rep && cp file rep]]>
-				</paragraph>
-				<paragraph>
-					La copie ne sera pas exécutée si la première commande a échoué.
-				</paragraph>
-				<paragraph cssClass="java">
-<![CDATA[mkdir rep || echo "error while creating the directory"]]> 
-				</paragraph>
-				<paragraph>
-					Le message est affiché uniquement si la première commande échoue.
-				</paragraph>
+				<paragraph title="Exemples" icon="look"/>
+				<list listStyle="ordered">
+				<item>
+					<paragraph cssClass="code">
+	<![CDATA[mkdir rep && cp file rep]]>
+					</paragraph>
+					<paragraph>
+						La copie ne sera pas exécutée si la première commande a échoué.
+					</paragraph>
+				</item>
+				<item>
+					<paragraph cssClass="code">
+	<![CDATA[mkdir rep || echo "error while creating the directory"]]> 
+					</paragraph>
+					<paragraph>
+						Le message est affiché uniquement si la première commande échoue.
+					</paragraph>
+				</item>
+				</list>
 				
 				<paragraph title="Expérimentation - Exploiter le code de sortie" icon="look"/>
 				<paragraph>
