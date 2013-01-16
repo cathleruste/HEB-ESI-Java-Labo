@@ -6,52 +6,42 @@
 	
 	<entry>
 		<paragraph>
-		  Ce TD a pour but de vous familiariser aux listes.
-    </paragraph>
-  </entry>
+			Ce TD a pour but de vous familiariser aux listes.
+		</paragraph>
+	</entry>
   
 	<unit label="TDListe" title="Les listes">
+		
 		<learningObject title="Listes">
+			
 			<act>
-			  <paragraph title="Somme d'une liste" icon="act"> 
-				  Syllabus de logique exercice 1 du chapitre 12.  
-        </paragraph>
-        <paragraph>
-          Dans une autre classe, écrivez une méthode <formatted style="java">main</formatted> appelant la méthode que vous venez d'écrire.
-        </paragraph>
-      </act>
-			<act>
-			  <paragraph title="Les extrêmes" icon="act"> 
-				  Syllabus de logique exercice 2 du chapitre 12.  
-        </paragraph>
-        <paragraph>
-          Dans une autre classe, écrivez une méthode <formatted style="java">main</formatted> appelant la méthode que vous venez d'écrire.
-        </paragraph>
-      </act>
-			<act>
-			  <paragraph title="Anniversaires" icon="act"> 
-				  Syllabus de logique exercice 3 du chapitre 12.  
-        </paragraph>
-        <paragraph>
-          Dans une autre classe, écrivez une méthode <formatted style="java">main</formatted> appelant la méthode que vous venez d'écrire.
-        </paragraph>
-      </act>
-			<act>
-			  <paragraph title="Concaténation de deux listes" icon="act"> 
-				  Syllabus de logique exercice 4 du chapitre 12.  
-        </paragraph>
-        <paragraph>
-          Dans une autre classe, écrivez une méthode <formatted style="java">main</formatted> appelant la méthode que vous venez d'écrire.
-        </paragraph>
-      </act>
-			<act>
-			  <paragraph title="Fusion de deux listes" icon="act"> 
-				  Syllabus de logique exercice 5 du chapitre 12.  
-        </paragraph>
-        <paragraph>
-          Dans une autre classe, écrivez une méthode <formatted style="java">main</formatted> appelant la méthode que vous venez d'écrire.
-        </paragraph>
-      </act>
+				<paragraph>
+					Pour chaque exercice, écrivez une méthode 
+					<formatted style="java">main</formatted> 
+					appelant la méthode que vous venez d'écrire.
+				</paragraph>
+
+				<paragraph title="Somme d'une liste" icon="act"> 
+					Syllabus de logique exercice 1 du chapitre 12.  
+				</paragraph>
+
+				<paragraph title="Les extrêmes" icon="act"> 
+					Syllabus de logique exercice 2 du chapitre 12.  
+				</paragraph>
+				
+				<paragraph title="Anniversaires" icon="act"> 
+					Syllabus de logique exercice 3 du chapitre 12.  
+				</paragraph>
+				
+				<paragraph title="Concaténation de deux listes" icon="act"> 
+						Syllabus de logique exercice 4 du chapitre 12.  
+				</paragraph>
+
+				<paragraph title="Fusion de deux listes" icon="act"> 
+					Syllabus de logique exercice 5 du chapitre 12.  
+				</paragraph>
+
+			</act>
 		</learningObject>
 	</unit>
 	
