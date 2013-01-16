@@ -818,125 +818,161 @@ find /home -name Hello.java 2> /dev/null
 			
 		</learningObject>
 
-	<learningObject title="Retour d'une commande – &amp;&amp;	– ||">
-		<clarify>
-		<box>
-			<list listStyle="unordered">
-			<item>
-				Tout programme qui se termine renvoie une valeur numérique au système d'exploitation au moyen de l'appel système
-				<formatted style="code">exit</formatted> (l'accolade fermante du <formatted style="java">main</formatted>
-				d'une classe java sera traduite par cet appel système).
-			</item>
-			<item>
-			La valeur numérique sert à renseigner le système sur la manière dont s'est terminé le programme :
-			0 veut dire que tout s'est bien passé, d'autres valeurs renseignent des statuts d'erreur.
-			</item>
-			<item>
-			Toute commande exécutée sur un terminal obéit à la même règle, la valeur retournée par une commande est stockée dans une
-			variable d'environnement du shell nommée "<formatted style="code">?</formatted>" (joli nom n'est-ce pas ?;-)).
-			</item>
-		</list>
-		</box>
-	</clarify>
-
-	<look>
-		<paragraph title="Exemple" icon="look"/>
-		<paragraph cssClass="java">
-<![CDATA[ls
+		<learningObject title="Retour d'une commande – &amp;&amp;	– ||">
+			<clarify>
+				<box>
+					<list listStyle="unordered">
+					<item>
+						Tout programme qui se termine renvoie une valeur numérique 
+						au système d'exploitation au moyen de l'appel système
+						<formatted style="code">exit</formatted> 
+						(l'accolade fermante du <formatted style="java">main</formatted>
+						d'une classe java sera traduite par cet appel système).
+					</item>
+					<item>
+						La valeur numérique sert à renseigner le système sur la 
+						manière dont s'est terminé le programme :
+						0 veut dire que tout s'est bien passé, 
+						d'autres valeurs renseignent des statuts d'erreur.
+					</item>
+					<item>
+						Toute commande exécutée sur un terminal obéit à la même règle, 
+						la valeur retournée par une commande est stockée dans une
+						variable d'environnement du shell nommée 
+						"<formatted style="code">?</formatted>" (joli nom n'est-ce pas ?;-)).
+					</item>
+					</list>
+				</box>
+			</clarify>
+	
+			<look>
+				
+				<paragraph title="Exemple" icon="look"/>
+				<paragraph cssClass="java">
+ls
+echo $? 
+				</paragraph>
+				<paragraph cssClass="java">
+ls FichierInexistant
 echo $?
-]]> </paragraph>
-<paragraph cssClass="java">
-<![CDATA[ls FichierInexistant
-echo $?
-]]> </paragraph>
-		<paragraph title="Récupérer le code de sortie" icon="look"/>
-		<paragraph>
-			<list listStyle="ordered">
-			<item>
-				Copiez chez vous le source du programme <formatted style="code">Multiples5</formatted> donné
-				dans <formatted style="code">/eCours/java/td/td9/src</formatted>
-				et décommentez les lignes de l'<formatted style="code">exit</formatted> qui servent à renvoyer un statut d'erreur en cas de nombre erroné :
-				cela se fait en java par l'instruction <formatted style="java">System.exit(<formatted style="italic">&lt;code erreur&gt;</formatted>)</formatted>
-				où <formatted style="italic">code erreur</formatted> est un nombre différent de 0. Pensez à adapter le <formatted style="java">package</formatted>.
-			</item>
-			<item>
-				Exécutez ce nouveau code et affichez la valeur de retour après l'exécution de votre classe.
-			</item>
-			</list>
-		</paragraph>
+				</paragraph>
 
-		<box>
-			<paragraph>
-			<list listStyle="ordered">
-				<item>
-				Cette valeur retournée peut être utilisée comme un booléen ( 0 est vrai et !=0 est faux).
-				</item>
-				<item>
-				L'écriture suivante est donc possible, le fichier sera réellement créé seulement si la création du répertoire a fonctionné :
-				<paragraph><formatted style="code">if mkdir rep ; then cp fich rep; fi</formatted></paragraph>
-				</item>
-				<item>
-				Il existe des formes plus évoluées de test ainsi que d'autres structures de contrôle en bash
-				(<formatted style="code">if else</formatted>, <formatted style="code">while</formatted>,
-				<formatted style="code">for</formatted>, <formatted style="code">case</formatted>)
-				(pour plus d'info : <formatted style="code">man bash</formatted>).
-				</item>
-				<item>
-				Les commandes bash permettent l'utilisation des opérateurs particuliers :
-				<formatted style="code">&amp;&amp;</formatted> et <formatted style="code">||</formatted>,
-				ceux-ci se comportent un peu comme les opérateurs correspondants en java :
-				l'expression de droite n'est pas toujours évaluée selon comment s'est terminée celle de gauche (bien ou pas).
-				La valeur de retour des commandes est également utilisée dans ce cas.
-				</item>
-			</list>
-			</paragraph>
-		</box>
-
-
-		<paragraph title="Exemple" icon="look"/>
-		<paragraph cssClass="java">
-<![CDATA[mkdir rep && cp file rep
-]]> </paragraph>
-		<paragraph>
-			La copie ne sera pas exécutée si la première commande a échoué.
-		</paragraph>
-<paragraph cssClass="java">
-<![CDATA[mkdir rep || echo "error while creating the directory"
-]]> </paragraph>
-		<paragraph>
-						Le message est affiché uniquement si la première commande échoue.
-		</paragraph>
-		<paragraph title="Exploiter le code de sortie" icon="look"/>
-		<paragraph>
-			<selfCheck title="" shuffle="no">
-			<fillInBlanks>
-			<question/>
-			<gapText>
-				<list listStyle="ordered">
-				<item>
-					Exécutez à nouveau votre code en récupérant la valeur de retour après la commande.
-				</item>
-				<item>
-					Écrivez une commande bash qui affiche, via la commande <formatted style="code">echo</formatted>,
-					le texte « Un des nombres en entrée est incorrect »
-					en se servant de la classe <formatted style="code">td.td9.Multiple5</formatted>,
-					l'opérateur adéquat et la commande <formatted style="code">echo</formatted>.
-					<gap answers="">java td.td9.Multiples5 | echo "Valeur incorrecte"</gap>
-				</item>
-				<item>
-					Faites la même chose en utilisant un <formatted style="code">if</formatted> dans le bash.
-					Attention à bien respecter les mots clés (<formatted style="code">if</formatted> –
-					<formatted style="code">then</formatted> – <formatted style="code">fi</formatted>) et les points-virgules.
-					<gap answers="">if java td.td9.Multiples5 ; then echo "Valeur incorrecte" ; fi</gap>
-				</item>
-				</list>
-			</gapText>
-			<solution/>
-			</fillInBlanks>
-		</selfCheck>
-		</paragraph>
-		</look>
-	</learningObject>
+				<paragraph title="Expérience - Récupérer le code de sortie" icon="look"/>
+				<paragraph>
+					<list listStyle="ordered">
+					<item>
+						Copiez chez vous le source du programme 
+						<formatted style="code">Multiples5</formatted> donné dans 
+						<formatted style="code">/eCours/java/td/td9/src</formatted>
+						et décommentez les lignes de l'
+						<formatted style="code">exit</formatted> qui servent à 
+						renvoyer un statut d'erreur en cas de nombre erroné :
+						cela se fait en java par l'instruction 
+						<formatted style="java">System.exit(<formatted style="italic">&lt;code erreur&gt;</formatted>)</formatted>
+						où <formatted style="italic">code erreur</formatted> 
+						est un nombre différent de 0. 
+						Pensez à adapter le <formatted style="java">package</formatted>.
+					</item>
+					<item>
+						Exécutez ce nouveau code et affichez la valeur de retour 
+						après l'exécution de votre classe.
+					</item>
+					</list>
+				</paragraph>
+		
+				<box>
+					<paragraph>
+						<list listStyle="unordered">
+						<item>
+							Cette valeur retournée peut être utilisée comme un booléen 
+							(0 est vrai et !=0 est faux).
+						</item>
+						<item>
+							L'écriture suivante est donc possible, 
+							le fichier sera réellement créé seulement si la création 
+							du répertoire a fonctionné :
+								<formatted style="code">if mkdir rep ; then cp fich rep; fi</formatted>
+						</item>
+						<item>
+							Il existe des formes plus évoluées de test ainsi que 
+							d'autres structures de contrôle en bash
+							(<formatted style="code">if else</formatted>, 
+							<formatted style="code">while</formatted>,
+							<formatted style="code">for</formatted>, 
+							<formatted style="code">case</formatted>)
+							(pour plus d'info : 
+							<formatted style="code">man bash</formatted>).
+						</item>
+						<item>
+							Les commandes bash permettent l'utilisation des opérateurs 
+							particuliers : <formatted style="code">&amp;&amp;</formatted> 
+							et <formatted style="code">||</formatted>.
+							Ils se comportent un peu comme les opérateurs correspondants 
+							en java : l'expression de droite n'est pas toujours évaluée 
+							selon comment s'est terminée celle de gauche (bien ou pas).
+							La valeur de retour des commandes est également utilisée 
+							dans ce cas.
+						</item>
+						</list>
+					</paragraph>
+				</box>
+		
+				<paragraph title="Exemple" icon="look"/>
+				<paragraph cssClass="java">
+<![CDATA[mkdir rep && cp file rep]]>
+				</paragraph>
+				<paragraph>
+					La copie ne sera pas exécutée si la première commande a échoué.
+				</paragraph>
+				<paragraph cssClass="java">
+<![CDATA[mkdir rep || echo "error while creating the directory"]]> 
+				</paragraph>
+				<paragraph>
+					Le message est affiché uniquement si la première commande échoue.
+				</paragraph>
+				
+				<paragraph title="Expérimentation - Exploiter le code de sortie" icon="look"/>
+				<paragraph>
+					<selfCheck title="" shuffle="no">
+					<fillInBlanks>
+					<question/>
+					<gapText>
+						<list listStyle="ordered">
+						<item>
+							Exécutez à nouveau votre code en récupérant la valeur de 
+							retour après la commande.
+						</item>
+						<item>
+							Écrivez une commande bash qui affiche, via la commande 
+							<formatted style="code">echo</formatted>,
+							le texte «Un des nombres en entrée est incorrect»
+							en se servant de la classe 
+							<formatted style="code">td.td9.Multiple5</formatted>,
+							l'opérateur adéquat et la commande 
+							<formatted style="code">echo</formatted>.
+							<newLine/>
+							<gap answers="">java td.td9.Multiples5 | echo "Valeur incorrecte"</gap>
+						</item>
+						<item>
+							Faites la même chose en utilisant un 
+							<formatted style="code">if</formatted> dans le bash.
+							Attention à bien respecter les mots clés 
+							(<formatted style="code">if</formatted> –
+							<formatted style="code">then</formatted> – 
+							<formatted style="code">fi</formatted>) 
+							et les points-virgules.
+							<newLine/>
+							<gap answers="">if java td.td9.Multiples5 ; then echo "Valeur incorrecte" ; fi</gap>
+						</item>
+						</list>
+					</gapText>
+					<solution/>
+					</fillInBlanks>
+				</selfCheck>
+				</paragraph>
+				
+			</look>
+		</learningObject>
 	</unit>
 
 	<metadata>
