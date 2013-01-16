@@ -74,7 +74,7 @@
 
 			<look>
 				<paragraph title="Exemple" icon="look"/>
-				<multimedia src="../image/capt1.png" type="jpeg" 
+				<multimedia src="../image/capt1.png" type="png" 
 						legend="ps et kill" width="80" units="percent"/>
 				<paragraph>
 					<list listStyle="unordered">
@@ -566,10 +566,8 @@ cat liste
 						les lignes contenant une expression.
 					</item>
 					<item>
-						De telles commandes peuvent être utilisées pour transformer 
-						la sortie d'autres commandes, voire même enchainées dans une 
-						suite : la sortie de l'une sert d'entrée à la suivante. 
-						On le réalise cela grâce aux pipes (notés «|»).
+						De telles commandes peuvent enchainées (via «|»)
+						La sortie de l'une sert d'entrée à la suivante. 
 					</item>
 					</list>
 				</box>
@@ -577,8 +575,11 @@ cat liste
 	
 			<look>
 				<paragraph title="Exemple 1" icon="look"/>
-				<multimedia src="../image/capt2.jpg" type="jpeg" 
-						legend="cut, sort et uniq" width="80" units="percent"/>
+				<multimedia src="../image/capt2.png" type="png" 
+						legend="cut, sort et uniq" width="50" units="percent"/>
+				<paragraph visible="print">
+					Examinons la figure 2.
+				</paragraph>
 				<paragraph>
 					La commande <formatted style="code">cut</formatted> transforme 
 					la sortie de <formatted style="code">ls</formatted>.
@@ -592,8 +593,8 @@ cat liste
 				</paragraph>
 				
 				<paragraph title="Exemple 2" icon="look"/>
-				<multimedia src="../image/capt4.jpg" type="jpeg" 
-						legend="grep" width="90" units="percent"/>
+				<multimedia src="../image/capt4.png" type="png" 
+						legend="grep" width="60" units="percent"/>
 				<paragraph>
 					La commande <formatted style="code">grep</formatted> transforme 
 					la sortie de <formatted style="code">ls</formatted>.
@@ -605,10 +606,10 @@ cat liste
 			<act>
 				
 				<paragraph title="Exercice - Pipe" icon="act"/>
-				<multimedia src="../image/capt4.jpg" type="jpeg" 
-						legend="tr et cut" width="80" units="percent"/>
+				<multimedia src="../image/capt3.png" type="png" 
+						legend="tr et cut" width="60" units="percent"/>
 				<paragraph>
-					Comprenez le dernier exemple en découpant la commande depuis la gauche.
+					Comprenez cet exemple en découpant la commande depuis la gauche.
 				</paragraph>
 				<list listStyle="ordered">
 				<item>
