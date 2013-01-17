@@ -31,7 +31,7 @@
 								<item>modifier les permissions d'un fichier : <gap answers="">chmod</gap> (suivi des options)</item>
 								<item>afficher les 10 dernières commandes : <gap answers="">history</gap> <gap answers="">10</gap></item>
 								<item>relancer la dernière commande commençant par <formatted style="code">echo</formatted> : <gap answers="">!echo</gap></item>
-								<item>relancer la dernière commande qui contient le mot <formatted style="code">name</formatted> : <gap answers="">!?name?</gap></item>
+								<item>relancer la dernière commande qui contient le mot <formatted style="code">name</formatted> : <gap answers="">!?name</gap></item>
 							</list>
 						</gapText>
 						<solution/>
