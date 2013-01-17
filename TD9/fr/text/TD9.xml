@@ -646,7 +646,7 @@ cat liste
 				</list>
 	
 				<paragraph title="Exercice - Postes utilisés" icon="look"/>
-				<selfCheck title="" shuffle="no">
+				<selfCheck shuffle="no">
 				<fillInBlanks>
 				<question/>
 				<gapText>
@@ -697,7 +697,7 @@ l304p02
 				</selfCheck>
 
 				<paragraph title="Exercice - Connections actives" icon="look"/>
-				<selfCheck title="" shuffle="no">
+				<selfCheck shuffle="no">
 				<fillInBlanks>
 				<question/>
 				<gapText>
@@ -718,7 +718,7 @@ l304p02
 				</selfCheck>
 
 				<paragraph title="Exercice - Multiples de 3, de 4 et de 12" icon="look"/>
-				<selfCheck title="" shuffle="no">
+				<selfCheck shuffle="no">
 					<fillInBlanks>
 					<question/>
 					<gapText>
@@ -947,7 +947,7 @@ echo $?
 				
 				<paragraph title="Expérimentation - Exploiter le code de sortie" icon="look"/>
 				<paragraph>
-					<selfCheck title="" shuffle="no">
+					<selfCheck shuffle="no">
 					<fillInBlanks>
 					<question/>
 					<gapText>
