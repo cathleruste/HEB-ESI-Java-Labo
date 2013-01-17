@@ -284,7 +284,7 @@ entiers= new {3,3,3};
 								<gap answers="">@param</gap> pour décrire les paramètres,<newLine/>
 								<gap answers="">@return</gap> pour décrire ce qui est retourné,<newLine/>
 								<gap answers="">@throws</gap> pour spécifier les exceptions lancées,<newLine/>
-								<gap answers="">@return</gap> pour donner une note sur l'auteur.  
+								<gap answers="">@author</gap> pour donner une note sur l'auteur.  
 							</paragraph>  
 							<paragraph>  
 								La documentation est produite au format  
