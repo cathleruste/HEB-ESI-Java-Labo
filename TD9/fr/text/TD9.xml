@@ -563,7 +563,7 @@ cat liste
 						les lignes contenant une expression.
 					</item>
 					<item>
-						De telles commandes peuvent enchainées (via «|»)
+						De telles commandes peuvent enchainées (via «|»).
 						La sortie de l'une sert d'entrée à la suivante. 
 					</item>
 					</list>
@@ -578,15 +578,25 @@ cat liste
 					Examinons la figure 2.
 				</paragraph>
 				<paragraph>
-					La commande <formatted style="code">cut</formatted> transforme 
-					la sortie de <formatted style="code">ls</formatted>.
-					<formatted style="code">cut -c 1-11</formatted> découpe les 
-					11 premiers caractères de chaque ligne.
-					<formatted style="code">sort</formatted> transforme la sortie 
-					de <formatted style="code">cut</formatted> en triant les lignes.
-					<formatted style="code">uniq</formatted> transforme la sortie 
-					triée du <formatted style="code">sort</formatted>
-					en éliminant les lignes identiques qui se suivent.
+					<list listStyle="unordered">
+						<item>
+							La commande 
+							<formatted style="code">cut -c 1-11</formatted> 
+							transforme la sortie de 
+							<formatted style="code">ls</formatted>.
+							en ne gardant que les 
+							11 premiers caractères de chaque ligne.
+						</item>
+						<item>
+							<formatted style="code">sort</formatted> transforme la sortie 
+							de <formatted style="code">cut</formatted> en triant les lignes.
+						</item>
+						<item>
+							<formatted style="code">uniq</formatted> transforme la sortie 
+							triée du <formatted style="code">sort</formatted>
+							en éliminant les lignes identiques qui se suivent.
+						</item>
+					</list>
 				</paragraph>
 				
 				<paragraph title="Exemple 2" icon="look"/>
@@ -612,7 +622,7 @@ cat liste
 				<item>
 					Exécutez-en chaque partie :
 					<formatted style="code">ps u</formatted>, 
-					<formatted style="code">ps u | tr -s' '</formatted>, ...
+					<formatted style="code">ps u | tr -s ' '</formatted>, ...
 					Aidez-vous des pages de manuel pour comprendre le résultat.
 				</item>
 				<item>
