@@ -893,11 +893,11 @@ echo $?
 						<list listStyle="unordered">
 						<item>
 							Cette valeur retournée peut être utilisée comme un booléen 
-							(0 est vrai et !=0 est faux).
+							(vrai si 0, faux sinon).
 						</item>
 						<item>
-							L'écriture suivante est donc possible, 
-							le fichier sera réellement créé seulement si la création 
+							L'écriture suivante est donc possible. 
+							Le fichier sera réellement créé seulement si la création 
 							du répertoire a fonctionné :
 								<formatted style="code">if mkdir rep ; then cp fich rep; fi</formatted>
 						</item>
