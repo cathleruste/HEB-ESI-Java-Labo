@@ -504,12 +504,10 @@
 						Avec la simple redirection (en sortie), 
 						si le fichier existe déjà, il est écrasé. 
 						Nous pouvons choisir de ne pas l'écraser, 
-						mais de le compléter.
-						Il s'agit d'ajouter au contenu du fichier déjà existant.
-					</paragraph>
-					<paragraph>
-						Cela se fait grâce à la double redirection (en sortie) 
-						notée «<formatted style="code"><![CDATA[>>]]></formatted>».			
+						mais de le compléter 
+						(ajouter du contenu à la fin du fichier).
+						via la double redirection (en sortie) notée 
+						<formatted style="code"><![CDATA[>>]]></formatted>.			
 					</paragraph>
 				</box>
 		
