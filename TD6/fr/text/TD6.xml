@@ -492,12 +492,16 @@
 						<tabledata>
 							<paragraph>
 							  Dans le répertoire <formatted style="code">~/td6</formatted><newLine/>
-								<formatted style="code">javac -d ~/classes Test.java</formatted>
+								<formatted style="code">javac -d ~/classes Test.java</formatted><newLine/>
+								Pour rappel, <formatted style="code">javac -d <formatted style="italic">chemin</formatted></formatted> 
+								permet de mettre les fichiers <formatted style="code">.class</formatted> dans une arborescence adéquate 
+								en fonction du <formatted style="italic">chemin</formatted> (qui est un des chemins repris dans la variable 
+								<formatted style="code">CLASSPATH</formatted>) et du <formatted style="code">package</formatted> définit dans le fichier source.
 							</paragraph>
 							<paragraph>
 								Vous obtenez un fichier <formatted style="code">Test.class</formatted> dans votre répertoire 
 								<formatted style="code">~/classes/g32010/td6</formatted>, conformément à ce qui est écrit dans 
-								l'instruction <formatted style="code">package</formatted>.							
+								l'instruction <formatted style="code">package</formatted>.
 							</paragraph>
 						</tabledata>
 					</tablerow>
@@ -555,7 +559,8 @@
 								  <formatted style="code">~/td6/src</formatted>,
 								</item>
 								<item>le package est <formatted style="code">g32010.td6</formatted>,</item>
-								<item>Le CLASSPATH contient <formatted style="code">.</formatted>,</item>
+								<item>Le CLASSPATH contient <formatted style="code">.</formatted>, 
+								(le CLASSPATH contenant un chemin relatif, ce programme ne sera donc pas exécutable "de partout"),</item>
 								<item>votre dossier courant est <formatted style="code">~/td6</formatted></item>
 								<item>la classe s'appelle <formatted style="code">Test</formatted>,</item>
 							</list>
