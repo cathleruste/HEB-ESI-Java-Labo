@@ -32,7 +32,7 @@
 			</paragraph>			
 			<paragraph>
 				Nous mettons également à votre disposition quelques classes
-				dans le <formatted style="code">package td.td9</formatted>
+				dans le package <formatted style="code">td.td9</formatted>
 				pour les exécuter sur
 				<formatted style="italic">linux1</formatted>.
 			</paragraph>
@@ -563,7 +563,7 @@ cat liste
 						les lignes contenant une expression.
 					</item>
 					<item>
-						De telles commandes peuvent enchainées (via «|»).
+						De telles commandes peuvent être enchainées (via «|»).
 						La sortie de l'une sert d'entrée à la suivante. 
 					</item>
 					</list>
@@ -796,6 +796,13 @@ find /home -name Hello.java
 				</paragraph>
 					<paragraph cssClass="java">
 find /home -name Hello.java 2> /dev/null
+				</paragraph>
+				<paragraph>
+					Note : <formatted style="code">/dev/null</formatted>
+					est un <formatted style="italic">pseudo-fichier</formatted>,
+					une sorte de <formatted style="italic">trou noir</formatted>;
+					tout ce que vous y écrivez sera aussitôt oublié 
+					sans être enregistré dans le fichier.
 				</paragraph>
 			</look>
 	
