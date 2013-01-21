@@ -230,12 +230,12 @@
 							Quelle commande permet de compiler le fichier nommé <formatted style="code">SommeChiffres.java</formatted> ?  
 							<newLine/>
 							<gap answers="javac">javac</gap> 
-							<gap answers="SommeChiffre.java">SommeChiffre.java</gap> 
+							<gap answers="SommeChiffre.java">SommeChiffres.java</gap> 
 							<newLine/>
 							Quelle commande permet d'exécuter ce programme ?  
 							<newLine/>
 							<gap answers="java">java</gap> 
-							<gap answers="SommeChiffre">SommeChiffre</gap> 
+							<gap answers="SommeChiffre">SommeChiffres</gap> 
 						</gapText>
 						<solution></solution>
 					</fillInBlanks>

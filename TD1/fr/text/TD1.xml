@@ -160,7 +160,9 @@
 					<item>Ouvrez le navigateur web de votre choix.</item>
 					<item>Rendez-vous sur <link uri="http://elearning.esi.heb.be">poÉSI</link>.</item>
 					<item>Connectez-vous; le login et mot de passe sont les mêmes que sous Windows.</item>
-					<item>Rendez-vous à la formation Java.</item>
+					<item>Dans la Page d'accueil, vous trouvez un Catalogue de cours. Il contient tous les cours auxquels vous pouvez vous inscrire.</item>
+          <item>Inscrivez-vous à la formation Java</item>
+					<item>Rendez-vous à la formation Java dans Mes cours.</item>
 					<item>Ouvrez la version en ligne de ce document.</item>
 				</list>
 				<paragrah>
@@ -593,11 +595,30 @@
 					appelé le <formatted style="bold">dossier courant</formatted>
 					(<formatted style="italic">working directory</formatted> en anglais).
 				</paragraph>
+				<paragraph>
+  				Il est représenté par <formatted style="input">.</formatted>
+				</paragraph>
 				<list listStyle="unordered">
 					<item>
 						La commande <formatted style="input">cd</formatted>
 						(<formatted style="italic">change directory</formatted>) 
 						permet de changer de dossier courant.
+					</item>
+					<item>
+						La commande <formatted style="input">cd</formatted>
+						sans rien derrière vous ramène toujours dans votre dossier personnel.
+					</item>
+          <item>
+						La commande <formatted style="input">cd .</formatted>
+						vous laisse là où vous êtes, <formatted style="input">.</formatted> 
+						représentant votre dossier courant.
+					</item>
+          <item>
+						La commande <formatted style="input">cd ..</formatted>
+						vous amèn dans le dossier juste au-dessus de celui où vous êtes,
+						on parle de <formatted style="italic">répertoire parent</formatted>.
+						<formatted style="input">..</formatted> 
+						représente le répertoire parent du répertoire courant.
 					</item>
 					<item>
 						La commande <formatted style="input">pwd</formatted>

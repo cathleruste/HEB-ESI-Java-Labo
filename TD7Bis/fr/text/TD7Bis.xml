@@ -35,7 +35,7 @@ public void occurence_cas1() {
   int [] tabOccurencesObtenues = MaClasse.occurence(nb);
   
   // We check that the two arrays are equals
-  assertTrue(Arrays.equals(tabOccurencesAttendues, tabOccurencesObtenues);
+  assertTrue(Arrays.equals(tabOccurencesAttendues, tabOccurencesObtenues));
 }]]>  </paragraph>
 
       </act>

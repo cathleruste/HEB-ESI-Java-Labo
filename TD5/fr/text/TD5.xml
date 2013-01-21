@@ -25,6 +25,7 @@
 					  Cette méthode recevra 3 entiers en paramètre.
           </item>  
 					<item>Idem pour le maximum de 4 nombres.</item>  
+					<item>Remarque : ces 3 méthodes se trouvent dans une même classe.</item>
 			  </list>
 			  
 			  <paragraph title="Réflexion" icon="question"/>  
