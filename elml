@@ -33,6 +33,7 @@ function pdf() {
 	done
 }
 
+# Crée le PDF (dans TDxxx/fr/text) + copie dans dist 
 function pdf1() {
 	java -cp /usr/local/saxon/saxon9he.jar net.sf.saxon.Transform -t -s:$LESSON/fr/text/$LESSON.xml -xsl:_templates/$STYLE/latex.xsl
 	if [[ $? == 0 ]]; then
@@ -53,6 +54,10 @@ function html() {
 	done
 }
 
+# Crée la version en ligne avec menu
+# + ajouts dans dans le zip dist/LaboJava.zip qui va contenir tous les TDS
+# pour tout uploader d'un coup sur poÉSI.
+# + lien HTML dans dist pour consultation en local
 function html1() {
 	java -cp /usr/local/saxon/saxon9he.jar net.sf.saxon.Transform -t -s:$LESSON/fr/text/$LESSON.xml -xsl:_templates/$STYLE/online.xsl
 	ln -sf ../$LESSON/fr/html/index.html dist/$LESSON.html
@@ -68,6 +73,8 @@ function scorm() {
 	done
 }
 
+# Crée la version en ligne sans menu
+# + zip dans dist 
 function scorm1() {
 	sed -i -e "s|<use_navigation>yes</use_navigation>|<use_navigation>no</use_navigation>|" _config/config.xml
 	java -cp /usr/local/saxon/saxon9he.jar net.sf.saxon.Transform -t -s:$LESSON/fr/text/$LESSON.xml -xsl:_templates/$STYLE/online.xsl
