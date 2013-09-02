@@ -464,6 +464,7 @@
 				</table>
 
 				<paragraph title="3ème approche : toutes les classes sont regroupées dans le même dossier (~/classes)."/>
+				<multimedia src="../image/approche3.jpeg" type="jpeg" legend="Illustration de la 3ème approche" width="70" units="percent"/>
 				<table 	title="Ou encore, en scindant sources et classes"
 						wdith="470" units="pixels">
 					<tablerow>
@@ -559,7 +560,10 @@
         PAS dans le <formatted style="code">package</formatted>.
         </paragraph>
         
+        <paragraph cssClass="pagebreak"/>
+        
         <paragraph title="4ème approche : pour transporter vos sources et classes rapidement."/>
+				<multimedia src="../image/approche4.jpeg" type="jpeg" legend="Illustration de la 4ème approche" width="60" units="percent"/>
 				<table 	title="Pour transporter vos sources et classes rapidement"
 						wdith="470" units="pixels">
 					<tablerow>

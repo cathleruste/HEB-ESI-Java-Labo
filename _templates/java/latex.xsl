@@ -903,4 +903,14 @@
         </xsl:choose>
     </xsl:template>
 
+	<!-- Imposer un pagebreak -->
+    <xsl:template match="elml:paragraph[@cssClass='pagebreak']">
+        <xsl:param name="display">
+            <xsl:call-template name="elml:display"/>
+        </xsl:param>
+        <xsl:if test="$display='yes'">
+        <xsl:text>\clearpage</xsl:text>
+		</xsl:if>
+    </xsl:template>
+
 </xsl:stylesheet>
