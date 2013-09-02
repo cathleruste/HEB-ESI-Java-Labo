@@ -7,6 +7,9 @@
 	<entry>
 		<paragraph>
 			Il est temps de passer à l'orienté objet. Nous allons vous demander de coder quelques classes simples.  
+			Vous compilerez vos classes à chaque ajout de méthode, exécuterez la classe MainDate et vérifierez
+			son bon fonctionnement à chaque modification de la méthode main 
+			et exécuterez votre classe de test à chaque ajout de série de tests.
     </paragraph>
   </entry>
   
@@ -41,6 +44,12 @@
             </paragraph>
 				  </item>
 				  <item>
+            <paragraph>
+              MAIN : Créez une classe <formatted style="java"> MainDate</formatted> 
+              avec une méthode <formatted style="java">main</formatted> qui crée trois dates et les affiche.
+            </paragraph>
+          </item>
+				  <item>
 				    <paragraph>
               Ajoutez la méthode <formatted style="java">toString()</formatted> qui retourne la chaine de caractères représentant 
               la date au format donné dans l'exemple ci-dessous :<newLine/>  
@@ -50,8 +59,7 @@
           </item>
           <item>
             <paragraph>
-              MAIN : Créez une classe <formatted style="java"> MainDate</formatted> 
-              avec une méthode <formatted style="java">main</formatted> qui crée trois dates et les affiche.
+              MAIN : Affichez de nouveau les 3 dates, plus simplement cette fois.
             </paragraph>
           </item>
           <item>
@@ -66,16 +74,16 @@
             <paragraph>
               La valeur du mois doit être comprise entre 1 et 12 inclus et la validité de la valeur du jour dépend du mois et de l'année. 
               Lors du td5, vous avez écrit une classe <formatted style="java">Util</formatted> contenant une méthode 
-              <formatted style="java">nbJours</formatted> que vous utiliserez ici. 
+              <formatted style="java">nbJours</formatted> que vous utiliserez ici (elle possède un package ;)). 
             </paragraph>
             <paragraph>
-              Si un des paramètres fournis n'est pas valide, vous lancerez une  
-              <formatted style="code">IllegalArgumentException</formatted>.
+              Si un des paramètres fournis n'est pas valide, 
+              vous lancerez une <formatted style="code">IllegalArgumentException</formatted>.
 				    </paragraph>
           </item>
           <item>
             <paragraph>
-              TEST : Écivez une méthode de test utilisant JUnit pour tester la validité de votre constructeur. 
+              TEST : Écrivez une méthode de test utilisant JUnit pour tester la validité de votre constructeur. 
               Pensez à tester des cas corrects, les cas limites et des cas incorrects (qui provoquent des lancements d'exception).
             </paragraph>
           </item>
@@ -131,7 +139,7 @@ int jourNow = now.get(Calendar.DAY_OF_MONTH);
           </item>
           <item>
             <paragraph>
-              TEST : Écivez une méthode de test pour tester la validité de votre méthode <formatted style="java">compareTo</formatted>.
+              TEST : Écrivez une méthode de test pour tester la validité de votre méthode <formatted style="java">compareTo</formatted>.
             </paragraph>
           </item>
           <item>
@@ -169,9 +177,9 @@ int jourNow = now.get(Calendar.DAY_OF_MONTH);
 		<lessonInfo>
 			<language language="fr" derived="no"/>
 			<lifecycle>
-				<version>2012 - 2013</version>
+				<version>2013 - 2014</version>
 				<contribute>
-<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" /> 
+<person name="BEJ" />  <person name="CLR" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" />  <person name="SRV" /> 
 				</contribute>
 			</lifecycle>
 			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
