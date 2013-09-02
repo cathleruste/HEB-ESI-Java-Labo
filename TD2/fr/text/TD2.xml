@@ -5,7 +5,7 @@
 	label="TD2" title="TD2 - Les bases de Linux">
   
 	<entry>
-		<paragraph>  
+		<paragraph> 
 			À l’issue de ce TD vous aurez acquis une connaissance basique de l’utilisation du système Linux 
 			et de son aide en ligne : le man.   
 			En particulier, les commandes <formatted style="bold">ls</formatted>, 
