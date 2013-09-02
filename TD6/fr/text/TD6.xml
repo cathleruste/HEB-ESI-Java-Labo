@@ -67,7 +67,7 @@
 							dont le package est <formatted style="code">g32010.td6</formatted> :
 						</question>
 						<gapText>
-							<gap answers="">g32010.td6.SurfaceTriangle</gap>
+							<gap answers="g32010.td6.SurfaceTriangle">g32010.td6.SurfaceTriangle </gap>
 						</gapText>
 						<solution/>
 					</fillInBlanks>
@@ -92,6 +92,11 @@
 					le fichier <formatted style="code">Couleur.class</formatted>
 					devra se trouver dans le répertoire associé 
 					<formatted style="code">td/td6</formatted>
+				</paragraph>
+				<paragraph>
+				Attention toutefois, vous ne pouvez pas utiliser le mot-clé 
+				<formatted style="code">java</formatted> comme nom d'un des 
+				répertoires de votre arborescence.
 				</paragraph>
 
 				<selfCheck shuffle="no">
@@ -258,21 +263,46 @@
 					a besoin d'une arborescence de répertoires.
 					Ceux-ci n'existent peut-être pas encore et il vous faudra alors les créer.
 					Plutôt que de les créer un à un, 
-					consultez l'aide de l'option <formatted style="code">-p</formatted> de <formatted style="code">mkdir</formatted> qui pourra vous servir !
+					consultez l'aide de l'option <formatted style="code">-p</formatted> de 
+					<formatted style="code">mkdir</formatted> qui pourra vous servir !
 				</paragraph>
 
 				<paragraph>
-				  Remarquez que seuls les fichiers <formatted style="code">.class</formatted> sont concernés par le <formatted style="code">CLASSPATH</formatted>. 
-				  Le compilateur <formatted style="code">javac</formatted> peut mettre les fichiers .<formatted style="code">class</formatted> 
-				  dans une arborescence adéquate en fonction du <formatted style="code">package</formatted> définit dans le fichier source; 
-				  arborescence qu'il crée si nécessaire, en utilisant l'option <formatted style="code">-d <formatted style="italic">chemin</formatted></formatted> 
-				  où <formatted style="italic">chemin</formatted> est un des chemins repris dans la variable <formatted style="code">CLASSPATH</formatted>. 
+				  Remarquez que seuls les fichiers <formatted style="code">.class</formatted> 
+				  sont concernés par le <formatted style="code">CLASSPATH</formatted>. 
+				  Le compilateur <formatted style="code">javac</formatted> peut mettre 
+				  les fichiers .<formatted style="code">class</formatted> 
+				  dans une arborescence adéquate en fonction du 
+				  <formatted style="code">package</formatted> 
+				  définit dans le fichier source; 
+				  arborescence qu'il crée si nécessaire, en utilisant l'option 
+				  <formatted style="code">-d <formatted style="italic">chemin</formatted></formatted> 
+				  où <formatted style="italic">chemin</formatted> est un des chemins 
+				  repris dans la variable <formatted style="code">CLASSPATH</formatted>. 
 				  <newLine/>
 				  On l'utilise en écrivant par exemple
 				</paragraph>
 				<paragraph cssClass="code">
     javac *.java -d /home          # à l'école 
     javac *.java -d /home/moi      # à la maison
+				</paragraph>
+				<paragraph>
+				Donc, au moment où vous compilez votre programme java,
+				plutôt que de créer l'arborescence du package à partir du 
+				répertoire courant, vous pouvez fournir au compilateur le
+				début du chemin où il doit aller mettre le fichier 
+				<formatted style="code">.class</formatted>. Ce début de chemin 
+				sera complété par le <formatted style="code">package</formatted> 
+				contenu dans le fichier.
+				</paragraph>
+				<paragraph>
+				La machine virtuelle, quant à elle, devra aussi avoir ce début de 
+				chemin. Elle devra tirer cette information dans le 
+				<formatted style="code">CLASSPATH</formatted>.
+				</paragraph>
+				<paragraph>
+				Il faut donc donner l'information au cmpilateur à la création 
+				du bytecode ET à la machine virtuelle pour savoir où chercher.
 				</paragraph>
 				
 			</act>
@@ -523,6 +553,12 @@
 					</tablerow>
         </table>
         
+        <paragraph>
+        Remarquez que le répertoire <formatted style="code">classes</formatted> 
+        se trouve dans le <formatted style="code">CLASSPATH</formatted> et 
+        PAS dans le <formatted style="code">package</formatted>.
+        </paragraph>
+        
         <paragraph title="4ème approche : pour transporter vos sources et classes rapidement."/>
 				<table 	title="Pour transporter vos sources et classes rapidement"
 						wdith="470" units="pixels">
@@ -619,6 +655,12 @@
 						</tabledata>
 					</tablerow>
 				</table>
+				
+				<paragraph>
+				Remarquez que cette quatrième approche ne peut pas 
+				s'exécuter "de partout". Demandez-vous quelles sont 
+				les conditions pour que ça fonctionne.
+				</paragraph>
 				
 				<paragraph>
 					<formatted style="bold">Remarque</formatted> :
@@ -771,9 +813,9 @@
 		<lessonInfo>
 			<language language="fr" derived="no"/>
 			<lifecycle>
-				<version>2012 - 2013</version>
+				<version>2013 - 2014</version>
 				<contribute>
-<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" /> 
+<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" />  <person name="SRV" /> 
 				</contribute>
 			</lifecycle>
 			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
