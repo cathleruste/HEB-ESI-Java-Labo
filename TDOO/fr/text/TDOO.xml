@@ -44,7 +44,7 @@
 				    <paragraph>
               Ajoutez la méthode <formatted style="java">toString()</formatted> qui retourne la chaine de caractères représentant 
               la date au format donné dans l'exemple ci-dessous :<newLine/>  
-              * le 01/01/2013 *  
+              * le 01/01/2014 *  
               <popup>Afin de formater vos données, n'hésitez pas à consulter l'API de la classe <formatted style="java">java.text.DecimalFormat</formatted></popup>
             </paragraph>
           </item>

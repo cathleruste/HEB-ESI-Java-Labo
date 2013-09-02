@@ -104,7 +104,7 @@
 					Si vous voulez en savoir plus, vous pouvez lire ce petit    
 					<link uri="http://fr.wikipedia.org/wiki/Encodage_de_caractères">article</link>
 					sur wikipedia ou encore cet
-					<link uri="http://blog.namok.be?post/2009/11/30/Unicode%2C-UTF8%2C-UTF16%2C-UTF32%2C-...-et-tutti-quanti">article</link>  
+					<link uri="http://namok.be/blog/index.php?post/2009/11/30/unicode-UTF8-UTF16-UTF32-et-tutti-quanti">article</link>  
 					de Pierre Bettens. 
 				</paragraph>  
         
@@ -705,9 +705,9 @@
 		<lessonInfo>
 			<language language="fr" derived="no"/>
 			<lifecycle>
-				<version>2012 - 2013</version>
+				<version>2013 - 2014</version>
 				<contribute>
-<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" /> 
+<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" />  <person name="SRV" /> 
 				</contribute>
 			</lifecycle>
 			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
