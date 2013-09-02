@@ -160,9 +160,9 @@ public void occurence_cas1() {
 		<lessonInfo>
 			<language language="fr" derived="no"/>
 			<lifecycle>
-				<version>2012 - 2013</version>
+				<version>2013 - 2014</version>
 				<contribute>
-<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" /> 
+<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" />  <person name="SRV" /> 
 				</contribute>
 			</lifecycle>
 			<educational><typicalLearningTime><time/></typicalLearningTime></educational>

@@ -15,7 +15,7 @@
 			<act>
 			  <paragraph title="Les nuls" icon="act"/>
 				<paragraph>
-					Syllabus de logique exercice 1 du chapitre 10. 
+					Syllabus de logique exercice 2 du chapitre 10. 
 				</paragraph>
 				<paragraph>
 					N'oubliez pas d'écrire la <formatted style="italic">javadoc</formatted> et les <formatted style="italic">tests jUnit</formatted> pour cette méthode. <newLine/>
@@ -24,7 +24,7 @@
 				
 				<paragraph title="Le contour du tableau" icon="act"/>
 				<paragraph>
-					Syllabus de logique exercice 2 du chapitre 10. 
+					Syllabus de logique exercice 3 du chapitre 10. 
 				</paragraph>
 				<paragraph>
 					N'oubliez pas d'écrire la <formatted style="italic">javadoc</formatted> et les <formatted style="italic">tests jUnit</formatted> pour cette méthode. <newLine/>
@@ -33,7 +33,7 @@
 				
 				<paragraph title="Tous positifs" icon="act"/>
 				<paragraph>
-					Syllabus de logique exercice 5 du chapitre 10. 
+					Syllabus de logique exercice 6 du chapitre 10. 
 				</paragraph>
 				<paragraph>
 					N'oubliez pas d'écrire la <formatted style="italic">javadoc</formatted> et les <formatted style="italic">tests jUnit</formatted> pour cette méthode. <newLine/>
@@ -42,7 +42,7 @@
 				
 				<paragraph title="Le carré magique" icon="act"/>
 				<paragraph>
-					Syllabus de logique exercice 6 du chapitre 10. <newLine/>
+					Syllabus de logique exercice 7 du chapitre 10. <newLine/>
 					Si le tableau reçu en paramètre n'est pas un tableau carré, une <formatted style="italic">IllegalArgumentException</formatted> sera lancée. 
 				</paragraph>
 				<paragraph>
@@ -69,9 +69,9 @@
 		<lessonInfo>
 			<language language="fr" derived="no"/>
 			<lifecycle>
-				<version>2012 - 2013</version>
+				<version>2013 - 2014</version>
 				<contribute>
-<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" /> 
+<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" />  <person name="SRV" /> 
 				</contribute>
 			</lifecycle>
 			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
