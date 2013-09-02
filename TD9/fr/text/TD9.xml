@@ -32,7 +32,7 @@
 			</paragraph>			
 			<paragraph>
 				Nous mettons également à votre disposition quelques classes
-				dans le package <formatted style="code">td.td9</formatted>
+				dans le <formatted style="code">package td.td9</formatted>
 				pour les exécuter sur
 				<formatted style="italic">linux1</formatted>.
 			</paragraph>
@@ -106,7 +106,8 @@
 					</item>
 					<item>
 						Pour obtenir la liste de tous les signaux :
-						<formatted style="code">kill -l</formatted>.
+						<formatted style="code">kill -l</formatted> ou 
+						encore <formatted style="code">man 7 signal</formatted>.
 					</item>
 					</list>
 				</paragraph>
@@ -151,8 +152,8 @@
 						<formatted style="code">STAT</formatted>).
 					</item>
 					<item>
-						Reprenez le processus interrompu en lui envoyant le signal 
-						SIGCONT 
+						Reprenez le processus interrompu en envoyant le signal 
+						SIGCONT (via la commande kill) 
 						et vérifiez son nouvel état avant qu'il ne soit éjecté par 
 						le système à cause du «timeout».
 					</item>
@@ -488,7 +489,7 @@
 							(il faudra donc rediriger 
 							<formatted style="bold">les</formatted> sorties vers les 
 							fichiers <formatted style="italic">Multiples5</formatted> 
-							et <formatted style="italic">Multipes5Erreur</formatted>).
+							et <formatted style="italic">Multiples5Erreur</formatted>).
 							<newLine/>
 							<gap answers="">java td.td9.Multiples5 &lt; Nombres &gt; Multiples5 2&gt; Multiples5Erreur</gap>
 						</item>
@@ -505,7 +506,7 @@
 						si le fichier existe déjà, il est écrasé. 
 						Nous pouvons choisir de ne pas l'écraser, 
 						mais de le compléter 
-						(ajouter du contenu à la fin du fichier).
+						(ajouter du contenu à la fin du fichier) 
 						via la double redirection (en sortie) notée 
 						<formatted style="code"><![CDATA[>>]]></formatted>.			
 					</paragraph>
@@ -563,7 +564,7 @@ cat liste
 						les lignes contenant une expression.
 					</item>
 					<item>
-						De telles commandes peuvent être enchainées (via «|»).
+						De telles commandes peuvent enchainées (via «|»).
 						La sortie de l'une sert d'entrée à la suivante. 
 					</item>
 					</list>
@@ -575,7 +576,7 @@ cat liste
 				<multimedia src="../image/capt2.png" type="png" 
 						legend="cut, sort et uniq" width="50" units="percent"/>
 				<paragraph visible="print">
-					Examinons la figure 2.
+					Examinons la figure 2 ci-dessous.
 				</paragraph>
 				<paragraph>
 					<list listStyle="unordered">
@@ -583,7 +584,7 @@ cat liste
 							La commande 
 							<formatted style="code">cut -c 1-11</formatted> 
 							transforme la sortie de 
-							<formatted style="code">ls</formatted>.
+							<formatted style="code">ls</formatted> 
 							en ne gardant que les 
 							11 premiers caractères de chaque ligne.
 						</item>
@@ -707,10 +708,13 @@ l304p02
 						<formatted style="code">grep</formatted>
 						et <formatted style="code">wc</formatted> dans un pipe pour 
 						trouver le nombre de connections actives pour un utilisateur 
-						donné gXXXXX.
+						donné gXXXXX. 
 						La commande <formatted style="code">grep</formatted> 
 						servira à filtrer les lignes correspondant à l'utilisateur.
-						<gap answers="">who | tr -s ' ' | cut -f 1 -d ' ' | grep gXXXXX | wc -l</gap>
+						
+						Comme pour la plupart des exercices (et particulièrement 
+						ceux de ce chapitre), la solution proposée ici n'est pas unique!
+						<gap answers="">who |  grep gXXXXX | wc -l</gap>
 					</paragraph>
 				</gapText>
 				<solution/>
@@ -796,13 +800,6 @@ find /home -name Hello.java
 				</paragraph>
 					<paragraph cssClass="java">
 find /home -name Hello.java 2> /dev/null
-				</paragraph>
-				<paragraph>
-					Note : <formatted style="code">/dev/null</formatted>
-					est un <formatted style="italic">pseudo-fichier</formatted>,
-					une sorte de <formatted style="italic">trou noir</formatted>;
-					tout ce que vous y écrivez sera aussitôt oublié 
-					sans être enregistré dans le fichier.
 				</paragraph>
 			</look>
 	
@@ -966,7 +963,7 @@ echo $?
 						<item>
 							Écrivez une commande bash qui affiche, via la commande 
 							<formatted style="code">echo</formatted>,
-							le texte «Un des nombres en entrée est incorrect»
+							le texte «Un des nombres en entrée est incorrect» 
 							en se servant de la classe 
 							<formatted style="code">td.td9.Multiple5</formatted>,
 							l'opérateur adéquat et la commande 
@@ -1012,9 +1009,9 @@ echo $?
 		<lessonInfo>
 			<language language="fr" derived="no"/>
 			<lifecycle>
-				<version>2012 - 2013</version>
+				<version>2013 - 2014</version>
 				<contribute>
-<person name="BEJ" />	<person name="CLG" />	<person name="CLR" />	<person name="DNA" />	<person name="MCD" />	<person name="NPX" />	<person name="PBT" />
+<person name="BEJ" />  <person name="CLR" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" />  <person name="SRV" /> 
 				</contribute>
 			</lifecycle>
 			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
