@@ -62,7 +62,7 @@
 			
 			<act>
 				<paragraph title="Exercice 1 - Somme de chiffres" icon="act">
-					Syllabus de logique exercice 9 du chapitre 7. 
+					Syllabus de logique exercice 10 du chapitre 7. 
 					Écrivez une méthode de classe nommée <formatted style="code">sommeChiffres</formatted>
 					résolvant cet exercice. 
 					La méthode reçoit un entier en paramètre.
@@ -78,7 +78,7 @@
 				</paragraph>
 
 				<paragraph title="Exercice 2 - Conversion binaire-décimale" icon="act">
-					Syllabus de logique exercice 10 du chapitre 7. 
+					Syllabus de logique exercice 101 du chapitre 7. 
 					Écrivez une classe <formatted style="code">ConversionBinDec</formatted> qui contiendra une méthode de classe résolvant cet exercice.
 				</paragraph>
 				<paragraph>
@@ -91,7 +91,7 @@
 				</paragraph>
 
 				<paragraph title="Exercice 3 - Jeu de la fourchette" icon="act">
-					Syllabus de logique exercice 19 du chapitre 7.
+					Syllabus de logique exercice 20 du chapitre 7.
 					Écrivez une méthode de classe résolvant cet exercice.
 					Vous ferez appel à la méthode <formatted style="java">random()</formatted>
 					de la classe <formatted style="java">Math</formatted> afin de générer un nombre aléatoire. 
@@ -102,7 +102,7 @@
 
         <paragraph title="Pour les plus rapides"/>
 				<paragraph title="Exercice 4 - Génération de suites" icon="act">
-					Syllabus de logique exercice 7 du chapitre 7.
+					Syllabus de logique exercice 8 du chapitre 7.
 					Écrivez une méthode de classe pour chaque suite résolvant cet exercice.
 					Chaque méthode reçoit un entier en paramètre.
 				</paragraph>
@@ -137,9 +137,9 @@
 		<lessonInfo>
 			<language language="fr" derived="no"/>
 			<lifecycle>
-				<version>2012 - 2013</version>
+				<version>2013 - 2014</version>
 				<contribute>
-<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" /> 
+<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" />  <person name="SRV" /> 
 				</contribute>
 			</lifecycle>
 			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
