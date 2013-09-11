@@ -522,6 +522,10 @@
         <xsl:text>\verb@</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>@</xsl:text>
     </xsl:template>
 
+   <xsl:template match="elml:formatted[@style='LatexNewline']">
+        <xsl:text>\\</xsl:text>
+    </xsl:template>
+
     <xsl:template match="elml:formatted[@style='java']">
         <xsl:text>\verb|</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>|</xsl:text>
     </xsl:template>

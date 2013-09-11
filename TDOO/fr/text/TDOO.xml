@@ -78,7 +78,7 @@
             </paragraph>
             <paragraph>
               Si un des paramètres fournis n'est pas valide, 
-              vous lancerez une <formatted style="code">IllegalArgumentException</formatted>.
+              vous lancerez une <formatted style="LatexNewline"/><formatted style="code">IllegalArgumentException</formatted>.
 				    </paragraph>
           </item>
           <item>
@@ -129,11 +129,11 @@ int jourNow = now.get(Calendar.DAY_OF_MONTH);
           </item>
 				  <item>
 				    <paragraph>
-              Toujours dans la classe Date, ajoutez une méthode <formatted style="java">int compareTo(Date autreDate)</formatted> qui   
+              Toujours dans la classe Date, ajoutez une méthode <formatted style="LatexNewline"/><formatted style="java">int compareTo(Date autreDate)</formatted> qui   
               <list listStyle="unordered">
                 <item>retourne 0 si <formatted style="java">autreDate</formatted> est égale à la date courante</item>  
-                <item>retourne un entier négatif si la date courante est antérieure à l'<formatted style="java">autreDate</formatted></item>  
-                <item>retourne un entier positif si la date courante est postérieure à l'<formatted style="java">autreDate</formatted></item>  
+                <item>retourne un entier négatif si la date courante est antérieure <formatted style="LatexNewline"/>à l'<formatted style="java">autreDate</formatted></item>  
+                <item>retourne un entier positif si la date courante est postérieure <formatted style="LatexNewline"/>à l'<formatted style="java">autreDate</formatted></item>  
               </list>
             </paragraph>
           </item>
