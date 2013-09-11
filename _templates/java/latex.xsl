@@ -515,7 +515,7 @@
     </xsl:template>
 
     <xsl:template match="elml:formatted[@style='input']">
-        <xsl:text>\texttt{</xsl:text><xsl:apply-templates/><xsl:text>}</xsl:text>
+        <xsl:text>\verb|</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>|</xsl:text>
     </xsl:template>
 
     <xsl:template match="elml:formatted[@style='code']">
