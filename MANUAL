@@ -13,6 +13,12 @@
 ------------------
 
 1) eLML doit être installé sur votre système
+
+	Le site du projet <http://elml.org>
+	Le projet sur sourceforge <http://sourceforge.net/projects/elml/> (pour le
+	téléchargement)
+	
+
 2) Créer la structure de dossier suivante
 
     + Java1-Labo              // Vous pouvez choisir un autre nom
