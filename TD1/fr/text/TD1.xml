@@ -500,11 +500,11 @@
 			<clarify>
 				<paragraph title="FAQ" icon="icon_faq" />
 				<paragraph>
-					<formatted style="bold">Vous me dites que la commande pour changer le mot de passe est
-					<formatted style="input">passwd</formatted> et que celle pour quitter est
+					<formatted style="bold">Vous me dites que la commande pour changer le mot de passe est</formatted>
+					<formatted style="input">passwd</formatted> 
+					<formatted style="bold">et que celle pour quitter est</formatted>
 					<formatted style="input">exit</formatted>.
-					Je vais devoir retenir tout ça ?
-					</formatted>
+					<formatted style="bold">Je vais devoir retenir tout ça ?</formatted>
 				</paragraph>
 				<paragraph>
 					Oui ! En tout cas pour les plus fréquentes mais l'apprentissage se fera naturellement à force de les utiliser.

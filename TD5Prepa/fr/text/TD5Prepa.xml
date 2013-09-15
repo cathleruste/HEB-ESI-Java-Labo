@@ -274,10 +274,8 @@ public class MaMoyenne {
         </paragraph>  
         <paragraph>
           Préparez aussi la logique du programme suivant :<newLine/>  
-          <formatted style="input">
-            un module <formatted style="italic">plusUn</formatted> prend en paramètre un entier et il se  
-            contente d'ajouter 1 à l'entier reçu en paramètre.  
-          </formatted>
+            " un module <formatted style="italic">plusUn</formatted> prend en paramètre un entier et il se  
+            contente d'ajouter 1 à l'entier reçu en paramètre. "  
         </paragraph>
       </clarify>
     </learningObject>

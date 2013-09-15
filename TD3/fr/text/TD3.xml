@@ -53,9 +53,9 @@
           Vous vous rappelez juste qu'elle commence par <formatted style="input">pas</formatted>.  
         </paragraph>  
         <list listStyle="ordered">
-          <item>Tapez <formatted style="italic"><formatted style="input">pas</formatted></formatted>.</item>  
+          <item>Tapez <formatted style="input">pas</formatted>.</item>  
           <item>Appuyez 2x sur la touche <formatted style="input">TAB</formatted>.</item>  
-          <item>Entrez un <formatted style="italic"><formatted style="input">s</formatted></formatted>.</item>  
+          <item>Entrez un <formatted style="input">s</formatted>.</item>  
           <item>Appuyez à nouveau sur <formatted style="input">TAB</formatted>.</item>  
         </list>
       </clarify>
