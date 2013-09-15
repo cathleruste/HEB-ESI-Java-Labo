@@ -439,12 +439,12 @@ public class ReadingExercice {
 			<act>
 				<selfCheck title="Sélection multiple" shuffle="no">
 					<multipleChoice>
-						<question>La commande <formatted style="code">rm td*.java</formatted> supprime le(s) fichier(s) :
+					 	<question>La commande <formatted style="code">rm td*.java</formatted> supprime le(s) fichier(s) :
 						</question>
 						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractères" correct="yes"> 
-              td.java
+							td.java
 						</answer>
-						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractères mais le fichier doit se terminer par .java" correct="no"> 
+			 			<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractères mais le fichier doit se terminer par .java" correct="no"> 
 							td2
 						</answer>
 						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractères" correct="yes"> 

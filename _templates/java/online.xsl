@@ -681,4 +681,42 @@ function trim(s) {
         </xsl:choose>
     </xsl:template>
 
+	<!-- cf issue #28 : par défaut appostrophe changée en " car mis dans une chaine '...' -->
+	<!-- j'ai changé en \' -->
+    <xsl:template name="elml:tooltipAttribute">
+        <xsl:param name="termid"/>
+        <xsl:param name="termdefinition">
+            <xsl:apply-templates select="/elml:lesson/elml:glossary/elml:definition[@term=$termid]"/>
+        </xsl:param>
+        <xsl:variable name="apos">&#39;</xsl:variable>
+        <xsl:attribute name="onmouseover">
+            <xsl:if test="not(@feedback) and $glossaryMousoverWithHTML='yes'">
+                <xsl:text>TagTo</xsl:text>
+            </xsl:if>
+            <xsl:text>Tip('</xsl:text>
+            <xsl:choose>
+                <xsl:when test="@feedback">
+                    <xsl:value-of select="translate(translate(@feedback,&quot;&#xA;&quot;,&quot;&quot;),&quot;&apos;&quot;, &quot;&#146;&quot;)"/>
+                    <xsl:text>')</xsl:text>
+                </xsl:when>
+                <xsl:when test="$glossaryMousoverWithHTML='yes'">
+                    <xsl:text>term</xsl:text>
+                    <xsl:value-of select="generate-id(/elml:lesson/elml:glossary/elml:definition[@term=$termid])"/>
+                    <xsl:text>', TITLE, '</xsl:text>
+                    <xsl:value-of select="/elml:lesson/elml:glossary/elml:definition[@term=$termid]/@term"/>
+                    <xsl:text>')</xsl:text>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="translate(translate(/elml:lesson/elml:glossary/elml:definition[@term=$termid],&quot;&#xA;&quot;,&quot;&quot;),&quot;&apos;&quot;, &quot;&quot;&quot;&quot;)"/>
+                    <xsl:text>', TITLE, '</xsl:text>
+                    <xsl:value-of select="/elml:lesson/elml:glossary/elml:definition[@term=$termid]/@term"/>
+                    <xsl:text>')</xsl:text>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:attribute>
+        <xsl:attribute name="onmouseout">
+            <xsl:text>UnTip()</xsl:text>
+        </xsl:attribute>
+    </xsl:template>
+
 </xsl:stylesheet>
