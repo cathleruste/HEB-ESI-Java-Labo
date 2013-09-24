@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
 <lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
 	label="TD1" title="TD1 - Prise en main de l’environnement">
@@ -132,11 +132,10 @@
 					<item>
 						le <formatted style="bold">username</formatted> est composé d'un
 						<formatted style="code">g</formatted> suivi de votre numéro d'étudiant.
-						Votre professeur peut vous le communiquer. Vous le trouverez aussi sur votre carte d'étudiant.
 					</item>
 					<item>
-						le <formatted style="bold">password</formatted> vous est également
-						fourni par votre professeur.
+						le <formatted style="bold">password</formatted> vous a
+						été communiqué lors de votre inscription.
 						Attention à la casse (minuscule/majuscule) qui doit être respectée.
 					</item>
 				</list>
@@ -159,7 +158,9 @@
 				<list listStyle="ordered">
 					<item>Ouvrez le navigateur web de votre choix.</item>
 					<item>Rendez-vous sur <link uri="http://elearning.esi.heb.be">poÉSI</link>.</item>
-					<item>Connectez-vous; le login et mot de passe sont les mêmes que sous Windows.</item>
+					<item>Connectez-vous; le login est le même que sous Windows
+					(le 'g' sera en majuscule cette fois) 
+					et le mot de passe a été envoyé par mail.</item>
 					<item>Dans la Page d'accueil, vous trouvez un Catalogue de cours. Il contient tous les cours auxquels vous pouvez vous inscrire.</item>
           <item>Inscrivez-vous à la formation Java</item>
 					<item>Rendez-vous à la formation Java dans Mes cours.</item>
@@ -217,7 +218,7 @@
 				<selfCheck title="Exemples de mots de passe" shuffle="yes">
 					<multipleChoice>
 						<question>Quelles sont les propositions qui vous paraissent correctes comme mot de passe ?
-						</question>
+						</question>						
 						<answer feedback="Trop simple (pour autant que votre copine s'appelle Nadia)" correct="no">nadia</answer>
 						<answer feedback="OK (mais choisissez en un autre, maintenant, tout le monde le connait)" correct="yes">M0nAm1eN@di@</answer>
 						<answer feedback="OK (mais choisissez en un autre, maintenant, tout le monde le connait)" correct="yes">m@C0p1ne</answer>
@@ -922,8 +923,8 @@
 			<clarify>
 				<paragraph>
 					Vous êtes arrivés au bout de ce premier TD.
-        </paragraph>
-        <paragraph>
+        				</paragraph>
+        				<paragraph>
 					Avant de quitter le laboratoire, n'oubliez pas de :
 				</paragraph>
 				<list listStyle="unordered">
