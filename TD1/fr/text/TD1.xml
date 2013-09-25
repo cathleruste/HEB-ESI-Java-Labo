@@ -125,9 +125,9 @@
 
 		<learningObject title="Se connecter sous Windows">
 			<clarify>
-				<paragrah>
+				<paragraph>
 					Pour utiliser les PC du laboratoire, vous devez vous connecter.
-				</paragrah>
+				</paragraph>
 				<list listStyle="unordered">
 					<item>
 						le <formatted style="bold">username</formatted> est composé d'un
@@ -139,22 +139,22 @@
 						Attention à la casse (minuscule/majuscule) qui doit être respectée.
 					</item>
 				</list>
-				<paragrah>
+				<paragraph>
 					Notez et <formatted style="bold">gardez</formatted> votre mot de passe.
 					Vous allez le changer sous peu mais celui-ci vous servira en cas de problème.
-				</paragrah>
+				</paragraph>
 			</clarify>
 		</learningObject>
 	
 		<learningObject title="Accéder à poÉSI">
 			<clarify>
-				<paragrah>
+				<paragraph>
 					poÉSI (plateforme online de l'ÉSI) est la plateforme d'apprentissage que nous utilisons à l'école.
 					C'est là que vous trouverez tous les documents pédagogiques pour vos cours.
-				</paragrah>
-				<paragrah>
+				</paragraph>
+				<paragraph>
 					Ce document-ci (et bien d'autres) se trouvent sur poÉSI. On vous propose de vous y rendre.
-				</paragrah>
+				</paragraph>
 				<list listStyle="ordered">
 					<item>Ouvrez le navigateur web de votre choix.</item>
 					<item>Rendez-vous sur <link uri="http://elearning.esi.heb.be">poÉSI</link>.</item>
@@ -166,10 +166,10 @@
 					<item>Rendez-vous à la formation Java dans Mes cours.</item>
 					<item>Ouvrez la version en ligne de ce document.</item>
 				</list>
-				<paragrah>
+				<paragraph>
 					Vous pouvez à présent poursuivre sur la version en ligne qui propose des exercices interactifs
 					(mais seule la version papier vous permet de prendre des notes).
-				</paragrah>
+				</paragraph>
 				<paragraph title="FAQ" icon="icon_faq" />
 				<paragraph>
 					<formatted style="bold">Je ne parviens pas à me connecter.</formatted>
