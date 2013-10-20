@@ -17,21 +17,21 @@
       </paragraph>  
     </entry>
     
-		<learningObject title="Un rectangle">
+		<learningObject title="Un cercle">
 			<clarify> 
 				<paragraph>  
-					Notre but est de définir des rectangles dans un plan cartésien et de les manipuler.   
+					Notre but est de définir un cercle quelconque dans un espace à deux dimensions et de le manipuler.   
 				</paragraph>  
 				<paragraph>  
-					Pour représenter un rectangle, nous avons besoin de connaitre deux positions dans l'espace : 
-					le coin supérieur gauche et le coin inférieur droit.   
+					Pour représenter un cercle, nous avons besoin de connaitre deux choses : 
+					le centre et le rayon.   
 				</paragraph>  
 				<paragraph>  
-					Chacun des coins est représenté par un point ayant deux paramètres (abscisse et ordonnée).   
+					Le centre est représenté par un point ayant deux paramètres (abscisse et ordonnée).   
 				</paragraph>  
 				<paragraph>  
 					Nous allons créer dans un premier temps une classe <formatted style="java">Point</formatted> 
-					avant de définir une classe <formatted style="java">Rectangle</formatted>.  
+					avant de définir une classe <formatted style="java">Cercle</formatted>.  
 				</paragraph>  
 				<paragraph>  
 					À vous de tester correctement le bon fonctionnement de vos classes après chaque modification. 
@@ -74,35 +74,39 @@
 					  avant et après modification (appel aux setter). Compilez et exécutez la.
           </item>  
 					<item>
-					  Ajoutez la méthode <formatted style="java">boolean estADroite(Point autre)</formatted> 
-					  qui vérifie si le point est bien strictement « à droite » de l'autre point donné en paramètre.
+					  Ajoutez la méthode <formatted style="java">int distance (Point autre)</formatted> 
+					  qui retourne la distance entre le point courant et l'autre point donné en paramètre.
           </item>
           <item>
-						Faites de même pour tester si un point est « à gauche », « en haut », « en bas ».
+					  Dans votre méthode <formatted style="java">main</formatted>, calculez et affichez la distance entre
+					  <formatted style="java">point1</formatted> et <formatted style="java">point2</formatted>. 
           </item>  
-					<item>
-					  Dans le <formatted style="java">main</formatted>, 
-					  vérifiez que <formatted style="java">point1</formatted> est bien en bas à gauche de <formatted style="java">point2</formatted> et 
-					  que <formatted style="java">point2</formatted> est en haut à droite de <formatted style="java">point1</formatted>. Compilez et exécutez la.
+          <item>
+					  Ajoutez la méthode <formatted style="java">Point pointMilieu(Point autre)</formatted> 
+					  qui retourne le point situé au milieu du point courant et de l'autre point donné en paramètre.
+          </item>
+          <item>
+					  Dans votre méthode <formatted style="java">main</formatted>, calculez et affichez le point au milieu de
+					  <formatted style="java">point1</formatted> et de <formatted style="java">point2</formatted>. 
           </item>  
         </list>
       </act>
 		</learningObject>
 		
-		<learningObject title="La classe Rectangle">
-			<act><paragraph title="Rectangle" icon="act"/> 
+		<learningObject title="La classe Cercle">
+			<act><paragraph title="Cercle" icon="act"/> 
 				<paragraph>  
-					Définissez une classe <formatted style="java">Rectangle</formatted> pouvant décrire de façon commode un rectangle 
-					dans un espace à deux dimensions et dont les cotés sont parallèles aux axes des coordonnées.  
+					Définissez une classe <formatted style="java">Cercle</formatted> pouvant décrire de façon commode un cercle 
+					dans un espace à deux dimensions.  
 				</paragraph>  
 				<list listStyle="ordered">
 				  <item> 
 				    Pour les attributs, on vous propose d'en utiliser deux : 
-				    le coin supérieur gauche et le coin inférieur droit (qui sont des <formatted style="java">Point</formatted> bien sûr...).
+				    le centre (un <formatted style="java">Point</formatted>) et le rayon (un <formatted style="java">int</formatted>).
           </item>  
 					<item>
 					  Le constructeur reçoit les valeurs des attributs et vérifie leur cohérence 
-					  (le coin supérieur gauche est bien à gauche et en haut du coin inférieur droit). 
+					  (le rayon est positif ou nul). 
 					  Une <formatted style="java">IllegalArgumentException</formatted> est lancée si ce n'est pas le cas.
           </item>  
 					<item>
@@ -110,55 +114,37 @@
           </item>  
 					<item>
 					  Ajoutez une méthode <formatted style="java">toString()</formatted> qui retourne la chaine 
-					  « [SG=(abs, ord), ID=(abs,ord)] ». Bien sûr, vous utiliserez la méthode homonyme de la classe <formatted style="java">Point</formatted>.
+					  « [centre=(abs, ord), rayon=val] ». Bien sûr, vous utiliserez la méthode homonyme de la classe <formatted style="java">Point</formatted>.
           </item>  
 					<item>
-					  Écrivez une méthode <formatted style="java">main</formatted> qui crée et affiche le rectangle dont le coin SG est (2,5) et le coin ID est (4,1).
+					  Écrivez une méthode <formatted style="java">main</formatted> qui crée et affiche le cercle dont le centre est (2,5) et le rayon est 3.
           </item>  
 					<item>
-					  Écrivez une méthode calculant sa surface et une autre son périmètre.
-					  <popup>
-					    Vous pouvez écrire d'autres méthode privées pour faciliter votre travail.
-            </popup>
+					  Écrivez une méthode calculant sa surface.
           </item>  
 					<item>
-					  Dans votre méthode <formatted style="java">main</formatted>, calculez et affichez la surface et le périmètre du rectangle créé. 
+					  Dans votre méthode <formatted style="java">main</formatted>, calculez et affichez la surface du cercle créé. 
           </item>  
 					<item>
-					  Écrivez une méthode indiquant si un point reçu en paramètre est compris dans le rectangle.
+					  Écrivez une méthode indiquant si un point reçu en paramètre est compris dans le cercle.
           </item>  
 					<item>
 					  Testez cette méthode dans le <formatted style="java">main</formatted>.
           </item>  
 					<item>
-					  Écrivez une méthode indiquant si un point reçu en paramètre est sur un bord du rectangle.
+					  Écrivez une méthode indiquant si le cercle a une intersection avec un autre cercle reçu en paramètre.
           </item>  
 					<item>
 					  Testez cette méthode dans le <formatted style="java">main</formatted>.
           </item>  
 					<item>
-					  Écrivez une méthode indiquant si un rectangle donné en paramètre est complétement à l'intérieur du rectangle.
-					  <popup>
-						  Il suffit de faire des tests sur les bords.
-            </popup>
+					  Écrivez une méthode de classe recevant 2 points en paramètre et retournant le cercle dont le
+		        diamètre est le segment reliant ces 2 points.
           </item>  
 					<item>
 					  Testez cette méthode dans le <formatted style="java">main</formatted>.
           </item>  
-					<item>
-					  Écrivez une méthode indiquant si un rectangle donné en paramètre possède une intersection avec le rectangle.
-					  <popup>
-						  Il est plus facile de vérifier l'inverse. Le rectangle a une intersection si il n'est ni au dessus, ni en dessous, ni à gauche, ni à droite.
-            </popup>
-          </item>  
-					<item>
-					  Testez cette méthode dans le <formatted style="java">main</formatted>.
-          </item>
         </list>
-      </act>
-      
-			<act><paragraph title="Rectangle (suite)" icon="act"/> 
-				Vous pouvez ajouter à votre classe Rectangle toutes les méthodes proposées dans le syllabus de logique exercice 4 du chapitre 11.  
       </act>
 		</learningObject>
 	</unit>

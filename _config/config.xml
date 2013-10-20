@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.elml.ch" xsi:schemaLocation="http://www.elml.ch ../../core/structure/config.xsd">
+<?xml version="1.0" ?><config xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.elml.ch ../../core/structure/config.xsd">
   <!--These parameters are used in all version (online and print) -->
   <general>
     <!--Enter the contact Email that students will use to contact the tutor -->
@@ -11,7 +10,7 @@
     <!--On which level would like have the page break? To generate just one output use "oneoutput", else "lesson", "unit" or "lo" -->
     <pagebreak_level>lo</pagebreak_level>
     <!--If you would like to have chapter titles with numeration, set this to "yes" else to "no" -->
-    <chapter_numeration>no</chapter_numeration>
+    <chapter_numeration>yes</chapter_numeration>
     <!-- Which type of imsmanifest.xml will be produced: IMS CP or SCORM compatible (accepted values are: 'ims' or 'scorm' or 'both') -->
     <manifest_type>scorm</manifest_type>
     <!--Define units that should be marked/highlighted as  for the student. Enter unit-labels separated by a comma or leave empty. -->
@@ -22,7 +21,7 @@
   <!--These parameters are only used for the online version -->
   <online>
     <!--Enter an URL to your bugtracker form here (or leave empty if you dont have one) -->
-    <bugtracker></bugtracker>
+    <bugtracker/>
     <!--Would you like to use a navigation in your online version? "yes" or "no" -->
     <use_navigation>yes</use_navigation>
   </online>
@@ -50,9 +49,9 @@
     <documentclass>article</documentclass>
   </latex>
   <terms>
-    <msg name="name_furtherReading" lang="de">Publikationen</msg>
-    <msg name="name_furtherReading" lang="en">Publications</msg>
-    <msg name="name_furtherReading" lang="fr">Publications</msg>
-    <msg name="name_furtherReading" lang="it">Publicazione</msg>
+    <msg lang="de" name="name_furtherReading">Publikationen</msg>
+    <msg lang="en" name="name_furtherReading">Publications</msg>
+    <msg lang="fr" name="name_furtherReading">Publications</msg>
+    <msg lang="it" name="name_furtherReading">Publicazione</msg>
   </terms>
 </config>
