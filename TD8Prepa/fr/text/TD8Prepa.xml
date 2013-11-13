@@ -222,7 +222,7 @@
 					Cette valeur vaut <gap answers="">3</gap> dans notre exemple.
 					<newLine/>
 					La taille de sa seconde dimension est donnée par 
-					<gap answers="entiers[0].length,entiers[1].length,entiers[2].length">entiers[0].length</gap>.
+					<gap answers="entierss[0].length,entierss[1].length,entierss[2].length">entierss[0].length</gap>.
 					Cette valeur vaut <gap answers="">2</gap> dans notre exemple.
             </gapText>
             <solution/>
