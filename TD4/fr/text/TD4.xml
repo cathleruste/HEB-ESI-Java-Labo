@@ -297,8 +297,8 @@ public class Ex2 {
 					Comment présenter le code pour montrer qu'il s'agit en fait d'un « <formatted style="code">selon que</formatted> » ?
 				</paragraph>
 
-				<paragraph title="Jour du mois" icon="act">
-					Syllabus de logique exercice 11 du chapitre 4.
+				<paragraph title="Jour de la semaine" icon="act">
+					Syllabus de logique exercice 13 du chapitre 4.
 				</paragraph>
 				<paragraph>
 					(Utilisez l’instruction « <formatted style="code">switch</formatted> » pour résoudre cet exercice mais 
@@ -327,7 +327,7 @@ public class Ex2 {
           "junior" : ageMax <- 20
           autre : ageMax <- 100
       fin selon que
-      écrire category, ageMax
+      afficher category, ageMax
   fin module	
 ]]>				</paragraph>
 			</clarify>
